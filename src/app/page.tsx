@@ -1,8 +1,10 @@
 import ExpertSection from "@/components/Expert";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/Hero";
 import MovingSection from "@/components/Mission";
 import ServicesSection from "@/components/ServicesSection";
+import Testimonial from "@/components/Testimonial";
 
 
 export default function Home() {
@@ -13,7 +15,8 @@ export default function Home() {
       <ServicesSection/>
       <MovingSection/>
       <ExpertSection/>
-   
+      <Testimonial/>
+      <Footer/>
     </div>
   );
 }
