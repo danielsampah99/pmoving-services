@@ -1,109 +1,188 @@
-"use client"
-import { useEffect, useRef } from 'react';
-import { Activity, Zap, Target, Lightbulb } from 'lucide-react';
+'use client'
 
-const Mission = () => {
-    const sectionRef = useRef<HTMLDivElement>(null);
-  
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('animate-fade-up');
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
-  
-      const elements = sectionRef.current?.querySelectorAll('.animate-on-scroll');
-      elements?.forEach((el) => observer.observe(el));
-  
-      return () => observer.disconnect();
-    }, []);
-  
-    return (
-      <section ref={sectionRef} className="py-24 bg-gradient-to-b from-white to-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-on-scroll opacity-0">
-            <span className="inline-block px-4 py-1 mb-4 text-sm font-medium rounded-full bg-gray-100 text-gray-700">
-              Our Purpose
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-600">
-              Our Mission
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We're dedicated to revolutionizing movement through innovative technology and thoughtful design.
-            </p>
-          </div>
-  
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-            <div className="animate-on-scroll opacity-0">
-              <div className="relative overflow-hidden rounded-2xl shadow-lg">
-                <img
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
-                  alt="Innovation in motion"
-                  className="w-full h-[400px] object-cover transform hover:scale-105 transition-transform duration-700"
-                  loading="lazy"
+import { motion } from "motion/react"
+import { Truck, ClipboardList } from "lucide-react";
+
+
+
+const MovingSection = () => {
+
+
+  return (
+    <section className="py-16 px-6 md:px-20 bg-gray-100">
+      <div className="max-w-6xl mx-auto text-center">
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl font-bold text-gray-900"
+        >
+          Our <span className="text-yellow-500">Mission</span>
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          className="mt-4 text-gray-700"
+        >
+          Premium Moving Services takes the stress out of moving with expert handling,
+          secure packing, and seamless transitions. Whether it's your home or business,
+          we guarantee efficiency, safety, and reliability every step of the way.
+          Our dedicated team ensures your belongings arrive on time and in perfect condition, giving you peace of mind as you settle into your new space.
+        </motion.p>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="mt-6 mb-3 px-6 py-3 bg-yellow-500 text-white font-semibold rounded-lg shadow-lg"
+        >
+          Learn About Us
+        </motion.button>
+      </div>
+
+      <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
+
+
+        <div className="relative lg:row-span-2 group">
+          <div className="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]"></div>
+
+
+
+
+          <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+            <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+              {/* Animated Text */}
+              <motion.p
+                className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                Home Movers
+              </motion.p>
+              <motion.p
+                className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                Premium Moving Services is your partner in the homing moving business. Through our experienced staff, you can expect efficiency and quality in all the work completed.
+              </motion.p>
+            </div>
+
+            {/* Animated Image Container */}
+            <motion.div
+              className="@container relative min-h-[30rem] w-full grow max-lg:mx-auto max-lg:max-w-sm"
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <div className="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
+                <motion.img
+                  className="size-full object-cover object-top"
+                  src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Truck+loadc-1920w.jpg"
+                  alt="Hassle-Free Moving"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
                 />
               </div>
-            </div>
-            <div className="space-y-8 animate-on-scroll opacity-0">
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="p-3 rounded-xl bg-gray-100 animate-float">
-                    <Activity className="w-6 h-6 text-gray-700" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Continuous Innovation</h3>
-                  <p className="text-gray-600">
-                    Pushing boundaries through research and development to create groundbreaking solutions.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="p-3 rounded-xl bg-gray-100 animate-float" style={{ animationDelay: "0.2s" }}>
-                    <Zap className="w-6 h-6 text-gray-700" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Efficiency First</h3>
-                  <p className="text-gray-600">
-                    Optimizing performance while maintaining simplicity and user-friendliness.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="p-3 rounded-xl bg-gray-100 animate-float" style={{ animationDelay: "0.4s" }}>
-                    <Target className="w-6 h-6 text-gray-700" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Precision Engineering</h3>
-                  <p className="text-gray-600">
-                    Crafting every component with meticulous attention to detail.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-          <div className="text-center animate-on-scroll opacity-0">
-            <div className="inline-block p-4 rounded-full bg-gray-100 mb-6 animate-float">
-              <Lightbulb className="w-8 h-8 text-gray-700" />
-            </div>
-            <h3 className="text-2xl font-semibold mb-4">Looking to the Future</h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Our vision extends beyond the present, as we continue to explore new possibilities and push the boundaries of what's possible.
-            </p>
+            </motion.div>
           </div>
         </div>
-      </section>
-    );
-  };
-  
-  export default Mission;
+
+
+        <div className="relative lg:row-span-2 group">
+          <div className="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]"></div>
+
+          <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+            <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+              {/* Animated Text */}
+              <motion.p
+                className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                Office & Commercial Movers
+              </motion.p>
+              <motion.p
+                className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                Whether the task at hand is transferring from one office space to another or simply moving furniture and equipment within the same building, Premium Moving Services can assist. Let us do the moving to the new location.
+              </motion.p>
+            </div>
+
+            {/* Animated Image Container */}
+            <motion.div
+              className="@container relative min-h-[30rem] w-full grow max-lg:mx-auto max-lg:max-w-sm"
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <div className="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
+                <motion.img
+                  className="size-full object-cover object-top"
+                  src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Target+chairs+assemblyc-1920w.JPG"
+                  alt="Hassle-Free Moving"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
+        <div className="relative lg:row-span-2 group">
+          <div className="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]"></div>
+
+          <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+            <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+              {/* Animated Text */}
+              <motion.p
+                className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                Clear Customer Expectations
+              </motion.p>
+              <motion.p
+                className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                Our staff will be up front with you sharing the Minnesota laws surrounding moving and any other relevant work, as well as being transparent through this entire process ensuring a peace of mind from start to finish.
+              </motion.p>
+            </div>
+
+            {/* Animated Image Container */}
+            <motion.div
+              className="@container relative min-h-[30rem] w-full grow max-lg:mx-auto max-lg:max-w-sm"
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <div className="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
+                <motion.img
+                  className="size-full object-cover object-top"
+                  src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/_MG_3094c-1920w.jpg"
+                  alt="Hassle-Free Moving"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+  );
+};
+
+export default MovingSection;
