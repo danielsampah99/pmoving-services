@@ -1,6 +1,7 @@
+import ExpertSection from "@/components/Expert";
 import Header from "@/components/Header";
 import HeroSection from "@/components/Hero";
-import Mission from "@/components/Mission";
+import MovingSection from "@/components/Mission";
 import ServicesSection from "@/components/ServicesSection";
 
 
@@ -10,6 +11,8 @@ export default function Home() {
       <Header />
       <HeroSection/>
       <ServicesSection/>
+      <MovingSection/>
+      <ExpertSection/>
    
     </div>
   );
