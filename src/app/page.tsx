@@ -1,3 +1,4 @@
+import { AboutUs } from "@/components/AboutUs";
 import ExpertSection from "@/components/Expert";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -8,15 +9,16 @@ import Testimonial from "@/components/Testimonial";
 
 
 export default function Home() {
-  return (
-    <div className="min-h-screen ">
-      <Header />
-      <HeroSection/>
-      <ServicesSection/>
-      <MovingSection/>
-      <ExpertSection/>
-      <Testimonial/>
-      <Footer/>
-    </div>
-  );
+	return (
+		<div className="min-h-screen ">
+			<Header />
+			<HeroSection />
+			<ServicesSection />
+			<AboutUs />
+			<MovingSection />
+			{/* <ExpertSection /> */}
+			<Testimonial />
+			<Footer />
+		</div>
+	);
 }
