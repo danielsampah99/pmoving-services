@@ -3,106 +3,107 @@
 import { useEffect, useRef } from 'react';
 
 const services = [
-    {
-        title: "Local Moving",
-        description: "Professional and reliable local moving services tailored to your needs. We handle your belongings with utmost care.",
-        image: "https://www.matco.ca/wp-content/uploads/2021/05/3-7-Benefits-of-Hiring-a-Local-Moving-Company.jpg"
-    },
-    {
-        title: "Packing Services",
-        description: "Expert packing solutions to ensure your items are safely prepared for transport. We use premium materials for maximum protection.",
-        image: "https://www.marineinsight.com/wp-content/uploads/2021/09/Packing-and-Packaging-in-Logistics.png"
-    },
-    {
-        title: "Long Distance Move",
-        description: "Seamless long-distance moving services with careful planning and execution for a stress-free relocation experience.",
-        image: "https://essexremovals.com/wp-content/uploads/2022/10/pjimage-14-2.jpg"
-    },
-    {
-        title: "Moving Labor",
-        description: "Skilled moving professionals ready to handle heavy lifting and careful transportation of your belongings.",
-        image: "https://www.simplemovinglabor.com/wp-content/uploads/2019/02/moving-labor-helpers-992x450.jpg"
-    },
-    {
-        title: "Storage",
-        description: "Secure, climate-controlled storage solutions for both short-term and long-term needs.",
-        image: "https://lirp.cdn-website.com/a93663b0/dms3rep/multi/opt/How+to+Organize+a+Storage+Unit-640w.jpg"
-    }
+	{
+		title: "Local Moving",
+		description: "Professional and reliable local moving services tailored to your needs. We handle your belongings with utmost care.",
+		image: "https://www.matco.ca/wp-content/uploads/2021/05/3-7-Benefits-of-Hiring-a-Local-Moving-Company.jpg"
+	},
+	{
+		title: "Packing Services",
+		description: "Expert packing solutions to ensure your items are safely prepared for transport. We use premium materials for maximum protection.",
+		image: "https://www.marineinsight.com/wp-content/uploads/2021/09/Packing-and-Packaging-in-Logistics.png"
+	},
+	{
+		title: "Long Distance Move",
+		description: "Seamless long-distance moving services with careful planning and execution for a stress-free relocation experience.",
+		image: "https://essexremovals.com/wp-content/uploads/2022/10/pjimage-14-2.jpg"
+	},
+	{
+		title: "Moving Labor",
+		description: "Skilled moving professionals ready to handle heavy lifting and careful transportation of your belongings.",
+		image: "https://www.simplemovinglabor.com/wp-content/uploads/2019/02/moving-labor-helpers-992x450.jpg"
+	},
+	{
+		title: "Storage",
+		description: "Secure, climate-controlled storage solutions for both short-term and long-term needs.",
+		image: "https://lirp.cdn-website.com/a93663b0/dms3rep/multi/opt/How+to+Organize+a+Storage+Unit-640w.jpg"
+	}
 ];
 
 const ServicesSection = () => {
-    const observerRef = useRef<IntersectionObserver | null>(null);
+	const observerRef = useRef<IntersectionObserver | null>(null);
 
-    useEffect(() => {
-        observerRef.current = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate-fade-up');
-                        entry.target.classList.add('opacity-100');
-                        observerRef.current?.unobserve(entry.target);
-                    }
-                });
-            },
-            {
-                threshold: 0.1,
-            }
-        );
+	useEffect(() => {
+		observerRef.current = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('animate-fade-up');
+						entry.target.classList.add('opacity-100');
+						observerRef.current?.unobserve(entry.target);
+					}
+				});
+			},
+			{
+				threshold: 0.1,
+			}
+		);
 
-        const elements = document.querySelectorAll('.service-card');
-        elements.forEach((el) => observerRef.current?.observe(el));
+		const elements = document.querySelectorAll('.service-card');
+		elements.forEach((el) => observerRef.current?.observe(el));
 
-        return () => observerRef.current?.disconnect();
-    }, []);
+		return () => observerRef.current?.disconnect();
+	}, []);
 
-    return (
-        <section className="py-24 px-4 bg-gradient-to-b from-white to-gray-50">
-            <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-16 opacity-0 service-card">
-                    <h2 className="text-4xl font-light mb-4 tracking-tight">
-                        Moving Services We Offer
-                    </h2>
-                    <div className="w-24 h-1 bg-black mx-auto mb-6" />
-                    <p className="text-gray-600 max-w-2xl mx-auto">
-                        Experience premium moving services tailored to your unique needs
-                    </p>
-                </div>
+	return (
+		<section className="py-24 px-4 bg-gradient-to-b from-white to-gray-50">
+			<div className="max-w-7xl mx-auto">
+				<div className="text-center mb-16 opacity-0 service-card">
+					<h2 className="text-4xl font-light mb-4 tracking-tight">
+						Moving Services We Offer
+					</h2>
+					<div className="w-24 h-1 bg-black mx-auto mb-6" />
+					<p className="text-gray-600 max-w-2xl mx-auto">
+						Experience premium moving services tailored to your unique needs
+					</p>
+				</div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {services.map((service, index) => (
-                        <div
-                            key={service.title}
-                            className="service-card opacity-0 group perspective"
-                            style={{
-                                animationDelay: `${index * 100}ms`
-                            }}
-                        >
-                            <div className="relative h-64 w-full transition-all duration-1000 ease-in-out transform-style-3d hover:[transform:rotateY(180deg)]">
-                                <div className="absolute w-full h-full backface-hidden">
-                                    <img
-                                        src={service.image}
-                                        alt={service.title}
-                                        className="w-full h-full object-cover rounded-lg"
-                                    />
-                                    <div className="absolute inset-0 bg-opacity-40 rounded-lg">
-                                        <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                            <h3 className="text-2xl font-light mb-2">{service.title}</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="absolute w-full h-full backface-hidden [transform:rotateY(180deg)] rounded-lg bg-gradient-to-br from-header via-yellow-400 to-background">
-                                    <div className="flex h-full flex-col justify-center p-6 text-white">
-                                        <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
-                                        <p className="text-sm opacity-90">{service.description}</p>
-                                    </div>
-                                </div>
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					{services.map((service, index) => (
+						<div
+							key={service.title}
+							className="service-card opacity-0 group perspective"
+							style={{
+								animationDelay: `${index * 100}ms`
+							}}
+						>
+							<div className="relative h-64 w-full transition-all duration-1000 ease-in-out transform-style-3d hover:[transform:rotateY(180deg)]">
+								<div className="absolute w-full h-full backface-hidden">
+									<img
+										src={service.image}
+										alt={service.title}
+										className="w-full h-full object-cover rounded-lg"
+									/>
+									<div className="absolute inset-0 bg-opacity-40 rounded-lg">
+										<div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+											<h3 className="text-2xl font-light mb-2">{service.title}</h3>
+										</div>
+									</div>
+								</div>
+								<div className="absolute w-full h-full backface-hidden [transform:rotateY(180deg)] rounded-lg bg-gradient-to-br from-header via-yellow-400 to-background">
+									<div className="flex h-full flex-col justify-center p-6 text-white">
+										<h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
+										<p className="text-sm opacity-90">{service.description}</p>
+									</div>
+								</div>
 
-                            </div>
-                        </div>
-                    ))}
-                </div>
+							</div>
+						</div>
+					))}
+				</div>
 
-                <div className="mt-16 px-6 text-black text-lg leading-relaxed">
+				{/* Put the text back soon... */}
+				{/* <div className="mt-16 px-6 text-black text-lg leading-relaxed">
                     <p className="mb-6">
                         Because each move is unique, we’ll work with you to make sure it’s done in an organized and safe fashion.
                     </p>
@@ -125,10 +126,10 @@ const ServicesSection = () => {
                         Our services are flexible and can be customized to fit your needs.
                     </p>
                     <p className="text-xl font-semibold">View our different moving services above.</p>
-                </div>
-            </div>
-        </section>
-    );
+                </div> */}
+			</div>
+		</section>
+	);
 };
 
 export default ServicesSection;
