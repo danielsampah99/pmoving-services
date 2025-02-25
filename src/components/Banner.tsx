@@ -1,7 +1,9 @@
+'use client'
+
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { PhoneIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
-import { FC, JSX, SVGProps } from "react";
+import { FC, JSX, SVGProps, useEffect, useState } from "react";
 
 type SocialMediaLink = {
 	name: string,
@@ -82,10 +84,30 @@ const socialMediaLinks: SocialMediaLink[] = [
 ]
 
 export const Banner: FC = () => {
+	const [backgroundColor, setbackgroundColor] = useState('oklch(0.967 0.003 264.542')
+
+	useEffect(() => {
+		const handleTransparentScroll = () => {
+			const scrollPosition = window.scrollY
+
+			const triggerStart = 258 // height of the banner is 48px + header = 80
+
+			if (scrollPosition > triggerStart) {
+				setbackgroundColor('transparent')
+			} else {
+				setbackgroundColor('oklch(0.967 0.003 264.542')
+			}
+		}
+
+		window.addEventListener('scroll', handleTransparentScroll)
+
+		return () => window.removeEventListener('scroll', handleTransparentScroll)
+	}, [])
+
 	return (
-		<div className="bg-gray-100 fixed flex items-center justify-center top-0 inset-x-0 z-[100] rounded-md px-4 py-1.5 shadow-lg">
+		<div style={{ backgroundColor }} className="bg-gray-100 fixed flex items-center justify-center top-0 inset-x-0 z-[100] rounded-md px-4 py-1.5 shadow-lg transition-opacity duration-300">
 			<div className="max-w-7xl w-full flex justify-between gap-3 items-center">
-				<Link href="#" className="text-base/7 capitalize text-gray-600 hover:text-gray-800 hover:underline underline-offset-2">
+				<Link href="#" className="text-base/7 capitalize text-gray-800 hover:text-gray-900 hover:underline underline-offset-2">
 					Request a quote
 				</Link>
 				<div className="flex gap-2 max-md:flex-wrap">
