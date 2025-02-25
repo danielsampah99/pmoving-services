@@ -1,5 +1,6 @@
 import { AboutUs } from "@/components/AboutUs";
 import ExpertSection from "@/components/Expert";
+import FAQs from "@/components/FAQs";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/Hero";
@@ -16,7 +17,7 @@ export default function Home() {
 			<ServicesSection />
 			<AboutUs />
 			<MovingSection />
-			{/* <ExpertSection /> */}
+			<FAQs />
 			<Testimonial />
 			<Footer />
 		</div>
