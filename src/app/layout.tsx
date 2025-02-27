@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Banner } from "@/components/Banner";
-import Header from "@/components/Header";
+import { Header } from "@/components/Header";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -19,7 +19,9 @@ export const metadata: Metadata = {
 	description: "The Number 1 moving company near you",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+	children,
+}: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html lang="en">
 			<body

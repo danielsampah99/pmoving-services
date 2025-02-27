@@ -19,7 +19,9 @@ const HeroSection = () => {
 			<div className="relative z-10 flex flex-col items-center text-center py-16 px-6 md:px-12">
 				<h1 className="text-2xl md:text-4xl font-bold">
 					Relocating is Tough, <br />
-					<span className="text-background text-6xl md:text-7xl">WE MAKE IT EASY!</span>
+					<span className="text-background text-6xl md:text-7xl">
+						WE MAKE IT EASY!
+					</span>
 				</h1>
 
 				{/* Buttons */}
@@ -44,7 +46,9 @@ const HeroSection = () => {
 					<div className="flex flex-col md:flex-row items-center gap-4">
 						{/* Moving From */}
 						<div className="w-full relative">
-							<label className="block font-semibold mb-1">Starting Location:</label>
+							<label className="block font-semibold mb-1">
+								Starting Location:
+							</label>
 							<input
 								type="text"
 								placeholder="Enter Zip Code"

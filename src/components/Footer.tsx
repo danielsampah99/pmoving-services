@@ -15,7 +15,6 @@ const Footer = () => {
 			<div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
 				{/* Brand */}
 				<div>
-
 					<img
 						alt=""
 						src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/logo-1-1920w.png"
