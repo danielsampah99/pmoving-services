@@ -2,7 +2,7 @@ import { PhoneCall } from "lucide-react";
 
 const HeroSection = () => {
 	return (
-		<section className="relative bg-gray-900 text-white mt-5">
+		<section className="relative bg-gray-900 text-white ">
 			{/* Background Video */}
 			<div className="absolute inset-0 z-0">
 				<video
