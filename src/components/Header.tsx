@@ -7,11 +7,9 @@ import {
 	Disclosure,
 	DisclosureButton,
 	DisclosurePanel,
-	Popover,
-	PopoverBackdrop,
-	PopoverButton,
 	PopoverGroup,
-	PopoverPanel,
+	Button
+
 } from "@headlessui/react";
 import {
 	ArrowPathIcon,
@@ -112,12 +110,7 @@ export const Header: FC = () => {
 					<Services />
 
 					<ServiceArea links={moverLinks} />
-					<Link
-						href="/service-areas#"
-						className="text-sm/6 font-semibold text-white"
-					>
-						Service Areas
-					</Link>
+
 					<Link href="/blog#" className="text-sm/6 font-semibold text-white">
 						Blog
 					</Link>
@@ -126,22 +119,10 @@ export const Header: FC = () => {
 					</Link>
 				</PopoverGroup>
 
+				{/* Replace block with a lightmode, darkmode toggle */}
 				<div className="hidden lg:flex lg:flex-1 lg:justify-end gap-4">
-					<a href="#" className="text-white hover:text-gray-600">
-						<Facebook className="size-5" />
-					</a>
-					<a href="#" className="text-white hover:text-gray-600">
-						<Twitter className="size-5" />
-					</a>
-					<a href="#" className="text-white hover:text-gray-600">
-						<MessageCircle className="size-5" />
-					</a>
-					<a href="#" className="text-white hover:text-gray-600">
-						<Mail className="size-5" />
-					</a>
-					<a href="#" className="text-white hover:text-gray-600">
-						<Instagram className="size-5" />
-					</a>
+					<Button type='button'> Dark Mode </Button>
+
 				</div>
 			</nav>
 			<Dialog
