@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { PhoneIcon } from "@heroicons/react/20/solid";
@@ -6,17 +6,22 @@ import Link from "next/link";
 import { FC, JSX, SVGProps, useEffect, useState } from "react";
 
 type SocialMediaLink = {
-	name: string,
-	href: string
-	icon: (props: SVGProps<SVGSVGElement>) => JSX.Element
-}
+	name: string;
+	href: string;
+	icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
+};
 
 const socialMediaLinks: SocialMediaLink[] = [
 	{
-		name: 'Facebook',
+		name: "Facebook",
 		href: "https://facebook.com/moveatease",
 		icon: (props) => (
-			<svg fill="currentColor" className="hover:fill-blue-500 stroke-white" viewBox="0 0 24 24" {...props}>
+			<svg
+				fill="currentColor"
+				className="hover:fill-blue-500 stroke-white"
+				viewBox="0 0 24 24"
+				{...props}
+			>
 				<path
 					fillRule="evenodd"
 					d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
@@ -26,8 +31,8 @@ const socialMediaLinks: SocialMediaLink[] = [
 		),
 	},
 	{
-		name: 'Instagram',
-		href: 'https://www.instagram.com/premiummoving16/?next=%2F',
+		name: "Instagram",
+		href: "https://www.instagram.com/premiummoving16/?next=%2F",
 		icon: (props) => (
 			<svg fill="currentColor" viewBox="0 0 24 24" {...props}>
 				<path
@@ -39,8 +44,8 @@ const socialMediaLinks: SocialMediaLink[] = [
 		),
 	},
 	{
-		name: 'X',
-		href: 'https://twitter.com/g1sackie',
+		name: "X",
+		href: "https://twitter.com/g1sackie",
 		icon: (props) => (
 			<svg fill="currentColor" viewBox="0 0 24 24" {...props}>
 				<path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z" />
@@ -48,8 +53,8 @@ const socialMediaLinks: SocialMediaLink[] = [
 		),
 	},
 	{
-		name: 'YouTube',
-		href: '#',
+		name: "YouTube",
+		href: "#",
 		icon: (props) => (
 			<svg fill="currentColor" viewBox="0 0 24 24" {...props}>
 				<path
@@ -61,53 +66,70 @@ const socialMediaLinks: SocialMediaLink[] = [
 		),
 	},
 	{
-		name: 'Whatsapp',
-		href: 'https://web.whatsapp.com/send?phone=6517575135',
+		name: "Whatsapp",
+		href: "https://web.whatsapp.com/send?phone=6517575135",
 		icon: (props) => (
-			<svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" {...props}>
+			<svg
+				fill="none"
+				viewBox="0 0 24 24"
+				strokeWidth="1.5"
+				stroke="currentColor"
+				{...props}
+			>
 				<path d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 0 1-.923 1.785A5.969 5.969 0 0 0 6 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337Z" />
 			</svg>
-
-		)
+		),
 	},
 	{
-		name: 'Email',
-		href: 'mailto:info@pmovingservices.com',
+		name: "Email",
+		href: "mailto:info@pmovingservices.com",
 		icon: (props) => (
-			<svg fill="none" stroke="currentColor" className="stroke-[1.5]" viewBox="0 0 24 24" {...props}>
+			<svg
+				fill="none"
+				stroke="currentColor"
+				className="stroke-[1.5]"
+				viewBox="0 0 24 24"
+				{...props}
+			>
 				<path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
 			</svg>
-
-
-		)
+		),
 	},
-]
+];
 
 export const Banner: FC = () => {
-	const [backgroundColor, setbackgroundColor] = useState('oklch(0.967 0.003 264.542')
+	const [backgroundColor, setbackgroundColor] = useState(
+		"oklch(0.967 0.003 264.542",
+	);
 
 	useEffect(() => {
 		const handleTransparentScroll = () => {
-			const scrollPosition = window.scrollY
+			const scrollPosition = window.scrollY;
 
-			const triggerStart = 258 // height of the banner is 48px + header = 80
+			const triggerStart = 258; // height of the banner is 48px + header = 80
 
 			if (scrollPosition > triggerStart) {
-				setbackgroundColor('transparent')
+				setbackgroundColor("transparent");
 			} else {
-				setbackgroundColor('oklch(0.967 0.003 264.542')
+				setbackgroundColor("oklch(0.967 0.003 264.542");
 			}
-		}
+		};
 
-		window.addEventListener('scroll', handleTransparentScroll)
+		window.addEventListener("scroll", handleTransparentScroll);
 
-		return () => window.removeEventListener('scroll', handleTransparentScroll)
-	}, [])
+		return () => window.removeEventListener("scroll", handleTransparentScroll);
+	}, []);
 
 	return (
-		<div style={{ backgroundColor }} className="bg-gray-100 fixed flex items-center justify-center top-0 inset-x-0 z-[100] rounded-md px-4 py-1.5 shadow-lg transition-opacity duration-300">
+		<div
+			style={{ backgroundColor }}
+			className="bg-gray-100 fixed flex items-center justify-center top-0 inset-x-0 z-[100] rounded-md px-4 py-1.5 shadow-lg transition-opacity duration-300"
+		>
 			<div className="max-w-7xl w-full flex justify-between gap-3 items-center">
-				<Link href="#" className="text-base/7 capitalize text-gray-800 hover:text-gray-900 hover:underline underline-offset-2">
+				<Link
+					href="#"
+					className="text-base/7 capitalize text-gray-800 hover:text-gray-900 hover:underline underline-offset-2"
+				>
 					Request a quote
 				</Link>
 				<div className="flex gap-2 max-md:flex-wrap">
@@ -115,29 +137,38 @@ export const Banner: FC = () => {
 				</div>
 			</div>
 		</div>
-	)
-}
+	);
+};
 
-
-const SocialMediaContactsMenu: FC<{ socialMediaLinks: SocialMediaLink[] }> = ({ socialMediaLinks }) => {
+const SocialMediaContactsMenu: FC<{ socialMediaLinks: SocialMediaLink[] }> = ({
+	socialMediaLinks,
+}) => {
 	return (
 		<Menu as="div" className="relative inline-block text-left">
 			<div>
 				<MenuButton className="group inline-flex w-full justify-center gap-x-1.5 px-3 py-2 text-sm font-semibold text-gray-600">
-					<PhoneIcon aria-hidden="true" className="rotate-270 size-5 fill-blue-400 group-hover:blue-600" />
+					<PhoneIcon
+						aria-hidden="true"
+						className="rotate-270 size-5 fill-blue-400 group-hover:blue-600"
+					/>
 				</MenuButton>
 			</div>
 
 			<MenuItems
 				transition
-				anchor='left'
+				anchor="left"
 				className="absolute right-0 [--anchor-gap:4px] md:[--anchor-gap:8px] z-[100] mx-1 w-fit max-w-56 origin-top-right ring-1 ring-transparent transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
 			>
 				<div className="rounded-md flex flex-row items-center gap-x-1 flex-nowrap">
 					{socialMediaLinks.map((link) => (
-						<MenuItem key={link.name} >
-							<Link href={link.href} title={link.name} target="_blank" className='rounded-full group flex items-center text-gray-600 hover:text-gray-800 p-1.5 text-sm'>
-								<span className='sr-only'>{link.name}</span>
+						<MenuItem key={link.name}>
+							<Link
+								href={link.href}
+								title={link.name}
+								target="_blank"
+								className="rounded-full group flex items-center text-gray-600 hover:text-gray-800 p-1.5 text-sm"
+							>
+								<span className="sr-only">{link.name}</span>
 								<link.icon className="size-5" aria-hidden="true" />
 							</Link>
 						</MenuItem>
@@ -145,5 +176,5 @@ const SocialMediaContactsMenu: FC<{ socialMediaLinks: SocialMediaLink[] }> = ({ 
 				</div>
 			</MenuItems>
 		</Menu>
-	)
-}
+	);
+};

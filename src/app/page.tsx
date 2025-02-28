@@ -7,7 +7,6 @@ import MovingSection from "@/components/Mission";
 import ServicesSection from "@/components/ServicesSection";
 import Testimonial from "@/components/Testimonial";
 
-
 export default function Home() {
 	return (
 		<div className="min-h-screen ">

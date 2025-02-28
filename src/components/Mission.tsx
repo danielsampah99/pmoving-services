@@ -1,12 +1,9 @@
-'use client'
+"use client";
 
-import { motion } from "motion/react"
-
-
+import { motion } from "motion/react";
+import { Truck, ClipboardList } from "lucide-react";
 
 const MovingSection = () => {
-
-
 	return (
 		<section className="py-16 px-6 md:px-20 bg-gray-100">
 			<div className="max-w-6xl mx-auto text-center">
@@ -24,10 +21,12 @@ const MovingSection = () => {
 					transition={{ delay: 0.2, duration: 0.5 }}
 					className="mt-4 text-gray-700"
 				>
-					Premium Moving Services takes the stress out of moving with expert handling,
-					secure packing, and seamless transitions. Whether it's your home or business,
-					we guarantee efficiency, safety, and reliability every step of the way.
-					Our dedicated team ensures your belongings arrive on time and in perfect condition, giving you peace of mind as you settle into your new space.
+					Premium Moving Services takes the stress out of moving with expert
+					handling, secure packing, and seamless transitions. Whether it's your
+					home or business, we guarantee efficiency, safety, and reliability
+					every step of the way. Our dedicated team ensures your belongings
+					arrive on time and in perfect condition, giving you peace of mind as
+					you settle into your new space.
 				</motion.p>
 				<motion.button
 					whileHover={{ scale: 1.05 }}
@@ -39,8 +38,6 @@ const MovingSection = () => {
 			</div>
 
 			<div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
-
-
 				<div className="relative lg:row-span-2 group">
 					<div className="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]"></div>
 
@@ -61,7 +58,9 @@ const MovingSection = () => {
 								whileInView={{ opacity: 1, y: 0 }}
 								transition={{ duration: 0.6, delay: 0.2 }}
 							>
-								Premium Moving Services is your partner in the homing moving business. Through our experienced staff, you can expect efficiency and quality in all the work completed.
+								Premium Moving Services is your partner in the homing moving
+								business. Through our experienced staff, you can expect
+								efficiency and quality in all the work completed.
 							</motion.p>
 						</div>
 
@@ -85,7 +84,6 @@ const MovingSection = () => {
 					</div>
 				</div>
 
-
 				<div className="relative lg:row-span-2 group">
 					<div className="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]"></div>
 
@@ -106,7 +104,10 @@ const MovingSection = () => {
 								whileInView={{ opacity: 1, y: 0 }}
 								transition={{ duration: 0.6, delay: 0.2 }}
 							>
-								Whether the task at hand is transferring from one office space to another or simply moving furniture and equipment within the same building, Premium Moving Services can assist. Let us do the moving to the new location.
+								Whether the task at hand is transferring from one office space
+								to another or simply moving furniture and equipment within the
+								same building, Premium Moving Services can assist. Let us do the
+								moving to the new location.
 							</motion.p>
 						</div>
 
@@ -150,7 +151,10 @@ const MovingSection = () => {
 								whileInView={{ opacity: 1, y: 0 }}
 								transition={{ duration: 0.6, delay: 0.2 }}
 							>
-								Our staff will be up front with you sharing the Minnesota laws surrounding moving and any other relevant work, as well as being transparent through this entire process ensuring a peace of mind from start to finish.
+								Our staff will be up front with you sharing the Minnesota laws
+								surrounding moving and any other relevant work, as well as being
+								transparent through this entire process ensuring a peace of mind
+								from start to finish.
 							</motion.p>
 						</div>
 
@@ -173,10 +177,7 @@ const MovingSection = () => {
 						</motion.div>
 					</div>
 				</div>
-
-
 			</div>
-
 		</section>
 	);
 };
