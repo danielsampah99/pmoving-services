@@ -2,7 +2,13 @@
 
 import { useEffect, useRef } from "react";
 
-const services = [
+type ServiceCardData = {
+	title: string;
+	description: string;
+	image: string;
+};
+
+const services: ServiceCardData[] = [
 	{
 		title: "Local Moving",
 		description:
@@ -13,14 +19,14 @@ const services = [
 	{
 		title: "Packing Services",
 		description:
-			"Expert packing solutions to ensure your items are safely prepared for transport. We use premium materials for maximum protection.",
+			"Expert solutions to ensure your items are safely prepared for transport",
 		image:
 			"https://www.marineinsight.com/wp-content/uploads/2021/09/Packing-and-Packaging-in-Logistics.png",
 	},
 	{
-		title: "Long Distance Move",
+		title: "Long Distance Moving",
 		description:
-			"Seamless long-distance moving services with careful planning and execution for a stress-free relocation experience.",
+			"Seamless long-distance moving services with careful planning and execution.",
 		image:
 			"https://essexremovals.com/wp-content/uploads/2022/10/pjimage-14-2.jpg",
 	},
@@ -32,7 +38,42 @@ const services = [
 			"https://www.simplemovinglabor.com/wp-content/uploads/2019/02/moving-labor-helpers-992x450.jpg",
 	},
 	{
-		title: "Storage",
+		title: "Storage Services",
+		description:
+			"Secure, climate-controlled storage solutions for both short-term and long-term needs.",
+		image:
+			"https://lirp.cdn-website.com/a93663b0/dms3rep/multi/opt/How+to+Organize+a+Storage+Unit-640w.jpg",
+	},
+	{
+		title: "Residential Moving",
+		description:
+			"Professional moving services tailored to your needs. We handle your belongings with utmost care.",
+		image:
+			"https://www.matco.ca/wp-content/uploads/2021/05/3-7-Benefits-of-Hiring-a-Local-Moving-Company.jpg",
+	},
+	{
+		title: "Corporate Moving",
+		description:
+			"Expert packing solutions to ensure your items are safely prepared for transport using premium materials for maximum protection.",
+		image:
+			"https://www.marineinsight.com/wp-content/uploads/2021/09/Packing-and-Packaging-in-Logistics.png",
+	},
+	{
+		title: "Apartment Moving",
+		description:
+			"Seamless moving with careful planning and execution for the best relocation experience.",
+		image:
+			"https://essexremovals.com/wp-content/uploads/2022/10/pjimage-14-2.jpg",
+	},
+	{
+		title: "Packing Supplies",
+		description:
+			"Skilled moving professionals ready to handle heavy lifting and careful transportation of your belongings.",
+		image:
+			"https://www.simplemovinglabor.com/wp-content/uploads/2019/02/moving-labor-helpers-992x450.jpg",
+	},
+	{
+		title: "Safes & Gun safes",
 		description:
 			"Secure, climate-controlled storage solutions for both short-term and long-term needs.",
 		image:
@@ -51,6 +92,7 @@ const ServicesSection = () => {
 						entry.target.classList.add("animate-fade-up");
 						entry.target.classList.add("opacity-100");
 						observerRef.current?.unobserve(entry.target);
+						8;
 					}
 				});
 			},
@@ -78,7 +120,7 @@ const ServicesSection = () => {
 					</p>
 				</div>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+				<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
 					{services.map((service, index) => (
 						<div
 							key={service.title}
@@ -87,7 +129,7 @@ const ServicesSection = () => {
 								animationDelay: `${index * 100}ms`,
 							}}
 						>
-							<div className="relative h-48 w-full transition-all duration-1000 ease-in-out transform-style-3d hover:[transform:rotateY(180deg)]">
+							<div className="relative h-40 w-full transition-all duration-1000 ease-in-out transform-style-3d hover:[transform:rotateY(180deg)]">
 								<div className="absolute w-full h-full backface-hidden">
 									<img
 										src={service.image}

@@ -79,7 +79,7 @@ export const AboutUs: FC = () => {
 							<div className="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4">
 								<dt className="text-sm/6 text-gray-600">Years in business</dt>
 								<dd className="order-first text-6xl font-semibold tracking-tight">
-									<span>15</span>+
+									<span>10</span>+
 								</dd>
 							</div>
 							<div className="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4">
