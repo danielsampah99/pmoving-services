@@ -1,6 +1,7 @@
 import { AboutUs } from "@/components/AboutUs";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/Hero";
+import { Reviews } from "@/components/Reviews";
 import ServicesSection from "@/components/ServicesSection";
 // import ExpertSection from "@/components/Expert";
 // import MovingSection from "@/components/Mission";
@@ -14,6 +15,7 @@ export default function Home() {
 			<TheMovingProcess />
 			<ServicesSection />
 			<AboutUs />
+			<Reviews />
 			{/* <MovingSection /> */}
 			{/* <ExpertSection /> */}
 			{/* <Testimonial /> */}
