@@ -1,7 +1,7 @@
-'use client'
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/16/solid'
-import Link from 'next/link';
+"use client";
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/16/solid";
+import Link from "next/link";
 import { FC } from "react";
 
 export type MoverLink = {
@@ -270,14 +270,15 @@ export const moverLinks: MoverLink[] = [
 // TODO: This is what i'm currently working on.
 // Could not complete but still have to push
 export const ServiceArea: FC<{ links: MoverLink[] }> = ({ links }) => {
-
-	const alpabeticalLinks = links.sort((a, b) => a.city.toLowerCase() > b.city.toLowerCase() ? 1 : -1)
+	const alpabeticalLinks = links.sort((a, b) =>
+		a.city.toLowerCase() > b.city.toLowerCase() ? 1 : -1,
+	);
 
 	return (
-		<div className='z-[99]'>
+		<div className="z-[99]">
 			<Menu>
-				<div className='inline-flex items-center gap-2 bg-transparent text-sm/6 font-semibold text-gray-100 hover:text-white focus:text-white' >
-					<Link href='/service-areas' className=''>
+				<div className="inline-flex items-center gap-2 bg-transparent text-sm/6 font-semibold text-gray-100 hover:text-white focus:text-white">
+					<Link href="/service-areas" className="">
 						Service Areas
 					</Link>
 					<MenuButton className="group focus:outline-none data-[hover]:text-white-700 data-[open]:text-white data-[focus]:outline-1 data-[focus]:outline-white">
@@ -292,15 +293,19 @@ export const ServiceArea: FC<{ links: MoverLink[] }> = ({ links }) => {
 				>
 					{alpabeticalLinks.map((link) => (
 						<MenuItem key={link.href}>
-							<Link href={link.href} className='group capitalize flex w-full text-gray-700 hover:bg-gray-100 hover:text-gray-900 items-center gap-2 rounded-xl truncate py-1.5 px-3'>
+							<Link
+								href={link.href}
+								className="group capitalize flex w-full text-gray-700 hover:bg-gray-100 hover:text-gray-900 items-center gap-2 rounded-xl truncate py-1.5 px-3"
+							>
 								{link.city}
-								<span className='ml-auto hidden font-sans text-sm text-gray-500 group-data-[hover]:inline group-data-[focus]:inline'>{link.state.toUpperCase()}</span>
+								<span className="ml-auto hidden font-sans text-sm text-gray-500 group-data-[hover]:inline group-data-[focus]:inline">
+									{link.state.toUpperCase()}
+								</span>
 							</Link>
 						</MenuItem>
 					))}
 				</MenuItems>
 			</Menu>
 		</div>
-
-	)
-}
+	);
+};
