@@ -129,3 +129,5 @@ body {
 .group:hover .absolute.w-8.h-8 {
 	animation: moveCar 8s linear infinite; /* Slower animation (8s) */
 }
+
+
