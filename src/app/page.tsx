@@ -1,21 +1,28 @@
 import { AboutUs } from "@/components/AboutUs";
+
 import ExpertSection from "@/components/Expert";
 import FAQs from "@/components/FAQs";
+        
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/Hero";
-import MovingSection from "@/components/Mission";
+import { Reviews } from "@/components/Reviews";
 import ServicesSection from "@/components/ServicesSection";
-import Testimonial from "@/components/Testimonial";
+// import ExpertSection from "@/components/Expert";
+// import MovingSection from "@/components/Mission";
+// import Testimonial from "@/components/Testimonial";
+import { TheMovingProcess } from "@/components/TheMovingProcess";
 
 export default function Home() {
 	return (
 		<div className="min-h-screen ">
 			<HeroSection />
+			<TheMovingProcess />
 			<ServicesSection />
 			<AboutUs />
-			<MovingSection />
-			<ExpertSection />
-			<Testimonial />
+			<Reviews />
+			{/* <MovingSection /> */}
+			{/* <ExpertSection /> */}
+			{/* <Testimonial /> */}
 			<Footer />
 		</div>
 	);

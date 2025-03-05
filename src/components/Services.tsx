@@ -4,7 +4,6 @@ import {
 	Popover,
 	PopoverBackdrop,
 	PopoverButton,
-	PopoverGroup,
 	PopoverPanel,
 	Menu,
 	MenuButton,
