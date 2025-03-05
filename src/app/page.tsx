@@ -7,6 +7,7 @@ import FAQs from "@/components/FAQs";
 
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/Hero";
+import { MapSection } from "@/components/MapSection";
 import { Reviews } from "@/components/Reviews";
 import ServicesSection from "@/components/ServicesSection";
 // import ExpertSection from "@/components/Expert";
@@ -21,10 +22,12 @@ export default function Home() {
 			<TheMovingProcess />
 			<ServicesSection />
 			<AboutUs />
+			<MapSection />
 			<Reviews />
 			{/* <MovingSection /> */}
 			{/* <ExpertSection /> */}
 			{/* <Testimonial /> */}
+			<FAQs />
 			<Footer />
 		</div>
 	);

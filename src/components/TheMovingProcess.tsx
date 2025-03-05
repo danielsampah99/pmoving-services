@@ -61,7 +61,8 @@ export const TheMovingProcess: FC = () => {
 			<div className="mx-auto max-w-7xl px-6 lg:px-8">
 				<div className="mx-auto max-w-2xl lg:mx-0">
 					<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-						The Moving Process
+						{/* The Moving Process */}
+						Moving Tips
 					</h2>
 					<p className="mt-6 text-lg leading-8 text-gray-600">
 						What the premium moving service from Top Packers and Movers is like
@@ -72,7 +73,7 @@ export const TheMovingProcess: FC = () => {
 						{processes.map((process) => (
 							<div
 								key={process.name}
-								className="flex gap-x-2 flex-row justify-start rounded-xl hover:bg-gray-50 shadow-md shadow-white py- pl-1 pr-3"
+								className="group flex gap-x-2 flex-row justify-start hover:text-gray-700 rounded-xl hover:bg-gray-50 shadow-sm p-2"
 							>
 								<dt className="text-base font-semibold leading-7 text-gray-900">
 									<div className="mb-6 flex size-10 items-center justify-center rounded-lg bg-indigo-600">
