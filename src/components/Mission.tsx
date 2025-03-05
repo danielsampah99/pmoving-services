@@ -13,7 +13,7 @@ const MovingSection = () => {
 					transition={{ duration: 0.5 }}
 					className="text-4xl font-bold text-gray-900"
 				>
-					Our <span className="text-yellow-500">Mission</span>
+					Our <span className="text-yellow-500">Services</span>
 				</motion.h2>
 				<motion.p
 					initial={{ opacity: 0 }}
