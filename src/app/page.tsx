@@ -27,6 +27,7 @@ export default function Home() {
 			{/* <MovingSection /> */}
 			{/* <ExpertSection /> */}
 			{/* <Testimonial /> */}
+			<FAQs />
 			<Footer />
 		</div>
 	);
