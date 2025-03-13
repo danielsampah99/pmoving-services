@@ -62,7 +62,7 @@ export const moverLinks: MoverLink[] = [
 		state: "MN",
 	},
 	{
-		href: "/movers-shoreview-mn",
+		href: "https://maps.app.goo.gl/zLxSoiVUKsYDpExC7",
 		linkText: "Shoreview Movers, MN",
 		city: "Shoreview",
 		state: "MN",

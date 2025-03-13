@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { ServiceCard, serviceCardData } from "./ServiceCard";
 
 type ServiceCardData = {
 	title: string;
@@ -120,7 +121,7 @@ const ServicesSection = () => {
 					</p>
 				</div>
 
-				<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+				{/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
 					{services.map((service, index) => (
 						<div
 							key={service.title}
@@ -154,6 +155,12 @@ const ServicesSection = () => {
 								</div>
 							</div>
 						</div>
+					))}
+				</div> */}
+
+				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+					{serviceCardData.map((service, index) => (
+						<ServiceCard key={service.title} service={service} index={index} />
 					))}
 				</div>
 
