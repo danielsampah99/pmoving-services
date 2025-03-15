@@ -1,6 +1,27 @@
-import type { FC } from "react";
+'use client'
+
+import { Button } from "@headlessui/react";
+import { type FC, useState } from "react";
 
 export const AboutUs: FC = () => {
+
+	const [expandedMission, setExpandedMission] = useState(false);
+	const [expandedServices, setExpandedServices] = useState(false);
+
+	const missionTextCollapsed = "Premium Moving Services is one of the best Minnesota movers that is committed to ensuring our customers are receiving the highest premium quality of moving service offered. As a company, we ensure this through having our employees offer assistance, discretion ...";
+	const missionTextExpanded = "Premium Moving Services is one of the best Minnesota movers that is committed to ensuring our customers are receiving the highest premium quality of moving service offered.  As a company, we ensure this through having our employees offer assistance, discretion, and support ethical and safe behavior above all else.  Our goal is as your moving partner to alleviate any stress you may experience and to ensure your move is as seamless as possible.";
+
+	const servicesTextCollapsed = "Premium Moving Services provides top-quality moving throughout the Twin Cities and suburbs. We handle local moves, long-distance relocations, and storage for homes and businesses, ensuring a smooth experience. Our experienced team delivers exceptional service every time ...";
+	const servicesTextExpanded = "Premium Moving Services provides top-quality moving throughout the Twin Cities and suburbs.  We handle local moves, long-distance relocations, and storage for homes and businesses, ensuring a smooth experience.  Our experienced team delivers exceptional service every time. Need help preparing? We offer valuable moving tips. As your trusted partner, we guide you from start to finish. Contact us with questions. We adapt our versatile services to your unique needs.";
+
+	const toggleMission = () => {
+		setExpandedMission(!expandedMission);
+	};
+
+	const toggleServices = () => {
+		setExpandedServices(!expandedServices);
+	};
+
 	return (
 		<div className="overflow-hidden bg-white py-24 sm:py-32">
 			<div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
@@ -12,30 +33,21 @@ export const AboutUs: FC = () => {
 						On a mission to simplify the moving process
 					</h1>
 					<p className="mt-6 text-balance text-xl leading-8 text-gray-700">
-						Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At
-						arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae
-						feugiat egestas.
+						Because each move is unique, we’ll work with you to make sure it’s done in an organized and safe fashion.
 					</p>
 				</div>
 				<section className="mt-20 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16">
 					<div className="lg:pr-8">
 						<h2 className="text-pretty text-2xl font-semibold tracking-tight text-gray-900">
-							Our mission
+							Our Mission
 						</h2>
 						<p className="mt-6 text-base/7 text-gray-600">
-							Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus
-							enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor
-							praesent donec est. Odio penatibus risus viverra tellus varius sit
-							neque erat velit. Faucibus commodo massa rhoncus, volutpat.
-							Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae
-							sed turpis id.
+							{expandedMission ? missionTextExpanded : missionTextCollapsed}
+							<Button type='button' onClick={toggleMission} className='text-indigo-500 hover:text-indigo-700 focus:outline-none'>{expandedMission ? ' Less' : ' More'}</Button>
 						</p>
 						<p className="mt-8 text-base/7 text-gray-600">
-							Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis
-							odio id et. Id blandit molestie auctor fermentum dignissim. Lacus
-							diam tincidunt ac cursus in vel. Mauris varius vulputate et
-							ultrices hac adipiscing egestas. Iaculis convallis ac tempor et
-							ut. Ac lorem vel integer orci.
+							{expandedServices ? servicesTextExpanded : servicesTextCollapsed}
+							<Button type='button' onClick={toggleServices} className='text-indigo-500 hover:text-indigo-700 focus:outline-none'>{expandedMission ? ' Less' : ' More'}</Button>
 						</p>
 					</div>
 					<div className="pt-16 lg:row-span-2 lg:-mr-16 xl:mr-auto">
