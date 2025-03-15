@@ -1,10 +1,7 @@
 'use client'
 
 import { cn } from "@/utils";
-import { Button, Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
-import { XMarkIcon } from "@heroicons/react/24/outline";
-import { ChevronRightIcon } from "@heroicons/react/24/solid";
-import { ChevronLeftIcon } from "@heroicons/react/24/solid";
+import { Button } from "@headlessui/react";
 import { type FC, KeyboardEvent, useState } from "react";
 import { ImageViewer } from "./ImageViewer";
 import { NumberCounter } from "./NumberCounter";
@@ -107,7 +104,7 @@ export const AboutUs: FC = () => {
 						</p>
 						<p className="mt-8 text-base/7 text-gray-600">
 							{expandedServices ? servicesTextExpanded : servicesTextCollapsed}
-							<Button type='button' onClick={toggleServices} className='text-indigo-500 hover:text-indigo-700 focus:outline-none'>{expandedMission ? ' Less' : ' More'}</Button>
+							<Button type='button' onClick={toggleServices} className='text-indigo-500 hover:text-indigo-700 focus:outline-none'>{expandedServices ? ' Less' : ' More'}</Button>
 						</p>
 					</div>
 					<div className="pt-16 lg:row-span-2 lg:-mr-16 xl:mr-auto">
