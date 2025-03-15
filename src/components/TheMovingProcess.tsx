@@ -127,7 +127,7 @@ export const TheMovingProcess: FC = () => {
 		<section className="py-20 bg-gradient-to-b from-white to-gray-50">
 			<div className="container mx-auto px-4">
 				<div className="text-center mb-16">
-					<h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-moving-gray to-gray-300">
+					<h2 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-moving-gray to-gray-300">
 						Our Seamless Moving Process
 					</h2>
 					<p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -143,9 +143,8 @@ export const TheMovingProcess: FC = () => {
 					{processes.map((step, index) => (
 						<motion.div
 							key={step.stage}
-							className={`flex flex-col md:flex-row items-center gap-8 mb-16 last:mb-0 ${
-								index % 2 === 1 ? "md:flex-row-reverse" : ""
-							}`}
+							className={`flex flex-col md:flex-row items-center gap-8 mb-16 last:mb-0 ${index % 2 === 1 ? "md:flex-row-reverse" : ""
+								}`}
 							initial="hidden"
 							animate={controls}
 							variants={{
