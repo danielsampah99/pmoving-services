@@ -65,7 +65,7 @@ const reviews: ReviewType = {
 export const Reviews: FC = () => {
 	return (
 		<div className="relative overflow-hidden ">
-			<div className='absolute inset-0 bg-moving-gray/10'>
+			<div className='absolute inset-0 bg-moving-gray/5'>
 				<CurvedBackground />
 			</div>
 
