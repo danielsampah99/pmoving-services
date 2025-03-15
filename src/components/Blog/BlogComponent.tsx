@@ -8,7 +8,7 @@ import CategoryFilter from "./CategoryFilter";
 import PostGrid from "./PostGrid";
 import Sidebar from "./Sidebar";
 import { div } from "motion/react-client";
-import Footer from "../Footer";
+import { Footer } from "../Footer";
 
 const BlogComponent = () => {
 	const [displayedPosts, setDisplayedPosts] = useState(blogPosts);
