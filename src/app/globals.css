@@ -8,6 +8,11 @@
 	--color-background-100: rgb(230, 200, 90);
 	/* 50% opacity */
 	--color-header: rgb(51, 51, 51);
+
+	--color-moving-gray: oklch(46.4% 0 0);
+	--color-moving-gray-100: oklch(45%, 0, 0);
+
+	--color-moving-yellow: oklch(87.32% 0.1771 92.05);
 }
 
 body {

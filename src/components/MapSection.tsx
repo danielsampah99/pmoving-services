@@ -1,10 +1,7 @@
-'use client'
+"use client";
 
-import { FC } from "react"
-
+import type { FC } from "react";
 
 export const MapSection: FC = () => {
-	return (
-		<section>MapSection</section>
-	)
-}
+	return <section>MapSection</section>;
+};

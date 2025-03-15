@@ -1,15 +1,26 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { FC, useState } from 'react'
-import { TruckIcon, MapIcon, UsersIcon, DatabaseIcon, HomeIcon, BuildingIcon, Building2Icon, ShoppingBagIcon, LockIcon, type LucideIcon, PackageIcon } from "lucide-react"
-
+import Link from "next/link";
+import { type FC, useState } from "react";
+import {
+	TruckIcon,
+	MapIcon,
+	UsersIcon,
+	DatabaseIcon,
+	HomeIcon,
+	BuildingIcon,
+	Building2Icon,
+	ShoppingBagIcon,
+	LockIcon,
+	type LucideIcon,
+	PackageIcon,
+} from "lucide-react";
 
 export interface ServiceCardData {
-	title: string,
-	description: string
-	icon: LucideIcon,
-	href: string
+	title: string;
+	description: string;
+	icon: LucideIcon;
+	href: string;
 }
 
 export const serviceCardData: ServiceCardData[] = [
@@ -18,99 +29,118 @@ export const serviceCardData: ServiceCardData[] = [
 		description:
 			"Professional and reliable local moving services tailored to your needs. We handle your belongings with utmost care.",
 		href: "/services/local-moving",
-		icon: TruckIcon
+		icon: TruckIcon,
 	},
 	{
 		title: "Packing Services",
-		description: "Expert solutions to ensure your items are safely prepared for transport",
+		description:
+			"Expert solutions to ensure your items are safely prepared for transport",
 		href: "/services/packing-services",
-		icon: PackageIcon
+		icon: PackageIcon,
 	},
 	{
 		title: "Long Distance Moving",
-		description: "Seamless long-distance moving services with careful planning and execution.",
-		href: '/services/long-distance-moving',
-		icon: MapIcon
+		description:
+			"Seamless long-distance moving services with careful planning and execution.",
+		href: "/services/long-distance-moving",
+		icon: MapIcon,
 	},
 	{
 		title: "Moving Labor",
 		description:
 			"Skilled moving professionals ready to handle heavy lifting and careful transportation of your belongings.",
-		href: 'services/moving-labor',
-		icon: UsersIcon
+		href: "services/moving-labor",
+		icon: UsersIcon,
 	},
 	{
 		title: "Storage Services",
-		description: "Secure, climate-controlled storage solutions for both short-term and long-term needs.",
+		description:
+			"Secure, climate-controlled storage solutions for both short-term and long-term needs.",
 		href: "/services/storage-services",
-		icon: DatabaseIcon
+		icon: DatabaseIcon,
 	},
 	{
 		title: "Residential Moving",
-		description: "Professional moving services tailored to your needs. We handle your belongings with utmost care.",
+		description:
+			"Professional moving services tailored to your needs. We handle your belongings with utmost care.",
 		href: "/services/residential-moving",
-		icon: HomeIcon
+		icon: HomeIcon,
 	},
 	{
 		title: "Corporate Moving",
 		description:
 			"Expert packing solutions to ensure your items are safely prepared for transport using premium materials for maximum protection.",
-		href: '/services/corporate-moving',
-		icon: BuildingIcon
+		href: "/services/corporate-moving",
+		icon: BuildingIcon,
 	},
 	{
 		title: "Apartment Moving",
-		description: "Seamless moving with careful planning and execution for the best relocation experience.",
-		href: '/services/apartment-moving',
-		icon: Building2Icon
+		description:
+			"Seamless moving with careful planning and execution for the best relocation experience.",
+		href: "/services/apartment-moving",
+		icon: Building2Icon,
 	},
 	{
 		title: "Packing Supplies",
 		description:
 			"Skilled moving professionals ready to handle heavy lifting and careful transportation of your belongings.",
 		href: "/services/packing-supplies",
-		icon: ShoppingBagIcon
+		icon: ShoppingBagIcon,
 	},
 	{
 		title: "Safes & Gun safes",
-		description: "Secure, climate-controlled storage solutions for both short-term and long-term needs.",
-		href: '/services/safes-and-gun-safes',
-		icon: LockIcon
+		description:
+			"Secure, climate-controlled storage solutions for both short-term and long-term needs.",
+		href: "/services/safes-and-gun-safes",
+		icon: LockIcon,
 	},
-]
+];
 
-
-export const ServiceCard: FC<{ service: ServiceCardData, index: number }> = ({ service, index }) => {
-	const [isFlipped, setIsFlipped] = useState(false)
+export const ServiceCard: FC<{ service: ServiceCardData; index: number }> = ({
+	service,
+	index,
+}) => {
+	const [isFlipped, setIsFlipped] = useState(false);
 
 	return (
-		<div className='opacity-100 animate-ease-in' style={{ animationDelay: `${index * 100}ms` }}>
+		<div
+			className="opacity-100 animate-ease-in"
+			style={{ animationDelay: `${index * 100}ms` }}
+		>
 			<Link href={service.href}>
 				<div
-					className='relative h-48 w-full cursor-pointer'
+					className="relative h-48 w-full cursor-pointer"
 					onMouseEnter={() => setIsFlipped(true)}
 					onMouseLeave={() => setIsFlipped(false)}
-					style={{ perspective: '1000px' }}
+					style={{ perspective: "1000px" }}
 				>
 					<div
-						className='relative size-full transition-all duration-500'
-						style={{ transformStyle: 'preserve-3d', transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}
+						className="relative size-full transition-all duration-500"
+						style={{
+							transformStyle: "preserve-3d",
+							transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
+						}}
 					>
 						{/* front of card */}
 						<div
-							className='absolute w-full h-full rounded-lg bg-card shadow-md flex flex-col items-center justify-center p-6'
-							style={{ backfaceVisibility: 'hidden' }}
+							className="absolute w-full h-full rounded-lg bg-card shadow-md flex flex-col items-center justify-center p-6"
+							style={{ backfaceVisibility: "hidden" }}
 						>
 							<div className="text-teal-900">
-								<service.icon className='size-12 stroke-yellow-400 fill-white' />
+								<service.icon className="size-12 stroke-yellow-400 fill-white" />
 							</div>
-							<h3 className="text-xl font-medium mt-4 text-center">{service.title}</h3>
+							<h3 className="text-xl font-medium mt-4 text-center">
+								{service.title}
+							</h3>
 						</div>
 
 						{/* Back of card */}
 						<div
 							className="absolute w-full h-full rounded-lg bg-teal-900 shadow-md"
-							style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
+							style={{
+								backfaceVisibility: "hidden",
+								transform: "rotateY(180deg)",
+							}}
 						>
 							<div className="flex h-full flex-col justify-center p-6 text-teal-100">
 								<h3 className="text-xl font-semibold mb-3">{service.title}</h3>
@@ -121,5 +151,5 @@ export const ServiceCard: FC<{ service: ServiceCardData, index: number }> = ({ s
 				</div>
 			</Link>
 		</div>
-	)
-}
+	);
+};
