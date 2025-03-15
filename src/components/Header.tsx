@@ -24,7 +24,7 @@ export const Header: FC = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 	return (
-		<section className="bg-header mt-12 w-full z-50">
+		<section className="bg-moving-gray sm:mt-12 w-full z-50">
 			<nav
 				aria-label="Global"
 				className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
@@ -128,12 +128,12 @@ export const Header: FC = () => {
 										))}
 									</DisclosurePanel>
 								</Disclosure>
-								<Link
+								<a
 									href="/blog"
 									className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-gray-700 hover:bg-gray-50"
 								>
 									Blog
-								</Link>
+								</a>
 								<Link
 									href="/careers"
 									className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-gray-700 hover:bg-gray-50"
