@@ -136,15 +136,15 @@ export const ServiceCard: FC<{ service: ServiceCardData; index: number }> = ({
 
 						{/* Back of card */}
 						<div
-							className="absolute w-full h-full rounded-lg bg-teal-900 shadow-md"
+							className="absolute w-full h-full rounded-lg bg-moving-gray shadow-md"
 							style={{
 								backfaceVisibility: "hidden",
 								transform: "rotateY(180deg)",
 							}}
 						>
-							<div className="flex h-full flex-col justify-center p-6 text-teal-100">
-								<h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-								<p className="text-sm opacity-90">{service.description}</p>
+							<div className="flex h-full flex-col justify-center p-6">
+								<h3 className="text-xl font-semibold mb-3 text-white">{service.title}</h3>
+								<p className="text-sm opacity-90 text-gray-200">{service.description}</p>
 							</div>
 						</div>
 					</div>
