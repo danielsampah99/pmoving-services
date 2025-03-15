@@ -129,7 +129,7 @@ export const Banner: FC = () => {
 	return (
 		<div
 			style={{ backgroundColor }}
-			className="bg-gray-100 hidden fixed sm:flex items-center justify-center top-0 inset-x-0 z-[100] rounded-md px-4 py-1.5 shadow-lg transition-opacity duration-300"
+			className="bg-gray-100 hidden sm:fixed sm:flex items-center justify-center top-0 inset-x-0 z-[100] rounded-md px-4 py-1.5 shadow-lg transition-opacity duration-300"
 		>
 			<div className="max-w-7xl w-full flex justify-between gap-3 items-center">
 				<div className="">
