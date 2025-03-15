@@ -1,4 +1,4 @@
-import { ForwardRefExoticComponent, RefAttributes, SVGProps } from "react";
+import type { ForwardRefExoticComponent, RefAttributes, SVGProps } from "react";
 
 export type HeroIconType = ForwardRefExoticComponent<
 	Omit<SVGProps<SVGSVGElement>, "ref"> & {

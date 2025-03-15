@@ -5,15 +5,15 @@ import {
 	TruckIcon,
 	StarIcon,
 } from "@heroicons/react/24/outline";
-import { HeroIconType } from "./HeroIcon";
-import { LucideIcon } from "lucide-react";
-import { FC } from "react";
+import type { HeroIconType } from "./HeroIcon";
+import type { LucideIcon } from "lucide-react";
+import type { FC } from "react";
 import Link from "next/link";
 
 type Process = {
 	name: string;
 	description: string;
-	href?: string;
+	href: string;
 	icon: HeroIconType | LucideIcon;
 };
 
@@ -71,8 +71,9 @@ export const TheMovingProcess: FC = () => {
 				<div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
 					<dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
 						{processes.map((process) => (
-							<div
+							<Link
 								key={process.name}
+								href={process.href}
 								className="group flex gap-x-2 flex-row justify-start hover:text-gray-700 rounded-xl hover:bg-gray-50 shadow-sm p-2"
 							>
 								<dt className="text-base font-semibold leading-7 text-gray-900">
@@ -91,7 +92,7 @@ export const TheMovingProcess: FC = () => {
 										{process.description}
 									</p>
 								</dd>
-							</div>
+							</Link>
 						))}
 					</dl>
 				</div>

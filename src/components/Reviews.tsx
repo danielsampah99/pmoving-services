@@ -1,6 +1,6 @@
 import { StarIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
-import { FC } from "react";
+import type { FC } from "react";
 
 type ReviewType = {
 	average: number;
