@@ -6,9 +6,6 @@ import HeroSection from "@/components/Hero";
 import { MapSection } from "@/components/MapSection";
 import { Reviews } from "@/components/Reviews";
 import ServicesSection from "@/components/ServicesSection";
-// import ExpertSection from "@/components/Expert";
-// import MovingSection from "@/components/Mission";
-// import Testimonial from "@/components/Testimonial";
 import { TheMovingProcess } from "@/components/TheMovingProcess";
 
 export default function Home() {
@@ -20,9 +17,6 @@ export default function Home() {
 			<AboutUs />
 			<MapSection />
 			<Reviews />
-			{/* <MovingSection /> */}
-			{/* <ExpertSection /> */}
-			{/* <Testimonial /> */}
 			<FAQs />
 			<FloatingBanner />
 			<Footer />

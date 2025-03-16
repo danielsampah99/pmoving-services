@@ -167,7 +167,7 @@ export const ReviewCard: FC<Reviewer> = ({ id, avatarSrc, author, content, ratin
 	return (
 		<div key={id} className="relative py-8">
 			<div className="flex items-center">
-				<div className="z-30">
+				<div>
 
 					<img
 						src={avatarSrc || "/placeholder.svg"}
