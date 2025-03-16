@@ -105,8 +105,13 @@ export const services: Service[] = [
 	},
 ];
 
+
+const callsToAction: CallToAction[] = [
+	{ name: "Gallery", href: "/gallery", icon: PlayCircleIcon },
+=======
 export const callsToAction: CallToAction[] = [
 	{ name: "Gallery", href: "#", icon: PlayCircleIcon },
+
 	{ name: "Find us", href: "#", icon: MapIcon },
 ];
 
