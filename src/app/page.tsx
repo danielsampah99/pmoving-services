@@ -1,7 +1,6 @@
 import { AboutUs } from "@/components/AboutUs";
 import { FAQs } from "@/components/FAQs";
 import { FloatingBanner } from "@/components/FloatingBanner";
-import { Footer } from "@/components/Footer";
 import HeroSection from "@/components/Hero";
 import { MapSection } from "@/components/MapSection";
 import { Reviews } from "@/components/Reviews";
@@ -19,7 +18,6 @@ export default function Home() {
 			<Reviews />
 			<FAQs />
 			<FloatingBanner />
-			<Footer />
 		</div>
 	);
 }
