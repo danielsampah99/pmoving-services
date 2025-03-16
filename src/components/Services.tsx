@@ -107,7 +107,7 @@ const services: Service[] = [
 ];
 
 const callsToAction: CallToAction[] = [
-	{ name: "Gallery", href: "#", icon: PlayCircleIcon },
+	{ name: "Gallery", href: "/gallery", icon: PlayCircleIcon },
 	{ name: "Find us", href: "#", icon: MapIcon },
 ];
 
