@@ -32,7 +32,7 @@ export const Header: FC = () => {
 				<div className="flex lg:flex-1">
 					<Link href="/" className="p-1.5">
 						<span className="sr-only">Premium Moving Services</span>
-						<img alt="" src="/logo.svg" className="h-8 w-auto" />
+						<img alt="Premium Moving Company's Logo" src="/logo.svg" className="h-8 w-auto" />
 					</Link>
 				</div>
 				<div className="flex lg:hidden">
@@ -119,7 +119,7 @@ export const Header: FC = () => {
 													className={cn(
 														"size-5 stroke-moving-yellow",
 														index > 3 &&
-															"stroke-inherit group-hover:animate-fill-both fill-moving-yellow",
+														"stroke-inherit group-hover:animate-fill-both fill-moving-yellow",
 														index === 2 && "hover:animate-shake",
 													)}
 												/>
