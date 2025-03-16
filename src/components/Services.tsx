@@ -154,14 +154,14 @@ export const Services: FC = () => {
 const ServiceWithSubMenu: FC<{ service: Service }> = ({ service }) => {
 	return (
 		<Menu as="div" className="relative w-full inline-block text-left">
-			<MenuButton className="group w-full text-left relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-100 data-active:bg-gray-100">
+			<MenuButton className="group w-full text-left relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 data-hover:bg-gray-100 data-active:bg-gray-100">
 				<Link
 					href={service.href}
 					className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
 				>
 					<service.icon
 						aria-hidden="true"
-						className="size-6 stroke-gray-600 group-hover:stroke-indigo-600 group-data-active:stroke-indigo-600 "
+						className="size-6 stroke-gray-600 group-hover:stroke-yellow-500 group-data-active:stroke-yellow-600 "
 					/>
 				</Link>
 				<div className="flex-grow">

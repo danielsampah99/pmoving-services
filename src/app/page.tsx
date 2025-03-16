@@ -1,5 +1,6 @@
 import { AboutUs } from "@/components/AboutUs";
 import { FAQs } from "@/components/FAQs";
+import { FloatingBanner } from "@/components/FloatingBanner";
 import { Footer } from "@/components/Footer";
 import HeroSection from "@/components/Hero";
 import { MapSection } from "@/components/MapSection";
@@ -23,6 +24,7 @@ export default function Home() {
 			{/* <ExpertSection /> */}
 			{/* <Testimonial /> */}
 			<FAQs />
+			<FloatingBanner />
 			<Footer />
 		</div>
 	);
