@@ -20,11 +20,6 @@ import { cn } from "@/utils";
 import { socialMediaLinks } from "./Banner";
 import { PhoneIcon } from "@heroicons/react/24/outline";
 
-const callsToAction: CallToAction[] = [
-	{ name: "Gallery", href: "/gallery", icon: PlayCircleIcon },
-	{ name: "Find us", href: "#", icon: MapIcon },
-];
-
 export const Header: FC = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
