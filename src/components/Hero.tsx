@@ -1,4 +1,5 @@
 import { PhoneCall } from "lucide-react";
+import Link from "next/link";
 
 const HeroSection = () => {
 	return (
@@ -29,15 +30,15 @@ const HeroSection = () => {
 					<button className="border border-white px-6 py-3 text-lg font-semibold hover:bg-white hover:text-black transition">
 						EXPLORE OUR SERVICES
 					</button>
-					<button className="bg-background px-6 py-3 text-lg font-semibold hover:bg-background transition">
+					<Link href="/free-quote" className="bg-background px-6 py-3 text-lg font-semibold hover:bg-background transition">
 						GET AN INSTANT QUOTE
-					</button>
+					</Link>
 				</div>
 
-				<p className="flex items-center mt-4 text-lg">
+				<Link href='tel: 651-757-5135' className="flex items-center mt-4 text-lg">
 					<PhoneCall size={24} className="text-background" />
 					OR REQUEST A CALLBACK!
-				</p>
+				</Link>
 
 				{/* Quote Form */}
 				<div className="mt-10 bg-white text-black p-6 rounded-xl w-full max-w-3xl shadow-lg">
@@ -67,9 +68,9 @@ const HeroSection = () => {
 						</div>
 					</div>
 
-					<button className="mt-4 bg-background text-white px-6 py-3 w-full font-bold hover:bg-background-100 transition">
+					<Link href='/free-quote' className="mt-5 block rounded-md shadow bg-background text-white px-6 py-3 w-full font-bold hover:bg-background-100 transition">
 						CONTINUE →
-					</button>
+					</Link>
 				</div>
 			</div>
 		</section>

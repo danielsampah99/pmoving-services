@@ -5,6 +5,7 @@ import { MapCity, minnesotaMapCities, wisconsinMapCities } from "@/map-data"
 import { cn } from "@/utils"
 import { Button } from "@headlessui/react"
 import { TruckIcon } from "@heroicons/react/24/outline"
+import Link from "next/link"
 
 export type MapCitiesProps = {
 	currentState: ActiveState
@@ -43,9 +44,9 @@ export const MapCities: FC<MapCitiesProps> = ({ currentState, hoveredCity, onHov
 					<p className="text-slate-600 text-sm">
 						Need a custom quote for your move? Contact us for personalized service.
 					</p>
-					<Button className="mt-4 w-full py-2.5 px-4 bg-yellow-400 hover:bg-yellow-500 text-white font-medium rounded-lg transition-colors">
+					<Link href='/free-quote' className="block text-center mt-4 w-full py-2.5 px-4 bg-yellow-400 hover:bg-yellow-500 text-white font-medium hover:font-semibold rounded-lg transition-colors">
 						Request Free Estimate
-					</Button>
+					</Link>
 				</div>
 			</div>
 		</div>

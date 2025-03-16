@@ -18,7 +18,7 @@ const GalleryComponent = () => {
 							</p>
 							<div className="flex flex-wrap gap-4">
 								<a
-									href="#quote"
+									href="/free-quote"
 									className="px-6 py-3 rounded-lg bg-white text-[#1E88E5] font-semibold text-lg hover:bg-[#FFD00D] hover:text-white transition-all duration-300 shadow-md"
 								>
 									Get a Free Quote
