@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useState } from "react";
+import { type FC, useState } from "react";
 import {
 	Dialog,
 	DialogPanel,
@@ -10,74 +10,21 @@ import {
 	PopoverGroup,
 	Button,
 } from "@headlessui/react";
-import {
-	ArrowPathIcon,
-	Bars3Icon,
-	ChartPieIcon,
-	CursorArrowRaysIcon,
-	FingerPrintIcon,
-	SquaresPlusIcon,
-	XMarkIcon,
-} from "@heroicons/react/24/outline";
-import {
-	ChevronDownIcon,
-	PhoneIcon,
-	PlayCircleIcon,
-} from "@heroicons/react/20/solid";
-import {
-	Facebook,
-	Twitter,
-	Instagram,
-	Mail,
-	MessageCircle,
-} from "lucide-react";
-import { Services } from "./Services";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { callsToAction, services, Services } from "./Services";
 import Link from "next/link";
 import { moverLinks, ServiceArea } from "./ServiceAreas";
 import { SunIcon } from "@heroicons/react/24/solid";
-
-const products = [
-	{
-		name: "Analytics",
-		description: "Get a better understanding of your traffic",
-		href: "#",
-		icon: ChartPieIcon,
-	},
-	{
-		name: "Engagement",
-		description: "Speak directly to your customers",
-		href: "#",
-		icon: CursorArrowRaysIcon,
-	},
-	{
-		name: "Security",
-		description: "Your customers’ data will be safe and secure",
-		href: "#",
-		icon: FingerPrintIcon,
-	},
-	{
-		name: "Integrations",
-		description: "Connect with third-party tools",
-		href: "#",
-		icon: SquaresPlusIcon,
-	},
-	{
-		name: "Automations",
-		description: "Build strategic funnels that will convert",
-		href: "#",
-		icon: ArrowPathIcon,
-	},
-];
-const callsToAction = [
-	{ name: "Watch demo", href: "#", icon: PlayCircleIcon },
-	{ name: "Contact sales", href: "#", icon: PhoneIcon },
-];
+import { cn } from "@/utils";
+import { socialMediaLinks } from "./Banner";
+import { PhoneIcon } from "@heroicons/react/24/outline";
 
 export const Header: FC = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 	return (
-		<section className="bg-header mt-12 w-full z-50">
+		<section className="bg-moving-gray sm:mt-12 w-full z-50">
 			<nav
 				aria-label="Global"
 				className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
@@ -89,7 +36,7 @@ export const Header: FC = () => {
 					</Link>
 				</div>
 				<div className="flex lg:hidden">
-					<button
+					<Button
 						type="button"
 						onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
 						className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
@@ -100,17 +47,17 @@ export const Header: FC = () => {
 						) : (
 							<Bars3Icon aria-hidden="true" className="size-6" />
 						)}
-					</button>
+					</Button>
 				</div>
 				<PopoverGroup className="hidden z-[100] lg:flex lg:gap-x-12">
 					<Services />
 
 					<ServiceArea links={moverLinks} />
 
-					<Link href="/blog#" className="text-sm/6 font-semibold text-white">
+					<Link href="/blog" className="text-sm/6 font-semibold text-white">
 						Blog
 					</Link>
-					<Link href="/careers#" className="text-sm/6 font-semibold text-white">
+					<Link href="/careers" className="text-sm/6 font-semibold text-white">
 						Careers
 					</Link>
 				</PopoverGroup>
@@ -118,7 +65,6 @@ export const Header: FC = () => {
 				{/* Replace block with a lightmode, darkmode toggle */}
 				<div className="hidden lg:flex lg:flex-1 lg:justify-end gap-4">
 					<Button type="button">
-						{" "}
 						<SunIcon className="size-5 fill-white" />{" "}
 					</Button>
 				</div>
@@ -129,74 +75,133 @@ export const Header: FC = () => {
 				className="lg:hidden"
 			>
 				<div className="fixed inset-0 z-10" />
-				<DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transition-transform duration-300 ease-in-out transform translate-x-0">
+				<DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-moving-gray px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transition-transform duration-300 ease-in-out transform translate-x-0">
 					<div className="flex items-center justify-between">
-						<a href="#" className="-m-1.5 p-1.5">
-							<span className="sr-only">Your Company</span>
+						<Link href="/" className="-m-1.5 p-1.5">
+							<span className="sr-only">P Moving Services</span>
 							<img
-								alt=""
-								src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+								alt="Premium Moving Services Logo"
+								src="/logo.svg"
 								className="h-8 w-auto"
 							/>
-						</a>
-						<button
+						</Link>
+						<Button
 							type="button"
 							onClick={() => setMobileMenuOpen(false)}
-							className="-m-2.5 rounded-md p-2.5 text-gray-700"
+							className="-m-2.5 rounded-md p-2.5 hover:bg-moving-gray/50"
 						>
 							<span className="sr-only">Close menu</span>
-							<XMarkIcon aria-hidden="true" className="size-6" />
-						</button>
+							<XMarkIcon aria-hidden="true" className="size-6 stroke-white" />
+						</Button>
 					</div>
 					<div className="mt-6 flow-root">
 						<div className="-my-6 divide-y divide-gray-500/10">
 							<div className="space-y-2 py-6">
 								<Disclosure as="div" className="-mx-3">
-									<DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
-										Product
+									<DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-white hover:bg-white hover:text-gray-900">
+										Services
 										<ChevronDownIcon
 											aria-hidden="true"
 											className="size-5 flex-none group-data-open:rotate-180"
 										/>
 									</DisclosureButton>
 									<DisclosurePanel className="mt-2 space-y-2">
-										{[...products, ...callsToAction].map((item) => (
+										{[...services, ...callsToAction].map((item, index) => (
 											<DisclosureButton
 												key={item.name}
 												as="a"
 												href={item.href}
-												className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
+												title={`Go to ${item.name} page`}
+												className="group inline-flex items-center justify-center gap-x-1.5 rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-200 hover:bg-white/10 focus-visible:outline-none focus-visible:bg-moving-gray/80 focus:bg-moving-gray/10"
 											>
-												{item.name}
+												<item.icon
+													aria-hidden="true"
+													className={cn(
+														"size-5 stroke-moving-yellow",
+														index > 3 &&
+															"stroke-inherit group-hover:animate-fill-both fill-moving-yellow",
+														index === 2 && "hover:animate-shake",
+													)}
+												/>
+												{index === 5 ? "Find us on the map" : item.name}
 											</DisclosureButton>
 										))}
 									</DisclosurePanel>
 								</Disclosure>
 								<a
-									href="#"
-									className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+									href="/blog"
+									className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-gray-700 hover:bg-gray-50"
 								>
-									Features
+									Blog
 								</a>
-								<a
-									href="#"
-									className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+								<Link
+									href="/careers"
+									className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-gray-700 hover:bg-gray-50"
 								>
-									Marketplace
-								</a>
-								<a
-									href="#"
-									className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-								>
-									Company
-								</a>
+									Careers
+								</Link>
+								<Disclosure as="div" className="-mx-3">
+									<DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-white hover:bg-white hover:text-gray-900">
+										Serivce Areas
+										<ChevronDownIcon
+											aria-hidden="true"
+											className="h-5 w-5 flex-none group-data-[open]:rotate-180"
+										/>
+									</DisclosureButton>
+									<DisclosurePanel className="mt-2 space-y-2">
+										{moverLinks
+											.sort((a, b) =>
+												a.city.toLowerCase() > b.city.toLowerCase() ? 1 : -1,
+											)
+											.map((item) => (
+												<DisclosureButton
+													key={item.href}
+													as="a"
+													href={item.href}
+													className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-300 hover:text-gray-100 hover:bg-white/10"
+												>
+													<div className="group w-full inline-flex items-center justify-between">
+														<span>{item.city}</span>
+														<span className="hidden rounded-lg text-sm p-1 font-normal shadow-sm ring-gray-white/50 group-focus:inline group-hover:inline text-gray-200">
+															{item.state}
+														</span>
+													</div>
+												</DisclosureButton>
+											))}
+									</DisclosurePanel>
+								</Disclosure>
 							</div>
-							<div className="flex justify-start gap-4 py-6">
-								<Facebook className="size-5 text-gray-900 hover:text-gray-600" />
-								<Twitter className="size-5 text-gray-900 hover:text-gray-600" />
-								<MessageCircle className="size-5 text-gray-900 hover:text-gray-600" />
-								<Mail className="size-5 text-gray-900 hover:text-gray-600" />
-								<Instagram className="size-5 text-gray-900 hover:text-gray-600" />
+							<div className="flex justify-start w-full border-t border-solid border-gray-300 gap-4 py-6">
+								{socialMediaLinks.map((link, index) => (
+									<Link
+										key={link.href}
+										href={link.href}
+										title={link.name}
+										target="_blank"
+										className=""
+									>
+										<span className="sr-only">{link.name}</span>
+										<link.icon
+											className={cn(
+												"size-5 fill-white",
+												index === 4 && "stroke-white",
+											)}
+											aria-hidden="true"
+										/>
+									</Link>
+								))}
+								<Link
+									href="tel:651-757-5135"
+									title="call us"
+									target="_blank"
+									className=""
+								>
+									<span className="sr-only">Call</span>
+									<PhoneIcon
+										className={cn("size-5 rotate-x-45 fill-white stroke-white")}
+										aria-hidden="true"
+									/>
+								</Link>
 							</div>
 						</div>
 					</div>
