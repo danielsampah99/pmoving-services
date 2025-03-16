@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@headlessui/react";
 import React from "react";
 
 const Testimonial = () => {
@@ -42,9 +43,12 @@ const Testimonial = () => {
 						Highly professional and reliable! The team handled my long-distance
 						move smoothly, and their attention to detail was impressive
 					</p>
-					<button className="bg-header py-2.5 px-8 rounded-full text-white">
+					<Button
+						type="button"
+						className="bg-header py-2.5 px-8 rounded-full text-white"
+					>
 						Get in touch
-					</button>
+					</Button>
 				</div>
 			</div>
 		</div>

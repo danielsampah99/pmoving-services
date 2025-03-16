@@ -21,12 +21,12 @@ import {
 	PlayCircleIcon,
 	MapIcon,
 } from "@heroicons/react/20/solid";
-import { FC } from "react";
-import { HeroIconType } from "./HeroIcon";
-import { LucideIcon } from "lucide-react";
+import type { FC } from "react";
+import type { HeroIconType } from "./HeroIcon";
+import type { LucideIcon } from "lucide-react";
 import Link from "next/link";
 
-type Service = {
+export type Service = {
 	id: number;
 	name: string;
 	description: string;
@@ -35,18 +35,18 @@ type Service = {
 	subServices: ChildMenu[];
 };
 
-type CallToAction = {
+export type CallToAction = {
 	name: string;
 	href: string;
 	icon: HeroIconType | LucideIcon;
 };
 
-type ChildMenu = {
+export type ChildMenu = {
 	name: string;
 	href: string;
 };
 
-const services: Service[] = [
+export const services: Service[] = [
 	{
 		id: 0,
 		name: "Local Moving",
@@ -106,7 +106,7 @@ const services: Service[] = [
 ];
 
 const callsToAction: CallToAction[] = [
-	{ name: "Gallery", href: "/gallery", icon: PlayCircleIcon },
+	{ name: "Gallery", href: "#", icon: PlayCircleIcon },
 	{ name: "Find us", href: "#", icon: MapIcon },
 ];
 

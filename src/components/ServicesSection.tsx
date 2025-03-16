@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { ServiceCard, serviceCardData } from "./ServiceCard";
 
 type ServiceCardData = {
 	title: string;
@@ -108,7 +109,7 @@ const ServicesSection = () => {
 	}, []);
 
 	return (
-		<section className="py-24 px-4 bg-gradient-to-b from-white to-gray-50">
+		<section className="py-12 lg:py-8 px-4 bg-gradient-to-b from-white to-gray-50">
 			<div className="max-w-7xl mx-auto">
 				<div className="text-center mb-16 opacity-0 service-card">
 					<h2 className="text-4xl font-light mb-4 tracking-tight">
@@ -120,7 +121,7 @@ const ServicesSection = () => {
 					</p>
 				</div>
 
-				<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+				{/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
 					{services.map((service, index) => (
 						<div
 							key={service.title}
@@ -154,6 +155,12 @@ const ServicesSection = () => {
 								</div>
 							</div>
 						</div>
+					))}
+				</div> */}
+
+				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+					{serviceCardData.map((service, index) => (
+						<ServiceCard key={service.title} service={service} index={index} />
 					))}
 				</div>
 

@@ -1,7 +1,8 @@
 import React from 'react'
 import { ArrowRight, Truck, Clock, Award, Star } from 'lucide-react';
 import Gallery from './MainGallery';
-import Footer from '../Footer';
+import { Footer } from '../Footer';
+
 
 const GalleryComponent = () => {
     return (

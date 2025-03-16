@@ -1,57 +1,66 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { PlusIcon, MinusIcon } from '@heroicons/react/24/solid';
-import { motion } from 'motion/react';
+import { useState } from "react";
+import { motion } from "motion/react";
+
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
+import { MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
 
 const faqs = [
-    { question: 'Where are you located?', answer: 'We are located at XYZ street, ABC city.' },
-    { question: 'What are your working hours?', answer: 'Our working hours are 9 AM - 6 PM, Monday to Saturday.' },
-    { question: 'How late in the day can I call for a same-day delivery?', answer: 'You can call before 3 PM for same-day delivery.' },
-    { question: 'Ut enim ad minim veniam, quis nostrud', answer: 'Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' },
-    { question: 'Duis aute irure dolor in reprehenderit in voluptate', answer: 'Velit esse cillum dolore eu fugiat nulla pariatur.' },
-    { question: 'Excepteur sint occaecat cupidatat non proident', answer: 'Sunt in culpa qui officia deserunt mollit anim id est laborum.' },
-  ];
-  
-  export default function FAQs() {
-    const [openIndex, setOpenIndex] = useState<number | null>(null);
-  
-    const toggleFAQ = (index: number) => {
-      setOpenIndex(openIndex === index ? null : index);
-    };
-  
-    return (
-      <div className="max-w-5xl mx-auto p-6">
-        <h2 className="text-2xl font-semibold text-center mb-8 text-background">FAQs</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {faqs.map((faq, index) => (
-            <motion.div 
-              key={index} 
-              className="bg-gradient-to-r from-yellow-50 to-yellow-100 shadow-md rounded-lg p-4 cursor-pointer hover:shadow-lg transition duration-300" 
-              onClick={() => toggleFAQ(index)}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <div className="flex justify-between items-center">
-                <p className="font-medium text-lg text-background">{faq.question}</p>
-                {openIndex === index ? (
-                  <MinusIcon className="w-6 h-6 text-background-100" />
-                ) : (
-                  <PlusIcon className="w-6 h-6 text-background-100" />
-                )}
-              </div>
-              <motion.div 
-                initial={{ opacity: 0, height: 0 }} 
-                animate={{ opacity: openIndex === index ? 1 : 0, height: openIndex === index ? 'auto' : 0 }}
-                transition={{ duration: 0.3 }}
-                className="mt-2"
-              >
-                <p className="text-gray-700 bg-white p-2 rounded-md shadow-sm">{faq.answer}</p>
-              </motion.div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    );
-  }
-  
+	{
+		question: "How do I book a move with Premium Moving Services?",
+		answer: "You can us reach directly by calling 651-757-5135 or fill out our online quote form.",
+	},
+	{
+		question: "We will come to you if you are within 50 miles of Saint Paul. ",
+		answer: "A thorough assessment of the content to be moved and all surrounding factors. You will be given an estimated time and cost based the requested service. We will answer any questions or concerns to make sure everything is transparent.",
+	},
+	{
+		question: "I have a problem with my move",
+		answer: "Please contact us as soon as possible at 651-757-5135 or email: g1sackie@icloud.com",
+	},
+	{
+		question: "What packing services do you offer?",
+		answer:
+			"Our experienced packers safely and efficiently pack boxes. We can provide all the packing supplies including:  Boxes, Packing tape, Shrink wrap, Mattress bags and more!"
+	},
+	{
+		question: "How do I prepare before the movers moving?",
+		answer: "Start your moving preparation well in advance and pay very close attention to small details. \nDeclutter your home.\n Create an inventory of all items to be moved. \n Clean and organize all items that will be packed and transported to your new home. \nUnplug all electrical appliances and electronics to be moved. \nArrange to be present on moving day",
+	},
+	{
+		question: "Who should I notify of my moving?",
+		answer: "A simple change of address is merely enough to get your mail forwarded. Also make sure, you notify: Family & friends. Uities, cable, phone and internet providers, Credit card and both health and insurance companies. Your child’s school and doctor office etc",
+	},
+];
+
+
+export const FAQs = () => {
+	return (
+		<div className="bg-white">
+			<div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+				<div className="mx-auto max-w-4xl divide-y divide-gray-300">
+					<h2 className="text-2xl font-bold leading-10 tracking-tight uppercase lg:text-3xl text-gray-900">Frequently asked questions</h2>
+					<dl className="mt-10 space-y-6 divide-y divide-white/10">
+						{faqs.map((faq) => (
+							<Disclosure key={faq.question} as="div" className="pt-6">
+								<dt>
+									<DisclosureButton className="group flex w-full items-start justify-between text-left text-gray-700">
+										<span className="text-base font-semibold leading-7">{faq.question}</span>
+										<span className="ml-6 flex h-7 items-center">
+											<PlusIcon aria-hidden="true" className="size-6 group-data-[open]:hidden" />
+											<MinusIcon aria-hidden="true" className="size-6 [.group:not([data-open])_&]:hidden" />
+										</span>
+									</DisclosureButton>
+								</dt>
+								<DisclosurePanel as="dd" className="mt-2 pr-12">
+									<p className="text-base leading-7 text-gray-500">{faq.answer}</p>
+								</DisclosurePanel>
+							</Disclosure>
+						))}
+					</dl>
+				</div>
+			</div>
+		</div>
+	)
+}

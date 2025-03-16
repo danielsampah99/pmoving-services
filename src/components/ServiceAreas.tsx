@@ -2,7 +2,7 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
-import { FC } from "react";
+import type { FC } from "react";
 
 export type MoverLink = {
 	href: string;
@@ -62,7 +62,7 @@ export const moverLinks: MoverLink[] = [
 		state: "MN",
 	},
 	{
-		href: "/movers-shoreview-mn",
+		href: "https://maps.app.goo.gl/zLxSoiVUKsYDpExC7",
 		linkText: "Shoreview Movers, MN",
 		city: "Shoreview",
 		state: "MN",

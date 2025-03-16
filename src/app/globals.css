@@ -1,15 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 @import "tailwindcss";
+@import "tailwindcss-animated";
 
 @theme {
 	--font-poppins: "Poppins", sans-serif;
 	--color-background: #f8d006;
-	--color-background-100: rgb(230, 200, 90); /* 50% opacity */
+	--color-background-100: rgb(230, 200, 90);
+	/* 50% opacity */
 	--color-header: rgb(51, 51, 51);
+
 	--color-moving-primary: #1E88E5;
 	--color-moving-dark: #333F48;
 	--color-moving-lightGray: #E6E9EF;
-	--color-moving-gray: #8A898C;
+	--color-moving-gray: oklch(46.4% 0 0);
+	--color-moving-gray-100: oklch(45%, 0, 0);
+
+	--color-moving-yellow: oklch(87.32% 0.1771 92.05);
+
 }
 
 body {
@@ -72,6 +79,7 @@ body {
 		--sidebar-border: 214.3 31.8% 91.4%;
 		--sidebar-ring: 222.2 84% 4.9%;
 	}
+
 	.dark {
 		--background: 222.2 84% 4.9%;
 		--foreground: 210 40% 98%;
@@ -124,21 +132,25 @@ body {
 		top: 0;
 		left: 0;
 	}
+
 	25% {
 		top: 0;
 		left: 100%;
 		transform: translateX(-100%);
 	}
+
 	50% {
 		top: 100%;
 		left: 100%;
 		transform: translate(-100%, -100%);
 	}
+
 	75% {
 		top: 100%;
 		left: 0;
 		transform: translateY(-100%);
 	}
+
 	100% {
 		top: 0;
 		left: 0;
@@ -146,8 +158,10 @@ body {
 }
 
 .group:hover .absolute.w-8.h-8 {
-	animation: moveCar 8s linear infinite; /* Slower animation (8s) */
+	animation: moveCar 8s linear infinite;
+	/* Slower animation (8s) */
 }
+
 
 
 @keyframes fadeIn {
@@ -260,4 +274,3 @@ body {
 	  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 	}
   }
-  
