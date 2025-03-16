@@ -76,9 +76,7 @@ const GalleryComponent = () => {
 									</div>
 									<button
 										type="submit"
-										className="w-full py-3 cursor-pointer px-6 flex items-center justify-center gap-2 text-white font-semibold
-             bg-[#FFD00D] hover:bg-[#E6B800] transition-all duration-300 rounded-lg shadow-md
-             hover:shadow-lg active:scale-95"
+										className="w-full py-3 cursor-pointer px-6 flex items-center justify-center gap-2 text-white font-semibold bg-[#FFD00D] hover:bg-[#E6B800] transition-all duration-300 rounded-lg shadow-md hover:shadow-lg active:scale-95"
 									>
 										<Truck size={20} className="text-[#595959]" />
 										Get Your Free Quote
@@ -104,9 +102,6 @@ const GalleryComponent = () => {
 			<main className='mx-6'>
 				<Gallery />
 			</main>
-
-
-
 		</div>
 	)
 }
