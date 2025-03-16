@@ -126,12 +126,20 @@ export const Banner: FC = () => {
 			className="bg-gray-100 fixed flex items-center justify-center top-0 inset-x-0 z-[100] rounded-md px-4 py-1.5 shadow-lg transition-opacity duration-300"
 		>
 			<div className="max-w-7xl w-full flex justify-between gap-3 items-center">
-				<Link
-					href="#"
-					className="text-base/7 capitalize text-gray-800 hover:text-gray-900 hover:underline underline-offset-2"
-				>
-					Request a quote
-				</Link>
+				<div className="">
+					<Link
+						href="#"
+						className="text-base/7 block capitalize text-gray-800 hover:text-gray-900 hover:underline underline-offset-2"
+					>
+						Request a quote
+					</Link>
+					<Link
+						href="tel: 651-757-5135"
+						className="mt-0.5 hover:underline hover:underline-offset-1 text-gray-500 block text-xs/6"
+					>
+						651-757-5135
+					</Link>
+				</div>
 				<div className="flex gap-2 max-md:flex-wrap">
 					<SocialMediaContactsMenu socialMediaLinks={socialMediaLinks} />
 				</div>

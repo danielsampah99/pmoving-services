@@ -7,11 +7,8 @@ import {
 	Disclosure,
 	DisclosureButton,
 	DisclosurePanel,
-	Popover,
-	PopoverBackdrop,
-	PopoverButton,
 	PopoverGroup,
-	PopoverPanel,
+	Button,
 } from "@headlessui/react";
 import {
 	ArrowPathIcon,
@@ -37,6 +34,7 @@ import {
 import { Services } from "./Services";
 import Link from "next/link";
 import { moverLinks, ServiceArea } from "./ServiceAreas";
+import { SunIcon } from "@heroicons/react/24/solid";
 
 const products = [
 	{
@@ -85,14 +83,10 @@ export const Header: FC = () => {
 				className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
 			>
 				<div className="flex lg:flex-1">
-					<a href="#" className="-m-1.5 p-1.5">
-						<span className="sr-only">Your Company</span>
-						<img
-							alt=""
-							src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/logo-1-1920w.png"
-							className="h-8 w-auto"
-						/>
-					</a>
+					<Link href="/" className="p-1.5">
+						<span className="sr-only">Premium Moving Services</span>
+						<img alt="" src="/logo.svg" className="h-8 w-auto" />
+					</Link>
 				</div>
 				<div className="flex lg:hidden">
 					<button
@@ -112,12 +106,7 @@ export const Header: FC = () => {
 					<Services />
 
 					<ServiceArea links={moverLinks} />
-					<Link
-						href="/service-areas#"
-						className="text-sm/6 font-semibold text-white"
-					>
-						Service Areas
-					</Link>
+
 					<Link href="/blog#" className="text-sm/6 font-semibold text-white">
 						Blog
 					</Link>
@@ -126,22 +115,12 @@ export const Header: FC = () => {
 					</Link>
 				</PopoverGroup>
 
+				{/* Replace block with a lightmode, darkmode toggle */}
 				<div className="hidden lg:flex lg:flex-1 lg:justify-end gap-4">
-					<a href="#" className="text-white hover:text-gray-600">
-						<Facebook className="size-5" />
-					</a>
-					<a href="#" className="text-white hover:text-gray-600">
-						<Twitter className="size-5" />
-					</a>
-					<a href="#" className="text-white hover:text-gray-600">
-						<MessageCircle className="size-5" />
-					</a>
-					<a href="#" className="text-white hover:text-gray-600">
-						<Mail className="size-5" />
-					</a>
-					<a href="#" className="text-white hover:text-gray-600">
-						<Instagram className="size-5" />
-					</a>
+					<Button type="button">
+						{" "}
+						<SunIcon className="size-5 fill-white" />{" "}
+					</Button>
 				</div>
 			</nav>
 			<Dialog
