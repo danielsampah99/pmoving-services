@@ -19,32 +19,16 @@ const QuoteComponent = () => {
 							className="text-center lg:text-left"
 						>
 							<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
-								Moving Made <span className="text-primary">Simple</span> and Stress-Free
+								Moving Made <span className="text-moving-yellow rotate-y-6">Simple</span> and Stress-Free
 							</h1>
 							<p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0">
 								Let our professional team handle your move while you focus on what matters most. Get your personalized quote today.
 							</p>
 							<div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
 								{/* Button 1: Get Started */}
-								<button
-									style={{
-										padding: "0.75rem 1.5rem",
-										backgroundColor: "#3b82f6", // Blue color
-										color: "#ffffff", // White text
-										borderRadius: "0.375rem",
-										fontSize: "1rem",
-										fontWeight: "500",
-										display: "flex",
-										alignItems: "center",
-										gap: "0.5rem",
-										transition: "background-color 0.2s ease",
-									}}
-									onMouseEnter={(e) => {
-										e.currentTarget.style.backgroundColor = "#2563eb"; // Darker blue on hover
-									}}
-									onMouseLeave={(e) => {
-										e.currentTarget.style.backgroundColor = "#3b82f6"; // Original blue on leave
-									}}
+								<Button
+									className="bg-yellow-400 inline-flex items-center justify-center gap-x-1.5 transition-colors ease-in duration-300 hover:bg-moving-yellow text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline"
+									type='button'
 								>
 									Get Started
 									<ArrowRight
@@ -55,31 +39,15 @@ const QuoteComponent = () => {
 										}}
 										className="group-hover:translate-x-1"
 									/>
-								</button>
+								</Button>
 
 								{/* Button 2: Learn More */}
-								<button
-									style={{
-										padding: "0.75rem 1.5rem",
-										backgroundColor: "transparent",
-										color: "#3b82f6", // Blue text
-										border: "2px solid #3b82f6", // Blue border
-										borderRadius: "0.375rem",
-										fontSize: "1rem",
-										fontWeight: "500",
-										transition: "background-color 0.2s ease, color 0.2s ease",
-									}}
-									onMouseEnter={(e) => {
-										e.currentTarget.style.backgroundColor = "#3b82f6"; // Blue background on hover
-										e.currentTarget.style.color = "#ffffff"; // White text on hover
-									}}
-									onMouseLeave={(e) => {
-										e.currentTarget.style.backgroundColor = "transparent"; // Transparent background on leave
-										e.currentTarget.style.color = "#3b82f6"; // Blue text on leave
-									}}
+								<Button
+									type='button'
+									className='px-4 rounded-md py-2 inline-flex items-center hover:border-white justify-center hover:bg-moving-yellow hover:text-white text-moving-yellow border border-solid shadow bg-transparent font-medim transition-all ease-in duration-300 delay-150'
 								>
 									Learn More
-								</button>
+								</Button>
 							</div>
 						</motion.div>
 						<motion.div
