@@ -11,8 +11,10 @@ import {
 	BuildingIcon,
 	Building2Icon,
 	ShoppingBagIcon,
-	PianoIcon, GlobeIcon,
-	TrashIcon, Waypoints,
+	PianoIcon,
+	GlobeIcon,
+	TrashIcon,
+	Waypoints,
 	type LucideIcon,
 	PackageIcon,
 	VaultIcon,
@@ -99,28 +101,32 @@ export const serviceCardData: ServiceCardData[] = [
 	},
 	{
 		title: "Pianos",
-		description: "Professional piano moving services, ensuring safe and secure transport.",
+		description:
+			"Professional piano moving services, ensuring safe and secure transport.",
 		href: "/services/piano-moving",
 		icon: PianoIcon,
 	},
 	{
 		title: "Junk Removal",
-		description: "Efficient and responsible junk removal services to declutter your space.",
+		description:
+			"Efficient and responsible junk removal services to declutter your space.",
 		href: "/services/junk-removal",
-		icon: TrashIcon
+		icon: TrashIcon,
 	},
 	{
 		title: "International Move",
-		description: "Comprehensive international moving services for a smooth relocation experience.",
+		description:
+			"Comprehensive international moving services for a smooth relocation experience.",
 		href: "/services/international-moving",
-		icon: GlobeIcon
+		icon: GlobeIcon,
 	},
 	{
 		title: "Logistics Services",
-		description: "Reliable logistics solutions for businesses and individuals, tailored to your specific needs.",
+		description:
+			"Reliable logistics solutions for businesses and individuals, tailored to your specific needs.",
 		href: "/services/logistics-services",
-		icon: WaypointsIcon
-	}
+		icon: WaypointsIcon,
+	},
 ];
 
 export const ServiceCard: FC<{ service: ServiceCardData; index: number }> = ({
@@ -170,8 +176,12 @@ export const ServiceCard: FC<{ service: ServiceCardData; index: number }> = ({
 							}}
 						>
 							<div className="flex h-full overflow-y-auto flex-col justify-center p-6">
-								<h3 className="text-xl font-semibold mb-3 text-white">{service.title}</h3>
-								<p className="text-sm text-ellipsis opacity-90 text-gray-200">{service.description}</p>
+								<h3 className="text-xl font-semibold mb-3 text-white">
+									{service.title}
+								</h3>
+								<p className="text-sm text-ellipsis opacity-90 text-gray-200">
+									{service.description}
+								</p>
 							</div>
 						</div>
 					</div>

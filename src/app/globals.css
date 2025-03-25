@@ -9,13 +9,12 @@
 	/* 50% opacity */
 	--color-header: rgb(51, 51, 51);
 
-	--color-moving-primary: #1E88E5;
-	--color-moving-dark: #333F48;
-	--color-moving-lightGray: #E6E9EF;
+	--color-moving-primary: #1e88e5;
+	--color-moving-dark: #333f48;
+	--color-moving-lightGray: #e6e9ef;
 	--color-moving-gray: oklch(46.4% 0 0);
 	--color-moving-gray-100: oklch(45%, 0, 0);
 	--color-moving-yellow: oklch(87.32% 0.1771 92.05);
-
 }
 
 body {
@@ -161,8 +160,6 @@ body {
 	/* Slower animation (8s) */
 }
 
-
-
 @keyframes fadeIn {
 	from {
 		opacity: 0;
@@ -212,7 +209,6 @@ body {
 	animation: zoomIn 0.8s ease-out forwards;
 }
 
-
 /* Category Filter Styles */
 .category-filter {
 	padding: 0.5rem 1rem;
@@ -222,13 +218,11 @@ body {
 }
 
 .category-filter.active {
-	background-color: #1E88E5;
+	background-color: #1e88e5;
 	color: white;
 }
 
-
 @layer components {
-
 	/* Image hover effects */
 	.image-zoom-effect {
 		@apply transition-transform duration-700;
@@ -237,11 +231,7 @@ body {
 	.image-card:hover .image-zoom-effect {
 		@apply scale-110;
 	}
-
-
 }
-
-
 
 /* Enhanced touch action for mobile */
 @media (max-width: 768px) {

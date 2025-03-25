@@ -28,21 +28,34 @@ const HeroSection = () => {
 
 				{/* Buttons */}
 				<div className="mt-6 flex flex-col md:flex-row gap-4">
-					<Button type='button' className="border border-white px-6 py-3 text-lg font-semibold hover:bg-white hover:text-moving-yellow transition">
+					<Button
+						type="button"
+						className="border border-white px-6 py-3 text-lg font-semibold hover:bg-white hover:text-moving-yellow transition"
+					>
 						EXPLORE OUR SERVICES
 					</Button>
 
-					<Link href="/free-quote" className="bg-background px-6 py-3 text-lg font-semibold hover:bg-background transition">
+					<Link
+						href="/free-quote"
+						className="bg-background px-6 py-3 text-lg font-semibold hover:bg-background transition"
+					>
 						GET AN INSTANT QUOTE
 					</Link>
 				</div>
 
-				<div className='inline-flex items-baseline whitespace-nowrap justify-start gap-x-1'>
-					<Link href='https://wisetack.us/#/hy6xcov/prequalify' target="_blank" className="group flex gap-x-1 text-semibold hover:underline items-center mt-4 text-lg">
+				<div className="inline-flex items-baseline whitespace-nowrap justify-start gap-x-1">
+					<Link
+						href="https://wisetack.us/#/hy6xcov/prequalify"
+						target="_blank"
+						className="group flex gap-x-1 text-semibold hover:underline items-center mt-4 text-lg"
+					>
 						<BanknotesIcon className="fill-background group-hover:fill-white group-hover:stroke-white size-6" />
 						<span>Finance Your Move </span>
 					</Link>
-					<Link href='tel: 651-757-5135' className="group flex gap-x-1 hover:underline items-center mt-4 text-lg">
+					<Link
+						href="tel: 651-757-5135"
+						className="group flex gap-x-1 hover:underline items-center mt-4 text-lg"
+					>
 						<PhoneIcon className="fill-background size-6 group-hover:fill-white group-hover:stroke-white" />
 						<span>REQUEST A CALLBACK!</span>
 					</Link>
@@ -76,7 +89,10 @@ const HeroSection = () => {
 						</div>
 					</div>
 
-					<Link href='/free-quote' className="mt-5 block rounded-md shadow bg-background text-white px-6 py-3 w-full font-bold hover:bg-background-100 transition">
+					<Link
+						href="/free-quote"
+						className="mt-5 block rounded-md shadow bg-background text-white px-6 py-3 w-full font-bold hover:bg-background-100 transition"
+					>
 						CONTINUE →
 					</Link>
 				</div>

@@ -1,24 +1,29 @@
-import type { ActiveState } from "./components/InteractiveMap"
+import type { ActiveState } from "./components/InteractiveMap";
 import { MoverLink } from "./components/ServiceAreas";
 
-export type State = { label: string, value: ActiveState }
+export type State = { label: string; value: ActiveState };
 
-export type MapCity = Pick<MoverLink, 'href' | 'city' | 'linkText' | 'state'> & {
-	longitude: number, latitude: number
-}
+export type MapCity = Pick<
+	MoverLink,
+	"href" | "city" | "linkText" | "state"
+> & {
+	longitude: number;
+	latitude: number;
+};
 
 export type MapTile = {
 	name: string;
 	url: string;
 	attribution: string;
 	maxZoom: number;
-}
+};
 
 export const mapTiles: MapTile[] = [
 	{
 		name: "OpenStreetMap",
 		url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+		attribution:
+			'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 		maxZoom: 19,
 	},
 	{
@@ -41,14 +46,14 @@ export const mapTiles: MapTile[] = [
 		attribution:
 			'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
 		maxZoom: 19,
-	}
-]
+	},
+];
 
 export const states: State[] = [
-	{ label: "World", value: 'all' },
-	{ label: 'Minnesota', value: 'minnesota' },
-	{ label: 'Wisconsin', value: 'wisconsin' }
-]
+	{ label: "World", value: "all" },
+	{ label: "Minnesota", value: "minnesota" },
+	{ label: "Wisconsin", value: "wisconsin" },
+];
 
 export const minnesotaMapCities: MapCity[] = [
 	{
@@ -72,7 +77,7 @@ export const minnesotaMapCities: MapCity[] = [
 		linkText: "Elk River Movers, MN",
 		city: "Elk River",
 		state: "MN",
-		latitude: 45.320,
+		latitude: 45.32,
 		longitude: -93.622,
 	},
 	{
@@ -88,15 +93,15 @@ export const minnesotaMapCities: MapCity[] = [
 		linkText: "Faribault Movers, MN",
 		city: "Faribault",
 		state: "MN",
-		latitude: 44.280,
-		longitude: -93.270,
+		latitude: 44.28,
+		longitude: -93.27,
 	},
 	{
 		href: "/movers-west-saint-paul-mn",
 		linkText: "West Saint Paul Movers, MN",
 		city: "West Saint Paul",
 		state: "MN",
-		latitude: 44.910,
+		latitude: 44.91,
 		longitude: -93.105,
 	},
 	{
@@ -112,7 +117,7 @@ export const minnesotaMapCities: MapCity[] = [
 		linkText: "South Saint Paul Movers, MN",
 		city: "South Saint Paul",
 		state: "MN",
-		latitude: 44.930,
+		latitude: 44.93,
 		longitude: -93.046,
 	},
 	{
@@ -128,7 +133,7 @@ export const minnesotaMapCities: MapCity[] = [
 		linkText: "St. Cloud Movers, MN",
 		city: "St. Cloud",
 		state: "MN",
-		latitude: 45.560,
+		latitude: 45.56,
 		longitude: -94.163,
 	},
 	{
@@ -153,14 +158,14 @@ export const minnesotaMapCities: MapCity[] = [
 		city: "Maplewood",
 		state: "MN",
 		latitude: 44.946,
-		longitude: -93.140,
+		longitude: -93.14,
 	},
 	{
 		href: "/movers-little-canada-mn",
 		linkText: "Little Canada Movers, MN",
 		city: "Little Canada",
 		state: "MN",
-		latitude: 44.910,
+		latitude: 44.91,
 		longitude: -93.146,
 	},
 	{
@@ -184,7 +189,7 @@ export const minnesotaMapCities: MapCity[] = [
 		linkText: "North Saint Paul Movers, MN",
 		city: "North Saint Paul",
 		state: "MN",
-		latitude: 45.020,
+		latitude: 45.02,
 		longitude: -93.067,
 	},
 	{
@@ -225,15 +230,15 @@ export const minnesotaMapCities: MapCity[] = [
 		city: "Vadnais Heights",
 		state: "MN",
 		latitude: 45.065,
-		longitude: -93.110,
+		longitude: -93.11,
 	},
 	{
 		href: "/movers-ramsey-county",
 		linkText: "Ramsey County Movers, MN",
 		city: "Ramsey County",
 		state: "MN",
-		latitude: 45.000,
-		longitude: -93.100,
+		latitude: 45.0,
+		longitude: -93.1,
 	},
 	{
 		href: "/movers-twin-cities",
@@ -272,7 +277,7 @@ export const minnesotaMapCities: MapCity[] = [
 		linkText: "North Oaks Movers, MN",
 		city: "North Oaks",
 		state: "MN",
-		latitude: 45.180,
+		latitude: 45.18,
 		longitude: -93.216,
 	},
 	{
@@ -312,7 +317,7 @@ export const minnesotaMapCities: MapCity[] = [
 		linkText: "Burnsville Movers, MN",
 		city: "Burnsville",
 		state: "MN",
-		latitude: 44.750,
+		latitude: 44.75,
 		longitude: -93.281,
 	},
 	{
@@ -345,7 +350,7 @@ export const minnesotaMapCities: MapCity[] = [
 		city: "Wayzata",
 		state: "MN",
 		latitude: 44.883,
-		longitude: -93.520,
+		longitude: -93.52,
 	},
 	{
 		href: "/movers-winona--mn",
@@ -361,7 +366,7 @@ export const minnesotaMapCities: MapCity[] = [
 		city: "Rochester",
 		state: "MN",
 		latitude: 44.012,
-		longitude: -92.480,
+		longitude: -92.48,
 	},
 	{
 		href: "/movers-rogers--mn",
@@ -387,7 +392,7 @@ export const wisconsinMapCities: MapCity[] = [
 		linkText: "Prescott Movers, WI",
 		city: "Prescott",
 		state: "WI",
-		latitude: 44.410,
-		longitude: -92.570,
+		latitude: 44.41,
+		longitude: -92.57,
 	},
 ];
