@@ -11,9 +11,12 @@ import {
 	BuildingIcon,
 	Building2Icon,
 	ShoppingBagIcon,
-	LockIcon,
+	PianoIcon, GlobeIcon,
+	TrashIcon, Waypoints,
 	type LucideIcon,
 	PackageIcon,
+	VaultIcon,
+	WaypointsIcon,
 } from "lucide-react";
 
 export interface ServiceCardData {
@@ -92,8 +95,32 @@ export const serviceCardData: ServiceCardData[] = [
 		description:
 			"Secure, climate-controlled storage solutions for both short-term and long-term needs.",
 		href: "/services/safes-and-gun-safes",
-		icon: LockIcon,
+		icon: VaultIcon,
 	},
+	{
+		title: "Pianos",
+		description: "Professional piano moving services, ensuring safe and secure transport.",
+		href: "/services/piano-moving",
+		icon: PianoIcon,
+	},
+	{
+		title: "Junk Removal",
+		description: "Efficient and responsible junk removal services to declutter your space.",
+		href: "/services/junk-removal",
+		icon: TrashIcon
+	},
+	{
+		title: "International Move",
+		description: "Comprehensive international moving services for a smooth relocation experience.",
+		href: "/services/international-moving",
+		icon: GlobeIcon
+	},
+	{
+		title: "Logistics Services",
+		description: "Reliable logistics solutions for businesses and individuals, tailored to your specific needs.",
+		href: "/services/logistics-services",
+		icon: WaypointsIcon
+	}
 ];
 
 export const ServiceCard: FC<{ service: ServiceCardData; index: number }> = ({
@@ -109,13 +136,13 @@ export const ServiceCard: FC<{ service: ServiceCardData; index: number }> = ({
 		>
 			<Link href={service.href}>
 				<div
-					className="relative h-48 w-full cursor-pointer"
+					className="relative h-32 sm:h-48 w-full cursor-pointer"
 					onMouseEnter={() => setIsFlipped(true)}
 					onMouseLeave={() => setIsFlipped(false)}
 					style={{ perspective: "1000px" }}
 				>
 					<div
-						className="relative size-full transition-all duration-500"
+						className="relative size-full transition-all duration-500 max-sm:p-2"
 						style={{
 							transformStyle: "preserve-3d",
 							transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
@@ -123,13 +150,13 @@ export const ServiceCard: FC<{ service: ServiceCardData; index: number }> = ({
 					>
 						{/* front of card */}
 						<div
-							className="absolute w-full h-full rounded-lg bg-card shadow-md flex flex-col items-center justify-center p-6"
+							className="absolute w-full h-full rounded-lg bg-gradient-to-br from-white via-gray-50 to-slate-100 shadow-md flex flex-col items-center justify-center p-2 md:p-6"
 							style={{ backfaceVisibility: "hidden" }}
 						>
 							<div className="text-teal-900">
-								<service.icon className="size-12 stroke-yellow-400 fill-white" />
+								<service.icon className="size-7 sm:size-12 stroke-yellow-400 fill-white" />
 							</div>
-							<h3 className="text-xl font-medium mt-4 text-center">
+							<h3 className="text-xl max-sm:text-base font-medium mt-4 text-center">
 								{service.title}
 							</h3>
 						</div>
@@ -142,9 +169,9 @@ export const ServiceCard: FC<{ service: ServiceCardData; index: number }> = ({
 								transform: "rotateY(180deg)",
 							}}
 						>
-							<div className="flex h-full flex-col justify-center p-6">
+							<div className="flex h-full overflow-y-auto flex-col justify-center p-6">
 								<h3 className="text-xl font-semibold mb-3 text-white">{service.title}</h3>
-								<p className="text-sm opacity-90 text-gray-200">{service.description}</p>
+								<p className="text-sm text-ellipsis opacity-90 text-gray-200">{service.description}</p>
 							</div>
 						</div>
 					</div>

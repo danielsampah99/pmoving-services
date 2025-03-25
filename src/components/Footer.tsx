@@ -22,6 +22,7 @@ const navigation = {
 		{ name: 'About', href: '#' },
 		{ name: 'Affiliates', href: '#' },
 		{ name: 'Blog', href: '#' },
+		{ name: 'FAQs', href: '/#faqs' },
 		{ name: 'HTML Sitemap', href: '#' },
 		{ name: 'Referral Program', href: '#' },
 		{ name: 'Resources', href: '#' },
@@ -69,7 +70,7 @@ const navigation = {
 		},
 		{
 			name: 'YouTube',
-			href: '#',
+			href: 'https://www.youtube.com/@PremiumMovingServices',
 			icon: (props: SVGProps<SVGSVGElement>) => (
 				<svg fill="currentColor" viewBox="0 0 24 24" {...props}>
 					<path

@@ -57,7 +57,7 @@ export const socialMediaLinks: SocialMediaLink[] = [
 	},
 	{
 		name: "YouTube",
-		href: "#",
+		href: "https://www.youtube.com/@PremiumMovingServices",
 		icon: (props) => (
 			<svg fill="currentColor" viewBox="0 0 24 24" {...props}>
 				<title />

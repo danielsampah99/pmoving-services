@@ -60,6 +60,7 @@ export const Header: FC = () => {
 					<Link href="/careers" className="text-sm/6 font-semibold text-white">
 						Careers
 					</Link>
+					<Link href='/#faqs' className="text-sm/6 scroll-smooth -scroll-m-10 font-semibold text-white">Frequently Asked Questions</Link>"
 				</PopoverGroup>
 
 				{/* Replace block with a lightmode, darkmode toggle */}
@@ -134,12 +135,19 @@ export const Header: FC = () => {
 								>
 									Blog
 								</a>
+								<a
+									href="/#faqs"
+									className="-mx-3 block scroll-smooth rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-gray-700 hover:bg-gray-50"
+								>
+									Frequently Asked Questions
+								</a>
 								<Link
 									href="/careers"
 									className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-gray-700 hover:bg-gray-50"
 								>
 									Careers
 								</Link>
+
 								<Disclosure as="div" className="-mx-3">
 									<DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-white hover:bg-white hover:text-gray-900">
 										Serivce Areas

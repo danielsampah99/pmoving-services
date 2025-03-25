@@ -1,5 +1,6 @@
-import { PhoneCall } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@headlessui/react";
+import { BanknotesIcon, PhoneIcon } from "@heroicons/react/24/solid";
 
 const HeroSection = () => {
 	return (
@@ -27,18 +28,25 @@ const HeroSection = () => {
 
 				{/* Buttons */}
 				<div className="mt-6 flex flex-col md:flex-row gap-4">
-					<button className="border border-white px-6 py-3 text-lg font-semibold hover:bg-white hover:text-black transition">
+					<Button type='button' className="border border-white px-6 py-3 text-lg font-semibold hover:bg-white hover:text-moving-yellow transition">
 						EXPLORE OUR SERVICES
-					</button>
+					</Button>
+
 					<Link href="/free-quote" className="bg-background px-6 py-3 text-lg font-semibold hover:bg-background transition">
 						GET AN INSTANT QUOTE
 					</Link>
 				</div>
 
-				<Link href='tel: 651-757-5135' className="flex items-center mt-4 text-lg">
-					<PhoneCall size={24} className="text-background" />
-					OR REQUEST A CALLBACK!
-				</Link>
+				<div className='inline-flex items-baseline whitespace-nowrap justify-start gap-x-1'>
+					<Link href='https://wisetack.us/#/hy6xcov/prequalify' target="_blank" className="group flex gap-x-1 text-semibold hover:underline items-center mt-4 text-lg">
+						<BanknotesIcon className="fill-background group-hover:fill-white group-hover:stroke-white size-6" />
+						<span>Finance Your Move </span>
+					</Link>
+					<Link href='tel: 651-757-5135' className="group flex gap-x-1 hover:underline items-center mt-4 text-lg">
+						<PhoneIcon className="fill-background size-6 group-hover:fill-white group-hover:stroke-white" />
+						<span>REQUEST A CALLBACK!</span>
+					</Link>
+				</div>
 
 				{/* Quote Form */}
 				<div className="mt-10 bg-white text-black p-6 rounded-xl w-full max-w-3xl shadow-lg">
