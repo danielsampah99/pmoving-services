@@ -1,6 +1,5 @@
 "use client";
 
-
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ArchiveBoxIcon, TruckIcon } from "@heroicons/react/24/outline";
@@ -18,7 +17,6 @@ export default function NotFound() {
 
 	return (
 		<div className="min-h-screen flex flex-col items-center justify-center bg-[oklch(46.4%_0_0)] text-white relative overflow-hidden">
-
 			<div className="absolute inset-0 opacity-10">
 				{[...Array(20)].map((_, i) => (
 					<div
@@ -56,9 +54,7 @@ export default function NotFound() {
 							transform: `translateX(${truckPosition}%)`,
 						}}
 					>
-						<TruckIcon
-							className="size-20 stroke-1 fill-black stroke-moving-yellow"
-						/>
+						<TruckIcon className="size-20 stroke-1 fill-black stroke-moving-yellow" />
 					</div>
 
 					{/* Buildings SVG */}

@@ -278,7 +278,11 @@ export const ServiceArea: FC<{ links: MoverLink[] }> = ({ links }) => {
 		<div className="z-[99]">
 			<Menu>
 				<div className="inline-flex items-center gap-2 bg-transparent text-sm/6 font-semibold text-gray-100 hover:text-white focus:text-white">
-					<Link href="/#service-areas" className="" style={{ scrollBehavior: 'smooth' }}>
+					<Link
+						href="/#service-areas"
+						className=""
+						style={{ scrollBehavior: "smooth" }}
+					>
 						Service Areas
 					</Link>
 					<MenuButton className="group focus:outline-none data-[hover]:text-white-700 data-[open]:text-white data-[focus]:outline-1 data-[focus]:outline-white">

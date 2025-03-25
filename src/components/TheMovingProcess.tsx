@@ -143,8 +143,9 @@ export const TheMovingProcess: FC = () => {
 					{processes.map((step, index) => (
 						<motion.div
 							key={step.stage}
-							className={`flex flex-col md:flex-row items-center gap-8 mb-16 last:mb-0 ${index % 2 === 1 ? "md:flex-row-reverse" : ""
-								}`}
+							className={`flex flex-col md:flex-row items-center gap-8 mb-16 last:mb-0 ${
+								index % 2 === 1 ? "md:flex-row-reverse" : ""
+							}`}
 							initial="hidden"
 							animate={controls}
 							variants={{

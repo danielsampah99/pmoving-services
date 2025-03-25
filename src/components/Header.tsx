@@ -32,7 +32,11 @@ export const Header: FC = () => {
 				<div className="flex lg:flex-1">
 					<Link href="/" className="p-1.5">
 						<span className="sr-only">Premium Moving Services</span>
-						<img alt="Premium Moving Company's Logo" src="/logo.svg" className="h-8 w-auto" />
+						<img
+							alt="Premium Moving Company's Logo"
+							src="/logo.svg"
+							className="h-8 w-auto"
+						/>
 					</Link>
 				</div>
 				<div className="flex lg:hidden">
@@ -51,15 +55,20 @@ export const Header: FC = () => {
 				</div>
 				<PopoverGroup className="hidden z-[100] lg:flex lg:gap-x-12">
 					<Services />
-
 					<ServiceArea links={moverLinks} />
-
 					<Link href="/blog" className="text-sm/6 font-semibold text-white">
 						Blog
 					</Link>
 					<Link href="/careers" className="text-sm/6 font-semibold text-white">
 						Careers
 					</Link>
+					<Link
+						href="/#faqs"
+						className="text-sm/6 scroll-smooth -scroll-m-10 font-semibold text-white"
+					>
+						Frequently Asked Questions
+					</Link>
+					"
 				</PopoverGroup>
 
 				{/* Replace block with a lightmode, darkmode toggle */}
@@ -119,7 +128,7 @@ export const Header: FC = () => {
 													className={cn(
 														"size-5 stroke-moving-yellow",
 														index > 3 &&
-														"stroke-inherit group-hover:animate-fill-both fill-moving-yellow",
+															"stroke-inherit group-hover:animate-fill-both fill-moving-yellow",
 														index === 2 && "hover:animate-shake",
 													)}
 												/>
@@ -134,12 +143,19 @@ export const Header: FC = () => {
 								>
 									Blog
 								</a>
+								<a
+									href="/#faqs"
+									className="-mx-3 block scroll-smooth rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-gray-700 hover:bg-gray-50"
+								>
+									Frequently Asked Questions
+								</a>
 								<Link
 									href="/careers"
 									className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-gray-700 hover:bg-gray-50"
 								>
 									Careers
 								</Link>
+
 								<Disclosure as="div" className="-mx-3">
 									<DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-white hover:bg-white hover:text-gray-900">
 										Serivce Areas

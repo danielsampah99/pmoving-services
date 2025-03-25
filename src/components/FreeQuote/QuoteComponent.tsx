@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
-import { Button } from '@headlessui/react'
-import { ArrowRight, Truck } from 'lucide-react'
-import { motion } from 'motion/react'
-import React from 'react'
-import { Footer } from '../Footer'
+import { Button } from "@headlessui/react";
+import { ArrowRight, Truck } from "lucide-react";
+import { motion } from "motion/react";
+import React from "react";
+import { Footer } from "../Footer";
 
 const QuoteComponent = () => {
 	return (
@@ -19,16 +19,19 @@ const QuoteComponent = () => {
 							className="text-center lg:text-left"
 						>
 							<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
-								Moving Made <span className="text-moving-yellow rotate-y-6">Simple</span> and Stress-Free
+								Moving Made{" "}
+								<span className="text-moving-yellow rotate-y-6">Simple</span>{" "}
+								and Stress-Free
 							</h1>
 							<p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0">
-								Let our professional team handle your move while you focus on what matters most. Get your personalized quote today.
+								Let our professional team handle your move while you focus on
+								what matters most. Get your personalized quote today.
 							</p>
 							<div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
 								{/* Button 1: Get Started */}
 								<Button
 									className="bg-yellow-400 inline-flex items-center justify-center gap-x-1.5 transition-colors ease-in duration-300 hover:bg-moving-yellow text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline"
-									type='button'
+									type="button"
 								>
 									Get Started
 									<ArrowRight
@@ -43,8 +46,8 @@ const QuoteComponent = () => {
 
 								{/* Button 2: Learn More */}
 								<Button
-									type='button'
-									className='px-4 rounded-md py-2 inline-flex items-center hover:border-white justify-center hover:bg-moving-yellow hover:text-white text-moving-yellow border border-solid shadow bg-transparent font-medim transition-all ease-in duration-300 delay-150'
+									type="button"
+									className="px-4 rounded-md py-2 inline-flex items-center hover:border-white justify-center hover:bg-moving-yellow hover:text-white text-moving-yellow border border-solid shadow bg-transparent font-medim transition-all ease-in duration-300 delay-150"
 								>
 									Learn More
 								</Button>
@@ -69,7 +72,8 @@ const QuoteComponent = () => {
 									<h3 className="font-semibold">5,000+ Successful Moves</h3>
 								</div>
 								<p className="text-muted-foreground text-sm">
-									Join thousands of satisfied customers who trusted us with their moving needs
+									Join thousands of satisfied customers who trusted us with
+									their moving needs
 								</p>
 							</div>
 						</motion.div>
@@ -91,9 +95,12 @@ const QuoteComponent = () => {
 						viewport={{ once: true }}
 						transition={{ duration: 0.5 }}
 					>
-						<h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Get Your Moving Quote</h2>
+						<h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+							Get Your Moving Quote
+						</h2>
 						<p className="text-muted-foreground max-w-2xl mx-auto">
-							Fill out the form below and we'll create a personalized quote for your upcoming move.
+							Fill out the form below and we'll create a personalized quote for
+							your upcoming move.
 						</p>
 					</motion.div>
 
@@ -104,7 +111,10 @@ const QuoteComponent = () => {
 							<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 								{/* Full Name */}
 								<div className="sm:col-span-2">
-									<label htmlFor="fullName" className="block text-sm font-medium text-gray-700">
+									<label
+										htmlFor="fullName"
+										className="block text-sm font-medium text-gray-700"
+									>
 										Full Name
 									</label>
 									<input
@@ -118,7 +128,10 @@ const QuoteComponent = () => {
 
 								{/* Email */}
 								<div className="sm:col-span-2">
-									<label htmlFor="email" className="block text-sm font-medium text-gray-700">
+									<label
+										htmlFor="email"
+										className="block text-sm font-medium text-gray-700"
+									>
 										Email
 									</label>
 									<input
@@ -132,7 +145,10 @@ const QuoteComponent = () => {
 
 								{/* Phone Number */}
 								<div className="sm:col-span-2">
-									<label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+									<label
+										htmlFor="phone"
+										className="block text-sm font-medium text-gray-700"
+									>
 										Phone Number
 									</label>
 									<input
@@ -146,7 +162,10 @@ const QuoteComponent = () => {
 
 								{/* Move Date */}
 								<div>
-									<label htmlFor="moveDate" className="block text-sm font-medium text-gray-700">
+									<label
+										htmlFor="moveDate"
+										className="block text-sm font-medium text-gray-700"
+									>
 										Move Date
 									</label>
 									<input
@@ -159,7 +178,10 @@ const QuoteComponent = () => {
 
 								{/* Move Size */}
 								<div>
-									<label htmlFor="moveSize" className="block text-sm font-medium text-gray-700">
+									<label
+										htmlFor="moveSize"
+										className="block text-sm font-medium text-gray-700"
+									>
 										Move Size
 									</label>
 									<select
@@ -175,7 +197,10 @@ const QuoteComponent = () => {
 
 								{/* Current Address */}
 								<div className="sm:col-span-2">
-									<label htmlFor="currentAddress" className="block text-sm font-medium text-gray-700">
+									<label
+										htmlFor="currentAddress"
+										className="block text-sm font-medium text-gray-700"
+									>
 										Current Address
 									</label>
 									<input
@@ -189,7 +214,10 @@ const QuoteComponent = () => {
 
 								{/* Destination Address */}
 								<div className="sm:col-span-2">
-									<label htmlFor="destinationAddress" className="block text-sm font-medium text-gray-700">
+									<label
+										htmlFor="destinationAddress"
+										className="block text-sm font-medium text-gray-700"
+									>
 										Destination Address
 									</label>
 									<input
@@ -203,7 +231,10 @@ const QuoteComponent = () => {
 
 								{/* Additional Notes */}
 								<div className="sm:col-span-2">
-									<label htmlFor="notes" className="block text-sm font-medium text-gray-700">
+									<label
+										htmlFor="notes"
+										className="block text-sm font-medium text-gray-700"
+									>
 										Additional Notes
 									</label>
 									<textarea
@@ -247,7 +278,7 @@ const QuoteComponent = () => {
 
 			<Footer />
 		</div>
-	)
-}
+	);
+};
 
-export default QuoteComponent
+export default QuoteComponent;

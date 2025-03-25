@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { cn } from "@/utils";
 import { Button } from "@headlessui/react";
@@ -7,25 +7,27 @@ import { ImageViewer } from "./ImageViewer";
 import { NumberCounter } from "./NumberCounter";
 
 export type AboutImages = {
-	src: string
-	alt: string
-}
+	src: string;
+	alt: string;
+};
 
-export type NavigateImage = (direction: "next" | "prev") => void
+export type NavigateImage = (direction: "next" | "prev") => void;
 
 export const AboutUs: FC = () => {
-
 	const [expandedMission, setExpandedMission] = useState(false);
 	const [expandedServices, setExpandedServices] = useState(false);
-	const [imageViewerOpen, setImageViewerOpen] = useState(false)
-	const [currentImageIndex, setCurrentImageIndex] = useState(0)
+	const [imageViewerOpen, setImageViewerOpen] = useState(false);
+	const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+	const missionTextCollapsed =
+		"Premium Moving Services is one of the best Minnesota movers that is committed to ensuring our customers are receiving the highest premium quality of moving service offered. As a company, we ensure this through having our employees offer assistance, discretion ...";
+	const missionTextExpanded =
+		"Premium Moving Services is one of the best Minnesota movers that is committed to ensuring our customers are receiving the highest premium quality of moving service offered.  As a company, we ensure this through having our employees offer assistance, discretion, and support ethical and safe behavior above all else.  Our goal is as your moving partner to alleviate any stress you may experience and to ensure your move is as seamless as possible.";
 
-	const missionTextCollapsed = "Premium Moving Services is one of the best Minnesota movers that is committed to ensuring our customers are receiving the highest premium quality of moving service offered. As a company, we ensure this through having our employees offer assistance, discretion ...";
-	const missionTextExpanded = "Premium Moving Services is one of the best Minnesota movers that is committed to ensuring our customers are receiving the highest premium quality of moving service offered.  As a company, we ensure this through having our employees offer assistance, discretion, and support ethical and safe behavior above all else.  Our goal is as your moving partner to alleviate any stress you may experience and to ensure your move is as seamless as possible.";
-
-	const servicesTextCollapsed = "Premium Moving Services provides top-quality moving throughout the Twin Cities and suburbs. We handle local moves, long-distance relocations, and storage for homes and businesses, ensuring a smooth experience. Our experienced team delivers exceptional service every time ...";
-	const servicesTextExpanded = "Premium Moving Services provides top-quality moving throughout the Twin Cities and suburbs.  We handle local moves, long-distance relocations, and storage for homes and businesses, ensuring a smooth experience.  Our experienced team delivers exceptional service every time. Need help preparing? We offer valuable moving tips. As your trusted partner, we guide you from start to finish. Contact us with questions. We adapt our versatile services to your unique needs.";
+	const servicesTextCollapsed =
+		"Premium Moving Services provides top-quality moving throughout the Twin Cities and suburbs. We handle local moves, long-distance relocations, and storage for homes and businesses, ensuring a smooth experience. Our experienced team delivers exceptional service every time ...";
+	const servicesTextExpanded =
+		"Premium Moving Services provides top-quality moving throughout the Twin Cities and suburbs.  We handle local moves, long-distance relocations, and storage for homes and businesses, ensuring a smooth experience.  Our experienced team delivers exceptional service every time. Need help preparing? We offer valuable moving tips. As your trusted partner, we guide you from start to finish. Contact us with questions. We adapt our versatile services to your unique needs.";
 
 	const images: AboutImages[] = [
 		{
@@ -44,7 +46,7 @@ export const AboutUs: FC = () => {
 			src: "https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Truck+loadc-1920w.jpg",
 			alt: "Loading a moving truck",
 		},
-	]
+	];
 
 	const toggleMission = () => {
 		setExpandedMission(!expandedMission);
@@ -55,29 +57,31 @@ export const AboutUs: FC = () => {
 	};
 
 	const openImageViewer = (index: number) => {
-		setCurrentImageIndex(index)
-		setImageViewerOpen(true)
-	}
+		setCurrentImageIndex(index);
+		setImageViewerOpen(true);
+	};
 
-	const navigateImage: NavigateImage = (direction: 'next' | 'prev') => {
-		if (direction === 'next') {
-			setCurrentImageIndex(prev => (prev + 1) % images.length)
+	const navigateImage: NavigateImage = (direction: "next" | "prev") => {
+		if (direction === "next") {
+			setCurrentImageIndex((prev) => (prev + 1) % images.length);
 		} else {
-			setCurrentImageIndex(prev => (prev - 1 + images.length) % images.length)
+			setCurrentImageIndex(
+				(prev) => (prev - 1 + images.length) % images.length,
+			);
 		}
-	}
+	};
 
 	const handleNavigateImageViewer = (event: KeyboardEvent) => {
-		if (event.key === 'ArrowRight') {
-			navigateImage('next')
-		} else if (event.key === 'ArrowLeft') {
-			navigateImage('prev')
-		} else if (event.key === 'Escape') {
-			setImageViewerOpen(false)
+		if (event.key === "ArrowRight") {
+			navigateImage("next");
+		} else if (event.key === "ArrowLeft") {
+			navigateImage("prev");
+		} else if (event.key === "Escape") {
+			setImageViewerOpen(false);
 		} else {
-			setImageViewerOpen(false)
+			setImageViewerOpen(false);
 		}
-	}
+	};
 
 	return (
 		<div className="overflow-hidden bg-white py-24 sm:py-32">
@@ -90,7 +94,8 @@ export const AboutUs: FC = () => {
 						On a mission to simplify the moving process
 					</h1>
 					<p className="mt-6 text-balance text-xl leading-8 text-gray-700">
-						Because each move is unique, we’ll work with you to make sure it’s done in an organized and safe fashion.
+						Because each move is unique, we’ll work with you to make sure it’s
+						done in an organized and safe fashion.
 					</p>
 				</div>
 				<section className="mt-20 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16">
@@ -100,11 +105,23 @@ export const AboutUs: FC = () => {
 						</h2>
 						<p className="mt-6 text-base/7 text-gray-600">
 							{expandedMission ? missionTextExpanded : missionTextCollapsed}
-							<Button type='button' onClick={toggleMission} className='text-indigo-500 hover:text-indigo-700 focus:outline-none'>{expandedMission ? ' Less' : ' More'}</Button>
+							<Button
+								type="button"
+								onClick={toggleMission}
+								className="text-indigo-500 hover:text-indigo-700 focus:outline-none"
+							>
+								{expandedMission ? " Less" : " More"}
+							</Button>
 						</p>
 						<p className="mt-8 text-base/7 text-gray-600">
 							{expandedServices ? servicesTextExpanded : servicesTextCollapsed}
-							<Button type='button' onClick={toggleServices} className='text-indigo-500 hover:text-indigo-700 focus:outline-none'>{expandedServices ? ' Less' : ' More'}</Button>
+							<Button
+								type="button"
+								onClick={toggleServices}
+								className="text-indigo-500 hover:text-indigo-700 focus:outline-none"
+							>
+								{expandedServices ? " Less" : " More"}
+							</Button>
 						</p>
 					</div>
 					<div className="pt-16 lg:row-span-2 lg:-mr-16 xl:mr-auto">
@@ -113,8 +130,16 @@ export const AboutUs: FC = () => {
 								<div
 									key={src}
 									onClick={() => openImageViewer(index)}
-									className={cn("aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10", index % 2 === 0 && '-mt-8  lg:-mt-40')}>
-									<img alt={alt ?? ''} src={src} className="block size-full object-cover" />
+									className={cn(
+										"aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10",
+										index % 2 === 0 && "-mt-8  lg:-mt-40",
+									)}
+								>
+									<img
+										alt={alt ?? ""}
+										src={src}
+										className="block size-full object-cover"
+									/>
 								</div>
 							))}
 						</div>
@@ -156,7 +181,6 @@ export const AboutUs: FC = () => {
 						</dl>
 					</div>
 				</section>
-
 			</div>
 
 			{/* Image Viewer Modal */}
