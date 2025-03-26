@@ -14,7 +14,6 @@ import {
 	PianoIcon,
 	GlobeIcon,
 	TrashIcon,
-	Waypoints,
 	type LucideIcon,
 	PackageIcon,
 	VaultIcon,

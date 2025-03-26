@@ -1,63 +1,62 @@
 import Link from "next/link";
 import { Button } from "@headlessui/react";
-import { BanknotesIcon, PhoneIcon } from "@heroicons/react/24/solid";
+import {
+	BanknotesIcon,
+	PhoneIcon,
+	QuestionMarkCircleIcon,
+	RssIcon,
+	StarIcon,
+} from "@heroicons/react/24/solid";
+import { HeroVideo } from "./HeroVideo";
 
 const HeroSection = () => {
 	return (
-		<section className="relative bg-gray-900 text-white ">
+		<section className="relative bg-gray-900 text-white overflow-hidden">
 			{/* Background Video */}
-			<div className="absolute inset-0 z-0">
-				<video
-					autoPlay={true}
-					loop={true}
-					muted={true}
-					className="w-full h-full object-cover"
-				>
-					<source src="https://aaamoversinc.com/wp-content/uploads/2024/01/aaa_movers_website_cover-Original-Web-.mp4" />
-				</video>
-			</div>
+			<HeroVideo />
 
 			{/* Content */}
 			<div className="relative z-10 flex flex-col items-center text-center py-16 px-6 md:px-12">
-				<h1 className="text-2xl md:text-4xl font-bold">
-					Relocating is Tough, <br />
+				<h1 className="text-lg font-bold">
+					Allow us to take hassle out of your move <br />
 					<span className="text-background text-6xl md:text-7xl">
-						WE MAKE IT EASY!
+						HOW CAN WE HELP YOU MOVE?
 					</span>
 				</h1>
 
 				{/* Buttons */}
-				<div className="mt-6 flex flex-col md:flex-row gap-4">
-					<Button
-						type="button"
-						className="border border-white px-6 py-3 text-lg font-semibold hover:bg-white hover:text-moving-yellow transition"
-					>
-						EXPLORE OUR SERVICES
-					</Button>
-
-					<Link
-						href="/free-quote"
-						className="bg-background px-6 py-3 text-lg font-semibold hover:bg-background transition"
-					>
-						GET AN INSTANT QUOTE
-					</Link>
-				</div>
-
-				<div className="inline-flex items-baseline whitespace-nowrap justify-start gap-x-1">
+				<div className="mt-6 flex items-center justify-center flex-wrap whitespace-nowrap flex-col md:flex-row gap-4">
 					<Link
 						href="https://wisetack.us/#/hy6xcov/prequalify"
 						target="_blank"
-						className="group flex gap-x-1 text-semibold hover:underline items-center mt-4 text-lg"
+						className="inline-flex max-sm:w-full items-center justify-center gap-x-1 border border-white px-6 py-3 text-lg font-semibold hover:bg-white hover:text-moving-yellow transition"
 					>
 						<BanknotesIcon className="fill-background group-hover:fill-white group-hover:stroke-white size-6" />
-						<span>Finance Your Move </span>
+						<span>Finance Your Move</span>
 					</Link>
+
 					<Link
-						href="tel: 651-757-5135"
-						className="group flex gap-x-1 hover:underline items-center mt-4 text-lg"
+						href="/free-quote"
+						className="inline-flex max-sm:w-full items-center justify-center gap-x-1 border border-white px-6 py-3 text-lg font-semibold hover:bg-white hover:text-moving-yellow transition"
 					>
-						<PhoneIcon className="fill-background size-6 group-hover:fill-white group-hover:stroke-white" />
-						<span>REQUEST A CALLBACK!</span>
+						<StarIcon className="fill-background group-hover:fill-white group-hover:stroke-white size-6" />
+						<span>Get A Move Quote</span>
+					</Link>
+
+					<Link
+						href="/blog"
+						className="group max-md:w-full bg-background inline-flex items-center justify-center gap-x-1 px-6 py-3 text-lg font-semibold hover:bg-white hover:text-background transition"
+					>
+						<RssIcon className="fill-white w-full group-hover:fill-background group-hover:stroke-background size-6" />
+						Moving Blogs
+					</Link>
+
+					<Link
+						href="/#faqs"
+						className="group bg-background inline-flex max-md:w-full items-center justify-center gap-x-1 px-6 py-3 text-lg font-semibold hover:bg-white hover:text-background transition"
+					>
+						<QuestionMarkCircleIcon className="fill-white group-hover:fill-background group-hover:stroke-background size-6" />
+						FAQs
 					</Link>
 				</div>
 
