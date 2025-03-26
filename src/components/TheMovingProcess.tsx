@@ -66,6 +66,17 @@ const processes: Process[] = [
 	},
 	{
 		stage: 4,
+		title: "Loading",
+		description: [
+			`Properly loading a moving truck is crucial for ensuring that your belongings are secure during transport,
+			with strategies like distributing weight evenly, using protective padding and stacking boxes efficiently to prevent damage`,
+		],
+		icon: TruckIcon,
+		color: "from-moving-yellow to-gray-yellow",
+		href: "#",
+	},
+	{
+		stage: 5,
 		title: "Unloading",
 		description: [
 			"Always be present or have someone available to direct the movers into your new place.",
@@ -74,7 +85,7 @@ const processes: Process[] = [
 			"After the truck is completely empty, do a final walk through.",
 		],
 		icon: TruckIcon,
-		color: "from-moving-yellow to-gray-yellow",
+		color: "from-moving-gray to-gray-400",
 		href: "#",
 	},
 ];
