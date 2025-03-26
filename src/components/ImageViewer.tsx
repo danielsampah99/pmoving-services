@@ -28,7 +28,7 @@ export const ImageViewer: FC<ImageViewerProps> = ({
 		<Dialog
 			open={isOpen}
 			onClose={onImageViewerClose}
-			className="relative z-50"
+			className="relative z-[9999]"
 			onKeyDown={onImageViewerKeyboardNavigate}
 		>
 			<DialogBackdrop
@@ -37,7 +37,7 @@ export const ImageViewer: FC<ImageViewerProps> = ({
 			/>
 			<div className="fixed inset-0 flex w-screen items-center justify-center p-4">
 				<div className="group absolute top-20 right-10 z-50">
-					<Button type="button">
+					<Button type="button" onClick={() => onImageViewerClose(isOpen)}>
 						<XMarkIcon
 							className="size-6 stroke-gray-300 group-hover:stroke-white fill-white"
 							aria-hidden="true"
