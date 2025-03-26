@@ -7,33 +7,37 @@ export const officeLocations: OfficeLocation[] = [
 	{
 		id: "maplewood",
 		name: "Maplewood Moving Company",
-		address: "949 Schaller Dr S Maplewood, MN 55119",
+		addressLine1: "949 Schaller Dr S",
+		addressLine2: "Maplewood, MN 55119",
 		phone: "(651) 757-5135",
-		href: "#",
+		href: "https://duckduckgo.com/?t=ffab&q=949+Schaller+Dr+S+Maplewood%2C+MN+55119&iaxm=directions&source=directions&end=949+Schaller+Dr+S%2C+Saint+Paul%2C+MN++55119%2C+United+States&transport=automobile",
 		image: "/lakeville-office.webp",
 	},
 	{
 		id: "minneapolis",
 		name: "Minneapolis Moving Company",
-		address: "2514 Plymouth Ave N,Minneapolis, MN 55411",
+		addressLine1: "2514 Plymouth Ave N,",
+		addressLine2: "Minneapolis, MN 55411",
 		phone: "(651) 757-5135",
-		href: "#",
+		href: "https://www.google.com/maps/dir/5.5427477,-0.2565425/2514+Plymouth+Ave+N,+Minneapolis,+MN+55411,+USA/@1.8464989,-132.8681329,3z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x52b333a87d602d8f:0xa6dc41e3800dfcf6!2m2!1d-93.3127048!2d44.9917309?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D",
 		image: "/lakeville-office.webp", // /minneapolis-office.webp
 	},
 	{
 		id: "lakeville",
 		name: "Lakeville Moving Company",
-		address: "7652 215th St W Lakeville, MN 55044",
+		addressLine1: "7652 215th St W ",
+		addressLine2: "Lakeville, MN 55044",
 		phone: "(651) 757-5135",
-		href: "#",
+		href: "https://www.google.com/maps/dir/5.5427477,-0.2565425/7652+215th+St+W,+Lakeville,+MN+55044,+USA/@1.8343927,-132.8159556,3z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x87f648350a0ed4db:0xdfc8a98e3bed4564!2m2!1d-93.219706!2d44.6374986?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D",
 		image: "/lakeville-office.webp",
 	},
 	{
 		id: "rochester",
 		name: "Rochester Moving Company",
-		address: "829 3rd Ave SE #285 Rochester, MN 55904",
+		addressLine1: "829 3rd Ave SE",
+		addressLine2: "285 Rochester, MN 55904",
 		phone: "(651) 757-5135",
-		href: "#",
+		href: "https://www.google.com/maps/dir//829+3rd+Ave+SE+%23285,+Rochester,+MN+55904,+United+States/@44.0144407,-92.5423433,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x87f9e1eacd6816a7:0xa2e7061db820904a!2m2!1d-92.4599426!2d44.0144703?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D",
 		image: "/rochester-office.webp",
 	},
 ];
@@ -91,7 +95,8 @@ export type OfficeLocation = {
 	id: string;
 	name: string;
 	phone: string;
-	address: string;
+	addressLine1: string;
+	addressLine2: string;
 	image: string;
 	href: string;
 };
@@ -99,6 +104,8 @@ export type OfficeLocation = {
 export const OfficeLocationCard: FC<{ location: OfficeLocation }> = ({
 	location,
 }) => {
+
+
 	return (
 		<div className="flex flex-col justify-between rounded-3xl bg-white p-6 shadow-xl ring-1 md:rounded-2xl ring-gray-900/10 sm:px-4 sm:py-6">
 			<div>
@@ -122,12 +129,15 @@ export const OfficeLocationCard: FC<{ location: OfficeLocation }> = ({
 					role="list"
 					className="mt-10 space-y-4 text-sm leading-6 text-gray-600"
 				>
-					<li className="flex gap-x-3 capitalize">
+					<li className="flex items-center justify-start gap-x-1.5 capitalize">
 						<MapPinIcon
 							aria-hidden="true"
-							className="size-5 flex-none fill-yellow-400"
+							className="size-5 shrink-0 fill-yellow-400"
 						/>
-						{location.address}
+						<div className="inline-flex items-start gap-y-0.5 flex-col">
+							<span>{location.addressLine1}</span>
+							<span>{location.addressLine2}</span>
+						</div>
 					</li>
 					<Link
 						href={`tel:${location.phone}`}
@@ -144,7 +154,7 @@ export const OfficeLocationCard: FC<{ location: OfficeLocation }> = ({
 			<Link
 				href={location.href}
 				target="_blank"
-				aria-describedby={location.address}
+				aria-describedby={`${location.addressLine1} ${location.addressLine2}`}
 				className="mt-8 block rounded-md bg-yellow-400 px-3.5 py-2 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-yellow-500 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-yellow-400"
 			>
 				Get Directions

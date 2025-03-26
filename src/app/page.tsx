@@ -6,6 +6,7 @@ import { MapSection } from "@/components/MapSection";
 import { OurLocations } from "@/components/OurLocations";
 import { Reviews } from "@/components/Reviews";
 import ServicesSection from "@/components/ServicesSection";
+import { Testimonial } from "@/components/TestimonialSection";
 import { TheMovingProcess } from "@/components/TheMovingProcess";
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
 		<div className="min-h-screen ">
 			<HeroSection />
 			<ServicesSection />
-			<div>put verbages here instead</div>
+			<Testimonial />
 			<TheMovingProcess />
 			<AboutUs />
 			<MapSection />

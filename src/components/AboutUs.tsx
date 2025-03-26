@@ -185,7 +185,7 @@ export const AboutUs: FC = () => {
 							<Button
 								type="button"
 								onClick={toggleServices}
-								className="text-yellow-300-500 hover:text-yellow-500 focus:outline-none"
+								className="text-yellow-400 hover:text-yellow-500 focus:outline-none"
 							>
 								{expandedServices ? " Less" : " More"}
 							</Button>
