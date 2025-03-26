@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { Button } from "@headlessui/react";
-import { BanknotesIcon, PhoneIcon, QuestionMarkCircleIcon, RssIcon, StarIcon } from "@heroicons/react/24/solid";
+import {
+	BanknotesIcon,
+	PhoneIcon,
+	QuestionMarkCircleIcon,
+	RssIcon,
+	StarIcon,
+} from "@heroicons/react/24/solid";
 import { HeroVideo } from "./HeroVideo";
 
 const HeroSection = () => {
@@ -45,7 +51,6 @@ const HeroSection = () => {
 						Moving Blogs
 					</Link>
 
-
 					<Link
 						href="/#faqs"
 						className="group bg-background inline-flex max-md:w-full items-center justify-center gap-x-1 px-6 py-3 text-lg font-semibold hover:bg-white hover:text-background transition"
@@ -54,8 +59,6 @@ const HeroSection = () => {
 						FAQs
 					</Link>
 				</div>
-
-
 
 				{/* Quote Form */}
 				<div className="mt-10 bg-white text-black p-6 rounded-xl w-full max-w-3xl shadow-lg">

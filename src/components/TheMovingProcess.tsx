@@ -33,7 +33,7 @@ const processes: Process[] = [
 		description: [
 			"Plan week by week",
 			"Go through every room of your house/apartment and determine what you’d like to keep and what you can get rid of. Have a garage sale, donate useful items.",
-			"Formulate a plan to personally transport your personal belongings to your new home like jewelry and other valuable pieces if possible."
+			"Formulate a plan to personally transport your personal belongings to your new home like jewelry and other valuable pieces if possible.",
 		],
 		icon: PhoneIcon,
 		href: "#",
@@ -44,7 +44,7 @@ const processes: Process[] = [
 		title: "Get Packing Supplies",
 		description: [
 			"Purchase or get free boxes of all sort (small, medium, large, and wardrobe). Specialty boxes are also a good investment to transport (dishes, electronics, office files and wall art) etc.",
-			"Get plenty of tape.  Also shrink and bubble wrap and mattress bags if necessary."
+			"Get plenty of tape.  Also shrink and bubble wrap and mattress bags if necessary.",
 		],
 		icon: ClipboardDocumentListIcon,
 		color: "from-moving-yellow to-gray-yellow",
@@ -58,7 +58,7 @@ const processes: Process[] = [
 			"Label all boxes",
 			"Pack heavy items like books, tools, canned goods and knick-knacks in small boxes.",
 			"For medium boxes, pack smaller household items, games, shoes, coffee makers, pots and pans.",
-			"Pack bulky, light items into large boxes: lampshades, blankets, pillows, stereo speaker, towels and linens."
+			"Pack bulky, light items into large boxes: lampshades, blankets, pillows, stereo speaker, towels and linens.",
 		],
 		icon: PackageCheckIcon,
 		color: "from-moving-gray to-gray-400",
@@ -71,14 +71,13 @@ const processes: Process[] = [
 			"Always be present or have someone available to direct the movers into your new place.",
 			"Do a walk through with the movers",
 			"Plan a designated landing spot for big furniture beforehand.",
-			"After the truck is completely empty, do a final walk through."
+			"After the truck is completely empty, do a final walk through.",
 		],
 		icon: TruckIcon,
 		color: "from-moving-yellow to-gray-yellow",
 		href: "#",
-	}
+	},
 ];
-
 
 export const TheMovingProcess: FC = () => {
 	const movingRef = useRef(null);
@@ -99,7 +98,8 @@ export const TheMovingProcess: FC = () => {
 						Our Seamless Moving Process
 					</h2>
 					<p className="text-lg text-gray-600 max-w-3xl mx-auto">
-						We've perfected our moving process to ensure a stress-free experience from start to finish.
+						We've perfected our moving process to ensure a stress-free
+						experience from start to finish.
 					</p>
 				</div>
 
@@ -110,8 +110,9 @@ export const TheMovingProcess: FC = () => {
 					{processes.map((step, index) => (
 						<motion.div
 							key={step.stage}
-							className={`flex flex-col md:flex-row items-center gap-8 mb-16 last:mb-0 ${index % 2 === 1 ? "md:flex-row-reverse" : ""
-								}`}
+							className={`flex flex-col md:flex-row items-center gap-8 mb-16 last:mb-0 ${
+								index % 2 === 1 ? "md:flex-row-reverse" : ""
+							}`}
 							initial="hidden"
 							animate={controls}
 							variants={{
@@ -161,7 +162,9 @@ export const TheMovingProcess: FC = () => {
 										</h3>
 										<div className="text-gray-600 text-sm sm:text-base">
 											{step.description.map((item) => (
-												<span key={item} className="inline-flex flex-col ">{item}</span>
+												<span key={item} className="inline-flex flex-col ">
+													{item}
+												</span>
 											))}
 										</div>
 									</div>
