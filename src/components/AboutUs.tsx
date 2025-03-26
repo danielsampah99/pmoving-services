@@ -154,7 +154,7 @@ export const AboutUs: FC = () => {
 		<div className="overflow-hidden bg-white py-24 sm:py-32">
 			<div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
 				<div className="max-w-4xl">
-					<p className="text-base font-semibold leading-7 text-indigo-600">
+					<p className="text-base font-semibold leading-7 text-yellow-500">
 						About us
 					</p>
 					<h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
@@ -175,7 +175,7 @@ export const AboutUs: FC = () => {
 							<Button
 								type="button"
 								onClick={toggleMission}
-								className="text-indigo-500 hover:text-indigo-700 focus:outline-none"
+								className="text-yellow-400 hover:text-yellow-500 focus:outline-none"
 							>
 								{expandedMission ? " Less" : " More"}
 							</Button>
@@ -185,7 +185,7 @@ export const AboutUs: FC = () => {
 							<Button
 								type="button"
 								onClick={toggleServices}
-								className="text-indigo-500 hover:text-indigo-700 focus:outline-none"
+								className="text-yellow-300-500 hover:text-yellow-500 focus:outline-none"
 							>
 								{expandedServices ? " Less" : " More"}
 							</Button>
