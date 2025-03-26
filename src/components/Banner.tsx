@@ -129,7 +129,7 @@ export const Banner: FC = () => {
 	return (
 		<div
 			style={{ backgroundColor }}
-			className="bg-gray-100 hidden sm:fixed sm:flex items-center justify-center top-0 inset-x-0 z-[100] rounded-md px-4 py-1.5 shadow-lg transition-opacity duration-300"
+			className="bg-gray-100 hidden sm:fixed sm:flex items-center justify-center top-0 inset-x-0 z-[1000] backdrop-blur-xs rounded-md px-4 py-1.5 transition-opacity duration-300"
 		>
 			<div className="max-w-7xl w-full flex justify-between gap-3 items-center">
 				<div className="">
@@ -163,7 +163,7 @@ const SocialMediaContactsMenu: FC<{ socialMediaLinks: SocialMediaLink[] }> = ({
 				<MenuButton className="group inline-flex w-full justify-center gap-x-1.5 px-3 py-2 text-sm font-semibold text-gray-600">
 					<PhoneIcon
 						aria-hidden="true"
-						className="rotate-270 size-5 fill-blue-400 group-hover:blue-600"
+						className="rotate-270 size-6 stroke-2 fill-moving-yellow group-hover:fill-moving-yellow/50"
 					/>
 				</MenuButton>
 			</div>

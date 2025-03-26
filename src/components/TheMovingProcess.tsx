@@ -20,7 +20,7 @@ import { cn } from "@/utils";
 type Process = {
 	stage: number;
 	title: string;
-	description: string;
+	description: string[];
 	href: string;
 	icon: HeroIconType | LucideIcon;
 	color: string;
@@ -29,88 +29,56 @@ type Process = {
 const processes: Process[] = [
 	{
 		stage: 1,
-		title: "Initial Consultation",
-		description:
-			"We begin with a detailed consultation to understand your specific moving needs, timeline, and budget requirements.",
+		title: "Make a Checklist",
+		description: [
+			"Plan week by week",
+			"Go through every room of your house/apartment and determine what you’d like to keep and what you can get rid of. Have a garage sale, donate useful items.",
+			"Formulate a plan to personally transport your personal belongings to your new home like jewelry and other valuable pieces if possible."
+		],
 		icon: PhoneIcon,
 		href: "#",
 		color: "from-moving-gray to-gray-200",
 	},
 	{
 		stage: 2,
-		title: "Planning & Preparation",
-		description:
-			"Our team creates a customized moving plan, including inventory assessment, logistics coordination, and scheduling.",
+		title: "Get Packing Supplies",
+		description: [
+			"Purchase or get free boxes of all sort (small, medium, large, and wardrobe). Specialty boxes are also a good investment to transport (dishes, electronics, office files and wall art) etc.",
+			"Get plenty of tape.  Also shrink and bubble wrap and mattress bags if necessary."
+		],
 		icon: ClipboardDocumentListIcon,
-		color: "from-moving-gray to-gray-300",
+		color: "from-moving-yellow to-gray-yellow",
 		href: "#",
 	},
 	{
 		stage: 3,
-		title: "Professional Packing",
-		description:
-			"Using premium materials and techniques, we carefully pack your belongings to ensure maximum protection during transit.",
+		title: "Boxing it all up",
+		description: [
+			"Pay close attention when packing",
+			"Label all boxes",
+			"Pack heavy items like books, tools, canned goods and knick-knacks in small boxes.",
+			"For medium boxes, pack smaller household items, games, shoes, coffee makers, pots and pans.",
+			"Pack bulky, light items into large boxes: lampshades, blankets, pillows, stereo speaker, towels and linens."
+		],
 		icon: PackageCheckIcon,
 		color: "from-moving-gray to-gray-400",
 		href: "#",
 	},
 	{
 		stage: 4,
-		title: "Moving Day Execution",
-		description:
-			"Our experienced movers handle the loading, transportation, and unloading with precision and care for a seamless experience.",
+		title: "Unloading",
+		description: [
+			"Always be present or have someone available to direct the movers into your new place.",
+			"Do a walk through with the movers",
+			"Plan a designated landing spot for big furniture beforehand.",
+			"After the truck is completely empty, do a final walk through."
+		],
 		icon: TruckIcon,
-		color: "from-moving-gray to-gray-500",
+		color: "from-moving-yellow to-gray-yellow",
 		href: "#",
-	},
-	{
-		stage: 5,
-		title: "Unpacking & Setup",
-		description:
-			"We help you settle into your new space by unpacking and arranging your belongings according to your preferences.",
-		icon: HomeIcon,
-		color: "from-moving-gray to-gray-600",
-		href: "#",
-	},
+	}
 ];
 
-// 	[
-// 	{
-// 		name: "Free Quote",
-// 		description:
-// 			"Get a FREE quote from our top-rated moving company in Twin Cities. A moving specialist will help you plan your move, take your inventory, and then send you a free, no-obligation quote.",
-// 		href: "#",
-// 		icon: PhoneIcon,
-// 	},
-// 	{
-// 		name: "Before you move",
-// 		description:
-// 			"Moving is all about planning. We can help you plan your move and we have some valuable tips and advice on how to organize your move so it goes smoothly.",
-// 		href: "#",
-// 		icon: InboxIcon,
-// 	},
-// 	{
-// 		name: "Moving Day",
-// 		description:
-// 			"Our movers will arrive ready and on time and ready to load our moving trucks. ",
-// 		href: "#",
-// 		icon: TruckIcon,
-// 	},
-// 	{
-// 		name: "After Moving",
-// 		description:
-// 			"After your move, we calculate how much you owe. Then we will bill you for the remaining balance.",
-// 		href: "#",
-// 		icon: CurrencyDollarIcon,
-// 	},
-// 	{
-// 		name: "Leave a Review",
-// 		description:
-// 			"We want to hear from you and so do other customers. Feel free to leave us review, we strive to do the best job we can do and appreciate hearing from you.",
-// 		href: "#",
-// 		icon: StarIcon,
-// 	},
-// ];
 
 export const TheMovingProcess: FC = () => {
 	const movingRef = useRef(null);
@@ -131,8 +99,7 @@ export const TheMovingProcess: FC = () => {
 						Our Seamless Moving Process
 					</h2>
 					<p className="text-lg text-gray-600 max-w-3xl mx-auto">
-						We've perfected our moving process to ensure a stress-free
-						experience from start to finish.
+						We've perfected our moving process to ensure a stress-free experience from start to finish.
 					</p>
 				</div>
 
@@ -143,9 +110,8 @@ export const TheMovingProcess: FC = () => {
 					{processes.map((step, index) => (
 						<motion.div
 							key={step.stage}
-							className={`flex flex-col md:flex-row items-center gap-8 mb-16 last:mb-0 ${
-								index % 2 === 1 ? "md:flex-row-reverse" : ""
-							}`}
+							className={`flex flex-col md:flex-row items-center gap-8 mb-16 last:mb-0 ${index % 2 === 1 ? "md:flex-row-reverse" : ""
+								}`}
 							initial="hidden"
 							animate={controls}
 							variants={{
@@ -161,7 +127,7 @@ export const TheMovingProcess: FC = () => {
 							}}
 						>
 							{/* Number circle */}
-							<div className="relative z-10">
+							<div className="relative">
 								<div
 									className={cn(
 										"size-8 sm:size-16 rounded-full bg-gradient-to-br flex items-center justify-center text-white text-base sm:text-3xl font-bold shadow-lg",
@@ -193,9 +159,11 @@ export const TheMovingProcess: FC = () => {
 										<h3 className="text-lg sm:text-2xl font-bold mb-3">
 											{step.title}
 										</h3>
-										<p className="text-gray-600 text-sm sm:text-base">
-											{step.description}
-										</p>
+										<div className="text-gray-600 text-sm sm:text-base">
+											{step.description.map((item) => (
+												<span key={item} className="inline-flex flex-col ">{item}</span>
+											))}
+										</div>
 									</div>
 								</div>
 
