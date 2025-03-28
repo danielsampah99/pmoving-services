@@ -155,7 +155,7 @@ export const TheMovingProcess: FC = () => {
 								href={step.href}
 								className="bg-white rounded-2xl shadow-xl p-4 sm:p-8 flex-1 relative overflow-hidden group hover:shadow-2xl transition-shadow duration-300"
 							>
-								<div className="absolute inset-0 bg-gradient-to-r from-moving-gray/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+								<div className="absolute inset-0 bg-gradient-to-r from-moving-gray/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
 								<div className="flex items-start gap-6">
 									<div

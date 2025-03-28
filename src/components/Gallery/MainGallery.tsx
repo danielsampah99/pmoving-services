@@ -1,6 +1,8 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import type React from "react";
+import { useState, useRef, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
+import { Button } from "@headlessui/react";
 
 import SearchBar from "./SearchBar";
 import FilterBar from "./FilterBar";
@@ -30,7 +32,7 @@ const Gallery: React.FC<GalleryProps> = ({ className = "" }) => {
 		noResultsMessage,
 	} = useImageSearch();
 
-	// Show/hide back to top button
+	// Show/hide back to top Button
 	useEffect(() => {
 		const handleScroll = () => {
 			if (window.scrollY > 500) {
@@ -95,7 +97,7 @@ const Gallery: React.FC<GalleryProps> = ({ className = "" }) => {
 			{/* Main gallery grid */}
 			{isLoading ? (
 				<div className="flex justify-center items-center py-20">
-					<div className="w-12 h-12 border-4 border-moving-lightGray border-t-moving-primary rounded-full animate-spin"></div>
+					<div className="w-12 h-12 border-4 border-moving-lightGray border-t-moving-primary rounded-full animate-spin" />
 				</div>
 			) : (
 				<>
@@ -115,7 +117,8 @@ const Gallery: React.FC<GalleryProps> = ({ className = "" }) => {
 							<p className="text-moving-gray text-lg mb-4">
 								{noResultsMessage}
 							</p>
-							<button
+							<Button
+								type="button"
 								onClick={() => {
 									setSelectedCategory("all");
 									setSearchTerm("");
@@ -123,7 +126,7 @@ const Gallery: React.FC<GalleryProps> = ({ className = "" }) => {
 								className="btn-secondary"
 							>
 								Reset Filters
-							</button>
+							</Button>
 						</div>
 					)}
 				</>
@@ -143,8 +146,9 @@ const Gallery: React.FC<GalleryProps> = ({ className = "" }) => {
 				</a>
 			</div>
 
-			{/* Back to top button */}
-			<button
+			{/* Back to top Button */}
+			<Button
+				type="button"
 				className={`
           fixed bottom-6 right-6 p-3 rounded-full bg-moving-primary text-white shadow-lg
           transition-all duration-300 hover:bg-moving-secondary
@@ -154,7 +158,7 @@ const Gallery: React.FC<GalleryProps> = ({ className = "" }) => {
 				aria-label="Back to top"
 			>
 				<ArrowUp size={20} />
-			</button>
+			</Button>
 
 			{/* Lightbox */}
 			{showLightbox && (

@@ -1,5 +1,5 @@
 import type { ActiveState } from "./components/InteractiveMap";
-import { MoverLink } from "./components/ServiceAreas";
+import type { MoverLink } from "./components/ServiceAreas";
 
 export type State = { label: string; value: ActiveState };
 

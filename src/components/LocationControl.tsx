@@ -1,8 +1,8 @@
 import { Button } from "@headlessui/react";
 import type { ActiveState } from "./InteractiveMap";
 import { cn } from "@/utils";
-import { FC } from "react";
-import { State } from "@/map-data";
+import type { FC } from "react";
+import type { State } from "@/map-data";
 
 export type LocationControlProps = {
 	currentState: ActiveState;

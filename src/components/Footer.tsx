@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, SVGProps } from "react";
+import type { FC, SVGProps } from "react";
 import { services } from "./Services";
 import Link from "next/link";
 import { Button } from "@headlessui/react";

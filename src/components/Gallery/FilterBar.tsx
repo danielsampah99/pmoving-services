@@ -2,7 +2,7 @@
 
 import { Filter } from "lucide-react";
 import { Button } from "@headlessui/react";
-import { FC } from "react";
+import type { FC } from "react";
 
 interface FilterBarProps {
 	categories: string[];

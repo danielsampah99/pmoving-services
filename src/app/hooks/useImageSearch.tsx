@@ -1,6 +1,6 @@
 "use client";
 
-import { GalleryImage, galleryImages } from "@/data/images";
+import { type GalleryImage, galleryImages } from "@/data/images";
 import { useState, useEffect, useMemo } from "react";
 
 type UseImageSearchProps = {

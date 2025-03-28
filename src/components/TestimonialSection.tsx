@@ -1,4 +1,4 @@
-import { FlatIcon } from "./flaticons";
+import type { FlatIcon } from "./flaticons";
 import { AffordableIcon } from "./icons/affordable-icon";
 import { InsuranceIcon } from "./icons/insurance-icon";
 import { ReliableIcon } from "./icons/reliable-icon";

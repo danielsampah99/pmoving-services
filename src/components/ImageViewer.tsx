@@ -1,6 +1,6 @@
 import { Button, Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
-import { AboutImages, NavigateImage } from "./AboutUs";
-import { FC, KeyboardEvent } from "react";
+import type { AboutImages, NavigateImage } from "./AboutUs";
+import type { FC, KeyboardEvent } from "react";
 import {
 	XMarkIcon,
 	ChevronLeftIcon,
