@@ -2,7 +2,7 @@
 
 import { cn } from "@/utils";
 import { Button } from "@headlessui/react";
-import { type FC, KeyboardEvent, useState } from "react";
+import { type FC, type KeyboardEvent, useState } from "react";
 import { ImageViewer } from "./ImageViewer";
 import { NumberCounter } from "./NumberCounter";
 import Image from "next/image";

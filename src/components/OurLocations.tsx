@@ -104,8 +104,6 @@ export type OfficeLocation = {
 export const OfficeLocationCard: FC<{ location: OfficeLocation }> = ({
 	location,
 }) => {
-
-
 	return (
 		<div className="flex flex-col justify-between rounded-3xl bg-white p-6 shadow-xl ring-1 md:rounded-2xl ring-gray-900/10 sm:px-4 sm:py-6">
 			<div>
