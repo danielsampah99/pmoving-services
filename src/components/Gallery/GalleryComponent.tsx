@@ -1,12 +1,13 @@
 import React from "react";
 import { ArrowRight, Truck, Clock, Award, Star } from "lucide-react";
 import Gallery from "./MainGallery";
+import { Button, Field, Input, Label, Select } from "@headlessui/react";
 
 const GalleryComponent = () => {
 	return (
 		<div>
 			<section className="relative bg-gradient-to-r to-[#d0dfec] from-[#f5d65e] overflow-hidden">
-				<div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1556912172-45b7abe8b7e1')] bg-cover bg-center mix-blend-overlay opacity-50"></div>
+				<div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1556912172-45b7abe8b7e1')] bg-cover bg-center mix-blend-overlay opacity-50" />
 				<div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32 relative z-10">
 					<div className="flex flex-col lg:flex-row items-center">
 						<div className="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
@@ -58,59 +59,59 @@ const GalleryComponent = () => {
 									Quick Quote Calculator
 								</h3>
 								<form className="space-y-4">
-									<div>
-										<label className="block text-[#333F48] mb-2">
+									<Field>
+										<Label className="block text-[#333F48] mb-2">
 											Moving From
-										</label>
-										<input
+										</Label>
+										<Input
 											type="text"
 											placeholder="Enter your current address"
 											className="w-full px-4 py-3 rounded-md border border-[#E6E9EF] focus:outline-none focus:ring-2 focus:ring-bg-from-background-100"
 										/>
-									</div>
-									<div>
-										<label className="block text-[#333F48] mb-2">
+									</Field>
+									<Field>
+										<Label className="block text-[#333F48] mb-2">
 											Moving To
-										</label>
-										<input
+										</Label>
+										<Input
 											type="text"
 											placeholder="Enter your destination address"
 											className="w-full px-4 py-3 rounded-md border border-[#E6E9EF] focus:outline-none focus:ring-2 focus:ring-bg-from-background-100"
 										/>
-									</div>
-									<div>
-										<label className="block text-[#333F48] mb-2">
+									</Field>
+									<Field>
+										<Label className="block text-[#333F48] mb-2">
 											Moving Date
-										</label>
-										<input
+										</Label>
+										<Input
 											type="date"
 											className="w-full px-4 py-3 rounded-md border border-[#E6E9EF] focus:outline-none focus:ring-2 focus:ring-bg-from-background-100"
 										/>
-									</div>
-									<div>
-										<label className="block text-[#333F48] mb-2">
+									</Field>
+									<Field>
+										<Label className="block text-[#333F48] mb-2">
 											Property Size
-										</label>
-										<select className="w-full px-4 py-3 rounded-md border border-[#E6E9EF] focus:outline-none focus:ring-2 focus:ring-bg-from-[#333F48]">
+										</Label>
+										<Select className="w-full px-4 py-3 rounded-md border border-[#E6E9EF] focus:outline-none focus:ring-2 focus:ring-bg-from-[#333F48]">
 											<option>Studio</option>
 											<option>1 Bedroom</option>
 											<option>2 Bedrooms</option>
 											<option>3+ Bedrooms</option>
 											<option>Commercial</option>
-										</select>
-									</div>
-									<button
+										</Select>
+									</Field>
+									<Button
 										type="submit"
 										className="w-full py-3 cursor-pointer px-6 flex items-center justify-center gap-2 text-white font-semibold bg-[#FFD00D] hover:bg-[#E6B800] transition-all duration-300 rounded-lg shadow-md hover:shadow-lg active:scale-95"
 									>
 										<Truck size={20} className="text-[#595959]" />
 										Get Your Free Quote
-									</button>
+									</Button>
 								</form>
 							</div>
 
-							<div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#E6B800] rounded-full z-0 animate-pulse"></div>
-							<div className="absolute -top-4 -left-4 w-16 h-16 bg-[#FFD00D] rounded-full z-0 animate-bounce"></div>
+							<div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#E6B800] rounded-full z-0 animate-pulse" />
+							<div className="absolute -top-4 -left-4 w-16 h-16 bg-[#FFD00D] rounded-full z-0 animate-bounce" />
 						</div>
 					</div>
 				</div>
@@ -121,7 +122,7 @@ const GalleryComponent = () => {
 							fill="#ffffff"
 							fillOpacity="1"
 							d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-						></path>
+						/>
 					</svg>
 				</div>
 			</section>

@@ -2,7 +2,7 @@
 
 import { cn } from "@/utils";
 import { Button } from "@headlessui/react";
-import { type FC, KeyboardEvent, useState } from "react";
+import { type FC, type KeyboardEvent, useState } from "react";
 import { ImageViewer } from "./ImageViewer";
 import { NumberCounter } from "./NumberCounter";
 import Image from "next/image";
@@ -15,10 +15,10 @@ export type AboutImages = {
 export type NavigateImage = (direction: "next" | "prev") => void;
 
 export const movingCrewImages: AboutImages[] = [
-	{
-		src: "https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Chester-New-About-Us-1920w.jpeg",
-		alt: "movers Minneapolis",
-	},
+	// {
+	// 	src: "https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Chester-New-About-Us-1920w.jpeg",
+	// 	alt: "movers Minneapolis",
+	// },
 	{
 		src: "https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Deshun+and+Drake+c-640w.jpg",
 		alt: "loading up box truck",
@@ -97,6 +97,18 @@ export const movingProjectsImages: AboutImages[] = [
 	{
 		src: "https://media.discordapp.net/attachments/1340405353493434453/1354261767512920255/IMG_0117.jpg?ex=67e4a60e&is=67e3548e&hm=63ecb372b80acc5582a224c4232b04445f522f37edd733c2565c130f9b3b5958&=&format=webp&width=840&height=840",
 		alt: "Inside of a loaded moving truck",
+	},
+	{
+		src: "https://media.discordapp.net/attachments/1347001450080895020/1354589724337242173/Storage_vault_and_forklift_.jpg?ex=67e6803d&is=67e52ebd&hm=96cdf436e516f769f39f7ed3d0b74c9adfe045313d6612f7dedee0914f6f44e7&=&format=webp&width=841&height=840",
+		alt: "Inside our warehouse",
+	},
+	{
+		src: "https://media.discordapp.net/attachments/1347001450080895020/1354589724727181403/Pic_stitch_tower_desk_and_printer_.jpg?ex=67e6803d&is=67e52ebd&hm=665934f3a70485b87bda7c172ed8edaf5114c364a4321abe3fad6e20de95e77d&=&format=webp&width=919&height=840",
+		alt: "Moving a large electronic device",
+	},
+	{
+		src: "https://media.discordapp.net/attachments/1347001450080895020/1354589725033496646/Spinet_piano.jpg?ex=67e6803d&is=67e52ebd&hm=3cd9f9def59bb1bb73b6cb92d080965634a8a057ba47559134accee8ca5f3292&=&format=webp&width=1178&height=663",
+		alt: "Moving a piano",
 	},
 ];
 

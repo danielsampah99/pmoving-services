@@ -1,7 +1,9 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import type React from "react";
+import { useState, useRef, useEffect } from "react";
 import { Eye, Bookmark } from "lucide-react";
-import { GalleryImage } from "@/data/images";
+import type { GalleryImage } from "@/data/images";
+import { Button } from "@headlessui/react";
 
 interface ImageCardProps {
 	image: GalleryImage;
@@ -50,7 +52,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ image, onClick, index }) => {
 	// Trim description for card
 	const trimDescription = (desc: string, maxLength = 65) => {
 		if (desc.length <= maxLength) return desc;
-		return desc.substring(0, maxLength) + "...";
+		return `${desc.substring(0, maxLength)}...`;
 	};
 
 	return (
@@ -91,24 +93,24 @@ const ImageCard: React.FC<ImageCardProps> = ({ image, onClick, index }) => {
 				{/* Overlay gradient */}
 				<div
 					className="
-          absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent 
+          absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent
           opacity-60 group-hover:opacity-80 transition-opacity duration-300
         "
-				></div>
+				/>
 
 				{/* Hover overlay with zoom info */}
 				<div
 					className={`
-          absolute inset-0 flex items-center justify-center 
+          absolute inset-0 flex items-center justify-center
           bg-moving-primary/0 group-hover:bg-moving-primary/20
           transition-all duration-300 ease-in-out
         `}
 				>
-					<button
+					<Button
 						className={`
               px-4 py-2 rounded-full bg-white text-moving-primary
               flex items-center gap-1.5 text-sm font-medium
-              transform scale-0 group-hover:scale-100 transition-transform 
+              transform scale-0 group-hover:scale-100 transition-transform
               duration-300 hover:bg-moving-lightGray
             `}
 						aria-label="View image"
@@ -119,7 +121,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ image, onClick, index }) => {
 					>
 						<Eye size={16} />
 						<span>View</span>
-					</button>
+					</Button>
 				</div>
 
 				{/* Featured badge */}

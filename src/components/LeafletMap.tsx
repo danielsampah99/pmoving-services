@@ -3,12 +3,12 @@ import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
 
-import { MapCity, mapTiles } from "@/map-data";
+import { type MapCity, mapTiles } from "@/map-data";
 import { Square3Stack3DIcon } from "@heroicons/react/24/outline";
-import { LatLngExpression } from "leaflet";
+import type { LatLngExpression } from "leaflet";
 import dynamic from "next/dynamic";
-import { FC } from "react";
-import { MapCitiesProps } from "./MapCitites";
+import type { FC } from "react";
+import type { MapCitiesProps } from "./MapCitites";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import { Button } from "@headlessui/react";
 import { cn } from "@/utils";

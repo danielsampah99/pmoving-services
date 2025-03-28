@@ -1,6 +1,8 @@
 "use client";
-import React from "react";
+
 import { Filter } from "lucide-react";
+import { Button } from "@headlessui/react";
+import type { FC } from "react";
 
 interface FilterBarProps {
 	categories: string[];
@@ -9,7 +11,7 @@ interface FilterBarProps {
 	className?: string;
 }
 
-const FilterBar: React.FC<FilterBarProps> = ({
+const FilterBar: FC<FilterBarProps> = ({
 	categories,
 	selectedCategory,
 	setSelectedCategory,
@@ -32,21 +34,21 @@ const FilterBar: React.FC<FilterBarProps> = ({
 
 			<div className="flex flex-wrap gap-2">
 				{categories.map((category) => (
-					<button
+					<Button
+						type="button"
 						key={category}
 						onClick={() => setSelectedCategory(category)}
 						className={`
               category-filter transition-all whitespace-nowrap
-              ${
-								selectedCategory === category
-									? "active shadow-sm"
-									: "text-moving-dark hover:bg-moving-lightGray"
+              ${selectedCategory === category
+								? "active shadow-sm"
+								: "text-moving-dark hover:bg-moving-lightGray"
 							}
             `}
 						aria-pressed={selectedCategory === category}
 					>
 						{formatCategoryName(category)}
-					</button>
+					</Button>
 				))}
 			</div>
 		</div>

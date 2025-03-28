@@ -1,5 +1,5 @@
 import { MapPinIcon, PhoneIcon } from "@heroicons/react/20/solid";
-import { FC } from "react";
+import type { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,7 +20,7 @@ export const officeLocations: OfficeLocation[] = [
 		addressLine2: "Minneapolis, MN 55411",
 		phone: "(651) 757-5135",
 		href: "https://www.google.com/maps/dir/5.5427477,-0.2565425/2514+Plymouth+Ave+N,+Minneapolis,+MN+55411,+USA/@1.8464989,-132.8681329,3z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x52b333a87d602d8f:0xa6dc41e3800dfcf6!2m2!1d-93.3127048!2d44.9917309?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D",
-		image: "/lakeville-office.webp", // /minneapolis-office.webp
+		image: "/minneapolis-office.webp", //
 	},
 	{
 		id: "lakeville",
@@ -104,8 +104,6 @@ export type OfficeLocation = {
 export const OfficeLocationCard: FC<{ location: OfficeLocation }> = ({
 	location,
 }) => {
-
-
 	return (
 		<div className="flex flex-col justify-between rounded-3xl bg-white p-6 shadow-xl ring-1 md:rounded-2xl ring-gray-900/10 sm:px-4 sm:py-6">
 			<div>

@@ -1,5 +1,5 @@
 import { animate, useMotionValue } from "motion/react";
-import { FC, useState, useEffect } from "react";
+import { type FC, useState, useEffect } from "react";
 
 export type NumberCounterProps = {
 	end: number;

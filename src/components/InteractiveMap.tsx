@@ -1,16 +1,16 @@
 "use client";
 
-import { FC, useState, useRef } from "react";
+import { type FC, useState, useRef } from "react";
 import { LocationControl } from "./LocationControl";
 import {
-	MapCity,
+	type MapCity,
 	minnesotaMapCities,
 	states,
 	wisconsinMapCities,
 } from "@/map-data";
 import { MapCities } from "./MapCitites";
 import { LeafletMap } from "./LeafletMap";
-import { LatLngExpression } from "leaflet";
+import type { LatLngExpression } from "leaflet";
 import { useRouter } from "next/navigation";
 
 export type ActiveState = "all" | "minnesota" | "wisconsin";

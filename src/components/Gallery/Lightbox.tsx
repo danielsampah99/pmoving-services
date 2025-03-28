@@ -1,5 +1,6 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import type React from "react";
+import { useState, useEffect } from "react";
 import {
 	X,
 	ChevronLeft,
@@ -8,7 +9,8 @@ import {
 	Minimize,
 	Info,
 } from "lucide-react";
-import { GalleryImage } from "../../data/images";
+import type { GalleryImage } from "../../data/images";
+import { Button } from "@headlessui/react";
 
 interface LightboxProps {
 	images: GalleryImage[];
@@ -147,7 +149,7 @@ const Lightbox: React.FC<LightboxProps> = ({
 				{/* Loading indicator */}
 				{isLoading && (
 					<div className="absolute inset-0 flex items-center justify-center">
-						<div className="w-12 h-12 border-4 border-moving-lightGray border-t-moving-primary rounded-full animate-spin"></div>
+						<div className="w-12 h-12 border-4 border-moving-lightGray border-t-moving-primary rounded-full animate-spin" />
 					</div>
 				)}
 
@@ -170,23 +172,25 @@ const Lightbox: React.FC<LightboxProps> = ({
 					onClick={handleControlClick}
 				>
 					{hasPrev && (
-						<button
+						<Button
+							type="button"
 							className="p-2 rounded-full bg-white bg-opacity-25 text-white backdrop-blur-sm hover:bg-opacity-40 hover:bg-moving-primary/40 transition-all"
 							onClick={() => onNavigate(currentIndex - 1)}
 							aria-label="Previous image"
 						>
 							<ChevronLeft size={24} />
-						</button>
+						</Button>
 					)}
 
 					{hasNext && (
-						<button
+						<Button
+							type="button"
 							className="p-2 rounded-full bg-white bg-opacity-25 text-white backdrop-blur-sm hover:bg-opacity-40 hover:bg-moving-primary/40 transition-all"
 							onClick={() => onNavigate(currentIndex + 1)}
 							aria-label="Next image"
 						>
 							<ChevronRight size={24} />
-						</button>
+						</Button>
 					)}
 				</div>
 
@@ -195,29 +199,31 @@ const Lightbox: React.FC<LightboxProps> = ({
 					className="absolute top-4 right-4 flex items-center space-x-2"
 					onClick={handleControlClick}
 				>
-					<button
+					<Button
+						type="button"
 						className="absolute top-4 right-4 p-2 rounded-full bg-white bg-opacity-25 text-white backdrop-blur-sm hover:bg-opacity-40 hover:bg-moving-primary/40 transition-all"
 						onClick={() => setShowInfo(!showInfo)}
 						aria-label="Toggle image information"
 					>
 						<Info size={20} />
-					</button>
+					</Button>
 
-					<button
+					<Button
+						type="button"
 						className="absolute top-4 right-4 p-2 rounded-full bg-white bg-opacity-25 text-white backdrop-blur-sm hover:bg-opacity-40 hover:bg-moving-primary/40 transition-all"
 						onClick={toggleFullscreen}
 						aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
 					>
 						{isFullscreen ? <Minimize size={20} /> : <Maximize size={20} />}
-					</button>
+					</Button>
 
-					<button
+					<Button
 						className="absolute top-4 right-4 p-2 rounded-full bg-white bg-opacity-25 text-white backdrop-blur-sm hover:bg-opacity-40 hover:bg-moving-primary/40 transition-all"
 						onClick={onClose}
 						aria-label="Close lightbox"
 					>
 						<X size={20} />
-					</button>
+					</Button>
 				</div>
 
 				{/* Bottom info panel */}
