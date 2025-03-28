@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowRight, Truck, Clock, Award, Star } from "lucide-react";
 import Gallery from "./MainGallery";
-import { Field, Input, Label, Select } from "@headlessui/react";
+import { Button, Field, Input, Label, Select } from "@headlessui/react";
 
 const GalleryComponent = () => {
 	return (
@@ -79,7 +79,7 @@ const GalleryComponent = () => {
 											className="w-full px-4 py-3 rounded-md border border-[#E6E9EF] focus:outline-none focus:ring-2 focus:ring-bg-from-background-100"
 										/>
 									</Field>
-									<div>
+									<Field>
 										<Label className="block text-[#333F48] mb-2">
 											Moving Date
 										</Label>
@@ -87,8 +87,8 @@ const GalleryComponent = () => {
 											type="date"
 											className="w-full px-4 py-3 rounded-md border border-[#E6E9EF] focus:outline-none focus:ring-2 focus:ring-bg-from-background-100"
 										/>
-									</div>
-									<div>
+									</Field>
+									<Field>
 										<Label className="block text-[#333F48] mb-2">
 											Property Size
 										</Label>
@@ -99,14 +99,14 @@ const GalleryComponent = () => {
 											<option>3+ Bedrooms</option>
 											<option>Commercial</option>
 										</Select>
-									</div>
-									<button
+									</Field>
+									<Button
 										type="submit"
 										className="w-full py-3 cursor-pointer px-6 flex items-center justify-center gap-2 text-white font-semibold bg-[#FFD00D] hover:bg-[#E6B800] transition-all duration-300 rounded-lg shadow-md hover:shadow-lg active:scale-95"
 									>
 										<Truck size={20} className="text-[#595959]" />
 										Get Your Free Quote
-									</button>
+									</Button>
 								</form>
 							</div>
 
