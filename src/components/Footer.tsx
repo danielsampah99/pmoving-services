@@ -1,41 +1,47 @@
 "use client";
 
-import { FC, SVGProps } from "react";
+import type { FC, SVGProps } from "react";
 import { services } from "./Services";
 import Link from "next/link";
 import { Button } from "@headlessui/react";
 
 const navigation = {
 	solutions: [
-		{ name: 'Marketing', href: '#' },
-		{ name: 'Analytics', href: '#' },
-		{ name: 'Commerce', href: '#' },
-		{ name: 'Insights', href: '#' },
+		{ name: "Marketing", href: "#" },
+		{ name: "Analytics", href: "#" },
+		{ name: "Commerce", href: "#" },
+		{ name: "Insights", href: "#" },
 	],
 	locations: [
-		{ name: 'Minnesota', href: '#' },
-		{ name: 'Wisconsin', href: '#' },
+		{ name: "Minnesota", href: "#" },
+		{ name: "Wisconsin", href: "#" },
 		// { name: 'Guides', href: '#' },
 		// { name: 'API Status', href: '#' },
 	],
 	company: [
-		{ name: 'About', href: '#' },
-		{ name: 'Affiliates', href: '#' },
-		{ name: 'Blog', href: '#' },
-		{ name: 'HTML Sitemap', href: '#' },
-		{ name: 'Referral Program', href: '#' },
-		{ name: 'Resources', href: '#' },
+		{ name: "About", href: "#" },
+		{ name: "Affiliates", href: "#" },
+		{ name: "Blog", href: "#" },
+		{ name: "FAQs", href: "/#faqs" },
+		{ name: "HTML Sitemap", href: "#" },
+		{ name: "Referral Program", href: "#" },
+		{ name: "Resources", href: "#" },
 	],
 	certifications: [
-		{ name: 'DOT: #3047943', href: '#' },
-		{ name: 'HHG:#383025', href: '#' },
+		{ name: "DOT: #3047943", href: "#" },
+		{ name: "HHG:#383025", href: "#" },
 	],
 	social: [
 		{
-			name: 'Facebook',
-			href: 'https://facebook.com/moveatease',
+			name: "Facebook",
+			href: "https://facebook.com/moveatease",
 			icon: (props: SVGProps<SVGSVGElement>) => (
-				<svg fill="currentColor" className="hover:fill-red-500 stroke-white" viewBox="0 0 24 24" {...props}>
+				<svg
+					fill="currentColor"
+					className="hover:fill-red-500 stroke-white"
+					viewBox="0 0 24 24"
+					{...props}
+				>
 					<path
 						fillRule="evenodd"
 						d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
@@ -59,8 +65,8 @@ const navigation = {
 			),
 		},
 		{
-			name: 'X',
-			href: 'https://twitter.com/g1sackie',
+			name: "X",
+			href: "https://twitter.com/g1sackie",
 			icon: (props: SVGProps<SVGSVGElement>) => (
 				<svg fill="currentColor" viewBox="0 0 24 24" {...props}>
 					<path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z" />
@@ -68,8 +74,8 @@ const navigation = {
 			),
 		},
 		{
-			name: 'YouTube',
-			href: '#',
+			name: "YouTube",
+			href: "https://www.youtube.com/@PremiumMovingServices",
 			icon: (props: SVGProps<SVGSVGElement>) => (
 				<svg fill="currentColor" viewBox="0 0 24 24" {...props}>
 					<path
@@ -124,14 +130,16 @@ const navigation = {
 					{...props}
 				>
 					<title />
-					<path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+					<path
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+					/>
 				</svg>
-
 			),
 		},
 	],
-}
-
+};
 
 export const Footer: FC = () => {
 	return (
@@ -149,11 +157,16 @@ export const Footer: FC = () => {
 					<div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
 						<div className="md:grid md:grid-cols-2 md:gap-8">
 							<div>
-								<h3 className="text-sm font-semibold leading-6 text-white">Services</h3>
+								<h3 className="text-sm font-semibold leading-6 text-white">
+									Services
+								</h3>
 								<ul role="list" className="mt-6 space-y-4">
 									{services.map((item) => (
 										<li key={item.name}>
-											<a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+											<a
+												href={item.href}
+												className="text-sm leading-6 text-gray-300 hover:text-white"
+											>
 												{item.name}
 											</a>
 										</li>
@@ -161,11 +174,16 @@ export const Footer: FC = () => {
 								</ul>
 							</div>
 							<div className="mt-10 md:mt-0">
-								<h3 className="text-sm font-semibold leading-6 text-white">Our Offices</h3>
+								<h3 className="text-sm font-semibold leading-6 text-white">
+									Our Offices
+								</h3>
 								<ul role="list" className="mt-6 space-y-4">
 									{navigation.locations.map((item) => (
 										<li key={item.name}>
-											<a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+											<a
+												href={item.href}
+												className="text-sm leading-6 text-gray-300 hover:text-white"
+											>
 												{item.name}
 											</a>
 										</li>
@@ -175,11 +193,16 @@ export const Footer: FC = () => {
 						</div>
 						<div className="md:grid md:grid-cols-2 md:gap-8">
 							<div>
-								<h3 className="text-sm font-semibold leading-6 text-white">Company</h3>
+								<h3 className="text-sm font-semibold leading-6 text-white">
+									Company
+								</h3>
 								<ul role="list" className="mt-6 space-y-4">
 									{navigation.company.map((item) => (
 										<li key={item.name}>
-											<a href={item.href} className="text-sm leading-6 text-gray-200 hover:text-white">
+											<a
+												href={item.href}
+												className="text-sm leading-6 text-gray-200 hover:text-white"
+											>
 												{item.name}
 											</a>
 										</li>
@@ -187,11 +210,16 @@ export const Footer: FC = () => {
 								</ul>
 							</div>
 							<div className="mt-10 md:mt-0">
-								<h3 className="text-sm font-semibold leading-6 text-white">Certifications</h3>
+								<h3 className="text-sm font-semibold leading-6 text-white">
+									Certifications
+								</h3>
 								<ul role="list" className="mt-6 space-y-4">
 									{navigation.certifications.map((item) => (
 										<li key={item.name}>
-											<Link href={item.href} className="text-sm leading-6 text-white">
+											<Link
+												href={item.href}
+												className="text-sm leading-6 text-white"
+											>
 												{item.name}
 											</Link>
 										</li>
@@ -203,9 +231,12 @@ export const Footer: FC = () => {
 				</div>
 				<div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24 lg:flex lg:items-center lg:justify-between">
 					<div>
-						<h3 className="text-sm font-semibold leading-6 text-white">Subscribe to our newsletter</h3>
+						<h3 className="text-sm font-semibold leading-6 text-white">
+							Subscribe to our newsletter
+						</h3>
 						<p className="mt-2 text-sm leading-6 text-gray-300">
-							The latest news, articles, and resources, sent to your inbox weekly.
+							The latest news, articles, and resources, sent to your inbox
+							weekly.
 						</p>
 					</div>
 					<form className="mt-6 sm:flex sm:max-w-md lg:mt-0">
@@ -234,17 +265,28 @@ export const Footer: FC = () => {
 				<div className="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
 					<div className="flex space-x-6 md:order-2">
 						{navigation.social.map((item) => (
-							<a key={item.name} href={item.href} className="text-white/50 hover:text-white">
+							<a
+								key={item.name}
+								href={item.href}
+								className="text-white/50 hover:text-white"
+							>
 								<span className="sr-only">{item.name}</span>
 								<item.icon aria-hidden="true" className="size-6" />
 							</a>
 						))}
 					</div>
 					<p className="mt-8 text-xs leading-5 text-gray-200 md:order-1 md:mt-0">
-						&copy; {new Date().getFullYear().toString()} <Link href='/' className="font-medium text-gray-50 hover:text-white">Premium Moving Services</Link>. All rights reserved.
+						&copy; {new Date().getFullYear().toString()}{" "}
+						<Link
+							href="/"
+							className="font-medium text-gray-50 hover:text-white"
+						>
+							Premium Moving Services
+						</Link>
+						. All rights reserved.
 					</p>
 				</div>
 			</div>
 		</footer>
-	)
-}
+	);
+};

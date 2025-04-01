@@ -121,44 +121,7 @@ const ServicesSection = () => {
 					</p>
 				</div>
 
-				{/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-					{services.map((service, index) => (
-						<div
-							key={service.title}
-							className="service-card opacity-0 group perspective"
-							style={{
-								animationDelay: `${index * 100}ms`,
-							}}
-						>
-							<div className="relative h-40 w-full transition-all duration-1000 ease-in-out transform-style-3d hover:[transform:rotateY(180deg)]">
-								<div className="absolute w-full h-full backface-hidden">
-									<img
-										src={service.image}
-										alt={service.title}
-										className="w-full h-full object-cover rounded-lg"
-									/>
-									<div className="absolute inset-0 bg-opacity-40 rounded-lg">
-										<div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-											<h3 className="text-2xl font-light mb-2">
-												{service.title}
-											</h3>
-										</div>
-									</div>
-								</div>
-								<div className="absolute w-full h-full backface-hidden [transform:rotateY(180deg)] rounded-lg bg-gradient-to-br from-header via-yellow-400 to-background">
-									<div className="flex h-full flex-col justify-center p-6 text-white">
-										<h3 className="text-2xl font-semibold mb-4">
-											{service.title}
-										</h3>
-										<p className="text-sm opacity-90">{service.description}</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					))}
-				</div> */}
-
-				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+				<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
 					{serviceCardData.map((service, index) => (
 						<ServiceCard key={service.title} service={service} index={index} />
 					))}

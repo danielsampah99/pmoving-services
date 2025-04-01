@@ -1,11 +1,8 @@
-import GalleryComponent from '@/components/Gallery/GalleryComponent'
-import React from 'react'
+import GalleryComponent from "@/components/Gallery/GalleryComponent";
+import React from "react";
 
 const Gallery = () => {
-  return (
-   <GalleryComponent/>
-  
-  )
-}
+	return <GalleryComponent />;
+};
 
-export default Gallery
+export default Gallery;

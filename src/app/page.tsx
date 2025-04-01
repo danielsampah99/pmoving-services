@@ -1,13 +1,12 @@
 import { AboutUs } from "@/components/AboutUs";
 import { FAQs } from "@/components/FAQs";
-import { Footer } from "@/components/Footer";
+import { FloatingBanner } from "@/components/FloatingBanner";
 import HeroSection from "@/components/Hero";
 import { MapSection } from "@/components/MapSection";
+import { OurLocations } from "@/components/OurLocations";
 import { Reviews } from "@/components/Reviews";
 import ServicesSection from "@/components/ServicesSection";
-// import ExpertSection from "@/components/Expert";
-// import MovingSection from "@/components/Mission";
-// import Testimonial from "@/components/Testimonial";
+import { Testimonial } from "@/components/TestimonialSection";
 import { TheMovingProcess } from "@/components/TheMovingProcess";
 
 export default function Home() {
@@ -15,15 +14,14 @@ export default function Home() {
 		<div className="min-h-screen ">
 			<HeroSection />
 			<ServicesSection />
+			<Testimonial />
 			<TheMovingProcess />
 			<AboutUs />
 			<MapSection />
 			<Reviews />
-			{/* <MovingSection /> */}
-			{/* <ExpertSection /> */}
-			{/* <Testimonial /> */}
+			<OurLocations />
 			<FAQs />
-			<Footer />
+			<FloatingBanner />
 		</div>
 	);
 }

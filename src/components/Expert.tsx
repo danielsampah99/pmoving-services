@@ -43,7 +43,7 @@ export default function ExpertSection() {
 					src="https://www.scoutnetworkblog.com/wp-content/uploads/2018/08/4.jpg"
 					className="size-full object-cover object-right md:object-center"
 				/>
-				<div className="absolute inset-0 bg-black/60"></div>{" "}
+				<div className="absolute inset-0 bg-black/60" />
 				{/* Dark overlay */}
 			</div>
 

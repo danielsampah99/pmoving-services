@@ -10,7 +10,7 @@ const FeaturedPost = ({ post }: FeaturedPostProps) => {
 	return (
 		<div className="group relative h-[600px] rounded-xl overflow-hidden animate-scale-in">
 			{/* Darker overlay to prevent lightening effect */}
-			<div className="absolute inset-0 bg-black/30 z-10"></div>
+			<div className="absolute inset-0 bg-black/30 z-10" />
 
 			<img
 				src={`${post.image}?w=1200&h=500&fit=crop&crop=focalpoint&q=80`}
