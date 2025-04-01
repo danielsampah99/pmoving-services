@@ -34,3 +34,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+### TODO
+_April 1, 2025_
+- [ ] Implement google reviews via the api
+- [ ] Do a privacy policy page
+- [ ] Do a terms and conditions page as well
+- [ ] Add to the form on the hero section
+- [ ] make the header pop/ add vibrant colors and increase the size of texts.
+- [X] Change the BBB section
