@@ -1,9 +1,68 @@
 "use client";
 
+import { cn } from "@/utils";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { PhoneIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import { type FC, type JSX, type SVGProps, useEffect, useState } from "react";
+
+
+
+export const Banner: FC = () => {
+	const [backgroundColor, setbackgroundColor] = useState(
+		"oklch(0.967 0.003 264.542",
+	);
+	const [scrollPosition, setScrollPosition] = useState(0)
+	const [isBgTransparent, setIsBgTransparent] = useState(false)
+	const triggerStart = 258; // height of the banner is 48px + header = 80
+
+
+	useEffect(() => {
+		const handleTransparentScroll = () => {
+			setScrollPosition(window.scrollY)
+
+
+			if (scrollPosition > triggerStart) {
+				setbackgroundColor("transparent");
+				setIsBgTransparent(true)
+			} else {
+				setbackgroundColor("oklch(0.967 0.003 264.542");
+				setIsBgTransparent(false)
+			}
+		};
+
+		window.addEventListener("scroll", handleTransparentScroll);
+
+		return () => window.removeEventListener("scroll", handleTransparentScroll);
+	}, [scrollPosition, isBgTransparent]);
+
+	return (
+		<div
+			style={{ backgroundColor }}
+			className="bg-gray-100 hidden sm:fixed sm:flex items-center justify-center top-0 inset-x-0 z-[1000] backdrop-blur-xs rounded-md px-4 py-1.5 transition-opacity duration-300"
+		>
+			<div className="max-w-7xl w-full flex justify-between gap-3 items-center">
+				<div className="">
+					<Link
+						href="/free-quote"
+						className={cn("text-base/7 block capitalize text-gray-800 hover:text-gray-900 hover:underline underline-offset-2 transition-all duration-300 delay-100", isBgTransparent && 'bg-moving-yellow px-2 py-1.5 rounded-lg text-white text-base shadow-sm hover:bg-moving-yellow/50 hover:no-underline hover:text-white')}
+					>
+						Request a quote
+					</Link>
+					<Link
+						href="tel: 651-757-5135"
+						className={cn("mt-0.5 hover:underline hover:underline-offset-1 text-gray-500 block text-xs/6", isBgTransparent && 'hover:text-sm hover:text-gray-900')}
+					>
+						651-757-5135
+					</Link>
+				</div>
+				<div className="flex gap-2 max-md:flex-wrap">
+					<SocialMediaContactsMenu socialMediaLinks={socialMediaLinks} />
+				</div>
+			</div>
+		</div>
+	);
+};
 
 export type SocialMediaLink = {
 	name: string;
@@ -102,57 +161,6 @@ export const socialMediaLinks: SocialMediaLink[] = [
 		),
 	},
 ];
-
-export const Banner: FC = () => {
-	const [backgroundColor, setbackgroundColor] = useState(
-		"oklch(0.967 0.003 264.542",
-	);
-
-	useEffect(() => {
-		const handleTransparentScroll = () => {
-			const scrollPosition = window.scrollY;
-
-			const triggerStart = 258; // height of the banner is 48px + header = 80
-
-			if (scrollPosition > triggerStart) {
-				setbackgroundColor("transparent");
-			} else {
-				setbackgroundColor("oklch(0.967 0.003 264.542");
-			}
-		};
-
-		window.addEventListener("scroll", handleTransparentScroll);
-
-		return () => window.removeEventListener("scroll", handleTransparentScroll);
-	}, []);
-
-	return (
-		<div
-			style={{ backgroundColor }}
-			className="bg-gray-100 hidden sm:fixed sm:flex items-center justify-center top-0 inset-x-0 z-[1000] backdrop-blur-xs rounded-md px-4 py-1.5 transition-opacity duration-300"
-		>
-			<div className="max-w-7xl w-full flex justify-between gap-3 items-center">
-				<div className="">
-					<Link
-						href="#"
-						className="text-base/7 block capitalize text-gray-800 hover:text-gray-900 hover:underline underline-offset-2"
-					>
-						Request a quote
-					</Link>
-					<Link
-						href="tel: 651-757-5135"
-						className="mt-0.5 hover:underline hover:underline-offset-1 text-gray-500 block text-xs/6"
-					>
-						651-757-5135
-					</Link>
-				</div>
-				<div className="flex gap-2 max-md:flex-wrap">
-					<SocialMediaContactsMenu socialMediaLinks={socialMediaLinks} />
-				</div>
-			</div>
-		</div>
-	);
-};
 
 const SocialMediaContactsMenu: FC<{ socialMediaLinks: SocialMediaLink[] }> = ({
 	socialMediaLinks,

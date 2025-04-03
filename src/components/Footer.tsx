@@ -26,10 +26,13 @@ const navigation = {
 		{ name: "HTML Sitemap", href: "#" },
 		{ name: "Referral Program", href: "#" },
 		{ name: "Resources", href: "#" },
+		{ name: "Privacy Policy", href: "/privacy-policy" },
+		{ name: "Terms & Conditions", href: "/terms-and-conditions" }
 	],
 	certifications: [
 		{ name: "DOT: #3047943", href: "#" },
 		{ name: "HHG:#383025", href: "#" },
+		{ name: "BBB Certifications", href: "#" }
 	],
 	social: [
 		{
