@@ -16,19 +16,25 @@ import {
 	TrashIcon,
 	type LucideIcon,
 	PackageIcon,
-	VaultIcon,
-	WaypointsIcon,
 } from "lucide-react";
+import { HeroIconType } from "./HeroIcon";
+import { FlatIcon } from "./flaticons";
+import { SafeIcon } from "./icons/safe-icon";
+import { StorageIcon } from "./icons/storage-icon";
+import { cn } from "@/utils";
+import { LogisticsIcon } from "./icons/logistics-icon";
 
 export interface ServiceCardData {
+	id: number,
 	title: string;
 	description: string;
-	icon: LucideIcon;
+	icon: LucideIcon | HeroIconType | FlatIcon;
 	href: string;
 }
 
 export const serviceCardData: ServiceCardData[] = [
 	{
+		id: 1,
 		title: "Local Moving",
 		description:
 			"Professional and reliable local moving services tailored to your needs. We handle your belongings with utmost care.",
@@ -36,6 +42,7 @@ export const serviceCardData: ServiceCardData[] = [
 		icon: TruckIcon,
 	},
 	{
+		id: 2,
 		title: "Packing Services",
 		description:
 			"Expert solutions to ensure your items are safely prepared for transport",
@@ -43,6 +50,7 @@ export const serviceCardData: ServiceCardData[] = [
 		icon: PackageIcon,
 	},
 	{
+		id: 3,
 		title: "Long Distance Moving",
 		description:
 			"Seamless long-distance moving services with careful planning and execution.",
@@ -50,6 +58,7 @@ export const serviceCardData: ServiceCardData[] = [
 		icon: MapIcon,
 	},
 	{
+		id: 4,
 		title: "Moving Labor",
 		description:
 			"Skilled moving professionals ready to handle heavy lifting and careful transportation of your belongings.",
@@ -57,13 +66,15 @@ export const serviceCardData: ServiceCardData[] = [
 		icon: UsersIcon,
 	},
 	{
+		id: 5,
 		title: "Storage Services",
 		description:
 			"Secure, climate-controlled storage solutions for both short-term and long-term needs.",
 		href: "/services/storage-services",
-		icon: DatabaseIcon,
+		icon: StorageIcon,
 	},
 	{
+		id: 6,
 		title: "Residential Moving",
 		description:
 			"Professional moving services tailored to your needs. We handle your belongings with utmost care.",
@@ -71,6 +82,7 @@ export const serviceCardData: ServiceCardData[] = [
 		icon: HomeIcon,
 	},
 	{
+		id: 7,
 		title: "Corporate Moving",
 		description:
 			"Expert packing solutions to ensure your items are safely prepared for transport using premium materials for maximum protection.",
@@ -78,6 +90,7 @@ export const serviceCardData: ServiceCardData[] = [
 		icon: BuildingIcon,
 	},
 	{
+		id: 8,
 		title: "Apartment Moving",
 		description:
 			"Seamless moving with careful planning and execution for the best relocation experience.",
@@ -85,6 +98,7 @@ export const serviceCardData: ServiceCardData[] = [
 		icon: Building2Icon,
 	},
 	{
+		id: 9,
 		title: "Packing Supplies",
 		description:
 			"Skilled moving professionals ready to handle heavy lifting and careful transportation of your belongings.",
@@ -92,13 +106,15 @@ export const serviceCardData: ServiceCardData[] = [
 		icon: ShoppingBagIcon,
 	},
 	{
+		id: 10,
 		title: "Safes & Gun safes",
 		description:
 			"Secure, climate-controlled storage solutions for both short-term and long-term needs.",
 		href: "/services/safes-and-gun-safes",
-		icon: VaultIcon,
+		icon: SafeIcon,
 	},
 	{
+		id: 11,
 		title: "Pianos",
 		description:
 			"Professional piano moving services, ensuring safe and secure transport.",
@@ -106,6 +122,7 @@ export const serviceCardData: ServiceCardData[] = [
 		icon: PianoIcon,
 	},
 	{
+		id: 12,
 		title: "Junk Removal",
 		description:
 			"Efficient and responsible junk removal services to declutter your space.",
@@ -113,6 +130,7 @@ export const serviceCardData: ServiceCardData[] = [
 		icon: TrashIcon,
 	},
 	{
+		id: 13,
 		title: "International Move",
 		description:
 			"Comprehensive international moving services for a smooth relocation experience.",
@@ -120,11 +138,12 @@ export const serviceCardData: ServiceCardData[] = [
 		icon: GlobeIcon,
 	},
 	{
+		id: 14,
 		title: "Logistics Services",
 		description:
 			"Reliable logistics solutions for businesses and individuals, tailored to your specific needs.",
 		href: "/services/logistics-services",
-		icon: WaypointsIcon,
+		icon: LogisticsIcon,
 	},
 ];
 
@@ -133,6 +152,8 @@ export const ServiceCard: FC<{ service: ServiceCardData; index: number }> = ({
 	index,
 }) => {
 	const [isFlipped, setIsFlipped] = useState(false);
+
+	const isFlatIcon = [5, 10, 14].includes(service.id)
 
 	return (
 		<div
@@ -159,7 +180,7 @@ export const ServiceCard: FC<{ service: ServiceCardData; index: number }> = ({
 							style={{ backfaceVisibility: "hidden" }}
 						>
 							<div className="text-teal-900">
-								<service.icon className="size-7 sm:size-12 stroke-yellow-400 fill-white" />
+								<service.icon className={cn("size-7 sm:size-12", !isFlatIcon && 'stroke-yellow-400 fill-white')} />
 							</div>
 							<h3 className="text-xl max-sm:text-base font-medium mt-4 text-center">
 								{service.title}
