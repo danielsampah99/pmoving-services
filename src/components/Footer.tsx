@@ -265,7 +265,7 @@ export const Footer: FC = () => {
 						</div>
 					</form>
 				</div>
-				<div className="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+				<div id="socials" className="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
 					<div className="flex space-x-6 md:order-2">
 						{navigation.social.map((item) => (
 							<a

@@ -43,3 +43,5 @@ _April 1, 2025_
 - [ ] Add to the form on the hero section
 - [ ] make the header pop/ add vibrant colors and increase the size of texts.
 - [X] Change the BBB section
+
+safe, logistics, storage... icons need to be changed.
