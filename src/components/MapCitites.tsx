@@ -1,6 +1,10 @@
 import type { FC } from "react";
 import type { ActiveState } from "./InteractiveMap";
-import { type MapCity, minnesotaMapCities, wisconsinMapCities } from "@/map-data";
+import {
+	type MapCity,
+	minnesotaMapCities,
+	wisconsinMapCities,
+} from "@/map-data";
 import { cn } from "@/utils";
 import { Button } from "@headlessui/react";
 import { TruckIcon } from "@heroicons/react/24/outline";

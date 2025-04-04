@@ -6,28 +6,24 @@ import { PhoneIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import { type FC, type JSX, type SVGProps, useEffect, useState } from "react";
 
-
-
 export const Banner: FC = () => {
 	const [backgroundColor, setbackgroundColor] = useState(
 		"oklch(0.967 0.003 264.542",
 	);
-	const [scrollPosition, setScrollPosition] = useState(0)
-	const [isBgTransparent, setIsBgTransparent] = useState(false)
+	const [scrollPosition, setScrollPosition] = useState(0);
+	const [isBgTransparent, setIsBgTransparent] = useState(false);
 	const triggerStart = 258; // height of the banner is 48px + header = 80
-
 
 	useEffect(() => {
 		const handleTransparentScroll = () => {
-			setScrollPosition(window.scrollY)
-
+			setScrollPosition(window.scrollY);
 
 			if (scrollPosition > triggerStart) {
 				setbackgroundColor("transparent");
-				setIsBgTransparent(true)
+				setIsBgTransparent(true);
 			} else {
 				setbackgroundColor("oklch(0.967 0.003 264.542");
-				setIsBgTransparent(false)
+				setIsBgTransparent(false);
 			}
 		};
 
@@ -45,13 +41,20 @@ export const Banner: FC = () => {
 				<div className="">
 					<Link
 						href="/free-quote"
-						className={cn("text-base/7 block capitalize text-gray-800 hover:text-gray-900 hover:underline underline-offset-2 transition-all duration-300 delay-100", isBgTransparent && 'bg-moving-yellow px-2 py-1.5 rounded-lg text-white text-base shadow-sm hover:bg-moving-yellow/50 hover:no-underline hover:text-white')}
+						className={cn(
+							"text-base/7 block capitalize text-gray-800 hover:text-gray-900 hover:underline underline-offset-2 transition-all duration-300 delay-100",
+							isBgTransparent &&
+								"bg-moving-yellow px-2 py-1.5 rounded-lg text-white text-base shadow-sm hover:bg-moving-yellow/50 hover:no-underline hover:text-white",
+						)}
 					>
 						Request a quote
 					</Link>
 					<Link
 						href="tel: 651-757-5135"
-						className={cn("mt-0.5 hover:underline hover:underline-offset-1 text-gray-500 block text-xs/6", isBgTransparent && 'hover:text-sm hover:text-gray-900')}
+						className={cn(
+							"mt-0.5 hover:underline hover:underline-offset-1 text-gray-500 block text-xs/6",
+							isBgTransparent && "hover:text-sm hover:text-gray-900",
+						)}
 					>
 						651-757-5135
 					</Link>
