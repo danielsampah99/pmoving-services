@@ -6,7 +6,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 const inter = Inter({
-	variable: "--font-geist-sans",
+	variable: "--font-inter",
 	subsets: ["latin"],
 });
 
