@@ -4,7 +4,7 @@ import { InsuranceIcon } from "./icons/insurance-icon";
 import { ReliableIcon } from "./icons/reliable-icon";
 import { TrustIcon } from "./icons/trust-icon";
 import type { FC } from "react";
-import Link from 'next/link'
+import Link from "next/link";
 
 export const Testimonial = () => {
 	return (
@@ -12,9 +12,16 @@ export const Testimonial = () => {
 			<div className="mx-auto max-w-7xl px-6 lg:px-8">
 				<div className="mb-10 flex justify-center">
 					<p className="relative rounded-full bg-gray-50 px-4 py-1.5 text-sm leading-6 text-gray-600 ring-1 ring-inset ring-gray-900/5">
-						<Link href="#" target='_blank' className="font-semibold text-yellow-600">
-							<span aria-hidden="true" className="absolute text-sm inset-0" /> View our higly-rated BBB certification here{' '}
-							<span aria-hidden="true" className="max-sm:hidden">&rarr;</span>
+						<Link
+							href="#"
+							target="_blank"
+							className="font-semibold text-yellow-600"
+						>
+							<span aria-hidden="true" className="absolute text-sm inset-0" />{" "}
+							View our higly-rated BBB certification here{" "}
+							<span aria-hidden="true" className="max-sm:hidden">
+								&rarr;
+							</span>
 						</Link>
 					</p>
 				</div>
@@ -28,7 +35,7 @@ export const Testimonial = () => {
 					<NameAndIcon text="Bonded" icon={InsuranceIcon} />
 				</div>
 			</div>
-		</div >
+		</div>
 	);
 };
 

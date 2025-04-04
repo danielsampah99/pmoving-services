@@ -31,7 +31,7 @@ const HeroSection = () => {
 						href="https://wisetack.us/#/hy6xcov/prequalify"
 						target="_blank"
 						className="group max-md:w-full bg-background inline-flex items-center justify-center gap-x-1 px-6 py-3 text-lg font-semibold hover:bg-white hover:text-background transition"
-					// className="inline-flex max-sm:w-full items-center justify-center gap-x-1 border border-white px-6 py-3 text-lg font-semibold hover:bg-white hover:text-moving-yellow transition"
+						// className="inline-flex max-sm:w-full items-center justify-center gap-x-1 border border-white px-6 py-3 text-lg font-semibold hover:bg-white hover:text-moving-yellow transition"
 					>
 						<BanknotesIcon className="fill-white w-full group-hover:fill-background group-hover:stroke-background size-6" />
 						<span>Finance Move</span>
@@ -48,7 +48,7 @@ const HeroSection = () => {
 					<Link
 						href="/blog"
 						className="inline-flex max-sm:w-full items-center justify-center gap-x-1 border border-white px-6 py-3 text-lg font-semibold hover:bg-white hover:text-moving-yellow transition"
-					// className="group max-md:w-full bg-background inline-flex items-center justify-center gap-x-1 px-6 py-3 text-lg font-semibold hover:bg-white hover:text-background transition"
+						// className="group max-md:w-full bg-background inline-flex items-center justify-center gap-x-1 px-6 py-3 text-lg font-semibold hover:bg-white hover:text-background transition"
 					>
 						<RssIcon className="fill-background group-hover:fill-white group-hover:stroke-white size-6" />
 						Moving Blogs
@@ -57,7 +57,7 @@ const HeroSection = () => {
 					<Link
 						href="/#faqs"
 						className="inline-flex max-sm:w-full items-center justify-center gap-x-1 border border-white px-6 py-3 text-lg font-semibold hover:bg-white hover:text-moving-yellow transition"
-					// className="group bg-background inline-flex max-md:w-full items-center justify-center gap-x-1 px-6 py-3 text-lg font-semibold hover:bg-white hover:text-background transition"
+						// className="group bg-background inline-flex max-md:w-full items-center justify-center gap-x-1 px-6 py-3 text-lg font-semibold hover:bg-white hover:text-background transition"
 					>
 						<QuestionMarkCircleIcon className="fill-background group-hover:fill-white group-hover:stroke-white size-6" />
 						FAQs
@@ -73,7 +73,6 @@ const HeroSection = () => {
 
 export default HeroSection;
 
-
 export const QuoteForm = () => {
 	return (
 		<div className="mt-10 bg-white text-black p-6 rounded-xl w-full max-w-3xl shadow-lg">
@@ -82,9 +81,7 @@ export const QuoteForm = () => {
 			<div className="flex flex-col md:flex-row items-center gap-4">
 				{/* Moving From */}
 				<Field className="w-full relative">
-					<Label className="block font-semibold mb-1">
-						Starting Location:
-					</Label>
+					<Label className="block font-semibold mb-1">Starting Location:</Label>
 					<Input
 						type="text"
 						placeholder="Enter Zip Code"
@@ -110,5 +107,5 @@ export const QuoteForm = () => {
 				CONTINUE →
 			</Link>
 		</div>
-	)
-}
+	);
+};
