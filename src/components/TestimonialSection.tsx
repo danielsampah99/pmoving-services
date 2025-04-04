@@ -25,7 +25,7 @@ export const Testimonial = () => {
 						</Link>
 					</p>
 				</div>
-				<div className="mx-auto grid max-w-lg grid-cols-3 items-center justify-between gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none">
+				<div className="mx-auto grid max-w-xl grid-cols-3 items-center justify-between gap-x-8 gap-y-12 shadow-md px-6 py-4 rounded-lg sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none">
 					<NameAndIcon text="Trusted" icon={TrustIcon} />
 					<NameAndIcon text="Affordable" icon={AffordableIcon} />
 					<NameAndIcon text="Reliable" icon={ReliableIcon} />
@@ -46,11 +46,11 @@ export type NameAndIconProps = {
 
 export const NameAndIcon: FC<NameAndIconProps> = (props) => {
 	return (
-		<div className="group inline-flex flex-col lg:flex-row lg:gap-x-1.5 transition-colors lg:items-center lg:justify-center delay-150 duration-300 gap-y-1 selection:bg-moving-yellow">
+		<div className="group inline-flex flex-col lg:flex-row lg:gap-x-1.5 text-moving-gray transition-colors lg:items-center lg:justify-center delay-150 duration-300 gap-y-1 selection:bg-moving-yellow">
 			<span>
-				<props.icon className="h-16 w-12 lg:size-12 group-hover:fill-moving-yellow/50 fill-moving-yellow" />
+				<props.icon className="h-16 w-12 lg:size-12 group-hover:fill-moving-yellow group-hover:animate-pulse fill-moving-gray" />
 			</span>
-			<span className="text-slate-800 text-base">{props.text}</span>
+			<span className="text-slate-800 font-semibold group-hover:font-bold text-base">{props.text}</span>
 		</div>
 	);
 };
