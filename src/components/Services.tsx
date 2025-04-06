@@ -56,10 +56,10 @@ export const services: Service[] = [
 		subServices: [
 			{ name: "Residential Movers", href: "/services/residential" },
 			{ name: "Household Goods", href: "/services/household" },
-			{ name: "Pack & Unpack", href: "#" },
-			{ name: "Apartment Movers", href: "#" },
-			{ name: "Condo Movers", href: "#" },
-			{ name: "HOA Movers", href: "#" },
+			{ name: "Pack & Unpack", href: "/services/pack-and-unpack" },
+			{ name: "Apartment Movers", href: "/services/apartment-movers" },
+			{ name: "Condo Movers", href: "/services/condo-movers" },
+			{ name: "HOA Movers", href: "/services/hoa-movers" },
 		],
 	},
 	{
