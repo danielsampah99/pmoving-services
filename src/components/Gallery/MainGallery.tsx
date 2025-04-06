@@ -1,4 +1,5 @@
 "use client";
+
 import type React from "react";
 import { useState, useRef, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
@@ -8,7 +9,7 @@ import SearchBar from "./SearchBar";
 import FilterBar from "./FilterBar";
 import ImageCard from "./ImageCard";
 import Lightbox from "./Lightbox";
-import useImageSearch from "@/app/hooks/useImageSearch";
+import useImageSearch from "@/app/(app)/hooks/useImageSearch";
 
 interface GalleryProps {
 	className?: string;

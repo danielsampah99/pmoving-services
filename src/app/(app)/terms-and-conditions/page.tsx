@@ -152,7 +152,7 @@ export default function TermsAndConditionsPage() {
 										Types of SMS Communications
 									</h4>
 									<div className="font-medium text-sm mt-2">
-										<div className='space-y-2'>
+										<div className="space-y-2">
 											If you have consented to receive text messages from
 											Premium Moving Services, you may receive messages related
 											to the following:
@@ -202,8 +202,10 @@ export default function TermsAndConditionsPage() {
 									</h4>
 									<div className="font-medium text-sm mt-2">
 										<p>
-											Please note that standard message and data rates may apply, depending on your carrier’s pricing plan.
-											These fees may vary if the message is sent domestically or internationally.
+											Please note that standard message and data rates may
+											apply, depending on your carrier’s pricing plan. These
+											fees may vary if the message is sent domestically or
+											internationally.
 										</p>
 									</div>
 								</li>
@@ -214,7 +216,9 @@ export default function TermsAndConditionsPage() {
 									</h4>
 									<div className="font-medium text-sm mt-2">
 										<p>
-											You may opt-in to receive SMS messages from <strong>Premium Moving Services</strong> in the following ways:
+											You may opt-in to receive SMS messages from{" "}
+											<strong>Premium Moving Services</strong> in the following
+											ways:
 										</p>
 									</div>
 								</li>
@@ -225,8 +229,10 @@ export default function TermsAndConditionsPage() {
 									</h4>
 									<div className="font-medium text-sm mt-2">
 										<p>
-											You can opt out of receiving SMS messages at any time. To do so, simply reply <strong>"STOP"</strong>  to any SMS message you receive.
-											Alternatively, you can contact us directly to request removal from our messaging list
+											You can opt out of receiving SMS messages at any time. To
+											do so, simply reply <strong>"STOP"</strong> to any SMS
+											message you receive. Alternatively, you can contact us
+											directly to request removal from our messaging list
 										</p>
 									</div>
 								</li>
@@ -237,13 +243,19 @@ export default function TermsAndConditionsPage() {
 									</h4>
 									<div className="font-medium text-sm mt-2 space-y-2">
 										<p>
-											If you are experiencing any issues, you can reply with the keyword HELP.
-											Or, you can get help directly from us <a href="/#socials">this website</a>
+											If you are experiencing any issues, you can reply with the
+											keyword HELP. Or, you can get help directly from us{" "}
+											<a href="/#socials">this website</a>
 										</p>
 
-										<p className='font-semibold text-sm underline'>Additional Options</p>
+										<p className="font-semibold text-sm underline">
+											Additional Options
+										</p>
 										<ul className="list-disc list-outside ml-3">
-											<li>If you do not wish to receive SMS messages, you can choose not to check the SMS consent box on our forms</li>
+											<li>
+												If you do not wish to receive SMS messages, you can
+												choose not to check the SMS consent box on our forms
+											</li>
 										</ul>
 									</div>
 								</li>
@@ -254,8 +266,16 @@ export default function TermsAndConditionsPage() {
 									</h4>
 									<div className="font-medium text-sm mt-2 list-disc list-outside">
 										<span>Message and data rates may apply</span>
-										<span>You can opt-out at any time by texting <strong>"STOP"</strong>.</span>
-										<span>For assistance, text <strong>HELP</strong> or visit our <a href="/privacy-plicy">Privacy Policy</a> and <a href="/terms-and-conditions">Terms and Conditions</a>pages</span>
+										<span>
+											You can opt-out at any time by texting{" "}
+											<strong>"STOP"</strong>.
+										</span>
+										<span>
+											For assistance, text <strong>HELP</strong> or visit our{" "}
+											<a href="/privacy-plicy">Privacy Policy</a> and{" "}
+											<a href="/terms-and-conditions">Terms and Conditions</a>
+											pages
+										</span>
 										<span>Message frequency may vary</span>
 									</div>
 								</li>

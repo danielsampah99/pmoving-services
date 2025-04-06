@@ -1,6 +1,5 @@
 import type { SVGProps, FC } from "react";
 
-
 interface SVGRProps {
 	title?: string;
 	titleId?: string;

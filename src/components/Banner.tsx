@@ -44,7 +44,7 @@ export const Banner: FC = () => {
 						className={cn(
 							"text-base/7 block capitalize text-gray-800 hover:text-gray-900 hover:underline underline-offset-2 transition-all duration-300 delay-100",
 							isBgTransparent &&
-							"bg-moving-yellow px-2 py-1.5 rounded-lg text-white font-semibold text-base shadow-sm hover:bg-moving-yellow/50 hover:no-underline hover:text-white",
+								"bg-moving-yellow px-2 py-1.5 rounded-lg text-white font-semibold text-base shadow-sm hover:bg-moving-yellow/50 hover:no-underline hover:text-white",
 						)}
 					>
 						Request a quote
@@ -53,7 +53,8 @@ export const Banner: FC = () => {
 						href="tel: 651-757-5135"
 						className={cn(
 							"mt-0.5 hover:underline hover:underline-offset-1 text-gray-500 block text-xs/6",
-							isBgTransparent && "hover:text-sm font-semibold hover:text-gray-900",
+							isBgTransparent &&
+								"hover:text-sm font-semibold hover:text-gray-900",
 						)}
 					>
 						651-757-5135

@@ -1,5 +1,5 @@
 "use client";
-import { blogPosts } from "@/app/lib/blogPosts";
+import { blogPosts } from "@/app/(app)/lib/blogPosts";
 import React from "react";
 import { useState, useEffect } from "react";
 import FeaturedPost from "./FeaturedPost";
@@ -7,7 +7,6 @@ import SearchBar from "./SearchBar";
 import CategoryFilter from "./CategoryFilter";
 import PostGrid from "./PostGrid";
 import Sidebar from "./Sidebar";
-import { div } from "motion/react-client";
 import { Footer } from "../Footer";
 
 const BlogComponent = () => {

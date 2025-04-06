@@ -1,5 +1,5 @@
 "use client";
-import type { BlogPost } from "@/app/lib/blogPosts";
+import type { BlogPost } from "@/app/(app)/lib/blogPosts";
 import { ArrowRight } from "lucide-react";
 
 interface FeaturedPostProps {

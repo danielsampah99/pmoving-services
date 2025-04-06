@@ -1,4 +1,4 @@
-import type { SVGProps, FC } from "react"
+import type { SVGProps, FC } from "react";
 interface SVGRProps {
 	title?: string;
 	titleId?: string;
@@ -164,4 +164,4 @@ export const StorageIcon: FC<SVGProps<SVGSVGElement> & SVGRProps> = ({
 			data-original="#000000"
 		/>
 	</svg>
-)
+);

@@ -32,7 +32,7 @@ const navigation = {
 	certifications: [
 		{ name: "DOT: #3047943", href: "#" },
 		{ name: "HHG:#383025", href: "#" },
-		{ name: "BBB Certifications", href: "#" },
+		{ name: "BBB Certifications", href: "/" },
 	],
 	social: [
 		{
@@ -265,7 +265,10 @@ export const Footer: FC = () => {
 						</div>
 					</form>
 				</div>
-				<div id="socials" className="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+				<div
+					id="socials"
+					className="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between"
+				>
 					<div className="flex space-x-6 md:order-2">
 						{navigation.social.map((item) => (
 							<a

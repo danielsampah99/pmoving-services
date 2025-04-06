@@ -1,4 +1,4 @@
-import type { SVGProps, FC } from "react"
+import type { SVGProps, FC } from "react";
 interface SVGRProps {
 	title?: string;
 	titleId?: string;
@@ -18,7 +18,6 @@ export const SafeIcon: FC<SVGProps<SVGSVGElement> & SVGRProps> = ({
 		xmlSpace="preserve"
 		width={512}
 		height={512}
-
 		viewBox="0 0 16.933 16.933"
 		aria-labelledby={titleId}
 		aria-describedby={descId}
@@ -31,4 +30,4 @@ export const SafeIcon: FC<SVGProps<SVGSVGElement> & SVGRProps> = ({
 			data-original="#000000"
 		/>
 	</svg>
-)
+);

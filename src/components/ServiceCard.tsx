@@ -25,7 +25,7 @@ import { cn } from "@/utils";
 import { LogisticsIcon } from "./icons/logistics-icon";
 
 export interface ServiceCardData {
-	id: number,
+	id: number;
 	title: string;
 	description: string;
 	icon: LucideIcon | HeroIconType | FlatIcon;
@@ -153,7 +153,7 @@ export const ServiceCard: FC<{ service: ServiceCardData; index: number }> = ({
 }) => {
 	const [isFlipped, setIsFlipped] = useState(false);
 
-	const isFlatIcon = [5, 10, 14].includes(service.id)
+	const isFlatIcon = [5, 10, 14].includes(service.id);
 
 	return (
 		<div
@@ -180,7 +180,12 @@ export const ServiceCard: FC<{ service: ServiceCardData; index: number }> = ({
 							style={{ backfaceVisibility: "hidden" }}
 						>
 							<div className="text-teal-900">
-								<service.icon className={cn("size-7 sm:size-12", !isFlatIcon && 'stroke-yellow-400 fill-white')} />
+								<service.icon
+									className={cn(
+										"size-7 sm:size-12",
+										!isFlatIcon && "stroke-yellow-400 fill-white",
+									)}
+								/>
 							</div>
 							<h3 className="text-xl max-sm:text-base font-medium mt-4 text-center">
 								{service.title}
