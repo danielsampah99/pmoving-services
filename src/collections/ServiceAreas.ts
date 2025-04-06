@@ -6,22 +6,27 @@ export const ServiceArea: CollectionConfig = {
 		{
 			name: "title",
 			type: "text",
+			required: true,
 		},
 		{
 			name: "description",
 			type: "text",
+			required: true,
 		},
 		{
 			name: "short-code",
 			type: "text",
+			required: true,
 		},
 		{
 			name: "latitude",
 			type: "number",
+			required: true,
 		},
 		{
 			name: "longitude",
 			type: "number",
+			required: true,
 		},
 		{
 			name: "state-name",
