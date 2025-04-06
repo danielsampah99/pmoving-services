@@ -268,3 +268,21 @@ body {
 		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 	}
 }
+
+
+/* Yellow pagination dots */
+.swiper-pagination-bullet {
+	background-color: #facc15 !important; /* Tailwind yellow-400 */
+	opacity: 0.5;
+  }
+  .swiper-pagination-bullet-active {
+	background-color: #eab308 !important; /* Tailwind yellow-500 */
+	opacity: 1;
+  }
+  
+  /* Yellow navigation arrows */
+  .swiper-button-next,
+  .swiper-button-prev {
+	color: #facc15 !important; /* Tailwind yellow-400 */
+  }
+  

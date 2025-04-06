@@ -4,7 +4,7 @@ import { Button } from "@headlessui/react";
 import { ArrowRight, Truck } from "lucide-react";
 import { motion } from "motion/react";
 import React from "react";
-import { Footer } from "../Footer";
+
 
 const QuoteComponent = () => {
 	return (
@@ -59,11 +59,12 @@ const QuoteComponent = () => {
 							transition={{ duration: 0.5, delay: 0.2 }}
 							className="relative hidden lg:block"
 						>
+							
 							<img
-								src="https://www.creativefabrica.com/wp-content/uploads/2021/03/03/Hero-Header-for-Packers-Movers-Website-Graphics-9151231-1.jpg"
-								alt="Professional moving service"
-								className="rounded-2xl shadow-elevation-3 object-cover h-[500px] w-full"
-							/>
+                                src="https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                                alt="Professional moving service"
+                                className="rounded-2xl shadow-elevation-3 object-cover h-[500px] w-full"
+                            />
 							<div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-elevation-2 border max-w-xs">
 								<div className="flex items-center gap-3 mb-3">
 									<div className="bg-primary/10 p-2 rounded-full">
@@ -107,156 +108,179 @@ const QuoteComponent = () => {
 					{/* Form and Image Layout */}
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 						{/* Form */}
-						<form className="bg-white p-8 rounded-lg shadow-elevation-3">
-							<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-								{/* Full Name */}
-								<div className="sm:col-span-2">
-									<label
-										htmlFor="fullName"
-										className="block text-sm font-medium text-gray-700"
-									>
-										Full Name
-									</label>
-									<input
-										type="text"
-										id="fullName"
-										name="fullName"
-										className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
-										placeholder="John Doe"
-									/>
-								</div>
-
-								{/* Email */}
-								<div className="sm:col-span-2">
-									<label
-										htmlFor="email"
-										className="block text-sm font-medium text-gray-700"
-									>
-										Email
-									</label>
-									<input
-										type="email"
-										id="email"
-										name="email"
-										className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
-										placeholder="johndoe@example.com"
-									/>
-								</div>
-
-								{/* Phone Number */}
-								<div className="sm:col-span-2">
-									<label
-										htmlFor="phone"
-										className="block text-sm font-medium text-gray-700"
-									>
-										Phone Number
-									</label>
-									<input
-										type="tel"
-										id="phone"
-										name="phone"
-										className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
-										placeholder="+1 (555) 123-4567"
-									/>
-								</div>
-
-								{/* Move Date */}
-								<div>
-									<label
-										htmlFor="moveDate"
-										className="block text-sm font-medium text-gray-700"
-									>
-										Move Date
-									</label>
-									<input
-										type="date"
-										id="moveDate"
-										name="moveDate"
-										className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
-									/>
-								</div>
-
-								{/* Move Size */}
-								<div>
-									<label
-										htmlFor="moveSize"
-										className="block text-sm font-medium text-gray-700"
-									>
-										Move Size
-									</label>
-									<select
-										id="moveSize"
-										name="moveSize"
-										className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
-									>
-										<option value="small">Small (Studio/1 Bedroom)</option>
-										<option value="medium">Medium (2-3 Bedrooms)</option>
-										<option value="large">Large (4+ Bedrooms)</option>
-									</select>
-								</div>
-
-								{/* Current Address */}
-								<div className="sm:col-span-2">
-									<label
-										htmlFor="currentAddress"
-										className="block text-sm font-medium text-gray-700"
-									>
-										Current Address
-									</label>
-									<input
-										type="text"
-										id="currentAddress"
-										name="currentAddress"
-										className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
-										placeholder="123 Main St, City, State, ZIP"
-									/>
-								</div>
-
-								{/* Destination Address */}
-								<div className="sm:col-span-2">
-									<label
-										htmlFor="destinationAddress"
-										className="block text-sm font-medium text-gray-700"
-									>
-										Destination Address
-									</label>
-									<input
-										type="text"
-										id="destinationAddress"
-										name="destinationAddress"
-										className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
-										placeholder="456 Elm St, City, State, ZIP"
-									/>
-								</div>
-
-								{/* Additional Notes */}
-								<div className="sm:col-span-2">
-									<label
-										htmlFor="notes"
-										className="block text-sm font-medium text-gray-700"
-									>
-										Additional Notes
-									</label>
-									<textarea
-										id="notes"
-										name="notes"
-										rows={4}
-										className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
-										placeholder="Any special requirements or details?"
-									/>
-								</div>
-							</div>
-
-							{/* Submit Button */}
-							<div className="mt-6">
-								<button
-									type="submit"
-									className="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-primary-dark transition-colors"
-								>
-									Get Quote
-								</button>
-							</div>
-						</form>
+						<motion.form 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                            className="bg-white p-8 rounded-lg shadow-elevation-3 relative border border-gray-100 hover:border-moving-yellow/30 transition-all duration-300"
+                        >
+                            {/* Decorative elements for the form */}
+                            <div className="absolute -top-2 -right-2 w-20 h-20 bg-moving-yellow/10 rounded-full blur-xl -z-10" />
+                            <div className="absolute -bottom-2 -left-2 w-24 h-24 bg-primary/10 rounded-full blur-xl -z-10" />
+                            <div className="absolute top-0 right-0 w-2 h-20 bg-gradient-to-b from-moving-yellow to-transparent rounded-tr-lg" />
+                            <div className="absolute bottom-0 left-0 w-20 h-2 bg-gradient-to-r from-primary to-transparent rounded-bl-lg" />
+                        
+                            {/* Form content remains the same */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                {/* Full Name */}
+                                <div className="sm:col-span-2">
+                                    <label
+                                        htmlFor="fullName"
+                                        className="block text-sm font-medium text-gray-700"
+                                    >
+                                        Full Name
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="fullName"
+                                        name="fullName"
+                                        className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
+                                        placeholder="John Doe"
+                                    />
+                                </div>
+                        
+                                {/* Email */}
+                                <div className="sm:col-span-2">
+                                    <label
+                                        htmlFor="email"
+                                        className="block text-sm font-medium text-gray-700"
+                                    >
+                                        Email
+                                    </label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
+                                        placeholder="johndoe@example.com"
+                                    />
+                                </div>
+                        
+                                {/* Phone Number */}
+                                <div className="sm:col-span-2">
+                                    <label
+                                        htmlFor="phone"
+                                        className="block text-sm font-medium text-gray-700"
+                                    >
+                                        Phone Number
+                                    </label>
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
+                                        placeholder="+1 (555) 123-4567"
+                                    />
+                                </div>
+                        
+                                {/* Move Date */}
+                                <div>
+                                    <label
+                                        htmlFor="moveDate"
+                                        className="block text-sm font-medium text-gray-700"
+                                    >
+                                        Move Date
+                                    </label>
+                                    <input
+                                        type="date"
+                                        id="moveDate"
+                                        name="moveDate"
+                                        className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
+                                    />
+                                </div>
+                        
+                                {/* Move Size */}
+                                <div>
+                                    <label
+                                        htmlFor="moveSize"
+                                        className="block text-sm font-medium text-gray-700"
+                                    >
+                                        Move Size
+                                    </label>
+                                    <select
+                                        id="moveSize"
+                                        name="moveSize"
+                                        className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
+                                    >
+                                        <option value="small">Small (Studio/1 Bedroom)</option>
+                                        <option value="medium">Medium (2-3 Bedrooms)</option>
+                                        <option value="large">Large (4+ Bedrooms)</option>
+                                    </select>
+                                </div>
+                        
+                                {/* Current Address */}
+                                <div className="sm:col-span-2">
+                                    <label
+                                        htmlFor="currentAddress"
+                                        className="block text-sm font-medium text-gray-700"
+                                    >
+                                        Current Address
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="currentAddress"
+                                        name="currentAddress"
+                                        className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
+                                        placeholder="123 Main St, City, State, ZIP"
+                                    />
+                                </div>
+                        
+                                {/* Destination Address */}
+                                <div className="sm:col-span-2">
+                                    <label
+                                        htmlFor="destinationAddress"
+                                        className="block text-sm font-medium text-gray-700"
+                                    >
+                                        Destination Address
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="destinationAddress"
+                                        name="destinationAddress"
+                                        className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
+                                        placeholder="456 Elm St, City, State, ZIP"
+                                    />
+                                </div>
+                        
+                                {/* Additional Notes */}
+                                <div className="sm:col-span-2">
+                                    <label
+                                        htmlFor="notes"
+                                        className="block text-sm font-medium text-gray-700"
+                                    >
+                                        Additional Notes
+                                    </label>
+                                    <textarea
+                                        id="notes"
+                                        name="notes"
+                                        rows={4}
+                                        className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
+                                        placeholder="Any special requirements or details?"
+                                    />
+                                </div>
+                            </div>
+                        
+                            {/* Enhanced Submit Buttons */}
+                            <motion.div 
+                                className="mt-6 flex gap-4"
+                                whileHover={{ scale: 1.01 }}
+                                transition={{ duration: 0.2 }}
+                            >
+                                <button
+                                    type="submit"
+                                    className="flex-1 bg-primary text-white py-2 px-4 rounded-md hover:bg-primary-dark transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5"
+                                >
+                                    Get Quote
+                                </button>
+                                <button
+                                    type="submit"
+                                    className="flex-1 bg-moving-yellow text-white py-2 px-4 rounded-md hover:bg-yellow-500 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5"
+                                >
+                                    Send
+                                </button>
+                            </motion.div>
+                        </motion.form>
 
 						{/* Image */}
 						<motion.div
@@ -267,16 +291,19 @@ const QuoteComponent = () => {
 							className="hidden lg:block"
 						>
 							<img
-								src="https://www.creativefabrica.com/wp-content/uploads/2021/03/03/Hero-Header-for-Packers-Movers-Website-Graphics-9151231-1.jpg"
+								src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
 								alt="Moving Services"
 								className="rounded-2xl shadow-elevation-3 object-cover h-[600px] w-full"
+								onError={(e) => {
+									e.currentTarget.src = "https://images.unsplash.com/photo-1590756254933-2873d72e19ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80";
+								}}
 							/>
 						</motion.div>
 					</div>
 				</div>
 			</section>
 
-			<Footer />
+
 		</div>
 	);
 };
