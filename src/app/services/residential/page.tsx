@@ -5,12 +5,6 @@ import { Truck, Tag, ShieldCheck, Handshake, Info } from "lucide-react";
 import ReviewSlider from "@/components/ReviewSlider";
 import Link from "next/link";
 
-const features = [
-    { icon: <Truck className="text-background w-8 h-8" />, text: "15 YEARS OF MOVING EXPERIENCE" },
-    { icon: <Tag className="text-background w-8 h-8" />, text: "FAST, FRIENDLY, AFFORDABLE" },
-    { icon: <ShieldCheck className="text-background w-8 h-8" />, text: "LICENSED, BONDED & INSURED" },
-    { icon: <Handshake className="text-background w-8 h-8" />, text: "OVER 200,000 CUSTOMERS SERVED" },
-];
 
 const ResidentialMoving = () => {
     return (
@@ -19,18 +13,38 @@ const ResidentialMoving = () => {
             title="Residential Moving Services"
             desc="We make home moving stress-free with professional packing, transport, and unpacking services."
         >
-            <div className="bg-moving-gray py-8">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-white text-center">
-                    {features.map((feature, index) => (
-                        <div key={index} className="flex flex-col items-center space-y-2">
-                            <div className="p-4 rounded-full border-2 border-background flex items-center justify-center">
-                                {feature.icon}
-                            </div>
-                            <p className="font-semibold">{feature.text}</p>
+            
+            <div className=" py-12">
+                <div className="max-w-7xl mx-auto px-4">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                        <div className="flex justify-center">
+                            <img
+                                src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/business-1920w.png"
+                                alt="Business Logo"
+                                className="h-20 w-auto object-contain max-w-[280px]"
+                                loading="eager"
+                            />
                         </div>
-                    ))}
+                        <div className="flex justify-center">
+                            <img
+                                src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/AngiesList_SSA_2019-1920w.png"
+                                alt="Angie's List Logo"
+                                className="h-20 w-auto object-contain max-w-[280px]"
+                                loading="eager"
+                            />
+                        </div>
+                        <div className="flex justify-center">
+                            <img
+                                src="https://irp-cdn.multiscreensite.com/b0f4adc5/dms3rep/multi/inline.svg"
+                                alt="Inline Logo"
+                                className="h-20 w-auto object-contain max-w-[280px]"
+                                loading="eager"
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
+
 
             <div className="bg-gray-100 py-12 px-4">
                 <div className="max-w-7xl mx-auto space-y-12">
@@ -46,8 +60,8 @@ const ResidentialMoving = () => {
                                         className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
                                     />
                                 </div>
-
                             </div>
+
                         </div>
 
                         {/* Text Content */}

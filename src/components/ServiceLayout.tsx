@@ -57,7 +57,7 @@ const ServiceLayout: React.FC<ServiceLayoutProps> = ({ image, title, desc, child
       </motion.div>
 
       {/* Service Details Section */}
-      <div className="max-w-8xl mx-auto pb-10">
+      <div className="max-w-6xl mx-auto pb-10">
         {children}
       </div>
     </div>
