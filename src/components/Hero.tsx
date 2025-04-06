@@ -29,7 +29,7 @@ const HeroSection = () => {
 						href="https://wisetack.us/#/hy6xcov/prequalify"
 						target="_blank"
 						className="group max-md:w-full bg-background inline-flex items-center justify-center gap-x-1 px-6 py-3 text-lg font-semibold hover:bg-white hover:text-background transition"
-					// className="inline-flex max-sm:w-full items-center justify-center gap-x-1 border border-white px-6 py-3 text-lg font-semibold hover:bg-white hover:text-moving-yellow transition"
+						// className="inline-flex max-sm:w-full items-center justify-center gap-x-1 border border-white px-6 py-3 text-lg font-semibold hover:bg-white hover:text-moving-yellow transition"
 					>
 						<BanknotesIcon className="fill-white w-full group-hover:fill-background group-hover:stroke-background size-6" />
 						<span>Finance Move</span>
@@ -46,7 +46,7 @@ const HeroSection = () => {
 					<Link
 						href="/blog"
 						className="inline-flex max-sm:w-full items-center justify-center gap-x-1 border border-white px-6 py-3 text-lg font-semibold hover:bg-white hover:text-moving-yellow transition"
-					// className="group max-md:w-full bg-background inline-flex items-center justify-center gap-x-1 px-6 py-3 text-lg font-semibold hover:bg-white hover:text-background transition"
+						// className="group max-md:w-full bg-background inline-flex items-center justify-center gap-x-1 px-6 py-3 text-lg font-semibold hover:bg-white hover:text-background transition"
 					>
 						<RssIcon className="fill-background group-hover:fill-white group-hover:stroke-white size-6" />
 						Moving Blogs
@@ -55,7 +55,7 @@ const HeroSection = () => {
 					<Link
 						href="/#faqs"
 						className="inline-flex max-sm:w-full items-center justify-center gap-x-1 border border-white px-6 py-3 text-lg font-semibold hover:bg-white hover:text-moving-yellow transition"
-					// className="group bg-background inline-flex max-md:w-full items-center justify-center gap-x-1 px-6 py-3 text-lg font-semibold hover:bg-white hover:text-background transition"
+						// className="group bg-background inline-flex max-md:w-full items-center justify-center gap-x-1 px-6 py-3 text-lg font-semibold hover:bg-white hover:text-background transition"
 					>
 						<QuestionMarkCircleIcon className="fill-background group-hover:fill-white group-hover:stroke-white size-6" />
 						FAQs

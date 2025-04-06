@@ -1,6 +1,6 @@
 "use client";
 
-import type { BlogPost } from "@/app/lib/blogPosts";
+import type { BlogPost } from "@/app/(app)/lib/blogPosts";
 import PostCard from "./PostCard";
 
 interface PostGridProps {

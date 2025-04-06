@@ -5,12 +5,8 @@ import { motion } from "motion/react";
 import React from "react";
 
 export const QuoteComponent = () => {
-
-
 	return (
 		<div>
-
-
 			{/* Quote Form Section */}
 			<section className="py-16 md:py-24">
 				<div className="max-w-7xl mx-auto px-6">
@@ -47,7 +43,7 @@ export const QuoteComponent = () => {
 										type="text"
 										id="fullName"
 										name="fullName"
-										autoComplete='name'
+										autoComplete="name"
 										className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
 										placeholder="John Doe"
 									/>
@@ -65,7 +61,7 @@ export const QuoteComponent = () => {
 										type="email"
 										id="email"
 										name="email"
-										autoComplete='email'
+										autoComplete="email"
 										className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
 										placeholder="johndoe@example.com"
 									/>

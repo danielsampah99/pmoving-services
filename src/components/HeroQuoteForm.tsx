@@ -1,14 +1,12 @@
-'use client'
+"use client";
 
 import { Label, Input, Field } from "@headlessui/react";
-import Link from 'next/link'
+import Link from "next/link";
 import { useState } from "react";
 
-
 export const QuoteForm = () => {
-
-	const [movingFrom, setMovingFrom] = useState<string>("")
-	const [movingTo, setMovingTo] = useState<string>("")
+	const [movingFrom, setMovingFrom] = useState<string>("");
+	const [movingTo, setMovingTo] = useState<string>("");
 
 	return (
 		<div className="mt-10 bg-white text-black p-6 rounded-xl w-full max-w-3xl shadow-lg">
@@ -22,7 +20,7 @@ export const QuoteForm = () => {
 						type="text"
 						placeholder="Enter Zip Code"
 						value={movingFrom}
-						onChange={event => setMovingFrom(event.target.value)}
+						onChange={(event) => setMovingFrom(event.target.value)}
 						className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-background"
 					/>
 				</Field>
@@ -34,7 +32,7 @@ export const QuoteForm = () => {
 						type="text"
 						placeholder="Enter ZIP Code"
 						value={movingTo}
-						onChange={event => setMovingTo(event.target.value)}
+						onChange={(event) => setMovingTo(event.target.value)}
 						className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-background"
 					/>
 				</Field>
