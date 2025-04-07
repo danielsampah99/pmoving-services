@@ -1,7 +1,6 @@
 "use client";
 
-
-import { ServiceAreaType } from "@/types";
+import type { ServiceAreaType } from "@/types";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
@@ -15,9 +14,7 @@ export type MoverLink = {
 	subLinks?: MoverLink[];
 };
 
-
 export const ServiceArea: FC<{ links: ServiceAreaType[] }> = ({ links }) => {
-
 	return (
 		<div className="z-[99]">
 			<Menu>
@@ -45,7 +42,7 @@ export const ServiceArea: FC<{ links: ServiceAreaType[] }> = ({ links }) => {
 								href={`/service-areas/${link["short-code"]}`}
 								className="group capitalize flex w-full text-gray-700 hover:bg-gray-100 hover:text-gray-900 items-center gap-2 rounded-xl truncate py-1.5 px-3"
 							>
-								{link.title?.toLowerCase() ?? ''}
+								{link.title?.toLowerCase() ?? ""}
 								<span className="ml-auto hidden font-sans text-sm text-gray-500 group-data-[hover]:inline group-data-[focus]:inline">
 									{link["state-initials"]?.toUpperCase()}
 								</span>

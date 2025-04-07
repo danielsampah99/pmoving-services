@@ -1,10 +1,5 @@
-
-
-import { type FC } from "react";
-import {
-	PopoverGroup,
-	Button,
-} from "@headlessui/react";
+import type { FC } from "react";
+import { PopoverGroup, Button } from "@headlessui/react";
 import { Services } from "./Services";
 import Link from "next/link";
 import { SunIcon } from "@heroicons/react/24/solid";
@@ -12,10 +7,8 @@ import { MobileSidebar } from "./MobileSidebar";
 import { getServiceAreas } from "@/data/service-areas";
 import { ServiceArea } from "./ServiceAreas";
 
-
 export const Header: FC = async () => {
-
-	const areas = await getServiceAreas()
+	const areas = await getServiceAreas();
 
 	return (
 		<section className="bg-moving-gray sm:mt-12 w-full z-50">
@@ -60,7 +53,6 @@ export const Header: FC = async () => {
 					</Button>
 				</div>
 			</nav>
-
 		</section>
 	);
 };
