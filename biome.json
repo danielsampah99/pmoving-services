@@ -17,7 +17,7 @@
 		"indentStyle": "tab",
 		"ignore": [
 			"src/**/*.css",
-			"src/payload-types"
+			"src/payload-types.ts"
 		]
 	},
 	"organizeImports": {
