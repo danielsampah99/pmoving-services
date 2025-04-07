@@ -20,6 +20,7 @@ const navigation = {
 	],
 	company: [
 		{ name: "About", href: "#" },
+		{ name: 'Contact Us', href: '/contact-us' },
 		{ name: "Affiliates", href: "#" },
 		{ name: "Blog", href: "#" },
 		{ name: "FAQs", href: "/#faqs" },
