@@ -8,14 +8,16 @@
 	"files": {
 		"ignoreUnknown": true,
 		"ignore": [
-			"src/**/*.css "
+			"src/**/*.css ",
+			"src/payload-types"
 		]
 	},
 	"formatter": {
 		"enabled": true,
 		"indentStyle": "tab",
 		"ignore": [
-			"src/**/*.css"
+			"src/**/*.css",
+			"src/payload-types"
 		]
 	},
 	"organizeImports": {

@@ -20,7 +20,6 @@ import {
 import { HeroIconType } from "./HeroIcon";
 import { FlatIcon } from "./flaticons";
 import { SafeIcon } from "./icons/safe-icon";
-import { StorageIcon } from "./icons/storage-icon";
 import { cn } from "@/utils";
 import { LogisticsIcon } from "./icons/logistics-icon";
 
@@ -71,7 +70,7 @@ export const serviceCardData: ServiceCardData[] = [
 		description:
 			"Secure, climate-controlled storage solutions for both short-term and long-term needs.",
 		href: "/services/storage-services",
-		icon: StorageIcon,
+		icon: DatabaseIcon,
 	},
 	{
 		id: 6,
@@ -153,7 +152,7 @@ export const ServiceCard: FC<{ service: ServiceCardData; index: number }> = ({
 }) => {
 	const [isFlipped, setIsFlipped] = useState(false);
 
-	const isFlatIcon = [5, 10, 14].includes(service.id);
+	const isFlatIcon = [10, 14].includes(service.id);
 
 	return (
 		<div
