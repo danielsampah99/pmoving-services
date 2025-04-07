@@ -1,8 +1,9 @@
 import { QuoteComponent } from "@/components/FreeQuote/QuoteComponent";
-import React from "react";
+import React, { Suspense } from "react";
 
 const FreeQuote = () => {
-	return <QuoteComponent />;
+
+	return <Suspense><QuoteComponent /></Suspense>;
 };
 
 export default FreeQuote;
