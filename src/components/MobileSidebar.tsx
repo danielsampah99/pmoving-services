@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { callsToAction, services } from "./Services";
@@ -6,18 +6,23 @@ import Link from "next/link";
 import { cn } from "@/utils";
 import { socialMediaLinks } from "./Banner";
 import { PhoneIcon } from "@heroicons/react/24/outline";
-import { Dialog, DialogPanel, Disclosure, DisclosureButton, DisclosurePanel, Button } from "@headlessui/react";
+import {
+	Dialog,
+	DialogPanel,
+	Disclosure,
+	DisclosureButton,
+	DisclosurePanel,
+	Button,
+} from "@headlessui/react";
 import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
-import { FC, useState } from "react";
-import { ServiceAreaType } from "@/types";
-
+import { type FC, useState } from "react";
+import type { ServiceAreaType } from "@/types";
 
 export interface MobileSidebarProps {
-	areas: ServiceAreaType[]
+	areas: ServiceAreaType[];
 }
 
 export const MobileSidebar: FC<MobileSidebarProps> = ({ areas }) => {
-
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 	return (
@@ -84,7 +89,7 @@ export const MobileSidebar: FC<MobileSidebarProps> = ({ areas }) => {
 													className={cn(
 														"size-5 stroke-moving-yellow",
 														index > 3 &&
-														"stroke-inherit group-hover:animate-fill-both fill-moving-yellow",
+															"stroke-inherit group-hover:animate-fill-both fill-moving-yellow",
 														index === 2 && "hover:animate-shake",
 													)}
 												/>
@@ -176,5 +181,5 @@ export const MobileSidebar: FC<MobileSidebarProps> = ({ areas }) => {
 				</DialogPanel>
 			</Dialog>
 		</>
-	)
-}
+	);
+};

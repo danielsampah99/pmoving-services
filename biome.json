@@ -6,14 +6,17 @@
 		"useIgnoreFile": false
 	},
 	"files": {
-		"ignoreUnknown": false,
+		"ignoreUnknown": true,
 		"ignore": [
-			"*/**.css"
+			"src/**/*.css "
 		]
 	},
 	"formatter": {
 		"enabled": true,
-		"indentStyle": "tab"
+		"indentStyle": "tab",
+		"ignore": [
+			"src/**/*.css"
+		]
 	},
 	"organizeImports": {
 		"enabled": true
