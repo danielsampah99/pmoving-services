@@ -4,21 +4,8 @@ import {
 	HomeModernIcon,
 	UserIcon,
 } from "@heroicons/react/16/solid";
-import {
-	CheckCircleIcon,
-	InformationCircleIcon,
-} from "@heroicons/react/20/solid";
 
-const information = [
-	{
-		id: 1,
-		name: "Name",
-		icon: UserIcon,
-	},
-	{ id: 2, name: "Email Address", icon: AtSymbolIcon },
-	{ id: 3, name: "Telephone Number", icon: DevicePhoneMobileIcon },
-	{ id: 4, name: "Address", icon: HomeModernIcon },
-];
+
 
 export default function PrivacyPolicyPage() {
 	return (
