@@ -9,7 +9,7 @@ import {
 	Minimize,
 	Info,
 } from "lucide-react";
-import type { GalleryImage } from "../../data/images";
+import type { GalleryImage } from "../../../../data/images";
 import { Button } from "@headlessui/react";
 
 interface LightboxProps {

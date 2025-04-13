@@ -1,4 +1,4 @@
-import GalleryComponent from "@/components/Gallery/GalleryComponent";
+import GalleryComponent from "@/app/my-route/components/Gallery/GalleryComponent";
 import React from "react";
 
 const Gallery = () => {

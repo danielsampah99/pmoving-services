@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Banner } from "@/components/Banner";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { Banner } from "@/app/my-route/components/Banner";
+import { Header } from "@/app/my-route/components/Header";
+import { Footer } from "@/app/my-route/components/Footer";
 
 const inter = Inter({
 	variable: "--font-inter",

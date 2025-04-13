@@ -1,4 +1,4 @@
-import { OurLocations } from "@/components/OurLocations";
+import { OurLocations } from "@/app/my-route/components/OurLocations";
 
 
 export default function ThankYouPage() {

@@ -1,4 +1,4 @@
-import { QuoteComponent } from "@/components/FreeQuote/QuoteComponent";
+import { QuoteComponent } from "@/app/my-route/components/FreeQuote/QuoteComponent";
 import React, { Suspense } from "react";
 
 const FreeQuote = () => {

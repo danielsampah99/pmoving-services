@@ -1,4 +1,4 @@
-import BlogComponent from "@/components/Blog/BlogComponent";
+import BlogComponent from "@/app/my-route/components/Blog/BlogComponent";
 import React from "react";
 
 const Blog = () => {

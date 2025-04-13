@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useState } from 'react';
-import { FormField } from '@/components/contact-us/FormField';
-import { QuoteButton } from '@/components/contact-us/QuoteButton';
+import { FormField } from '@/app/my-route/components/contact-us/FormField';
+import { QuoteButton } from '@/app/my-route/components/contact-us/QuoteButton';
 
 
 interface QuickQuoteData {
