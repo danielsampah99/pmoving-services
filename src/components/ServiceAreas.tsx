@@ -24,7 +24,7 @@ export const ServiceArea: FC<{ links: ServiceAreaType[] }> = ({ links }) => {
 						className=""
 						style={{ scrollBehavior: "smooth" }}
 					>
-						Service Areas
+						Moving Service Areas
 					</Link>
 					<MenuButton className="group focus:outline-none data-[hover]:text-white-700 data-[open]:text-white data-[focus]:outline-1 data-[focus]:outline-white">
 						<ChevronDownIcon className="size-5 group-data-[hover]:fill-white" />

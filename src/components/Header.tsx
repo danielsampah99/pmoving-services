@@ -42,7 +42,14 @@ export const Header: FC = async () => {
 						href="/#faqs"
 						className="text-sm/6 scroll-smooth -scroll-m-10 font-semibold text-white"
 					>
-						Frequently Asked Questions
+						FAQs
+					</Link>
+
+					<Link
+						href="/contact-us"
+						className="text-sm/6 scroll-smooth -scroll-m-10 font-semibold text-white"
+					>
+						Contact Us
 					</Link>
 				</PopoverGroup>
 

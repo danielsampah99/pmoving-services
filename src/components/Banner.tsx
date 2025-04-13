@@ -35,16 +35,16 @@ export const Banner: FC = () => {
 	return (
 		<div
 			style={{ backgroundColor }}
-			className="bg-gray-100 hidden sm:fixed sm:flex items-center justify-center top-0 inset-x-0 z-[1000] backdrop-blur-xs rounded-md px-4 py-1.5 transition-opacity duration-300"
+			className="bg-gray-100 hidden sm:fixed sm:flex items-center justify-center top-0 inset-x-0 z-[1000] backdrop-blur-xs px-4 py-2 transition-opacity duration-300"
 		>
 			<div className="max-w-7xl w-full flex justify-between gap-3 items-center">
 				<div className="">
 					<Link
 						href="/free-quote"
 						className={cn(
-							"text-base/7 block capitalize text-gray-800 hover:text-gray-900 hover:underline underline-offset-2 transition-all duration-300 delay-100",
+							"text-base/7 block capitalize text-shadow-gray-950 font-black hover:underline hover:scale-120 underline-offset-2 transition-all duration-300 delay-100",
 							isBgTransparent &&
-								"bg-moving-yellow px-2 py-1.5 rounded-lg text-white font-semibold text-base shadow-sm hover:bg-moving-yellow/50 hover:no-underline hover:text-white",
+							"bg-moving-yellow px-2 py-1.5 rounded-lg text-white font-semibold text-base shadow-sm hover:bg-moving-yellow/50 hover:no-underline hover:text-white",
 						)}
 					>
 						Request a quote
@@ -52,9 +52,9 @@ export const Banner: FC = () => {
 					<Link
 						href="tel: 651-757-5135"
 						className={cn(
-							"mt-0.5 hover:underline hover:underline-offset-1 text-gray-500 block text-xs/6",
+							"mt-0.5 hover:underline italic hover:underline-offset-1 text-gray-700 block text-sm/6",
 							isBgTransparent &&
-								"hover:text-sm font-semibold hover:text-gray-900",
+							"hover:text-sm font-semibold hover:text-gray-900",
 						)}
 					>
 						651-757-5135
