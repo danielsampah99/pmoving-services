@@ -69,7 +69,7 @@ export const MobileSidebar: FC<MobileSidebarProps> = ({ areas }) => {
 							<div className="space-y-2 py-6">
 								<Disclosure as="div" className="-mx-3">
 									<DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-white hover:bg-white hover:text-gray-900">
-										Services
+										Moving Services
 										<ChevronDownIcon
 											aria-hidden="true"
 											className="size-5 flex-none group-data-open:rotate-180"
@@ -89,7 +89,7 @@ export const MobileSidebar: FC<MobileSidebarProps> = ({ areas }) => {
 													className={cn(
 														"size-5 stroke-moving-yellow",
 														index > 3 &&
-															"stroke-inherit group-hover:animate-fill-both fill-moving-yellow",
+														"stroke-inherit group-hover:animate-fill-both fill-moving-yellow",
 														index === 2 && "hover:animate-shake",
 													)}
 												/>
@@ -116,13 +116,19 @@ export const MobileSidebar: FC<MobileSidebarProps> = ({ areas }) => {
 								>
 									Careers
 								</Link>
+								<Link
+									href="/contact-us"
+									className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-gray-700 hover:bg-gray-50"
+								>
+									Contact Us
+								</Link>
 
 								<Disclosure as="div" className="-mx-3">
 									<DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-white hover:bg-white hover:text-gray-900">
 										Serivce Areas
 										<ChevronDownIcon
 											aria-hidden="true"
-											className="h-5 w-5 flex-none group-data-[open]:rotate-180"
+											className="size-5 flex-none group-data-[open]:rotate-180"
 										/>
 									</DisclosureButton>
 									<DisclosurePanel className="mt-2 space-y-2">
