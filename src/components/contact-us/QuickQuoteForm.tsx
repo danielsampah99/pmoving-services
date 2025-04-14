@@ -1,9 +1,8 @@
-'use client'
+"use client";
 
-import React, { useState } from 'react';
-import { FormField } from '@/components/contact-us/FormField';
-import { QuoteButton } from '@/components/contact-us/QuoteButton';
-
+import React, { useState } from "react";
+import { FormField } from "@/components/contact-us/FormField";
+import { QuoteButton } from "@/components/contact-us/QuoteButton";
 
 interface QuickQuoteData {
 	moveSize: string;
@@ -17,30 +16,36 @@ interface QuickQuoteData {
 
 const QuickQuoteForm: React.FC = () => {
 	const [formData, setFormData] = useState<QuickQuoteData>({
-		moveSize: '',
-		movingFrom: '',
-		fullName: '',
-		email: '',
-		phoneNumber: '',
-		movingTo: '',
-		moveDate: ''
+		moveSize: "",
+		movingFrom: "",
+		fullName: "",
+		email: "",
+		phoneNumber: "",
+		movingTo: "",
+		moveDate: "",
 	});
 
-	const [errors, setErrors] = useState<Partial<Record<keyof QuickQuoteData, string>>>({});
+	const [errors, setErrors] = useState<
+		Partial<Record<keyof QuickQuoteData, string>>
+	>({});
 
-	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+	const handleChange = (
+		e: React.ChangeEvent<
+			HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+		>,
+	) => {
 		const { name, value } = e.target;
 
 		setFormData({
 			...formData,
-			[name]: value
+			[name]: value,
 		});
 
 		// Clear error once user starts typing
 		if (errors[name as keyof QuickQuoteData]) {
 			setErrors({
 				...errors,
-				[name]: ''
+				[name]: "",
 			});
 		}
 	};
@@ -50,43 +55,43 @@ const QuickQuoteForm: React.FC = () => {
 		let isValid = true;
 
 		if (!formData.moveSize) {
-			newErrors.moveSize = 'Move size is required';
+			newErrors.moveSize = "Move size is required";
 			isValid = false;
 		}
 
 		if (!formData.movingFrom) {
-			newErrors.movingFrom = 'Origin location is required';
+			newErrors.movingFrom = "Origin location is required";
 			isValid = false;
 		}
 
 		if (!formData.fullName) {
-			newErrors.fullName = 'Full name is required';
+			newErrors.fullName = "Full name is required";
 			isValid = false;
 		}
 
 		if (!formData.email) {
-			newErrors.email = 'Email is required';
+			newErrors.email = "Email is required";
 			isValid = false;
 		} else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-			newErrors.email = 'Please enter a valid email address';
+			newErrors.email = "Please enter a valid email address";
 			isValid = false;
 		}
 
 		if (!formData.phoneNumber) {
-			newErrors.phoneNumber = 'Phone number is required';
+			newErrors.phoneNumber = "Phone number is required";
 			isValid = false;
-		} else if (!/^\d{10}$/.test(formData.phoneNumber.replace(/[^0-9]/g, ''))) {
-			newErrors.phoneNumber = 'Please enter a valid phone number';
+		} else if (!/^\d{10}$/.test(formData.phoneNumber.replace(/[^0-9]/g, ""))) {
+			newErrors.phoneNumber = "Please enter a valid phone number";
 			isValid = false;
 		}
 
 		if (!formData.movingTo) {
-			newErrors.movingTo = 'Destination location is required';
+			newErrors.movingTo = "Destination location is required";
 			isValid = false;
 		}
 
 		if (!formData.moveDate) {
-			newErrors.moveDate = 'Move date is required';
+			newErrors.moveDate = "Move date is required";
 			isValid = false;
 		}
 
@@ -98,19 +103,19 @@ const QuickQuoteForm: React.FC = () => {
 		e.preventDefault();
 		if (validateForm()) {
 			// Normally would submit the form to a server here
-			console.log('Quick quote submitted:', formData);
+			console.log("Quick quote submitted:", formData);
 			// Show success toast
 			//   toast.success("Your quick quote request has been submitted!");
 
 			// Reset form
 			setFormData({
-				moveSize: '',
-				movingFrom: '',
-				fullName: '',
-				email: '',
-				phoneNumber: '',
-				movingTo: '',
-				moveDate: ''
+				moveSize: "",
+				movingFrom: "",
+				fullName: "",
+				email: "",
+				phoneNumber: "",
+				movingTo: "",
+				moveDate: "",
 			});
 		} else {
 			//   toast.error("Please fix the errors in the form.");
@@ -137,7 +142,9 @@ const QuickQuoteForm: React.FC = () => {
 
 	return (
 		<div className="bg-white rounded-lg shadow-form p-6 animate-fade-in">
-			<h2 className="text-xl font-bold text-moving-dark-gray mb-6">Get a Moving Quote</h2>
+			<h2 className="text-xl font-bold text-moving-dark-gray mb-6">
+				Get a Moving Quote
+			</h2>
 			<form onSubmit={handleSubmit}>
 				<FormField
 					id="moveSize"

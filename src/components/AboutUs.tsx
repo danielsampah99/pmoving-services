@@ -163,7 +163,7 @@ export const AboutUs: FC = () => {
 	};
 
 	return (
-		<div className="overflow-hidden bg-white py-24 sm:py-32">
+		<section id="about-us" className="overflow-hidden bg-white py-24 sm:py-32">
 			<div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
 				<div className="max-w-4xl">
 					<p className="text-base font-semibold leading-7 text-yellow-500">
@@ -299,7 +299,7 @@ export const AboutUs: FC = () => {
 				onImageViewerKeyboardNavigate={handleNavigateImageViewer}
 				onImageViewerButtonNavigate={navigateImage}
 			/>
-		</div>
+		</section>
 	);
 };
 

@@ -5,8 +5,6 @@ import {
 	UserIcon,
 } from "@heroicons/react/16/solid";
 
-
-
 export default function PrivacyPolicyPage() {
 	return (
 		<section className="mx-auto max-w-7xl bg-white px-6 py-16 lg:px-8 p-4 ">

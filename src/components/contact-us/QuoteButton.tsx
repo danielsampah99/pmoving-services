@@ -1,5 +1,5 @@
-'use client'
-import React from 'react';
+"use client";
+import React from "react";
 
 interface QuoteButtonProps {
 	text: string;
@@ -12,7 +12,7 @@ export const QuoteButton: React.FC<QuoteButtonProps> = ({
 	text,
 	onClick,
 	type = "button",
-	className = ""
+	className = "",
 }) => {
 	return (
 		<button

@@ -19,10 +19,10 @@ const navigation = {
 		// { name: 'API Status', href: '#' },
 	],
 	company: [
-		{ name: "About", href: "#" },
-		{ name: 'Contact Us', href: '/contact-us' },
+		{ name: "About", href: "/#about-us" },
+		{ name: "Contact Us", href: "/contact-us" },
 		{ name: "Affiliates", href: "#" },
-		{ name: "Blog", href: "#" },
+		{ name: "Blog", href: "/blog" },
 		{ name: "FAQs", href: "/#faqs" },
 		{ name: "HTML Sitemap", href: "#" },
 		{ name: "Referral Program", href: "#" },
@@ -33,7 +33,7 @@ const navigation = {
 	certifications: [
 		{ name: "DOT: #3047943", href: "#" },
 		{ name: "HHG:#383025", href: "#" },
-		{ name: "BBB Certifications", href: "/" },
+		{ name: "BBB Certifications", href: "#" },
 	],
 	social: [
 		{
@@ -220,12 +220,9 @@ export const Footer: FC = () => {
 								<ul role="list" className="mt-6 space-y-4">
 									{navigation.certifications.map((item) => (
 										<li key={item.name}>
-											<Link
-												href={item.href}
-												className="text-sm leading-6 text-white"
-											>
+											<p className="text-sm leading-6 text-white">
 												{item.name}
-											</Link>
+											</p>
 										</li>
 									))}
 								</ul>

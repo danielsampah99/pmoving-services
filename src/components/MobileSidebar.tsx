@@ -89,7 +89,7 @@ export const MobileSidebar: FC<MobileSidebarProps> = ({ areas }) => {
 													className={cn(
 														"size-5 stroke-moving-yellow",
 														index > 3 &&
-														"stroke-inherit group-hover:animate-fill-both fill-moving-yellow",
+															"stroke-inherit group-hover:animate-fill-both fill-moving-yellow",
 														index === 2 && "hover:animate-shake",
 													)}
 												/>
