@@ -1,6 +1,6 @@
-'use client'
-import React, { useState } from 'react';
-import { Clock, ChevronDown, ChevronUp } from 'lucide-react';
+"use client";
+import React, { useState } from "react";
+import { Clock, ChevronDown, ChevronUp } from "lucide-react";
 
 const BusinessHours: React.FC = () => {
 	const [isExpanded, setIsExpanded] = useState(false);
@@ -22,11 +22,16 @@ const BusinessHours: React.FC = () => {
 				)}
 			</div>
 
-			<div className={`overflow-hidden transition-all duration-300 ease-in-out ${isExpanded ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'
-				}`}>
+			<div
+				className={`overflow-hidden transition-all duration-300 ease-in-out ${
+					isExpanded ? "max-h-48 opacity-100 mt-4" : "max-h-0 opacity-0"
+				}`}
+			>
 				<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 					<div className="border-l-4 border-moving-yellow pl-3 py-1">
-						<p className="font-semibold text-moving-dark-gray">Monday – Saturday</p>
+						<p className="font-semibold text-moving-dark-gray">
+							Monday – Saturday
+						</p>
 						<p className="text-moving-medium-gray">8:00 AM to 8:00 PM</p>
 					</div>
 					<div className="border-l-4 border-moving-yellow pl-3 py-1">

@@ -7,11 +7,11 @@ import { useSearchParams } from "next/navigation";
 import React from "react";
 
 export const QuoteComponent = () => {
-
-	const searchParams = useSearchParams()
-	const [movingFrom, movingTo] = [searchParams.get('from'), searchParams.get('to')]
-
-
+	const searchParams = useSearchParams();
+	const [movingFrom, movingTo] = [
+		searchParams.get("from"),
+		searchParams.get("to"),
+	];
 
 	return (
 		<section className="py-16 md:py-24">
@@ -136,7 +136,7 @@ export const QuoteComponent = () => {
 								</Label>
 								<Input
 									type="text"
-									defaultValue={movingFrom ?? ''}
+									defaultValue={movingFrom ?? ""}
 									id="movingFrom"
 									name="movingFrom"
 									className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
@@ -154,7 +154,7 @@ export const QuoteComponent = () => {
 								</Label>
 								<Input
 									type="text"
-									defaultValue={movingTo ?? ''}
+									defaultValue={movingTo ?? ""}
 									id="movingTo"
 									name="movingTo"
 									className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
@@ -187,9 +187,38 @@ export const QuoteComponent = () => {
 								type="checkbox"
 								className="size-4 rounded border-gray-300 text-moving-yellow focus:ring-moving-yellow"
 							/>
-							<Label htmlFor="consent" className="ml-3 block text-sm leading-6 text-gray-700">
-								By checking this box, you agree to receive text messages from <Link target='_blank' href='/' className='underline text-gray-800 inline'>Premium Moving Services</Link> related to (conversational purposes) at the phone number provided above.
-								You may reply <strong>STOP</strong> to opt-out at any time. Reply <strong>HELP</strong> for assistance. Messages and data rates may apply. Message frequency will vary. Learn more on our <Link target="_parent" href='/privacy-policy' className='underline text-gray-800 inline'>Privacy Policy Page</Link> and <Link target="_parent" className='underline text-gray-800 inline' href='/terms-and-conditions'>Terms and Conditions</Link>
+							<Label
+								htmlFor="consent"
+								className="ml-3 block text-sm leading-6 text-gray-700"
+							>
+								By checking this box, you agree to receive text messages from{" "}
+								<Link
+									target="_blank"
+									href="/"
+									className="underline text-gray-800 inline"
+								>
+									Premium Moving Services
+								</Link>{" "}
+								related to (conversational purposes) at the phone number
+								provided above. You may reply <strong>STOP</strong> to opt-out
+								at any time. Reply <strong>HELP</strong> for assistance.
+								Messages and data rates may apply. Message frequency will vary.
+								Learn more on our{" "}
+								<Link
+									target="_parent"
+									href="/privacy-policy"
+									className="underline text-gray-800 inline"
+								>
+									Privacy Policy Page
+								</Link>{" "}
+								and{" "}
+								<Link
+									target="_parent"
+									className="underline text-gray-800 inline"
+									href="/terms-and-conditions"
+								>
+									Terms and Conditions
+								</Link>
 							</Label>
 						</Field>
 
@@ -221,5 +250,5 @@ export const QuoteComponent = () => {
 				</div>
 			</div>
 		</section>
-	)
+	);
 };

@@ -1,20 +1,18 @@
-'use client'
+"use client";
 
-import React from 'react'
-import BusinessHours from '@/components/contact-us/BusinessHours'
-import ContactDetails from '@/components/contact-us/ContactDetails'
-import FloatingCallButton from '@/components/contact-us/FloatingCallButton'
-import PrimaryQuoteForm from '@/components/contact-us/PrimaryQuoteForm'
-import QuickQuoteForm from '@/components/contact-us/QuickQuoteForm'
-import { useIsMobile } from '@/app/(app)/hooks/use-mobile'
-import { motion } from 'motion/react'
-import { OurLocations } from './OurLocations'
-
+import React from "react";
+import BusinessHours from "@/components/contact-us/BusinessHours";
+import ContactDetails from "@/components/contact-us/ContactDetails";
+import FloatingCallButton from "@/components/contact-us/FloatingCallButton";
+import PrimaryQuoteForm from "@/components/contact-us/PrimaryQuoteForm";
+import QuickQuoteForm from "@/components/contact-us/QuickQuoteForm";
+import { useIsMobile } from "@/app/(app)/hooks/use-mobile";
+import { motion } from "motion/react";
+import { OurLocations } from "./OurLocations";
 
 const ContactComponent = () => {
 	const isMobile = useIsMobile();
 	return (
-
 		<div className="min-h-screen bg-moving-light-gray">
 			<div className="bg-background py-16">
 				<motion.div
@@ -37,7 +35,8 @@ const ContactComponent = () => {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: 0.4 }}
 					>
-						Get in touch with our moving experts for a seamless relocation experience
+						Get in touch with our moving experts for a seamless relocation
+						experience
 					</motion.p>
 				</motion.div>
 			</div>
@@ -67,7 +66,7 @@ const ContactComponent = () => {
 					)}
 				</div>
 
-				<div className='sm:rounded-t-xl sm:overflow-hidden xl:-mx-4'>
+				<div className="sm:rounded-t-xl sm:overflow-hidden xl:-mx-4">
 					<OurLocations />
 				</div>
 			</main>
@@ -75,7 +74,7 @@ const ContactComponent = () => {
 			{/* Floating Call Button (Mobile Only) */}
 			<FloatingCallButton />
 		</div>
-	)
-}
+	);
+};
 
-export default ContactComponent
+export default ContactComponent;

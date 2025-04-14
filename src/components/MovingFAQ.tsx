@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
@@ -24,7 +24,6 @@ const faqs = [
 ];
 
 export const MovingFAQ = () => {
-
 	const [openIndex, setOpenIndex] = useState<number | null>(null);
 
 	const handleToggle = (index: number) => {
@@ -35,7 +34,9 @@ export const MovingFAQ = () => {
 		<div className="max-w-3xl mx-auto py-12 px-4">
 			{/* Header */}
 			<div className="text-center">
-				<h2 className="text-2xl md:text-3xl font-bold">RESIDENTIAL MOVING TIPS & QUESTIONS</h2>
+				<h2 className="text-2xl md:text-3xl font-bold">
+					RESIDENTIAL MOVING TIPS & QUESTIONS
+				</h2>
 				<a href="#" className="text-background hover:underline">
 					Residential Moving Tips & Questions
 				</a>
@@ -46,19 +47,24 @@ export const MovingFAQ = () => {
 				{faqs.map((faq, index) => (
 					<Button
 						key={index}
-						type='button'
+						type="button"
 						className="bg-gray-100 p-4 rounded-lg cursor-pointer transition-all"
 						onClick={() => handleToggle(index)}
 					>
 						<div className="flex justify-between items-center">
 							<h3 className="text-lg font-semibold">{faq.question}</h3>
 							<ChevronDown
-								className={cn("size-5 text-background transition-transform", openIndex === index && "rotate-180")}
+								className={cn(
+									"size-5 text-background transition-transform",
+									openIndex === index && "rotate-180",
+								)}
 							/>
 						</div>
 
 						{openIndex === index && (
-							<p className="text-gray-600 mt-2 border-t border-background pt-2">{faq.answer}</p>
+							<p className="text-gray-600 mt-2 border-t border-background pt-2">
+								{faq.answer}
+							</p>
 						)}
 					</Button>
 				))}
