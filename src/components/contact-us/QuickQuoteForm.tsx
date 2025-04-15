@@ -123,12 +123,29 @@ const QuickQuoteForm: React.FC = () => {
 	};
 
 	const moveSizeOptions = [
-		{ value: "studio", label: "Studio" },
-		{ value: "1bedroom", label: "1 Bedroom" },
-		{ value: "2bedroom", label: "2 Bedroom" },
-		{ value: "3bedroom", label: "3 Bedroom" },
-		{ value: "4+bedroom", label: "4+ Bedroom" },
+		{ value: "office_building", label: "Office Building" },
+		{ value: "office_1300", label: "Office - 1300 cubic feet" },
 		{ value: "office", label: "Office" },
+		{ value: "room_or_less", label: "Room or Less" },
+		{ value: "studio_apartment", label: "Studio Apartment" },
+		{ value: "1_bedroom_apartment", label: "1 Bedroom Apartment" },
+		{ value: "2_bedroom_apartment", label: "2 Bedroom Apartment" },
+		{ value: "3_bedroom_apartment", label: "3 Bedroom Apartment" },
+		{ value: "1_bedroom_house", label: "1 Bedroom House" },
+		{ value: "1_bedroom_house_large", label: "1 Bedroom House (Large)" },
+		{ value: "2_bedroom_house", label: "2 Bedroom House" },
+		{ value: "2_bedroom_house_large", label: "2 Bedroom House (Large)" },
+		{ value: "3_bedroom_house", label: "3 Bedroom House" },
+		{ value: "3_bedroom_house_large", label: "3 Bedroom House (Large)" },
+		{ value: "4_bedroom_house", label: "4 Bedroom House" },
+		{ value: "4_bedroom_house_large", label: "4 Bedroom House (Large)" },
+		{ value: "5_bedroom_house", label: "5 Bedroom House" },
+		{ value: "5_bedroom_house_large", label: "5 Bedroom House (Large)" },
+		{ value: "5x10_storage", label: "5 x 10 Storage Unit" },
+		{ value: "5x15_storage", label: "5 x 15 Storage Unit" },
+		{ value: "10x10_storage", label: "10 x 10 Storage Unit" },
+		{ value: "10x15_storage", label: "10 x 15 Storage Unit" },
+		{ value: "10x20_storage", label: "10 x 20 Storage Unit" }
 	];
 
 	const locationOptions = [

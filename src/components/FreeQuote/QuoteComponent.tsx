@@ -5,6 +5,8 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import React from "react";
+import { ReviewCarousel } from "../Reviews";
+import { reviews } from "@/data/reviews";
 
 export const QuoteComponent = () => {
 	const searchParams = useSearchParams();
@@ -91,6 +93,24 @@ export const QuoteComponent = () => {
 								/>
 							</Field>
 
+							<Field className="sm:col-span-2">
+								<Label
+									htmlFor="moveSize"
+									className="block text-sm font-medium text-gray-700"
+								>
+									Phone Type
+								</Label>
+								<select
+									id="moveSize"
+									name="moveSize"
+									className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
+								>
+									<option value="home">Home</option>
+									<option value="office">Office</option>
+									<option value="mobile">Mobile</option>
+								</select>
+							</Field>
+
 							{/* Move Date */}
 							<Field>
 								<Label
@@ -122,7 +142,29 @@ export const QuoteComponent = () => {
 								>
 									<option value="small">Small (Studio/1 Bedroom)</option>
 									<option value="medium">Medium (2-3 Bedrooms)</option>
-									<option value="large">Large (4+ Bedrooms)</option>
+									<option value="large">Large (4+ Bedrooms)</option><option value="office_building">Office Building</option>
+									<option value="office_1300">Office - 1300 cubic feet</option>
+									<option value="office">Office</option>
+									<option value="room_or_less">Room or Less</option>
+									<option value="studio_apartment">Studio Apartment</option>
+									<option value="1_bedroom_apartment">1 Bedroom Apartment</option>
+									<option value="2_bedroom_apartment">2 Bedroom Apartment</option>
+									<option value="3_bedroom_apartment">3 Bedroom Apartment</option>
+									<option value="1_bedroom_house">1 Bedroom House</option>
+									<option value="1_bedroom_house_large">1 Bedroom House (Large)</option>
+									<option value="2_bedroom_house">2 Bedroom House</option>
+									<option value="2_bedroom_house_large">2 Bedroom House (Large)</option>
+									<option value="3_bedroom_house">3 Bedroom House</option>
+									<option value="3_bedroom_house_large">3 Bedroom House (Large)</option>
+									<option value="4_bedroom_house">4 Bedroom House</option>
+									<option value="4_bedroom_house_large">4 Bedroom House (Large)</option>
+									<option value="5_bedroom_house">5 Bedroom House</option>
+									<option value="5_bedroom_house_large">5 Bedroom House (Large)</option>
+									<option value="5x10_storage">5 x 10 Storage Unit</option>
+									<option value="5x15_storage">5 x 15 Storage Unit</option>
+									<option value="10x10_storage">10 x 10 Storage Unit</option>
+									<option value="10x15_storage">10 x 15 Storage Unit</option>
+									<option value="10x20_storage">10 x 20 Storage Unit</option>
 								</select>
 							</Field>
 
@@ -241,11 +283,7 @@ export const QuoteComponent = () => {
 						transition={{ duration: 0.5, delay: 0.2 }}
 						className="hidden lg:block rounded-2xl"
 					>
-						<img
-							src="https://www.creativefabrica.com/wp-content/uploads/2021/03/03/Hero-Header-for-Packers-Movers-Website-Graphics-9151231-1.jpg"
-							alt="Moving Services"
-							className="rounded-2xl shadow-elevation-3 object-cover h-[600px] w-full"
-						/>
+						<ReviewCarousel reviews={reviews} />
 					</motion.div>
 				</div>
 			</div>
