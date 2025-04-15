@@ -21,7 +21,7 @@ const navigation = {
 	company: [
 		{ name: "About", href: "/#about-us" },
 		{ name: "Contact Us", href: "/contact-us" },
-		{ name: "Affiliates", href: "#" },
+		{ name: "Affiliates", href: "/affiliates" },
 		{ name: "Blog", href: "/blog" },
 		{ name: "FAQs", href: "/#faqs" },
 		{ name: "HTML Sitemap", href: "#" },

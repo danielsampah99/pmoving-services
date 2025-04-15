@@ -1,38 +1,4 @@
 import { jobRequirements } from "@/data/job-requirements";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-	title: "Join Our Team | Career Opportunities at Premium Moving Services",
-	description: "Find rewarding career opportunities at P Moving Services. Apply now for professional moving positions with competitive pay and benefits.",
-	keywords: "moving jobs, moving careers, professional movers hiring, Premium Moving Services careers, moving company jobs",
-	openGraph: {
-		type: 'website',
-		title: "moving jobs, moving careers, professional movers hiring, P Moving Services careers, moving company jobs",
-		description: "Find rewarding career opportunities at P Moving Services. Apply now for professional moving positions with competitive pay and benefits.",
-		url: "http://pmovingservices.com",
-		images: [
-			{
-				url: '/logo.svg',
-				width: 1200,
-				height: 630,
-				alt: 'Premium Moving Services Career Opportunities'
-			},
-			{
-				url: 'https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Deshun+and+Drake+c-1920w.jpg',
-				width: 1200,
-				height: 630,
-				alt: 'Premium Moving Services Career Opportunities'
-			}
-		]
-	},
-	robots: {
-		follow: true,
-		index: true
-	},
-	alternates: {
-		canonical: 'https://www.pmovingservices.com/careers'
-	}
-}
 
 
 export const Info = () => {
@@ -44,10 +10,29 @@ export const Info = () => {
 						<h2 className="text-3xl font-bold tracking-tight text-white sm:text-gray-950 sm:text-4xl">
 							Moving Jobs, Minnesota
 							<br />
-							<span className='text-lg sm:text-2xl font-semibold tracking-normal text-gray-300 sm:text-gray-700'>Start your career as part of the Premium Moving Services Company today!!</span>
+							<span className="text-lg sm:text-2xl font-semibold tracking-normal text-gray-300 sm:text-gray-700">
+								Start your career as part of the Premium Moving Services Company
+								today!!
+							</span>
 						</h2>
 						<p className="mt-6 text-lg leading-8 text-gray-300 sm:text-gray-500">
-							Our moving company is hiring candidates like you! If you are interested in joining the <a href='/' className='hover:text-white hover:underline text-moving-yellow'>Premium Moving Services </a> moving <a href='/team' className='hover:text-white hover:underline text-moving-yellow'>team </a>, please let us know by filling out the application form on this page!
+							Our moving company is hiring candidates like you! If you are
+							interested in joining the{" "}
+							<a
+								href="/"
+								className="hover:text-white hover:underline text-moving-yellow"
+							>
+								Premium Moving Services{" "}
+							</a>{" "}
+							moving{" "}
+							<a
+								href="/team"
+								className="hover:text-white hover:underline text-moving-yellow"
+							>
+								team{" "}
+							</a>
+							, please let us know by filling out the application form on this
+							page!
 						</p>
 					</div>
 					<img
@@ -62,9 +47,12 @@ export const Info = () => {
 							{jobRequirements.map((job) => (
 								<div key={job.name} className="relative">
 									<dt className="ml-9 inline-block font-semibold text-white sm:text-gray-900">
-										<job.icon aria-hidden="true" className="absolute fill-moving-yellow left-1 top-1 size-5" />
+										<job.icon
+											aria-hidden="true"
+											className="absolute fill-moving-yellow left-1 top-1 size-5"
+										/>
 										{job.name}
-									</dt>{' '}
+									</dt>{" "}
 									<dd className="inline sm:text-gray-500">{job.description}</dd>
 								</div>
 							))}
@@ -78,12 +66,12 @@ export const Info = () => {
 					<div
 						style={{
 							clipPath:
-								'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+								"polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
 						}}
 						className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[var(--color-moving-yellow)] sm:from-[var(--color-moving-gray)] to-[var(--color-white)/70] sm:to-[var(--color-moving-yellow)] opacity-25"
 					/>
 				</div>
 			</div>
 		</div>
-	)
-}
+	);
+};
