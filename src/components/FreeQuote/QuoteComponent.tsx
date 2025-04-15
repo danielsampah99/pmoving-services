@@ -5,6 +5,8 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import React from "react";
+import { ReviewCarousel } from "../Reviews";
+import { reviews } from "@/data/reviews";
 
 export const QuoteComponent = () => {
 	const searchParams = useSearchParams();
@@ -241,11 +243,7 @@ export const QuoteComponent = () => {
 						transition={{ duration: 0.5, delay: 0.2 }}
 						className="hidden lg:block rounded-2xl"
 					>
-						<img
-							src="https://www.creativefabrica.com/wp-content/uploads/2021/03/03/Hero-Header-for-Packers-Movers-Website-Graphics-9151231-1.jpg"
-							alt="Moving Services"
-							className="rounded-2xl shadow-elevation-3 object-cover h-[600px] w-full"
-						/>
+						<ReviewCarousel reviews={reviews} />
 					</motion.div>
 				</div>
 			</div>
