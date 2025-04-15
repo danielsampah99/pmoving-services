@@ -12,11 +12,10 @@ export const metadata: Metadata = {
 		"moving affiliates, moving company partnership, P Moving Services affiliate program, moving referral program, moving company collaborations",
 	openGraph: {
 		type: "website",
-		title:
-			"Affiliate Program | Partner with Premium Moving Services",
+		title: "Affiliate Program | Partner with Premium Moving Services",
 		description:
 			"Join our affiliate program at Premium Moving Services. Partner with us and earn commissions through referrals and collaborations.",
-		url: "http://pmovingservices.com",
+		url: "https://www.pmoving-services.vercel.app",
 		images: [
 			{
 				url: "/logo.svg",
@@ -37,7 +36,7 @@ export const metadata: Metadata = {
 		index: true,
 	},
 	alternates: {
-		canonical: "https://www.pmovingservices.com/affiliates",
+		canonical: "https://www.pmoving-services.vercel.app/affiliates",
 	},
 };
 
@@ -54,8 +53,11 @@ export default function AffiliatesPage() {
 					<div className="relative col-span-2 lg:col-start-1 lg:row-start-2">
 						<blockquote className="text-xl font-semibold leading-8 space-y-4 text-gray-900 sm:text-2xl sm:leading-9">
 							{nextHomeAffiliate.check.map((check) => (
-								<div className="text-sm flex text-gray-700 items-center justify-start gap-x-1" key={check.id}>
-									<span className='inline'>
+								<div
+									className="text-sm flex text-gray-700 items-center justify-start gap-x-1"
+									key={check.id}
+								>
+									<span className="inline">
 										<CheckIcon
 											className="size-5 stroke-2 fill-moving-yellow"
 											aria-hidden="true"
@@ -75,7 +77,6 @@ export default function AffiliatesPage() {
 							className="rounded-xl bg-moving-yellow/50 lg:bg-moving-gray/20 lg:rounded-3xl"
 						/>
 					</div>
-
 				</figure>
 			</div>
 		</section>
