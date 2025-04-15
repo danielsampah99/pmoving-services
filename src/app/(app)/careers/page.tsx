@@ -11,8 +11,7 @@ export const metadata: Metadata = {
 		"moving jobs, moving careers, professional movers hiring, Premium Moving Services careers, moving company jobs",
 	openGraph: {
 		type: "website",
-		title:
-			"Join Our Team | Career Opportunities at Premium Moving Services",
+		title: "Join Our Team | Career Opportunities at Premium Moving Services",
 		description:
 			"Find rewarding career opportunities at P Moving Services. Apply now for professional moving positions with competitive pay and benefits.",
 		url: "http://pmovingservices.com",

@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
 	/* config options here */
 	images: {
 		remotePatterns: [{ hostname: "media.discordapp.net" }, { hostname: 'www.pmovingservices.com' }]
+	},
+	turbopack: {
+		//
 	}
 };
 
