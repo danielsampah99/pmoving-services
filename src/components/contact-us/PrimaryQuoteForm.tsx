@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import { FormField } from "./FormField";
 import { QuoteButton } from "./QuoteButton";
+import { Field, Input, Label } from '@headlessui/react'
+import Link from 'next/link'
 
 interface FormData {
 	moveDate: string;
@@ -289,6 +291,48 @@ const PrimaryQuoteForm: React.FC = () => {
 						error={errors.termsAgreed}
 						className="md:col-span-2"
 					/>
+
+					<Field className="flex my-4 items-center">
+						<Input
+							id="consent"
+							name="consent"
+							type="checkbox"
+							className="size-4 rounded border-gray-300 text-moving-yellow focus:ring-moving-yellow"
+						/>
+						<Label
+							htmlFor="consent"
+							className="ml-3 block text-sm leading-6 text-gray-700"
+						>
+							By checking this box, you agree to receive text messages from{" "}
+							<Link
+								target="_blank"
+								href="/"
+								className="underline text-gray-800 inline"
+							>
+								Premium Moving Services
+							</Link>{" "}
+							related to (conversational purposes) at the phone number
+							provided above. You may reply <strong>STOP</strong> to opt-out
+							at any time. Reply <strong>HELP</strong> for assistance.
+							Messages and data rates may apply. Message frequency will vary.
+							Learn more on our{" "}
+							<Link
+								target="_parent"
+								href="/privacy-policy"
+								className="underline text-gray-800 inline"
+							>
+								Privacy Policy Page
+							</Link>{" "}
+							and{" "}
+							<Link
+								target="_parent"
+								className="underline text-gray-800 inline"
+								href="/terms-and-conditions"
+							>
+								Terms and Conditions
+							</Link>
+						</Label>
+					</Field>
 				</div>
 
 				<div className="mt-6">
