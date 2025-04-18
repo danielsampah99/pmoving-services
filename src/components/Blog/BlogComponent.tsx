@@ -1,5 +1,5 @@
 "use client";
-import { blogPosts } from "@/app/(app)/lib/blogPosts";
+import { blogPosts } from "@/data/blogs";
 import React from "react";
 import { useState, useEffect } from "react";
 import FeaturedPost from "./FeaturedPost";

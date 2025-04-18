@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 	description: "The Number 1 moving company near you",
 };
 
-export default function AppLayout({
+export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
