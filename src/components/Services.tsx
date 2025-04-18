@@ -54,10 +54,12 @@ export const services: Service[] = [
 		href: "/services/local-moving",
 		icon: HomeModernIcon,
 		subServices: [
+
 			{ name: "Residential Movers", href: "/services/local-moving/residential-movers" },
 			{ name: "Household Goods", href: "/services/local-moving/household" },
 			{ name: "Pack & Unpack", href: "/services/local-moving/pack-and-unpack" },
 			{ name: "Apartment Movers", href: "/services/local-moving/apartment-movers" },
+
 			{ name: "Condo Movers", href: "/services/local-moving/condo-movers" },
 			{ name: "HOA Movers", href: "/services/local-moving/hoa-movers" },
 		],

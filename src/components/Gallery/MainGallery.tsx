@@ -9,7 +9,7 @@ import SearchBar from "./SearchBar";
 import FilterBar from "./FilterBar";
 import ImageCard from "./ImageCard";
 import Lightbox from "./Lightbox";
-import useImageSearch from "@/app/(app)/hooks/useImageSearch";
+import { useImageSearch } from "@/hooks/useImageSearch";
 
 interface GalleryProps {
 	className?: string;

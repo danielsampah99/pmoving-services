@@ -6,7 +6,7 @@ import ContactDetails from "@/components/contact-us/ContactDetails";
 import FloatingCallButton from "@/components/contact-us/FloatingCallButton";
 import PrimaryQuoteForm from "@/components/contact-us/PrimaryQuoteForm";
 import QuickQuoteForm from "@/components/contact-us/QuickQuoteForm";
-import { useIsMobile } from "@/app/(app)/hooks/use-mobile";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { motion } from "motion/react";
 import { OurLocations } from "./OurLocations";
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { categories } from "@/app/(app)/lib/blogPosts";
+import { categories } from "@/data/blogs";
 import { Button } from "@headlessui/react";
 
 interface CategoryFilterProps {

@@ -1,9 +1,8 @@
-"use client"
+"use client";
 
-
-import { Truck, Box, ShieldCheck, ClipboardList } from 'lucide-react';
-import { motion } from 'motion/react';
-import Link from 'next/link';
+import { Truck, Box, ShieldCheck, ClipboardList } from "lucide-react";
+import { motion } from "motion/react";
+import Link from "next/link";
 
 export const PackingHero = () => {
 	return (
@@ -43,10 +42,9 @@ export const PackingHero = () => {
 							animate={{ opacity: 1 }}
 							transition={{ delay: 0.4 }}
 						>
-							Secure packing solutions using premium materials and expert techniques
+							Secure packing solutions using premium materials and expert
+							techniques
 						</motion.p>
-
-
 					</motion.div>
 
 					{/* Stats Grid */}
@@ -76,5 +74,5 @@ export const PackingHero = () => {
 				</div>
 			</div>
 		</section>
-	)
-}
+	);
+};

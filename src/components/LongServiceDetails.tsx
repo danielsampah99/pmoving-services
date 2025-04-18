@@ -1,15 +1,30 @@
-'use client'
+"use client";
 
-import React from 'react';
-import { Shield, Clock, DollarSign, Calendar } from 'lucide-react';
-import { motion } from 'motion/react';
-
+import React from "react";
+import { Shield, Clock, DollarSign, Calendar } from "lucide-react";
+import { motion } from "motion/react";
 
 const featuresData = [
-	{ icon: Shield, title: 'Licensed & Insured', description: 'Full protection for your move' },
-	{ icon: DollarSign, title: 'No Hidden Fees', description: 'Transparent pricing guaranteed' },
-	{ icon: Clock, title: 'On-Time Guarantee', description: 'Or we discount your move' },
-	{ icon: Calendar, title: 'Same-Day Quotes', description: 'Quick response to your request' }
+	{
+		icon: Shield,
+		title: "Licensed & Insured",
+		description: "Full protection for your move",
+	},
+	{
+		icon: DollarSign,
+		title: "No Hidden Fees",
+		description: "Transparent pricing guaranteed",
+	},
+	{
+		icon: Clock,
+		title: "On-Time Guarantee",
+		description: "Or we discount your move",
+	},
+	{
+		icon: Calendar,
+		title: "Same-Day Quotes",
+		description: "Quick response to your request",
+	},
 ];
 
 export const LongServiceDetails = () => {
@@ -27,14 +42,16 @@ export const LongServiceDetails = () => {
 						>
 							Service Overview
 						</motion.h2>
+						<p className="text-gray-700 mb-6 text-lg">Long Distance Moving</p>
 						<p className="text-gray-700 mb-6 text-lg">
-							Long Distance Moving
+							Premium Moving Services sets ourselves apart with our dedication
+							to ensuring quality service coupled with safety and efficiency at
+							the fore-front for your long distance needs.
 						</p>
 						<p className="text-gray-700 mb-6 text-lg">
-							Premium Moving Services sets ourselves apart with our dedication to ensuring quality service coupled with safety and efficiency at the fore-front for your long distance needs.
-						</p>
-						<p className="text-gray-700 mb-6 text-lg">
-							We offer flexibility for each project and can meet your needs whatever they may be. Through our relationship from start to finish you can expect:
+							We offer flexibility for each project and can meet your needs
+							whatever they may be. Through our relationship from start to
+							finish you can expect:
 						</p>
 
 						<div className="space-y-4 mb-8">
@@ -44,12 +61,17 @@ export const LongServiceDetails = () => {
 								variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
 								className="list-disc pl-6 space-y-3 mb-6"
 							>
-								{['Load/unload', 'Junk Removal', 'Full service move', 'Climate-controlled storage'].map((item, index) => (
+								{[
+									"Load/unload",
+									"Junk Removal",
+									"Full service move",
+									"Climate-controlled storage",
+								].map((item, index) => (
 									<motion.li
 										key={item}
 										variants={{
 											hidden: { opacity: 0, x: -20 },
-											visible: { opacity: 1, x: 0 }
+											visible: { opacity: 1, x: 0 },
 										}}
 										transition={{ delay: index * 0.1 }}
 										className="text-gray-700"
@@ -60,23 +82,39 @@ export const LongServiceDetails = () => {
 							</motion.ul>
 
 							<p className="text-gray-700 mb-6 text-lg">
-								If you are a business, we can help with commercial moving as we specialize in several different types of commercial moving.
+								If you are a business, we can help with commercial moving as we
+								specialize in several different types of commercial moving.
 							</p>
 
-							<h3 className="text-xl font-semibold text-moving-navy mb-4">What areas we service?</h3>
+							<h3 className="text-xl font-semibold text-moving-navy mb-4">
+								What areas we service?
+							</h3>
 
 							<p className="text-gray-700 mb-6 text-lg">
-								Our Moving Company services the entire Twin Cities area, suburban communities and long distance moves.
+								Our Moving Company services the entire Twin Cities area,
+								suburban communities and long distance moves.
 							</p>
 
 							<ul className="list-disc pl-6 space-y-3">
 								<li className="text-gray-700">Local movers in Minnesota</li>
-								<li className="text-gray-700">Local moving companies in Minnesota</li>
-								<li className="text-gray-700">Local moving labor in Minnesota</li>
-								<li className="text-gray-700">Local house movers in Minnesota</li>
-								<li className="text-gray-700">Local apartment movers in Minnesota</li>
-								<li className="text-gray-700">Local climate-controlled in Minnesota</li>
-								<li className="text-gray-700">Local movers near me Minnesota</li>
+								<li className="text-gray-700">
+									Local moving companies in Minnesota
+								</li>
+								<li className="text-gray-700">
+									Local moving labor in Minnesota
+								</li>
+								<li className="text-gray-700">
+									Local house movers in Minnesota
+								</li>
+								<li className="text-gray-700">
+									Local apartment movers in Minnesota
+								</li>
+								<li className="text-gray-700">
+									Local climate-controlled in Minnesota
+								</li>
+								<li className="text-gray-700">
+									Local movers near me Minnesota
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -102,14 +140,18 @@ export const LongServiceDetails = () => {
 									transition={{
 										duration: 0.3,
 										delay: index * 0.1,
-										hover: { duration: 0.2 }
+										hover: { duration: 0.2 },
 									}}
 									className="flex items-center p-4 bg-moving-gray/10 rounded-lg hover-scale"
 								>
 									<feature.icon className="text-moving-yellow mr-4" size={24} />
 									<div>
-										<h4 className="font-medium text-gray-900">{feature.title}</h4>
-										<p className="text-sm text-gray-500">{feature.description}</p>
+										<h4 className="font-medium text-gray-900">
+											{feature.title}
+										</h4>
+										<p className="text-sm text-gray-500">
+											{feature.description}
+										</p>
 									</div>
 								</motion.div>
 							))}
@@ -127,5 +169,5 @@ export const LongServiceDetails = () => {
 				</div>
 			</div>
 		</section>
-	)
-}
+	);
+};

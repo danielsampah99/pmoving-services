@@ -1,9 +1,7 @@
-
-import { LongServiceDetails } from '@/components/LongServiceDetails'
-import { OurLocations } from '@/components/OurLocations'
-import { PackingHerolong } from '@/components/PackingHeroLong'
-import { RelatedServicesLong } from '@/components/RelatedServicesLong'
-
+import { LongServiceDetails } from "@/components/LongServiceDetails";
+import { OurLocations } from "@/components/OurLocations";
+import { PackingHerolong } from "@/components/PackingHeroLong";
+import { RelatedServicesLong } from "@/components/RelatedServicesLong";
 
 const LongDistanceMovingPage = () => {
 	return (
@@ -13,7 +11,7 @@ const LongDistanceMovingPage = () => {
 			<RelatedServicesLong />
 			<OurLocations />
 		</div>
-	)
-}
+	);
+};
 
-export default LongDistanceMovingPage
+export default LongDistanceMovingPage;

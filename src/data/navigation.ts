@@ -1,12 +1,21 @@
-import { FacebookIcon, InstagramIcon, EmailIcon, PhoneIcon, WhatsappIcon, XIcon, YoutubeIcon, FooterIconProps } from "@/components/icons/footer-icons";
+import {
+	FacebookIcon,
+	InstagramIcon,
+	EmailIcon,
+	PhoneIcon,
+	WhatsappIcon,
+	XIcon,
+	YoutubeIcon,
+	FooterIconProps,
+} from "@/components/icons/footer-icons";
 import { FC } from "react";
 
 export type FooterLink = {
-	name: string
-	href: string
-}
+	name: string;
+	href: string;
+};
 
-export type FooterSocial = FooterLink & { icon: FC<FooterIconProps> }
+export type FooterSocial = FooterLink & { icon: FC<FooterIconProps> };
 
 export type FooterNavigation = {
 	solutions: FooterLink[];
@@ -14,7 +23,7 @@ export type FooterNavigation = {
 	company: FooterLink[];
 	certifications: FooterLink[];
 	socials: FooterSocial[];
-}
+};
 
 export const navigation = {
 	solutions: [
@@ -47,37 +56,37 @@ export const navigation = {
 		{
 			name: "Facebook",
 			href: "https://facebook.com/moveatease",
-			icon: FacebookIcon
+			icon: FacebookIcon,
 		},
 		{
 			name: "Instagram",
 			href: "https://www.instagram.com/premiummoving16/?next=%2F",
-			icon: InstagramIcon
+			icon: InstagramIcon,
 		},
 		{
 			name: "X",
 			href: "https://twitter.com/g1sackie",
-			icon: XIcon
+			icon: XIcon,
 		},
 		{
 			name: "YouTube",
 			href: "https://www.youtube.com/@PremiumMovingServices",
-			icon: YoutubeIcon
+			icon: YoutubeIcon,
 		},
 		{
 			name: "Whatsapp",
 			href: "https://web.whatsapp.com/send?phone=6517575135",
-			icon: WhatsappIcon
+			icon: WhatsappIcon,
 		},
 		{
 			name: "Email",
 			href: "mailto:info@pmovingservices.com",
-			icon: EmailIcon
+			icon: EmailIcon,
 		},
 		{
 			name: "Phone",
 			href: "tel: 651-757-5135",
-			icon: PhoneIcon
-		}
-	]
+			icon: PhoneIcon,
+		},
+	],
 };
