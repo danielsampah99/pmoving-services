@@ -133,7 +133,7 @@ const ResidentialMoving = () => {
 
 
 
-			<MovingFAQ />
+		
 		</ServiceLayout>
 	);
 };
