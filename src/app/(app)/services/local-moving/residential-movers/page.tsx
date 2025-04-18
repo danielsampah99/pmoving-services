@@ -153,7 +153,10 @@ const ResidentialMoving = () => {
 				</div>
 			</div>
 
+
+
 			<MovingFAQ />
+
 		</ServiceLayout>
 	);
 };

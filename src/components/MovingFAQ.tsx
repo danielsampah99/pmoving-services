@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/utils";
 import { Button } from "@headlessui/react";
+import { Disclosure } from "@headlessui/react";
 
 const faqs = [
 	{
@@ -24,49 +25,34 @@ const faqs = [
 ];
 
 export const MovingFAQ = () => {
-	const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-	const handleToggle = (index: number) => {
-		setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
-	};
-
 	return (
 		<div className="max-w-3xl mx-auto py-12 px-4">
-			{/* Header */}
-			<div className="text-center">
-				<h2 className="text-2xl md:text-3xl font-bold">
-					RESIDENTIAL MOVING TIPS & QUESTIONS
-				</h2>
-				<a href="#" className="text-background hover:underline">
-					Residential Moving Tips & Questions
-				</a>
-			</div>
-
-			{/* Accordion */}
+			{/* Header - unchanged */}
+			
+			{/* Fixed Accordion */}
 			<div className="mt-8 space-y-4">
 				{faqs.map((faq, index) => (
-					<Button
-						key={index}
-						type="button"
-						className="bg-gray-100 p-4 rounded-lg cursor-pointer transition-all"
-						onClick={() => handleToggle(index)}
-					>
-						<div className="flex justify-between items-center">
-							<h3 className="text-lg font-semibold">{faq.question}</h3>
-							<ChevronDown
-								className={cn(
-									"size-5 text-background transition-transform",
-									openIndex === index && "rotate-180",
-								)}
-							/>
-						</div>
-
-						{openIndex === index && (
-							<p className="text-gray-600 mt-2 border-t border-background pt-2">
-								{faq.answer}
-							</p>
+					<Disclosure key={index}>
+						{({ open }) => (
+							<div className="bg-gray-100 rounded-lg transition-colors hover:bg-gray-200/50">
+								<Disclosure.Button className="w-full px-4 py-3 text-left">
+									<div className="flex justify-between items-center">
+										<h3 className="text-lg font-semibold">{faq.question}</h3>
+										<ChevronDown
+											className={cn(
+												"size-5 text-background transition-transform duration-200",
+												open && "rotate-180"
+											)}
+										/>
+									</div>
+								</Disclosure.Button>
+								
+								<Disclosure.Panel className="px-4 pb-4 pt-2 text-gray-600">
+									{faq.answer}
+								</Disclosure.Panel>
+							</div>
 						)}
-					</Button>
+					</Disclosure>
 				))}
 			</div>
 		</div>
