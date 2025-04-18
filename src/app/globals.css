@@ -1,0 +1,265 @@
+@import "tailwindcss";
+@import "tailwindcss-animated";
+/* @plugin "@tailwindcss/form" */
+
+@theme {
+	--font-poppins: "Poppins", sans-serif;
+	--color-background: #f8d006;
+	--color-background-100: rgb(230, 200, 90);
+	/* 50% opacity */
+	--color-header: rgb(51, 51, 51);
+
+	--color-moving-primary: #1e88e5;
+	--color-moving-dark: #333f48;
+	--color-moving-lightGray: #e6e9ef;
+	--color-moving-gray: oklch(46.4% 0 0);
+	--color-moving-gray-100: oklch(45%, 0, 0);
+	--color-moving-yellow: oklch(87.32% 0.1771 92.05);
+}
+
+.btn {
+	display: inline-block;
+	font-weight: 500;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	user-select: none;
+	border: 1px solid transparent;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-radius: 0.25rem;
+	transition: all 0.15s ease-in-out;
+}
+
+@layer base {
+	:root {
+		--background: 0 0% 100%;
+		--foreground: 222.2 84% 4.9%;
+
+		--card: 0 0% 100%;
+		--card-foreground: 222.2 84% 4.9%;
+
+		--popover: 0 0% 100%;
+		--popover-foreground: 222.2 84% 4.9%;
+
+		--primary: 222.2 47.4% 11.2%;
+		--primary-foreground: 210 40% 98%;
+
+		--secondary: 210 40% 96.1%;
+		--secondary-foreground: 222.2 47.4% 11.2%;
+
+		--muted: 210 40% 96.1%;
+		--muted-foreground: 215.4 16.3% 46.9%;
+
+		--accent: 210 40% 96.1%;
+		--accent-foreground: 222.2 47.4% 11.2%;
+
+		--destructive: 0 84.2% 60.2%;
+		--destructive-foreground: 210 40% 98%;
+
+		--border: 214.3 31.8% 91.4%;
+		--input: 214.3 31.8% 91.4%;
+		--ring: 222.2 84% 4.9%;
+
+		--radius: 0.5rem;
+
+		--sidebar-background: 0 0% 100%;
+		--sidebar-foreground: 222.2 84% 4.9%;
+		--sidebar-muted: 210 40% 96.1%;
+		--sidebar-muted-foreground: 215.4 16.3% 46.9%;
+		--sidebar-accent: 210 40% 96.1%;
+		--sidebar-accent-foreground: 222.2 47.4% 11.2%;
+		--sidebar-border: 214.3 31.8% 91.4%;
+		--sidebar-ring: 222.2 84% 4.9%;
+	}
+
+	.dark {
+		--background: 222.2 84% 4.9%;
+		--foreground: 210 40% 98%;
+
+		--card: 222.2 84% 4.9%;
+		--card-foreground: 210 40% 98%;
+
+		--popover: 222.2 84% 4.9%;
+		--popover-foreground: 210 40% 98%;
+
+		--primary: 210 40% 98%;
+		--primary-foreground: 222.2 47.4% 11.2%;
+
+		--secondary: 217.2 32.6% 17.5%;
+		--secondary-foreground: 210 40% 98%;
+
+		--muted: 217.2 32.6% 17.5%;
+		--muted-foreground: 215 20.2% 65.1%;
+
+		--accent: 217.2 32.6% 17.5%;
+		--accent-foreground: 210 40% 98%;
+
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 210 40% 98%;
+
+		--border: 217.2 32.6% 17.5%;
+		--input: 217.2 32.6% 17.5%;
+		--ring: 212.7 26.8% 83.9%;
+	}
+}
+
+.perspective {
+	perspective: 1000px;
+}
+
+.transform-style-3d {
+	transform-style: preserve-3d;
+}
+
+.backface-hidden {
+	backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+	transform: rotateY(180deg);
+}
+
+@keyframes moveCar {
+	0% {
+		top: 0;
+		left: 0;
+	}
+
+	25% {
+		top: 0;
+		left: 100%;
+		transform: translateX(-100%);
+	}
+
+	50% {
+		top: 100%;
+		left: 100%;
+		transform: translate(-100%, -100%);
+	}
+
+	75% {
+		top: 100%;
+		left: 0;
+		transform: translateY(-100%);
+	}
+
+	100% {
+		top: 0;
+		left: 0;
+	}
+}
+
+.group:hover .absolute.w-8.h-8 {
+	animation: moveCar 8s linear infinite;
+	/* Slower animation (8s) */
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideIn {
+	from {
+		opacity: 0;
+		transform: translateX(-10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes zoomIn {
+	from {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/* Apply the animations */
+.fade-in {
+	animation: fadeIn 0.8s ease-out forwards;
+}
+
+.slide-in {
+	animation: slideIn 0.8s ease-out forwards;
+}
+
+.zoom-in {
+	animation: zoomIn 0.8s ease-out forwards;
+}
+
+/* Category Filter Styles */
+.category-filter {
+	padding: 0.5rem 1rem;
+	border-radius: 9999px;
+	font-size: 0.875rem;
+	transition: all 0.15s ease-in-out;
+}
+
+.category-filter.active {
+	background-color: #1e88e5;
+	color: white;
+}
+
+@layer components {
+
+	/* Image hover effects */
+	.image-zoom-effect {
+		@apply transition-transform duration-700;
+	}
+
+	.image-card:hover .image-zoom-effect {
+		@apply scale-110;
+	}
+}
+
+.privacy-h2 {
+	@apply mt-4 text-2xl font-bold tracking-tight text-gray-900
+}
+
+/* Masonry Grid Styles */
+.masonry-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+	.masonry-grid {
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	}
+}
+
+@media (min-width: 768px) {
+	.masonry-grid {
+		grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+		gap: 12px;
+	}
+
+	.gallery-container {
+		@apply px-3 py-6
+	}
+}
+
+@media (min-width: 1024px) {
+	.masonry-grid {
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	}
+}

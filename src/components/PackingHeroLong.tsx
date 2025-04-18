@@ -1,7 +1,6 @@
-"use client"
+"use client";
 
-import { motion } from 'motion/react';
-
+import { motion } from "motion/react";
 
 export const PackingHerolong = () => {
 	return (
@@ -41,15 +40,12 @@ export const PackingHerolong = () => {
 							animate={{ opacity: 1 }}
 							transition={{ delay: 0.4 }}
 						>
-							Secure packing solutions using premium materials and expert techniques
+							Secure packing solutions using premium materials and expert
+							techniques
 						</motion.p>
-
-
 					</motion.div>
-
-
 				</div>
 			</div>
 		</section>
-	)
-}
+	);
+};

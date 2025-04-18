@@ -1,21 +1,21 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Clock, Star } from 'lucide-react';
-import { Button } from '@headlessui/react'
+import React, { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight, Clock, Star } from "lucide-react";
+import { Button } from "@headlessui/react";
 
 const images = [
 	{
-		url: 'https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Deshun+unloadingc-1200w.JPG',
-		alt: 'Professional movers loading a moving truck',
+		url: "https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Deshun+unloadingc-1200w.JPG",
+		alt: "Professional movers loading a moving truck",
 	},
 	{
-		url: 'https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Deshun+and+Drake+c-1200w.jpg',
-		alt: 'Movers wrapping furniture with protective material',
+		url: "https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Deshun+and+Drake+c-1200w.jpg",
+		alt: "Movers wrapping furniture with protective material",
 	},
 	{
-		url: 'https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/new+truck+c-4-2-1200w.jpg',
-		alt: 'Happy family in their new home after moving',
+		url: "https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/new+truck+c-4-2-1200w.jpg",
+		alt: "Happy family in their new home after moving",
 	},
 ];
 
@@ -42,8 +42,9 @@ export const HeroSection = () => {
 				{images.map((image, index) => (
 					<div
 						key={index}
-						className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === currentImage ? 'opacity-100 z-10' : 'opacity-0 z-0'
-							}`}
+						className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+							index === currentImage ? "opacity-100 z-10" : "opacity-0 z-0"
+						}`}
 					>
 						<img
 							src={image.url}
@@ -79,8 +80,9 @@ export const HeroSection = () => {
 						<button
 							key={index}
 							onClick={() => setCurrentImage(index)}
-							className={`h-3 w-3 rounded-full transition ${index === currentImage ? 'bg-white' : 'bg-white/50'
-								}`}
+							className={`h-3 w-3 rounded-full transition ${
+								index === currentImage ? "bg-white" : "bg-white/50"
+							}`}
 							aria-label={`Slide ${index + 1}`}
 						/>
 					))}
@@ -102,7 +104,10 @@ export const HeroSection = () => {
 
 					<div className="flex flex-wrap items-center justify-center gap-4 text-white text-sm md:text-base mb-6">
 						<div className="flex items-center">
-							<Star className="text-yellow-400 fill-yellow-400 mr-1" size={20} />
+							<Star
+								className="text-yellow-400 fill-yellow-400 mr-1"
+								size={20}
+							/>
 							<span className="font-semibold">4.8/5</span>
 							<span className="ml-1 opacity-90">(120 reviews)</span>
 						</div>

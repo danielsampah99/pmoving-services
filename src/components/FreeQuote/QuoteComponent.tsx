@@ -142,24 +142,41 @@ export const QuoteComponent = () => {
 								>
 									<option value="small">Small (Studio/1 Bedroom)</option>
 									<option value="medium">Medium (2-3 Bedrooms)</option>
-									<option value="large">Large (4+ Bedrooms)</option><option value="office_building">Office Building</option>
+									<option value="large">Large (4+ Bedrooms)</option>
+									<option value="office_building">Office Building</option>
 									<option value="office_1300">Office - 1300 cubic feet</option>
 									<option value="office">Office</option>
 									<option value="room_or_less">Room or Less</option>
 									<option value="studio_apartment">Studio Apartment</option>
-									<option value="1_bedroom_apartment">1 Bedroom Apartment</option>
-									<option value="2_bedroom_apartment">2 Bedroom Apartment</option>
-									<option value="3_bedroom_apartment">3 Bedroom Apartment</option>
+									<option value="1_bedroom_apartment">
+										1 Bedroom Apartment
+									</option>
+									<option value="2_bedroom_apartment">
+										2 Bedroom Apartment
+									</option>
+									<option value="3_bedroom_apartment">
+										3 Bedroom Apartment
+									</option>
 									<option value="1_bedroom_house">1 Bedroom House</option>
-									<option value="1_bedroom_house_large">1 Bedroom House (Large)</option>
+									<option value="1_bedroom_house_large">
+										1 Bedroom House (Large)
+									</option>
 									<option value="2_bedroom_house">2 Bedroom House</option>
-									<option value="2_bedroom_house_large">2 Bedroom House (Large)</option>
+									<option value="2_bedroom_house_large">
+										2 Bedroom House (Large)
+									</option>
 									<option value="3_bedroom_house">3 Bedroom House</option>
-									<option value="3_bedroom_house_large">3 Bedroom House (Large)</option>
+									<option value="3_bedroom_house_large">
+										3 Bedroom House (Large)
+									</option>
 									<option value="4_bedroom_house">4 Bedroom House</option>
-									<option value="4_bedroom_house_large">4 Bedroom House (Large)</option>
+									<option value="4_bedroom_house_large">
+										4 Bedroom House (Large)
+									</option>
 									<option value="5_bedroom_house">5 Bedroom House</option>
-									<option value="5_bedroom_house_large">5 Bedroom House (Large)</option>
+									<option value="5_bedroom_house_large">
+										5 Bedroom House (Large)
+									</option>
 									<option value="5x10_storage">5 x 10 Storage Unit</option>
 									<option value="5x15_storage">5 x 15 Storage Unit</option>
 									<option value="10x10_storage">10 x 10 Storage Unit</option>
