@@ -145,7 +145,7 @@ const QuickQuoteForm: React.FC = () => {
 		{ value: "5x15_storage", label: "5 x 15 Storage Unit" },
 		{ value: "10x10_storage", label: "10 x 10 Storage Unit" },
 		{ value: "10x15_storage", label: "10 x 15 Storage Unit" },
-		{ value: "10x20_storage", label: "10 x 20 Storage Unit" }
+		{ value: "10x20_storage", label: "10 x 20 Storage Unit" },
 	];
 
 	const locationOptions = [

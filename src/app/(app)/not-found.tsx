@@ -9,7 +9,7 @@ export default function NotFound() {
 
 	useEffect(() => {
 		const animate = () => {
-			setTruckPosition((prev) => (prev > 3000 ? -20 : prev + 0.5));
+			setTruckPosition((prev) => (prev > 300 ? -20 : prev + 0.5));
 		};
 		const interval = setInterval(animate, 50);
 		return () => clearInterval(interval);
