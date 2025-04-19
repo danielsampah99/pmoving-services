@@ -20,7 +20,7 @@ export const ServiceArea: FC<{ links: ServiceAreaType[] }> = ({ links }) => {
 			<Menu>
 				<div className="inline-flex items-center gap-2 bg-transparent text-sm/6 font-semibold text-gray-100 hover:text-white focus:text-white">
 					<Link
-						href="/#service-areas"
+						href="/service-areas"
 						className=""
 						style={{ scrollBehavior: "smooth" }}
 					>

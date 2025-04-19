@@ -6,7 +6,7 @@ import { vercelBlobStorage } from "@payloadcms/storage-vercel-blob";
 import path from "path";
 import { buildConfig } from "payload";
 import { fileURLToPath } from "url";
-// import sharp from "sharp";
+import sharp from "sharp";
 
 import { Users } from "./collections/Users";
 import { Media } from "./collections/Media";
@@ -33,14 +33,14 @@ export default buildConfig({
 			connectionString: process.env.DATABASE_URI || "",
 		},
 	}),
-	// sharp,
+	sharp,
 	plugins: [
 		payloadCloudPlugin(),
 		// storage-adapter-placeholder
 		vercelBlobStorage({
 			enabled: true,
 			collections: { media: true },
-			token: process.env.BLOB_READ_WRITE_TOKEN,
+			token: process.env.BLOB_READ_WRITE_TOKEN || "",
 		}),
 	],
 });
