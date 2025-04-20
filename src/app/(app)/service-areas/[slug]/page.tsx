@@ -7,6 +7,7 @@ import { Faqs } from "./faqs";
 import { Metadata } from "next";
 import { ServiceArea } from "@/payload-types";
 import { BASE_URL, COMPANY } from "@/utils";
+import { MovingTips } from "./moving-tips";
 
 type Props = {
 	params: Promise<{ slug: string }>;
@@ -69,7 +70,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		authors: [{ name: COMPANY, url: BASE_URL }],
 		applicationName: COMPANY,
 		referrer: "origin-when-cross-origin",
-		colorScheme: "light",
 		creator: COMPANY,
 		publisher: COMPANY,
 		keywords,
@@ -132,6 +132,7 @@ export default async function SingleServiceAreaPage({ params }: Props) {
 				mapUrl={serviceArea.mapUrl ?? ""}
 				mapImage={serviceArea.mapImage}
 			/>
+			<MovingTips />
 			<Faqs faqs={serviceArea.faqs ?? []} title={serviceArea.title} />
 			<MovingResources
 				title={serviceArea.title}
