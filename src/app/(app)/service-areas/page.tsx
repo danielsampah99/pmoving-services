@@ -55,7 +55,7 @@ export default async function ServiceAreasPage() {
 			latitude: city.latitude,
 			linkText: city.title,
 			state: city["state-name"],
-			href: `/service-areas/${city["short-code"]}`,
+			href: `/service-areas/${city.slug}`,
 		})) ?? [];
 
 	return (

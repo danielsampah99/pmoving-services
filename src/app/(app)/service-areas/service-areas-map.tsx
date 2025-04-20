@@ -50,9 +50,11 @@ export const ServiceAreaMap: FC<ServiceAreaMapProps> = ({
 	const handleCityClick = (city: string | null) => {
 		setSelectedCity(city);
 
-		const url = cities.find((item) => item.city === city)?.href;
+		const cityInfo = cities.find((item) => item.city === city);
 
-		router.push(`/service-areas/${url}`);
+		if (cityInfo?.href) {
+			router.push(`${cityInfo.href}`)
+		}
 	};
 
 	const handleHoverCity = (city: string | null) => {
