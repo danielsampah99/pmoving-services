@@ -23,6 +23,7 @@ export default async function SingleServiceAreaPage({ params }: { params: Promis
 				title={serviceArea.title}
 				description={serviceArea.description}
 				mapUrl={serviceArea.mapUrl ?? ''}
+				mapImage={serviceArea.mapImage}
 			/>
 			<MovingResources
 				title={serviceArea.title}

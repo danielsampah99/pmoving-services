@@ -1,10 +1,12 @@
 import { HeroIconType } from "@/components/HeroIcon"
 import { GoogleMapsIcon } from "@/components/icons/google-maps-icon"
+import { Media, ServiceArea } from "@/payload-types"
 import { ShieldCheckIcon, TruckIcon, UsersIcon } from "@heroicons/react/24/outline"
+import Image from "next/image"
 import Link from "next/link"
 import { FC } from "react"
 
-export type HeroProps = {
+export type HeroProps = Pick<ServiceArea, 'mapImage'> & {
 	title: string
 	description: string
 	mapUrl: string | null
@@ -46,14 +48,29 @@ export const Hero: FC<HeroProps> = (props) => {
 						{props.description}
 					</p>
 				</div>
-				<img
-					alt={`${props.title} on the map`}
-					title={`${props.title} on the map`}
-					src="https://lh3.googleusercontent.com/gps-cs-s/AB5caB93hWPktDRZNWT5tJspjW9MvbsHE5VYXO6HF_Yir7NkQyvk1jLNBiqYy6HsccAojvz_3xI64Zlv_ss4Y6zePZScwnLH5hJHMFbJPBvoKmGnYskxTsxyVsX1WRGerJD1cQgx8G_EEA=w408-h543-k-no"
-					width={2432}
-					height={1442}
-					className="relative -z-20 min-w-full max-w-xl rounded-xl shadow-xl ring-1 ring-white/10 lg:row-span-4 lg:w-[64rem] lg:max-h-[32rem] lg:max-w-none"
-				/>
+				{
+					typeof props.mapImage === 'object' && props.mapImage?.url ? (
+						<Image
+							src={props.mapImage.url}
+							alt={props.mapImage.alt}
+							title={`${props.title} on the map`}
+							width={2432}
+							height={1442}
+							priority={true}
+							className="relative -z-20 min-w-full max-w-xl rounded-xl shadow-xl ring-1 ring-white/10 lg:row-span-4 lg:w-[64rem] lg:max-h-[32rem] lg:max-w-none"
+						/>
+					) : (
+						<img
+							alt={`${props.title} on the map`}
+							title={`${props.title} on the map`}
+							src="https://lh3.googleusercontent.com/gps-cs-s/AB5caB93hWPktDRZNWT5tJspjW9MvbsHE5VYXO6HF_Yir7NkQyvk1jLNBiqYy6HsccAojvz_3xI64Zlv_ss4Y6zePZScwnLH5hJHMFbJPBvoKmGnYskxTsxyVsX1WRGerJD1cQgx8G_EEA=w408-h543-k-no"
+							width={2432}
+							height={1442}
+							className="relative -z-20 min-w-full max-w-xl rounded-xl shadow-xl ring-1 ring-white/10 lg:row-span-4 lg:w-[64rem] lg:max-h-[32rem] lg:max-w-none"
+						/>
+					)
+				}
+
 				<div className="max-w-xl lg:row-start-3 lg:mt-10 lg:max-w-md lg:border-t lg:border-gray-400 lg:pt-10">
 					<ServiceAreaStats stats={serviceAreaStats} />
 				</div>

@@ -195,6 +195,10 @@ export interface ServiceArea {
    * This field should contain the map url to this city. It enables the redirection of the user to the place on the map
    */
   mapUrl?: string | null;
+  /**
+   * The location of this service area on the map
+   */
+  mapImage?: (number | null) | Media;
   description: string;
   'short-code': string;
   latitude: number;
@@ -359,6 +363,7 @@ export interface ServiceAreasSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
   mapUrl?: T;
+  mapImage?: T;
   description?: T;
   'short-code'?: T;
   latitude?: T;

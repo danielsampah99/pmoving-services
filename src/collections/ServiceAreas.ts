@@ -45,6 +45,19 @@ export const ServiceArea: CollectionConfig = {
 			}
 		},
 		{
+			name: 'mapImage',
+			type: 'upload',
+			relationTo: 'media',
+			filterOptions: {
+				mimeType: { contains: 'image' }
+			},
+			label: "Map Image",
+			admin: {
+				description: 'The location of this service area on the map',
+			}
+
+		},
+		{
 			name: "description",
 			type: "text",
 			required: true,
