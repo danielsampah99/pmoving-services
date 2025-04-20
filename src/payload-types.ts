@@ -183,7 +183,18 @@ export interface Media {
  */
 export interface ServiceArea {
   id: number;
+  /**
+   * Just the name of the service area or city.
+   */
   title: string;
+  /**
+   * This is a unique string for identifying a moving service area. For example, given a city with title, "Shakopee", a unique slug could be"shakopee". this is slug will also be used in the urls for service area pages. "/service-areas/[slug]", "/service-areas/shakopee"
+   */
+  slug: string;
+  /**
+   * This field should contain the map url to this city. It enables the redirection of the user to the place on the map
+   */
+  mapUrl?: string | null;
   description: string;
   'short-code': string;
   latitude: number;
@@ -196,6 +207,19 @@ export interface ServiceArea {
    * The two-letter word initials of the state this service area or city belongs to. Example if city is Minnesota, state initials should be MN
    */
   'state-initials': string;
+  resources?:
+    | {
+        /**
+         * Name of the resource
+         */
+        title?: string | null;
+        /**
+         * a link or url pointing to the name of the resource
+         */
+        link?: string | null;
+        id?: string | null;
+      }[]
+    | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -333,12 +357,21 @@ export interface MediaSelect<T extends boolean = true> {
  */
 export interface ServiceAreasSelect<T extends boolean = true> {
   title?: T;
+  slug?: T;
+  mapUrl?: T;
   description?: T;
   'short-code'?: T;
   latitude?: T;
   longitude?: T;
   'state-name'?: T;
   'state-initials'?: T;
+  resources?:
+    | T
+    | {
+        title?: T;
+        link?: T;
+        id?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
 }
