@@ -53,7 +53,7 @@ export const ServiceAreaMap: FC<ServiceAreaMapProps> = ({
 		const cityInfo = cities.find((item) => item.city === city);
 
 		if (cityInfo?.href) {
-			router.push(`${cityInfo.href}`)
+			router.push(`${cityInfo.href}`);
 		}
 	};
 

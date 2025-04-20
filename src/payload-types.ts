@@ -195,6 +195,10 @@ export interface ServiceArea {
    * This field should contain the map url to this city. It enables the redirection of the user to the place on the map
    */
   mapUrl?: string | null;
+  /**
+   * The location of this service area on the map
+   */
+  mapImage?: (number | null) | Media;
   description: string;
   'short-code': string;
   latitude: number;
@@ -207,6 +211,19 @@ export interface ServiceArea {
    * The two-letter word initials of the state this service area or city belongs to. Example if city is Minnesota, state initials should be MN
    */
   'state-initials': string;
+  faqs?:
+    | {
+        /**
+         * Sample question about this service area concerning moving. Example: "How can I avoid hidden fees"
+         */
+        question: string;
+        /**
+         * Answer or response to the question. Example: "Get free written estimate and ask about additional charges for stairs, long carries, or bulky items."
+         */
+        answer: string;
+        id?: string | null;
+      }[]
+    | null;
   resources?:
     | {
         /**
@@ -359,12 +376,20 @@ export interface ServiceAreasSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
   mapUrl?: T;
+  mapImage?: T;
   description?: T;
   'short-code'?: T;
   latitude?: T;
   longitude?: T;
   'state-name'?: T;
   'state-initials'?: T;
+  faqs?:
+    | T
+    | {
+        question?: T;
+        answer?: T;
+        id?: T;
+      };
   resources?:
     | T
     | {
