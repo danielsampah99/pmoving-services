@@ -1,5 +1,4 @@
-
-import type { SVGProps } from "react"
+import type { SVGProps } from "react";
 
 interface SVGRProps {
 	title?: string;
@@ -56,4 +55,4 @@ export const GoogleMapsIcon = ({
 			d="M256.002 0c-5.204 0-10.356.222-15.453.64l-.003.001a185.789 185.789 0 0 1 79.399 25.201l10.44-10.446C307.594 5.492 282.436 0 256.002 0z"
 		/>
 	</svg>
-)
+);
