@@ -1,6 +1,5 @@
 import type { SVGProps, FC } from "react";
 
-
 interface SVGRProps {
 	title?: string;
 	titleId?: string;
@@ -8,8 +7,13 @@ interface SVGRProps {
 	descId?: string;
 }
 
-
-export const BoxesIcon: FC<SVGProps<SVGSVGElement> & SVGRProps> = ({ title, titleId, desc, descId, ...props }) => (
+export const BoxesIcon: FC<SVGProps<SVGSVGElement> & SVGRProps> = ({
+	title,
+	titleId,
+	desc,
+	descId,
+	...props
+}) => (
 	<svg
 		{...props}
 		xmlns="http://www.w3.org/2000/svg"
@@ -72,4 +76,4 @@ export const BoxesIcon: FC<SVGProps<SVGSVGElement> & SVGRProps> = ({ title, titl
 			</g>
 		</g>
 	</svg>
-)
+);

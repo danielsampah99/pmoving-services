@@ -36,7 +36,7 @@ const serviceAreaStats = [
 
 export const Hero: FC<HeroProps> = (props) => {
 	return (
-		<div className="relative isolate overflow-hidden px-6 py-10 sm:rounded-3xl lg:rounded-none sm:px-10 sm:py-12 lg:py-12 xl:px-12">
+		<div className="relative isolate overflow-hidden py-10 sm:rounded-3xl lg:rounded-none sm:py-12 lg:py-12">
 			<div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-0">
 				<div className="lg:row-start-2 lg:max-w-md">
 					<div className="flex flex-col sm:flex-row gap-y-3 sm:gap-x-5 sm:items-baseline">
