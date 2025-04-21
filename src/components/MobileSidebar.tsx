@@ -16,10 +16,10 @@ import {
 } from "@headlessui/react";
 import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
 import { type FC, useState } from "react";
-import type { ServiceAreaType } from "@/types";
+import { ServiceArea } from "@/payload-types";
 
 export interface MobileSidebarProps {
-	areas: ServiceAreaType[];
+	areas: ServiceArea[];
 }
 
 export const MobileSidebar: FC<MobileSidebarProps> = ({ areas }) => {
@@ -89,7 +89,7 @@ export const MobileSidebar: FC<MobileSidebarProps> = ({ areas }) => {
 													className={cn(
 														"size-5 stroke-moving-yellow",
 														index > 3 &&
-															"stroke-inherit group-hover:animate-fill-both fill-moving-yellow",
+														"stroke-inherit group-hover:animate-fill-both fill-moving-yellow",
 														index === 2 && "hover:animate-shake",
 													)}
 												/>
@@ -136,7 +136,7 @@ export const MobileSidebar: FC<MobileSidebarProps> = ({ areas }) => {
 											<DisclosureButton
 												key={area.id}
 												as="a"
-												href={`/service-areas/${area["short-code"]}`}
+												href={`/service-areas/${area.slug}`}
 												className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-300 hover:text-gray-100 hover:bg-white/10"
 											>
 												<div className="group capitalize w-full inline-flex items-center justify-between">
