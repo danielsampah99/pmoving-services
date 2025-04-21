@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 // import BusinessHours from "@/components/contact-us/BusinessHours";
 // import ContactDetails from "@/components/contact-us/ContactDetails";
 // import FloatingCallButton from "@/components/contact-us/FloatingCallButton";
@@ -45,7 +45,9 @@ const ContactComponent = () => {
 			<main className="max-w-7xl mx-auto px-4 pb-12">
 				<div className="flex flex-col lg:flex-row gap-6 my-8 max-w-4xl mx-auto">
 					{/* For mobile: Show forms stacked */}
-					<QuoteForm />
+					<Suspense>
+						<QuoteForm />
+					</Suspense>
 				</div>
 
 				<div className="sm:rounded-t-xl sm:overflow-hidden xl:-mx-4">

@@ -1,18 +1,23 @@
 "use client";
 
-import { Field, Label, Input, Textarea, Button, Select } from "@headlessui/react";
+import {
+	Field,
+	Label,
+	Input,
+	Textarea,
+	Button,
+	Select,
+} from "@headlessui/react";
 import { motion } from "motion/react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import React from "react";
+import React, { Suspense } from "react";
 import { ReviewCarousel } from "../Reviews";
 import { reviews } from "@/data/reviews";
 import { adverts, moveSizeOptions } from "@/data/qoute";
 import { ReviewWrapper } from "./review-carousel";
 
 export const QuoteComponent = () => {
-
-
 	return (
 		<section className="py-16 md:py-24">
 			<div className="max-w-7xl mx-auto px-6">
@@ -35,12 +40,12 @@ export const QuoteComponent = () => {
 				{/* Form and Image Layout */}
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 					{/* Form */}
-					<QuoteForm />
+					<Suspense>
+						<QuoteForm />
+					</Suspense>
 
 					{/* Image */}
-					<div
-						className="hidden self-start lg:block rounded-2xl"
-					>
+					<div className="hidden self-start lg:block rounded-2xl">
 						<ReviewWrapper reviews={reviews} />
 					</div>
 				</div>
@@ -50,13 +55,11 @@ export const QuoteComponent = () => {
 };
 
 export const QuoteForm = () => {
-
 	const searchParams = useSearchParams();
 	const [movingFrom, movingTo] = [
 		searchParams.get("from"),
 		searchParams.get("to"),
 	];
-
 
 	return (
 		<form className="bg-white p-8 rounded-lg shadow-elevation-3">
@@ -125,7 +128,7 @@ export const QuoteForm = () => {
 					<select
 						id="moveSize"
 						name="moveSize"
-						defaultValue={''}
+						defaultValue={""}
 						className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
 					>
 						<option value="home">Home</option>
@@ -161,13 +164,14 @@ export const QuoteForm = () => {
 					<Select
 						id="moveSize"
 						name="moveSize"
-						defaultValue={''}
+						defaultValue={""}
 						className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
 					>
-						{moveSizeOptions.map(size => (
-							<option key={size.id} value={size.value} className='capitalize'>{size.value}</option>
+						{moveSizeOptions.map((size) => (
+							<option key={size.id} value={size.value} className="capitalize">
+								{size.value}
+							</option>
 						))}
-
 					</Select>
 				</Field>
 
@@ -208,16 +212,26 @@ export const QuoteForm = () => {
 				</Field>
 
 				{/* how did you hear about us? */}
-				<Field className={'sm:col-span-2'}>
-					<Label htmlFor="advert"
-						className="block text-sm font-medium text-gray-700">How did you hear about us?</Label>
+				<Field className={"sm:col-span-2"}>
+					<Label
+						htmlFor="advert"
+						className="block text-sm font-medium text-gray-700"
+					>
+						How did you hear about us?
+					</Label>
 					<Select
 						id="advert"
 						name="advert"
 						className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
 					>
-						{adverts.map(advert => (
-							<option key={advert.id} value={advert.value} className='capitalize'>{advert.name}</option>
+						{adverts.map((advert) => (
+							<option
+								key={advert.id}
+								value={advert.value}
+								className="capitalize"
+							>
+								{advert.name}
+							</option>
 						))}
 					</Select>
 				</Field>
@@ -295,11 +309,10 @@ export const QuoteForm = () => {
 					>
 						Premium Moving Services
 					</Link>{" "}
-					related to (conversational purposes) at the phone number
-					provided above. You may reply <strong>STOP</strong> to opt-out
-					at any time. Reply <strong>HELP</strong> for assistance.
-					Messages and data rates may apply. Message frequency will vary.
-					Learn more on our{" "}
+					related to (conversational purposes) at the phone number provided
+					above. You may reply <strong>STOP</strong> to opt-out at any time.
+					Reply <strong>HELP</strong> for assistance. Messages and data rates
+					may apply. Message frequency will vary. Learn more on our{" "}
 					<Link
 						target="_parent"
 						href="/privacy-policy"
@@ -328,5 +341,5 @@ export const QuoteForm = () => {
 				</Button>
 			</div>
 		</form>
-	)
-}
+	);
+};

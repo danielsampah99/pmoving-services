@@ -1,11 +1,11 @@
-import { ServiceLayout } from '@/components/ServiceLayout'
-import { Info } from 'lucide-react'
-import Link from 'next/link'
+import { ServiceLayout } from "@/components/ServiceLayout";
+import { Info } from "lucide-react";
+import Link from "next/link";
 
 const CorporateRelocation = () => {
 	return (
 		<ServiceLayout
-			image='/corporate.jpg'
+			image="/corporate.jpg"
 			title="Corporate Relocation Services"
 			desc="Professional corporate relocation solutions ensuring smooth transitions for businesses and employees."
 		>
@@ -44,10 +44,10 @@ const CorporateRelocation = () => {
 				<div className="max-w-7xl mx-auto space-y-12">
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						<div className="rounded-lg overflow-hidden p-4 sm:p-6">
-							<h1 className='text-4xl font-bold mb-2 sm:mb-4'>
+							<h1 className="text-4xl font-bold mb-2 sm:mb-4">
 								Corporate Relocation Services
 							</h1>
-							<p className='text-background text-lg sm:text-xl mb-4 sm:mb-6'>
+							<p className="text-background text-lg sm:text-xl mb-4 sm:mb-6">
 								Streamlined business transitions across Minnesota
 							</p>
 							<div className="relative">
@@ -62,13 +62,17 @@ const CorporateRelocation = () => {
 						<div className="flex flex-col justify-center space-y-3">
 							<div className="flex items-center space-x-2 text-background">
 								<Info className="w-6 h-6" />
-								<h2 className="text-xl md:text-2xl font-bold">Comprehensive Relocation Solutions</h2>
+								<h2 className="text-xl md:text-2xl font-bold">
+									Comprehensive Relocation Solutions
+								</h2>
 							</div>
 							<p className="text-background">
-								We provide end-to-end corporate relocation services designed to minimize business disruption and maximize efficiency.
+								We provide end-to-end corporate relocation services designed to
+								minimize business disruption and maximize efficiency.
 							</p>
 							<p className="text-gray-700">
-								Our experienced team handles every aspect of your corporate move with precision and professionalism.
+								Our experienced team handles every aspect of your corporate move
+								with precision and professionalism.
 							</p>
 							<ul className="list-disc pl-6 space-y-2 text-gray-700">
 								<li>Complete office and employee relocation management</li>
@@ -83,17 +87,27 @@ const CorporateRelocation = () => {
 
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						<div className="space-y-4">
-							<h2 className="text-xl md:text-2xl font-bold">Expert Corporate Relocation Services</h2>
+							<h2 className="text-xl md:text-2xl font-bold">
+								Expert Corporate Relocation Services
+							</h2>
 							<p className="text-gray-700">
-								Our corporate relocation services are tailored to meet the unique needs of businesses and their employees. We understand the complexities involved in corporate moves and provide comprehensive solutions to ensure a smooth transition.
+								Our corporate relocation services are tailored to meet the
+								unique needs of businesses and their employees. We understand
+								the complexities involved in corporate moves and provide
+								comprehensive solutions to ensure a smooth transition.
 							</p>
 							<p className="text-gray-700">
-								With years of experience in corporate relocations, we've developed efficient systems to handle moves of any scale, from single employee transfers to complete office relocations.
+								With years of experience in corporate relocations, we've
+								developed efficient systems to handle moves of any scale, from
+								single employee transfers to complete office relocations.
 							</p>
 
-							<h2 className="text-xl md:text-2xl font-bold pt-6">Our Corporate Moving Process</h2>
+							<h2 className="text-xl md:text-2xl font-bold pt-6">
+								Our Corporate Moving Process
+							</h2>
 							<p className="text-gray-700">
-								We follow a comprehensive approach to ensure your corporate relocation is executed flawlessly:
+								We follow a comprehensive approach to ensure your corporate
+								relocation is executed flawlessly:
 							</p>
 							<ul className="list-disc pl-6 space-y-2 text-gray-700">
 								<li>Initial consultation and needs assessment</li>
@@ -122,7 +136,7 @@ const CorporateRelocation = () => {
 				</div>
 			</div>
 		</ServiceLayout>
-	)
-}
+	);
+};
 
-export default CorporateRelocation
+export default CorporateRelocation;

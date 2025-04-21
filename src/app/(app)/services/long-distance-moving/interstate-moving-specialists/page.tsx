@@ -1,7 +1,7 @@
-import { OurLocations } from '@/components/OurLocations'
-import { PackingHerolong } from '@/components/PackingHeroLong'
-import { RelatedServicesLong } from '@/components/RelatedServicesLong'
-import { LongServiceDetails } from '@/components/LongServiceDetails'
+import { OurLocations } from "@/components/OurLocations";
+import { PackingHerolong } from "@/components/PackingHeroLong";
+import { RelatedServicesLong } from "@/components/RelatedServicesLong";
+import { LongServiceDetails } from "@/components/LongServiceDetails";
 
 const InterstateMovingSpecialistsPage = () => {
 	return (
@@ -11,7 +11,7 @@ const InterstateMovingSpecialistsPage = () => {
 			<RelatedServicesLong />
 			<OurLocations />
 		</div>
-	)
-}
+	);
+};
 
-export default InterstateMovingSpecialistsPage
+export default InterstateMovingSpecialistsPage;

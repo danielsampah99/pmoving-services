@@ -1,8 +1,8 @@
 export type DataForForm = {
-	id: number,
-	name: string
-	value: string
-}
+	id: number;
+	name: string;
+	value: string;
+};
 
 export const adverts: DataForForm[] = [
 	{ id: 1, name: "Bellhop", value: "Bellhop" },
@@ -28,7 +28,7 @@ export const adverts: DataForForm[] = [
 	{ id: 21, name: "Simple Moving Labor", value: "Simple Moving Labor" },
 	{ id: 22, name: "Social Media", value: "Social Media" },
 	{ id: 23, name: "Thumbtack", value: "Thumbtack" },
-	{ id: 24, name: "Word of Mouth", value: "Word of Mouth" }
+	{ id: 24, name: "Word of Mouth", value: "Word of Mouth" },
 ];
 
 export const moveSizeOptions: DataForForm[] = [
@@ -57,5 +57,5 @@ export const moveSizeOptions: DataForForm[] = [
 	{ id: 23, name: "5 x 15 Storage Unit", value: "5x15_storage" },
 	{ id: 24, name: "10 x 10 Storage Unit", value: "10x10_storage" },
 	{ id: 25, name: "10 x 15 Storage Unit", value: "10x15_storage" },
-	{ id: 26, name: "10 x 20 Storage Unit", value: "10x20_storage" }
+	{ id: 26, name: "10 x 20 Storage Unit", value: "10x20_storage" },
 ];

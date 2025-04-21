@@ -1,11 +1,11 @@
-import { ServiceLayout } from '@/components/ServiceLayout'
-import { Info } from 'lucide-react'
-import Link from 'next/link'
+import { ServiceLayout } from "@/components/ServiceLayout";
+import { Info } from "lucide-react";
+import Link from "next/link";
 
 const EmployeeRelocation = () => {
 	return (
 		<ServiceLayout
-			image='/residential.jpg'
+			image="/residential.jpg"
 			title="Employee Relocation Services"
 			desc="Professional employee relocation solutions ensuring smooth transitions for your workforce."
 		>
@@ -44,10 +44,10 @@ const EmployeeRelocation = () => {
 				<div className="max-w-7xl mx-auto space-y-12">
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						<div className="rounded-lg overflow-hidden p-4 sm:p-6">
-							<h1 className='text-4xl font-bold mb-2 sm:mb-4'>
+							<h1 className="text-4xl font-bold mb-2 sm:mb-4">
 								Employee Relocation Services
 							</h1>
-							<p className='text-background text-lg sm:text-xl mb-4 sm:mb-6'>
+							<p className="text-background text-lg sm:text-xl mb-4 sm:mb-6">
 								Seamless employee transitions across the country
 							</p>
 							<div className="relative">
@@ -62,13 +62,17 @@ const EmployeeRelocation = () => {
 						<div className="flex flex-col justify-center space-y-3">
 							<div className="flex items-center space-x-2 text-background">
 								<Info className="w-6 h-6" />
-								<h2 className="text-xl md:text-2xl font-bold">Comprehensive Employee Moving Solutions</h2>
+								<h2 className="text-xl md:text-2xl font-bold">
+									Comprehensive Employee Moving Solutions
+								</h2>
 							</div>
 							<p className="text-background">
-								We provide end-to-end employee relocation services designed to make workforce transitions smooth and stress-free.
+								We provide end-to-end employee relocation services designed to
+								make workforce transitions smooth and stress-free.
 							</p>
 							<p className="text-gray-700">
-								Our experienced team handles every aspect of employee relocation with care and professionalism.
+								Our experienced team handles every aspect of employee relocation
+								with care and professionalism.
 							</p>
 							<ul className="list-disc pl-6 space-y-2 text-gray-700">
 								<li>Personalized moving plans for each employee</li>
@@ -83,17 +87,27 @@ const EmployeeRelocation = () => {
 
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						<div className="space-y-4">
-							<h2 className="text-xl md:text-2xl font-bold">Expert Employee Relocation Services</h2>
+							<h2 className="text-xl md:text-2xl font-bold">
+								Expert Employee Relocation Services
+							</h2>
 							<p className="text-gray-700">
-								Our employee relocation services are designed to support both employers and employees through the entire moving process. We understand the importance of maintaining productivity and minimizing disruption during workforce transitions.
+								Our employee relocation services are designed to support both
+								employers and employees through the entire moving process. We
+								understand the importance of maintaining productivity and
+								minimizing disruption during workforce transitions.
 							</p>
 							<p className="text-gray-700">
-								With years of experience in employee relocations, we've developed efficient systems to handle moves of any scale, ensuring a smooth transition for your valued team members.
+								With years of experience in employee relocations, we've
+								developed efficient systems to handle moves of any scale,
+								ensuring a smooth transition for your valued team members.
 							</p>
 
-							<h2 className="text-xl md:text-2xl font-bold pt-6">Our Employee Moving Process</h2>
+							<h2 className="text-xl md:text-2xl font-bold pt-6">
+								Our Employee Moving Process
+							</h2>
 							<p className="text-gray-700">
-								We follow a comprehensive approach to ensure your employee relocation is executed flawlessly:
+								We follow a comprehensive approach to ensure your employee
+								relocation is executed flawlessly:
 							</p>
 							<ul className="list-disc pl-6 space-y-2 text-gray-700">
 								<li>Initial consultation and needs assessment</li>
@@ -122,7 +136,7 @@ const EmployeeRelocation = () => {
 				</div>
 			</div>
 		</ServiceLayout>
-	)
-}
+	);
+};
 
-export default EmployeeRelocation
+export default EmployeeRelocation;
