@@ -54,11 +54,16 @@ export const services: Service[] = [
 		href: "/services/local-moving",
 		icon: HomeModernIcon,
 		subServices: [
-
-			{ name: "Residential Movers", href: "/services/local-moving/residential-movers" },
+			{
+				name: "Residential Movers",
+				href: "/services/local-moving/residential-movers",
+			},
 			{ name: "Household Goods", href: "/services/local-moving/household" },
 			{ name: "Pack & Unpack", href: "/services/local-moving/pack-and-unpack" },
-			{ name: "Apartment Movers", href: "/services/local-moving/apartment-movers" },
+			{
+				name: "Apartment Movers",
+				href: "/services/local-moving/apartment-movers",
+			},
 
 			{ name: "Condo Movers", href: "/services/local-moving/condo-movers" },
 			{ name: "HOA Movers", href: "/services/local-moving/hoa-movers" },
@@ -71,11 +76,26 @@ export const services: Service[] = [
 		href: "#",
 		icon: BuildingOfficeIcon,
 		subServices: [
-			{ name: "Office Movers", href: "/services/commercial-moving/office-movers" },
-			{ name: "Corporate Relocation", href: "/services/commercial-moving/corporate-relocation" },
-			{ name: "Retail Relocation", href: "/services/commercial-moving/retail-relocation" },
-			{ name: "Warehouse Industrial", href: "/services/commercial-moving/warehouse-industrial" },
-			{ name: "Small Business Movers", href: "/services/commercial-moving/small-business-movers" },
+			{
+				name: "Office Movers",
+				href: "/services/commercial-moving/office-movers",
+			},
+			{
+				name: "Corporate Relocation",
+				href: "/services/commercial-moving/corporate-relocation",
+			},
+			{
+				name: "Retail Relocation",
+				href: "/services/commercial-moving/retail-relocation",
+			},
+			{
+				name: "Warehouse Industrial",
+				href: "/services/commercial-moving/warehouse-industrial",
+			},
+			{
+				name: "Small Business Movers",
+				href: "/services/commercial-moving/small-business-movers",
+			},
 		],
 	},
 	{
@@ -85,10 +105,22 @@ export const services: Service[] = [
 		href: "/services//long-distance-moving#",
 		icon: TruckIcon,
 		subServices: [
-			{ name: "Long Distance Residential", href: "/services//long-distance-moving/long-distance-residential" },
-			{ name: "Long Distance Commercial", href: "/services//long-distance-moving/long-distance-commercial" },
-			{ name: "Interstate Moving Specialists", href: "/services//long-distance-moving/interstate-moving-specialists" },
-			{ name: "Employee Relocation", href: "/services//long-distance-moving/employee-relocation" },
+			{
+				name: "Long Distance Residential",
+				href: "/services//long-distance-moving/long-distance-residential",
+			},
+			{
+				name: "Long Distance Commercial",
+				href: "/services//long-distance-moving/long-distance-commercial",
+			},
+			{
+				name: "Interstate Moving Specialists",
+				href: "/services//long-distance-moving/interstate-moving-specialists",
+			},
+			{
+				name: "Employee Relocation",
+				href: "/services//long-distance-moving/employee-relocation",
+			},
 		],
 	},
 	{
@@ -98,11 +130,23 @@ export const services: Service[] = [
 		href: "/specialty-moving#",
 		icon: CubeTransparentIcon,
 		subServices: [
-			{ name: "Antique Furniture", href: "/services/specialty-moving/antique-furniture" },
-			{ name: "Furniture Moving", href: "/services/specialty-moving/furniture-moving" },
-			{ name: "Gun Safe Moving", href: "/services/specialty-moving/gun-and-safe-moving" },
+			{
+				name: "Antique Furniture",
+				href: "/services/specialty-moving/antique-furniture",
+			},
+			{
+				name: "Furniture Moving",
+				href: "/services/specialty-moving/furniture-moving",
+			},
+			{
+				name: "Gun Safe Moving",
+				href: "/services/specialty-moving/gun-and-safe-moving",
+			},
 			{ name: "Moving Labor", href: "/services/specialty-moving/labor-only" },
-			{ name: "Loading & Unloading", href: "/services/specialty-moving/load-and-unloading" },
+			{
+				name: "Loading & Unloading",
+				href: "/services/specialty-moving/load-and-unloading",
+			},
 		],
 	},
 ];

@@ -1,11 +1,11 @@
-import { ServiceLayout } from '@/components/ServiceLayout'
-import { Info } from 'lucide-react'
-import Link from 'next/link'
+import { ServiceLayout } from "@/components/ServiceLayout";
+import { Info } from "lucide-react";
+import Link from "next/link";
 
 const SmallBusinessMovers = () => {
 	return (
 		<ServiceLayout
-			image='/residential.jpg'
+			image="/residential.jpg"
 			title="Small Business Moving Services"
 			desc="Reliable and efficient moving solutions tailored for small businesses"
 		>
@@ -45,10 +45,10 @@ const SmallBusinessMovers = () => {
 				<div className="max-w-7xl mx-auto space-y-12">
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						<div className="rounded-lg overflow-hidden p-4 sm:p-6">
-							<h1 className='text-4xl font-bold mb-2 sm:mb-4'>
+							<h1 className="text-4xl font-bold mb-2 sm:mb-4">
 								Small Business Moving Solutions
 							</h1>
-							<p className='text-background text-lg sm:text-xl mb-4 sm:mb-6'>
+							<p className="text-background text-lg sm:text-xl mb-4 sm:mb-6">
 								Expert moving services for small businesses in Minnesota
 							</p>
 							<div className="relative">
@@ -63,13 +63,17 @@ const SmallBusinessMovers = () => {
 						<div className="flex flex-col justify-center space-y-3">
 							<div className="flex items-center space-x-2 text-background">
 								<Info className="w-6 h-6" />
-								<h2 className="text-xl md:text-2xl font-bold">Tailored Moving Solutions</h2>
+								<h2 className="text-xl md:text-2xl font-bold">
+									Tailored Moving Solutions
+								</h2>
 							</div>
 							<p className="text-background">
-								We understand the unique challenges small businesses face during relocation and provide customized solutions to meet your needs.
+								We understand the unique challenges small businesses face during
+								relocation and provide customized solutions to meet your needs.
 							</p>
 							<p className="text-gray-700">
-								Our experienced team ensures a smooth transition with minimal disruption to your business operations.
+								Our experienced team ensures a smooth transition with minimal
+								disruption to your business operations.
 							</p>
 							<ul className="list-disc pl-6 space-y-2 text-gray-700">
 								<li>Flexible scheduling options</li>
@@ -83,9 +87,12 @@ const SmallBusinessMovers = () => {
 
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						<div className="space-y-4">
-							<h2 className="text-xl md:text-2xl font-bold">Our Small Business Moving Process</h2>
+							<h2 className="text-xl md:text-2xl font-bold">
+								Our Small Business Moving Process
+							</h2>
 							<p className="text-gray-700">
-								We follow a systematic approach to ensure your business relocation is executed perfectly:
+								We follow a systematic approach to ensure your business
+								relocation is executed perfectly:
 							</p>
 							<ul className="list-disc pl-6 space-y-2 text-gray-700">
 								<li>Initial consultation and needs assessment</li>
@@ -114,7 +121,7 @@ const SmallBusinessMovers = () => {
 				</div>
 			</div>
 		</ServiceLayout>
-	)
-}
+	);
+};
 
-export default SmallBusinessMovers
+export default SmallBusinessMovers;

@@ -1,40 +1,47 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "motion/react"
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
-import { ReviewType } from "@/data/reviews"
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { ReviewType } from "@/data/reviews";
 
 export const ReviewCarousel = ({ reviews }: { reviews: ReviewType }) => {
-	const [currentIndex, setCurrentIndex] = useState(0)
-	const [autoplay, setAutoplay] = useState(true)
+	const [currentIndex, setCurrentIndex] = useState(0);
+	const [autoplay, setAutoplay] = useState(true);
 
 	// Handle autoplay functionality
 	useEffect(() => {
-		if (!autoplay) return
+		if (!autoplay) return;
 
 		const interval = setInterval(() => {
-			setCurrentIndex((prevIndex) => (prevIndex === reviews.featured.length - 1 ? 0 : prevIndex + 1))
-		}, 6000)
+			setCurrentIndex((prevIndex) =>
+				prevIndex === reviews.featured.length - 1 ? 0 : prevIndex + 1,
+			);
+		}, 6000);
 
-		return () => clearInterval(interval)
-	}, [autoplay, reviews.featured.length])
+		return () => clearInterval(interval);
+	}, [autoplay, reviews.featured.length]);
 
 	const handlePrevious = () => {
-		setAutoplay(false)
-		setCurrentIndex((prevIndex) => (prevIndex === 0 ? reviews.featured.length - 1 : prevIndex - 1))
-	}
+		setAutoplay(false);
+		setCurrentIndex((prevIndex) =>
+			prevIndex === 0 ? reviews.featured.length - 1 : prevIndex - 1,
+		);
+	};
 
 	const handleNext = () => {
-		setAutoplay(false)
-		setCurrentIndex((prevIndex) => (prevIndex === reviews.featured.length - 1 ? 0 : prevIndex + 1))
-	}
+		setAutoplay(false);
+		setCurrentIndex((prevIndex) =>
+			prevIndex === reviews.featured.length - 1 ? 0 : prevIndex + 1,
+		);
+	};
 
 	return (
 		<div
 			className="rounded-xl overflow-hidden h-full flex flex-col relative bg-cover bg-center"
 			style={{
-				backgroundImage: "url('https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Deshun+and+Drake+c-640w.jpg')",
+				backgroundImage:
+					"url('https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Deshun+and+Drake+c-640w.jpg')",
 				backgroundSize: "cover",
 				backgroundPosition: "center",
 			}}
@@ -45,7 +52,9 @@ export const ReviewCarousel = ({ reviews }: { reviews: ReviewType }) => {
 			<div className="relative z-10 p-8 flex flex-col h-full">
 				<div className="mb-6 flex items-center">
 					<Quote className="size-10 stroke-moving-yellow fill-transparent rotate-180" />
-					<h3 className="text-2xl font-bold text-white ml-2">Customer Testimonials</h3>
+					<h3 className="text-2xl font-bold text-white ml-2">
+						Customer Testimonials
+					</h3>
 				</div>
 
 				<div className="relative flex-grow flex items-center">
@@ -73,7 +82,9 @@ export const ReviewCarousel = ({ reviews }: { reviews: ReviewType }) => {
 									</p>
 								</div>
 								<div>
-									<p className="text-white/90 font-semibold">— {reviews.featured[currentIndex].author}</p>
+									<p className="text-white/90 font-semibold">
+										— {reviews.featured[currentIndex].author}
+									</p>
 								</div>
 							</motion.div>
 						</AnimatePresence>
@@ -93,36 +104,39 @@ export const ReviewCarousel = ({ reviews }: { reviews: ReviewType }) => {
 						<button
 							key={index}
 							onClick={() => {
-								setAutoplay(false)
-								setCurrentIndex(index)
+								setAutoplay(false);
+								setCurrentIndex(index);
 							}}
-							className={`w-2.5 h-2.5 rounded-full transition-colors ${currentIndex === index ? "bg-white" : "bg-white/40 hover:bg-white/60"
-								}`}
+							className={`w-2.5 h-2.5 rounded-full transition-colors ${
+								currentIndex === index
+									? "bg-white"
+									: "bg-white/40 hover:bg-white/60"
+							}`}
 							aria-label={`Go to review ${index + 1}`}
 						/>
 					))}
 				</div>
 			</div>
 		</div>
-	)
-}
-
-
+	);
+};
 
 export const ReviewsMobile = ({ reviews }: { reviews: ReviewType }) => {
-	const [currentIndex, setCurrentIndex] = useState(0)
-	const [autoplay, setAutoplay] = useState(true)
+	const [currentIndex, setCurrentIndex] = useState(0);
+	const [autoplay, setAutoplay] = useState(true);
 
 	// Handle autoplay functionality
 	useEffect(() => {
-		if (!autoplay) return
+		if (!autoplay) return;
 
 		const interval = setInterval(() => {
-			setCurrentIndex((prevIndex) => (prevIndex === reviews.featured.length - 1 ? 0 : prevIndex + 1))
-		}, 6000)
+			setCurrentIndex((prevIndex) =>
+				prevIndex === reviews.featured.length - 1 ? 0 : prevIndex + 1,
+			);
+		}, 6000);
 
-		return () => clearInterval(interval)
-	}, [autoplay, reviews.featured.length])
+		return () => clearInterval(interval);
+	}, [autoplay, reviews.featured.length]);
 
 	return (
 		<div
@@ -139,7 +153,9 @@ export const ReviewsMobile = ({ reviews }: { reviews: ReviewType }) => {
 			<div className="relative z-10 p-6">
 				<div className="mb-4 flex items-center">
 					<Quote className="w-8 h-8 text-white/80 rotate-180" />
-					<h3 className="text-xl font-bold text-white ml-2">Customer Testimonials</h3>
+					<h3 className="text-xl font-bold text-white ml-2">
+						Customer Testimonials
+					</h3>
 				</div>
 
 				<AnimatePresence mode="wait">
@@ -151,10 +167,14 @@ export const ReviewsMobile = ({ reviews }: { reviews: ReviewType }) => {
 						transition={{ duration: 0.4 }}
 					>
 						<div className="mb-4">
-							<p className="text-white text-base leading-relaxed">"{reviews.featured[currentIndex].content}"</p>
+							<p className="text-white text-base leading-relaxed">
+								"{reviews.featured[currentIndex].content}"
+							</p>
 						</div>
 						<div>
-							<p className="text-white/90 font-semibold">— {reviews.featured[currentIndex].author}</p>
+							<p className="text-white/90 font-semibold">
+								— {reviews.featured[currentIndex].author}
+							</p>
 						</div>
 					</motion.div>
 				</AnimatePresence>
@@ -164,43 +184,44 @@ export const ReviewsMobile = ({ reviews }: { reviews: ReviewType }) => {
 						<button
 							key={index}
 							onClick={() => {
-								setAutoplay(false)
-								setCurrentIndex(index)
+								setAutoplay(false);
+								setCurrentIndex(index);
 							}}
-							className={`w-2 h-2 rounded-full transition-colors ${currentIndex === index ? "bg-white" : "bg-white/40 hover:bg-white/60"
-								}`}
+							className={`w-2 h-2 rounded-full transition-colors ${
+								currentIndex === index
+									? "bg-white"
+									: "bg-white/40 hover:bg-white/60"
+							}`}
 							aria-label={`Go to review ${index + 1}`}
 						/>
 					))}
 				</div>
 			</div>
 		</div>
-	)
-}
-
-
+	);
+};
 
 export const ReviewWrapper = ({ reviews }: { reviews: ReviewType }) => {
-	const [isMobile, setIsMobile] = useState(false)
+	const [isMobile, setIsMobile] = useState(false);
 
 	useEffect(() => {
 		const checkMobile = () => {
-			setIsMobile(window.innerWidth < 768)
-		}
+			setIsMobile(window.innerWidth < 768);
+		};
 
 		// Initial check
-		checkMobile()
+		checkMobile();
 
 		// Add event listener
-		window.addEventListener("resize", checkMobile)
+		window.addEventListener("resize", checkMobile);
 
 		// Cleanup
-		return () => window.removeEventListener("resize", checkMobile)
-	}, [])
+		return () => window.removeEventListener("resize", checkMobile);
+	}, []);
 
 	if (isMobile) {
-		return <ReviewsMobile reviews={reviews} />
+		return <ReviewsMobile reviews={reviews} />;
 	}
 
-	return <ReviewCarousel reviews={reviews} />
-}
+	return <ReviewCarousel reviews={reviews} />;
+};

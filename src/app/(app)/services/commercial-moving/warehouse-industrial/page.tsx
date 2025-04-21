@@ -1,8 +1,7 @@
-import { ServiceLayout } from '@/components/ServiceLayout'
-import { OurLocations } from '@/components/OurLocations'
-import { RelatedServicesLong } from '@/components/RelatedServicesLong'
-import { WarehouseServiceDetails } from '@/components/WarehouseServiceDetails'
-
+import { ServiceLayout } from "@/components/ServiceLayout";
+import { OurLocations } from "@/components/OurLocations";
+import { RelatedServicesLong } from "@/components/RelatedServicesLong";
+import { WarehouseServiceDetails } from "@/components/WarehouseServiceDetails";
 
 const WarehouseIndustrialPage = () => {
 	return (
@@ -17,7 +16,7 @@ const WarehouseIndustrialPage = () => {
 			<RelatedServicesLong />
 			<OurLocations />
 		</div>
-	)
-}
+	);
+};
 
-export default WarehouseIndustrialPage
+export default WarehouseIndustrialPage;
