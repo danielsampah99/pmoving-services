@@ -16,6 +16,7 @@ import {
 	TrashIcon,
 	type LucideIcon,
 	PackageIcon,
+	LampDeskIcon,
 } from "lucide-react";
 import { HeroIconType } from "./HeroIcon";
 import { FlatIcon } from "./flaticons";
@@ -144,6 +145,13 @@ export const serviceCardData: ServiceCardData[] = [
 		href: "/services/logistics-services",
 		icon: LogisticsIcon,
 	},
+	{
+		id: 15,
+		title: 'Specialty Moving',
+		description: 'Expert handling of valuable, fragile, and unique items requiring specialized care and equipment.',
+		href: '/services/specialty-moving',
+		icon: LampDeskIcon
+	}
 ];
 
 export const ServiceCard: FC<{ service: ServiceCardData; index: number }> = ({
