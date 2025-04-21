@@ -1,12 +1,14 @@
 "use client";
 
-import { Field, Label, Input, Textarea, Button } from "@headlessui/react";
+import { Field, Label, Input, Textarea, Button, Select } from "@headlessui/react";
 import { motion } from "motion/react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import React from "react";
 import { ReviewCarousel } from "../Reviews";
 import { reviews } from "@/data/reviews";
+import { adverts, moveSizeOptions } from "@/data/qoute";
+import { ReviewWrapper } from "./review-carousel";
 
 export const QuoteComponent = () => {
 	const searchParams = useSearchParams();
@@ -53,7 +55,7 @@ export const QuoteComponent = () => {
 									name="fullName"
 									autoComplete="name"
 									className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
-									placeholder="John Doe"
+									placeholder="Full Name"
 								/>
 							</Field>
 
@@ -71,7 +73,7 @@ export const QuoteComponent = () => {
 									name="email"
 									autoComplete="email"
 									className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
-									placeholder="johndoe@example.com"
+									placeholder="Email"
 								/>
 							</Field>
 
@@ -89,7 +91,7 @@ export const QuoteComponent = () => {
 									name="phone"
 									autoComplete="tel"
 									className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
-									placeholder="+1 (555) 123-4567"
+									placeholder="Phone Number"
 								/>
 							</Field>
 
@@ -103,6 +105,7 @@ export const QuoteComponent = () => {
 								<select
 									id="moveSize"
 									name="moveSize"
+									defaultValue={''}
 									className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
 								>
 									<option value="home">Home</option>
@@ -135,54 +138,17 @@ export const QuoteComponent = () => {
 								>
 									Move Size
 								</Label>
-								<select
+								<Select
 									id="moveSize"
 									name="moveSize"
+									defaultValue={''}
 									className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
 								>
-									<option value="small">Small (Studio/1 Bedroom)</option>
-									<option value="medium">Medium (2-3 Bedrooms)</option>
-									<option value="large">Large (4+ Bedrooms)</option>
-									<option value="office_building">Office Building</option>
-									<option value="office_1300">Office - 1300 cubic feet</option>
-									<option value="office">Office</option>
-									<option value="room_or_less">Room or Less</option>
-									<option value="studio_apartment">Studio Apartment</option>
-									<option value="1_bedroom_apartment">
-										1 Bedroom Apartment
-									</option>
-									<option value="2_bedroom_apartment">
-										2 Bedroom Apartment
-									</option>
-									<option value="3_bedroom_apartment">
-										3 Bedroom Apartment
-									</option>
-									<option value="1_bedroom_house">1 Bedroom House</option>
-									<option value="1_bedroom_house_large">
-										1 Bedroom House (Large)
-									</option>
-									<option value="2_bedroom_house">2 Bedroom House</option>
-									<option value="2_bedroom_house_large">
-										2 Bedroom House (Large)
-									</option>
-									<option value="3_bedroom_house">3 Bedroom House</option>
-									<option value="3_bedroom_house_large">
-										3 Bedroom House (Large)
-									</option>
-									<option value="4_bedroom_house">4 Bedroom House</option>
-									<option value="4_bedroom_house_large">
-										4 Bedroom House (Large)
-									</option>
-									<option value="5_bedroom_house">5 Bedroom House</option>
-									<option value="5_bedroom_house_large">
-										5 Bedroom House (Large)
-									</option>
-									<option value="5x10_storage">5 x 10 Storage Unit</option>
-									<option value="5x15_storage">5 x 15 Storage Unit</option>
-									<option value="10x10_storage">10 x 10 Storage Unit</option>
-									<option value="10x15_storage">10 x 15 Storage Unit</option>
-									<option value="10x20_storage">10 x 20 Storage Unit</option>
-								</select>
+									{moveSizeOptions.map(size => (
+										<option key={size.id} value={size.value} className='capitalize'>{size.value}</option>
+									))}
+
+								</Select>
 							</Field>
 
 							{/* Current Address */}
@@ -191,7 +157,7 @@ export const QuoteComponent = () => {
 									htmlFor="movingFrom"
 									className="block text-sm font-medium text-gray-700"
 								>
-									Moving From
+									Origin Address/ Postal Code
 								</Label>
 								<Input
 									type="text"
@@ -199,7 +165,7 @@ export const QuoteComponent = () => {
 									id="movingFrom"
 									name="movingFrom"
 									className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
-									placeholder="123 Main St, City, State, ZIP"
+									placeholder="Origin"
 								/>
 							</Field>
 
@@ -209,7 +175,7 @@ export const QuoteComponent = () => {
 									htmlFor="movingTo"
 									className="block text-sm font-medium text-gray-700"
 								>
-									Moving To
+									Destination Address/ Postal Code
 								</Label>
 								<Input
 									type="text"
@@ -217,7 +183,58 @@ export const QuoteComponent = () => {
 									id="movingTo"
 									name="movingTo"
 									className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
-									placeholder="456 Elm St, City, State, ZIP"
+									placeholder="Destination"
+								/>
+							</Field>
+
+							{/* how did you hear about us? */}
+							<Field className={'sm:col-span-2'}>
+								<Label htmlFor="advert"
+									className="block text-sm font-medium text-gray-700">How did you hear about us?</Label>
+								<Select
+									id="advert"
+									name="advert"
+									className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
+								>
+									{adverts.map(advert => (
+										<option key={advert.id} value={advert.value} className='capitalize'>{advert.name}</option>
+									))}
+								</Select>
+							</Field>
+
+							{/* stairs - origin */}
+							<Field className="sm:col-span-2">
+								<Label
+									htmlFor="stairs-origin"
+									className="block text-sm font-medium text-gray-700"
+								>
+									Stairs (Origin)
+								</Label>
+								<Input
+									type="number"
+									defaultValue={0}
+									id="movingFrom"
+									name="movingFrom"
+									className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
+									placeholder=""
+								/>
+							</Field>
+
+							{/* stairs - destination */}
+							<Field className="sm:col-span-2">
+								<Label
+									htmlFor="stairs-destination"
+									className="block text-sm font-medium text-gray-700"
+								>
+									Stairs (Destination)
+								</Label>
+								<Input
+									type="number"
+									defaultValue={0}
+									id="movingFrom"
+									name="movingFrom"
+									className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
+									placeholder=""
 								/>
 							</Field>
 
@@ -248,7 +265,7 @@ export const QuoteComponent = () => {
 							/>
 							<Label
 								htmlFor="consent"
-								className="ml-3 block text-sm leading-6 text-gray-700"
+								className="ml-3 block text-sm leading-6 text-pretty text-gray-700"
 							>
 								By checking this box, you agree to receive text messages from{" "}
 								<Link
@@ -293,15 +310,11 @@ export const QuoteComponent = () => {
 					</form>
 
 					{/* Image */}
-					<motion.div
-						initial={{ opacity: 0, x: 20 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						viewport={{ once: true }}
-						transition={{ duration: 0.5, delay: 0.2 }}
-						className="hidden lg:block rounded-2xl"
+					<div
+						className="hidden self-start lg:block rounded-2xl"
 					>
-						<ReviewCarousel reviews={reviews} />
-					</motion.div>
+						<ReviewWrapper reviews={reviews} />
+					</div>
 				</div>
 			</div>
 		</section>
