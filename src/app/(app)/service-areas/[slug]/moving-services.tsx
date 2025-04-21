@@ -7,7 +7,6 @@ import type { SerializedEditorState } from "@payloadcms/richtext-lexical/lexical
 import type { FC } from "react";
 import Image from "next/image";
 
-
 export type MovingServicesProps = Pick<ServiceArea, "movingServices"> & {
 	title: string;
 };
@@ -94,7 +93,9 @@ export const MovingServiceWithImage: FC<MovingServiceWithImageProps> = (
 	);
 };
 
-export const MovingServiceWithoutImage: FC<Omit<MovingServiceWithImageProps, "image">> = (props) => {
+export const MovingServiceWithoutImage: FC<
+	Omit<MovingServiceWithImageProps, "image">
+> = (props) => {
 	return (
 		<div className="mx-auto max-w-3xl my-6 text-base leading-7 text-gray-700">
 			<h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 capitalize sm:text-4xl">
