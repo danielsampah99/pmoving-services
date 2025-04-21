@@ -237,6 +237,37 @@ export interface ServiceArea {
         id?: string | null;
       }[]
     | null;
+  movingServices?:
+    | {
+        /**
+         * Title of the moving service. Example: "Albert Lea Residential Movers"
+         */
+        title: string;
+        /**
+         * Rich text about the moving service. Can include links to external websites
+         */
+        content: {
+          root: {
+            type: string;
+            children: {
+              type: string;
+              version: number;
+              [k: string]: unknown;
+            }[];
+            direction: ('ltr' | 'rtl') | null;
+            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+            indent: number;
+            version: number;
+          };
+          [k: string]: unknown;
+        };
+        /**
+         * Moving Service Image
+         */
+        image?: (number | null) | Media;
+        id?: string | null;
+      }[]
+    | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -395,6 +426,14 @@ export interface ServiceAreasSelect<T extends boolean = true> {
     | {
         title?: T;
         link?: T;
+        id?: T;
+      };
+  movingServices?:
+    | T
+    | {
+        title?: T;
+        content?: T;
+        image?: T;
         id?: T;
       };
   updatedAt?: T;

@@ -4,10 +4,11 @@ import { OurLocations } from "@/components/OurLocations";
 import { Hero } from "./hero";
 import { MovingResources } from "./moving-resources";
 import { Faqs } from "./faqs";
-import { Metadata } from "next";
-import { ServiceArea } from "@/payload-types";
+import type { Metadata } from "next";
+import type { ServiceArea } from "@/payload-types";
 import { BASE_URL, COMPANY } from "@/utils";
 import { MovingTips } from "./moving-tips";
+import { MovingServices } from "./moving-services";
 
 type Props = {
 	params: Promise<{ slug: string }>;
@@ -57,11 +58,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		`${serviceArea.title} moving company`,
 		`${serviceArea.title} ${serviceArea["state-name"]} movers`,
 		`${serviceArea.title} ${serviceArea["state-initials"]} movers`,
-		`moving services`,
-		`professional movers`,
-		`local movers`,
-		`residential moving`,
-		`commercial moving`,
+		"moving services",
+		"professional movers",
+		"local movers",
+		"residential moving",
+		"commercial moving",
 	];
 
 	return {
@@ -133,6 +134,14 @@ export default async function SingleServiceAreaPage({ params }: Props) {
 				mapImage={serviceArea.mapImage}
 			/>
 			<MovingTips />
+			{serviceArea.movingServices &&
+				Array.isArray(serviceArea.movingServices) &&
+				serviceArea.movingServices.length > 0 && (
+					<MovingServices
+						movingServices={serviceArea.movingServices}
+						title={serviceArea.title}
+					/>
+				)}
 			<Faqs faqs={serviceArea.faqs ?? []} title={serviceArea.title} />
 			<MovingResources
 				title={serviceArea.title}

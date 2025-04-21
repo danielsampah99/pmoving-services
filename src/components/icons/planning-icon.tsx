@@ -5,7 +5,13 @@ interface SVGRProps {
 	desc?: string;
 	descId?: string;
 }
-export const PlanningIcon: FC<SVGProps<SVGSVGElement> & SVGRProps> = ({ title, titleId, desc, descId, ...props }) => (
+export const PlanningIcon: FC<SVGProps<SVGSVGElement> & SVGRProps> = ({
+	title,
+	titleId,
+	desc,
+	descId,
+	...props
+}) => (
 	<svg
 		{...props}
 		xmlns="http://www.w3.org/2000/svg"
@@ -141,4 +147,4 @@ export const PlanningIcon: FC<SVGProps<SVGSVGElement> & SVGRProps> = ({ title, t
 			d="M442.552 392.113a7.725 7.725 0 0 1-5.108-1.93l-15.476-13.637a7.726 7.726 0 0 1-.689-10.905 7.726 7.726 0 0 1 10.905-.689l9.419 8.3 24.076-29.867a7.727 7.727 0 0 1 12.03 9.698l-29.143 36.152a7.728 7.728 0 0 1-6.014 2.878z"
 		/>
 	</svg>
-)
+);

@@ -1,3 +1,7 @@
+import {
+	FixedToolbarFeature,
+	lexicalEditor,
+} from "@payloadcms/richtext-lexical";
 import type { CollectionConfig } from "payload";
 
 export const ServiceArea: CollectionConfig = {
@@ -156,6 +160,53 @@ export const ServiceArea: CollectionConfig = {
 						placeholder: "https://external-url.com",
 						description: "a link or url pointing to the name of the resource",
 					},
+				},
+			],
+		},
+		{
+			name: "movingServices",
+			type: "array",
+			label: "Moving Services",
+			minRows: 1,
+			maxRows: 10,
+			labels: {
+				plural: "Moving Services",
+				singular: "Moving Service",
+			},
+			fields: [
+				{
+					name: "title",
+					type: "text",
+					label: "Moving Service",
+					required: true,
+					admin: {
+						readOnly: false,
+						description:
+							'Title of the moving service. Example: "Albert Lea Residential Movers"',
+					},
+				},
+				{
+					name: "content",
+					type: "richText",
+					label: "Content",
+					required: true,
+					editor: lexicalEditor({
+						features: ({ defaultFeatures }) => [
+							...defaultFeatures,
+							FixedToolbarFeature(),
+						],
+					}),
+					admin: {
+						readOnly: false,
+						description:
+							"Rich text about the moving service. Can include links to external websites ",
+					},
+				},
+				{
+					name: "image",
+					type: "upload",
+					admin: { description: "Moving Service Image", readOnly: false },
+					relationTo: "media",
 				},
 			],
 		},

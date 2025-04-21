@@ -1,6 +1,5 @@
 import type { SVGProps, FC } from "react";
 
-
 interface SVGRProps {
 	title?: string;
 	titleId?: string;
@@ -8,8 +7,13 @@ interface SVGRProps {
 	descId?: string;
 }
 
-
-export const HouseIcon: FC<SVGProps<SVGSVGElement> & SVGRProps> = ({ title, titleId, desc, descId, ...props }) => (
+export const HouseIcon: FC<SVGProps<SVGSVGElement> & SVGRProps> = ({
+	title,
+	titleId,
+	desc,
+	descId,
+	...props
+}) => (
 	<svg
 		{...props}
 		xmlns="http://www.w3.org/2000/svg"
@@ -48,4 +52,4 @@ export const HouseIcon: FC<SVGProps<SVGSVGElement> & SVGRProps> = ({ title, titl
 		/>
 		<path fill="#fff" d="m40 18 5 5 11-11-3-3-8 8-2-2z" />
 	</svg>
-)
+);

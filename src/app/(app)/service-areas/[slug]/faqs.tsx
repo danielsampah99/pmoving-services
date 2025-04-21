@@ -7,7 +7,7 @@ export type FaqProps = Pick<ServiceArea, "faqs"> & {
 
 export const Faqs: FC<FaqProps> = (props) => {
 	return (
-		<div className="mx-auto max-w-7xl divide-y divide-gray-900/10 px-6 py-8 sm:py-10 lg:px-8 lg:py-12">
+		<div className="mx-auto max-w-7xl divide-y divide-gray-900/10 py-8 sm:py-10 lg:px-8 lg:py-12">
 			<h2 className="text-xl lg:text-2xl font-bold leading-10 tracking-tight text-gray-900 capitalize">{`Frequently asked questions About Moving Cost In ${props.title}`}</h2>
 			<dl className="mt-10 space-y-8 divide-y divide-gray-900/10">
 				{props.faqs?.length! > 0 &&
