@@ -1,7 +1,7 @@
 "use client";
 
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { callsToAction, services } from "./Services";
+import { callsToAction, services } from "@/data/services";
 import Link from "next/link";
 import { cn } from "@/utils";
 import { socialMediaLinks } from "./Banner";
@@ -89,7 +89,7 @@ export const MobileSidebar: FC<MobileSidebarProps> = ({ areas }) => {
 													className={cn(
 														"size-5 stroke-moving-yellow",
 														index > 3 &&
-														"stroke-inherit group-hover:animate-fill-both fill-moving-yellow",
+															"stroke-inherit group-hover:animate-fill-both fill-moving-yellow",
 														index === 2 && "hover:animate-shake",
 													)}
 												/>

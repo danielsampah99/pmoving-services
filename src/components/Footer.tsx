@@ -1,6 +1,6 @@
 "use client";
 
-import { services } from "./Services";
+import { services } from "@/data/services";
 import Link from "next/link";
 import { Button, Field, Input, Label } from "@headlessui/react";
 import { FC } from "react";
