@@ -10,156 +10,16 @@ import {
 	MenuItem,
 	MenuItems,
 } from "@headlessui/react";
-import {
-	BuildingOfficeIcon,
-	HomeModernIcon,
-	TruckIcon,
-	CubeTransparentIcon,
-} from "@heroicons/react/24/outline";
-import {
-	ChevronDownIcon,
-	PlayCircleIcon,
-	MapIcon,
-} from "@heroicons/react/20/solid";
+
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import type { FC } from "react";
-import type { HeroIconType } from "./HeroIcon";
-import type { LucideIcon } from "lucide-react";
 import Link from "next/link";
-
-export type Service = {
-	id: number;
-	name: string;
-	description: string;
-	href: string;
-	icon: HeroIconType | LucideIcon;
-	subServices: ChildMenu[];
-};
-
-export type CallToAction = {
-	name: string;
-	href: string;
-	icon: HeroIconType | LucideIcon;
-};
-
-export type ChildMenu = {
-	name: string;
-	href: string;
-};
-
-export const services: Service[] = [
-	{
-		id: 0,
-		name: "Local Moving",
-		description: "Reliable moving within the same city",
-		href: "/services/local-moving",
-		icon: HomeModernIcon,
-		subServices: [
-			{
-				name: "Residential Movers",
-				href: "/services/local-moving/residential-movers",
-			},
-			{ name: "Household Goods", href: "/services/local-moving/household" },
-			{ name: "Pack & Unpack", href: "/services/local-moving/pack-and-unpack" },
-			{
-				name: "Apartment Movers",
-				href: "/services/local-moving/apartment-movers",
-			},
-
-			{ name: "Condo Movers", href: "/services/local-moving/condo-movers" },
-			{ name: "HOA Movers", href: "/services/local-moving/hoa-movers" },
-		],
-	},
-	{
-		id: 1,
-		name: "Commercial Moving",
-		description: "Office and business relocation services",
-		href: "#",
-		icon: BuildingOfficeIcon,
-		subServices: [
-			{
-				name: "Office Movers",
-				href: "/services/commercial-moving/office-movers",
-			},
-			{
-				name: "Corporate Relocation",
-				href: "/services/commercial-moving/corporate-relocation",
-			},
-			{
-				name: "Retail Relocation",
-				href: "/services/commercial-moving/retail-relocation",
-			},
-			{
-				name: "Warehouse Industrial",
-				href: "/services/commercial-moving/warehouse-industrial",
-			},
-			{
-				name: "Small Business Movers",
-				href: "/services/commercial-moving/small-business-movers",
-			},
-		],
-	},
-	{
-		id: 2,
-		name: "Long Distance Moving",
-		description: "Safe and secure cross-country moving",
-		href: "/services//long-distance-moving#",
-		icon: TruckIcon,
-		subServices: [
-			{
-				name: "Long Distance Residential",
-				href: "/services//long-distance-moving/long-distance-residential",
-			},
-			{
-				name: "Long Distance Commercial",
-				href: "/services//long-distance-moving/long-distance-commercial",
-			},
-			{
-				name: "Interstate Moving Specialists",
-				href: "/services//long-distance-moving/interstate-moving-specialists",
-			},
-			{
-				name: "Employee Relocation",
-				href: "/services//long-distance-moving/employee-relocation",
-			},
-		],
-	},
-	{
-		id: 3,
-		name: "Specialty Moving",
-		description: "High-value items that require extra care",
-		href: "/specialty-moving#",
-		icon: CubeTransparentIcon,
-		subServices: [
-			{
-				name: "Antique Furniture",
-				href: "/services/specialty-moving/antique-furniture",
-			},
-			{
-				name: "Furniture Moving",
-				href: "/services/specialty-moving/furniture-moving",
-			},
-			{
-				name: "Gun Safe Moving",
-				href: "/services/specialty-moving/gun-and-safe-moving",
-			},
-			{ name: "Moving Labor", href: "/services/specialty-moving/labor-only" },
-			{
-				name: "Loading & Unloading",
-				href: "/services/specialty-moving/load-and-unloading",
-			},
-		],
-	},
-];
-
-export const callsToAction: CallToAction[] = [
-	{ name: "Gallery", href: "/gallery", icon: PlayCircleIcon },
-	{ name: "Find us", href: "/#our-locations", icon: MapIcon },
-];
+import { callsToAction, type Service, services } from "@/data/services";
 
 export const Services: FC = () => {
 	return (
 		<Popover className="relative">
-			<PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white">
+			<PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:bg-moving-gray/10 focus-visible:bg-moving-gray/10">
 				Moving Services
 				<ChevronDownIcon
 					aria-hidden="true"
@@ -201,7 +61,7 @@ const ServiceWithSubMenu: FC<{ service: Service }> = ({ service }) => {
 	return (
 		<Menu as="div" className="relative w-full inline-block text-left">
 			<MenuButton className="group w-full text-left relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 data-hover:bg-gray-100 data-active:bg-gray-100">
-				<Link
+				<a
 					href={service.href}
 					className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
 				>
@@ -209,7 +69,7 @@ const ServiceWithSubMenu: FC<{ service: Service }> = ({ service }) => {
 						aria-hidden="true"
 						className="size-6 stroke-gray-600 group-hover:stroke-yellow-500 group-data-active:stroke-yellow-600 "
 					/>
-				</Link>
+				</a>
 				<div className="flex-grow">
 					<span className="block font-semibold text-gray-900">
 						{service.name}
@@ -227,12 +87,12 @@ const ServiceWithSubMenu: FC<{ service: Service }> = ({ service }) => {
 				<div className="py-1">
 					{service.subServices.map(({ name, href }) => (
 						<MenuItem key={name}>
-							<Link
+							<a
 								href={href}
 								className="block rounded-xl capitalize px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
 							>
 								{name}
-							</Link>
+							</a>
 						</MenuItem>
 					))}
 				</div>

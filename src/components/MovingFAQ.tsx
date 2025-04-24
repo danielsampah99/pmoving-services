@@ -1,9 +1,12 @@
 "use client";
 
-
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/utils";
-import { Disclosure, DisclosurePanel, DisclosureButton } from "@headlessui/react";
+import {
+	Disclosure,
+	DisclosurePanel,
+	DisclosureButton,
+} from "@headlessui/react";
 
 const faqs = [
 	{

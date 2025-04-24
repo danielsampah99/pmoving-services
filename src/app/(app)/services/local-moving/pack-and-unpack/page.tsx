@@ -1,7 +1,12 @@
 import { ServiceLayout } from "@/components/ServiceLayout";
 import { Info } from "lucide-react";
-import Link from "next/link";
 import React from "react";
+import { FAQs } from "../residential-movers/faq";
+import { frequentQuestions } from "@/data/moving-tips";
+import { RequestQuote } from "../residential-movers/request-quote";
+import { RelatedLocalMoving } from "../residential-movers/related-services";
+import { localMovingServices } from "@/data/services";
+import { OurLocations } from "@/components/OurLocations";
 
 const PackAndUnpack = () => {
 	return (
@@ -10,43 +15,14 @@ const PackAndUnpack = () => {
 			title="Professional Packing & Unpacking Services"
 			desc="Let our expert team handle the tedious task of packing and unpacking your belongings with care and precision."
 		>
-			<div className=" py-12">
-				<div className="max-w-7xl mx-auto px-4">
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-						<div className="flex justify-center">
-							<img
-								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/business-1920w.png"
-								alt="Business Logo"
-								className="h-20 w-auto object-contain max-w-[280px]"
-								loading="eager"
-							/>
-						</div>
-						<div className="flex justify-center">
-							<img
-								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/AngiesList_SSA_2019-1920w.png"
-								alt="Angie's List Logo"
-								className="h-20 w-auto object-contain max-w-[280px]"
-								loading="eager"
-							/>
-						</div>
-						<div className="flex justify-center">
-							<img
-								src="https://irp-cdn.multiscreensite.com/b0f4adc5/dms3rep/multi/inline.svg"
-								alt="Inline Logo"
-								className="h-20 w-auto object-contain max-w-[280px]"
-								loading="eager"
-							/>
-						</div>
-					</div>
-				</div>
-			</div>
+
 			<div className="bg-gray-100 py-12 px-4">
 				<div className="max-w-7xl mx-auto space-y-12">
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						<div className="rounded-lg overflow-hidden p-4 sm:p-6">
 							<h1 className="text-4xl font-bold mb-2 sm:mb-4">Pack & Unpack</h1>
-							<p className="text-background text-lg sm:text-xl mb-4 sm:mb-6">
-								Packer and movers near me
+							<p className="text-background text-lg capitalize sm:text-xl mb-4 sm:mb-6">
+								Packing and Unpacking Movers near me
 							</p>
 							<div className="relative">
 								<img
@@ -61,7 +37,7 @@ const PackAndUnpack = () => {
 							<div className="flex items-center space-x-2 text-background">
 								<Info className="w-6 h-6" />
 								<h2 className="text-xl md:text-2xl font-bold">
-									What is pack and unpack services?
+									What are pack and unpack services?
 								</h2>
 							</div>
 							<p className="text-background">
@@ -113,7 +89,7 @@ const PackAndUnpack = () => {
 							</ul>
 							<div className="space-y-4">
 								<h3 className="text-lg font-semibold">
-									Professional Packing Service Includes:
+									Professional Packing and Unpacking Services Includes:
 								</h3>
 								<ul className="list-disc pl-6 space-y-2 text-gray-700">
 									<li>Room-by-room systematic packing</li>
@@ -123,11 +99,7 @@ const PackAndUnpack = () => {
 									<li>Furniture disassembly and reassembly</li>
 								</ul>
 							</div>
-							<Link href="/free-quote" className="inline-block mt-6">
-								<button className="bg-background cursor-pointer text-white px-6 py-3 rounded-lg font-semibold hover:bg-background-100 transition-colors duration-300">
-									GET A FREE QUOTE
-								</button>
-							</Link>
+
 						</div>
 
 						<div className="rounded-lg overflow-hidden h-full">
@@ -140,6 +112,11 @@ const PackAndUnpack = () => {
 					</div>
 				</div>
 			</div>
+
+			<FAQs faqs={frequentQuestions} />
+			<RequestQuote />
+			<RelatedLocalMoving services={localMovingServices} />
+			<OurLocations />
 		</ServiceLayout>
 	);
 };
