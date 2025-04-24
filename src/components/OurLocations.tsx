@@ -10,7 +10,7 @@ export const officeLocations: OfficeLocation[] = [
 		addressLine1: "949 Schaller Dr S",
 		addressLine2: "Maplewood, MN 55119",
 		phone: "(651) 757-5135",
-		href: "https://duckduckgo.com/?t=ffab&q=949+Schaller+Dr+S+Maplewood%2C+MN+55119&iaxm=directions&source=directions&end=949+Schaller+Dr+S%2C+Saint+Paul%2C+MN++55119%2C+United+States&transport=automobile",
+		href: "https://maps.app.goo.gl/1NGGJkkG3fnqMNav7",
 		image: "/lakeville-office.webp",
 	},
 	{
@@ -19,7 +19,7 @@ export const officeLocations: OfficeLocation[] = [
 		addressLine1: "2514 Plymouth Ave N,",
 		addressLine2: "Minneapolis, MN 55411",
 		phone: "(651) 757-5135",
-		href: "https://www.google.com/maps/dir/5.5427477,-0.2565425/2514+Plymouth+Ave+N,+Minneapolis,+MN+55411,+USA/@1.8464989,-132.8681329,3z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x52b333a87d602d8f:0xa6dc41e3800dfcf6!2m2!1d-93.3127048!2d44.9917309?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D",
+		href: "https://maps.app.goo.gl/KLB5o3UpsbR7dUXA8",
 		image: "/minneapolis-office.webp",
 	},
 	{
@@ -28,7 +28,7 @@ export const officeLocations: OfficeLocation[] = [
 		addressLine1: "7652 215th St W ",
 		addressLine2: "Lakeville, MN 55044",
 		phone: "(651) 757-5135",
-		href: "https://www.google.com/maps/dir/5.5427477,-0.2565425/7652+215th+St+W,+Lakeville,+MN+55044,+USA/@1.8343927,-132.8159556,3z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x87f648350a0ed4db:0xdfc8a98e3bed4564!2m2!1d-93.219706!2d44.6374986?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D",
+		href: "https://maps.app.goo.gl/xwqbi9QcABiLXkN18",
 		image: "/lakeville-office.webp",
 	},
 	{
@@ -37,7 +37,7 @@ export const officeLocations: OfficeLocation[] = [
 		addressLine1: "829 3rd Ave SE",
 		addressLine2: "285 Rochester, MN 55904",
 		phone: "(651) 757-5135",
-		href: "https://www.google.com/maps/dir//829+3rd+Ave+SE+%23285,+Rochester,+MN+55904,+United+States/@44.0144407,-92.5423433,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x87f9e1eacd6816a7:0xa2e7061db820904a!2m2!1d-92.4599426!2d44.0144703?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D",
+		href: "https://maps.app.goo.gl/8Kf3n3R4eXxSVVbW9",
 		image: "/rochester-office.webp",
 	},
 ];
