@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 export const HeroVideo = () => {
 	useEffect(() => {
-		const handleScoll = () => {
+		const handleScroll = () => {
 			const parallax = document.getElementById("parallax-video");
 
 			if (parallax) {
@@ -15,10 +15,10 @@ export const HeroVideo = () => {
 			}
 		};
 
-		window.addEventListener("scroll", handleScoll);
+		window.addEventListener("scroll", handleScroll);
 
 		return () => {
-			window.removeEventListener("scroll", handleScoll);
+			window.removeEventListener("scroll", handleScroll);
 		};
 	}, []);
 
@@ -33,7 +33,7 @@ export const HeroVideo = () => {
 				muted={true}
 				className="w-full h-full object-cover"
 			>
-				<source src="https://aaamoversinc.com/wp-content/uploads/2024/01/aaa_movers_website_cover-Original-Web-.mp4" />
+				<source src="/hero-video.mov" />
 			</video>
 		</div>
 	);
