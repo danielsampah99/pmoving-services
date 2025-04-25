@@ -33,7 +33,7 @@ export const RelatedLocalMoving: FC<RelatedLocalMovingProps> = (props) => {
 								className="group sm:flex lg:block"
 							>
 								<div className="sm:flex-shrink-0">
-									<service.icon className="group-hover:fill-white group-hover:stroke-moving-yellow transition-colors duration-300 delay-75 fill-moving-yellow stroke-moving-gray/30 size-10" />
+									<service.icon className="group-hover:fill-yellow-600 group-hover:stroke-moving-yellow transition-colors duration-300 delay-75 fill-moving-yellow stroke-moving-gray/30 size-10" />
 								</div>
 								<div className="mt-4 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6">
 									<h3 className="group-hover:underline text-sm font-medium text-gray-900">

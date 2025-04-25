@@ -139,3 +139,209 @@ export const longDistanceQuestions: FAQType[] = [
 			"Many professional movers offer full or partial packing services, unpacking, and loading/unloading only options. Premium Moving Services provides customizable services including evening and weekend availability, and specialized handling for fragile or valuable items.",
 	},
 ];
+
+export const antiqueMovingQuestions: FAQType[] = [
+	{
+		question: "How do you protect valuable antiques during the moving process?",
+		answer:
+			"We use specialized packing materials including acid-free paper, custom crating, premium furniture blankets, and high-density foam cushioning. Each antique is individually wrapped and secured with particular attention to fragile components. For extremely valuable or delicate items, we create custom wooden crates with interior foam padding shaped specifically to your piece.",
+	},
+	{
+		question: "Do you provide insurance coverage for antique items?",
+		answer:
+			"Yes, we offer comprehensive insurance options for antique moves. While our standard coverage provides basic protection, we recommend our specialized antique valuation coverage for valuable pieces. This requires professional appraisal documentation, but ensures full replacement value protection. We're happy to discuss these options in detail during your pre-move consultation.",
+	},
+	{
+		question: "What experience do your movers have with handling antiques?",
+		answer:
+			"Our antique moving specialists undergo extensive training in proper handling techniques for period furniture, artwork, and collectibles. Many have 10+ years of experience specifically with high-value and museum-quality pieces. We also maintain relationships with restoration specialists and conservators who advise on best practices for particularly challenging or unique items.",
+	},
+	{
+		question: "Can you disassemble and reassemble complex antique furniture?",
+		answer:
+			"Absolutely. Our team is skilled in the careful disassembly of antique furniture, including documenting each component with photos and labels. We use appropriate tools and techniques that respect original construction methods. Upon delivery, the same specialists who disassembled your piece will handle reassembly, ensuring every detail is properly restored to its original condition.",
+	},
+	{
+		question:
+			"How do you handle climate control concerns for sensitive antiques?",
+		answer:
+			"For items sensitive to temperature and humidity changes, we offer climate-controlled vehicles and can arrange for specialized transportation. We carefully plan move timing to avoid extreme weather conditions, and can provide temporary climate-controlled storage if needed. For particularly sensitive items like antique musical instruments or certain wood finishes, we coordinate with specialists to determine the optimal moving conditions.",
+	},
+	{
+		question:
+			"Do you provide appraisal services for antique items before moving?",
+		answer:
+			"While we don't provide appraisals directly, we maintain partnerships with certified antique appraisers who can document the value of your collection before moving. This is highly recommended for insurance purposes. We can coordinate these services as part of your moving package, ensuring all documentation is properly prepared for both insurance coverage and potential customs requirements for interstate or international moves.",
+	},
+];
+
+export const seniorRelocationFAQs: FAQType[] = [
+	{
+		question: "What specialized services do you offer for senior relocations?",
+		answer:
+			"Our senior relocation services include personalized planning, downsizing assistance, careful packing of sentimental items, coordination with retirement communities or care facilities, setup of essential items in the new home, and a slower-paced moving process tailored to accommodate seniors' needs and comfort levels.",
+	},
+	{
+		question: "How do you help seniors with downsizing decisions?",
+		answer:
+			"We provide compassionate downsizing assistance by working alongside seniors and their families to sort through belongings, identify which items to keep, donate, sell, or pass to family members. Our experienced team offers gentle guidance while respecting emotional attachments to possessions and ensuring seniors maintain control throughout the process.",
+	},
+	{
+		question:
+			"Do you coordinate with retirement communities and care facilities?",
+		answer:
+			"Yes, we have extensive experience working with retirement communities and care facilities. We coordinate moving dates and times according to their specific requirements, understand their space limitations, and ensure all paperwork and move-in procedures are followed correctly to make the transition as smooth as possible.",
+	},
+	{
+		question: "How do you handle medical equipment during a senior move?",
+		answer:
+			"Medical equipment receives special attention during senior relocations. Our team is trained in the proper handling, disassembly, transportation, and reassembly of medical equipment such as hospital beds, mobility aids, and oxygen concentrators. We prioritize setting up this equipment first at the new location to ensure immediate accessibility.",
+	},
+	{
+		question: "Can you help set up the new home to be safe and comfortable?",
+		answer:
+			"Absolutely. We offer complete setup services including furniture arrangement with accessibility in mind, unpacking essentials, making beds, hanging clothes, setting up the kitchen, and installing basic safety features. We can even arrange items similarly to the previous home to help seniors adjust more easily to their new surroundings.",
+	},
+	{
+		question: "How do you make the moving day less stressful for seniors?",
+		answer:
+			"We reduce moving day stress by assigning dedicated senior move specialists who work at a comfortable pace, provide clear communication throughout the process, offer a quiet space away from the bustle of moving activities, handle all physical aspects of the move, and ensure medications and personal items are easily accessible. Family members can be as involved as needed or desired.",
+	},
+];
+
+export const laborOnlyFAQs: FAQType[] = [
+	{
+		question: "What exactly is included in your 'labor only' moving service?",
+		answer:
+			"Our labor only service provides professional movers to handle the physical aspects of your move while you provide the transportation. We can load your rental truck, POD, or container, rearrange furniture within your home, or unload your vehicle at your destination. This service gives you control over transportation while avoiding the physical strain of moving heavy items.",
+	},
+	{
+		question: "How many movers will you send for a labor only job?",
+		answer:
+			"We typically recommend 2-4 movers depending on the size of your move, time constraints, and complexity. For a studio or one-bedroom apartment, 2 movers are usually sufficient. Larger homes or jobs with many heavy items may require 3-4 movers to complete the work efficiently and safely.",
+	},
+	{
+		question: "Do I need to provide any equipment for the labor only service?",
+		answer:
+			"Our movers bring basic tools for furniture disassembly/reassembly, moving straps, and dollies. If you've arranged for a rental truck or container, you should ensure it has furniture pads/blankets. For specialty items, please let us know in advance so we can bring appropriate equipment.",
+	},
+	{
+		question: "How do you charge for labor only moving services?",
+		answer:
+			"We charge an hourly rate based on the number of movers needed for your job. There is typically a minimum hour requirement (usually 2-3 hours). The clock starts when our team arrives at your location and ends when the job is completed. We can provide an estimate of hours based on your specific needs.",
+	},
+	{
+		question: "Can your labor-only movers help with furniture arrangement?",
+		answer:
+			"Absolutely! Our movers can help with furniture rearrangement, whether you're redecorating, making room for new furniture, or preparing for home renovations. We can move items within the same room or between different floors of your home.",
+	},
+	{
+		question: "What if I need to reschedule my labor only moving service?",
+		answer:
+			"We understand plans can change. Please notify us at least 48 hours in advance to reschedule without penalty. Last-minute cancellations or reschedules may incur a fee. We'll do our best to accommodate your new date and time based on our availability.",
+	},
+];
+
+export const furnitureMovingFAQs: FAQType[] = [
+	{
+		question: "How do you protect furniture during a move?",
+		answer:
+			"We use a comprehensive system to protect your furniture including furniture blankets, plastic stretch wrap, corrugated corner protectors, and custom crating for high-value pieces. All furniture is properly padded before being loaded, and we use furniture straps to secure items during transport. Our trucks are equipped with air-ride suspension to minimize vibration.",
+	},
+	{
+		question: "Do you disassemble and reassemble furniture?",
+		answer:
+			"Yes, we offer complete disassembly and reassembly services for beds, tables, desks, entertainment centers, and other items that require it. Our movers carry basic tools and are trained in proper techniques. We keep all hardware organized in labeled bags to ensure nothing gets lost during the move.",
+	},
+	{
+		question: "Can you move large or unusual furniture pieces?",
+		answer:
+			"Absolutely. Our teams are experienced with moving oversized sofas, sectionals, armoires, pianos, pool tables, exercise equipment, and other challenging items. We use specialized equipment like piano boards, appliance dollies, and furniture sliders to move these items safely and efficiently.",
+	},
+	{
+		question: "What about delicate or antique furniture?",
+		answer:
+			"We take extra precautions with delicate and antique pieces. These items receive additional padding, custom crating if necessary, and are handled by our most experienced team members. We can also use climate-controlled vehicles for extremely valuable antiques that may be sensitive to temperature or humidity changes.",
+	},
+	{
+		question: "How do you handle furniture placement in my new home?",
+		answer:
+			"We'll place furniture exactly where you want it in your new home. Many clients find it helpful to have a basic floor plan or to mark rooms with post-it notes. We're happy to reposition furniture until you're satisfied with the arrangement, and we can make suggestions based on our experience if you're undecided.",
+	},
+	{
+		question:
+			"What if my furniture is too large to fit through doorways or stairwells?",
+		answer:
+			"Our experienced movers are skilled at navigating tight spaces using techniques like hoisting, partial disassembly, or using alternate entry points such as balconies or windows when necessary and safe. In the rare case that an item truly cannot be moved into your new space, we'll discuss options with you before proceeding.",
+	},
+];
+
+export const gunSafetyMovingFAQs: FAQType[] = [
+	{
+		question: "How do you ensure the safe transport of firearms during a move?",
+		answer:
+			"We follow all federal, state, and local regulations for transporting firearms. All firearms must be unloaded and locked in secure cases separate from ammunition. We require proper documentation of ownership, and our team is trained in proper handling procedures. For added security, we can arrange for firearms to be transported separately with specialized security measures.",
+	},
+	{
+		question: "Can you move gun safes and heavy security equipment?",
+		answer:
+			"Yes, we specialize in moving gun safes, security safes, and other heavy security equipment. Our team uses specialized equipment including safe dollies, stair climbers, and lift gates to safely move these extremely heavy items. We have experience with safes from all major manufacturers and in weights exceeding 1,000 pounds.",
+	},
+	{
+		question: "What precautions do you take when moving ammunition?",
+		answer:
+			"Ammunition must be packed separately from firearms in manufacturer packaging or ammo boxes. We cannot transport large quantities of ammunition or reloading supplies like gunpowder or primers as these are considered hazardous materials. Please consult with us about specific quantities and types of ammunition before your move.",
+	},
+	{
+		question: "Do I need to provide any documentation for moving firearms?",
+		answer:
+			"We require proof of ownership for all firearms being transported. Additionally, you should be aware of the firearms laws in your destination location, as regulations vary by state and locality. If moving across state lines, we recommend consulting with an attorney familiar with firearms laws to ensure compliance.",
+	},
+	{
+		question:
+			"How do you protect my privacy when moving firearms and security equipment?",
+		answer:
+			"We understand the importance of discretion when moving firearms and security equipment. Our teams use unmarked vehicles when requested, and we never label boxes containing firearms or indicate the presence of weapons or security equipment to outside parties. All staff handling such moves sign confidentiality agreements.",
+	},
+	{
+		question: "Can you help with reinstalling a gun safe at my new location?",
+		answer:
+			"Yes, we provide complete installation services for gun safes at your new location. This includes positioning the safe according to your specifications, anchoring it to the floor if desired (subject to floor type and building regulations), and ensuring it is level and properly functioning. We can also advise on optimal placement for security and accessibility.",
+	},
+];
+
+export const loadingUnloadingFAQs: FAQType[] = [
+	{
+		question: "What does your loading and unloading service include?",
+		answer:
+			"Our loading and unloading service includes professional handling of your pre-packed items, strategic loading to maximize space and minimize shifting during transport, careful unloading at your destination, and placement of boxes and furniture in their designated rooms according to your instructions.",
+	},
+	{
+		question:
+			"Do I need to be present during the loading and unloading process?",
+		answer:
+			"We recommend having someone present who can direct our team regarding furniture placement and special handling instructions. However, with clear written instructions and proper arrangements for access, we can complete the service without your physical presence if necessary.",
+	},
+	{
+		question:
+			"How do you ensure the safety of my items during loading and unloading?",
+		answer:
+			"Our professionals use industry-standard techniques including furniture padding, stretch wrap, doorway protection, and proper lifting methods. We secure items in the truck using straps, blankets, and strategic loading patterns to prevent shifting. Each team member is trained in proper handling procedures for different types of items.",
+	},
+	{
+		question: "Can you handle specialty items during loading and unloading?",
+		answer:
+			"Yes, we have experience with specialty items such as pianos, pool tables, artwork, antiques, and large appliances. Please inform us in advance about any specialty items so we can assign team members with appropriate expertise and bring specialized equipment if necessary.",
+	},
+	{
+		question:
+			"What if my furniture doesn't fit through doorways or stairwells?",
+		answer:
+			"Our experienced movers are skilled at navigating tight spaces. If necessary, we can disassemble and reassemble furniture to fit through narrow doorways or stairwells. In rare cases where an item truly cannot fit, we'll discuss alternative options with you before proceeding.",
+	},
+	{
+		question: "How long does the loading and unloading process typically take?",
+		answer:
+			"The duration varies based on the volume of items, accessibility of both locations, presence of stairs or elevators, distance items must be carried, and whether any special handling is required. For an average 2-bedroom apartment with good access, loading typically takes 2-3 hours and unloading 1-2 hours.",
+	},
+];

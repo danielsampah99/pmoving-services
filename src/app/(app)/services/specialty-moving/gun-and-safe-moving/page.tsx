@@ -1,6 +1,12 @@
 "use client";
 
 import { ServiceLayout } from "@/components/ServiceLayout";
+import { OurLocations } from "@/components/OurLocations";
+import { RequestQuote } from "../../local-moving/residential-movers/request-quote";
+import { FAQs } from "../../local-moving/residential-movers/faq";
+import { RelatedLocalMoving } from "../../local-moving/residential-movers/related-services";
+import { gunSafetyMovingFAQs } from "@/data/moving-tips";
+import { specialtyMovingServices } from "@/data/services";
 
 const GunAndSafeMovingPage = () => {
 	return (
@@ -100,6 +106,10 @@ const GunAndSafeMovingPage = () => {
 					</div>
 				</section>
 			</div>
+			<RelatedLocalMoving services={specialtyMovingServices} />
+			<RequestQuote />
+			<FAQs faqs={gunSafetyMovingFAQs} />
+			<OurLocations />
 		</ServiceLayout>
 	);
 };

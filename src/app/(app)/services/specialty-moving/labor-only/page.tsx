@@ -2,7 +2,11 @@
 
 import { ServiceLayout } from "@/components/ServiceLayout";
 import { OurLocations } from "@/components/OurLocations";
-import { RelatedServices } from "@/components/RelatedServices";
+import { RequestQuote } from "../../local-moving/residential-movers/request-quote";
+import { FAQs } from "../../local-moving/residential-movers/faq";
+import { RelatedLocalMoving } from "../../local-moving/residential-movers/related-services";
+import { laborOnlyFAQs } from "@/data/moving-tips";
+import { specialtyMovingServices } from "@/data/services";
 
 const LaborOnlyMovingPage = () => {
 	return (
@@ -75,9 +79,11 @@ const LaborOnlyMovingPage = () => {
 						</ul>
 					</div>
 				</div>
+				<RelatedLocalMoving services={specialtyMovingServices} />
+				<RequestQuote />
+				<FAQs faqs={laborOnlyFAQs} />
+				<OurLocations />
 			</ServiceLayout>
-			<RelatedServices />
-			<OurLocations />
 		</div>
 	);
 };

@@ -1,6 +1,10 @@
 import { ServiceLayout } from "@/components/ServiceLayout";
 import { OurLocations } from "@/components/OurLocations";
-import { RelatedServices } from "@/components/RelatedServices";
+import { RequestQuote } from "../../local-moving/residential-movers/request-quote";
+import { FAQs } from "../../local-moving/residential-movers/faq";
+import { RelatedLocalMoving } from "../../local-moving/residential-movers/related-services";
+import { antiqueMovingQuestions } from "@/data/moving-tips";
+import { specialtyMovingServices } from "@/data/services";
 
 const AntiqueFurnitureMovingPage = () => {
 	return (
@@ -55,7 +59,9 @@ const AntiqueFurnitureMovingPage = () => {
 					</section>
 				</div>
 			</div>
-			<RelatedServices />
+			<RelatedLocalMoving services={specialtyMovingServices} />
+			<RequestQuote />
+			<FAQs faqs={antiqueMovingQuestions} />
 			<OurLocations />
 		</ServiceLayout>
 	);
