@@ -137,28 +137,6 @@ export default function StorageContent() {
 						the exact same condition as when you originally entrusted it to us.
 					</motion.p>
 				</motion.div>
-
-				<motion.div
-					variants={itemVariants}
-					className="mt-8 sm:mt-12 bg-gray-100 p-4 sm:p-8 rounded-lg"
-				>
-					<h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
-						Need a quote on storage services?
-					</h3>
-					<p className="text-base sm:text-lg">
-						Contact us today! We would love to assist you with whatever storage
-						needs you may have. Our secure warehouse is a safe place to keep
-						your possessions for as long as you need. Please feel free to submit
-						our online form to get a free quote. Or give us a call at
-						<a
-							href="tel:6517575135"
-							className="text-blue-600 hover:underline ml-1 break-keep"
-						>
-							(651) 757-5135
-						</a>
-						if you need additional info or have any questions.
-					</p>
-				</motion.div>
 			</div>
 		</motion.section>
 	);
