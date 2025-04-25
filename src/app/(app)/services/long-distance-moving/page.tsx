@@ -1,7 +1,12 @@
 import { LongServiceDetails } from "@/components/LongServiceDetails";
 import { OurLocations } from "@/components/OurLocations";
 import { PackingHerolong } from "@/components/PackingHeroLong";
-import { RelatedServicesLong } from "@/components/RelatedServicesLong";
+import { FAQs } from "@/app/(app)/services/local-moving/residential-movers/faq";
+import { longDistanceQuestions } from "@/data/moving-tips";
+import { RequestQuote } from "@/app/(app)/services/local-moving/residential-movers/request-quote";
+import { RelatedMovingServices } from "./related-services";
+import { longDistanceMovingServices } from "@/data/services";
+
 
 const LongDistanceMovingPage = () => {
 	return (
@@ -12,7 +17,9 @@ const LongDistanceMovingPage = () => {
 				title="Long Distance Moving"
 			/>
 			<LongServiceDetails />
-			<RelatedServicesLong />
+			<RelatedMovingServices services={longDistanceMovingServices} />
+			<RequestQuote />
+			<FAQs faqs={longDistanceQuestions} />
 			<OurLocations />
 		</div>
 	);

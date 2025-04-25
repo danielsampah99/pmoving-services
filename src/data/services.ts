@@ -17,6 +17,12 @@ import {
 	UsersIcon,
 } from "lucide-react";
 import { CorporateIcon } from "@/components/icons/corporate-icon";
+import { AntiqueIcon } from "@/components/icons/antique-icon";
+import { FurnitureIcon } from "@/components/icons/furniture-icon";
+import { GunSafetyIcon } from "@/components/icons/gun-safety-icon";
+import { LaborOnlyIcon } from "@/components/icons/labor-only-icon";
+import { SeniorIcon } from "@/components/icons/senior-icon";
+import { UnloadingIcon } from "@/components/icons/unloading-icon";
 
 export type Service = {
 	id: number;
@@ -259,5 +265,48 @@ export const longDistanceMovingServices: RelatedServices[] = [
 		description: "Comprehensive home moving services over extended distances",
 		icon: LucideTruckIcon,
 		href: "/services/long-distance-moving/long-distance-residential",
+	},
+];
+
+export const specialtyMovingServices: RelatedServices[] = [
+	{
+		name: "Antique Furniture",
+		description: "Handling your history with white-glove precision and care",
+		icon: AntiqueIcon,
+		href: "/services/specialty-moving/antique-furniture",
+	},
+	{
+		name: "All Furniture Moving",
+		description:
+			"From sofas to armoires, we move the pieces that make your house a home",
+		icon: FurnitureIcon,
+		href: "/services/specialty-moving/furniture-moving",
+	},
+	{
+		name: "Gun & Safe Moving",
+		description:
+			"Secure transport for your most valuable and sensitive possessions",
+		icon: GunSafetyIcon,
+		href: "/services/specialty-moving/gun-and-safe-moving",
+	},
+	{
+		name: "Labor Only Moving",
+		description: "Your plan, our muscle - perfect teamwork for your move",
+		icon: LaborOnlyIcon,
+		href: "/services/specialty-moving/labor-only",
+	},
+	{
+		name: "Loading & Unloading",
+		description:
+			"We handle the heavy lifting while you focus on the journey ahead",
+		icon: UnloadingIcon,
+		href: "/services/specialty-moving/loading-and-unloading",
+	},
+	{
+		name: "Senior Relocation",
+		description:
+			"Compassionate moving services tailored for life's golden transitions",
+		icon: SeniorIcon,
+		href: "/services/specialty-moving/senior-relocation",
 	},
 ];

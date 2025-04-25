@@ -62,7 +62,7 @@ export const serviceCardData: ServiceCardData[] = [
 		title: "Moving Labor",
 		description:
 			"Skilled moving professionals ready to handle heavy lifting and careful transportation of your belongings.",
-		href: "services/moving-labor",
+		href: "/services/specialty-moving/labor-only",
 		icon: UsersIcon,
 	},
 	{
@@ -78,7 +78,7 @@ export const serviceCardData: ServiceCardData[] = [
 		title: "Residential Moving",
 		description:
 			"Professional moving services tailored to your needs. We handle your belongings with utmost care.",
-		href: "/services/residential-moving",
+		href: "/services/local-moving/residential-movers",
 		icon: HomeIcon,
 	},
 	{
@@ -94,7 +94,7 @@ export const serviceCardData: ServiceCardData[] = [
 		title: "Apartment Moving",
 		description:
 			"Seamless moving with careful planning and execution for the best relocation experience.",
-		href: "/services/apartment-moving",
+		href: "/services/local-moving/apartment-movers",
 		icon: Building2Icon,
 	},
 	{
@@ -110,7 +110,7 @@ export const serviceCardData: ServiceCardData[] = [
 		title: "Safes & Gun safes",
 		description:
 			"Secure, climate-controlled storage solutions for both short-term and long-term needs.",
-		href: "/services/safes-and-gun-safes",
+		href: "/services/specialty-moving/gun-and-safe-moving",
 		icon: SafeIcon,
 	},
 	{
