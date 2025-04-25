@@ -86,3 +86,56 @@ export const frequentQuestions: FAQType[] = [
 			"Having sturdy and well-sized boxes can make a big difference in organizing your move efficiently. Label them properly for easy unpacking.",
 	},
 ];
+
+export const longDistanceQuestions: FAQType[] = [
+	{
+		question: "Plan Ahead",
+		answer:
+			"Make your reservations for movers two to four weeks before your move day. Start planning early to ensure a smooth transition. Clean out closets, attic, and basement as soon as you decide it's time to move.",
+	},
+	{
+		question: "Use Proper Packing Materials",
+		answer:
+			"Never use used boxes or food/supermarket boxes as they may not be strong enough to support your possessions. Use clear packing tape, not duct tape which doesn't adhere well to cardboard. For fragile items like fine china and lampshades, use packing paper instead of newspaper to prevent ink stains.",
+	},
+	{
+		question: "Choose the Right Boxes",
+		answer:
+			"The heavier the item, the smaller the box. Use small boxes for books as they get very heavy quickly. Use wardrobe boxes for clothing and specialty boxes for dishes, mirrors, and artwork. Clearly label all boxes on top and sides with contents and destination room.",
+	},
+	{
+		question: "Pack Strategically",
+		answer:
+			"Avoid mixing items from different rooms in the same box. Always stack dishes upward when packing. Pack a separate box of essential items you'll need immediately at your new home and make sure it's loaded last on the truck for easy access.",
+	},
+	{
+		question: "Handle Electronics Carefully",
+		answer:
+			"Try to pack electronic equipment in their original boxes if possible. If not available, use anti-static bubble wrap (usually pink) for computers and stereos to prevent static electricity damage. Use resealable plastic bags for small parts when disassembling items.",
+	},
+	{
+		question: "Protect Important Documents",
+		answer:
+			"Pack important and sentimental documents separately to be easily accessible, including children's health records, passports, family records, insurance information, and photo albums.",
+	},
+	{
+		question: "Prepare for Moving Day",
+		answer:
+			"Defrost the refrigerator the day before your move. Clean your stove before moving out. Make a 'survival closet' of supplies for the final cleanup. Have enough cash to get you through move day. If relying on friends or family to help, have a backup plan.",
+	},
+	{
+		question: "Plan Your Utilities and Services",
+		answer:
+			"Schedule utility disconnect times about a week before your move day to avoid paying for services when you're not there. Mail change of address forms at least a week before moving. Cancel newspapers, cable, pest control, and other services in advance.",
+	},
+	{
+		question: "Select the Right Moving Company",
+		answer:
+			"Verify the company is licensed and insured. Ask about their pricing structure, whether they charge by piece or hour, and if they have minimum charges or extra fees for large items or stairs. Confirm they use full-time employees rather than temps, and ask about their cancellation policy.",
+	},
+	{
+		question: "Consider Additional Services",
+		answer:
+			"Many professional movers offer full or partial packing services, unpacking, and loading/unloading only options. Premium Moving Services provides customizable services including evening and weekend availability, and specialized handling for fragile or valuable items.",
+	},
+];

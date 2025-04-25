@@ -1,5 +1,11 @@
 import { ServiceLayout } from "@/components/ServiceLayout";
 import { Info } from "lucide-react";
+import { FAQs } from "../../local-moving/residential-movers/faq";
+import { longDistanceQuestions } from "@/data/moving-tips";
+import { RequestQuote } from "../../local-moving/residential-movers/request-quote";
+import { RelatedMovingServices } from "../related-services";
+import { longDistanceMovingServices } from "@/data/services";
+import { OurLocations } from "@/components/OurLocations";
 
 const LongDistanceCommercial = () => {
 	return (
@@ -8,45 +14,14 @@ const LongDistanceCommercial = () => {
 			title="Long Distance Commercial Moving"
 			desc="Professional cross-country commercial moving services with expert logistics and business continuity planning."
 		>
-			<div className="py-12">
-				<div className="max-w-7xl mx-auto px-4">
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-						<div className="flex justify-center">
-							<img
-								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/business-1920w.png"
-								alt="Business Logo"
-								className="h-20 w-auto object-contain max-w-[280px]"
-								loading="eager"
-							/>
-						</div>
-						<div className="flex justify-center">
-							<img
-								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/AngiesList_SSA_2019-1920w.png"
-								alt="Angie's List Logo"
-								className="h-20 w-auto object-contain max-w-[280px]"
-								loading="eager"
-							/>
-						</div>
-						<div className="flex justify-center">
-							<img
-								src="https://irp-cdn.multiscreensite.com/b0f4adc5/dms3rep/multi/inline.svg"
-								alt="Inline Logo"
-								className="h-20 w-auto object-contain max-w-[280px]"
-								loading="eager"
-							/>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className="bg-gray-100 py-12 px-4">
+			<div className="py-12 px-4">
 				<div className="max-w-7xl mx-auto space-y-12">
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						<div className="rounded-lg overflow-hidden">
 							<div className="relative group cursor-pointer overflow-hidden rounded-lg mb-6">
 								<div className="aspect-w-16 aspect-h-9">
 									<img
-										src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/13%2Bways%2Bto%2Bexpedite%2Byour%2Bmoving-640w-1920w.png"
+										src="/moving-process.webp"
 										alt="Commercial Moving Solutions"
 										className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
 									/>
@@ -129,6 +104,11 @@ const LongDistanceCommercial = () => {
 					</div>
 				</div>
 			</div>
+
+			<RelatedMovingServices services={longDistanceMovingServices} />
+			<RequestQuote />
+			<FAQs faqs={longDistanceQuestions} />
+			<OurLocations />
 		</ServiceLayout>
 	);
 };

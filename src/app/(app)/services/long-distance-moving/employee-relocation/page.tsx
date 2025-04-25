@@ -1,6 +1,11 @@
 import { ServiceLayout } from "@/components/ServiceLayout";
 import { Info } from "lucide-react";
-import Link from "next/link";
+import { FAQs } from "../../local-moving/residential-movers/faq";
+import { longDistanceQuestions } from "@/data/moving-tips";
+import { RequestQuote } from "../../local-moving/residential-movers/request-quote";
+import { RelatedMovingServices } from "../related-services";
+import { longDistanceMovingServices } from "@/data/services";
+import { OurLocations } from "@/components/OurLocations";
 
 const EmployeeRelocation = () => {
 	return (
@@ -9,38 +14,7 @@ const EmployeeRelocation = () => {
 			title="Employee Relocation Services"
 			desc="Professional employee relocation solutions ensuring smooth transitions for your workforce."
 		>
-			<div className="py-12">
-				<div className="max-w-7xl mx-auto px-4">
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-						<div className="flex justify-center">
-							<img
-								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/business-1920w.png"
-								alt="Business Logo"
-								className="h-20 w-auto object-contain max-w-[280px]"
-								loading="eager"
-							/>
-						</div>
-						<div className="flex justify-center">
-							<img
-								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/AngiesList_SSA_2019-1920w.png"
-								alt="Angie's List Logo"
-								className="h-20 w-auto object-contain max-w-[280px]"
-								loading="eager"
-							/>
-						</div>
-						<div className="flex justify-center">
-							<img
-								src="https://irp-cdn.multiscreensite.com/b0f4adc5/dms3rep/multi/inline.svg"
-								alt="Inline Logo"
-								className="h-20 w-auto object-contain max-w-[280px]"
-								loading="eager"
-							/>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className="bg-gray-100 py-12 px-4">
+			<div className="py-12 px-4">
 				<div className="max-w-7xl mx-auto space-y-12">
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						<div className="rounded-lg overflow-hidden p-4 sm:p-6">
@@ -117,12 +91,6 @@ const EmployeeRelocation = () => {
 								<li>Secure transportation and delivery</li>
 								<li>Setup assistance at new location</li>
 							</ul>
-
-							<Link href="/free-quote" className="inline-block mt-6">
-								<button className="bg-background cursor-pointer text-white px-6 py-3 rounded-lg font-semibold hover:bg-background-100 transition-colors duration-300">
-									GET A FREE QUOTE
-								</button>
-							</Link>
 						</div>
 
 						<div className="rounded-lg overflow-hidden h-full">
@@ -135,6 +103,11 @@ const EmployeeRelocation = () => {
 					</div>
 				</div>
 			</div>
+
+			<RelatedMovingServices services={longDistanceMovingServices} />
+			<RequestQuote />
+			<FAQs faqs={longDistanceQuestions} />
+			<OurLocations />
 		</ServiceLayout>
 	);
 };

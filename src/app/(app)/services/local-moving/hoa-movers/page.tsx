@@ -27,7 +27,7 @@ const HOAMovers = () => {
 							</p>
 							<div className="relative">
 								<img
-									src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/13%2Bways%2Bto%2Bexpedite%2Byour%2Bmoving-640w-1920w.png"
+									src="/moving-process.webp"
 									alt="Professional HOA Moving Services"
 									className="w-full rounded-lg max-h-[700px] object-cover"
 								/>

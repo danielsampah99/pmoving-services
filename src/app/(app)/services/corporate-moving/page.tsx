@@ -52,7 +52,7 @@ const CorporateMoving = () => {
 							<div className="relative group cursor-pointer overflow-hidden rounded-xl shadow-lg">
 								<div className="aspect-w-16 aspect-h-9">
 									<img
-										src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/13%2Bways%2Bto%2Bexpedite%2Byour%2Bmoving-640w-1920w.png"
+										src="/moving-process.webp"
 										alt="Moving Guide"
 										className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
 									/>

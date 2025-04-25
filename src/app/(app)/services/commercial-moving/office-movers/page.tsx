@@ -15,7 +15,7 @@ const OfficeMovers = () => {
 			title="Office Moving Services"
 			desc="Professional office relocation services ensuring minimal business disruption and maximum efficiency."
 		>
-						<div className="py-12 px-4">
+			<div className="py-12 px-4">
 				<div className="max-w-7xl mx-auto space-y-12">
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						<div className="rounded-lg overflow-hidden p-4 sm:p-6">
@@ -91,8 +91,6 @@ const OfficeMovers = () => {
 								<li>Professional installation at new location</li>
 								<li>Post-move support and cleanup</li>
 							</ul>
-
-
 						</div>
 
 						<div className="rounded-lg overflow-hidden h-full">

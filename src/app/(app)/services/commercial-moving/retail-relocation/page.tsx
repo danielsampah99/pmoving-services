@@ -14,8 +14,6 @@ const RetailRelocation = () => {
 			title="Retail Relocation Services"
 			desc="Professional retail relocation solutions ensuring seamless transitions for retail businesses."
 		>
-
-
 			<div className="py-12 px-4">
 				<div className="max-w-7xl mx-auto space-y-12">
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -93,8 +91,6 @@ const RetailRelocation = () => {
 								<li>Secure transportation</li>
 								<li>Store setup and fixture installation</li>
 							</ul>
-
-
 						</div>
 
 						<div className="rounded-lg overflow-hidden h-full">

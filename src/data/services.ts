@@ -5,6 +5,7 @@ import {
 	CubeTransparentIcon,
 	HomeIcon,
 } from "@heroicons/react/24/outline";
+import { TruckIcon as LucideTruckIcon } from "lucide-react";
 
 import type { IconType } from "@/components/HeroIcon";
 import { MapIcon, PlayCircleIcon } from "@heroicons/react/20/solid";
@@ -230,5 +231,33 @@ export const commercialMovingServices: RelatedServices[] = [
 		description: "Heavy-duty logistics for your industrial space",
 		icon: CorporateIcon,
 		href: "/services/commercial-moving/warehouse-industrial",
+	},
+];
+
+export const longDistanceMovingServices: RelatedServices[] = [
+	{
+		name: "Employee Relocation",
+		description: "Stress-free moving solutions for relocated staff members",
+		icon: LucideTruckIcon,
+		href: "/services/long-distance-moving/employee-relocation",
+	},
+	{
+		name: "Interstate Moving",
+		description: "Cross-state moving expertise with nationwide coverage",
+		icon: LucideTruckIcon,
+		href: "/services/long-distance-moving/interstate-special-moving",
+	},
+	{
+		name: "Commercial Long Distance",
+		description:
+			"Business relocation across state lines with minimal disruption",
+		icon: LucideTruckIcon,
+		href: "/services/long-distance-moving/long-distance-commercial",
+	},
+	{
+		name: "Residential Long Distance",
+		description: "Comprehensive home moving services over extended distances",
+		icon: LucideTruckIcon,
+		href: "/services/long-distance-moving/long-distance-residential",
 	},
 ];

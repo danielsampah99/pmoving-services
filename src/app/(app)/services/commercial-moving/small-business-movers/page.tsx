@@ -16,7 +16,6 @@ const SmallBusinessMovers = () => {
 		>
 			{/* Trusted Brands Section */}
 
-
 			<div className="py-12 px-4">
 				<div className="max-w-7xl mx-auto space-y-12">
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -78,8 +77,6 @@ const SmallBusinessMovers = () => {
 								<li>Setup at new location</li>
 								<li>Post-move support</li>
 							</ul>
-
-
 						</div>
 
 						<div className="rounded-lg overflow-hidden h-full">
