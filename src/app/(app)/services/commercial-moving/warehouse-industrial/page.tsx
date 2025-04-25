@@ -1,7 +1,11 @@
 import { ServiceLayout } from "@/components/ServiceLayout";
-import { OurLocations } from "@/components/OurLocations";
-import { RelatedServicesLong } from "@/components/RelatedServicesLong";
 import { WarehouseServiceDetails } from "@/components/WarehouseServiceDetails";
+import { FAQs } from "../../local-moving/residential-movers/faq";
+import { frequentQuestions } from "@/data/moving-tips";
+import { RequestQuote } from "../../local-moving/residential-movers/request-quote";
+import { RelatedServices } from "../related-services";
+import { commercialMovingServices } from "@/data/services";
+import { OurLocations } from "@/components/OurLocations";
 
 const WarehouseIndustrialPage = () => {
 	return (
@@ -13,7 +17,9 @@ const WarehouseIndustrialPage = () => {
 			>
 				<WarehouseServiceDetails />
 			</ServiceLayout>
-			<RelatedServicesLong />
+			<RelatedServices services={commercialMovingServices} />
+			<RequestQuote />
+			<FAQs faqs={frequentQuestions} />
 			<OurLocations />
 		</div>
 	);

@@ -15,7 +15,6 @@ const ApartmentMovers = () => {
 			title="Apartment Moving Services"
 			desc="Professional apartment moving services specializing in efficient and secure relocations for apartments of all sizes."
 		>
-
 			<div className="py-12 px-4">
 				<div className="max-w-7xl mx-auto space-y-12">
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">

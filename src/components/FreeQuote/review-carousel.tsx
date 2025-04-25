@@ -40,8 +40,7 @@ export const ReviewCarousel = ({ reviews }: { reviews: ReviewType }) => {
 		<div
 			className="rounded-xl overflow-hidden h-full flex flex-col relative bg-cover bg-center"
 			style={{
-				backgroundImage:
-					"url('https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Deshun+and+Drake+c-640w.jpg')",
+				backgroundImage: "url('/reviews-background.webp')",
 				backgroundSize: "cover",
 				backgroundPosition: "center",
 			}}
@@ -142,13 +141,13 @@ export const ReviewsMobile = ({ reviews }: { reviews: ReviewType }) => {
 		<div
 			className="rounded-xl overflow-hidden my-8 bg-cover bg-center"
 			style={{
-				backgroundImage: "url('/placeholder.svg?height=400&width=600')",
+				backgroundImage: "url('/reviews-background.webp')",
 				backgroundSize: "cover",
 				backgroundPosition: "center",
 			}}
 		>
 			{/* Overlay gradient */}
-			<div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70 backdrop-blur-sm"></div>
+			<div className="lg:absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70 backdrop-blur-sm"></div>
 
 			<div className="relative z-10 p-6">
 				<div className="mb-4 flex items-center">
@@ -167,7 +166,7 @@ export const ReviewsMobile = ({ reviews }: { reviews: ReviewType }) => {
 						transition={{ duration: 0.4 }}
 					>
 						<div className="mb-4">
-							<p className="text-white text-base leading-relaxed">
+							<p className="text-white text-base leading-relaxed max-sm:overflow-hidden">
 								"{reviews.featured[currentIndex].content}"
 							</p>
 						</div>

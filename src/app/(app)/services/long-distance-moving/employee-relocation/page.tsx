@@ -128,7 +128,7 @@ const EmployeeRelocation = () => {
 						<div className="rounded-lg overflow-hidden h-full">
 							<img
 								className="w-full h-auto rounded-lg object-cover"
-								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/commercial-moving-1920w.jpg"
+								src="/moving-process.webp"
 								alt="Employee Moving Process"
 							/>
 						</div>

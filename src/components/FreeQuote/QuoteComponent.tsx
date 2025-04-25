@@ -12,7 +12,6 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import React, { Suspense } from "react";
-import { ReviewCarousel } from "../Reviews";
 import { reviews } from "@/data/reviews";
 import { adverts, moveSizeOptions } from "@/data/qoute";
 import { ReviewWrapper } from "./review-carousel";
@@ -31,7 +30,7 @@ export const QuoteComponent = () => {
 					<h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
 						Get Your Moving Quote
 					</h2>
-					<p className="text-muted-foreground max-w-2xl mx-auto">
+					<p className="text-gray-500 max-w-2xl mx-auto">
 						Fill out the form below and we'll create a personalized quote for
 						your upcoming move.
 					</p>
@@ -45,7 +44,7 @@ export const QuoteComponent = () => {
 					</Suspense>
 
 					{/* Image */}
-					<div className="hidden self-start lg:block rounded-2xl">
+					<div className="lg:self-start lg:block rounded-2xl">
 						<ReviewWrapper reviews={reviews} />
 					</div>
 				</div>
@@ -62,7 +61,7 @@ export const QuoteForm = () => {
 	];
 
 	return (
-		<form className="bg-white p-8 rounded-lg shadow-elevation-3">
+		<form className="bg-white max-sm:px-0 px-8 rounded-lg shadow-elevation-3">
 			<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 				{/* Full Name */}
 				<Field className="sm:col-span-2">
@@ -131,6 +130,15 @@ export const QuoteForm = () => {
 						defaultValue={""}
 						className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
 					>
+						<option
+							hidden
+							disabled
+							selected
+							value={""}
+							className="text-gray-400 font-normal"
+						>
+							Select
+						</option>
 						<option value="home">Home</option>
 						<option value="office">Office</option>
 						<option value="mobile">Mobile</option>
@@ -167,9 +175,18 @@ export const QuoteForm = () => {
 						defaultValue={""}
 						className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
 					>
+						<option
+							hidden
+							disabled
+							selected
+							value={""}
+							className="text-gray-400 font-normal"
+						>
+							Select
+						</option>
 						{moveSizeOptions.map((size) => (
 							<option key={size.id} value={size.value} className="capitalize">
-								{size.value}
+								{size.name}
 							</option>
 						))}
 					</Select>
@@ -224,6 +241,15 @@ export const QuoteForm = () => {
 						name="advert"
 						className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
 					>
+						<option
+							hidden
+							disabled
+							selected
+							value={""}
+							className="text-gray-400 font-normal"
+						>
+							Select
+						</option>
 						{adverts.map((advert) => (
 							<option
 								key={advert.id}
@@ -244,14 +270,17 @@ export const QuoteForm = () => {
 					>
 						Stairs (Origin)
 					</Label>
-					<Input
-						type="number"
-						defaultValue={0}
-						id="movingFrom"
-						name="movingFrom"
+					<Select
+						id="stairs-origin"
+						name="stairs-origin"
 						className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
-						placeholder=""
-					/>
+					>
+						{Array.from({ length: 5 }, (_, index) => (
+							<option key={index} value={index}>
+								{index}
+							</option>
+						))}
+					</Select>
 				</Field>
 
 				{/* stairs - destination */}
@@ -262,14 +291,17 @@ export const QuoteForm = () => {
 					>
 						Stairs (Destination)
 					</Label>
-					<Input
-						type="number"
-						defaultValue={0}
-						id="movingFrom"
-						name="movingFrom"
+					<Select
+						id="stairs-origin"
+						name="stairs-origin"
 						className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
-						placeholder=""
-					/>
+					>
+						{Array.from({ length: 5 }, (_, index) => (
+							<option key={index} value={index}>
+								{index}
+							</option>
+						))}
+					</Select>
 				</Field>
 
 				{/* Additional Notes */}
@@ -335,7 +367,7 @@ export const QuoteForm = () => {
 			<div className="mt-6">
 				<Button
 					type="submit"
-					className="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-primary-dark transition-colors"
+					className="w-full bg-moving-yellow/80 text-white py-2 px-4 rounded-md hover:bg-moving-yellow transition-colors"
 				>
 					Get Quote
 				</Button>

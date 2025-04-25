@@ -17,7 +17,7 @@ export type FAQProps = {
 
 export const FAQs: FC<FAQProps> = (props) => {
 	return (
-		<div className="mx-auto max-w-4xl py-6 sm:py-8 lg:px-8 lg:py-10 divide-y divide-gray-900/10">
+		<div className="mx-auto max-sm:px-6 max-w-4xl py-6 sm:py-8 lg:px-8 lg:py-10 divide-y divide-gray-900/10">
 			<h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">
 				Frequently asked questions
 			</h2>

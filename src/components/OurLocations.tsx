@@ -29,7 +29,7 @@ export const officeLocations: OfficeLocation[] = [
 		addressLine2: "Lakeville, MN 55044",
 		phone: "(651) 757-5135",
 		href: "https://maps.app.goo.gl/xwqbi9QcABiLXkN18",
-		image: "/lakeville-office.webp",
+		image: "/minneapolis-office.webp",
 	},
 	{
 		id: "rochester",
