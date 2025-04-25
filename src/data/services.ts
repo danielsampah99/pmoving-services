@@ -15,6 +15,7 @@ import {
 	PackageIcon,
 	UsersIcon,
 } from "lucide-react";
+import { CorporateIcon } from "@/components/icons/corporate-icon";
 
 export type Service = {
 	id: number;
@@ -196,5 +197,38 @@ export const localMovingServices: RelatedServices[] = [
 		description: "Coordinated moves for HOA-managed properties",
 		icon: UsersIcon,
 		href: "/services/local-moving/hoa-movers",
+	},
+];
+
+export const commercialMovingServices: RelatedServices[] = [
+	{
+		name: "corporate Relocation",
+		description: "Seamless transition for your enterprise, zero downtime",
+		icon: CorporateIcon,
+		href: "/services/commercial-moving/corporate-relocation",
+	},
+	{
+		name: "Office Movers",
+		description: "Your workspace, relocated with precision and care",
+		icon: CorporateIcon,
+		href: "/services/commercial-moving/office-movers",
+	},
+	{
+		name: "Retail Relocation",
+		description: "Keep business flowing while we handle your store move",
+		icon: CorporateIcon,
+		href: "/services/commercial-moving/retail-relocation",
+	},
+	{
+		name: "Small Business Movers",
+		description: "Big moving solutions tailored for small businesses",
+		icon: CorporateIcon,
+		href: "/services/commercial-moving/small-business-movers",
+	},
+	{
+		name: "Warehouse Industrial Movers",
+		description: "Heavy-duty logistics for your industrial space",
+		icon: CorporateIcon,
+		href: "/services/commercial-moving/warehouse-industrial",
 	},
 ];

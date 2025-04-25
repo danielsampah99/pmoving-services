@@ -15,7 +15,6 @@ const CondoMovers = () => {
 			title="Condo Moving Services"
 			desc="Expert condo moving services with specialized care for high-rise buildings and luxury properties."
 		>
-
 			<div className=" py-12 px-4">
 				<div className="max-w-7xl mx-auto space-y-12">
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -112,8 +111,6 @@ const CondoMovers = () => {
 								<li className="font-bold">Condo storage in Minnesota</li>
 								<li className="font-bold">Condo movers near me Minnesota</li>
 							</ul>
-
-
 						</div>
 
 						<div className="rounded-lg overflow-hidden h-full">
@@ -131,7 +128,6 @@ const CondoMovers = () => {
 			<RequestQuote />
 			<RelatedLocalMoving services={localMovingServices} />
 			<OurLocations />
-
 		</ServiceLayout>
 	);
 };

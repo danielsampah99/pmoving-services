@@ -15,8 +15,6 @@ const HouseHoldMoving = () => {
 			title="Household Moving"
 			desc="We provide top-quality household moving services, ensuring your belongings are safely transported to your new home."
 		>
-
-
 			<div className="py-12 px-4">
 				<div className="max-w-7xl mx-auto space-y-12">
 					{/* First Section */}

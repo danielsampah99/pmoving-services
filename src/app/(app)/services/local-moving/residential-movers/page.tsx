@@ -7,8 +7,6 @@ import { localMovingServices } from "@/data/services";
 import { RequestQuote } from "./request-quote";
 import { frequentQuestions, residentialExpectations } from "@/data/moving-tips";
 
-
-
 const ResidentialMoving = () => {
 	return (
 		<section className="px-6 lg:px-8">

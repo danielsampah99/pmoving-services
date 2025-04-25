@@ -15,7 +15,6 @@ const HOAMovers = () => {
 			title="HOA Moving Services"
 			desc="Professional HOA moving services that comply with all homeowner association regulations and requirements."
 		>
-
 			<div className="py-12 px-4">
 				<div className="max-w-7xl mx-auto space-y-12">
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">

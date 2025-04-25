@@ -15,7 +15,6 @@ const PackAndUnpack = () => {
 			title="Professional Packing & Unpacking Services"
 			desc="Let our expert team handle the tedious task of packing and unpacking your belongings with care and precision."
 		>
-
 			<div className="bg-gray-100 py-12 px-4">
 				<div className="max-w-7xl mx-auto space-y-12">
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -99,7 +98,6 @@ const PackAndUnpack = () => {
 									<li>Furniture disassembly and reassembly</li>
 								</ul>
 							</div>
-
 						</div>
 
 						<div className="rounded-lg overflow-hidden h-full">
