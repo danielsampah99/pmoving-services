@@ -161,7 +161,7 @@ export const LocalServiceDetails = () => {
 						{/* Specs Table */}
 						<div>
 							<img
-								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/13%2Bways%2Bto%2Bexpedite%2Byour%2Bmoving-640w-1920w.png"
+								src="/moving-process.webp"
 								alt="Ways to expedite your moving process"
 								className="w-full h-auto rounded-lg shadow-lg mx-auto mb-8"
 							/>
