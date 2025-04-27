@@ -1,7 +1,7 @@
-import { HeroSection } from '@/components/HeroSection'
-import { LocalServiceDetails } from '@/components/LocalServiceDetails'
-import { OurLocations } from '@/components/OurLocations'
-import { RelatedServices } from '@/components/RelatedServices'
+import { HeroSection } from "@/components/HeroSection";
+import { LocalServiceDetails } from "@/components/LocalServiceDetails";
+import { OurLocations } from "@/components/OurLocations";
+import { RelatedServices } from "@/components/RelatedServices";
 
 const LocalMovingPage = () => {
 	return (
@@ -11,7 +11,7 @@ const LocalMovingPage = () => {
 			<RelatedServices />
 			<OurLocations />
 		</div>
-	)
-}
+	);
+};
 
-export default LocalMovingPage
+export default LocalMovingPage;

@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { motion } from "motion/react";
 import Image from "next/image";
@@ -11,7 +11,12 @@ interface ServiceLayoutProps {
 	children: React.ReactNode;
 }
 
-export const ServiceLayout: FC<ServiceLayoutProps> = ({ image, title, desc, children }) => {
+export const ServiceLayout: FC<ServiceLayoutProps> = ({
+	image,
+	title,
+	desc,
+	children,
+}) => {
 	return (
 		<div className="w-full">
 			{/* Hero Section */}
@@ -58,9 +63,7 @@ export const ServiceLayout: FC<ServiceLayoutProps> = ({ image, title, desc, chil
 			</motion.div>
 
 			{/* Service Details Section */}
-			<div className="max-w-6xl mx-auto pb-10">
-				{children}
-			</div>
+			<div className="max-w-6xl mx-auto pb-10">{children}</div>
 		</div>
 	);
 };

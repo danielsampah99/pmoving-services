@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import { FormField } from "./FormField";
 import { QuoteButton } from "./QuoteButton";
-import { Field, Input, Label } from '@headlessui/react'
-import Link from 'next/link'
+import { Field, Input, Label } from "@headlessui/react";
+import Link from "next/link";
 
 interface FormData {
 	moveDate: string;
@@ -311,11 +311,10 @@ const PrimaryQuoteForm: React.FC = () => {
 							>
 								Premium Moving Services
 							</Link>{" "}
-							related to (conversational purposes) at the phone number
-							provided above. You may reply <strong>STOP</strong> to opt-out
-							at any time. Reply <strong>HELP</strong> for assistance.
-							Messages and data rates may apply. Message frequency will vary.
-							Learn more on our{" "}
+							related to (conversational purposes) at the phone number provided
+							above. You may reply <strong>STOP</strong> to opt-out at any time.
+							Reply <strong>HELP</strong> for assistance. Messages and data
+							rates may apply. Message frequency will vary. Learn more on our{" "}
 							<Link
 								target="_parent"
 								href="/privacy-policy"
