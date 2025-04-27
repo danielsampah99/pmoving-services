@@ -54,10 +54,10 @@ export const services: Service[] = [
 		href: "/services/local-moving",
 		icon: HomeModernIcon,
 		subServices: [
-<<<<<<<<< Temporary merge branch 1
+
 			{ name: "Residential Movers", href: "/services/local-moving/residential-movers#" },
 			{ name: "Household Goods", href: "/services/local-moving/household-goods#" },
-=========
+
 			{ name: "Residential Movers", href: "/services/local-moving/residential-movers" },
 			{ name: "Household Goods", href: "/services/local-moving/household" },
 			{ name: "Pack & Unpack", href: "/services/local-moving/pack-and-unpack" },
