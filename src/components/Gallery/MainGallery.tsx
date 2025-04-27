@@ -85,9 +85,8 @@ const Gallery: React.FC<GalleryProps> = ({ className = "" }) => {
 			</div>
 
 			{/* Search and filter section */}
-			<div className="mb-8 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-4 items-start">
-				<SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-
+			<div className="mb-8 grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_auto] gap-4 items-start">
+				{/* <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} className="w-full" /> */}
 				<FilterBar
 					categories={categories}
 					selectedCategory={selectedCategory}

@@ -72,7 +72,7 @@ const ContactComponent = () => {
 			</main>
 
 			{/* Floating Call Button (Mobile Only) */}
-			<FloatingCallButton />
+			{/* <FloatingCallButton /> */}
 		</div>
 	);
 };

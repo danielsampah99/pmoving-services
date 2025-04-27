@@ -26,7 +26,7 @@ const FilterBar: FC<FilterBarProps> = ({
 	return (
 		<div className={`${className}`}>
 			<div className="flex items-center mb-3">
-				<Filter size={18} className="mr-2 text-moving-primary" />
+				<Filter size={18} className="mr-2 text-background" />
 				<h3 className="text-sm font-medium text-moving-dark">
 					Filter by Category
 				</h3>
@@ -39,11 +39,10 @@ const FilterBar: FC<FilterBarProps> = ({
 						key={category}
 						onClick={() => setSelectedCategory(category)}
 						className={`
-              category-filter transition-all whitespace-nowrap
-              ${
-								selectedCategory === category
-									? "active shadow-sm"
-									: "text-moving-dark hover:bg-moving-lightGray"
+              category-filter transition-all whitespace-nowrap 
+              ${selectedCategory === category
+								? "active shadow-sm bg-background text-white"
+								: "text-black hover:bg-moving-lightGray "
 							}
             `}
 						aria-pressed={selectedCategory === category}
