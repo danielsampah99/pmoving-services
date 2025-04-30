@@ -31,9 +31,8 @@ export const ServiceLayout: FC<ServiceLayoutProps> = ({
 					<Image
 						src={image}
 						alt={title}
-						layout="fill"
-						objectFit="cover"
-						className="brightness-75"
+						fill={true}
+						className="brightness-75 object-cover"
 					/>
 
 					{/* Gradient Overlay */}

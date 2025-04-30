@@ -1,131 +1,129 @@
-
-
-
 import { ServiceLayout } from "@/components/ServiceLayout";
 import { Info } from "lucide-react";
 
-
-
 const CorporateMoving = () => {
-    return (
-        <ServiceLayout
-            image="/corporate.jpg"
-            title="Corporate Moving Services"
-            desc="Professional relocation solutions for businesses and employees"
-        >
-            {/* Trusted Brands Section */}
-            <div className="py-16 bg-gray-50">
-                <div className="max-w-7xl mx-auto px-4">
-                    <h3 className="text-center text-xl font-semibold text-gray-600 mb-8">
-                        Trusted by Leading Organizations
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                        <div className="flex justify-center">
-                            <img
-                                src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/business-1920w.png"
-                                alt="Business Logo"
-                                className="h-20 w-auto object-contain max-w-[280px]"
-                                loading="eager"
-                            />
-                        </div>
-                        <div className="flex justify-center">
-                            <img
-                                src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/AngiesList_SSA_2019-1920w.png"
-                                alt="Angie's List Logo"
-                                className="h-20 w-auto object-contain max-w-[280px]"
-                                loading="eager"
-                            />
-                        </div>
-                        <div className="flex justify-center">
-                            <img
-                                src="https://irp-cdn.multiscreensite.com/b0f4adc5/dms3rep/multi/inline.svg"
-                                alt="Inline Logo"
-                                className="h-20 w-auto object-contain max-w-[280px]"
-                                loading="eager"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </div>
+	return (
+		<ServiceLayout
+			image="/corporate.jpg"
+			title="Corporate Moving Services"
+			desc="Professional relocation solutions for businesses and employees"
+		>
+			{/* Trusted Brands Section */}
+			<div className="py-16 bg-gray-50">
+				<div className="max-w-7xl mx-auto px-4">
+					<h3 className="text-center text-xl font-semibold text-gray-600 mb-8">
+						Trusted by Leading Organizations
+					</h3>
+					<div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+						<div className="flex justify-center">
+							<img
+								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/business-1920w.png"
+								alt="Business Logo"
+								className="h-20 w-auto object-contain max-w-[280px]"
+								loading="eager"
+							/>
+						</div>
+						<div className="flex justify-center">
+							<img
+								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/AngiesList_SSA_2019-1920w.png"
+								alt="Angie's List Logo"
+								className="h-20 w-auto object-contain max-w-[280px]"
+								loading="eager"
+							/>
+						</div>
+						<div className="flex justify-center">
+							<img
+								src="https://irp-cdn.multiscreensite.com/b0f4adc5/dms3rep/multi/inline.svg"
+								alt="Inline Logo"
+								className="h-20 w-auto object-contain max-w-[280px]"
+								loading="eager"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
 
+			{/* Main Content Sections */}
+			<div className="bg-white py-16">
+				<div className="max-w-7xl mx-auto px-4 space-y-20">
+					{/* What is Corporate Relocation */}
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+						<div className="order-last lg:order-first">
+							<div className="relative group cursor-pointer overflow-hidden rounded-xl shadow-lg">
+								<div className="aspect-w-16 aspect-h-9">
+									<img
+										src="/moving-process.webp"
+										alt="Moving Guide"
+										className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+									/>
+								</div>
+							</div>
+						</div>
 
-            {/* Main Content Sections */}
-            <div className="bg-white py-16">
-                <div className="max-w-7xl mx-auto px-4 space-y-20">
-                    {/* What is Corporate Relocation */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div className="order-last lg:order-first">
-                            <div className="relative group cursor-pointer overflow-hidden rounded-xl shadow-lg">
-                                <div className="aspect-w-16 aspect-h-9">
-                                    <img
-                                        src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/13%2Bways%2Bto%2Bexpedite%2Byour%2Bmoving-640w-1920w.png"
-                                        alt="Moving Guide"
-                                        className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
-                                    />
-                                </div>
-                            </div>
+						<div className="space-y-6">
+							<div className="flex items-center gap-4">
+								<Info className="w-8 h-8 text-background" />
+								<h2 className="text-3xl font-bold text-gray-900">
+									Corporate Relocation Solutions
+								</h2>
+							</div>
+							<p className="text-background">
+								Our Woodbury corporate relocation movers will help you with job
+								transitions through our complete packing, shipping, and
+								unpacking services.
+							</p>
+							<p className="text-gray-700">
+								We ensure safe transportation of office equipment and personal
+								belongings between locations, supporting seamless transitions
+								for new job assignments.
+							</p>
+						</div>
+					</div>
 
-                        </div>
+					{/* Why Corporate Movers */}
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+						<div className="space-y-6">
+							<h2 className="text-3xl font-bold text-gray-900">
+								Why Choose Professional Movers?
+							</h2>
+							<p className="text-gray-700">
+								For employees relocating with moving allowances or lump sum
+								payments, our corporate movers streamline the relocation process
+								so you can focus on your new role.
+							</p>
 
-                        <div className="space-y-6">
-                            <div className="flex items-center gap-4">
-                                <Info className="w-8 h-8 text-background" />
-                                <h2 className="text-3xl font-bold text-gray-900">
-                                    Corporate Relocation Solutions
-                                </h2>
-                            </div>
-                            <p className="text-background">
-                                Our Woodbury corporate relocation movers will help you with job transitions through our complete packing, 
-                                shipping, and unpacking services.
-                            </p>
-                            <p className="text-gray-700">
-                                We ensure safe transportation of office equipment and personal belongings between locations, 
-                                supporting seamless transitions for new job assignments.
-                            </p>
-                        </div>
-                    </div>
+							<p className="text-gray-700">
+								We handle the complex logistics of employee relocation
+								including:
+							</p>
 
-                    {/* Why Corporate Movers */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div className="space-y-6">
-                            <h2 className="text-3xl font-bold text-gray-900">
-                                Why Choose Professional Movers?
-                            </h2>
-                            <p className="text-gray-700">
-                                For employees relocating with moving allowances or lump sum payments, our corporate movers streamline 
-                                the relocation process so you can focus on your new role.
-                            </p>
-                            
-                            <p className="text-gray-700">
-                                We handle the complex logistics of employee relocation including:
-                            </p>
-                            
-                            <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                                <li>Office equipment transportation</li>
-                                <li>Department-wide relocations</li>
-                                <li>Military-style group moves</li>
-                                <li>Custom corporate relocation plans</li>
-                            </ul>
+							<ul className="list-disc pl-6 space-y-2 text-gray-700">
+								<li>Office equipment transportation</li>
+								<li>Department-wide relocations</li>
+								<li>Military-style group moves</li>
+								<li>Custom corporate relocation plans</li>
+							</ul>
 
-                            <p className="text-gray-700 mt-4">
-                                Premium Movers specializes in creating tailored relocation strategies that maintain service 
-                                quality while accommodating companies of any size.
-                            </p>
-                        </div>
-                    </div>
+							<p className="text-gray-700 mt-4">
+								Premium Movers specializes in creating tailored relocation
+								strategies that maintain service quality while accommodating
+								companies of any size.
+							</p>
+						</div>
+					</div>
 
-                    {/* Right Image */}
-                    <div className="rounded-lg overflow-hidden h-full">
-                        <img
-                            className="w-full h-auto max-h-[800px] rounded-lg object-contain"
-                            src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/L+shape+tower+desk-1920w.JPG"
-                            alt="Movers"
-                        />
-                    </div>
-                </div>
-            </div>
-        </ServiceLayout>
-    );
+					{/* Right Image */}
+					<div className="rounded-lg overflow-hidden h-full">
+						<img
+							className="w-full h-auto max-h-[800px] rounded-lg object-contain"
+							src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/L+shape+tower+desk-1920w.JPG"
+							alt="Movers"
+						/>
+					</div>
+				</div>
+			</div>
+		</ServiceLayout>
+	);
 };
 
 export default CorporateMoving;

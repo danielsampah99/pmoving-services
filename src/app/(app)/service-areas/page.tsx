@@ -1,6 +1,11 @@
 import { Metadata } from "next";
 import { Hero } from "./hero";
 import { OurLocations } from "@/components/OurLocations";
+import { ServiceAreaMap } from "./service-areas-map";
+import { getPayload } from "payload";
+import config from "@payload-config";
+import { MapCity } from "@/map-data";
+import { MINNESOTA_CENTRE } from "@/data/map";
 
 export const metadata: Metadata = {
 	title: "Join Our Team | Career Opportunities at Premium Moving Services",
@@ -14,7 +19,7 @@ export const metadata: Metadata = {
 			"Moving Service Areas | Premium Moving Services operates near and far from you",
 		description:
 			"Premium Moving Services operates near and far from you. Look us up now",
-		url: "https://pmovingservices.com",
+		url: "https:/pmovingservices.com",
 		images: [
 			{
 				url: "",
@@ -33,10 +38,34 @@ export const metadata: Metadata = {
 	},
 };
 
-export default function ServiceAreasPage() {
+export default async function ServiceAreasPage() {
+	const payload = await getPayload({ config });
+
+	const serviceAreas = await payload.find({
+		collection: "service-areas",
+		depth: 1,
+		pagination: false,
+		sort: "title",
+	});
+
+	const cities: MapCity[] =
+		serviceAreas.docs.map((city) => ({
+			city: city.title,
+			longitude: city.longitude,
+			latitude: city.latitude,
+			linkText: city.title,
+			state: city["state-name"],
+			href: `/service-areas/${city.slug}`,
+		})) ?? [];
+
 	return (
 		<section>
 			<Hero />
+			<ServiceAreaMap
+				cities={cities}
+				serviceAreasMapZoom={7}
+				serviceAreasCenter={MINNESOTA_CENTRE}
+			/>
 			<OurLocations />
 		</section>
 	);

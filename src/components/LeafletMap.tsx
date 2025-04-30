@@ -60,14 +60,15 @@ export const MapIcon = new Icon({
 	shadowSize: [41, 41],
 });
 
-const TruckMapIcon = divIcon({
-	html: `<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" class="size-6">
+const TruckMapIcon = (isHovered: boolean) =>
+	divIcon({
+		html: `<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" class="size-6">
   			<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
      		</svg>`,
-	className: "text-yellow-400",
-	iconSize: [20, 20],
-	iconAnchor: [12, 20],
-});
+		className: `${isHovered ? "animate-pulse scale-120 text-yellow-500" : "text-yellow-400"}`,
+		iconSize: [20, 20],
+		iconAnchor: [12, 20],
+	});
 
 export const LeafletMap: FC<LeafletMapProps> = ({
 	mapCenter,
@@ -100,42 +101,46 @@ export const LeafletMap: FC<LeafletMapProps> = ({
 				<ZoomControl position="topright" />
 
 				{/* City Markers */}
-				{cities.map((city) => (
-					<Marker
-						key={city.href}
-						position={[city.latitude, city.longitude]}
-						icon={TruckMapIcon}
-						eventHandlers={{
-							click: () => onSelectCity(city.city),
-						}}
-					>
-						<Popup
+				{cities.map((city) => {
+					const isHovered = hoveredCity === city.city;
+
+					return (
+						<Marker
+							key={city.href}
 							position={[city.latitude, city.longitude]}
-							offset={[0, -20]}
-							closeButton={false}
+							icon={TruckMapIcon(isHovered)}
+							eventHandlers={{
+								click: () => onSelectCity(city.city),
+							}}
 						>
-							<div className="p-1 w-[200px]">
-								<div className="flex justify-between items-center mb-2">
-									<h3 className="text-sm font-bold text-blue-700">
-										{city.city}
-									</h3>
-									<Button
-										onClick={() => onSelectCity(null)}
-										className="text-slate-400 hover:text-slate-600"
-									>
-										<XMarkIcon className="size-4" />
+							<Popup
+								position={[city.latitude, city.longitude]}
+								offset={[0, -20]}
+								closeButton={false}
+							>
+								<div className="p-1 w-[200px]">
+									<div className="flex justify-between items-center mb-2">
+										<h3 className="text-sm font-bold text-blue-700">
+											{city.city}
+										</h3>
+										<Button
+											onClick={() => onSelectCity(null)}
+											className="text-slate-400 hover:text-slate-600"
+										>
+											<XMarkIcon className="size-4" />
+										</Button>
+									</div>
+									<p className="text-xs text-slate-600 mb-2">
+										{`We offer full-service moving, packing, and storage solutions in ${city.city}.`}
+									</p>
+									<Button className="mt-1 text-xs bg-blue-600 text-white px-2 py-1 rounded-md w-full hover:bg-blue-700 transition-colors">
+										Get Quote for {city.city}
 									</Button>
 								</div>
-								<p className="text-xs text-slate-600 mb-2">
-									{`We offer full-service moving, packing, and storage solutions in ${city.city}.`}
-								</p>
-								<Button className="mt-1 text-xs bg-blue-600 text-white px-2 py-1 rounded-md w-full hover:bg-blue-700 transition-colors">
-									Get Quote for {city.city}
-								</Button>
-							</div>
-						</Popup>
-					</Marker>
-				))}
+							</Popup>
+						</Marker>
+					);
+				})}
 				<SetMapView mapZoom={mapZoom} mapCenter={mapCenter} />
 			</MapContainer>
 
@@ -195,7 +200,11 @@ const SetMapView: FC<{ mapCenter: LatLngExpression; mapZoom: number }> = ({
 	useEffect(() => {
 		if (!map) return;
 
-		map.setView(mapCenter, mapZoom);
+		map.flyTo(mapCenter, mapZoom, {
+			duration: 0.75,
+			easeLinearity: 0.5,
+			animate: true,
+		});
 	}, [mapCenter, mapZoom, map]);
 
 	return null;

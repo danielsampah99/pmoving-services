@@ -1,6 +1,6 @@
 "use client";
 
-import type { ServiceAreaType } from "@/types";
+import type { ServiceArea as ServiceAreaType } from "@/payload-types";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
@@ -20,7 +20,7 @@ export const ServiceArea: FC<{ links: ServiceAreaType[] }> = ({ links }) => {
 			<Menu>
 				<div className="inline-flex items-center gap-2 bg-transparent text-sm/6 font-semibold text-gray-100 hover:text-white focus:text-white">
 					<Link
-						href="/#service-areas"
+						href="/service-areas"
 						className=""
 						style={{ scrollBehavior: "smooth" }}
 					>
@@ -39,7 +39,7 @@ export const ServiceArea: FC<{ links: ServiceAreaType[] }> = ({ links }) => {
 					{links.map((link) => (
 						<MenuItem key={link.id}>
 							<Link
-								href={`/service-areas/${link["short-code"]}`}
+								href={`/service-areas/${link.slug}`}
 								className="group capitalize flex w-full text-gray-700 hover:bg-gray-100 hover:text-gray-900 items-center gap-2 rounded-xl truncate py-1.5 px-3"
 							>
 								{link.title?.toLowerCase() ?? ""}

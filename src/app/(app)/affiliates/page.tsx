@@ -3,6 +3,7 @@ import { CheckIcon } from "@heroicons/react/16/solid";
 import Image from "next/image";
 
 import { Metadata } from "next";
+import { BASE_URL } from "@/utils";
 
 export const metadata: Metadata = {
 	title: "Affiliate Program | Partner with Premium Moving Services",
@@ -15,16 +16,16 @@ export const metadata: Metadata = {
 		title: "Affiliate Program | Partner with Premium Moving Services",
 		description:
 			"Join our affiliate program at Premium Moving Services. Partner with us and earn commissions through referrals and collaborations.",
-		url: "https://www.pmoving-services.vercel.app",
+		url: BASE_URL,
 		images: [
 			{
-				url: "/logo.svg",
+				url: `${BASE_URL}/logo.svg`,
 				width: 1200,
 				height: 630,
 				alt: "Premium Moving Services Career Opportunities",
 			},
 			{
-				url: "/next-home-logo.webp",
+				url: `${BASE_URL}/next-home-logo.webp`,
 				width: 1200,
 				height: 630,
 				alt: "Premium Moving Services Affiliate | Next Homes",
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
 		index: true,
 	},
 	alternates: {
-		canonical: "https://www.pmoving-services.vercel.app/affiliates",
+		canonical: `${BASE_URL}/affiliates`,
 	},
 };
 

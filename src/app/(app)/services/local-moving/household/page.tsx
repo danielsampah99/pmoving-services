@@ -1,47 +1,21 @@
 import { ServiceLayout } from "@/components/ServiceLayout";
 import { Info } from "lucide-react";
-import Link from "next/link";
 import React from "react";
+import { FAQs } from "../residential-movers/faq";
+import { RequestQuote } from "../residential-movers/request-quote";
+import { RelatedLocalMoving } from "../residential-movers/related-services";
+import { OurLocations } from "@/components/OurLocations";
+import { frequentQuestions } from "@/data/moving-tips";
+import { localMovingServices } from "@/data/services";
 
 const HouseHoldMoving = () => {
 	return (
 		<ServiceLayout
-			image="/house.jpg" // Pass `null` instead of an empty string to explicitly indicate no image
+			image="/household-moving.webp"
 			title="Household Moving"
 			desc="We provide top-quality household moving services, ensuring your belongings are safely transported to your new home."
 		>
-			<div className=" py-12">
-				<div className="max-w-7xl mx-auto px-4">
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-						<div className="flex justify-center">
-							<img
-								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/business-1920w.png"
-								alt="Business Logo"
-								className="h-20 w-auto object-contain max-w-[280px]"
-								loading="eager"
-							/>
-						</div>
-						<div className="flex justify-center">
-							<img
-								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/AngiesList_SSA_2019-1920w.png"
-								alt="Angie's List Logo"
-								className="h-20 w-auto object-contain max-w-[280px]"
-								loading="eager"
-							/>
-						</div>
-						<div className="flex justify-center">
-							<img
-								src="https://irp-cdn.multiscreensite.com/b0f4adc5/dms3rep/multi/inline.svg"
-								alt="Inline Logo"
-								className="h-20 w-auto object-contain max-w-[280px]"
-								loading="eager"
-							/>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className="bg-gray-100 py-12 px-4">
+			<div className="py-12 px-4">
 				<div className="max-w-7xl mx-auto space-y-12">
 					{/* First Section */}
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -50,7 +24,7 @@ const HouseHoldMoving = () => {
 							<div className="relative group cursor-pointer overflow-hidden rounded-lg mb-6">
 								<div className="aspect-w-16 aspect-h-9">
 									<img
-										src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/13%2Bways%2Bto%2Bexpedite%2Byour%2Bmoving-640w-1920w.png"
+										src="/moving-process.webp"
 										alt="Moving Guide"
 										className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
 									/>
@@ -138,16 +112,6 @@ const HouseHoldMoving = () => {
 								</li>
 								<li className="font-bold">House movers near me Minnesota</li>
 							</ul>
-
-							<h2 className="text-xl text-background md:text-xl font-bold">
-								Get your moving guide and custom quotes
-							</h2>
-
-							<Link href="/free-quote" className="inline-block">
-								<button className="bg-background cursor-pointer text-white px-6 py-3 rounded-lg font-semibold hover:bg-background-100 transition-colors duration-300">
-									GET A FREE QUOTE
-								</button>
-							</Link>
 						</div>
 
 						{/* Right Image */}
@@ -161,6 +125,11 @@ const HouseHoldMoving = () => {
 					</div>
 				</div>
 			</div>
+
+			<FAQs faqs={frequentQuestions} />
+			<RequestQuote />
+			<RelatedLocalMoving services={localMovingServices} />
+			<OurLocations />
 		</ServiceLayout>
 	);
 };

@@ -183,7 +183,22 @@ export interface Media {
  */
 export interface ServiceArea {
   id: number;
+  /**
+   * Just the name of the service area or city.
+   */
   title: string;
+  /**
+   * This is a unique string for identifying a moving service area. For example, given a city with title, "Shakopee", a unique slug could be"shakopee". this is slug will also be used in the urls for service area pages. "/service-areas/[slug]", "/service-areas/shakopee"
+   */
+  slug: string;
+  /**
+   * This field should contain the map url to this city. It enables the redirection of the user to the place on the map
+   */
+  mapUrl?: string | null;
+  /**
+   * The location of this service area on the map
+   */
+  mapImage?: (number | null) | Media;
   description: string;
   'short-code': string;
   latitude: number;
@@ -196,6 +211,63 @@ export interface ServiceArea {
    * The two-letter word initials of the state this service area or city belongs to. Example if city is Minnesota, state initials should be MN
    */
   'state-initials': string;
+  faqs?:
+    | {
+        /**
+         * Sample question about this service area concerning moving. Example: "How can I avoid hidden fees"
+         */
+        question: string;
+        /**
+         * Answer or response to the question. Example: "Get free written estimate and ask about additional charges for stairs, long carries, or bulky items."
+         */
+        answer: string;
+        id?: string | null;
+      }[]
+    | null;
+  resources?:
+    | {
+        /**
+         * Name of the resource
+         */
+        title?: string | null;
+        /**
+         * a link or url pointing to the name of the resource
+         */
+        link?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  movingServices?:
+    | {
+        /**
+         * Title of the moving service. Example: "Albert Lea Residential Movers"
+         */
+        title: string;
+        /**
+         * Rich text about the moving service. Can include links to external websites
+         */
+        content: {
+          root: {
+            type: string;
+            children: {
+              type: string;
+              version: number;
+              [k: string]: unknown;
+            }[];
+            direction: ('ltr' | 'rtl') | null;
+            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+            indent: number;
+            version: number;
+          };
+          [k: string]: unknown;
+        };
+        /**
+         * Moving Service Image
+         */
+        image?: (number | null) | Media;
+        id?: string | null;
+      }[]
+    | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -333,12 +405,37 @@ export interface MediaSelect<T extends boolean = true> {
  */
 export interface ServiceAreasSelect<T extends boolean = true> {
   title?: T;
+  slug?: T;
+  mapUrl?: T;
+  mapImage?: T;
   description?: T;
   'short-code'?: T;
   latitude?: T;
   longitude?: T;
   'state-name'?: T;
   'state-initials'?: T;
+  faqs?:
+    | T
+    | {
+        question?: T;
+        answer?: T;
+        id?: T;
+      };
+  resources?:
+    | T
+    | {
+        title?: T;
+        link?: T;
+        id?: T;
+      };
+  movingServices?:
+    | T
+    | {
+        title?: T;
+        content?: T;
+        image?: T;
+        id?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
 }

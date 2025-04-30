@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import { motion } from 'motion/react'
-import { Truck, Package, Shield, Clock } from 'lucide-react'
+import { motion } from "motion/react";
+import { Truck, Package, Shield, Clock } from "lucide-react";
 
 export const WarehouseServiceDetails = () => {
 	return (
@@ -28,18 +28,20 @@ export const WarehouseServiceDetails = () => {
 								Comprehensive Warehouse Relocation
 							</h3>
 							<p className="text-gray-700 mb-6 text-lg">
-								Our specialized team handles complete warehouse relocations, from planning to execution.
-								We ensure minimal disruption to your operations with efficient moving solutions for
-								inventory, equipment, and machinery.
+								Our specialized team handles complete warehouse relocations,
+								from planning to execution. We ensure minimal disruption to your
+								operations with efficient moving solutions for inventory,
+								equipment, and machinery.
 							</p>
 
 							<h3 className="text-2xl font-semibold text-moving-navy mb-4 mt-8">
 								Industrial Equipment Moving
 							</h3>
 							<p className="text-gray-700 mb-6 text-lg">
-								We specialize in moving heavy machinery and industrial equipment with precision and care.
-								Our team utilizes specialized equipment and follows strict safety protocols to ensure
-								secure transportation.
+								We specialize in moving heavy machinery and industrial equipment
+								with precision and care. Our team utilizes specialized equipment
+								and follows strict safety protocols to ensure secure
+								transportation.
 							</p>
 						</motion.div>
 
@@ -53,13 +55,13 @@ export const WarehouseServiceDetails = () => {
 								"Customized moving plans for warehouses of all sizes",
 								"Specialized equipment for heavy machinery transport",
 								"Inventory management and tracking systems",
-								"Experienced team for safe equipment handling"
+								"Experienced team for safe equipment handling",
 							].map((item, index) => (
 								<motion.li
 									key={item}
 									variants={{
 										hidden: { opacity: 0, x: -20 },
-										visible: { opacity: 1, x: 0 }
+										visible: { opacity: 1, x: 0 },
 									}}
 									transition={{ delay: index * 0.1 }}
 									className="text-gray-700"
@@ -78,29 +80,31 @@ export const WarehouseServiceDetails = () => {
 							transition={{ duration: 0.5 }}
 							className="bg-moving-light-gray p-6 rounded-lg"
 						>
-							<h3 className="text-2xl font-semibold text-moving-navy mb-6">Our Services Include</h3>
+							<h3 className="text-2xl font-semibold text-moving-navy mb-6">
+								Our Services Include
+							</h3>
 							<div className="grid grid-cols-1 gap-6">
 								{[
 									{
 										icon: Truck,
-										title: 'Specialized Transport',
-										desc: 'Custom solutions for heavy machinery and equipment'
+										title: "Specialized Transport",
+										desc: "Custom solutions for heavy machinery and equipment",
 									},
 									{
 										icon: Package,
-										title: 'Inventory Management',
-										desc: 'Systematic tracking and organization of warehouse items'
+										title: "Inventory Management",
+										desc: "Systematic tracking and organization of warehouse items",
 									},
 									{
 										icon: Shield,
-										title: 'Safety Protocols',
-										desc: 'Strict adherence to safety standards and regulations'
+										title: "Safety Protocols",
+										desc: "Strict adherence to safety standards and regulations",
 									},
 									{
 										icon: Clock,
-										title: 'Efficient Timeline',
-										desc: 'Minimizing downtime during relocation process'
-									}
+										title: "Efficient Timeline",
+										desc: "Minimizing downtime during relocation process",
+									},
 								].map((service, index) => (
 									<motion.div
 										key={service.title}
@@ -111,7 +115,9 @@ export const WarehouseServiceDetails = () => {
 									>
 										<service.icon className="text-yellow-400 w-6 h-6" />
 										<div>
-											<h4 className="text-lg font-semibold text-moving-navy">{service.title}</h4>
+											<h4 className="text-lg font-semibold text-moving-navy">
+												{service.title}
+											</h4>
 											<p className="text-gray-600">{service.desc}</p>
 										</div>
 									</motion.div>
@@ -122,5 +128,5 @@ export const WarehouseServiceDetails = () => {
 				</div>
 			</div>
 		</section>
-	)
-}
+	);
+};

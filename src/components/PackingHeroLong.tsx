@@ -1,16 +1,23 @@
 "use client";
 
 import { motion } from "motion/react";
+import { FC } from "react";
 
-export const PackingHerolong = () => {
+export type PackingHerolongProps = {
+	title: string;
+	description: string;
+	image: string;
+};
+
+export const PackingHerolong: FC<PackingHerolongProps> = (props) => {
 	return (
 		<section className="relative pt-16 pb-4 h-[50vh] md:h-[70vh] bg-gray-900">
 			{/* Background Image with Overlay */}
 			<div className="absolute inset-0">
 				<img
-					src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/26-+moving+truck+en+route+-2880w.JPG"
-					alt="Professional packing service"
-					className="w-full h-full object-cover opacity-75 object-center"
+					src={props.image}
+					alt="Long distance moving image description"
+					className="size-full object-cover opacity-75 object-center"
 				/>
 				{/* <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-gray-900/90 to-gray-900/50" /> */}
 			</div>
@@ -31,7 +38,7 @@ export const PackingHerolong = () => {
 							animate={{ opacity: 1 }}
 							transition={{ delay: 0.2 }}
 						>
-							Professional Packing Services
+							{props.title}
 						</motion.h1>
 
 						<motion.p
@@ -40,8 +47,7 @@ export const PackingHerolong = () => {
 							animate={{ opacity: 1 }}
 							transition={{ delay: 0.4 }}
 						>
-							Secure packing solutions using premium materials and expert
-							techniques
+							{props.description}
 						</motion.p>
 					</motion.div>
 				</div>

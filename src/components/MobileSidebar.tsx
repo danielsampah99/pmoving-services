@@ -1,7 +1,7 @@
 "use client";
 
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { callsToAction, services } from "./Services";
+import { callsToAction, services } from "@/data/services";
 import Link from "next/link";
 import { cn } from "@/utils";
 import { socialMediaLinks } from "./Banner";
@@ -16,10 +16,10 @@ import {
 } from "@headlessui/react";
 import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
 import { type FC, useState } from "react";
-import type { ServiceAreaType } from "@/types";
+import { ServiceArea } from "@/payload-types";
 
 export interface MobileSidebarProps {
-	areas: ServiceAreaType[];
+	areas: ServiceArea[];
 }
 
 export const MobileSidebar: FC<MobileSidebarProps> = ({ areas }) => {
@@ -136,7 +136,7 @@ export const MobileSidebar: FC<MobileSidebarProps> = ({ areas }) => {
 											<DisclosureButton
 												key={area.id}
 												as="a"
-												href={`/service-areas/${area["short-code"]}`}
+												href={`/service-areas/${area.slug}`}
 												className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-300 hover:text-gray-100 hover:bg-white/10"
 											>
 												<div className="group capitalize w-full inline-flex items-center justify-between">

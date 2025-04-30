@@ -1,12 +1,15 @@
 // storage-adapter-import-placeholder
 import { postgresAdapter } from "@payloadcms/db-postgres";
 import { payloadCloudPlugin } from "@payloadcms/payload-cloud";
-import { lexicalEditor } from "@payloadcms/richtext-lexical";
+import {
+	FixedToolbarFeature,
+	lexicalEditor,
+} from "@payloadcms/richtext-lexical";
 import { vercelBlobStorage } from "@payloadcms/storage-vercel-blob";
 import path from "path";
 import { buildConfig } from "payload";
 import { fileURLToPath } from "url";
-// import sharp from "sharp";
+import sharp from "sharp";
 
 import { Users } from "./collections/Users";
 import { Media } from "./collections/Media";
@@ -23,7 +26,12 @@ export default buildConfig({
 		},
 	},
 	collections: [Users, Media, ServiceArea],
-	editor: lexicalEditor(),
+	editor: lexicalEditor({
+		features: ({ defaultFeatures }) => [
+			...defaultFeatures,
+			FixedToolbarFeature(),
+		],
+	}),
 	secret: process.env.PAYLOAD_SECRET || "",
 	typescript: {
 		outputFile: path.resolve(dirname, "payload-types.ts"),
@@ -33,14 +41,14 @@ export default buildConfig({
 			connectionString: process.env.DATABASE_URI || "",
 		},
 	}),
-	// sharp,
+	sharp,
 	plugins: [
 		payloadCloudPlugin(),
 		// storage-adapter-placeholder
 		vercelBlobStorage({
 			enabled: true,
 			collections: { media: true },
-			token: process.env.BLOB_READ_WRITE_TOKEN,
+			token: process.env.BLOB_READ_WRITE_TOKEN || "",
 		}),
 	],
 });
