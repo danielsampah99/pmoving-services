@@ -39,13 +39,18 @@ const SmallBusinessMovers = () => {
 							<div className="flex items-center space-x-2 text-background">
 								<Info className="w-6 h-6" />
 								<h2 className="text-xl md:text-2xl font-bold">
-									Tailored Moving Solutions
+									What is Small Business Moving?
 								</h2>
 							</div>
 							<p className="text-background">
-								We understand the unique challenges small businesses face during
-								relocation and provide customized solutions to meet your needs.
+								As small business movers, we make relocations organized, seamless, and FAST! 
+								Our goal is to get you moved and back to business quickly.
 							</p>
+							<p className="text-gray-700">
+								We handle more than just furniture and fixtures - our executive relocation 
+								services work for local, statewide, national, and international moves.
+							</p>
+							{/* Removed duplicate paragraph */}
 							<p className="text-gray-700">
 								Our experienced team ensures a smooth transition with minimal
 								disruption to your business operations.
@@ -57,7 +62,7 @@ const SmallBusinessMovers = () => {
 								<li>Storage solutions if needed</li>
 								<li>Professional project management</li>
 							</ul>
-						</div>
+						</div>  {/* Properly closed container div */}
 					</div>
 
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -17,7 +17,36 @@ const LaborOnlyMovingPage = () => {
 				desc="Professional moving labor assistance for loading, unloading, and in-house moving needs"
 			>
 				<div className="px-4 py-8 space-y-8">
-					{/* Service Description */}
+					{/* New Labor Section */}
+					<div className="grid md:grid-cols-2 gap-8 items-center">
+						<div className="space-y-4">
+							<h2 className="text-3xl font-bold text-gray-800">
+								We Handle Your Move With Care
+							</h2>
+							<h3 className="text-xl font-semibold text-gray-700">
+								Labor Only Movers Near You
+							</h3>
+							<p className="text-gray-600">
+								Need partial help with your move? Our moving labor services include 
+								in-home assistance, loading/unloading, and heavy lifting support. 
+								Sometimes a little professional help makes all the difference.
+							</p>
+							<p className="text-gray-600">
+								Our trained movers are ready to assist with any size project - 
+								let us take the load off your mind.
+							</p>
+							<p className="font-semibold text-gray-800">
+								Contact us today for labor-only service pricing.
+							</p>
+						</div>
+						<img 
+							src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Unloading+ABF+Pods-1920w.jpg"
+							alt="Moving labor team assisting"
+							className="rounded-lg shadow-xl"
+						/>
+					</div>
+
+					{/* Existing Service Description */}
 					<div className="space-y-4">
 						<h2 className="text-3xl font-bold text-gray-800">
 							Expert Moving Labor Assistance

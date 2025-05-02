@@ -15,6 +15,40 @@ const AntiqueFurnitureMovingPage = () => {
 		>
 			<div className="max-w-7xl mx-auto px-4 py-12">
 				<div className="space-y-8">
+					{/* New Section Added */}
+					<section className="grid md:grid-cols-2 gap-8 items-center bg-white rounded-lg shadow-md p-6">
+						<div className="space-y-4">
+							<h2 className="text-3xl font-bold">
+								Have you wanted to move antique furniture?
+							</h2>
+							<p className="text-gray-600 text-lg">
+								We are your trusted antique furniture movers, providing:
+							</p>
+							<ul className="list-disc pl-6 text-gray-600 space-y-2">
+								<li>Packing and unpacking services</li>
+								<li>Trained professional uniformed movers</li>
+								<li>Clean trucks with proper moving equipment</li>
+								<li>Insured and bonded service</li>
+								<li>Courteous and friendly staff</li>
+								<li>Free, no-obligation moving quotes</li>
+								<li>Affordable packing supplies</li>
+								<li>Flexible scheduling</li>
+								<li>Community rule compliance</li>
+								<li>Custom routing options</li>
+							</ul>
+							<p className="text-gray-600 mt-4">
+								Our goal is to exceed expectations by customizing services to your needs. 
+								Relax while we handle the heavy lifting!
+							</p>
+						</div>
+						<img 
+							src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Spinet+piano-1920w.JPG" 
+							alt="Professional antique movers"
+							className="rounded-lg shadow-lg object-cover h-full"
+						/>
+					</section>
+
+					{/* Existing Specialized Care Section */}
 					<section className="bg-white rounded-lg shadow-md p-6">
 						<h2 className="text-3xl font-bold mb-4">
 							Specialized Antique Moving Care
