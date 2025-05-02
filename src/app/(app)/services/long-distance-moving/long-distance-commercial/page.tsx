@@ -10,7 +10,7 @@ import { OurLocations } from "@/components/OurLocations";
 const LongDistanceCommercial = () => {
 	return (
 		<ServiceLayout
-			image="/residential.jpg"
+			image="/residential-moving.webp"
 			title="Long Distance Commercial Moving"
 			desc="Professional cross-country commercial moving services with expert logistics and business continuity planning."
 		>
@@ -66,14 +66,14 @@ const LongDistanceCommercial = () => {
 								Long Distance Commercial Movers Near You
 							</h2>
 							<p className="text-gray-700">
-								Premium Moving Services sets ourselves apart with our dedication to ensuring quality 
-								service coupled with safety and efficiency at the fore-front for your commercial 
+								Premium Moving Services sets ourselves apart with our dedication to ensuring quality
+								service coupled with safety and efficiency at the fore-front for your commercial
 								long distance move.
 							</p>
 							<p className="text-gray-700">
 								We offer flexibility for each project and can meet your needs whatever they may be.
 							</p>
-							
+
 							<p className="font-semibold text-gray-800 mt-4">
 								Through our relationship from start to finish you can expect:
 							</p>
@@ -84,9 +84,9 @@ const LongDistanceCommercial = () => {
 								<li>Scheduling around your business hours</li>
 								<li>Community-focused safety and efficiency</li>
 							</ul>
-							
+
 							<p className="text-gray-700 mt-4">
-								We strive to exceed expectations through our adaptability and flexibility in every 
+								We strive to exceed expectations through our adaptability and flexibility in every
 								commercial relocation project.
 							</p>
 

@@ -11,7 +11,7 @@ import { localMovingServices } from "@/data/services";
 const CondoMovers = () => {
 	return (
 		<ServiceLayout
-			image="/condo.jpg"
+			image="/apartment-moving.webp"
 			title="Condo Moving Services"
 			desc="Expert condo moving services with specialized care for high-rise buildings and luxury properties."
 		>

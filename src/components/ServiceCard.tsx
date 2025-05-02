@@ -46,7 +46,7 @@ export const serviceCardData: ServiceCardData[] = [
 		title: "Packing Services",
 		description:
 			"Expert solutions to ensure your items are safely prepared for transport",
-		href: "/services/packing-services",
+		href: "/services/local-moving/pack-and-unpack",
 		icon: PackageIcon,
 	},
 	{

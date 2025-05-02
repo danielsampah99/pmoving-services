@@ -11,7 +11,7 @@ import { specialtyMovingServices } from "@/data/services";
 const GunAndSafeMovingPage = () => {
 	return (
 		<ServiceLayout
-			image="/residential.jpg"
+			image="/residential-moving.webp"
 			title="Gun & Safe Moving Services"
 			desc="Professional and secure transportation for your firearms and safes with specialized equipment and trained experts."
 		>
@@ -31,7 +31,7 @@ const GunAndSafeMovingPage = () => {
 							</button> */}
 						</div>
 						<p className="text-gray-600">
-							Moving specialty equipment like a gun safe requires proper equipment and expertise. 
+							Moving specialty equipment like a gun safe requires proper equipment and expertise.
 							Even with lifting straps, moving a half-ton safe requires professional handling.
 						</p>
 						<ul className="list-disc pl-6 space-y-3 text-gray-600">
@@ -41,7 +41,7 @@ const GunAndSafeMovingPage = () => {
 							<li>Doorway and floor protection</li>
 						</ul>
 					</div>
-					<img 
+					<img
 						src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Gun+safe-1920w.JPG"
 						alt="Professional gun safe moving"
 						className="rounded-lg shadow-xl"

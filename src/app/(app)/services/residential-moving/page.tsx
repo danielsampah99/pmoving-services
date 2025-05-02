@@ -4,7 +4,7 @@ import { Info } from "lucide-react";
 const ResidentialMoving = () => {
 	return (
 		<ServiceLayout
-			image="/residential.jpg"
+			image="/residential-moving.webp"
 			title="Residential Moving Services"
 			desc="We make home moving stress-free with professional packing, transport, and unpacking services."
 		>

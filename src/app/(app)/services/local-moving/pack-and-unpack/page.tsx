@@ -11,11 +11,11 @@ import { OurLocations } from "@/components/OurLocations";
 const PackAndUnpack = () => {
 	return (
 		<ServiceLayout
-			image="/pack.jpg"
+			image="/packing-services.webp"
 			title="Professional Packing & Unpacking Services"
 			desc="Let our expert team handle the tedious task of packing and unpacking your belongings with care and precision."
 		>
-			<div className="bg-gray-100 py-12 px-4">
+			<div className="py-12 px-4">
 				<div className="max-w-7xl mx-auto space-y-12">
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						<div className="rounded-lg overflow-hidden p-4 sm:p-6">

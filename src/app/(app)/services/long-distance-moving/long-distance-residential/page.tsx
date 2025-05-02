@@ -10,7 +10,7 @@ import { OurLocations } from "@/components/OurLocations";
 const LongDistanceResidential = () => {
 	return (
 		<ServiceLayout
-			image="/residential.jpg"
+			image="/residential-moving.webp"
 			title="Long Distance Residential Moving"
 			desc="Professional cross-country residential moving services with expert care and attention to detail."
 		>
@@ -65,10 +65,10 @@ const LongDistanceResidential = () => {
 							<h2 className="text-xl md:text-2xl font-bold">
 								Why Choose Us for Long Distance Moving?
 							</h2>
-							
+
 							<p className="text-gray-700">
-								Premium Moving Services sets ourselves apart with our dedication to ensuring 
-								quality service coupled with safety and efficiency at the fore-front for your 
+								Premium Moving Services sets ourselves apart with our dedication to ensuring
+								quality service coupled with safety and efficiency at the fore-front for your
 								long distance residential needs.
 							</p>
 							<p className="text-gray-700">
@@ -85,7 +85,7 @@ const LongDistanceResidential = () => {
 								<li>Safety, efficiency, and respect for communities</li>
 							</ul>
 							<p className="text-gray-700">
-								In any project we strive to exceed any expectations through our adaptability 
+								In any project we strive to exceed any expectations through our adaptability
 								and flexibility.
 							</p>
 

@@ -1,36 +1,18 @@
-"use client";
-
 import { ServiceLayout } from "@/components/ServiceLayout";
 import { OurLocations } from "@/components/OurLocations";
 
 import { specialtyMovingServices } from "@/data/services";
-import { FAQs } from "@/components/FAQs";
+
 import { RelatedLocalMoving } from "../local-moving/residential-movers/related-services";
 import { RequestQuote } from "../local-moving/residential-movers/request-quote";
+import { pianoMovingFAQs } from "@/data/moving-tips";
+import { FAQs } from "../local-moving/residential-movers/faq";
 
-const pianoMovingFAQs = [
-    {
-        question: "How much does it cost to move a piano?",
-        answer: "The cost of moving a piano varies depending on factors like distance, type of piano, accessibility, and any special requirements. Contact us for a detailed quote tailored to your specific needs."
-    },
-    {
-        question: "What types of pianos can you move?",
-        answer: "We can move all types of pianos including grand pianos, baby grands, upright pianos, digital pianos, and keyboard consoles. Our team has experience with various sizes and styles."
-    },
-    {
-        question: "How do you ensure the safety of my piano during the move?",
-        answer: "We use specialized equipment, padding, and techniques specifically designed for piano moving. Our team is trained in proper piano handling, and we provide comprehensive insurance coverage for added peace of mind."
-    },
-    {
-        question: "How long does it take to move a piano?",
-        answer: "The time required depends on factors like distance, accessibility, and piano type. A local move typically takes 2-4 hours, while long-distance moves may require additional time."
-    }
-];
 
 const PianoMovingPage = () => {
     return (
         <ServiceLayout
-            image="/images/piano-moving.jpg"
+            image="/piano-moving.webp"
             title="Professional Piano Moving Services"
             desc="Expert piano moving services with specialized equipment and trained professionals to ensure your valuable instrument's safe relocation."
         >
@@ -59,8 +41,8 @@ const PianoMovingPage = () => {
                                 Trust our experienced team to move your valuable instrument with the utmost care and precision.
                             </p>
                         </div>
-                        <img 
-                            src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Spinet+piano-1920w.JPG" 
+                        <img
+                            src="/piano-moving.webp"
                             alt="Professional piano moving"
                             className="rounded-lg shadow-lg object-cover h-full"
                         />
@@ -119,7 +101,7 @@ const PianoMovingPage = () => {
             </div>
             <RelatedLocalMoving services={specialtyMovingServices} />
             <RequestQuote />
-            {/* <FAQs faqs={pianoMovingFAQs} /> */}
+            <FAQs faqs={pianoMovingFAQs} />
             <OurLocations />
         </ServiceLayout>
     );

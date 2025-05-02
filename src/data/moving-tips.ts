@@ -1,7 +1,7 @@
-import { FAQType } from "@/app/(app)/services/local-moving/residential-movers/faq";
-import { Expectation } from "@/app/(app)/services/local-moving/residential-movers/moving-process";
+import type { FAQType } from "@/app/(app)/services/local-moving/residential-movers/faq";
+import type { Expectation } from "@/app/(app)/services/local-moving/residential-movers/moving-process";
 import { BoxesIcon } from "@/components/icons/boxes-icon";
-import { FlatIcon } from "@/components/icons/flaticon";
+import type { FlatIcon } from "@/components/icons/flaticon";
 import { HouseIcon } from "@/components/icons/house-icon";
 import { PackagingIcon } from "@/components/icons/packaging-icon";
 import { PlanningIcon } from "@/components/icons/planning-icon";
@@ -43,6 +43,29 @@ export const movingTips: MovingTip[] = [
 			"Maintain on-site presence or designate a representative to provide direction to moving personnel. Conduct pre-move and post-move inspections with the moving team. Establish predetermined locations for substantial furniture pieces. Upon completion of unloading, perform a comprehensive final inspection to verify all items have been properly delivered and are damage-free.",
 	},
 ];
+
+export const internationalMovingProcess = [
+    {
+        title: "Initial Consultation",
+        description: "Free assessment of your moving needs and detailed quote"
+    },
+    {
+        title: "Custom Planning",
+        description: "Tailored moving strategy and timeline creation"
+    },
+    {
+        title: "Packing & Documentation",
+        description: "Professional packing and paperwork preparation"
+    },
+    {
+        title: "International Transport",
+        description: "Secure shipping and real-time tracking"
+    },
+    {
+        title: "Destination Services",
+        description: "Customs clearance and delivery to your new home"
+    }
+]
 
 export const residentialExpectations: Expectation[] = [
 	{
@@ -388,3 +411,188 @@ export const storageFaqs = [
 		answer: "We make it easy to change your storage unit size or cancel your rental agreement. Simply contact our customer service team, and they will assist you with the process.",
 	},
 ]
+
+export const logisticsFAQs: FAQType[] = [
+	{
+		question: "What types of logistics services do you offer?",
+		answer:
+			"We provide a comprehensive suite of logistics solutions, including freight forwarding (air, sea, and land), warehousing and distribution, supply chain management, customs brokerage, and specialized transport services.",
+	},
+	{
+		question: "What is freight forwarding?",
+		answer:
+			"Freight forwarding involves arranging the transportation of goods on behalf of shippers.  We handle everything from booking cargo space to coordinating customs clearance and delivery to the final destination, utilizing various modes of transport (air, sea, road, or rail) depending on speed, cost, and specific requirements.",
+	},
+	{
+		question: "Do you offer international shipping services?",
+		answer:
+			"Yes, we specialize in international shipping.  Our team has extensive knowledge of customs regulations, import/export procedures, and international trade laws, ensuring your goods move smoothly across borders. We handle all necessary documentation, duties, and taxes on your behalf.",
+	},
+	{
+		question: "What is supply chain management?",
+		answer:
+			"Supply chain management is the oversight of materials, information, and finances as they move from supplier to manufacturer to wholesaler to retailer to consumer. We can help you optimize your supply chain for efficiency, cost-effectiveness, and resilience, improving visibility and minimizing disruptions.",
+	},
+	{
+		question: "Do you offer warehousing and distribution services?",
+		answer:
+			"Yes, we offer secure warehousing and efficient distribution services. Our warehouses are equipped with advanced inventory management systems, ensuring accurate tracking and timely delivery of your goods. We can handle order fulfillment, pick and pack, and cross-docking operations.",
+	},
+	{
+		question: "How do you handle customs brokerage?",
+		answer:
+			"Our experienced customs brokers navigate the complexities of customs regulations to ensure your shipments clear customs quickly and efficiently. We prepare and submit all necessary documentation, calculate duties and taxes, and represent you with customs authorities.",
+	},
+	{
+		question: "How can I get a quote for your logistics services?",
+		answer:
+			"You can easily request a quote through our website or by contacting our sales team directly.  Please provide details about the type of goods you're shipping, origin and destination locations, dimensions and weight, and any special requirements. We'll provide a customized quote tailored to your specific needs.",
+	},
+	{
+		question: "How do you ensure the safety and security of my cargo?",
+		answer:
+			"We prioritize the safety and security of your cargo. We use reputable carriers, implement robust security protocols, and offer cargo insurance options to protect against loss or damage during transit. We also utilize GPS tracking to monitor the location of your shipments in real-time.",
+	},
+	{
+		question: "What types of cargo can you handle?",
+		answer:
+			"We can handle a wide range of cargo, including general merchandise, electronics, machinery, food products, hazardous materials (subject to regulations), and oversized or heavy items. Please contact us to discuss your specific cargo requirements.",
+	},
+	{
+		question: "What are your payment terms?",
+		answer:
+			"Our payment terms vary depending on the type of service and the volume of business. We typically offer net terms for established customers and require prepayment for new clients or smaller shipments. We accept various payment methods, including wire transfer, credit card, and ACH.",
+	},
+	{
+		question: "How do I track my shipment?",
+		answer:
+			"We provide online tracking tools that allow you to monitor the status of your shipment in real-time. You'll receive a tracking number when your shipment is dispatched, which you can use to track its progress on our website or through our mobile app.",
+	},
+	{
+		question: "What happens if my shipment is delayed or damaged?",
+		answer:
+			"In the event of a delay or damage to your shipment, we'll work diligently to resolve the issue as quickly as possible. We'll investigate the cause of the problem, communicate with the relevant parties, and provide you with updates throughout the process. We also offer cargo insurance options to protect against financial loss due to damage or loss.",
+	},
+];
+
+export const pianoMovingFAQs: FAQType[] = [
+	{
+		question: "Do you have experience moving pianos?",
+		answer:
+			"Yes, we specialize in piano moving! Our team has extensive experience handling all types of pianos, including uprights, grands, baby grands, and organs. We understand the unique challenges and requirements of piano transport.",
+	},
+	{
+		question: "How do you protect my piano during the move?",
+		answer:
+			"We use specialized equipment and techniques to protect your piano. This includes heavy-duty padding, piano boards, straps, and sometimes custom crating for valuable or delicate instruments. Our movers are trained in proper lifting and handling procedures to prevent damage.",
+	},
+	{
+		question: "Will you disassemble and reassemble my piano?",
+		answer:
+			"We typically don't fully disassemble pianos unless absolutely necessary for transport due to space constraints. For grand pianos, we will carefully remove the legs and pack them separately. Upon arrival, we will reassemble the piano legs and ensure it's properly positioned.",
+	},
+	{
+		question: "Is your company insured for piano moving?",
+		answer:
+			"Yes, we are fully insured, including coverage for piano moving. This protects you in the unlikely event of damage during the move. We can provide proof of insurance upon request.",
+	},
+	{
+		question: "How much does it cost to move a piano?",
+		answer:
+			"The cost of moving a piano depends on several factors, including the type of piano, the distance of the move, the presence of stairs or other obstacles, and any special requirements. Contact us for a free, no-obligation quote. We'll assess your needs and provide an accurate estimate.",
+	},
+];
+
+export const junkRemovalFAQs: FAQType[] = [
+	{
+		question: "What kind of junk do you remove?",
+		answer:
+			"We remove almost all types of non-hazardous junk, including old furniture, appliances, electronics, yard waste, construction debris, mattresses, and more. If you're unsure if we take something, just ask!",
+	},
+	{
+		question: "How does your junk removal service work?",
+		answer:
+			"It's easy! Just contact us for a free estimate. We'll schedule a time to come to your location, assess the junk, and provide you with a firm price. If you agree, we'll remove the junk right then and there. We handle all the loading, hauling, and disposal.",
+	},
+	{
+		question: "How much does junk removal cost?",
+		answer:
+			"The cost depends on the volume and type of junk, as well as how much space it takes up in our truck. We offer free, no-obligation estimates so you know the exact price upfront. There are no hidden fees.",
+	},
+	{
+		question: "Do you recycle or donate items?",
+		answer:
+			"Yes, we are committed to environmentally responsible disposal. We prioritize recycling and donating usable items to local charities whenever possible. We only take items to the landfill as a last resort.",
+	},
+	{
+		question: "Do I need to be present during the junk removal?",
+		answer:
+			"While it's helpful if you're present to point out the items you want removed, it's not always necessary. As long as we have clear instructions and access to the junk, we can complete the job even if you're not there.",
+	},
+];
+
+export const internationalMovingFAQs: FAQType[] = [
+	{
+		question: "What is involved in an international move?",
+		answer:
+			"An international move is a complex process that involves packing, shipping, customs clearance, and delivery to your new home in another country. We handle all aspects of the move, including pre-move planning, packing, loading, shipping, customs documentation, and unpacking at your destination.",
+	},
+	{
+		question: "How much does an international move cost?",
+		answer:
+			"The cost of an international move varies greatly depending on the destination, volume of goods, shipping method (sea or air), and any additional services required. We'll provide a detailed, customized quote based on your specific needs after a free in-home or virtual consultation.",
+	},
+	{
+		question: "How long does an international move take?",
+		answer:
+			"The transit time for an international move depends on the destination, shipping method, and customs clearance processes. Sea freight typically takes several weeks to a few months, while air freight is faster but more expensive. We'll provide you with an estimated transit time based on your specific move details.",
+	},
+	{
+		question: "What items can I take with me in an international move?",
+		answer:
+			"Most household goods and personal belongings can be shipped internationally. However, there may be restrictions on certain items, such as firearms, hazardous materials, and perishable goods. We'll advise you on any prohibited or restricted items based on the destination country's regulations.",
+	},
+	{
+		question: "What is customs clearance, and how do you handle it?",
+		answer:
+			"Customs clearance is the process of obtaining permission from customs authorities to import your goods into another country. We have experienced customs brokers who handle all necessary documentation, duties, and taxes on your behalf to ensure a smooth and efficient customs clearance process.",
+	},
+	{
+		question: "Do I need insurance for my international move?",
+		answer:
+			"We highly recommend purchasing insurance for your international move. While we take every precaution to protect your belongings, unforeseen events can occur during transit. Our insurance options provide coverage against loss or damage during shipping.",
+	},
+	{
+		question: "What happens when my goods arrive at the destination?",
+		answer:
+			"Upon arrival at the destination port or airport, your goods will undergo customs clearance. Once cleared, they will be delivered to your new home by our local partners. We can also provide unpacking and settling-in services to help you get settled in your new home quickly and easily.",
+	},
+];
+
+export const specialtyMovingFAQs: FAQType[] = [
+	{
+		question: "What types of specialty items do you move?",
+		answer:
+			"We handle a wide variety of specialty items, including pianos, antiques, artwork, safes, pool tables, hot tubs, laboratory equipment, medical equipment, and oversized furniture.  If you have an item that requires special care and attention, we can likely move it.",
+	},
+	{
+		question: "How do you protect specialty items during a move?",
+		answer:
+			"We use specialized packing materials, techniques, and equipment to protect specialty items. This may include custom crating, heavy-duty padding, climate-controlled transport, and the use of specialized dollies and lifting equipment. Our team is trained in proper handling procedures for different types of specialty items.",
+	},
+	{
+		question: "Do you have experience moving valuable artwork and antiques?",
+		answer:
+			"Yes, we have extensive experience moving valuable artwork and antiques. We understand the unique requirements for handling these delicate items and take extra precautions to ensure their safety. We offer white-glove service, including custom crating, climate-controlled transport, and insurance coverage for high-value items.",
+	},
+	{
+		question: "Can you move a gun safe?",
+		answer:
+			"Yes, we are experienced in moving gun safes.  We use specialized equipment, including safe dollies and stair climbers, to safely move these extremely heavy items. We ensure all firearms are handled according to all applicable laws and regulations.",
+	},
+	{
+		question: "Do you offer climate-controlled moving services?",
+		answer:
+			"Yes, we offer climate-controlled moving services for items that are sensitive to temperature and humidity changes, such as antiques, artwork, and certain types of electronics. Our climate-controlled vehicles maintain a consistent temperature and humidity level throughout the move.",
+	},
+];

@@ -10,7 +10,7 @@ import { OurLocations } from "@/components/OurLocations";
 const SmallBusinessMovers = () => {
 	return (
 		<ServiceLayout
-			image="/residential.jpg"
+			image="/residential-moving.webp"
 			title="Small Business Moving Services"
 			desc="Reliable and efficient moving solutions tailored for small businesses"
 		>
@@ -43,11 +43,11 @@ const SmallBusinessMovers = () => {
 								</h2>
 							</div>
 							<p className="text-background">
-								As small business movers, we make relocations organized, seamless, and FAST! 
+								As small business movers, we make relocations organized, seamless, and FAST!
 								Our goal is to get you moved and back to business quickly.
 							</p>
 							<p className="text-gray-700">
-								We handle more than just furniture and fixtures - our executive relocation 
+								We handle more than just furniture and fixtures - our executive relocation
 								services work for local, statewide, national, and international moves.
 							</p>
 							{/* Removed duplicate paragraph */}

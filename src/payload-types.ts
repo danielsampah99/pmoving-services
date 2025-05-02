@@ -70,6 +70,7 @@ export interface Config {
     users: User;
     media: Media;
     'service-areas': ServiceArea;
+    blogs: Blog;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -79,6 +80,7 @@ export interface Config {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     'service-areas': ServiceAreasSelect<false> | ServiceAreasSelect<true>;
+    blogs: BlogsSelect<false> | BlogsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -273,6 +275,51 @@ export interface ServiceArea {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "blogs".
+ */
+export interface Blog {
+  id: number;
+  /**
+   * The title of the blog post. This is shown on the all blogs page and the page rendering/displaying the blog post.
+   */
+  title: string;
+  /**
+   * The slug is th unique text used to identify each blog post. It most likely should be the same as the title with but in lower case and the spaces replaced with dashes
+   */
+  slug: string;
+  /**
+   * The actual content of the blog. Images, links, and lists can be included
+   */
+  content: {
+    root: {
+      type: string;
+      children: {
+        type: string;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
+  /**
+   * These tags will used for Search Engine Optimization and categorization of the blogs when being crawled and indexed by google or other web services
+   */
+  tags?: string[] | null;
+  /**
+   * The date this blog will be posted/published. The date is also available to readers of blogs
+   */
+  publishedDate: string;
+  thumbnail: number | Media;
+  thumbnailDescription?: ('draft' | 'scheduled' | 'published') | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -289,6 +336,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'service-areas';
         value: number | ServiceArea;
+      } | null)
+    | ({
+        relationTo: 'blogs';
+        value: number | Blog;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -436,6 +487,21 @@ export interface ServiceAreasSelect<T extends boolean = true> {
         image?: T;
         id?: T;
       };
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "blogs_select".
+ */
+export interface BlogsSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  content?: T;
+  tags?: T;
+  publishedDate?: T;
+  thumbnail?: T;
+  thumbnailDescription?: T;
   updatedAt?: T;
   createdAt?: T;
 }
