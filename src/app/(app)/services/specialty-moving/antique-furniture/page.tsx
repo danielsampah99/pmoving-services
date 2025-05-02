@@ -9,7 +9,7 @@ import { specialtyMovingServices } from "@/data/services";
 const AntiqueFurnitureMovingPage = () => {
 	return (
 		<ServiceLayout
-			image="/residential.jpg"
+			image="/residential-moving.webp"
 			title="Antique Furniture Moving Services"
 			desc="Professional and specialized moving services for your valuable antique furniture. Our expert movers handle your precious pieces with utmost care and precision."
 		>
@@ -37,12 +37,12 @@ const AntiqueFurnitureMovingPage = () => {
 								<li>Custom routing options</li>
 							</ul>
 							<p className="text-gray-600 mt-4">
-								Our goal is to exceed expectations by customizing services to your needs. 
+								Our goal is to exceed expectations by customizing services to your needs.
 								Relax while we handle the heavy lifting!
 							</p>
 						</div>
-						<img 
-							src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Spinet+piano-1920w.JPG" 
+						<img
+							src="/piano-moving.webp"
 							alt="Professional antique movers"
 							className="rounded-lg shadow-lg object-cover h-full"
 						/>

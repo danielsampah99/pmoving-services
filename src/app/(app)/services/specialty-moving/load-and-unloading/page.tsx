@@ -12,12 +12,12 @@ const LoadAndUnloadingPage = () => {
     return (
         <div>
             <ServiceLayout
-                image="/residential.jpg"
+                image="/residential-moving.webp"
                 title="Load and Unloading Services"
                 desc="Professional loading and unloading services for your moving needs"
             >
                 <div className="px-4 py-8 space-y-8">
-                 
+
 
                     {/* Service Description */}
                     <div className="space-y-4">
@@ -55,7 +55,7 @@ const LoadAndUnloadingPage = () => {
                             </p>
                         </div>
                     </div>
-                     
+
 
                     {/* Why Choose Us */}
                     <div className="bg-gray-50 p-6 rounded-lg">
@@ -83,7 +83,7 @@ const LoadAndUnloadingPage = () => {
                                     </li>
                                 </ul>
                             </div>
-							<img 
+							<img
                             src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Trailer+loadc-1920w.jpg"
                             alt="Professional loading team"
                             className="rounded-lg shadow-xl"

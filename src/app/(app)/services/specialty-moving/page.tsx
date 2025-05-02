@@ -1,5 +1,3 @@
-"use client";
-
 import { ServiceLayout } from "@/components/ServiceLayout";
 import { OurLocations } from "@/components/OurLocations";
 import { RequestQuote } from "../local-moving/residential-movers/request-quote";
@@ -7,11 +5,12 @@ import { FAQs } from "../local-moving/residential-movers/faq";
 import { RelatedLocalMoving } from "../local-moving/residential-movers/related-services";
 
 import { specialtyMovingServices } from "@/data/services";
+import { specialtyMovingFAQs } from "@/data/moving-tips";
 
 const SpecialtyMovingPage = () => {
     return (
         <ServiceLayout
-            image="/residential.jpg"
+            image="/residential-moving.webp"
             title="Specialty Moving Services"
             desc="Expert moving solutions for unique and valuable items. Our specialized services ensure safe handling of antiques, pianos, safes, and more."
         >
@@ -38,8 +37,8 @@ const SpecialtyMovingPage = () => {
                                 Our experienced team is equipped with specialized tools and knowledge to handle your unique moving needs with the utmost care and precision.
                             </p>
                         </div>
-                        <img 
-                            src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Spinet+piano-1920w.JPG" 
+                        <img
+                            src="/piano-moving.webp"
                             alt="Specialty Moving Services"
                             className="rounded-lg shadow-lg object-cover h-full"
                         />
@@ -88,7 +87,7 @@ const SpecialtyMovingPage = () => {
             </div>
             <RelatedLocalMoving services={specialtyMovingServices} />
             <RequestQuote />
-            {/* <FAQs faqs={specialtyMovingFAQs} /> */}
+            <FAQs faqs={specialtyMovingFAQs} />
             <OurLocations />
         </ServiceLayout>
     );

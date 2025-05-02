@@ -11,7 +11,7 @@ const WarehouseIndustrialPage = () => {
     return (
         <div>
             <ServiceLayout
-                image="/residential.jpg"
+                image="/residential-moving.webp"
                 title="Warehouse & Industrial Moving"
                 desc="Professional warehouse relocation and industrial equipment moving services"
             >
@@ -30,7 +30,7 @@ const WarehouseIndustrialPage = () => {
                                     Our expert warehouse relocation team will help to plan every detail of your business move. If you are interested to see how we can help to make sure your move goes as smooth as possible, get in touch with us today for a quote on your removal.
                                 </p>
                             </div>
-                            <img 
+                            <img
                                 src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/warehouse-moving-1920w.jpg"
                                 alt="Industrial relocation"
                                 className="rounded-lg shadow-xl"
@@ -46,15 +46,15 @@ const WarehouseIndustrialPage = () => {
                                     Our Premium movers are trained and certified in light industrial relocation and we are able to complete even complex tasks. With over a decade of quality and value driven industrial moving experience, we can fit your timeline and your budget.
                                 </p>
                                 <div className="gap-4 mt-6">
-                                    {/* <img 
-                                        src="/moving-guide-cover.webp" 
+                                    {/* <img
+                                        src="/moving-guide-cover.webp"
                                         alt="Moving guide"
                                         className="rounded-lg"
                                     /> */}
                                     <RequestQuote />
                                 </div>
                             </div>
-                            
+
                             <div className="bg-gray-100 p-6 rounded-lg">
                                 <p className="text-gray-700">
                                     We can provide all the labor required to complete your warehouse relocation. We are licensed, bonded, and insured.

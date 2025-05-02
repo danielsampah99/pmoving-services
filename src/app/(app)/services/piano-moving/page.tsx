@@ -1,5 +1,3 @@
-"use client";
-
 import { ServiceLayout } from "@/components/ServiceLayout";
 import { OurLocations } from "@/components/OurLocations";
 
@@ -44,7 +42,7 @@ const PianoMovingPage = () => {
                             </p>
                         </div>
                         <img
-                            src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Spinet+piano-1920w.JPG"
+                            src="/piano-moving.webp"
                             alt="Professional piano moving"
                             className="rounded-lg shadow-lg object-cover h-full"
                         />

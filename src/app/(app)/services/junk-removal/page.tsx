@@ -1,35 +1,15 @@
-"use client";
-
 import { ServiceLayout } from "@/components/ServiceLayout";
 import { OurLocations } from "@/components/OurLocations";
 import { FAQs } from "../local-moving/residential-movers/faq";
 import { specialtyMovingServices } from "@/data/services";
 import { RelatedLocalMoving } from "../local-moving/residential-movers/related-services";
 import { RequestQuote } from "../local-moving/residential-movers/request-quote";
-
-const junkRemovalFAQs = [
-    {
-        question: "What items do you accept for junk removal?",
-        answer: "We accept most household and commercial items including furniture, appliances, electronics, construction debris, yard waste, and general clutter. However, we cannot accept hazardous materials, chemicals, or certain regulated items."
-    },
-    {
-        question: "How do you price junk removal services?",
-        answer: "Our pricing is based on the volume of items to be removed and any special handling requirements. We provide free, no-obligation estimates after seeing the items in person or through photos."
-    },
-    {
-        question: "Are you environmentally responsible?",
-        answer: "Yes! We prioritize recycling and donation whenever possible. Items in good condition are donated to local charities, while recyclable materials are properly sorted and processed."
-    },
-    {
-        question: "How quickly can you remove my junk?",
-        answer: "We offer same-day and next-day service in most cases. For larger projects, we can schedule a convenient time that works for you."
-    }
-];
+import { junkRemovalFAQs } from "@/data/moving-tips";
 
 const JunkRemovalPage = () => {
     return (
         <ServiceLayout
-            image="/residential.jpg"
+            image="/apartment-moving.webp"
             title="Professional Junk Removal Services"
             desc="Expert junk removal and disposal services for residential and commercial properties. We handle the heavy lifting and ensure proper disposal of your unwanted items."
         >
@@ -57,8 +37,8 @@ const JunkRemovalPage = () => {
                                 Our experienced team is equipped with the right tools and vehicles to handle any size job efficiently and responsibly.
                             </p>
                         </div>
-                        <img 
-                            src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Trailer+loadc-1920w.jpg" 
+                        <img
+                            src="/office-moving.webp"
                             alt="Junk Removal Services"
                             className="rounded-lg shadow-lg object-cover h-full"
                         />
@@ -115,30 +95,8 @@ const JunkRemovalPage = () => {
                     </section>
                 </div>
             </div>
-            {/* Additional Services Section */}
-            <section className="bg-white rounded-lg shadow-md p-6 mt-8">
-                <h2 className="text-3xl font-bold mb-4">Additional Services</h2>
-                <div className="grid md:grid-cols-3 gap-6">
-                    <div className="p-4 bg-gray-50 rounded-lg">
-                        <h3 className="text-xl font-semibold mb-2">Hoarding Cleanup</h3>
-                        <p className="text-gray-600">
-                            Specialized services for hoarding situations with compassionate, thorough cleanup solutions.
-                        </p>
-                    </div>
-                    <div className="p-4 bg-gray-50 rounded-lg">
-                        <h3 className="text-xl font-semibold mb-2">Emergency Services</h3>
-                        <p className="text-gray-600">
-                            Quick response for urgent junk removal needs, available on short notice.
-                        </p>
-                    </div>
-                    <div className="p-4 bg-gray-50 rounded-lg">
-                        <h3 className="text-xl font-semibold mb-2">Demolition Cleanup</h3>
-                        <p className="text-gray-600">
-                            Complete removal of debris and materials from demolition projects.
-                        </p>
-                    </div>
-                </div>
-            </section>
+
+
 
             {/* Commitment to Sustainability */}
             <section className="bg-white rounded-lg shadow-md p-6 mt-8">

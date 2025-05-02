@@ -10,7 +10,7 @@ import { OurLocations } from "@/components/OurLocations";
 const EmployeeRelocation = () => {
 	return (
 		<ServiceLayout
-			image="/residential.jpg"
+			image="/residential-moving.webp"
 			title="Employee Relocation Services"
 			desc="Professional employee relocation solutions ensuring smooth transitions for your workforce."
 		>
@@ -41,7 +41,7 @@ const EmployeeRelocation = () => {
 								</h2>
 							</div>
 							<p className="text-background">
-								Premium Moving Services sets ourselves apart with our dedication to ensuring 
+								Premium Moving Services sets ourselves apart with our dedication to ensuring
 								quality service coupled with safety and efficiency at the fore-front.
 							</p>
 							<p className="text-gray-700">
@@ -58,7 +58,7 @@ const EmployeeRelocation = () => {
 								<li>Community-focused safety measures</li>
 							</ul>
 							<p className="text-gray-700">
-								In every project we strive to exceed expectations through our adaptability 
+								In every project we strive to exceed expectations through our adaptability
 								and commitment to service excellence.
 							</p>
 						</div>

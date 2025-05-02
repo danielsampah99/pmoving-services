@@ -9,7 +9,7 @@ import { specialtyMovingServices } from "@/data/services";
 const SeniorRelocationPage = () => {
 	return (
 		<ServiceLayout
-			image="/residential.jpg"
+			image="/residential-moving.webp"
 			title="Senior Relocation Services"
 			desc="Compassionate and comprehensive senior moving services designed to make transitions smooth and stress-free for seniors and their families."
 		>
