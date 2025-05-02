@@ -1,25 +1,25 @@
 import { ServiceLayout } from "@/components/ServiceLayout";
-import { Info, Truck, BarChart, Clock, Shield, Package, Warehouse, Network } from "lucide-react";
 
-import { frequentQuestions } from "@/data/moving-tips";
+import { logisticsFAQs } from "@/data/moving-tips";
 
 import { RelatedServices } from "../commercial-moving/related-services";
 import { commercialMovingServices } from "@/data/services";
 import { OurLocations } from "@/components/OurLocations";
-import { FAQs } from "@/components/FAQs";
 import { RequestQuote } from "../local-moving/residential-movers/request-quote";
+import { Info } from "lucide-react";
+import { FAQs } from "../local-moving/residential-movers/faq";
 
 const LogisticsServicePage = () => {
     return (
         <ServiceLayout
-            image="/logistics-service.webp"
+            image="/logistics-services-hero.webp"
             title="Logistics Services"
             desc="Professional logistics solutions for efficient supply chain management and distribution"
         >
             <div className="py-12 px-4">
                 <div className="max-w-7xl mx-auto space-y-12">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="rounded-lg overflow-hidden p-4 sm:p-6">
+                        <div className="rounded-lg overflow-hidden">
                             <h1 className="text-4xl font-bold mb-2 sm:mb-4">
                                 Comprehensive Logistics Solutions
                             </h1>
@@ -28,7 +28,7 @@ const LogisticsServicePage = () => {
                             </p>
                             <div className="relative">
                                 <img
-                                    src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/warehouse-moving-1920w.jpg"
+                                    src="/moving-process.webp"
                                     alt="Logistics Services"
                                     className="w-full rounded-lg max-h-[700px] object-cover"
                                 />
@@ -37,7 +37,7 @@ const LogisticsServicePage = () => {
 
                         <div className="flex flex-col justify-center space-y-3">
                             <div className="flex items-center space-x-2 text-background">
-                                <Info className="w-6 h-6" />
+                                <Info className="size-6" />
                                 <h2 className="text-xl md:text-2xl font-bold">
                                     Professional Logistics Management
                                 </h2>
@@ -104,88 +104,11 @@ const LogisticsServicePage = () => {
                     </div>
                 </div>
             </div>
-            {/* <RelatedServices services={commercialMovingServices} /> */}
+            <RelatedServices services={commercialMovingServices} />
             <RequestQuote />
-            {/* <FAQs faqs={frequentQuestions} /> */}
+            <FAQs faqs={logisticsFAQs} />
             <OurLocations />
-            {/* Added Features Grid */}
-            <div className="bg-gray-50 py-16 px-4">
-                <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl font-bold text-center mb-12">Our Logistics Expertise</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                        <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                            <Truck className="w-12 h-12 text-background mb-4" />
-                            <h3 className="text-xl font-semibold mb-2">Fleet Management</h3>
-                            <p className="text-gray-600">Modern fleet with real-time tracking and optimization</p>
-                        </div>
-                        <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                            <Warehouse className="w-12 h-12 text-background mb-4" />
-                            <h3 className="text-xl font-semibold mb-2">Warehousing</h3>
-                            <p className="text-gray-600">Strategic storage locations with advanced inventory systems</p>
-                        </div>
-                        <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                            <Network className="w-12 h-12 text-background mb-4" />
-                            <h3 className="text-xl font-semibold mb-2">Network Design</h3>
-                            <p className="text-gray-600">Optimized supply chain network for maximum efficiency</p>
-                        </div>
-                        <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                            <Package className="w-12 h-12 text-background mb-4" />
-                            <h3 className="text-xl font-semibold mb-2">Distribution</h3>
-                            <p className="text-gray-600">Seamless distribution services across the region</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            {/* Added Statistics Section */}
-            <div className="py-16 px-4 bg-background text-white">
-                <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                        <div>
-                            <div className="text-4xl font-bold mb-2">98%</div>
-                            <div className="text-lg">On-Time Delivery Rate</div>
-                        </div>
-                        <div>
-                            <div className="text-4xl font-bold mb-2">1M+</div>
-                            <div className="text-lg">Shipments Handled</div>
-                        </div>
-                        <div>
-                            <div className="text-4xl font-bold mb-2">24/7</div>
-                            <div className="text-lg">Customer Support</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Added CTA Section */}
-            <div className="py-16 px-4 bg-gradient-to-r from-background to-background">
-                <div className="max-w-7xl mx-auto text-center text-white">
-                    <h2 className="text-3xl font-bold mb-4">Ready to Optimize Your Supply Chain?</h2>
-                    <p className="text-xl mb-8">Let our logistics experts help you streamline your operations</p>
-                    <button className="bg-white text-background px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
-                        Get Started Today
-                    </button>
-                </div>
-            </div>
-
-            {/* Added Testimonial Section */}
-            {/* <div className="py-16 px-4">
-                <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="bg-white p-6 rounded-xl shadow-md">
-                            <p className="text-gray-600 italic mb-4">"Their logistics services have transformed our supply chain efficiency. The team's expertise and dedication are unmatched."</p>
-                            <div className="font-semibold">- John Smith, Operations Director</div>
-                            <div className="text-gray-500">Global Manufacturing Co.</div>
-                        </div>
-                        <div className="bg-white p-6 rounded-xl shadow-md">
-                            <p className="text-gray-600 italic mb-4">"Exceptional service and reliability. They've helped us reduce costs while improving delivery times significantly."</p>
-                            <div className="font-semibold">- Sarah Johnson, Supply Chain Manager</div>
-                            <div className="text-gray-500">Tech Solutions Inc.</div>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
         </ServiceLayout>
     );
 };

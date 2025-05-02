@@ -1,7 +1,7 @@
-import { FAQType } from "@/app/(app)/services/local-moving/residential-movers/faq";
-import { Expectation } from "@/app/(app)/services/local-moving/residential-movers/moving-process";
+import type { FAQType } from "@/app/(app)/services/local-moving/residential-movers/faq";
+import type { Expectation } from "@/app/(app)/services/local-moving/residential-movers/moving-process";
 import { BoxesIcon } from "@/components/icons/boxes-icon";
-import { FlatIcon } from "@/components/icons/flaticon";
+import type { FlatIcon } from "@/components/icons/flaticon";
 import { HouseIcon } from "@/components/icons/house-icon";
 import { PackagingIcon } from "@/components/icons/packaging-icon";
 import { PlanningIcon } from "@/components/icons/planning-icon";
@@ -388,3 +388,66 @@ export const storageFaqs = [
 		answer: "We make it easy to change your storage unit size or cancel your rental agreement. Simply contact our customer service team, and they will assist you with the process.",
 	},
 ]
+
+export const logisticsFAQs: FAQType[] = [
+	{
+		question: "What types of logistics services do you offer?",
+		answer:
+			"We provide a comprehensive suite of logistics solutions, including freight forwarding (air, sea, and land), warehousing and distribution, supply chain management, customs brokerage, and specialized transport services.",
+	},
+	{
+		question: "What is freight forwarding?",
+		answer:
+			"Freight forwarding involves arranging the transportation of goods on behalf of shippers.  We handle everything from booking cargo space to coordinating customs clearance and delivery to the final destination, utilizing various modes of transport (air, sea, road, or rail) depending on speed, cost, and specific requirements.",
+	},
+	{
+		question: "Do you offer international shipping services?",
+		answer:
+			"Yes, we specialize in international shipping.  Our team has extensive knowledge of customs regulations, import/export procedures, and international trade laws, ensuring your goods move smoothly across borders. We handle all necessary documentation, duties, and taxes on your behalf.",
+	},
+	{
+		question: "What is supply chain management?",
+		answer:
+			"Supply chain management is the oversight of materials, information, and finances as they move from supplier to manufacturer to wholesaler to retailer to consumer. We can help you optimize your supply chain for efficiency, cost-effectiveness, and resilience, improving visibility and minimizing disruptions.",
+	},
+	{
+		question: "Do you offer warehousing and distribution services?",
+		answer:
+			"Yes, we offer secure warehousing and efficient distribution services. Our warehouses are equipped with advanced inventory management systems, ensuring accurate tracking and timely delivery of your goods. We can handle order fulfillment, pick and pack, and cross-docking operations.",
+	},
+	{
+		question: "How do you handle customs brokerage?",
+		answer:
+			"Our experienced customs brokers navigate the complexities of customs regulations to ensure your shipments clear customs quickly and efficiently. We prepare and submit all necessary documentation, calculate duties and taxes, and represent you with customs authorities.",
+	},
+	{
+		question: "How can I get a quote for your logistics services?",
+		answer:
+			"You can easily request a quote through our website or by contacting our sales team directly.  Please provide details about the type of goods you're shipping, origin and destination locations, dimensions and weight, and any special requirements. We'll provide a customized quote tailored to your specific needs.",
+	},
+	{
+		question: "How do you ensure the safety and security of my cargo?",
+		answer:
+			"We prioritize the safety and security of your cargo. We use reputable carriers, implement robust security protocols, and offer cargo insurance options to protect against loss or damage during transit. We also utilize GPS tracking to monitor the location of your shipments in real-time.",
+	},
+	{
+		question: "What types of cargo can you handle?",
+		answer:
+			"We can handle a wide range of cargo, including general merchandise, electronics, machinery, food products, hazardous materials (subject to regulations), and oversized or heavy items. Please contact us to discuss your specific cargo requirements.",
+	},
+	{
+		question: "What are your payment terms?",
+		answer:
+			"Our payment terms vary depending on the type of service and the volume of business. We typically offer net terms for established customers and require prepayment for new clients or smaller shipments. We accept various payment methods, including wire transfer, credit card, and ACH.",
+	},
+	{
+		question: "How do I track my shipment?",
+		answer:
+			"We provide online tracking tools that allow you to monitor the status of your shipment in real-time. You'll receive a tracking number when your shipment is dispatched, which you can use to track its progress on our website or through our mobile app.",
+	},
+	{
+		question: "What happens if my shipment is delayed or damaged?",
+		answer:
+			"In the event of a delay or damage to your shipment, we'll work diligently to resolve the issue as quickly as possible. We'll investigate the cause of the problem, communicate with the relevant parties, and provide you with updates throughout the process. We also offer cargo insurance options to protect against financial loss due to damage or loss.",
+	},
+];
