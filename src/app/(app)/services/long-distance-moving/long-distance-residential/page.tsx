@@ -65,18 +65,31 @@ const LongDistanceResidential = () => {
 							<h2 className="text-xl md:text-2xl font-bold">
 								Why Choose Us for Long Distance Moving?
 							</h2>
+							
 							<p className="text-gray-700">
-								Our experienced team specializes in managing complex
-								long-distance moves, ensuring your belongings arrive safely at
-								your new home, no matter the distance.
+								Premium Moving Services sets ourselves apart with our dedication to ensuring 
+								quality service coupled with safety and efficiency at the fore-front for your 
+								long distance residential needs.
+							</p>
+							<p className="text-gray-700">
+								We offer flexibility for each project and can meet your needs whatever they may be.
+							</p>
+							<p className="font-semibold text-gray-800">
+								Through our relationship from start to finish you can expect:
+							</p>
+							<ul className="list-disc pl-6 space-y-2 text-gray-700">
+								<li>Courteous, friendly, and professional service</li>
+								<li>Experienced and trained movers that can adapt to any situation</li>
+								<li>Packing and unpacking services</li>
+								<li>Convenience to work around your schedule</li>
+								<li>Safety, efficiency, and respect for communities</li>
+							</ul>
+							<p className="text-gray-700">
+								In any project we strive to exceed any expectations through our adaptability 
+								and flexibility.
 							</p>
 
-							<p className="text-gray-700">
-								We handle everything from careful packing and loading to secure
-								transport and precise delivery timing, making your interstate
-								move stress-free.
-							</p>
-
+							{/* Existing Process Section */}
 							<h2 className="text-xl md:text-2xl font-bold">
 								Our Long Distance Moving Process
 							</h2>
@@ -97,7 +110,7 @@ const LongDistanceResidential = () => {
 						<div className="rounded-lg overflow-hidden h-full">
 							<img
 								className="w-full h-auto max-h-[800px] rounded-lg object-contain"
-								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Deshun+unloadingc-1920w.JPG"
+								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/26-+moving+truck+en+route+-1920w.JPG"
 								alt="Long Distance Movers"
 							/>
 						</div>

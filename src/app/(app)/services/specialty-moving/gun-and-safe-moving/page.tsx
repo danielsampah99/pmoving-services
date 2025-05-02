@@ -16,6 +16,39 @@ const GunAndSafeMovingPage = () => {
 			desc="Professional and secure transportation for your firearms and safes with specialized equipment and trained experts."
 		>
 			<div className="max-w-7xl mx-auto px-4 py-12 space-y-12">
+				{/* New Gun Safe Section */}
+				<section className="grid md:grid-cols-2 gap-8 items-center">
+					<div className="space-y-6">
+						<h2 className="text-3xl font-bold text-gray-900">
+							We Handle Your Gun Safe Move With Care
+						</h2>
+						<div className=" p-4 rounded-lg">
+							<h3 className="text-xl font-semibold text-background mb-3">
+								Gun Safe Movers Near You
+							</h3>
+							{/* <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+								READ REVIEWS
+							</button> */}
+						</div>
+						<p className="text-gray-600">
+							Moving specialty equipment like a gun safe requires proper equipment and expertise. 
+							Even with lifting straps, moving a half-ton safe requires professional handling.
+						</p>
+						<ul className="list-disc pl-6 space-y-3 text-gray-600">
+							<li>Specialized lifting equipment and straps</li>
+							<li>Two-person trained moving teams</li>
+							<li>Commercial-grade vehicles for safe transport</li>
+							<li>Doorway and floor protection</li>
+						</ul>
+					</div>
+					<img 
+						src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Gun+safe-1920w.JPG"
+						alt="Professional gun safe moving"
+						className="rounded-lg shadow-xl"
+					/>
+				</section>
+
+				{/* Existing Specialized Services Section */}
 				<section className="space-y-6">
 					<h2 className="text-3xl font-bold text-gray-900">
 						Specialized Gun & Safe Moving Services

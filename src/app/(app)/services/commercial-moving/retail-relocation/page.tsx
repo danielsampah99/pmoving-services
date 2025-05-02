@@ -37,25 +37,23 @@ const RetailRelocation = () => {
 							<div className="flex items-center space-x-2 text-background">
 								<Info className="w-6 h-6" />
 								<h2 className="text-xl md:text-2xl font-bold">
-									Specialized Retail Moving Solutions
+									What is Retail Relocation?
 								</h2>
 							</div>
 							<p className="text-background">
-								We provide comprehensive retail relocation services designed to
-								minimize business downtime and protect your valuable inventory.
+								The clients at our retail moving company understand that planning is everything. 
+								There are a lot of equipment, boxes, and inventory that need to move between retail stores.
 							</p>
 							<p className="text-gray-700">
-								Our experienced team handles every aspect of your retail move
-								with care and efficiency.
+								Any missing inventory or products can be a massive headache, and employees 
+								usually don't want to do forced heavy labour. The planning and logistics 
+								to carry over tens of thousands of units can be done with our crews.
 							</p>
-							<ul className="list-disc pl-6 space-y-2 text-gray-700">
-								<li>Complete store relocation management</li>
-								<li>Secure handling of merchandise and fixtures</li>
-								<li>Inventory management and tracking</li>
-								<li>Point of sale and IT equipment moving</li>
-								<li>Temporary storage solutions</li>
-								<li>After-hours moving services</li>
-							</ul>
+							<p className="text-gray-700">
+								Our Minneapolis/St. Paul based movers offer retail relocation services to 
+								companies both big and small. Our moving professionals assist in all planning 
+								stages and handle loading/unloading on move day.
+							</p>
 						</div>
 					</div>
 

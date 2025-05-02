@@ -21,7 +21,7 @@ const GalleryComponent = () => {
 							<div className="flex flex-wrap gap-4">
 								<a
 									href="/free-quote"
-									className="px-6 py-3 rounded-lg bg-white text-[#1E88E5] font-semibold text-lg hover:bg-[#FFD00D] hover:text-white transition-all duration-300 shadow-md"
+									className="px-6 py-3 rounded-lg bg-white text-background font-semibold text-lg hover:bg-[#FFD00D] hover:text-white transition-all duration-300 shadow-md"
 								>
 									Get a Free Quote
 								</a>
@@ -53,7 +53,7 @@ const GalleryComponent = () => {
 							</div>
 						</div>
 
-						<div className="lg:w-1/2 relative animate-zoom-in">
+						{/* <div className="lg:w-1/2 relative animate-zoom-in">
 							<div className="bg-white p-6 md:p-8 rounded-lg shadow-2xl">
 								<h3 className="text-2xl font-semibold text-[#333F48] mb-6">
 									Quick Quote Calculator
@@ -112,11 +112,11 @@ const GalleryComponent = () => {
 
 							<div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#E6B800] rounded-full z-0 animate-pulse" />
 							<div className="absolute -top-4 -left-4 w-16 h-16 bg-[#FFD00D] rounded-full z-0 animate-bounce" />
-						</div>
+						</div> */}
 					</div>
 				</div>
 
-				<div className="absolute bottom-0 left-0 right-0">
+				{/* <div className="absolute bottom-0 left-0 right-0">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 						<path
 							fill="#ffffff"
@@ -124,7 +124,7 @@ const GalleryComponent = () => {
 							d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
 						/>
 					</svg>
-				</div>
+				</div> */}
 			</section>
 
 			<main className="mx-6">

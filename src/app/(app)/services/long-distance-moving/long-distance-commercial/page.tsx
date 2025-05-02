@@ -63,18 +63,31 @@ const LongDistanceCommercial = () => {
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						<div className="space-y-4">
 							<h2 className="text-xl md:text-2xl font-bold">
-								Expert Commercial Moving Solutions
+								Long Distance Commercial Movers Near You
 							</h2>
 							<p className="text-gray-700">
-								Our experienced team specializes in managing complex commercial
-								relocations, ensuring your business assets are transported
-								safely and efficiently across state lines.
+								Premium Moving Services sets ourselves apart with our dedication to ensuring quality 
+								service coupled with safety and efficiency at the fore-front for your commercial 
+								long distance move.
 							</p>
-
 							<p className="text-gray-700">
-								We provide end-to-end project management, from initial planning
-								to final setup, minimizing downtime and maintaining business
-								continuity throughout the move.
+								We offer flexibility for each project and can meet your needs whatever they may be.
+							</p>
+							
+							<p className="font-semibold text-gray-800 mt-4">
+								Through our relationship from start to finish you can expect:
+							</p>
+							<ul className="list-disc pl-6 space-y-2 text-gray-700">
+								<li>Courteous, friendly, and professional service</li>
+								<li>Experienced and trained movers that adapt to any situation</li>
+								<li>Comprehensive packing and unpacking services</li>
+								<li>Scheduling around your business hours</li>
+								<li>Community-focused safety and efficiency</li>
+							</ul>
+							
+							<p className="text-gray-700 mt-4">
+								We strive to exceed expectations through our adaptability and flexibility in every 
+								commercial relocation project.
 							</p>
 
 							<h2 className="text-xl md:text-2xl font-bold">
@@ -97,7 +110,7 @@ const LongDistanceCommercial = () => {
 						<div className="rounded-lg overflow-hidden h-full">
 							<img
 								className="w-full h-auto max-h-[800px] rounded-lg object-contain"
-								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Deshun+unloadingc-1920w.JPG"
+								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/U+shape+desk+-092cc8d0-1920w.JPG"
 								alt="Commercial Moving Team"
 							/>
 						</div>

@@ -26,11 +26,11 @@ const OfficeMovers = () => {
 								Trusted commercial movers in Minnesota
 							</p>
 							<div className="relative">
-								<img
-									src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/office-moving-1920w.jpg"
-									alt="Professional Office Moving Services"
-									className="w-full rounded-lg max-h-[700px] object-cover"
-								/>
+							<img
+								className="w-full h-auto rounded-lg object-cover"
+								src="/moving-process.webp"
+								alt="Office Moving Process"
+							/>
 							</div>
 						</div>
 
@@ -38,43 +38,39 @@ const OfficeMovers = () => {
 							<div className="flex items-center space-x-2 text-background">
 								<Info className="w-6 h-6" />
 								<h2 className="text-xl md:text-2xl font-bold">
-									Office Moving Solutions
+									What are Office Movers?
 								</h2>
 							</div>
 							<p className="text-background">
-								We specialize in efficient office relocations that minimize
-								downtime and protect your valuable business assets.
+								Our Minneapolis/St. Paul office movers are trained to quickly and safely 
+								move business furniture, equipment, and sensitive file systems.
 							</p>
 							<p className="text-gray-700">
-								Our experienced team handles everything from workstations to
-								sensitive equipment with precision and care.
+								Moving exposes valuable equipment to loss and damage, but our professional 
+								commercial movers help you organize, plan, and execute your office move 
+								while limiting risks.
 							</p>
-							<ul className="list-disc pl-6 space-y-2 text-gray-700">
-								<li>Systematic office furniture disassembly and reassembly</li>
-								<li>Secure IT equipment and electronics handling</li>
-								<li>File and document management systems</li>
-								<li>After-hours and weekend moving options</li>
-								<li>Professional project management</li>
-								<li>Specialized packing materials for office items</li>
-							</ul>
 						</div>
 					</div>
 
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						<div className="space-y-4">
 							<h2 className="text-xl md:text-2xl font-bold">
-								Why Choose Our Office Moving Service?
+								Why Hire Office Movers?
 							</h2>
 							<p className="text-gray-700">
-								Our office moving service is designed to ensure a seamless
-								transition with minimal disruption to your business operations.
-								We understand that time is money in business, which is why we
-								focus on efficiency and organization.
+								Our professional moving crews will work with great speed and agility to pack 
+								and load your Office items, maximizing the capacity of the moving containers 
+								and the moving truck.
 							</p>
 							<p className="text-gray-700">
-								With years of experience in commercial moving, we've developed
-								proven systems to handle everything from small office
-								relocations to large corporate moves.
+								Both time and space will be saved when utilizing the skill and experience 
+								of your hired movers.
+							</p>
+							<p className="text-gray-700">
+								Another factor that guarantees a successful outcome of your move when you 
+								take advantage of our services is the advanced equipment we use in our 
+								relocation process.
 							</p>
 
 							<h2 className="text-xl md:text-2xl font-bold pt-6">

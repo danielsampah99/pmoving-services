@@ -26,7 +26,7 @@ const EmployeeRelocation = () => {
 							</p>
 							<div className="relative">
 								<img
-									src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/office-moving-1920w.jpg"
+									src="/moving-process.webp"
 									alt="Employee Relocation Services"
 									className="w-full rounded-lg max-h-[700px] object-cover"
 								/>
@@ -37,25 +37,30 @@ const EmployeeRelocation = () => {
 							<div className="flex items-center space-x-2 text-background">
 								<Info className="w-6 h-6" />
 								<h2 className="text-xl md:text-2xl font-bold">
-									Comprehensive Employee Moving Solutions
+									Employee Relocation Excellence
 								</h2>
 							</div>
 							<p className="text-background">
-								We provide end-to-end employee relocation services designed to
-								make workforce transitions smooth and stress-free.
+								Premium Moving Services sets ourselves apart with our dedication to ensuring 
+								quality service coupled with safety and efficiency at the fore-front.
 							</p>
 							<p className="text-gray-700">
-								Our experienced team handles every aspect of employee relocation
-								with care and professionalism.
+								We offer flexibility for each project and can meet your needs whatever they may be.
+							</p>
+							<p className="font-semibold text-gray-800">
+								Through our relationship from start to finish you can expect:
 							</p>
 							<ul className="list-disc pl-6 space-y-2 text-gray-700">
-								<li>Personalized moving plans for each employee</li>
-								<li>Secure packing and transportation of belongings</li>
-								<li>Flexible scheduling options</li>
-								<li>Temporary storage solutions if needed</li>
-								<li>Real-time tracking and updates</li>
-								<li>Destination services and setup assistance</li>
+								<li>Courteous, friendly, and professional service</li>
+								<li>Experienced and trained movers that adapt to any situation</li>
+								<li>Complete packing and unpacking services</li>
+								<li>Schedule flexibility around your operations</li>
+								<li>Community-focused safety measures</li>
 							</ul>
+							<p className="text-gray-700">
+								In every project we strive to exceed expectations through our adaptability 
+								and commitment to service excellence.
+							</p>
 						</div>
 					</div>
 
@@ -96,7 +101,7 @@ const EmployeeRelocation = () => {
 						<div className="rounded-lg overflow-hidden h-full">
 							<img
 								className="w-full h-auto rounded-lg object-cover"
-								src="/moving-process.webp"
+								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/IMG_2716c-1920w.jpg"
 								alt="Employee Moving Process"
 							/>
 						</div>
