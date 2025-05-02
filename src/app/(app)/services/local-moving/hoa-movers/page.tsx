@@ -11,7 +11,7 @@ import { localMovingServices } from "@/data/services";
 const HOAMovers = () => {
 	return (
 		<ServiceLayout
-			image="/apartment-moving.webp"
+			image="/residential-moving.webp"
 			title="HOA Moving Services"
 			desc="Professional HOA moving services that comply with all homeowner association regulations and requirements."
 		>
@@ -97,6 +97,7 @@ const HOAMovers = () => {
 						</div>
 
 						<div className="rounded-lg overflow-hidden h-full">
+					{/* TODO: replace this image with a nicer one */}
 							<img
 								className="w-full h-auto rounded-lg object-cover"
 								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/IMG_1078-1920w.jpg"
