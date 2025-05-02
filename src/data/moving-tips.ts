@@ -451,3 +451,32 @@ export const logisticsFAQs: FAQType[] = [
 			"In the event of a delay or damage to your shipment, we'll work diligently to resolve the issue as quickly as possible. We'll investigate the cause of the problem, communicate with the relevant parties, and provide you with updates throughout the process. We also offer cargo insurance options to protect against financial loss due to damage or loss.",
 	},
 ];
+
+
+export const pianoMovingFAQs: FAQType[] = [
+	{
+		question: "Do you have experience moving pianos?",
+		answer:
+			"Yes, we specialize in piano moving! Our team has extensive experience handling all types of pianos, including uprights, grands, baby grands, and organs. We understand the unique challenges and requirements of piano transport.",
+	},
+	{
+		question: "How do you protect my piano during the move?",
+		answer:
+			"We use specialized equipment and techniques to protect your piano. This includes heavy-duty padding, piano boards, straps, and sometimes custom crating for valuable or delicate instruments. Our movers are trained in proper lifting and handling procedures to prevent damage.",
+	},
+	{
+		question: "Will you disassemble and reassemble my piano?",
+		answer:
+			"We typically don't fully disassemble pianos unless absolutely necessary for transport due to space constraints. For grand pianos, we will carefully remove the legs and pack them separately. Upon arrival, we will reassemble the piano legs and ensure it's properly positioned.",
+	},
+	{
+		question: "Is your company insured for piano moving?",
+		answer:
+			"Yes, we are fully insured, including coverage for piano moving. This protects you in the unlikely event of damage during the move. We can provide proof of insurance upon request.",
+	},
+	{
+		question: "How much does it cost to move a piano?",
+		answer:
+			"The cost of moving a piano depends on several factors, including the type of piano, the distance of the move, the presence of stairs or other obstacles, and any special requirements. Contact us for a free, no-obligation quote. We'll assess your needs and provide an accurate estimate.",
+	},
+];
