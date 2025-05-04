@@ -31,8 +31,9 @@ const GunAndSafeMovingPage = () => {
 							</button> */}
 						</div>
 						<p className="text-gray-600">
-							Moving specialty equipment like a gun safe requires proper equipment and expertise.
-							Even with lifting straps, moving a half-ton safe requires professional handling.
+							Moving specialty equipment like a gun safe requires proper
+							equipment and expertise. Even with lifting straps, moving a
+							half-ton safe requires professional handling.
 						</p>
 						<ul className="list-disc pl-6 space-y-3 text-gray-600">
 							<li>Specialized lifting equipment and straps</li>

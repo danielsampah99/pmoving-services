@@ -26,11 +26,11 @@ const OfficeMovers = () => {
 								Trusted commercial movers in Minnesota
 							</p>
 							<div className="relative">
-							<img
-								className="w-full h-auto rounded-lg object-cover"
-								src="/moving-process.webp"
-								alt="Office Moving Process"
-							/>
+								<img
+									className="w-full h-auto rounded-lg object-cover"
+									src="/moving-process.webp"
+									alt="Office Moving Process"
+								/>
 							</div>
 						</div>
 
@@ -42,13 +42,14 @@ const OfficeMovers = () => {
 								</h2>
 							</div>
 							<p className="text-background">
-								Our Minneapolis/St. Paul office movers are trained to quickly and safely 
-								move business furniture, equipment, and sensitive file systems.
+								Our Minneapolis/St. Paul office movers are trained to quickly
+								and safely move business furniture, equipment, and sensitive
+								file systems.
 							</p>
 							<p className="text-gray-700">
-								Moving exposes valuable equipment to loss and damage, but our professional 
-								commercial movers help you organize, plan, and execute your office move 
-								while limiting risks.
+								Moving exposes valuable equipment to loss and damage, but our
+								professional commercial movers help you organize, plan, and
+								execute your office move while limiting risks.
 							</p>
 						</div>
 					</div>
@@ -59,18 +60,18 @@ const OfficeMovers = () => {
 								Why Hire Office Movers?
 							</h2>
 							<p className="text-gray-700">
-								Our professional moving crews will work with great speed and agility to pack 
-								and load your Office items, maximizing the capacity of the moving containers 
-								and the moving truck.
+								Our professional moving crews will work with great speed and
+								agility to pack and load your Office items, maximizing the
+								capacity of the moving containers and the moving truck.
 							</p>
 							<p className="text-gray-700">
-								Both time and space will be saved when utilizing the skill and experience 
-								of your hired movers.
+								Both time and space will be saved when utilizing the skill and
+								experience of your hired movers.
 							</p>
 							<p className="text-gray-700">
-								Another factor that guarantees a successful outcome of your move when you 
-								take advantage of our services is the advanced equipment we use in our 
-								relocation process.
+								Another factor that guarantees a successful outcome of your move
+								when you take advantage of our services is the advanced
+								equipment we use in our relocation process.
 							</p>
 
 							<h2 className="text-xl md:text-2xl font-bold pt-6">

@@ -99,6 +99,12 @@ export const MobileSidebar: FC<MobileSidebarProps> = ({ areas }) => {
 									</DisclosurePanel>
 								</Disclosure>
 								<a
+									href="/services/storage-services"
+									className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-gray-700 hover:bg-gray-50"
+								>
+									Storage Services
+								</a>
+								<a
 									href="/blog"
 									className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-gray-700 hover:bg-gray-50"
 								>

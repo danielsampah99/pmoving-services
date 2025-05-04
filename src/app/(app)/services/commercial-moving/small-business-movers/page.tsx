@@ -34,7 +34,6 @@ const SmallBusinessMovers = () => {
 								/>
 							</div>
 						</div>
-
 						<div className="flex flex-col justify-center space-y-3">
 							<div className="flex items-center space-x-2 text-background">
 								<Info className="w-6 h-6" />
@@ -43,12 +42,14 @@ const SmallBusinessMovers = () => {
 								</h2>
 							</div>
 							<p className="text-background">
-								As small business movers, we make relocations organized, seamless, and FAST!
-								Our goal is to get you moved and back to business quickly.
+								As small business movers, we make relocations organized,
+								seamless, and FAST! Our goal is to get you moved and back to
+								business quickly.
 							</p>
 							<p className="text-gray-700">
-								We handle more than just furniture and fixtures - our executive relocation
-								services work for local, statewide, national, and international moves.
+								We handle more than just furniture and fixtures - our executive
+								relocation services work for local, statewide, national, and
+								international moves.
 							</p>
 							{/* Removed duplicate paragraph */}
 							<p className="text-gray-700">
@@ -62,7 +63,8 @@ const SmallBusinessMovers = () => {
 								<li>Storage solutions if needed</li>
 								<li>Professional project management</li>
 							</ul>
-						</div>  {/* Properly closed container div */}
+						</div>{" "}
+						{/* Properly closed container div */}
 					</div>
 
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">

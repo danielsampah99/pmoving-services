@@ -45,27 +45,27 @@ export const movingTips: MovingTip[] = [
 ];
 
 export const internationalMovingProcess = [
-    {
-        title: "Initial Consultation",
-        description: "Free assessment of your moving needs and detailed quote"
-    },
-    {
-        title: "Custom Planning",
-        description: "Tailored moving strategy and timeline creation"
-    },
-    {
-        title: "Packing & Documentation",
-        description: "Professional packing and paperwork preparation"
-    },
-    {
-        title: "International Transport",
-        description: "Secure shipping and real-time tracking"
-    },
-    {
-        title: "Destination Services",
-        description: "Customs clearance and delivery to your new home"
-    }
-]
+	{
+		title: "Initial Consultation",
+		description: "Free assessment of your moving needs and detailed quote",
+	},
+	{
+		title: "Custom Planning",
+		description: "Tailored moving strategy and timeline creation",
+	},
+	{
+		title: "Packing & Documentation",
+		description: "Professional packing and paperwork preparation",
+	},
+	{
+		title: "International Transport",
+		description: "Secure shipping and real-time tracking",
+	},
+	{
+		title: "Destination Services",
+		description: "Customs clearance and delivery to your new home",
+	},
+];
 
 export const residentialExpectations: Expectation[] = [
 	{
@@ -372,45 +372,56 @@ export const loadingUnloadingFAQs: FAQType[] = [
 export const storageFaqs = [
 	{
 		question: "What types of storage units do you offer?",
-		answer: "We offer a variety of storage unit sizes, including small closet-sized units, medium units for furniture and boxes, and large units for entire household storage. We also have climate-controlled options available.",
+		answer:
+			"We offer a variety of storage unit sizes, including small closet-sized units, medium units for furniture and boxes, and large units for entire household storage. We also have climate-controlled options available.",
 	},
 	{
 		question: "Are your storage facilities secure?",
-		answer: "Yes, security is our top priority. Our facilities feature 24/7 video surveillance, gated access with personalized entry codes, and well-lit premises.",
+		answer:
+			"Yes, security is our top priority. Our facilities feature 24/7 video surveillance, gated access with personalized entry codes, and well-lit premises.",
 	},
 	{
 		question: "Do you offer climate-controlled storage?",
-		answer: "Yes, we offer climate-controlled storage units that maintain a consistent temperature and humidity level to protect your belongings from extreme weather conditions, mold, and mildew.",
+		answer:
+			"Yes, we offer climate-controlled storage units that maintain a consistent temperature and humidity level to protect your belongings from extreme weather conditions, mold, and mildew.",
 	},
 	{
 		question: "What can I store in my storage unit?",
-		answer: "You can store most household items, furniture, clothing, documents, and business inventory. However, we prohibit the storage of hazardous materials, perishable items, illegal substances, and flammable liquids.",
+		answer:
+			"You can store most household items, furniture, clothing, documents, and business inventory. However, we prohibit the storage of hazardous materials, perishable items, illegal substances, and flammable liquids.",
 	},
 	{
 		question: "How do I determine the right size storage unit for my needs?",
-		answer: "We recommend using our online storage size guide or contacting our storage experts. They can help you assess your storage needs based on the items you plan to store and recommend the appropriate unit size.",
+		answer:
+			"We recommend using our online storage size guide or contacting our storage experts. They can help you assess your storage needs based on the items you plan to store and recommend the appropriate unit size.",
 	},
 	{
 		question: "What are your storage rental rates and payment options?",
-		answer: "Our storage rental rates vary depending on the unit size and location. We offer flexible payment options, including monthly billing, online payments, and automatic payments.",
+		answer:
+			"Our storage rental rates vary depending on the unit size and location. We offer flexible payment options, including monthly billing, online payments, and automatic payments.",
 	},
 	{
 		question: "Do I need to sign a long-term contract for storage?",
-		answer: "No, we offer flexible rental agreements with month-to-month options. You can rent a storage unit for as long or as short as you need it.",
+		answer:
+			"No, we offer flexible rental agreements with month-to-month options. You can rent a storage unit for as long or as short as you need it.",
 	},
 	{
 		question: "What kind of insurance coverage do you offer for stored items?",
-		answer: "We offer insurance coverage options to protect your belongings against damage or loss while in storage. You can choose the coverage level that best suits your needs.",
+		answer:
+			"We offer insurance coverage options to protect your belongings against damage or loss while in storage. You can choose the coverage level that best suits your needs.",
 	},
 	{
 		question: "Can I access my storage unit anytime?",
-		answer: "Our facilities offer convenient access hours, typically from early morning to late evening. You can access your storage unit during these hours using your personalized entry code.",
+		answer:
+			"Our facilities offer convenient access hours, typically from early morning to late evening. You can access your storage unit during these hours using your personalized entry code.",
 	},
 	{
-		question: "What happens if I need to change my storage unit size or cancel my rental agreement?",
-		answer: "We make it easy to change your storage unit size or cancel your rental agreement. Simply contact our customer service team, and they will assist you with the process.",
+		question:
+			"What happens if I need to change my storage unit size or cancel my rental agreement?",
+		answer:
+			"We make it easy to change your storage unit size or cancel your rental agreement. Simply contact our customer service team, and they will assist you with the process.",
 	},
-]
+];
 
 export const logisticsFAQs: FAQType[] = [
 	{

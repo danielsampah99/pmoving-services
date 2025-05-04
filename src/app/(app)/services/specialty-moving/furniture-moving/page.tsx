@@ -23,14 +23,15 @@ const FurnitureMovingPage = () => {
 									Furniture Delivery & Assembly Solutions
 								</h2>
 								<p className="text-gray-600">
-									Have you ever ordered furniture and been unable to have it delivered or assembled?
-									We personalize our services to fit every unique need, filling the gap left by
-									retailers like Costco, Sam's Club, and IKEA.
+									Have you ever ordered furniture and been unable to have it
+									delivered or assembled? We personalize our services to fit
+									every unique need, filling the gap left by retailers like
+									Costco, Sam's Club, and IKEA.
 								</p>
 								<p className="text-gray-600">
-									Our team handles pickup, delivery, and assembly - whether you're short on time
-									or need expert assistance. We're committed to professional service with
-									exceptional care.
+									Our team handles pickup, delivery, and assembly - whether
+									you're short on time or need expert assistance. We're
+									committed to professional service with exceptional care.
 								</p>
 
 								<h3 className="text-xl font-semibold pt-4">
@@ -54,8 +55,8 @@ const FurnitureMovingPage = () => {
 						</div>
 
 						<p className="text-gray-600 mt-6">
-							Our goal is to exceed expectations by customizing services to your needs.
-							Sit back and relax while we handle the heavy lifting!
+							Our goal is to exceed expectations by customizing services to your
+							needs. Sit back and relax while we handle the heavy lifting!
 						</p>
 					</section>
 

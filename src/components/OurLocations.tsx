@@ -10,7 +10,7 @@ export const officeLocations: OfficeLocation[] = [
 		addressLine1: "949 Schaller Dr S",
 		addressLine2: "Maplewood, MN 55119",
 		phone: "(651) 757-5135",
-		href: "https://maps.app.goo.gl/1NGGJkkG3fnqMNav7",
+		href: "https://www.google.pl/maps/dir//949+Schaller+Dr+E,+St+Paul,+MN+55119,+USA/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x87f7d6918a982cd5:0x334bfd9525477f0d?sa=X&ved=1t:707&ictx=111", // https://g.co/kgs/twxzXo6 -- https://www.google.pl/maps/dir//949+Schaller+Dr+E,+St+Paul,+MN+55119,+USA/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x87f7d6918a982cd5:0x334bfd9525477f0d?sa=X&ved=1t:707&ictx=111
 		image: "/lakeville-office.webp",
 	},
 	{
@@ -19,7 +19,7 @@ export const officeLocations: OfficeLocation[] = [
 		addressLine1: "2514 Plymouth Ave N,",
 		addressLine2: "Minneapolis, MN 55411",
 		phone: "(651) 757-5135",
-		href: "https://maps.app.goo.gl/KLB5o3UpsbR7dUXA8",
+		href: "https://www.google.com/maps/dir//2514+Plymouth+Ave+N,+Minneapolis,+MN+55411,+USA/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x52b333a87d602d8f:0xa6dc41e3800dfcf6?sa=X&ved=1t:707&ictx=111",
 		image: "/lakeville-office.webp",
 	},
 	{
@@ -28,7 +28,7 @@ export const officeLocations: OfficeLocation[] = [
 		addressLine1: "7652 215th St W ",
 		addressLine2: "Lakeville, MN 55044",
 		phone: "(651) 757-5135",
-		href: "https://maps.app.goo.gl/xwqbi9QcABiLXkN18",
+		href: "https://www.google.com/maps/dir//7652+215th+St+W,+Lakeville,+MN+55044,+USA/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x87f648350a0ed4db:0xdfc8a98e3bed4564?sa=X&ved=1t:707&ictx=111",
 		image: "/lakeville-office.webp",
 	},
 	{
@@ -37,7 +37,7 @@ export const officeLocations: OfficeLocation[] = [
 		addressLine1: "829 3rd Ave SE",
 		addressLine2: "285 Rochester, MN 55904",
 		phone: "(651) 757-5135",
-		href: "https://maps.app.goo.gl/8Kf3n3R4eXxSVVbW9",
+		href: "https://www.google.com/maps/dir//Village+On+3rd+Apartments,+510+3rd+Ave+SE,+Rochester,+MN+55904,+United+States/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x87f9e1d8d49af27f:0x22288f0e238e5fbd?sa=X&ved=1t:57443&ictx=111&cshid=1746386855231633",
 		image: "/rochester-office.webp",
 	},
 ];

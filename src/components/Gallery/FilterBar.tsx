@@ -40,9 +40,10 @@ const FilterBar: FC<FilterBarProps> = ({
 						onClick={() => setSelectedCategory(category)}
 						className={`
               category-filter transition-all whitespace-nowrap 
-              ${selectedCategory === category
-								? "active shadow-sm bg-background text-white"
-								: "text-black hover:bg-moving-lightGray "
+              ${
+								selectedCategory === category
+									? "active shadow-sm bg-background text-white"
+									: "text-black hover:bg-moving-lightGray "
 							}
             `}
 						aria-pressed={selectedCategory === category}

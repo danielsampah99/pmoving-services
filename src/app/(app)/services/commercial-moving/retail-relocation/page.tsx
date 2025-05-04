@@ -41,18 +41,21 @@ const RetailRelocation = () => {
 								</h2>
 							</div>
 							<p className="text-background">
-								The clients at our retail moving company understand that planning is everything. 
-								There are a lot of equipment, boxes, and inventory that need to move between retail stores.
+								The clients at our retail moving company understand that
+								planning is everything. There are a lot of equipment, boxes, and
+								inventory that need to move between retail stores.
 							</p>
 							<p className="text-gray-700">
-								Any missing inventory or products can be a massive headache, and employees 
-								usually don't want to do forced heavy labour. The planning and logistics 
-								to carry over tens of thousands of units can be done with our crews.
+								Any missing inventory or products can be a massive headache, and
+								employees usually don't want to do forced heavy labour. The
+								planning and logistics to carry over tens of thousands of units
+								can be done with our crews.
 							</p>
 							<p className="text-gray-700">
-								Our Minneapolis/St. Paul based movers offer retail relocation services to 
-								companies both big and small. Our moving professionals assist in all planning 
-								stages and handle loading/unloading on move day.
+								Our Minneapolis/St. Paul based movers offer retail relocation
+								services to companies both big and small. Our moving
+								professionals assist in all planning stages and handle
+								loading/unloading on move day.
 							</p>
 						</div>
 					</div>
