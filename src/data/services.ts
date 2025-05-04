@@ -46,6 +46,10 @@ export const services: Service[] = [
 		icon: HomeModernIcon,
 		subServices: [
 			{
+				name: "Local Movers",
+				href: "/services/local-moving",
+			},
+			{
 				name: "Residential Movers",
 				href: "/services/local-moving/residential-movers",
 			},
@@ -80,6 +84,10 @@ export const services: Service[] = [
 		icon: BuildingOfficeIcon,
 		subServices: [
 			{
+				name: "Commercial Movers",
+				href: "/services/commercial-moving",
+			},
+			{
 				name: "Office Movers",
 				href: "/services/commercial-moving/office-movers",
 			},
@@ -109,6 +117,10 @@ export const services: Service[] = [
 		icon: TruckIcon,
 		subServices: [
 			{
+				name: "Long Distance Movers",
+				href: "/services/long-distance-moving",
+			},
+			{
 				name: "Long Distance Residential",
 				href: "/services/long-distance-moving/long-distance-residential",
 			},
@@ -133,6 +145,10 @@ export const services: Service[] = [
 		href: "/services/specialty-moving",
 		icon: CubeTransparentIcon,
 		subServices: [
+			{
+				name: "Specialty Movers",
+				href: "/services/specialty-moving",
+			},
 			{
 				name: "Antique Furniture",
 				href: "/services/specialty-moving/antique-furniture",
