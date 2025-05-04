@@ -37,8 +37,8 @@ const AntiqueFurnitureMovingPage = () => {
 								<li>Custom routing options</li>
 							</ul>
 							<p className="text-gray-600 mt-4">
-								Our goal is to exceed expectations by customizing services to your needs.
-								Relax while we handle the heavy lifting!
+								Our goal is to exceed expectations by customizing services to
+								your needs. Relax while we handle the heavy lifting!
 							</p>
 						</div>
 						<img

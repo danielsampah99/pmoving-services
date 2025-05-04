@@ -46,18 +46,21 @@ export const Header: FC = async () => {
 					</Link>
 
 					<Link
-						href="/contact-us"
+						href="/services/storage-services"
 						className="text-sm/6 scroll-smooth -scroll-m-10 font-semibold text-white"
 					>
-						Contact Us
+						Storage
 					</Link>
 				</PopoverGroup>
 
 				{/* Replace block with a lightmode, darkmode toggle */}
 				<div className="hidden lg:flex lg:flex-1 lg:justify-end gap-4">
-					<Button type="button">
-						<SunIcon className="size-5 fill-white" />{" "}
-					</Button>
+					<Link
+						href="/contact-us"
+						className="text-sm/6 scroll-smooth -scroll-m-10 font-semibold text-white"
+					>
+						Contact Us
+					</Link>
 				</div>
 			</nav>
 		</section>

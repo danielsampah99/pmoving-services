@@ -66,12 +66,13 @@ const LongDistanceCommercial = () => {
 								Long Distance Commercial Movers Near You
 							</h2>
 							<p className="text-gray-700">
-								Premium Moving Services sets ourselves apart with our dedication to ensuring quality
-								service coupled with safety and efficiency at the fore-front for your commercial
-								long distance move.
+								Premium Moving Services sets ourselves apart with our dedication
+								to ensuring quality service coupled with safety and efficiency
+								at the fore-front for your commercial long distance move.
 							</p>
 							<p className="text-gray-700">
-								We offer flexibility for each project and can meet your needs whatever they may be.
+								We offer flexibility for each project and can meet your needs
+								whatever they may be.
 							</p>
 
 							<p className="font-semibold text-gray-800 mt-4">
@@ -79,15 +80,17 @@ const LongDistanceCommercial = () => {
 							</p>
 							<ul className="list-disc pl-6 space-y-2 text-gray-700">
 								<li>Courteous, friendly, and professional service</li>
-								<li>Experienced and trained movers that adapt to any situation</li>
+								<li>
+									Experienced and trained movers that adapt to any situation
+								</li>
 								<li>Comprehensive packing and unpacking services</li>
 								<li>Scheduling around your business hours</li>
 								<li>Community-focused safety and efficiency</li>
 							</ul>
 
 							<p className="text-gray-700 mt-4">
-								We strive to exceed expectations through our adaptability and flexibility in every
-								commercial relocation project.
+								We strive to exceed expectations through our adaptability and
+								flexibility in every commercial relocation project.
 							</p>
 
 							<h2 className="text-xl md:text-2xl font-bold">

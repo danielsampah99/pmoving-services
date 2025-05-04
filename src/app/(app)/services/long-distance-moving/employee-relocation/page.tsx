@@ -41,25 +41,29 @@ const EmployeeRelocation = () => {
 								</h2>
 							</div>
 							<p className="text-background">
-								Premium Moving Services sets ourselves apart with our dedication to ensuring
-								quality service coupled with safety and efficiency at the fore-front.
+								Premium Moving Services sets ourselves apart with our dedication
+								to ensuring quality service coupled with safety and efficiency
+								at the fore-front.
 							</p>
 							<p className="text-gray-700">
-								We offer flexibility for each project and can meet your needs whatever they may be.
+								We offer flexibility for each project and can meet your needs
+								whatever they may be.
 							</p>
 							<p className="font-semibold text-gray-800">
 								Through our relationship from start to finish you can expect:
 							</p>
 							<ul className="list-disc pl-6 space-y-2 text-gray-700">
 								<li>Courteous, friendly, and professional service</li>
-								<li>Experienced and trained movers that adapt to any situation</li>
+								<li>
+									Experienced and trained movers that adapt to any situation
+								</li>
 								<li>Complete packing and unpacking services</li>
 								<li>Schedule flexibility around your operations</li>
 								<li>Community-focused safety measures</li>
 							</ul>
 							<p className="text-gray-700">
-								In every project we strive to exceed expectations through our adaptability
-								and commitment to service excellence.
+								In every project we strive to exceed expectations through our
+								adaptability and commitment to service excellence.
 							</p>
 						</div>
 					</div>

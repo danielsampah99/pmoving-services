@@ -15,7 +15,6 @@ export default function StorageServices() {
 						<source srcSet="/images/hero-bg.jpg" media="(min-width: 2048px)" />
 						<img
 							src="/storage-services.webp"
-
 							className="w-full h-full object-cover object-center"
 							loading="lazy"
 							alt=""
@@ -38,7 +37,6 @@ export default function StorageServices() {
 									monitoring and flexible rental options. Perfect for personal
 									or business storage needs.
 								</p>
-
 							</div>
 						</div>
 					</div>

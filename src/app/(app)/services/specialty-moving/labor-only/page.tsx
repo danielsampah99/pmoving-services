@@ -27,9 +27,10 @@ const LaborOnlyMovingPage = () => {
 								Labor Only Movers Near You
 							</h3>
 							<p className="text-gray-600">
-								Need partial help with your move? Our moving labor services include
-								in-home assistance, loading/unloading, and heavy lifting support.
-								Sometimes a little professional help makes all the difference.
+								Need partial help with your move? Our moving labor services
+								include in-home assistance, loading/unloading, and heavy lifting
+								support. Sometimes a little professional help makes all the
+								difference.
 							</p>
 							<p className="text-gray-600">
 								Our trained movers are ready to assist with any size project -

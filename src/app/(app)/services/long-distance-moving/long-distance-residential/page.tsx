@@ -67,26 +67,29 @@ const LongDistanceResidential = () => {
 							</h2>
 
 							<p className="text-gray-700">
-								Premium Moving Services sets ourselves apart with our dedication to ensuring
-								quality service coupled with safety and efficiency at the fore-front for your
-								long distance residential needs.
+								Premium Moving Services sets ourselves apart with our dedication
+								to ensuring quality service coupled with safety and efficiency
+								at the fore-front for your long distance residential needs.
 							</p>
 							<p className="text-gray-700">
-								We offer flexibility for each project and can meet your needs whatever they may be.
+								We offer flexibility for each project and can meet your needs
+								whatever they may be.
 							</p>
 							<p className="font-semibold text-gray-800">
 								Through our relationship from start to finish you can expect:
 							</p>
 							<ul className="list-disc pl-6 space-y-2 text-gray-700">
 								<li>Courteous, friendly, and professional service</li>
-								<li>Experienced and trained movers that can adapt to any situation</li>
+								<li>
+									Experienced and trained movers that can adapt to any situation
+								</li>
 								<li>Packing and unpacking services</li>
 								<li>Convenience to work around your schedule</li>
 								<li>Safety, efficiency, and respect for communities</li>
 							</ul>
 							<p className="text-gray-700">
-								In any project we strive to exceed any expectations through our adaptability
-								and flexibility.
+								In any project we strive to exceed any expectations through our
+								adaptability and flexibility.
 							</p>
 
 							{/* Existing Process Section */}

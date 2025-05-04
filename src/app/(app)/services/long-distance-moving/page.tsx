@@ -7,7 +7,6 @@ import { RequestQuote } from "@/app/(app)/services/local-moving/residential-move
 import { RelatedMovingServices } from "./related-services";
 import { longDistanceMovingServices } from "@/data/services";
 
-
 const LongDistanceMovingPage = () => {
 	return (
 		<div>
