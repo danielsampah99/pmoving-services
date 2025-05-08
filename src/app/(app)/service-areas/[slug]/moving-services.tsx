@@ -6,6 +6,7 @@ import type { SerializedEditorState } from "@payloadcms/richtext-lexical/lexical
 
 import type { FC } from "react";
 import Image from "next/image";
+import { cn } from "@/utils";
 
 export type MovingServicesProps = Pick<ServiceArea, "movingServices"> & {
 	title: string;
@@ -23,7 +24,7 @@ export const MovingServices: FC<MovingServicesProps> = (props) => {
 			<div className="space-y-6">
 				{Array.isArray(props.movingServices) &&
 					props.movingServices.length > 0 &&
-					props.movingServices.map((service) => {
+					props.movingServices.map((service, index) => {
 						if (
 							typeof service.image !== "number" &&
 							service.image &&
@@ -32,6 +33,7 @@ export const MovingServices: FC<MovingServicesProps> = (props) => {
 							return (
 								<MovingServiceWithImage
 									id={service.id}
+									index={index}
 									key={service.id}
 									image={service.image}
 									title={service.title}
@@ -59,21 +61,31 @@ export type MovingServiceWithImageProps = {
 	content: SerializedEditorState;
 	image: Media;
 	title: string;
+	index: number;
 };
 
 export const MovingServiceWithImage: FC<MovingServiceWithImageProps> = (
 	props,
 ) => {
 	return (
-		<div className="mx-auto max-w-7xl my-4">
+		<div className="mx-auto max-w-7xl my-6">
 			<div className="mx-auto max-w-3xl">
 				<h1 className="mt-2 text-3xl font-bold capitalize tracking-tight text-gray-900 sm:text-4xl">
 					{props.title}
 				</h1>
 			</div>
-			<div className="mx-auto my-4 max-w-3xl gap-8 lg:gap-16 lg:mx-0 lg:mt-5 lg:max-w-none grid grid-cols-1 lg:grid-cols-2 lg:justify-between lg:items-stretch">
+			<div
+				className={cn(
+					"mx-auto my-4 max-w-3xl gap-8 lg:gap-16 lg:mx-0 lg:mt-5 lg:max-w-none grid grid-cols-1 lg:grid-cols-2 lg:justify-between lg:items-stretch",
+				)}
+			>
 				{/* image */}
-				<div className="odd:lg:order-first lg:even:order-last lg:col-span-1 max-h-[300px] relative rounded-lg h-full overflow-hidden">
+				<div
+					className={cn(
+						props.index % 2 === 0 ? "lg:order-first" : "lg:order-last",
+						"lg:col-span-1 max-h-[300px] relative rounded-lg h-full overflow-hidden",
+					)}
+				>
 					<Image
 						src={props.image.url ?? ""}
 						alt={props.image.alt ?? "Picture of the moving service"}
@@ -94,7 +106,7 @@ export const MovingServiceWithImage: FC<MovingServiceWithImageProps> = (
 };
 
 export const MovingServiceWithoutImage: FC<
-	Omit<MovingServiceWithImageProps, "image">
+	Omit<MovingServiceWithImageProps, "image" | "index">
 > = (props) => {
 	return (
 		<div className="mx-auto max-w-3xl my-6 text-base leading-7 text-gray-700">

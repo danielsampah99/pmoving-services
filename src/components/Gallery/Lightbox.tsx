@@ -139,8 +139,8 @@ const Lightbox: React.FC<LightboxProps> = ({
 			className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in"
 			onClick={onClose}
 			onKeyDown={(event) => {
-				if (event.key === 'Escape') {
-					onClose()
+				if (event.key === "Escape") {
+					onClose();
 				}
 			}}
 		>
@@ -148,12 +148,16 @@ const Lightbox: React.FC<LightboxProps> = ({
 				className="mx-auto h-[calc(100vh-6rem)] rounded-lg overflow-hidden bg-transparent max-w-[90vw] relative"
 				// onClick={(e) => e.stopPropagation()}
 				onKeyDown={(event) => {
-					if (event.key === 'Escape') {
+					if (event.key === "Escape") {
 						event.stopPropagation();
 						onClose();
 					}
-					if (event.key === 'ArrowLeft' && hasPrev) { onNavigate(currentIndex - 1)}
-					if (event.key === 'ArrowRight' && hasNext) { onNavigate(currentIndex + 1)}
+					if (event.key === "ArrowLeft" && hasPrev) {
+						onNavigate(currentIndex - 1);
+					}
+					if (event.key === "ArrowRight" && hasNext) {
+						onNavigate(currentIndex + 1);
+					}
 				}}
 				onTouchStart={handleTouchStart}
 				onTouchMove={handleTouchMove}
@@ -235,8 +239,10 @@ const Lightbox: React.FC<LightboxProps> = ({
 
 				{/* Bottom info panel */}
 				<div
-					className={cn("absolute bottom-0 left-0 right-0 p-4 glass text-white transform transition-transform duration-300 ease-in-out", showInfo ? "translate-y-0" : "translate-y-full")}
-
+					className={cn(
+						"absolute bottom-0 left-0 right-0 p-4 glass text-white transform transition-transform duration-300 ease-in-out",
+						showInfo ? "translate-y-0" : "translate-y-full",
+					)}
 				>
 					<h3 className="text-lg font-medium mb-1">{currentImage.title}</h3>
 					<p className="text-sm mb-2">{currentImage.description}</p>
