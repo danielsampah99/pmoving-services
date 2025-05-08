@@ -1,4 +1,4 @@
-import { type FC, useState } from "react";
+import { type FC, memo, useMemo, useState } from "react";
 import { cn } from "@/utils";
 import { TruckIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
@@ -22,9 +22,16 @@ export const ListOfServiceAreas: FC<ListOfServiceAreasProps> = ({
 }) => {
 	const [searchTerm, setSearchTerm] = useState("");
 
-	const filteredCities = cities.filter((city) =>
-		city.city.toLowerCase().includes(searchTerm.toLowerCase()),
-	);
+	const filteredCities = useMemo(() => {
+
+		if (!searchTerm) {
+			return cities
+		}
+
+		return cities.filter((city) =>
+			city.city.toLowerCase().includes(searchTerm.toLowerCase())
+		)
+	}, [cities, searchTerm])
 
 	return (
 		<div className="lg:col-span-1">
@@ -99,43 +106,62 @@ export const MapCitiesList: FC<MapCitiesListProps> = ({
 				{cities.map((city) => {
 					const standardCity = city.city.replace(/\s+/g, "-").toLowerCase(); // replace all whitespace characters with a hypen in the cityname
 
-					const cityClasses =
-						selectedCity === city.city
-							? "bg-yellow-100 text-yellow-800 border-ywllow-300 shadow-sm"
-							: hoveredCity === city.city
-								? "bg-yellow-50 text-yellow-700 border-yellow-200"
-								: "hover:bg-slate-50 border-transparent";
-
-					const iconClasses =
-						hoveredCity === city.city
-							? "stroke-yellow-600"
-							: "stroke-yellow-400";
 					return (
-						<div
-							id={`city-${standardCity}`}
+						<CityListItem
 							key={standardCity}
-							className={cn(
-								"px-3 py-2 rounded-md text-sm transition-all cursor-pointer border",
-								cityClasses,
-							)}
-							onClick={() => onSelectCity(city.city)}
-							onKeyDown={(event) =>
-								(event.key === "Enter" || event.key === " ") &&
-								onSelectCity(city.city)
-							}
-							onMouseOver={() => onHoverCity(city.city)}
-							onMouseOut={() => onHoverCity(null)}
-							onFocus={() => onHoverCity(city.city)}
-							onBlur={() => onHoverCity(null)}
-						>
-							<div className="flex capitalize items-center">
-								<TruckIcon className={cn("mr-1.5 size-5", iconClasses)} />
-								{city.city}
-							</div>
-						</div>
+							city={city}
+							isSelected={selectedCity === city.city}
+							isHovered={hoveredCity === city.city}
+							onSelectCity={onSelectCity}
+							onHoverCity={onHoverCity}
+						/>
 					);
 				})}
 			</div>
 		</div>
 	);
 };
+
+
+// city list item - memoized for performance
+type CityListItemProps = {
+	city: MapCity
+	isSelected: boolean
+	isHovered: boolean
+	onSelectCity: (city: string) => void
+	onHoverCity: (city: string | null) => void
+}
+
+const CityListItem: FC<CityListItemProps> = memo(({ city, isHovered, isSelected, onHoverCity, onSelectCity }) => {
+
+	const standardCity = city.city.replace(/\s+/g, "-").toLowerCase()
+
+	const cityClasses = isSelected ? 'bg-yellow-100 text-yellow-800 border-yellow-300 shadow-sm' : isHovered ? 'bg-yellow-50 text-yellow-700 border-yellow-200' : 'hover:bg-slate-50 border-transparent'
+
+	const iconClasses =	isHovered || isSelected ? "stroke-yellow-600" : "stroke-yellow-400";
+
+	console.log("Rendering city list item: ", city.city, { isSelected, isHovered })
+
+	return (
+		<div
+			id={`city-${standardCity}`}
+			className={cn('px-3 py-2 rounded-md text-sm transition-all cursor-pointer border', cityClasses)}
+			onClick={() => onSelectCity(city.city)}
+			onKeyDown={(event) => (event.key === 'Enter') && onSelectCity(city.city)}
+			onMouseOut={() => onHoverCity(null)}
+			onMouseOver={() => onHoverCity(city.city)}
+			onFocus={() => onHoverCity(city.city)}
+			onBlur={() => onHoverCity(null)}
+			role='button'
+			tabIndex={0}
+		>
+			<div className='flex capitalize items-center'>
+				<TruckIcon className={cn('mr-1.5 size-5', iconClasses)} aria-hidden='false' />
+				{city.city}
+			</div>
+
+		</div>
+	)
+
+})
+CityListItem.displayName = 'CityListItem' // for debugging
