@@ -18,8 +18,8 @@ import {
 	PackageIcon,
 	LampDeskIcon,
 } from "lucide-react";
-import { HeroIconType } from "./HeroIcon";
-import { FlatIcon } from "./flaticons";
+import type { HeroIconType } from "./HeroIcon";
+import type { FlatIcon } from "./flaticons";
 import { SafeIcon } from "./icons/safe-icon";
 import { cn } from "@/utils";
 import { LogisticsIcon } from "./icons/logistics-icon";

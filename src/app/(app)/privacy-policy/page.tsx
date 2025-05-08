@@ -28,6 +28,7 @@ export default function PrivacyPolicyPage() {
 					<a
 						href="/"
 						target="_blank"
+						rel="noopener noreferrer"
 						className="inline font-semibold hover:underline underline-offset-2 "
 					>
 						{" "}
@@ -45,7 +46,7 @@ export default function PrivacyPolicyPage() {
 						Information”) may include, but is not limited to
 					</p>
 
-					<ul role="list" className="mt-8 max-w-xl space-y-2 text-gray-600">
+					<ul className="mt-8 max-w-xl space-y-2 text-gray-600">
 						<li className="flex gap-x-3">
 							<UserIcon
 								aria-hidden="true"

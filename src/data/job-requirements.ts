@@ -1,4 +1,4 @@
-import { HeroIconType } from "@/components/HeroIcon";
+import type { HeroIconType } from "@/components/HeroIcon";
 import {
 	ArchiveBoxIcon,
 	IdentificationIcon,

@@ -68,11 +68,14 @@ const ImageCard: React.FC<ImageCardProps> = ({ image, onClick, index }) => {
 			}}
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
+			onFocus={() => setIsHovered(true)}
+			onBlur={() => setIsHovered(false)}
 		>
 			{/* Image overlay with gradient */}
 			<div
 				className="relative overflow-hidden rounded-lg aspect-auto"
 				onClick={onClick}
+				onKeyDown={event => event.key === 'Enter' && onClick}
 			>
 				{/* Image */}
 				<img

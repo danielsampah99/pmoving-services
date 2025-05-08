@@ -1,6 +1,6 @@
 import { CheckIcon } from "@heroicons/react/16/solid";
 import Image from "next/image";
-import { FC } from "react";
+import type { FC } from "react";
 
 export type Expectation = {
 	id: number;

@@ -2,7 +2,7 @@ import { nextHomeAffiliate } from "@/data/affiliates";
 import { CheckIcon } from "@heroicons/react/16/solid";
 import Image from "next/image";
 
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { BASE_URL } from "@/utils";
 
 export const metadata: Metadata = {

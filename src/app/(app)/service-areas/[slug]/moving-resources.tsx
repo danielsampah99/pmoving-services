@@ -1,7 +1,7 @@
-import { ServiceArea } from "@/payload-types";
+import type { ServiceArea } from "@/payload-types";
 import { LinkIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
-import { FC } from "react";
+import type { FC } from "react";
 
 export type MovingResourcesProps = Pick<ServiceArea, "resources"> & {
 	title: string;
@@ -15,8 +15,8 @@ export const MovingResources: FC<MovingResourcesProps> = (props) => {
 					Moving Resources
 				</h1>
 				<div className="mt-5 max-w-3xl">
-					<ul role="list" className="mt-8 max-w-xl space-y-2 text-gray-600">
-						{props.resources?.length! > 0 &&
+					<ul className="mt-8 max-w-xl space-y-2 text-gray-600">
+						{props.resources && props.resources.length > 0 &&
 							props.resources?.map((resource) => (
 								<ResourceItem
 									key={resource.id}

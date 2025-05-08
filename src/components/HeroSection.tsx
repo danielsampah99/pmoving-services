@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { ChevronLeft, ChevronRight, Clock, Star } from "lucide-react";
 import { Button } from "@headlessui/react";
 
@@ -30,10 +30,10 @@ export const HeroSection = () => {
 		setCurrentImage((prev) => (prev === 0 ? images.length - 1 : prev - 1));
 	};
 
-	useEffect(() => {
-		const interval = setInterval(nextImage, 5000);
-		return () => clearInterval(interval);
-	}, []);
+	// useEffect(() => {
+	// 	const interval = setInterval(nextImage, 5000);
+	// 	return () => clearInterval(interval);
+	// }, [nextImage]);
 
 	return (
 		<div className="relative bg-background overflow-hidden">
@@ -79,8 +79,10 @@ export const HeroSection = () => {
 					{images.map((_, index) => (
 						<button
 							key={index}
+							type='button'
+							onKeyDown={event => event.key === 'Enter' && setCurrentImage(index)}
 							onClick={() => setCurrentImage(index)}
-							className={`h-3 w-3 rounded-full transition ${
+							className={`size-3 rounded-full transition ${
 								index === currentImage ? "bg-white" : "bg-white/50"
 							}`}
 							aria-label={`Slide ${index + 1}`}

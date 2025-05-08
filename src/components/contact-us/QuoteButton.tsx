@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import type { FC } from "react";
 
 interface QuoteButtonProps {
 	text: string;
@@ -8,7 +8,7 @@ interface QuoteButtonProps {
 	className?: string;
 }
 
-export const QuoteButton: React.FC<QuoteButtonProps> = ({
+export const QuoteButton: FC<QuoteButtonProps> = ({
 	text,
 	onClick,
 	type = "button",

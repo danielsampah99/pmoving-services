@@ -314,7 +314,11 @@ export interface Blog {
    */
   publishedDate: string;
   thumbnail: number | Media;
-  thumbnailDescription?: ('draft' | 'scheduled' | 'published') | null;
+  readingTime?: number | null;
+  /**
+   * A short description for previews. Will default to blog's description if no value is provided for this field.
+   */
+  thumbnailDescription?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -501,6 +505,7 @@ export interface BlogsSelect<T extends boolean = true> {
   tags?: T;
   publishedDate?: T;
   thumbnail?: T;
+  readingTime?: T;
   thumbnailDescription?: T;
   updatedAt?: T;
   createdAt?: T;

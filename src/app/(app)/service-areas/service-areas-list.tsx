@@ -2,7 +2,7 @@ import { type FC, useState } from "react";
 import { cn } from "@/utils";
 import { TruckIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { MapCity } from "@/map-data";
+import type { MapCity } from "@/map-data";
 import { Field, Input, Label } from "@headlessui/react";
 
 export type ListOfServiceAreasProps = {
@@ -119,8 +119,11 @@ export const MapCitiesList: FC<MapCitiesListProps> = ({
 								cityClasses,
 							)}
 							onClick={() => onSelectCity(city.city)}
+							onKeyDown={event => (event.key === 'Enter' || event.key === ' ') && onSelectCity(city.city)}
 							onMouseOver={() => onHoverCity(city.city)}
-							onMouseLeave={() => onHoverCity(null)}
+							onMouseOut={() => onHoverCity(null)}
+							onFocus={() => onHoverCity(city.city)}
+							onBlur={() => onHoverCity(null)}
 						>
 							<div className="flex capitalize items-center">
 								<TruckIcon className={cn("mr-1.5 size-5", iconClasses)} />

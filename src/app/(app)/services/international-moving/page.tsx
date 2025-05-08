@@ -114,11 +114,15 @@ const InternationalMoving = () => {
 						Your International Moving Journey
 					</h2>
 					<div className="relative">
-						<div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-background"></div>
+						<div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-background" />
 						<div className="space-y-12">
-							{internationalMovingProcess.map((step, index) => (
+							{internationalMovingProcess.map((step, index) => {
+
+								const mappingIndex = `step-${index}`
+
+								return (
 								<div
-									key={index}
+									key={mappingIndex}
 									className={`flex ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} items-center`}
 								>
 									<div className="flex-1 p-6 bg-white rounded-lg shadow-md">
@@ -126,11 +130,11 @@ const InternationalMoving = () => {
 										<p className="text-gray-600">{step.description}</p>
 									</div>
 									<div className="hidden md:block w-16 relative">
-										<div className="absolute left-1/2 transform -translate-x-1/2 size-4 bg-moving-gray rounded-full"></div>
+										<div className="absolute left-1/2 transform -translate-x-1/2 size-4 bg-moving-gray rounded-full" />
 									</div>
-									<div className="flex-1"></div>
+									<div className="flex-1" />
 								</div>
-							))}
+							)})}
 						</div>
 					</div>
 				</div>

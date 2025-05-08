@@ -296,11 +296,13 @@ export const QuoteForm = () => {
 						name="stairs-origin"
 						className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
 					>
-						{Array.from({ length: 5 }, (_, index) => (
-							<option key={index} value={index}>
+						{Array.from({ length: 5 }, (_, index) => {
+							const optionKey = `key-${index}`
+							return (
+							<option key={optionKey} value={index}>
 								{index}
 							</option>
-						))}
+						)})}
 					</Select>
 				</Field>
 

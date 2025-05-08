@@ -3,8 +3,8 @@
 import { services } from "@/data/services";
 import Link from "next/link";
 import { Button, Field, Input, Label } from "@headlessui/react";
-import { FC } from "react";
-import { FooterSocial, navigation } from "@/data/navigation";
+import type { FC } from "react";
+import { type FooterSocial, navigation } from "@/data/navigation";
 
 export const Footer: FC = () => {
 	return (
@@ -25,7 +25,7 @@ export const Footer: FC = () => {
 								<h3 className="text-sm font-semibold leading-6 text-white">
 									Services
 								</h3>
-								<ul role="list" className="mt-6 space-y-4">
+								<ul className="mt-6 space-y-4">
 									{services.map((item) => (
 										<li key={item.name}>
 											<a
@@ -42,7 +42,7 @@ export const Footer: FC = () => {
 								<h3 className="text-sm font-semibold leading-6 text-white">
 									Our Offices
 								</h3>
-								<ul role="list" className="mt-6 space-y-4">
+								<ul className="mt-6 space-y-4">
 									{navigation.locations.map((item) => (
 										<li key={item.name}>
 											<a
@@ -61,7 +61,7 @@ export const Footer: FC = () => {
 								<h3 className="text-sm font-semibold leading-6 text-white">
 									Company
 								</h3>
-								<ul role="list" className="mt-6 space-y-4">
+								<ul className="mt-6 space-y-4">
 									{navigation.company.map((item) => (
 										<li key={item.name}>
 											<a
@@ -78,7 +78,7 @@ export const Footer: FC = () => {
 								<h3 className="text-sm font-semibold leading-6 text-white">
 									Certifications
 								</h3>
-								<ul role="list" className="mt-6 space-y-4">
+								<ul className="mt-6 space-y-4">
 									{navigation.certifications.map((item) => (
 										<li key={item.name}>
 											<p className="text-sm leading-6 text-white">

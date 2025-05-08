@@ -124,8 +124,11 @@ export const MapCitiesList: FC<MapCitiesListProps> = ({
 								cityClasses,
 							)}
 							onClick={() => onSelectCity(city.city)}
+							onKeyDown={(event) => event.key === 'Enter' && onSelectCity(city.city)}
 							onMouseOver={() => onHoverCity(city.city)}
-							onMouseLeave={() => onHoverCity(null)}
+							onMouseOut={() => onHoverCity(null)}
+							onFocus={() => onHoverCity(city.city)}
+							onBlur={() => onHoverCity(null)}
 						>
 							<div className="flex capitalize items-center">
 								<TruckIcon className={cn("mr-1.5 size-5", iconClasses)} />

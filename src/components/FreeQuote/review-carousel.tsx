@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import { ReviewType } from "@/data/reviews";
+import type { ReviewType } from "@/data/reviews";
 
 export const ReviewCarousel = ({ reviews }: { reviews: ReviewType }) => {
 	const [currentIndex, setCurrentIndex] = useState(0);
@@ -46,7 +46,7 @@ export const ReviewCarousel = ({ reviews }: { reviews: ReviewType }) => {
 			}}
 		>
 			{/* Overlay gradient */}
-			<div className="absolute inset-0 bg-gradient-to-r from-[(bg-moving-yellow)] to-[(moving-gray)] backdrop-blur-xs"></div>
+			<div className="absolute inset-0 bg-gradient-to-r from-[(bg-moving-yellow)] to-[(moving-gray)] backdrop-blur-xs" />
 
 			<div className="relative z-10 p-8 flex flex-col h-full">
 				<div className="mb-6 flex items-center">
@@ -59,6 +59,7 @@ export const ReviewCarousel = ({ reviews }: { reviews: ReviewType }) => {
 				<div className="relative flex-grow flex items-center">
 					<button
 						onClick={handlePrevious}
+						type="button"
 						className="absolute -left-3 bg-white/20 hover:bg-white/30 rounded-full p-2 backdrop-blur-sm transition-colors text-white"
 						aria-label="Previous review"
 					>
@@ -91,6 +92,7 @@ export const ReviewCarousel = ({ reviews }: { reviews: ReviewType }) => {
 
 					<button
 						onClick={handleNext}
+						type="button"
 						className="absolute -right-3 bg-white/20 hover:bg-white/30 rounded-full p-2 backdrop-blur-sm transition-colors text-white"
 						aria-label="Next review"
 					>
@@ -102,6 +104,7 @@ export const ReviewCarousel = ({ reviews }: { reviews: ReviewType }) => {
 					{reviews.featured.map((_, index) => (
 						<button
 							key={index}
+							type="button"
 							onClick={() => {
 								setAutoplay(false);
 								setCurrentIndex(index);
@@ -147,7 +150,7 @@ export const ReviewsMobile = ({ reviews }: { reviews: ReviewType }) => {
 			}}
 		>
 			{/* Overlay gradient */}
-			<div className="lg:absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70 backdrop-blur-sm"></div>
+			<div className="lg:absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70 backdrop-blur-sm" />
 
 			<div className="relative z-10 p-6">
 				<div className="mb-4 flex items-center">
@@ -179,21 +182,24 @@ export const ReviewsMobile = ({ reviews }: { reviews: ReviewType }) => {
 				</AnimatePresence>
 
 				<div className="flex justify-center gap-1.5 mt-6">
-					{reviews.featured.map((_, index) => (
+					{reviews.featured.map((_, index) => {
+						const reviewKey = `review-${index}`
+						return (
 						<button
-							key={index}
+						type="button"
+							key={reviewKey}
 							onClick={() => {
 								setAutoplay(false);
 								setCurrentIndex(index);
 							}}
-							className={`w-2 h-2 rounded-full transition-colors ${
+							className={`size-2 rounded-full transition-colors ${
 								currentIndex === index
 									? "bg-white"
 									: "bg-white/40 hover:bg-white/60"
 							}`}
 							aria-label={`Go to review ${index + 1}`}
 						/>
-					))}
+					)})}
 				</div>
 			</div>
 		</div>

@@ -1,10 +1,10 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { Hero } from "./hero";
 import { OurLocations } from "@/components/OurLocations";
 import { ServiceAreaMap } from "./service-areas-map";
 import { getPayload } from "payload";
 import config from "@payload-config";
-import { MapCity } from "@/map-data";
+import type { MapCity } from "@/map-data";
 import { MINNESOTA_CENTRE } from "@/data/map";
 
 export const metadata: Metadata = {

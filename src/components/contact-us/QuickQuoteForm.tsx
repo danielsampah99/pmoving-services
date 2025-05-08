@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState, type FC, type ChangeEvent, type FormEvent } from "react";
 import { FormField } from "@/components/contact-us/FormField";
 import { QuoteButton } from "@/components/contact-us/QuoteButton";
 
@@ -14,7 +14,7 @@ interface QuickQuoteData {
 	moveDate: string;
 }
 
-const QuickQuoteForm: React.FC = () => {
+const QuickQuoteForm: FC = () => {
 	const [formData, setFormData] = useState<QuickQuoteData>({
 		moveSize: "",
 		movingFrom: "",
@@ -30,7 +30,7 @@ const QuickQuoteForm: React.FC = () => {
 	>({});
 
 	const handleChange = (
-		e: React.ChangeEvent<
+		e: ChangeEvent<
 			HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
 		>,
 	) => {
@@ -99,7 +99,7 @@ const QuickQuoteForm: React.FC = () => {
 		return isValid;
 	};
 
-	const handleSubmit = (e: React.FormEvent) => {
+	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault();
 		if (validateForm()) {
 			// Normally would submit the form to a server here

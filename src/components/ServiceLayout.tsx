@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import Image from "next/image";
-import { FC } from "react";
+import type { FC } from "react";
 
 interface ServiceLayoutProps {
 	image: string;

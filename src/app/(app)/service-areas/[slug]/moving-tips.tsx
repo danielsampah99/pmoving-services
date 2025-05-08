@@ -1,5 +1,5 @@
 import { movingTips } from "@/data/moving-tips";
-import { FC } from "react";
+import type { FC } from "react";
 
 export const MovingTips: FC = () => {
 	return (

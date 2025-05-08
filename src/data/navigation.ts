@@ -6,9 +6,9 @@ import {
 	WhatsappIcon,
 	XIcon,
 	YoutubeIcon,
-	FooterIconProps,
+	type FooterIconProps,
 } from "@/components/icons/footer-icons";
-import { FC } from "react";
+import type { FC } from "react";
 
 export type FooterLink = {
 	name: string;
