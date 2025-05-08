@@ -71,15 +71,19 @@ export const Blogs: CollectionConfig = {
 			required: true,
 		},
 		{
+			name: "readingTime",
+			label: "Reading Time",
+			type: 'number',
+			defaultValue: 6
+		},
+		{
 			name: "thumbnailDescription",
 			label: "Blog's Description",
-			type: "select",
-			options: [
-				{ label: "Draft", value: "draft" },
-				{ label: "Scheduled", value: "scheduled" },
-				{ label: "Publisshed", value: "published" },
-			],
+			type: "text",
+			defaultValue: "Blog's description",
 			admin: {
+				description: "A short description for previews. Will default to blog's description if no value is provided for this field.",
+				placeholder:"'The description of this blog's thumbnail",
 				position: "sidebar",
 			},
 		},
@@ -88,7 +92,7 @@ export const Blogs: CollectionConfig = {
 		beforeValidate: [
 			({ data }) => {
 				if (data?.title && !data?.slug) {
-					data.slug = data?.title.toLowerCase().replace(" ", "-");
+					data.slug = data?.title.trim().toLowerCase().replaceAll(" ", "-");
 				}
 				return data;
 			},
