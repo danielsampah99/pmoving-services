@@ -1,6 +1,6 @@
-import { HeroIconType } from "@/components/HeroIcon";
+import type { HeroIconType } from "@/components/HeroIcon";
 import { GoogleMapsIcon } from "@/components/icons/google-maps-icon";
-import { Media, ServiceArea } from "@/payload-types";
+import type { ServiceArea } from "@/payload-types";
 import {
 	ShieldCheckIcon,
 	TruckIcon,
@@ -8,7 +8,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
-import { FC } from "react";
+import type { FC } from "react";
 
 export type HeroProps = Pick<ServiceArea, "mapImage"> & {
 	title: string;

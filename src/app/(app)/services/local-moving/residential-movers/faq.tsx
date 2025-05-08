@@ -4,7 +4,7 @@ import {
 	DisclosurePanel,
 } from "@headlessui/react";
 import { PlusIcon, MinusIcon } from "@heroicons/react/16/solid";
-import { FC } from "react";
+import type { FC } from "react";
 
 export type FAQType = {
 	question: string;

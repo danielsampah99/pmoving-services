@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { FC } from "react";
+import type { FC } from "react";
 
 export type PackingHerolongProps = {
 	title: string;
@@ -16,7 +16,7 @@ export const PackingHerolong: FC<PackingHerolongProps> = (props) => {
 			<div className="absolute inset-0">
 				<img
 					src={props.image}
-					alt="Long distance moving image description"
+					alt="Long distance moving"
 					className="size-full object-cover opacity-75 object-center"
 				/>
 				{/* <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-gray-900/90 to-gray-900/50" /> */}

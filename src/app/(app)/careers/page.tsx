@@ -1,7 +1,7 @@
 import { CareerForm } from "./CareerForm";
 import { Info } from "./Info";
 
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
 	title: "Join Our Team | Career Opportunities at Premium Moving Services",

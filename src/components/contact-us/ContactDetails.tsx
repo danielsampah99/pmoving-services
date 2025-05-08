@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import type React from "react";
 import { MapPin, Phone } from "lucide-react";
 
 const ContactDetails: React.FC = () => {

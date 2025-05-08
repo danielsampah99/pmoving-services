@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import type {ChangeEvent, FC } from "react";
 
 interface FormFieldProps {
 	id: string;
@@ -10,7 +10,7 @@ interface FormFieldProps {
 	placeholder?: string;
 	value?: string;
 	onChange?: (
-		e: React.ChangeEvent<
+		e: ChangeEvent<
 			HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
 		>,
 	) => void;
@@ -19,7 +19,7 @@ interface FormFieldProps {
 	className?: string;
 }
 
-export const FormField: React.FC<FormFieldProps> = ({
+export const FormField: FC<FormFieldProps> = ({
 	id,
 	label,
 	type = "text",

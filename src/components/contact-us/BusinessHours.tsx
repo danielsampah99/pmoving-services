@@ -1,8 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import { useState, type FC } from "react";
 import { Clock, ChevronDown, ChevronUp } from "lucide-react";
 
-const BusinessHours: React.FC = () => {
+const BusinessHours: FC = () => {
 	const [isExpanded, setIsExpanded] = useState(false);
 
 	return (
@@ -10,6 +10,7 @@ const BusinessHours: React.FC = () => {
 			<div
 				className="flex items-center justify-between cursor-pointer"
 				onClick={() => setIsExpanded(!isExpanded)}
+				onKeyDown={event => event.key === ' ' && setIsExpanded(!isExpanded)}
 			>
 				<div className="flex items-center">
 					<Clock size={24} className="text-moving-yellow mr-3" />

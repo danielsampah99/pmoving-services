@@ -1,10 +1,12 @@
-import { SVGProps, FC } from "react";
+import type { SVGProps, FC } from "react";
+
 interface SVGRProps {
 	title?: string;
 	titleId?: string;
 	desc?: string;
 	descId?: string;
 }
+
 export const LogisticsIcon: FC<SVGProps<SVGSVGElement> & SVGRProps> = ({
 	title,
 	titleId,

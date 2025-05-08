@@ -30,7 +30,7 @@ export const Banner: FC = () => {
 		window.addEventListener("scroll", handleTransparentScroll);
 
 		return () => window.removeEventListener("scroll", handleTransparentScroll);
-	}, [scrollPosition, isBgTransparent]);
+	}, [scrollPosition]);
 
 	return (
 		<div

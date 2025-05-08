@@ -1,9 +1,9 @@
 "use client";
 
-import { MapCity } from "@/map-data";
-import { LatLngExpression } from "leaflet";
+import type { MapCity } from "@/map-data";
+import type { LatLngExpression } from "leaflet";
 import { useRouter } from "next/navigation";
-import { FC, useRef, useState } from "react";
+import { type FC, useRef, useState } from "react";
 import { ListOfServiceAreas } from "./service-areas-list";
 
 import dynamic from "next/dynamic";

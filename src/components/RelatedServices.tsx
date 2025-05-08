@@ -115,6 +115,7 @@ export const RelatedServices = () => {
 									</motion.p>
 
 									<motion.a
+										href={service.link}
 										className="flex items-center cursor-pointer text-yellow-500 font-medium hover:text-yellow-600 transition-colors" // Updated to yellow
 									>
 										Learn More

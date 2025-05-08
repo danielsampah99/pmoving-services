@@ -16,7 +16,7 @@ import {
 } from "@headlessui/react";
 import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
 import { type FC, useState } from "react";
-import { ServiceArea } from "@/payload-types";
+import type { ServiceArea } from "@/payload-types";
 
 export interface MobileSidebarProps {
 	areas: ServiceArea[];

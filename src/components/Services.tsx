@@ -1,7 +1,7 @@
 "use client";
 
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { type FC } from "react";
+import type { FC } from "react";
 import Link from "next/link";
 import { callsToAction, type Service, services } from "@/data/services";
 import {

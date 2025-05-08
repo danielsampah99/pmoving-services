@@ -1,5 +1,5 @@
-import { RelatedServices as RelatedService } from "@/data/services";
-import { FC } from "react";
+import type { RelatedServices as RelatedService } from "@/data/services";
+import type { FC } from "react";
 import Link from "next/link";
 
 export type RelatedServicesProps = {

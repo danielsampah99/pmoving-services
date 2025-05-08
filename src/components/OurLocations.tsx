@@ -124,7 +124,6 @@ export const OfficeLocationCard: FC<{ location: OfficeLocation }> = ({
 				</div>
 
 				<ul
-					role="list"
 					className="mt-10 space-y-4 text-sm leading-6 text-gray-600"
 				>
 					<li className="flex items-center justify-start gap-x-1.5 capitalize">

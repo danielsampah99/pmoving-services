@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import  { useState, type FC } from "react";
 import { FormField } from "./FormField";
 import { QuoteButton } from "./QuoteButton";
 import { Field, Input, Label } from "@headlessui/react";
@@ -20,7 +20,7 @@ interface FormData {
 	termsAgreed: string;
 }
 
-const PrimaryQuoteForm: React.FC = () => {
+const PrimaryQuoteForm: FC = () => {
 	const [formData, setFormData] = useState<FormData>({
 		moveDate: "",
 		moveTime: "",

@@ -1,6 +1,6 @@
-import { RelatedServices } from "@/data/services";
+import type { RelatedServices } from "@/data/services";
 import Link from "next/link";
-import { FC } from "react";
+import type { FC } from "react";
 
 export type RelatedLocalMovingProps = {
 	services: RelatedServices[];

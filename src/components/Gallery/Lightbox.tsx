@@ -99,9 +99,9 @@ const Lightbox: React.FC<LightboxProps> = ({
 	}, []);
 
 	// Reset loading state when changing images
-	useEffect(() => {
-		setIsLoading(true);
-	}, [currentIndex]);
+	// useEffect(() => {
+	// 	setIsLoading(true);
+	// }, [currentIndex]);
 
 	// Handle touch events for swiping
 	const handleTouchStart = (e: React.TouchEvent) => {
@@ -170,6 +170,7 @@ const Lightbox: React.FC<LightboxProps> = ({
 				<div
 					className="absolute top-1/2 w-full flex justify-between items-center px-4 transform -translate-y-1/2"
 					onClick={handleControlClick}
+					onKeyDown={event => event.key === "ArrowLeft" && handleControlClick}
 				>
 					{hasPrev && (
 						<Button
@@ -187,6 +188,7 @@ const Lightbox: React.FC<LightboxProps> = ({
 							type="button"
 							className="p-2 rounded-full bg-white bg-opacity-25 text-white backdrop-blur-sm hover:bg-opacity-40 hover:bg-moving-primary/40 transition-all"
 							onClick={() => onNavigate(currentIndex + 1)}
+							onKeyDown={event => event.key === "ArrowRight" && onNavigate(currentIndex + 1)}
 							aria-label="Next image"
 						>
 							<ChevronRight size={24} />
@@ -198,6 +200,7 @@ const Lightbox: React.FC<LightboxProps> = ({
 				<div
 					className="absolute top-4 right-4 flex items-center space-x-2"
 					onClick={handleControlClick}
+					onKeyDown={event => event.key === 'Space' && handleControlClick}
 				>
 					<Button
 						type="button"

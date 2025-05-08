@@ -1,13 +1,13 @@
 "use client";
 
 import {
-	JSXConverters,
-	JSXConvertersFunction,
+	type JSXConverters,
+	type JSXConvertersFunction,
 	RichText as PayloadRichText,
 } from "@payloadcms/richtext-lexical/react";
 import type { SerializedEditorState } from "@payloadcms/richtext-lexical/lexical";
 
-import {
+import type {
 	DefaultNodeTypes,
 	SerializedLinkNode,
 } from "@payloadcms/richtext-lexical";
