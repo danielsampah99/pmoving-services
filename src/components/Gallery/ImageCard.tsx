@@ -75,7 +75,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ image, onClick, index }) => {
 			<div
 				className="relative overflow-hidden rounded-lg aspect-auto"
 				onClick={onClick}
-				onKeyDown={event => event.key === 'Enter' && onClick}
+				onKeyDown={(event) => event.key === "Enter" && onClick}
 			>
 				{/* Image */}
 				<img

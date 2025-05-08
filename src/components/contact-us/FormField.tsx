@@ -1,6 +1,6 @@
 "use client";
 
-import type {ChangeEvent, FC } from "react";
+import type { ChangeEvent, FC } from "react";
 
 interface FormFieldProps {
 	id: string;
@@ -10,9 +10,7 @@ interface FormFieldProps {
 	placeholder?: string;
 	value?: string;
 	onChange?: (
-		e: ChangeEvent<
-			HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-		>,
+		e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
 	) => void;
 	options?: Array<{ value: string; label: string }>;
 	error?: string;

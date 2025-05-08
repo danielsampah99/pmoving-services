@@ -16,7 +16,8 @@ export const MovingResources: FC<MovingResourcesProps> = (props) => {
 				</h1>
 				<div className="mt-5 max-w-3xl">
 					<ul className="mt-8 max-w-xl space-y-2 text-gray-600">
-						{props.resources && props.resources.length > 0 &&
+						{props.resources &&
+							props.resources.length > 0 &&
 							props.resources?.map((resource) => (
 								<ResourceItem
 									key={resource.id}

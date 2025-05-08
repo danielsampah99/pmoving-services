@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { ServiceCard, serviceCardData } from "./ServiceCard";
 
-const ServicesSection = () => {
+export const ServicesSection = () => {
 	const observerRef = useRef<IntersectionObserver | null>(null);
 
 	useEffect(() => {
@@ -51,5 +51,3 @@ const ServicesSection = () => {
 		</section>
 	);
 };
-
-export default ServicesSection;

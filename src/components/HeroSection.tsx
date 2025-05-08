@@ -79,8 +79,10 @@ export const HeroSection = () => {
 					{images.map((_, index) => (
 						<button
 							key={index}
-							type='button'
-							onKeyDown={event => event.key === 'Enter' && setCurrentImage(index)}
+							type="button"
+							onKeyDown={(event) =>
+								event.key === "Enter" && setCurrentImage(index)
+							}
 							onClick={() => setCurrentImage(index)}
 							className={`size-3 rounded-full transition ${
 								index === currentImage ? "bg-white" : "bg-white/50"

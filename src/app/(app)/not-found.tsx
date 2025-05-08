@@ -19,21 +19,21 @@ export default function NotFound() {
 		<div className="min-h-screen flex flex-col items-center justify-center bg-[oklch(46.4%_0_0)] text-white relative overflow-hidden">
 			<div className="absolute inset-0 opacity-10">
 				{[...Array(20)].map((_, i) => {
-
-					const mappingIndex = `key-${i}`
+					const mappingIndex = `key-${i}`;
 
 					return (
-					<div
-						key={mappingIndex}
-						className="absolute"
-						style={{
-							left: `${(i % 4) * 25}%`,
-							top: `${Math.floor(i / 4) * 20}%`,
-						}}
-					>
-						<ArchiveBoxIcon className="stroke-moving-yellow stroke-[0.8] size-24" />
-					</div>
-				)})}
+						<div
+							key={mappingIndex}
+							className="absolute"
+							style={{
+								left: `${(i % 4) * 25}%`,
+								top: `${Math.floor(i / 4) * 20}%`,
+							}}
+						>
+							<ArchiveBoxIcon className="stroke-moving-yellow stroke-[0.8] size-24" />
+						</div>
+					);
+				})}
 			</div>
 
 			{/* Main Content */}

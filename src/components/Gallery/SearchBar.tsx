@@ -70,7 +70,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
 
 				{searchTerm && (
 					<button
-						type='button'
+						type="button"
 						onClick={handleClearSearch}
 						className="flex items-center justify-center pr-3 text-moving-gray hover:text-moving-primary"
 						aria-label="Clear search"

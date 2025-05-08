@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import type { GalleryImage } from "../../data/images";
 import { Button } from "@headlessui/react";
+import { cn } from "@/utils";
 
 interface LightboxProps {
 	images: GalleryImage[];
@@ -27,7 +28,6 @@ const Lightbox: React.FC<LightboxProps> = ({
 }) => {
 	const [isFullscreen, setIsFullscreen] = useState(false);
 	const [showInfo, setShowInfo] = useState(false);
-	const [isLoading, setIsLoading] = useState(true);
 	const [touchStart, setTouchStart] = useState<number | null>(null);
 	const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
@@ -138,31 +138,33 @@ const Lightbox: React.FC<LightboxProps> = ({
 		<div
 			className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in"
 			onClick={onClose}
+			onKeyDown={(event) => {
+				if (event.key === 'Escape') {
+					onClose()
+				}
+			}}
 		>
 			<div
-				className=" mx-auto h-[calc(100vh-6rem)] rounded-lg overflow-hidden bg-transparent max-w-[90vw] relative"
-				onClick={(e) => e.stopPropagation()}
+				className="mx-auto h-[calc(100vh-6rem)] rounded-lg overflow-hidden bg-transparent max-w-[90vw] relative"
+				// onClick={(e) => e.stopPropagation()}
+				onKeyDown={(event) => {
+					if (event.key === 'Escape') {
+						event.stopPropagation();
+						onClose();
+					}
+					if (event.key === 'ArrowLeft' && hasPrev) { onNavigate(currentIndex - 1)}
+					if (event.key === 'ArrowRight' && hasNext) { onNavigate(currentIndex + 1)}
+				}}
 				onTouchStart={handleTouchStart}
 				onTouchMove={handleTouchMove}
 				onTouchEnd={handleTouchEnd}
 			>
-				{/* Loading indicator */}
-				{isLoading && (
-					<div className="absolute inset-0 flex items-center justify-center">
-						<div className="w-12 h-12 border-4 border-moving-lightGray border-t-moving-primary rounded-full animate-spin" />
-					</div>
-				)}
-
 				{/* Image */}
 				<div className="relative h-full flex items-center justify-center">
 					<img
 						src={currentImage.src}
 						alt={currentImage.alt}
-						className={`
-              max-h-full max-w-full object-contain rounded-lg
-              ${isLoading ? "opacity-0" : "opacity-100 animate-zoom-in"}
-            `}
-						onLoad={() => setIsLoading(false)}
+						className="max-h-full max-w-full object-contain rounded-lg"
 					/>
 				</div>
 
@@ -170,7 +172,7 @@ const Lightbox: React.FC<LightboxProps> = ({
 				<div
 					className="absolute top-1/2 w-full flex justify-between items-center px-4 transform -translate-y-1/2"
 					onClick={handleControlClick}
-					onKeyDown={event => event.key === "ArrowLeft" && handleControlClick}
+					onKeyDown={(event) => event.key === "ArrowLeft" && handleControlClick}
 				>
 					{hasPrev && (
 						<Button
@@ -188,7 +190,9 @@ const Lightbox: React.FC<LightboxProps> = ({
 							type="button"
 							className="p-2 rounded-full bg-white bg-opacity-25 text-white backdrop-blur-sm hover:bg-opacity-40 hover:bg-moving-primary/40 transition-all"
 							onClick={() => onNavigate(currentIndex + 1)}
-							onKeyDown={event => event.key === "ArrowRight" && onNavigate(currentIndex + 1)}
+							onKeyDown={(event) =>
+								event.key === "ArrowRight" && onNavigate(currentIndex + 1)
+							}
 							aria-label="Next image"
 						>
 							<ChevronRight size={24} />
@@ -200,7 +204,7 @@ const Lightbox: React.FC<LightboxProps> = ({
 				<div
 					className="absolute top-4 right-4 flex items-center space-x-2"
 					onClick={handleControlClick}
-					onKeyDown={event => event.key === 'Space' && handleControlClick}
+					onKeyDown={(event) => event.key === " " && handleControlClick}
 				>
 					<Button
 						type="button"
@@ -231,11 +235,8 @@ const Lightbox: React.FC<LightboxProps> = ({
 
 				{/* Bottom info panel */}
 				<div
-					className={`
-            absolute bottom-0 left-0 right-0 p-4 glass text-white
-            transform transition-transform duration-300 ease-in-out
-            ${showInfo ? "translate-y-0" : "translate-y-full"}
-          `}
+					className={cn("absolute bottom-0 left-0 right-0 p-4 glass text-white transform transition-transform duration-300 ease-in-out", showInfo ? "translate-y-0" : "translate-y-full")}
+
 				>
 					<h3 className="text-lg font-medium mb-1">{currentImage.title}</h3>
 					<p className="text-sm mb-2">{currentImage.description}</p>
