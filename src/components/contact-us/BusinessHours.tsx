@@ -10,7 +10,7 @@ const BusinessHours: FC = () => {
 			<div
 				className="flex items-center justify-between cursor-pointer"
 				onClick={() => setIsExpanded(!isExpanded)}
-				onKeyDown={event => event.key === ' ' && setIsExpanded(!isExpanded)}
+				onKeyDown={(event) => event.key === " " && setIsExpanded(!isExpanded)}
 			>
 				<div className="flex items-center">
 					<Clock size={24} className="text-moving-yellow mr-3" />

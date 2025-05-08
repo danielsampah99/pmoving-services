@@ -30,9 +30,7 @@ const QuickQuoteForm: FC = () => {
 	>({});
 
 	const handleChange = (
-		e: ChangeEvent<
-			HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-		>,
+		e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
 	) => {
 		const { name, value } = e.target;
 

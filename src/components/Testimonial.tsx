@@ -19,7 +19,10 @@ const Testimonial = () => {
 						Movers Services made my relocation stress-free! The team was
 						professional, punctual, and handled my belongings with great care.
 					</p>
-					<button type='button' className="bg-header py-2.5 px-8 rounded-full text-white">
+					<button
+						type="button"
+						className="bg-header py-2.5 px-8 rounded-full text-white"
+					>
 						Get in touch
 					</button>
 				</div>
@@ -31,7 +34,10 @@ const Testimonial = () => {
 						Excellent service! The movers were friendly and efficient, and
 						everything arrived in perfect condition.
 					</p>
-					<button type='button' className="bg-header py-2.5 px-8 rounded-full text-white">
+					<button
+						type="button"
+						className="bg-header py-2.5 px-8 rounded-full text-white"
+					>
 						Get in touch
 					</button>
 				</div>

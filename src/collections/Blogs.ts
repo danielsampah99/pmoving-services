@@ -73,8 +73,8 @@ export const Blogs: CollectionConfig = {
 		{
 			name: "readingTime",
 			label: "Reading Time",
-			type: 'number',
-			defaultValue: 6
+			type: "number",
+			defaultValue: 6,
 		},
 		{
 			name: "thumbnailDescription",
@@ -82,8 +82,9 @@ export const Blogs: CollectionConfig = {
 			type: "text",
 			defaultValue: "Blog's description",
 			admin: {
-				description: "A short description for previews. Will default to blog's description if no value is provided for this field.",
-				placeholder:"'The description of this blog's thumbnail",
+				description:
+					"A short description for previews. Will default to blog's description if no value is provided for this field.",
+				placeholder: "'The description of this blog's thumbnail",
 				position: "sidebar",
 			},
 		},

@@ -123,9 +123,7 @@ export const OfficeLocationCard: FC<{ location: OfficeLocation }> = ({
 					/>
 				</div>
 
-				<ul
-					className="mt-10 space-y-4 text-sm leading-6 text-gray-600"
-				>
+				<ul className="mt-10 space-y-4 text-sm leading-6 text-gray-600">
 					<li className="flex items-center justify-start gap-x-1.5 capitalize">
 						<MapPinIcon
 							aria-hidden="true"

@@ -119,7 +119,10 @@ export const MapCitiesList: FC<MapCitiesListProps> = ({
 								cityClasses,
 							)}
 							onClick={() => onSelectCity(city.city)}
-							onKeyDown={event => (event.key === 'Enter' || event.key === ' ') && onSelectCity(city.city)}
+							onKeyDown={(event) =>
+								(event.key === "Enter" || event.key === " ") &&
+								onSelectCity(city.city)
+							}
 							onMouseOver={() => onHoverCity(city.city)}
 							onMouseOut={() => onHoverCity(null)}
 							onFocus={() => onHoverCity(city.city)}

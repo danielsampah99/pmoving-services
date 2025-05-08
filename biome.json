@@ -40,6 +40,9 @@
 					"fix": "safe",
 					"level": "error"
 				}
+			},
+			"complexity": {
+				"noForEach": "off"
 			}
 		},
 		"ignore": ["src/payload*"]

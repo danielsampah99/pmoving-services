@@ -1,6 +1,6 @@
 "use client";
 
-import  { useState, type FC } from "react";
+import { useState, type FC } from "react";
 import { FormField } from "./FormField";
 import { QuoteButton } from "./QuoteButton";
 import { Field, Input, Label } from "@headlessui/react";
