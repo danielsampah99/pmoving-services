@@ -55,7 +55,7 @@ export const ServiceAreaMap: FC<ServiceAreaMapProps> = ({
 		if (cityInfo?.href) {
 			router.push(`${cityInfo.href}`);
 		}
-	}, [])
+	}, []);
 
 	const handleHoverCity = useCallback((city: string | null) => {
 		const cityCenter = cities.find((item) => item.city === city);
