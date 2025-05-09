@@ -3,7 +3,7 @@
 import type { MapCity } from "@/map-data";
 import type { LatLngExpression } from "leaflet";
 import { useRouter } from "next/navigation";
-import { type FC, useRef, useState } from "react";
+import { type FC, useCallback, useRef, useState } from "react";
 import { ListOfServiceAreas } from "./service-areas-list";
 
 import dynamic from "next/dynamic";
@@ -47,7 +47,7 @@ export const ServiceAreaMap: FC<ServiceAreaMapProps> = ({
 		setShowStyleSelector(false);
 	};
 
-	const handleCityClick = (city: string | null) => {
+	const handleCityClick = useCallback((city: string | null) => {
 		setSelectedCity(city);
 
 		const cityInfo = cities.find((item) => item.city === city);
@@ -55,15 +55,15 @@ export const ServiceAreaMap: FC<ServiceAreaMapProps> = ({
 		if (cityInfo?.href) {
 			router.push(`${cityInfo.href}`);
 		}
-	};
+	}, [])
 
-	const handleHoverCity = (city: string | null) => {
+	const handleHoverCity = useCallback((city: string | null) => {
 		const cityCenter = cities.find((item) => item.city === city);
 
 		setHoveredCity(city);
 		setMapCenter([cityCenter?.latitude ?? 46, cityCenter?.longitude ?? -94]);
 		setMapZoom(10);
-	};
+	}, []);
 
 	const handleStyleToggle = () => setShowStyleSelector(!showStyleSelector);
 
