@@ -148,8 +148,8 @@ const CityListItem: FC<CityListItemProps> = memo(({ city, isHovered, isSelected,
 			className={cn('px-3 py-2 rounded-md text-sm transition-all cursor-pointer border', cityClasses)}
 			onClick={() => onSelectCity(city.city)}
 			onKeyDown={(event) => (event.key === 'Enter') && onSelectCity(city.city)}
-			onMouseOut={() => onHoverCity(null)}
-			onMouseOver={() => onHoverCity(city.city)}
+			onMouseEnter={() => onHoverCity(city.city)}
+			onMouseLeave={() => onHoverCity(null)}
 			onFocus={() => onHoverCity(city.city)}
 			onBlur={() => onHoverCity(null)}
 			role='button'

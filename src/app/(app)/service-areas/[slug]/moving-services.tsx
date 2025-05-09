@@ -68,7 +68,7 @@ export const MovingServiceWithImage: FC<MovingServiceWithImageProps> = (
 	props,
 ) => {
 	return (
-		<div className="mx-auto max-w-7xl my-6">
+		<div className="mx-auto max-w-7xl mt-10 mb-6">
 			<div className="mx-auto max-w-3xl">
 				<h1 className="mt-2 text-3xl font-bold capitalize tracking-tight text-gray-900 sm:text-4xl">
 					{props.title}
@@ -88,13 +88,13 @@ export const MovingServiceWithImage: FC<MovingServiceWithImageProps> = (
 				>
 					<Image
 						src={props.image.url ?? ""}
-						alt={props.image.alt ?? "Picture of the moving service"}
+						alt={props.image.alt ?? "Moving service"}
 						height={props.image.height ?? 30}
 						width={props.image.width ?? 30}
 						className="max-w-3xl w-full object-contain"
 					/>
 				</div>
-				<div className="max-w-3xl lg:col-span-1 order-last text-base leading-7 text-gray-700">
+				<div className={cn(props.index % 2 === 0 ? 'lg:order-last' : 'lg:order-first', "max-w-3xl lg:col-span-1 order-last text-base leading-7 text-gray-700")}>
 					<RichText
 						data={props.content}
 						className="[&_p]:xl:text-justify [&_p]:text-pretty [&_a]:text-yellow-500 [&_a]:hover:underline [&_a]:transition-colors duration-300 delay-100"
