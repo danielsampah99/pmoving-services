@@ -37,7 +37,7 @@ export const officeLocations: OfficeLocation[] = [
 		addressLine1: "829 3rd Ave SE",
 		addressLine2: "285 Rochester, MN 55904",
 		phone: "(651) 757-5135",
-		href: "https://www.google.com/maps/dir//Village+On+3rd+Apartments,+510+3rd+Ave+SE,+Rochester,+MN+55904,+United+States/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x87f9e1d8d49af27f:0x22288f0e238e5fbd?sa=X&ved=1t:57443&ictx=111&cshid=1746386855231633",
+		href: "https://www.google.com/maps/dir/5.5427477,-0.2565425/829+3rd+Ave+SE+%23285,+Rochester,+MN+55904,+USA/@23.2660441,-67.9832114,4z/data=!3m1!4b1!4m10!4m9!1m1!4e1!1m5!1m1!1s0x87f9e1df85072423:0x1850e38d2d959119!2m2!1d-92.4599426!2d44.0144703!3e0?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D",
 		image: "/rochester-office.webp",
 	},
 ];
