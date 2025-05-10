@@ -42,11 +42,16 @@ export const Hero: FC<HeroProps> = ({ post }) => {
 				</p>
 				<div className="flex items-center justify-between">
 					<div className="text-white/80 text-sm font-semibold">
-						<span className=''>{new Intl.DateTimeFormat('en-US',{ day: 'numeric', month: 'long', year: 'numeric'}).format(new Date(post.publishedDate)) ?? ""}</span>
+						<span className="">
+							{new Intl.DateTimeFormat("en-US", {
+								day: "numeric",
+								month: "long",
+								year: "numeric",
+							}).format(new Date(post.publishedDate)) ?? ""}
+						</span>
 						<span className="mx-2">&middot;</span>
 						<span>{post.readingTime ?? 6} minutes</span>
 					</div>
-
 				</div>
 			</div>
 		</div>

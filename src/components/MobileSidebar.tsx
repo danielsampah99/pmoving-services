@@ -44,7 +44,7 @@ export const MobileSidebar: FC<MobileSidebarProps> = ({ areas }) => {
 				onClose={setMobileMenuOpen}
 				className="lg:hidden"
 			>
-				<div className="fixed inset-0 z-10" />
+				<div className="fixed inset-0 z-[99]" />
 				<DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-moving-gray px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transition-transform duration-300 ease-in-out transform translate-x-0">
 					<div className="flex items-center justify-between">
 						<Link href="/" className="-m-1.5 p-1.5">
@@ -105,7 +105,7 @@ export const MobileSidebar: FC<MobileSidebarProps> = ({ areas }) => {
 									Storage Services
 								</a>
 								<a
-									href="/blog"
+									href="/blogs"
 									className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-gray-700 hover:bg-gray-50"
 								>
 									Blog
