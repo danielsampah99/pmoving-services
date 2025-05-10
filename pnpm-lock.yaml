@@ -3212,8 +3212,8 @@ packages:
   process-warning@4.0.1:
     resolution: {integrity: sha512-3c2LzQ3rY9d0hc1emcsHhfT9Jwz0cChib/QN89oME2R451w5fy3f0afAhERFZAwrbDU43wk12d0ORBpDVME50Q==}
 
-  proj4@2.16.1:
-    resolution: {integrity: sha512-98UA7U4DT0Ao2yo4S4A/hgUoIokxq4RDKtQh3rQBRemk6rc0pTn3ofECnxMq9UsvEvG5xxvlAdTz4JWeGXY3kA==}
+  proj4@2.16.2:
+    resolution: {integrity: sha512-1IcYz7wG1kDpPEJSeBy+0v29wW3mhbqUgRReenvhjgHlGjFA9cA72nGWnikUUS/ggq3y/TcShWzR41sikFSrlQ==}
 
   prompts@2.4.2:
     resolution: {integrity: sha512-NxNv/kLguCA7p3jE8oL2aEBsrJWgAakBpgmgK6lpPWV+WuOmY6r2/zbAVnP+T8bQlA0nzHXSJSJW0Hq7ylaD2Q==}
@@ -3667,8 +3667,8 @@ packages:
     resolution: {integrity: sha512-HxJdYWq1MTIQbJ3nw0cqssHoTNU267KlrDuGZ1WYlxDStUtKUhOaJmh112/TZmHxxUfuJqPXSOm7tDyas0OSIQ==}
     hasBin: true
 
-  wkt-parser@1.5.0:
-    resolution: {integrity: sha512-mPYL5TaZpWpyg1D9MxkTGIxmLZrwkQsV+15MgL5OBeWBVgSZcOJRQHnOWmah7E57xafB/eRsLL84GqBqFdlljw==}
+  wkt-parser@1.5.1:
+    resolution: {integrity: sha512-o78jtCrTSs+qT3s9GMfrpRZHCze/fzNbAV2+rUEAjWPP08te0oPoyASrdtOHcAdEPMgSn8atjnlnAqmCvuAqSA==}
 
   wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
@@ -6343,7 +6343,7 @@ snapshots:
   dotted-map@2.2.3:
     dependencies:
       '@turf/boolean-point-in-polygon': 6.5.0
-      proj4: 2.16.1
+      proj4: 2.16.2
 
   drizzle-kit@0.28.0:
     dependencies:
@@ -7336,11 +7336,11 @@ snapshots:
 
   process-warning@4.0.1: {}
 
-  proj4@2.16.1:
+  proj4@2.16.2:
     dependencies:
       geographiclib-geodesic: 2.1.1
       mgrs: 1.0.0
-      wkt-parser: 1.5.0
+      wkt-parser: 1.5.1
 
   prompts@2.4.2:
     dependencies:
@@ -7785,7 +7785,7 @@ snapshots:
     dependencies:
       isexe: 2.0.0
 
-  wkt-parser@1.5.0: {}
+  wkt-parser@1.5.1: {}
 
   wrappy@1.0.2: {}
 
