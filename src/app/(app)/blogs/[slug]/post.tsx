@@ -13,9 +13,11 @@ export const Post: FC<PostProps> = (props) => {
 		<section id={`post-${props.id}`}>
 			<RichText
 				data={props.content}
-				className={cn("[&_h2]:text-3xl [&_h2]:font-semibold max-sm:[&_h2]:text-justify",
-					" [&_a]:text-yellow-500 [&_a]:hover:underline [&_a]:transition-colors duration-300 delay-100", //
-					"[&_p]:text-gray-500 [&_p]:my-2 [&_h4]:text-lg [&_h4]:font-semibold [&_h2]:py-6 [&_p]:xl:text-justify [&_p]:text-pretty")}
+				className={cn(
+					"max-w-7xl mb-6 mx-auto flex flex-col prose prose-slate prose-p:text-sm prose-h3:text-xl prose-h4:text-lg",
+					"prose-img:rounded-xl xl:prose-img:max-h-[800px] prose-img:w-full prose-img:h-auto",
+					"prose-a:text-yellow-500 prose-a:no-underline prose-a:hover:underline prose-a:transition-colors duration-300 delay-100",
+				)}
 			/>
 		</section>
 	);

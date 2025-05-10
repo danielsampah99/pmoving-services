@@ -102,33 +102,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function SingleBlogPage({ params }: Props) {
 	const resolvedParams = await params;
 
-	const slug = decodeURIComponent(resolvedParams.slug)
-
-	console.info("slug: ", slug)
+	const slug = decodeURIComponent(resolvedParams.slug);
 
 	const payload = await getPayload({ config });
 
 	const blog = (
 		await payload.find({
 			collection: "blogs",
-			where: { slug: {  contains: slug } },
+			where: { slug: { equals: slug } },
 			limit: 1,
 		})
 	).docs[0] as Blog;
 
-	console.dir({ blog })
-
 	if (!blog) {
-		return notFound()
+		return notFound();
 	}
 
 	return (
-		<section className="max-w-7xl mx-auto p-6 lg:px-8 pt-0 xl:pt-6">
+		<section className="max-w-7xl w-full mx-auto p-6 mt-3 lg:px-8 pt-0 xl:pt-6">
 			<Post content={blog?.content} id={blog.id} />
 			<OurLocations />
 		</section>
 	);
 }
-
-// how-much-do-movers-cost-in-rochester,-mn:-a-comprehensive-guide -- db
-// how-much-do-movers-cost-in-rochester,-mn:-a-comprehensive-guide -- url

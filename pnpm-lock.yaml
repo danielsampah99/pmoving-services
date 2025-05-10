@@ -32,9 +32,6 @@ importers:
       '@radix-ui/react-dropdown-menu':
         specifier: ^2.1.12
         version: 2.1.14(@types/react-dom@19.1.2(@types/react@19.1.2))(@types/react@19.1.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@tailwindcss/typography':
-        specifier: ^0.5.16
-        version: 0.5.16(tailwindcss@4.1.6)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -99,6 +96,9 @@ importers:
       '@tailwindcss/postcss':
         specifier: ^4.0.7
         version: 4.1.6
+      '@tailwindcss/typography':
+        specifier: ^0.5.16
+        version: 0.5.16(tailwindcss@4.1.6)
       '@types/leaflet':
         specifier: ^1.9.16
         version: 1.9.17

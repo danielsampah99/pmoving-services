@@ -143,11 +143,6 @@ const CityListItem: FC<CityListItemProps> = memo(
 		const iconClasses =
 			isHovered || isSelected ? "stroke-yellow-600" : "stroke-yellow-400";
 
-		console.log("Rendering city list item: ", city.city, {
-			isSelected,
-			isHovered,
-		});
-
 		return (
 			<div
 				id={`city-${standardCity}`}
