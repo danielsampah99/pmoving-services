@@ -37,7 +37,7 @@ export const AllPosts: FC<AllPostsProps> = ({ posts }) => {
 		<div className="flex flex-col gap-x-8 items-center justify-between">
 			{/* heading */}
 			<div className="w-full flex lg:items-center justify-between flex-col gap-y-6">
-				<h2>Our Moving Services Blogs</h2>
+				<h2 className='mx-auto max-w-2xl font-bold text-3xl sm:text-4xl text'>Our Moving Services Blogs</h2>
 
 				<SearchPosts onSearch={handleSearch} />
 			</div>
@@ -96,7 +96,7 @@ export const Post: FC<{ post: Blog }> = ({ post }) => {
 			</div>
 			<div className="mt-6">
 				<a
-					href={post.slug}
+					href={`/blogs/${post.slug}`}
 					className="relative flex items-center justify-center rounded-md border border-transparent bg-gray-100 px-8 py-2 text-sm font-medium text-gray-900 hover:bg-gray-200"
 				>
 					Read<span className="sr-only">, {post.title}</span>

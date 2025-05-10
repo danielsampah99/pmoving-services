@@ -17,7 +17,7 @@ export const SearchPosts: FC<SearchPostsProps> = (props) => {
 	};
 
 	return (
-		<form onSubmit={handleSearch} className="w-full relative">
+		<form onSubmit={handleSearch} className="w-full self-end max-w-md relative">
 			<div className="absolute inset-y-0 left-0 py-1.5 flex items-center pl-3 pointer-events-none">
 				<MagnifyingGlassIcon className="size-4 fill-moving-yellow" />
 			</div>
