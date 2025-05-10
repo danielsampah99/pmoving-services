@@ -10,7 +10,7 @@ export const officeLocations: OfficeLocation[] = [
 		addressLine1: "949 Schaller Dr S",
 		addressLine2: "Maplewood, MN 55119",
 		phone: "(651) 757-5135",
-		href: "https://www.google.pl/maps/dir//949+Schaller+Dr+E,+St+Paul,+MN+55119,+USA/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x87f7d6918a982cd5:0x334bfd9525477f0d?sa=X&ved=1t:707&ictx=111", // https://g.co/kgs/twxzXo6 -- https://www.google.pl/maps/dir//949+Schaller+Dr+E,+St+Paul,+MN+55119,+USA/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x87f7d6918a982cd5:0x334bfd9525477f0d?sa=X&ved=1t:707&ictx=111
+		href: "https://www.google.com/maps/dir/5.5427477,-0.2565425/949+Schaller+Dr+S,+St+Paul,+MN+55119,+USA/@1.8438022,-132.7118139,3z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x87f7d692200ae8af:0xdf2f1f18857b6cf9!2m2!1d-93.0026043!2d44.9127795?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D", // https://g.co/kgs/twxzXo6 -- https://www.google.pl/maps/dir//949+Schaller+Dr+E,+St+Paul,+MN+55119,+USA/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x87f7d6918a982cd5:0x334bfd9525477f0d?sa=X&ved=1t:707&ictx=111
 		image: "/lakeville-office.webp",
 	},
 	{
