@@ -109,7 +109,7 @@ export default async function SingleBlogPage({ params }: Props) {
 	const blog = (
 		await payload.find({
 			collection: "blogs",
-			where: { slug: { equals: slug } },
+			where: { slug: { contains: slug } },
 			limit: 1,
 		})
 	).docs[0] as Blog;
