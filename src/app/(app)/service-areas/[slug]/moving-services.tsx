@@ -13,8 +13,6 @@ export type MovingServicesProps = Pick<ServiceArea, "movingServices"> & {
 };
 
 export const MovingServices: FC<MovingServicesProps> = (props) => {
-	console.info("Props: ", props);
-
 	return (
 		<section id="moving-services" className="bg-white py-6">
 			<div className="mx-auto text-center max-w-7xl text-base leading-7 text-moving-yellow">

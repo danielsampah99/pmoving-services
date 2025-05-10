@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 		title: "Moving Services Blogs - Tips, Tricks, and Advice",
 		description:
 			"Stay updated with the latest trends, tips, and advice in the moving industry. Our blog covers everything from packing hacks to choosing the right mover.",
-		images: [`${BASE_URL}/logo.svg`]
+		images: [`${BASE_URL}/logo.svg`],
 	},
 };
 

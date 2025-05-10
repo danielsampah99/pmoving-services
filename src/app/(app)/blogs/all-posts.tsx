@@ -12,31 +12,43 @@ export const AllPosts: FC<AllPostsProps> = ({ posts }) => {
 	const [displayedPosts, setDisplayedPosts] = useState(posts);
 
 	const handleSearch = (searchTerm: string) => {
+		const lowerCaseSearchTerm = searchTerm.toLowerCase().trim();
 
-		const lowerCaseSearchTerm = searchTerm.toLowerCase().trim()
-
-		if (lowerCaseSearchTerm === '') {
-			setDisplayedPosts(posts)
+		if (lowerCaseSearchTerm === "") {
+			setDisplayedPosts(posts);
 		} else {
 			const filteredPosts = posts.filter((post) => {
-				const titleMatch = post.title.toLowerCase().includes(lowerCaseSearchTerm)
+				const titleMatch = post.title
+					.toLowerCase()
+					.includes(lowerCaseSearchTerm);
 
-				const tagsMatch = post.tags && post.tags.some(tag => tag.toLowerCase().replaceAll('-', ' ').includes(lowerCaseSearchTerm))
+				const tagsMatch =
+					post.tags &&
+					post.tags.some((tag) =>
+						tag
+							.toLowerCase()
+							.replaceAll("-", " ")
+							.includes(lowerCaseSearchTerm),
+					);
 
-				const descriptionMatch  = post.thumbnailDescription && post.thumbnailDescription.toLowerCase().includes(lowerCaseSearchTerm)
+				const descriptionMatch =
+					post.thumbnailDescription &&
+					post.thumbnailDescription.toLowerCase().includes(lowerCaseSearchTerm);
 
-				return titleMatch || tagsMatch || descriptionMatch
-			})
+				return titleMatch || tagsMatch || descriptionMatch;
+			});
 
-			setDisplayedPosts(filteredPosts)
+			setDisplayedPosts(filteredPosts);
 		}
-	}
+	};
 
 	return (
 		<div className="flex flex-col gap-x-8 items-center justify-between">
 			{/* heading */}
 			<div className="w-full flex lg:items-center justify-between flex-col gap-y-6">
-				<h2 className='mx-auto max-w-2xl font-bold text-3xl sm:text-4xl text'>Our Moving Services Blogs</h2>
+				<h2 className="mx-auto max-w-2xl font-bold text-3xl sm:text-4xl text">
+					Our Moving Services Blogs
+				</h2>
 
 				<SearchPosts onSearch={handleSearch} />
 			</div>
@@ -50,8 +62,6 @@ export const AllPosts: FC<AllPostsProps> = ({ posts }) => {
 					<Post post={post} key={post.id} />
 				))}
 			</div>
-
-
 		</div>
 	);
 };
