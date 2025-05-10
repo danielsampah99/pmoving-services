@@ -1,7 +1,5 @@
-"use client";
-
-import { Blog } from "@/payload-types";
-import { FC } from "react";
+import type { Blog } from "@/payload-types";
+import type { FC } from "react";
 
 export type HeroProps = {
 	post: Blog;

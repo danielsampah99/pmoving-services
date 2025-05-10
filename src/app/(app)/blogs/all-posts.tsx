@@ -1,9 +1,8 @@
 "use client";
 
 import { Blog } from "@/payload-types";
-import { type FC, useCallback, useState } from "react";
+import { type FC, useState } from "react";
 import { SearchPosts } from "./search-posts";
-import { CategoryList } from "./cateogories";
 
 export type AllPostsProps = {
 	posts: Blog[];
