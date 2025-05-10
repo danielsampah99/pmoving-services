@@ -1,3 +1,6 @@
+import { getPayload } from "payload";
+import config from "@payload-config";
+
 export interface BlogPost {
 	id: number;
 	title: string;
@@ -10,6 +13,20 @@ export interface BlogPost {
 	featured: boolean;
 	readTime: number;
 }
+
+export async function getBlogs() {
+	const payload = await getPayload({ config });
+
+	const blogs = await payload.find({
+		collection: "blogs",
+		pagination: false,
+		sort: "-createdAt",
+	});
+
+	return blogs;
+}
+
+export type BlogResults = Awaited<ReturnType<typeof getBlogs>>;
 
 export const categories = [
 	{ id: "all", name: "All Posts" },

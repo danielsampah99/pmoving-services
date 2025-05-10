@@ -23,15 +23,14 @@ export const ListOfServiceAreas: FC<ListOfServiceAreasProps> = ({
 	const [searchTerm, setSearchTerm] = useState("");
 
 	const filteredCities = useMemo(() => {
-
 		if (!searchTerm) {
-			return cities
+			return cities;
 		}
 
 		return cities.filter((city) =>
-			city.city.toLowerCase().includes(searchTerm.toLowerCase())
-		)
-	}, [cities, searchTerm])
+			city.city.toLowerCase().includes(searchTerm.toLowerCase()),
+		);
+	}, [cities, searchTerm]);
 
 	return (
 		<div className="lg:col-span-1">
@@ -122,46 +121,58 @@ export const MapCitiesList: FC<MapCitiesListProps> = ({
 	);
 };
 
-
 // city list item - memoized for performance
 type CityListItemProps = {
-	city: MapCity
-	isSelected: boolean
-	isHovered: boolean
-	onSelectCity: (city: string) => void
-	onHoverCity: (city: string | null) => void
-}
+	city: MapCity;
+	isSelected: boolean;
+	isHovered: boolean;
+	onSelectCity: (city: string) => void;
+	onHoverCity: (city: string | null) => void;
+};
 
-const CityListItem: FC<CityListItemProps> = memo(({ city, isHovered, isSelected, onHoverCity, onSelectCity }) => {
+const CityListItem: FC<CityListItemProps> = memo(
+	({ city, isHovered, isSelected, onHoverCity, onSelectCity }) => {
+		const standardCity = city.city.replace(/\s+/g, "-").toLowerCase();
 
-	const standardCity = city.city.replace(/\s+/g, "-").toLowerCase()
+		const cityClasses = isSelected
+			? "bg-yellow-100 text-yellow-800 border-yellow-300 shadow-sm"
+			: isHovered
+				? "bg-yellow-50 text-yellow-700 border-yellow-200"
+				: "hover:bg-slate-50 border-transparent";
 
-	const cityClasses = isSelected ? 'bg-yellow-100 text-yellow-800 border-yellow-300 shadow-sm' : isHovered ? 'bg-yellow-50 text-yellow-700 border-yellow-200' : 'hover:bg-slate-50 border-transparent'
+		const iconClasses =
+			isHovered || isSelected ? "stroke-yellow-600" : "stroke-yellow-400";
 
-	const iconClasses =	isHovered || isSelected ? "stroke-yellow-600" : "stroke-yellow-400";
+		console.log("Rendering city list item: ", city.city, {
+			isSelected,
+			isHovered,
+		});
 
-	console.log("Rendering city list item: ", city.city, { isSelected, isHovered })
-
-	return (
-		<div
-			id={`city-${standardCity}`}
-			className={cn('px-3 py-2 rounded-md text-sm transition-all cursor-pointer border', cityClasses)}
-			onClick={() => onSelectCity(city.city)}
-			onKeyDown={(event) => (event.key === 'Enter') && onSelectCity(city.city)}
-			onMouseEnter={() => onHoverCity(city.city)}
-			onMouseLeave={() => onHoverCity(null)}
-			onFocus={() => onHoverCity(city.city)}
-			onBlur={() => onHoverCity(null)}
-			role='button'
-			tabIndex={0}
-		>
-			<div className='flex capitalize items-center'>
-				<TruckIcon className={cn('mr-1.5 size-5', iconClasses)} aria-hidden='false' />
-				{city.city}
+		return (
+			<div
+				id={`city-${standardCity}`}
+				className={cn(
+					"px-3 py-2 rounded-md text-sm transition-all cursor-pointer border",
+					cityClasses,
+				)}
+				onClick={() => onSelectCity(city.city)}
+				onKeyDown={(event) => event.key === "Enter" && onSelectCity(city.city)}
+				onMouseEnter={() => onHoverCity(city.city)}
+				onMouseLeave={() => onHoverCity(null)}
+				onFocus={() => onHoverCity(city.city)}
+				onBlur={() => onHoverCity(null)}
+				role="button"
+				tabIndex={0}
+			>
+				<div className="flex capitalize items-center">
+					<TruckIcon
+						className={cn("mr-1.5 size-5", iconClasses)}
+						aria-hidden="false"
+					/>
+					{city.city}
+				</div>
 			</div>
-
-		</div>
-	)
-
-})
-CityListItem.displayName = 'CityListItem' // for debugging
+		);
+	},
+);
+CityListItem.displayName = "CityListItem"; // for debugging

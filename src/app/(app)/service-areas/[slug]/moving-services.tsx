@@ -94,7 +94,12 @@ export const MovingServiceWithImage: FC<MovingServiceWithImageProps> = (
 						className="max-w-3xl w-full object-contain"
 					/>
 				</div>
-				<div className={cn(props.index % 2 === 0 ? 'lg:order-last' : 'lg:order-first', "max-w-3xl lg:col-span-1 order-last text-base leading-7 text-gray-700")}>
+				<div
+					className={cn(
+						props.index % 2 === 0 ? "lg:order-last" : "lg:order-first",
+						"max-w-3xl lg:col-span-1 order-last text-base leading-7 text-gray-700",
+					)}
+				>
 					<RichText
 						data={props.content}
 						className="[&_p]:xl:text-justify [&_p]:text-pretty [&_a]:text-yellow-500 [&_a]:hover:underline [&_a]:transition-colors duration-300 delay-100"

@@ -44,7 +44,7 @@ const HeroSection = () => {
 					</Link>
 
 					<Link
-						href="/blog"
+						href="/blogs"
 						className="inline-flex max-sm:w-full items-center justify-center gap-x-1 border border-white px-6 py-3 text-lg font-semibold hover:bg-white hover:text-moving-yellow transition"
 						// className="group max-md:w-full bg-background inline-flex items-center justify-center gap-x-1 px-6 py-3 text-lg font-semibold hover:bg-white hover:text-background transition"
 					>

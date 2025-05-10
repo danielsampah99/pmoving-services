@@ -40,7 +40,7 @@ export const navigation = {
 		{ name: "About", href: "/#about-us" },
 		{ name: "Contact Us", href: "/contact-us" },
 		{ name: "Affiliates", href: "/affiliates" },
-		{ name: "Blog", href: "/blog" },
+		{ name: "Blog", href: "/blogs" },
 		{ name: "FAQs", href: "/#faqs" },
 		{ name: "HTML Sitemap", href: "#" },
 		{ name: "Referral Program", href: "#" },

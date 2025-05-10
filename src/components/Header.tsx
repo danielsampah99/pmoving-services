@@ -1,8 +1,7 @@
 import type { FC } from "react";
-import { PopoverGroup, Button } from "@headlessui/react";
+import { PopoverGroup } from "@headlessui/react";
 import { Services } from "./Services";
 import Link from "next/link";
-import { SunIcon } from "@heroicons/react/24/solid";
 import { MobileSidebar } from "./MobileSidebar";
 import { getServiceAreas } from "@/data/service-areas";
 import { ServiceArea } from "./ServiceAreas";
@@ -32,7 +31,7 @@ export const Header: FC = async () => {
 				<PopoverGroup className="hidden z-[100] lg:flex lg:gap-x-12">
 					<Services />
 					<ServiceArea links={areas.docs} />
-					<Link href="/blog" className="text-sm/6 font-semibold text-white">
+					<Link href="/blogs" className="text-sm/6 font-semibold text-white">
 						Blog
 					</Link>
 					<Link href="/careers" className="text-sm/6 font-semibold text-white">
