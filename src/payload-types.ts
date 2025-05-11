@@ -71,6 +71,7 @@ export interface Config {
     media: Media;
     'service-areas': ServiceArea;
     blogs: Blog;
+    gallery: Gallery;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -81,6 +82,7 @@ export interface Config {
     media: MediaSelect<false> | MediaSelect<true>;
     'service-areas': ServiceAreasSelect<false> | ServiceAreasSelect<true>;
     blogs: BlogsSelect<false> | BlogsSelect<true>;
+    gallery: GallerySelect<false> | GallerySelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -324,6 +326,41 @@ export interface Blog {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "gallery".
+ */
+export interface Gallery {
+  id: number;
+  categories: (
+    | 'moving-crew'
+    | 'moving-projects'
+    | 'residential'
+    | 'commercial'
+    | 'long-distance'
+    | 'local'
+    | 'storage'
+    | 'international'
+  )[];
+  /**
+   * The image that will be displayed in the mansory photo grid
+   */
+  Photo: number | Media;
+  /**
+   * The given title will be displayed on the gallery page as a field to categorize images in addition to the categories field
+   */
+  title: string;
+  /**
+   * Optional: A brief description of the image. This can be used for alt text or captions.
+   */
+  imageDescription?: string | null;
+  /**
+   * Select to highlight this image as a company favorite in the gallery. 'Our Pick' images may be given special prominence to showcase exceptional work, key services, or customer successes.
+   */
+  ourPick?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -344,6 +381,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'blogs';
         value: number | Blog;
+      } | null)
+    | ({
+        relationTo: 'gallery';
+        value: number | Gallery;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -507,6 +548,19 @@ export interface BlogsSelect<T extends boolean = true> {
   thumbnail?: T;
   readingTime?: T;
   thumbnailDescription?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "gallery_select".
+ */
+export interface GallerySelect<T extends boolean = true> {
+  categories?: T;
+  Photo?: T;
+  title?: T;
+  imageDescription?: T;
+  ourPick?: T;
   updatedAt?: T;
   createdAt?: T;
 }
