@@ -15,6 +15,7 @@ import { Users } from "./collections/Users";
 import { Media } from "./collections/Media";
 import { ServiceArea } from "./collections/ServiceAreas";
 import { Blogs } from "./collections/Blogs";
+import { Gallery } from "./collections/Gallery";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -26,7 +27,7 @@ export default buildConfig({
 			baseDir: path.resolve(dirname),
 		},
 	},
-	collections: [Users, Media, ServiceArea, Blogs],
+	collections: [Users, Media, ServiceArea, Blogs, Gallery],
 	editor: lexicalEditor({
 		features: ({ defaultFeatures }) => [
 			...defaultFeatures,
