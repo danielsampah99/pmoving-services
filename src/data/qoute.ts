@@ -4,6 +4,101 @@ export type DataForForm = {
 	value: string;
 };
 
+export const moveSizes = [
+	{
+		id: "ebaedb37-d27f-4776-9b64-b206010217f8",
+		name: "Office Building ",
+	},
+	{
+		id: "0002254a-fde6-42ec-acd2-afdd0133939a",
+		name: "Office - 1300 cubic feet",
+	},
+	{
+		id: "fc6f94df-aecd-4b2a-8c96-afdd0133c6ec",
+		name: "Office",
+	},
+	{
+		id: "8533cd77-a1e9-4cf4-9f85-ad0100fc1f31",
+		name: "Room or Less",
+	},
+	{
+		id: "f6d5237a-c1ff-425c-870e-ad0100fc1f31",
+		name: "Studio Apartment",
+	},
+	{
+		id: "cbbd0629-0431-44f1-9d22-ad0100fc1f31",
+		name: "2 Bedroom Apartment",
+	},
+	{
+		id: "a0e9ddd4-0e8c-4c4e-88b0-ad0100fc1f31",
+		name: "1 Bedroom Apartment",
+	},
+	{
+		id: "7568f024-3cab-4c6d-abdc-ad0100fc1f31",
+		name: "1 Bedroom House (Large)",
+	},
+	{
+		id: "7ba72043-8cc7-40e2-ad0c-ad0100fc1f31",
+		name: "3 Bedroom Apartment",
+	},
+	{
+		id: "32d59ca1-da6a-4da3-b3ba-ad0100fc1f31",
+		name: "1 Bedroom House",
+	},
+	{
+		id: "71352282-70b5-430c-919d-ad0100fc1f31",
+		name: "2 Bedroom House",
+	},
+	{
+		id: "f11552e9-ca31-4fdf-93c2-ad0100fc1f31",
+		name: "2 Bedroom House (Large)",
+	},
+	{
+		id: "48e9df96-a752-4b9b-92b1-ad0100fc1f31",
+		name: "3 Bedroom House (Large)",
+	},
+	{
+		id: "2d655a74-6606-4a02-98b6-ad0100fc1f31",
+		name: "3 Bedroom House",
+	},
+	{
+		id: "7bcb8826-6991-4a5a-97d7-ad0100fc1f31",
+		name: "4 Bedroom House",
+	},
+	{
+		id: "49be10ea-4d3e-4580-b58a-ad0100fc1f31",
+		name: "4 Bedroom House (Large)",
+	},
+	{
+		id: "06193d7d-7354-4f99-9ce2-ad0100fc1f31",
+		name: "5 Bedroom House (Large)",
+	},
+	{
+		id: "3c36175f-197d-4b84-bafd-ad0100fc1f31",
+		name: "5 Bedroom House",
+	},
+	{
+		id: "4c6b9c84-f46c-4ec8-b322-ad0100fc1f31",
+		name: "5 x 10 Storage Unit",
+	},
+	{
+		id: "e783eae9-0cb6-428b-91e2-ad0100fc1f31",
+		name: "5 x 15 Storage Unit",
+	},
+	{
+		id: "caeb1904-e63d-4538-a2dd-ad0100fc1f31",
+		name: "10 x 10 Storage Unit",
+	},
+	{
+		id: "5c333b4f-e5ab-4299-b698-ad0100fc1f31",
+		name: "10 x 15 Storage Unit",
+	},
+	{
+		id: "d09efa6a-dadf-4fad-b08b-ad0100fc1f31",
+		name: "10 x 20 Storage Unit",
+	},
+];
+
 export const adverts: DataForForm[] = [
 	{ id: 1, name: "Bellhop", value: "Bellhop" },
 	{ id: 2, name: "Emove/U-Haul", value: "Emove/U-Haul" },
@@ -29,6 +124,117 @@ export const adverts: DataForForm[] = [
 	{ id: 22, name: "Social Media", value: "Social Media" },
 	{ id: 23, name: "Thumbtack", value: "Thumbtack" },
 	{ id: 24, name: "Word of Mouth", value: "Word of Mouth" },
+];
+
+export const referralSources = [
+	{
+		id: "137e127c-1d1d-49f5-8572-aeed0152bb49",
+		name: "Bellhop",
+	},
+	{
+		id: "b81529f9-e7e9-4b28-af6e-ae820130d5cd",
+		name: "Emove/U-Haul ",
+	},
+	{
+		id: "5006849f-26f3-4139-a2a8-ad0300eff124",
+		name: "Employee Referral ",
+	},
+	{
+		id: "51be39c3-8ca0-451a-b76c-af35012ac806",
+		name: "Equate Media Live Call",
+	},
+	{
+		id: "8415a605-53d5-405d-8f21-ad0100fc1f22",
+		name: "Google",
+	},
+	{
+		id: "66304d6a-0953-4454-b0f7-ae37000c8c79",
+		name: "Google Ad",
+	},
+	{
+		id: "8b42ef06-d600-4e22-8c7d-ae8a0141c720",
+		name: "Google Local Ad",
+	},
+	{
+		id: "3d1f58b5-3058-4716-a99f-ae4e01137dc4",
+		name: "Groupon",
+	},
+	{
+		id: "02158dd3-92b0-43fc-9a03-ae4e0113a2dc",
+		name: "Groupon",
+	},
+	{
+		id: "44f9744d-b87f-4e74-9a53-ae45013b1650",
+		name: "HIREAHELPER",
+	},
+	{
+		id: "d452a43f-4cdd-4d40-9bf3-adf9015f95d4",
+		name: "iMoving",
+	},
+	{
+		id: "232073de-7710-46f6-9c04-afa20132ff33",
+		name: "Mac-V",
+	},
+	{
+		id: "b05cefb5-acb9-4e44-8bc2-adc60025f903",
+		name: "Mailer",
+	},
+	{
+		id: "73ba9074-fdef-49f3-8b9c-aec4002bb99a",
+		name: "Moves for Seniors",
+	},
+	{
+		id: "dc60ead4-abcd-4b61-a3af-b16a014bf0ed",
+		name: "MovingLabor.com",
+	},
+	{
+		id: "686d06a8-964b-40dd-b10d-aec400270852",
+		name: "Movingstaffers ",
+	},
+	{
+		id: "64aa151a-ed5f-4204-9601-b16a014c0f9d",
+		name: "Nobel Relo",
+	},
+	{
+		id: "307c30da-cb67-4df7-b1da-ad0100fc1f22",
+		name: "Other",
+	},
+	{
+		id: "7f00d07a-92b4-4dd2-922f-ae46017c3449",
+		name: "Phoenix Corporation ",
+	},
+	{
+		id: "65f0ac96-4fde-403d-9def-ad0300efa8ab",
+		name: "Realtor ",
+	},
+	{
+		id: "35de6750-fb28-4685-9095-ad0300efd574",
+		name: "Repeat Customer",
+	},
+	{
+		id: "2add2196-fc76-47de-82a8-aec40026fd46",
+		name: "Simple Moving Labor",
+	},
+	{
+		id: "2b37cdf6-c5e0-4c3f-a059-ad0100fc1f22",
+		name: "Social Media",
+	},
+	{
+		id: "599fdbb1-effe-421b-bb46-ad61011df3b1",
+		name: "Thumbtack",
+	},
+	{
+		id: "c95051c4-f8cb-4ecd-a727-ad0100fc1f22",
+		name: "Word of Mouth",
+	},
+];
+
+export const stairs = [
+	{ id: 0, value: 0 },
+	{ id: 1, value: 1 },
+	{ id: 2, value: 2 },
+	{ id: 3, value: 3 },
+	{ id: 4, value: 4 },
 ];
 
 export const moveSizeOptions: DataForForm[] = [

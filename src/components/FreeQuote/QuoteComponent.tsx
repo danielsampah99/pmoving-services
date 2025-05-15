@@ -15,6 +15,7 @@ import React, { Suspense } from "react";
 import { reviews } from "@/data/reviews";
 import { adverts, moveSizeOptions } from "@/data/qoute";
 import { ReviewWrapper } from "./review-carousel";
+import { FreeQuoteForm } from "./quote-form";
 
 export const QuoteComponent = () => {
 	return (
@@ -40,7 +41,7 @@ export const QuoteComponent = () => {
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 					{/* Form */}
 					<Suspense>
-						<QuoteForm />
+						<FreeQuoteForm />
 					</Suspense>
 
 					{/* Image */}
@@ -64,22 +65,6 @@ export const QuoteForm = () => {
 		<form className="bg-white max-sm:px-0 px-8 rounded-lg shadow-elevation-3">
 			<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 				{/* Full Name */}
-				<Field className="sm:col-span-2">
-					<Label
-						htmlFor="fullName"
-						className="block text-sm font-medium text-gray-700"
-					>
-						Full Name
-					</Label>
-					<Input
-						type="text"
-						id="fullName"
-						name="fullName"
-						autoComplete="name"
-						className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:ring-primary focus:border-primary"
-						placeholder="Full Name"
-					/>
-				</Field>
 
 				{/* Email */}
 				<Field className="sm:col-span-2">
