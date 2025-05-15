@@ -3,6 +3,9 @@ import type { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+//
+// https://www.google.com/maps/dir/5.5511752,-0.2526174/2514+Plymouth+Ave+N,+Minneapolis,+MN+55411,+USA/@1.8467867,-132.8663059,3z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x52b333a87d602d8f:0xa6dc41e3800dfcf6!2m2!1d-93.3127048!2d44.9917309?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D
+
 export const officeLocations: OfficeLocation[] = [
 	{
 		id: "maplewood",
@@ -10,7 +13,7 @@ export const officeLocations: OfficeLocation[] = [
 		addressLine1: "949 Schaller Dr S",
 		addressLine2: "Maplewood, MN 55119",
 		phone: "(651) 757-5135",
-		href: "https://www.google.com/maps/dir/5.5427477,-0.2565425/949+Schaller+Dr+S,+St+Paul,+MN+55119,+USA/@1.8438022,-132.7118139,3z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x87f7d692200ae8af:0xdf2f1f18857b6cf9!2m2!1d-93.0026043!2d44.9127795?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D", // https://g.co/kgs/twxzXo6 -- https://www.google.pl/maps/dir//949+Schaller+Dr+E,+St+Paul,+MN+55119,+USA/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x87f7d6918a982cd5:0x334bfd9525477f0d?sa=X&ved=1t:707&ictx=111
+		href: "https://www.google.com/maps/dir/?api=1&destination=2514+Plymouth+Ave+N,Minneapolis,MN,55411",
 		image: "/lakeville-office.webp",
 	},
 	{
@@ -37,7 +40,7 @@ export const officeLocations: OfficeLocation[] = [
 		addressLine1: "829 3rd Ave SE",
 		addressLine2: "285 Rochester, MN 55904",
 		phone: "(651) 757-5135",
-		href: "https://www.google.com/maps/dir/5.5427477,-0.2565425/829+3rd+Ave+SE+%23285,+Rochester,+MN+55904,+USA/@23.2660441,-67.9832114,4z/data=!3m1!4b1!4m10!4m9!1m1!4e1!1m5!1m1!1s0x87f9e1df85072423:0x1850e38d2d959119!2m2!1d-92.4599426!2d44.0144703!3e0?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D",
+		href: "https://www.google.com/maps/dir/?api=1&destination=829+3rd+Ave+SE,Rochester,MN,55904",
 		image: "/rochester-office.webp",
 	},
 ];
