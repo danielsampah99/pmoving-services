@@ -2,7 +2,7 @@ import { ServiceLayout } from "@/components/ServiceLayout";
 import { OurLocations } from "@/components/OurLocations";
 
 import { specialtyMovingServices } from "@/data/services";
-
+import { ServicesSection } from "@/components/ServicesSection";
 import { RelatedLocalMoving } from "../local-moving/residential-movers/related-services";
 import { RequestQuote } from "../local-moving/residential-movers/request-quote";
 import { pianoMovingFAQs } from "@/data/moving-tips";
@@ -113,6 +113,7 @@ const PianoMovingPage = () => {
 			<RelatedLocalMoving services={specialtyMovingServices} />
 			<RequestQuote />
 			<FAQs faqs={pianoMovingFAQs} />
+			<ServicesSection />
 			<OurLocations />
 		</ServiceLayout>
 	);

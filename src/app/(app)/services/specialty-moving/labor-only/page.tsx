@@ -7,6 +7,7 @@ import { FAQs } from "../../local-moving/residential-movers/faq";
 import { RelatedLocalMoving } from "../../local-moving/residential-movers/related-services";
 import { laborOnlyFAQs } from "@/data/moving-tips";
 import { specialtyMovingServices } from "@/data/services";
+import { ServicesSection } from "@/components/ServicesSection";
 
 const LaborOnlyMovingPage = () => {
 	return (
@@ -112,6 +113,7 @@ const LaborOnlyMovingPage = () => {
 				<RelatedLocalMoving services={specialtyMovingServices} />
 				<RequestQuote />
 				<FAQs faqs={laborOnlyFAQs} />
+				<ServicesSection />
 				<OurLocations />
 			</ServiceLayout>
 		</div>

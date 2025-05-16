@@ -8,6 +8,7 @@ import { OurLocations } from "@/components/OurLocations";
 import { RequestQuote } from "../local-moving/residential-movers/request-quote";
 import { Info } from "lucide-react";
 import { FAQs } from "../local-moving/residential-movers/faq";
+import { ServicesSection } from "@/components/ServicesSection";
 
 const LogisticsServicePage = () => {
 	return (
@@ -107,6 +108,7 @@ const LogisticsServicePage = () => {
 			<RelatedServices services={commercialMovingServices} />
 			<RequestQuote />
 			<FAQs faqs={logisticsFAQs} />
+			<ServicesSection />
 			<OurLocations />
 		</ServiceLayout>
 	);

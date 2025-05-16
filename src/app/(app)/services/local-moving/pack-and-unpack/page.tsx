@@ -6,6 +6,7 @@ import { frequentQuestions } from "@/data/moving-tips";
 import { RequestQuote } from "../residential-movers/request-quote";
 import { RelatedLocalMoving } from "../residential-movers/related-services";
 import { localMovingServices } from "@/data/services";
+import { ServicesSection } from "@/components/ServicesSection";
 import { OurLocations } from "@/components/OurLocations";
 
 const PackAndUnpack = () => {
@@ -114,6 +115,7 @@ const PackAndUnpack = () => {
 			<FAQs faqs={frequentQuestions} />
 			<RequestQuote />
 			<RelatedLocalMoving services={localMovingServices} />
+			<ServicesSection />
 			<OurLocations />
 		</ServiceLayout>
 	);

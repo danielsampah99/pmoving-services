@@ -6,6 +6,7 @@ import { longDistanceQuestions } from "@/data/moving-tips";
 import { RequestQuote } from "@/app/(app)/services/local-moving/residential-movers/request-quote";
 import { RelatedMovingServices } from "./related-services";
 import { longDistanceMovingServices } from "@/data/services";
+import { ServicesSection } from "@/components/ServicesSection";
 
 const LongDistanceMovingPage = () => {
 	return (
@@ -19,6 +20,7 @@ const LongDistanceMovingPage = () => {
 			<RelatedMovingServices services={longDistanceMovingServices} />
 			<RequestQuote />
 			<FAQs faqs={longDistanceQuestions} />
+			<ServicesSection />
 			<OurLocations />
 		</div>
 	);

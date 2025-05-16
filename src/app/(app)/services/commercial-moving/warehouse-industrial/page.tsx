@@ -6,6 +6,7 @@ import { RequestQuote } from "../../local-moving/residential-movers/request-quot
 import { RelatedServices } from "../related-services";
 import { commercialMovingServices } from "@/data/services";
 import { OurLocations } from "@/components/OurLocations";
+import { ServicesSection } from "@/components/ServicesSection";
 
 const WarehouseIndustrialPage = () => {
 	return (
@@ -89,6 +90,7 @@ const WarehouseIndustrialPage = () => {
 			{/* Rest of existing components preserved */}
 			<RelatedServices services={commercialMovingServices} />
 			<FAQs faqs={frequentQuestions} />
+			<ServicesSection />
 			<OurLocations />
 		</div>
 	);

@@ -7,6 +7,7 @@ import { RelatedLocalMoving } from "../residential-movers/related-services";
 import { OurLocations } from "@/components/OurLocations";
 import { frequentQuestions } from "@/data/moving-tips";
 import { localMovingServices } from "@/data/services";
+import { ServicesSection } from "@/components/ServicesSection";
 
 const HOAMovers = () => {
 	return (
@@ -111,6 +112,7 @@ const HOAMovers = () => {
 			<FAQs faqs={frequentQuestions} />
 			<RequestQuote />
 			<RelatedLocalMoving services={localMovingServices} />
+			<ServicesSection />
 			<OurLocations />
 		</ServiceLayout>
 	);

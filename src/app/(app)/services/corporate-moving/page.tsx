@@ -1,5 +1,8 @@
 import { ServiceLayout } from "@/components/ServiceLayout";
 import { Info } from "lucide-react";
+import { ServicesSection } from "@/components/ServicesSection";
+import { OurLocations } from "@/components/OurLocations";
+import { RequestQuote } from "../local-moving/residential-movers/request-quote";
 
 const CorporateMoving = () => {
 	return (
@@ -122,6 +125,9 @@ const CorporateMoving = () => {
 					</div>
 				</div>
 			</div>
+			<RequestQuote />
+			<ServicesSection />
+			<OurLocations />
 		</ServiceLayout>
 	);
 };
