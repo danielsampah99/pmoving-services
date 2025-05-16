@@ -13,7 +13,7 @@ export const officeLocations: OfficeLocation[] = [
 		addressLine1: "949 Schaller Dr S",
 		addressLine2: "Maplewood, MN 55119",
 		phone: "(651) 757-5135",
-		href: "https://www.google.com/maps/dir/?api=1&destination=2514+Plymouth+Ave+N,Minneapolis,MN,55411",
+		href: "https://www.google.com/maps/dir/?api=1&destination=949+Schaller+Dr+S,Maplewood,MN,55119",
 		image: "/lakeville-office.webp",
 	},
 	{
