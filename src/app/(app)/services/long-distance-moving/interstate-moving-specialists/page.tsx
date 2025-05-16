@@ -7,6 +7,7 @@ import { RequestQuote } from "../../local-moving/residential-movers/request-quot
 import { RelatedMovingServices } from "../related-services";
 import { longDistanceMovingServices } from "@/data/services";
 import { ServiceLayout } from "@/components/ServiceLayout";
+import { ServicesSection } from "@/components/ServicesSection";
 
 const InterstateMovingSpecialistsPage = () => {
 	return (
@@ -46,6 +47,7 @@ const InterstateMovingSpecialistsPage = () => {
 			<RelatedMovingServices services={longDistanceMovingServices} />
 			<RequestQuote />
 			<FAQs faqs={longDistanceQuestions} />
+			<ServicesSection />
 			<OurLocations />
 		</div>
 	);

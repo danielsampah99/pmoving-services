@@ -3,7 +3,7 @@ import { OurLocations } from "@/components/OurLocations";
 import { RequestQuote } from "../local-moving/residential-movers/request-quote";
 import { FAQs } from "../local-moving/residential-movers/faq";
 import { RelatedLocalMoving } from "../local-moving/residential-movers/related-services";
-
+import { ServicesSection } from "@/components/ServicesSection";
 import { specialtyMovingServices } from "@/data/services";
 import { specialtyMovingFAQs } from "@/data/moving-tips";
 
@@ -95,6 +95,7 @@ const SpecialtyMovingPage = () => {
 			<RelatedLocalMoving services={specialtyMovingServices} />
 			<RequestQuote />
 			<FAQs faqs={specialtyMovingFAQs} />
+			<ServicesSection />
 			<OurLocations />
 		</ServiceLayout>
 	);

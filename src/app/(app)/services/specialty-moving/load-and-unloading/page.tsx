@@ -7,6 +7,7 @@ import { FAQs } from "../../local-moving/residential-movers/faq";
 import { RelatedLocalMoving } from "../../local-moving/residential-movers/related-services";
 import { loadingUnloadingFAQs } from "@/data/moving-tips";
 import { specialtyMovingServices } from "@/data/services";
+import { ServicesSection } from "@/components/ServicesSection";
 
 const LoadAndUnloadingPage = () => {
 	return (
@@ -93,6 +94,7 @@ const LoadAndUnloadingPage = () => {
 				<RelatedLocalMoving services={specialtyMovingServices} />
 				<RequestQuote />
 				<FAQs faqs={loadingUnloadingFAQs} />
+				<ServicesSection />
 				<OurLocations />
 			</ServiceLayout>
 		</div>

@@ -6,6 +6,7 @@ import { frequentQuestions } from "@/data/moving-tips";
 import { RequestQuote } from "../../local-moving/residential-movers/request-quote";
 import { RelatedServices } from "../related-services";
 import { commercialMovingServices } from "@/data/services";
+import { ServicesSection } from "@/components/ServicesSection";
 
 const CorporateRelocation = () => {
 	return (
@@ -106,6 +107,7 @@ const CorporateRelocation = () => {
 			<RelatedServices services={commercialMovingServices} />
 			<RequestQuote />
 			<FAQs faqs={frequentQuestions} />
+			<ServicesSection />
 			<OurLocations />
 		</ServiceLayout>
 	);

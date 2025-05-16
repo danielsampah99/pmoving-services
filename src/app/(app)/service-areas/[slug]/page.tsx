@@ -9,6 +9,8 @@ import type { ServiceArea } from "@/payload-types";
 import { BASE_URL, COMPANY } from "@/utils";
 import { MovingTips } from "./moving-tips";
 import { MovingServices } from "./moving-services";
+import { ServicesSection } from "@/components/ServicesSection";
+import { RequestQuote } from "../../services/local-moving/residential-movers/request-quote";
 
 type Props = {
 	params: Promise<{ slug: string }>;
@@ -143,10 +145,12 @@ export default async function SingleServiceAreaPage({ params }: Props) {
 					/>
 				)}
 			<Faqs faqs={serviceArea.faqs ?? []} title={serviceArea.title} />
+			<RequestQuote />
 			<MovingResources
 				title={serviceArea.title}
 				resources={serviceArea?.resources ?? []}
 			/>
+			<ServicesSection />
 			<OurLocations />
 		</section>
 	);

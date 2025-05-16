@@ -1,6 +1,7 @@
 import StorageContent from "@/components/StorageContent";
 import { RequestQuote } from "../local-moving/residential-movers/request-quote";
 import { OurLocations } from "@/components/OurLocations";
+import { ServicesSection } from "@/components/ServicesSection";
 import { FAQs } from "../local-moving/residential-movers/faq";
 import { storageFaqs } from "@/data/moving-tips";
 
@@ -46,6 +47,7 @@ export default function StorageServices() {
 			<StorageContent />
 			<RequestQuote />
 			<FAQs faqs={storageFaqs} />
+			<ServicesSection />
 			<OurLocations />
 		</>
 	);
