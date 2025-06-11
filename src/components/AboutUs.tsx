@@ -20,42 +20,42 @@ export const movingCrewImages: AboutImages[] = [
 	// 	alt: "movers Minneapolis",
 	// },
 	{
-		src: "https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Deshun+and+Drake+c-640w.jpg",
+		src: "/api/media/file/Deshun%20and%20Drake.webp",
 		alt: "loading up box truck",
 	},
 	{
-		src: "https://media.discordapp.net/attachments/1340405353493434453/1354258334718365806/Drake_and_Deshun.jpg?ex=67e4a2db&is=67e3515b&hm=dba1c47531932fa2d8312866c335457dd0a9983accdf32335bfb0ac921335f9f&=&format=webp&width=837&height=840",
+		src: "/api/media/file/Drake-and-Deshun-indoor-loading.webp",
 		alt: "Drake and Deshun",
 	},
 	{
-		src: "https://media.discordapp.net/attachments/1340405353493434453/1354258334340874261/Deshun_on_liftgate_with_two_wrapped_nightstandsc.jpg?ex=67e4a2db&is=67e3515b&hm=49b433eea7267c58e74b2ca5188ac4c307c6622dc8991088b36c7b656c4e9766&=&format=webp&width=560&height=840",
+		src: "/api/media/file/Deshun%20on%20liftgate%20with%20two%20wrapped%20nightstands.webp",
 		alt: "Deshun_on_liftgate_with_two_wrapped_nightstands",
 	},
 	{
-		src: "https://media.discordapp.net/attachments/1340405353493434453/1354259033271304352/Drake_disassembling_table_winter_2022.jpg?ex=67e4a382&is=67e35202&hm=f557e30fb1e53c2d8d5b1e754a4d6c26ec2a84bd76c18fefa967650b9a295cf4&=&format=webp&width=1178&height=785",
+		src: "/api/media/file/drake-disassembling-table-winter-2022.webp",
 		alt: "Drake_disassembling_table_winter_2022",
 	},
 ];
 
 export const movingProjectsImages: AboutImages[] = [
 	{
-		src: "https://media.discordapp.net/attachments/1340405353493434453/1354260876227510513/IMG_2600.jpg?ex=67e4a539&is=67e353b9&hm=d73d69454ecab071d17ebe7691442b09159d4212f1a845d5854d893118f05bf3&=&format=webp&width=629&height=840",
+		src: "/api/media/file/packaing%20service.webp",
 		alt: "Loading unto a truck",
 	},
 	{
-		src: "https://media.discordapp.net/attachments/1340405353493434453/1354260877238341652/IMG_1169.jpg?ex=67e4a53a&is=67e353ba&hm=78efa0d80d89dbb97d9d4582ee3140d030bb08cbca76c21d4388aa80254ded70&=&format=webp&width=1516&height=840",
+		src: "/api/media/file/moving-safes.webp",
 		alt: "Moving safes",
 	},
 	{
-		src: "https://media.discordapp.net/attachments/1340405353493434453/1354260878027133070/IMG_0223.jpg?ex=67e4a53a&is=67e353ba&hm=6767314cc1f474abc66937604d52dd7c8cd95af14c2210c63a38e8a5db14eedc&=&format=webp&width=629&height=840",
+		src: "/api/media/file/specialty-moving-statues.webp",
 		alt: "Moving statues",
 	},
 	{
-		src: "https://media.discordapp.net/attachments/1340405353493434453/1354260879109263400/IMG_2884.jpg?ex=67e4a53a&is=67e353ba&hm=2517b2328418c1dd1664b19f3f1ed12fa6b5f3299a619e7cf5d95b24162a2665&=&format=webp&width=629&height=840",
+		src: "/api/media/file/staff-moving-a-safe.webp",
 		alt: "Staff moving a safe",
 	},
 	{
-		src: "https://media.discordapp.net/attachments/1340405353493434453/1354260879574827058/IMG_1447.jpg?ex=67e4a53a&is=67e353ba&hm=1e4b83ac268f4059560927ddfee323e9156ef82377fe4d1ae645d16f652755a0&=&format=webp&width=629&height=840",
+		src: "/api/media/file/moving-in-a-home.webp",
 		alt: "Moving in a home",
 	},
 	{
@@ -218,7 +218,7 @@ export const AboutUs: FC = () => {
 								<Image
 									alt={"Drake_and_Deshun"}
 									src={
-										"https://media.discordapp.net/attachments/1340405353493434453/1354356820654690335/Drake_and_Deshun.jpg?ex=67e4fe94&is=67e3ad14&hm=9f5a25c137c080bb3559fb004e99cf300b77d7c40e3a7849d7c7188ade5bf895&=&format=webp&width=949&height=953"
+										"/api/media/file/truck.webp"
 									}
 									className="block size-full object-cover"
 									width={715}
@@ -241,7 +241,7 @@ export const AboutUs: FC = () => {
 								<Image
 									alt={"Moving Projects"}
 									src={
-										"https://media.discordapp.net/attachments/1340405353493434453/1354357176453562460/IMG_2600.jpg?ex=67e4fee9&is=67e3ad69&hm=92e1a23a7a28c4f8ca2f55c94c5dcd38b9d33b1ef22c2f63c8a8fbd48c6cd596&=&format=webp&width=715&height=953"
+										"/api/media/file/packaing service-400x300.webp"
 									}
 									className="block size-full object-cover"
 									width={715}
