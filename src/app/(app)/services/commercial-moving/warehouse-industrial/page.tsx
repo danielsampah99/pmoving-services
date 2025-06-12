@@ -12,7 +12,7 @@ const WarehouseIndustrialPage = () => {
 	return (
 		<div>
 			<ServiceLayout
-				image="/residential-moving.webp"
+				image="/api/media/file/industrial-moving.webp"
 				title="Warehouse & Industrial Moving"
 				desc="Professional warehouse relocation and industrial equipment moving services"
 			>

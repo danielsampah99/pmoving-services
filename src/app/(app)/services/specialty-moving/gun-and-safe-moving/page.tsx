@@ -12,7 +12,7 @@ import { ServicesSection } from "@/components/ServicesSection";
 const GunAndSafeMovingPage = () => {
 	return (
 		<ServiceLayout
-			image="/residential-moving.webp"
+			image="/api/media/file/gun-safe.webp"
 			title="Gun & Safe Moving Services"
 			desc="Professional and secure transportation for your firearms and safes with specialized equipment and trained experts."
 		>

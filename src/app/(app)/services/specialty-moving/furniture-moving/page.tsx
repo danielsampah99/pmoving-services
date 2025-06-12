@@ -10,7 +10,7 @@ import { ServicesSection } from "@/components/ServicesSection";
 const FurnitureMovingPage = () => {
 	return (
 		<ServiceLayout
-			image="/residential-moving.webp"
+			image="/api/media/file/Deshun%20and%20I.jpg"
 			title="Professional Furniture Moving Services"
 			desc="Expert furniture moving services with careful handling and protection. Our skilled team ensures your furniture arrives safely at its destination."
 		>

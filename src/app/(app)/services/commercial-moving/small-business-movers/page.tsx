@@ -11,7 +11,7 @@ import { ServicesSection } from "@/components/ServicesSection";
 const SmallBusinessMovers = () => {
 	return (
 		<ServiceLayout
-			image="/residential-moving.webp"
+			image="/api/media/file/small-business-relocation.webp"
 			title="Small Business Moving Services"
 			desc="Reliable and efficient moving solutions tailored for small businesses"
 		>

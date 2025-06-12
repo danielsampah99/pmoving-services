@@ -12,7 +12,7 @@ import { OurLocations } from "@/components/OurLocations";
 const PackAndUnpack = () => {
 	return (
 		<ServiceLayout
-			image="/packing-services.webp"
+			image="/api/media/file/packing-supplies.webp"
 			title="Professional Packing & Unpacking Services"
 			desc="Let our expert team handle the tedious task of packing and unpacking your belongings with care and precision."
 		>
