@@ -13,7 +13,7 @@ const LoadAndUnloadingPage = () => {
 	return (
 		<div>
 			<ServiceLayout
-				image="/residential-moving.webp"
+				image="/api/media/file/Drake-and-Deshun-indoor-loading.webp"
 				title="Load and Unloading Services"
 				desc="Professional loading and unloading services for your moving needs"
 			>

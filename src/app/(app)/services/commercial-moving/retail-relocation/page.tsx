@@ -11,7 +11,7 @@ import { ServicesSection } from "@/components/ServicesSection";
 const RetailRelocation = () => {
 	return (
 		<ServiceLayout
-			image="/corporate-moving.webp"
+			image="/api/media/file/retail-relocation.webp"
 			title="Retail Relocation Services"
 			desc="Professional retail relocation solutions ensuring seamless transitions for retail businesses."
 		>

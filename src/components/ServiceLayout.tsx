@@ -26,13 +26,15 @@ export const ServiceLayout: FC<ServiceLayoutProps> = ({
 				transition={{ duration: 0.8, ease: "easeOut" }}
 				className="relative w-full max-w-8xl mx-auto px-4 py-4"
 			>
-				<div className="relative w-full h-[400px] rounded-lg shadow-lg overflow-hidden">
+				<div className="relative w-full h-[50dvh] md:h-[60dvh] xl:h-[70dvh] rounded-lg shadow-lg overflow-hidden">
 					{/* Background Image */}
 					<Image
 						src={image}
 						alt={title}
 						fill={true}
-						className="brightness-75 object-cover"
+						priority={true}
+						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+						className="brightness-75 object-cover object-center"
 					/>
 
 					{/* Gradient Overlay */}
