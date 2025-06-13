@@ -4,7 +4,6 @@ import { PackingServiceDetails } from "@/components/PackingServiceDetails";
 import { ServicesSection } from "@/components/ServicesSection";
 import { RequestQuote } from "../local-moving/residential-movers/request-quote";
 
-
 const PackingServicesPage = () => {
 	return (
 		<div>
