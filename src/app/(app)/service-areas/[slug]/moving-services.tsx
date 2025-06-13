@@ -81,7 +81,7 @@ export const MovingServiceWithImage: FC<MovingServiceWithImageProps> = (
 				<div
 					className={cn(
 						props.index % 2 === 0 ? "lg:order-first" : "lg:order-last",
-						"lg:col-span-1 max-h-[300px] relative rounded-lg h-full overflow-hidden",
+						"lg:col-span-1 max-h-[400px] relative rounded-lg h-full overflow-hidden",
 					)}
 				>
 					<Image
@@ -89,7 +89,8 @@ export const MovingServiceWithImage: FC<MovingServiceWithImageProps> = (
 						alt={props.image.alt ?? "Moving service"}
 						height={props.image.height ?? 30}
 						width={props.image.width ?? 30}
-						className="max-w-3xl w-full object-contain"
+						quality={100}
+						className="max-w-3xl w-full object-contain object-center"
 					/>
 				</div>
 				<div

@@ -109,6 +109,16 @@
 	}
 }
 
+@layer utilities {
+	.no-scrollbar::-webkit-scrollbar {
+	    display: none;
+	}
+	.no-scrollbar {
+	    -ms-overflow-style: none;
+	    scrollbar-width: none;
+	}
+}
+
 .perspective {
 	perspective: 1000px;
 }

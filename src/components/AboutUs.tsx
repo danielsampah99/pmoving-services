@@ -217,9 +217,7 @@ export const AboutUs: FC = () => {
 							>
 								<Image
 									alt={"Drake_and_Deshun"}
-									src={
-										"/api/media/file/truck.webp"
-									}
+									src={"/api/media/file/truck.webp"}
 									className="block size-full object-cover"
 									width={715}
 									height={715}
@@ -240,9 +238,7 @@ export const AboutUs: FC = () => {
 							>
 								<Image
 									alt={"Moving Projects"}
-									src={
-										"/api/media/file/packaing service-400x300.webp"
-									}
+									src={"/api/media/file/packaing service-400x300.webp"}
 									className="block size-full object-cover"
 									width={715}
 									height={715}
