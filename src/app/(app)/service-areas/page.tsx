@@ -4,7 +4,6 @@ import { OurLocations } from "@/components/OurLocations";
 import { ServiceAreaMap } from "./service-areas-map";
 import { getPayload } from "payload";
 import config from "@payload-config";
-import type { MapCity } from "@/map-data";
 import { MINNESOTA_CENTRE } from "@/data/map";
 
 export const metadata: Metadata = {
@@ -43,27 +42,16 @@ export default async function ServiceAreasPage() {
 
 	const serviceAreas = await payload.find({
 		collection: "service-areas",
-		depth: 1,
 		pagination: false,
 		sort: "title",
 	});
-
-	const cities: MapCity[] =
-		serviceAreas.docs.map((city) => ({
-			city: city.title,
-			longitude: city.longitude,
-			latitude: city.latitude,
-			linkText: city.title,
-			state: city["state-name"],
-			href: `/service-areas/${city.slug}`,
-		})) ?? [];
 
 	return (
 		<section>
 			<Hero />
 			<ServiceAreaMap
-				cities={cities}
-				serviceAreasMapZoom={7}
+				cities={serviceAreas.docs ?? []}
+				serviceAreasMapZoom={6}
 				serviceAreasCenter={MINNESOTA_CENTRE}
 			/>
 			<OurLocations />

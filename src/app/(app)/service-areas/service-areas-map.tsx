@@ -7,6 +7,7 @@ import { type FC, useCallback, useRef, useState } from "react";
 import { ListOfServiceAreas } from "./service-areas-list";
 
 import dynamic from "next/dynamic";
+import { ServiceArea } from "@/payload-types";
 
 const LeafletMap = dynamic(
 	() => import("@/components/LeafletMap").then((mod) => mod.LeafletMap),
@@ -21,7 +22,7 @@ const LeafletMap = dynamic(
 );
 
 export interface ServiceAreaMapProps {
-	cities: MapCity[];
+	cities: ServiceArea[];
 	serviceAreasMapZoom: number;
 	serviceAreasCenter: LatLngExpression;
 }
@@ -50,18 +51,18 @@ export const ServiceAreaMap: FC<ServiceAreaMapProps> = ({
 	const handleCityClick = useCallback((city: string | null) => {
 		setSelectedCity(city);
 
-		const cityInfo = cities.find((item) => item.city === city);
+		const cityInfo = cities.find((item) => item.slug === city);
 
-		if (cityInfo?.href) {
-			router.push(`${cityInfo.href}`);
+		if (cityInfo?.slug) {
+			router.push(`/service-areas/${cityInfo.slug}`);
 		}
 	}, []);
 
 	const handleHoverCity = useCallback((city: string | null) => {
-		const cityCenter = cities.find((item) => item.city === city);
+		const cityCenter = cities.find((item) => item.slug === city);
 
 		setHoveredCity(city);
-		setMapCenter([cityCenter?.latitude ?? 46, cityCenter?.longitude ?? -94]);
+		setMapCenter([cityCenter?.latitude ?? 44, cityCenter?.longitude ?? -94]);
 		setMapZoom(10);
 	}, []);
 
@@ -76,7 +77,7 @@ export const ServiceAreaMap: FC<ServiceAreaMapProps> = ({
 				cities={cities}
 				mapCenter={mapCenter}
 				mapStyleIndex={mapStyleIndex}
-				mapZoom={hoveredCity ? mapZoom : 6}
+				mapZoom={hoveredCity ? mapZoom : 8}
 				mapRef={mapRef}
 				hoveredCity={hoveredCity}
 				onHoverCity={setHoveredCity}

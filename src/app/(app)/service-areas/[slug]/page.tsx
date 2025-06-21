@@ -11,6 +11,9 @@ import { MovingTips } from "./moving-tips";
 import { MovingServices } from "./moving-services";
 import { ServicesSection } from "@/components/ServicesSection";
 import { RequestQuote } from "../../services/local-moving/residential-movers/request-quote";
+import { MINNESOTA_CENTRE } from "@/data/map";
+import { getServiceAreas } from "@/data/service-areas";
+import { ServiceAreaMap } from "../service-areas-map";
 
 type Props = {
 	params: Promise<{ slug: string }>;
@@ -127,6 +130,8 @@ export default async function SingleServiceAreaPage({ params }: Props) {
 		})
 	).docs[0];
 
+	const serviceAreas = (await payload.find({ collection: 'service-areas', pagination: false, sort: 'title'})).docs as ServiceArea[]
+
 	return (
 		<section className="max-w-7xl mx-auto p-6 lg:px-8 pt-0 xl:pt-6">
 			<Hero
@@ -146,11 +151,20 @@ export default async function SingleServiceAreaPage({ params }: Props) {
 				)}
 			<Faqs faqs={serviceArea.faqs ?? []} title={serviceArea.title} />
 			<RequestQuote />
+			<div className="mt-8">
+				<ServiceAreaMap
+					cities={serviceAreas ?? []}
+					serviceAreasMapZoom={6}
+					serviceAreasCenter={MINNESOTA_CENTRE}
+				/>
+			</div>
 			<MovingResources
 				title={serviceArea.title}
 				resources={serviceArea?.resources ?? []}
 			/>
+
 			<ServicesSection />
+
 			<OurLocations />
 		</section>
 	);

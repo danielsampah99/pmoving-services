@@ -4,9 +4,10 @@ import { TruckIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import type { MapCity } from "@/map-data";
 import { Field, Input, Label } from "@headlessui/react";
+import { ServiceArea } from "@/payload-types";
 
 export type ListOfServiceAreasProps = {
-	cities: MapCity[];
+	cities: ServiceArea[];
 	selectedCity: string | null;
 	onSelectCity: (city: string | null) => void;
 	hoveredCity: string | null;
@@ -28,14 +29,14 @@ export const ListOfServiceAreas: FC<ListOfServiceAreasProps> = ({
 		}
 
 		return cities.filter((city) =>
-			city.city.toLowerCase().includes(searchTerm.toLowerCase()),
+			city.title.toLowerCase().includes(searchTerm.toLowerCase()),
 		);
 	}, [cities, searchTerm]);
 
 	return (
 		<div className="lg:col-span-1">
 			<div className="bg-white rounded-xl shadow-md p-5 h-full max-h-[625px]">
-				<div className="space-y-4 max-h-[400px] overflow-y-auto pr-2">
+				<div className="space-y-4 overflow-y-auto pr-2">
 					<SearchCity searchCity={searchTerm} onSearchCity={setSearchTerm} />
 					<MapCitiesList
 						cities={filteredCities}
@@ -68,7 +69,7 @@ export const SearchCity: FC<{
 	onSearchCity: (city: string) => void;
 }> = ({ searchCity, onSearchCity }) => {
 	return (
-		<div id="search-service-area" className="w-full">
+		<div id="search-service-area" className="w-full sticky">
 			<Field className="space-y-2">
 				<Label className="block text-sm font-medium leading-6 text-gray-900">
 					Find a service Area
@@ -76,7 +77,7 @@ export const SearchCity: FC<{
 				<Input
 					value={searchCity}
 					onChange={(event) => onSearchCity(event.target.value)}
-					className="block w-full rounded-md border-0 py-1.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus-within:ring-2 focus-within:ring-inset focus-within:ring-yellow-600 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6 focus-visible:outline-none focus-within:outline-none"
+					className="block w-full rounded-md selection:text-moving-yellow selection:bg-moving-gray border-0 py-1.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus-within:ring-2 focus-within:ring-inset focus-within:ring-yellow-600 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6 focus-visible:outline-none focus-within:outline-none"
 					type="text"
 					placeholder="find a service area near you..."
 				/>
@@ -89,7 +90,7 @@ export type MapCitiesListProps = Pick<
 	ListOfServiceAreasProps,
 	"selectedCity" | "onSelectCity" | "hoveredCity" | "onHoverCity"
 > & {
-	cities: MapCity[];
+	cities: ServiceArea[];
 };
 
 export const MapCitiesList: FC<MapCitiesListProps> = ({
@@ -100,22 +101,19 @@ export const MapCitiesList: FC<MapCitiesListProps> = ({
 	onSelectCity,
 }) => {
 	return (
-		<div>
-			<div className="grid grid-cols-1 gap-1.5">
-				{cities.map((city) => {
-					const standardCity = city.city.replace(/\s+/g, "-").toLowerCase(); // replace all whitespace characters with a hypen in the cityname
-
-					return (
+		<div className='max-h-[300px] overflow-y-scroll'>
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-1.5">
+				{cities.length === 0 ? <span className='center text-yellow-500 col-span-2'>Coming soon to this location</span> : cities.map((city) => (
 						<CityListItem
-							key={standardCity}
+							key={city.id}
 							city={city}
-							isSelected={selectedCity === city.city}
-							isHovered={hoveredCity === city.city}
+							isSelected={selectedCity === city.slug}
+							isHovered={hoveredCity === city.slug}
 							onSelectCity={onSelectCity}
 							onHoverCity={onHoverCity}
 						/>
-					);
-				})}
+					)
+				)}
 			</div>
 		</div>
 	);
@@ -123,7 +121,7 @@ export const MapCitiesList: FC<MapCitiesListProps> = ({
 
 // city list item - memoized for performance
 type CityListItemProps = {
-	city: MapCity;
+	city: ServiceArea;
 	isSelected: boolean;
 	isHovered: boolean;
 	onSelectCity: (city: string) => void;
@@ -132,7 +130,7 @@ type CityListItemProps = {
 
 const CityListItem: FC<CityListItemProps> = memo(
 	({ city, isHovered, isSelected, onHoverCity, onSelectCity }) => {
-		const standardCity = city.city.replace(/\s+/g, "-").toLowerCase();
+		const standardCity = city.id
 
 		const cityClasses = isSelected
 			? "bg-yellow-100 text-yellow-800 border-yellow-300 shadow-sm"
@@ -150,11 +148,11 @@ const CityListItem: FC<CityListItemProps> = memo(
 					"px-3 py-2 rounded-md text-sm transition-all cursor-pointer border",
 					cityClasses,
 				)}
-				onClick={() => onSelectCity(city.city)}
-				onKeyDown={(event) => event.key === "Enter" && onSelectCity(city.city)}
-				onMouseEnter={() => onHoverCity(city.city)}
+				onClick={() => onSelectCity(city.slug)}
+				onKeyDown={(event) => event.key === "Enter" && onSelectCity(city.slug)}
+				onMouseEnter={() => onHoverCity(city.slug)}
 				onMouseLeave={() => onHoverCity(null)}
-				onFocus={() => onHoverCity(city.city)}
+				onFocus={() => onHoverCity(city.slug)}
 				onBlur={() => onHoverCity(null)}
 				role="button"
 				tabIndex={0}
@@ -164,7 +162,7 @@ const CityListItem: FC<CityListItemProps> = memo(
 						className={cn("mr-1.5 size-5", iconClasses)}
 						aria-hidden="false"
 					/>
-					{city.city}
+					{city.title}
 				</div>
 			</div>
 		);

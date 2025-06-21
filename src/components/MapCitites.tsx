@@ -1,13 +1,14 @@
 import type { FC } from "react";
 import type { ActiveState } from "./InteractiveMap";
-import {
-	type MapCity,
-	minnesotaMapCities,
-	wisconsinMapCities,
-} from "@/map-data";
+// import {
+// 	type MapCity,
+// 	minnesotaMapCities,
+// 	wisconsinMapCities,
+// } from "@/map-data";
 import { cn } from "@/utils";
 import { TruckIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { ServiceArea } from "@/payload-types";
 
 export type MapCitiesProps = {
 	currentState: ActiveState;
@@ -15,6 +16,8 @@ export type MapCitiesProps = {
 	onSelectCity: (city: string | null) => void;
 	hoveredCity: string | null;
 	onHoverCity: (city: string | null) => void;
+	minnesotaMapCities: ServiceArea[];
+	wisconsinMapCities: ServiceArea[]
 };
 
 export const MapCities: FC<MapCitiesProps> = ({
@@ -23,11 +26,12 @@ export const MapCities: FC<MapCitiesProps> = ({
 	onHoverCity,
 	onSelectCity,
 	selectedCity,
+	...props
 }) => {
 	const cityTitle =
 		currentState === "all"
 			? "World"
-			: currentState === "minnesota"
+			: currentState === "MN"
 				? "Cities in Minnesota"
 				: "Cities in Wisconsin";
 
@@ -39,9 +43,9 @@ export const MapCities: FC<MapCitiesProps> = ({
 				</div>
 
 				<div className="space-y-4 max-h-[400px] overflow-y-auto pr-2">
-					{currentState === "all" || currentState === "minnesota" ? (
+					{currentState === "all" || currentState === "MN" ? (
 						<MapCitiesList
-							cities={minnesotaMapCities}
+							cities={props.minnesotaMapCities}
 							cityLabel="Minnesota"
 							hoveredCity={hoveredCity}
 							onHoverCity={onHoverCity}
@@ -50,9 +54,9 @@ export const MapCities: FC<MapCitiesProps> = ({
 						/>
 					) : null}
 
-					{currentState === "all" || currentState === "wisconsin" ? (
+					{currentState === "all" || currentState === "WI" ? (
 						<MapCitiesList
-							cities={wisconsinMapCities}
+							cities={props.wisconsinMapCities}
 							cityLabel="Wisconsin"
 							hoveredCity={hoveredCity}
 							onHoverCity={onHoverCity}
@@ -83,7 +87,7 @@ export type MapCitiesListProps = Pick<
 	MapCitiesProps,
 	"selectedCity" | "onSelectCity" | "hoveredCity" | "onHoverCity"
 > & {
-	cities: MapCity[];
+	cities: ServiceArea[];
 	cityLabel: "Wisconsin" | "Minnesota";
 };
 
@@ -95,6 +99,7 @@ export const MapCitiesList: FC<MapCitiesListProps> = ({
 	onHoverCity,
 	onSelectCity,
 }) => {
+
 	return (
 		<div>
 			<h4 className="text-md font-semibold text-yellow-400 capitalize mb-2 sticky top-0 bg-white py-1">
@@ -102,17 +107,17 @@ export const MapCitiesList: FC<MapCitiesListProps> = ({
 			</h4>
 			<div className="grid grid-cols-2 gap-1.5">
 				{cities.map((city) => {
-					const standardCity = city.city.replace(/\s+/g, "-").toLowerCase(); // replace all whitespace characters with a hypen in the cityname
+					const standardCity = city.title.replace(/\s+/g, "-").toLowerCase(); // replace all whitespace characters with a hypen in the cityname
 
 					const cityClasses =
-						selectedCity === city.city
+						selectedCity === city.slug
 							? "bg-yellow-100 text-yellow-800 border-ywllow-300 shadow-sm"
-							: hoveredCity === city.city
+							: hoveredCity === city.slug
 								? "bg-yellow-50 text-yellow-700 border-yellow-200"
 								: "hover:bg-slate-50 border-transparent";
 
 					const iconClasses =
-						hoveredCity === city.city
+						hoveredCity === city.slug
 							? "stroke-yellow-600"
 							: "stroke-yellow-400";
 					return (
@@ -123,18 +128,18 @@ export const MapCitiesList: FC<MapCitiesListProps> = ({
 								"px-3 py-2 rounded-md text-sm transition-all cursor-pointer border",
 								cityClasses,
 							)}
-							onClick={() => onSelectCity(city.city)}
+							onClick={() => onSelectCity(city.slug)}
 							onKeyDown={(event) =>
-								event.key === "Enter" && onSelectCity(city.city)
+								event.key === "Enter" && onSelectCity(city.slug)
 							}
-							onMouseOver={() => onHoverCity(city.city)}
+							onMouseOver={() => onHoverCity(city.slug)}
 							onMouseOut={() => onHoverCity(null)}
-							onFocus={() => onHoverCity(city.city)}
+							onFocus={() => onHoverCity(city.slug)}
 							onBlur={() => onHoverCity(null)}
 						>
 							<div className="flex capitalize items-center">
 								<TruckIcon className={cn("mr-1.5 size-5", iconClasses)} />
-								{city.city}
+								{city.title}
 							</div>
 						</div>
 					);

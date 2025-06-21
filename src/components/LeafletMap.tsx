@@ -15,12 +15,13 @@ import { cn } from "@/utils";
 import { useMap } from "react-leaflet";
 import { Icon, divIcon } from "leaflet";
 import { useEffect } from "react";
+import { ServiceArea } from "@/payload-types";
 
 export type LeafletMapProps = Pick<
 	MapCitiesProps,
 	"selectedCity" | "onSelectCity" | "hoveredCity" | "onHoverCity"
 > & {
-	cities: MapCity[];
+	cities: ServiceArea[];
 	mapCenter: LatLngExpression;
 	mapZoom: number;
 	mapStyleIndex: number;
@@ -77,6 +78,7 @@ export const LeafletMap: FC<LeafletMapProps> = ({
 	mapStyleIndex,
 	cities,
 	hoveredCity,
+	onHoverCity,
 	showStyleSelector,
 	onSelectCity,
 	onToggleStyleSelector,
@@ -102,28 +104,30 @@ export const LeafletMap: FC<LeafletMapProps> = ({
 
 				{/* City Markers */}
 				{cities.map((city) => {
-					const isHovered = hoveredCity === city.city;
+					const isHovered = hoveredCity === city.slug;
 
 					return (
 						<Marker
-							key={city.href}
+							key={city.id}
 							position={[city.latitude, city.longitude]}
 							icon={TruckMapIcon(isHovered)}
 							eventHandlers={{
-								click: () => onSelectCity(city.city),
+								click: () => onSelectCity(city.slug),
 							}}
 						>
 							<Popup
 								position={[city.latitude, city.longitude]}
-								offset={[0, -20]}
-								closeButton={false}
+								offset={[0, 0]}
+								closeButton={true}
+								autoPan={true}
 							>
-								<div className="p-1 w-[200px]">
+								<div className="p-1 w-auto">
 									<div className="flex justify-between items-center mb-2">
-										<h3 className="text-sm font-bold text-blue-700">
-											{city.city}
+										<h3 className="text-sm font-bold capitalize text-blue-700">
+											{city.title}
 										</h3>
 										<Button
+											onMouseOver={() => onHoverCity(city.slug)}
 											onClick={() => onSelectCity(null)}
 											className="text-slate-400 hover:text-slate-600"
 										>
@@ -131,10 +135,10 @@ export const LeafletMap: FC<LeafletMapProps> = ({
 										</Button>
 									</div>
 									<p className="text-xs text-slate-600 mb-2">
-										{`We offer full-service moving, packing, and storage solutions in ${city.city}.`}
+										We offer full-service moving, packing, and storage solutions in <span className="capitalize">{city?.title ?? ''}</span>
 									</p>
 									<Button className="mt-1 text-xs bg-blue-600 text-white px-2 py-1 rounded-md w-full hover:bg-blue-700 transition-colors">
-										Get Quote for {city.city}
+										Get Quote for {city.title}
 									</Button>
 								</div>
 							</Popup>
@@ -177,16 +181,6 @@ export const LeafletMap: FC<LeafletMapProps> = ({
 					</div>
 				)}
 			</div>
-
-			{/* Map legend */}
-			{/* <div className="absolute bottom-4 left-4 bg-white bg-opacity-90 p-3 rounded-lg shadow-md z-[1000]">
-				<h3 className="text-sm font-semibold text-slate-900 mb-2">Legend</h3>
-
-				<div className="flex items-center gap-2">
-					<TruckIcon className="text-yellow-400 size-[14px]" />
-					<span className="text-xs text-slate-700">Service Area</span>
-				</div>
-			</div> */}
 		</div>
 	);
 };

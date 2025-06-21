@@ -1,30 +1,33 @@
 "use client";
 
-import { type FC, useState, useRef } from "react";
+import { type FC, useState, useRef, useMemo } from "react";
 import { LocationControl } from "./LocationControl";
 import {
-	type MapCity,
-	minnesotaMapCities,
 	states,
-	wisconsinMapCities,
 } from "@/map-data";
 import { MapCities } from "./MapCitites";
 import { LeafletMap } from "./LeafletMap";
 import type { LatLngExpression } from "leaflet";
 import { useRouter } from "next/navigation";
+import { ServiceArea } from "@/payload-types";
 
-export type ActiveState = "all" | "minnesota" | "wisconsin";
+export type ActiveState = "all" | "MN" | "WI";
 
-export const InteractiveMap: FC = () => {
-	const [activeState, setActiveState] = useState<
-		"all" | "minnesota" | "wisconsin"
-	>("all");
+export const InteractiveMap: FC<{ serviceAreas: ServiceArea[]}> = (props) => {
+	const [activeState, setActiveState] = useState<ActiveState>("all");
 	const [hoveredCity, setHoveredCity] = useState<string | null>(null);
 	const [selectedCity, setSelectedCity] = useState<string | null>(null);
 	const [mapStyleIndex, setMapStyleIndex] = useState(0);
-	const [mapCenter, setMapCenter] = useState<LatLngExpression>([46, -94]); // center of minnesota
-	const [mapZoom, setMapZoom] = useState(8);
-	const [cities, setCities] = useState<MapCity[]>([
+	const [mapCenter, setMapCenter] = useState<LatLngExpression>([44.9778, -93.2650]); // center of minnesota
+	const [mapZoom, setMapZoom] = useState(4);
+
+	const minnesotaMapCities = useMemo(() => {
+		return props.serviceAreas.filter(city => city["state-initials"].toUpperCase() === 'MN')
+	}, [props.serviceAreas])
+
+	const wisconsinMapCities = useMemo(() => props.serviceAreas.filter(city => (city["state-initials"].toUpperCase() === 'WI')), [props.serviceAreas])
+
+	const [cities, setCities] = useState<ServiceArea[]>([
 		...minnesotaMapCities,
 		...wisconsinMapCities,
 	]);
@@ -33,20 +36,20 @@ export const InteractiveMap: FC = () => {
 	const router = useRouter();
 
 	const handleCityHover = (city: string | null) => {
-		const cityCenter = cities.find((item) => item.city === city);
+		const cityCenter = cities.find((item) => item.slug === city);
 
 		setHoveredCity(city);
-		setMapCenter([cityCenter?.latitude ?? 46, cityCenter?.longitude ?? -94]);
-		setMapZoom(10);
+		setMapCenter([cityCenter?.latitude ?? 44, cityCenter?.longitude ?? -93]);
+		setMapZoom(13);
 	};
 
 	const handleStateClick = (selectedState: ActiveState) => {
-		if (selectedState === "minnesota") {
+		if (selectedState === "MN") {
 			setCities(minnesotaMapCities);
-			setActiveState("minnesota");
-		} else if (selectedState === "wisconsin") {
+			setActiveState("MN");
+		} else if (selectedState === "WI") {
 			setCities(wisconsinMapCities);
-			setActiveState("wisconsin");
+			setActiveState("WI");
 			setMapZoom(15);
 		} else {
 			setCities([...minnesotaMapCities, ...wisconsinMapCities]);
@@ -57,9 +60,9 @@ export const InteractiveMap: FC = () => {
 	const handleCityClick = (city: string | null) => {
 		setSelectedCity(city);
 
-		const url = cities.find((item) => item.city === city)?.href;
+		const url = cities.find((item) => item.slug === city)?.slug;
 
-		router.push(`/movers/${url}`);
+		router.push(`/service-areas/${url}`);
 	};
 
 	const handleStyleToggle = () => {
@@ -93,7 +96,7 @@ export const InteractiveMap: FC = () => {
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
 					<LeafletMap
 						mapCenter={mapCenter}
-						mapZoom={hoveredCity ? mapZoom : 4}
+						mapZoom={hoveredCity ? mapZoom : 9}
 						mapStyleIndex={mapStyleIndex}
 						mapRef={mapRef}
 						hoveredCity={hoveredCity}
@@ -106,6 +109,8 @@ export const InteractiveMap: FC = () => {
 						showStyleSelector={showStyleSelector}
 					/>
 					<MapCities
+						minnesotaMapCities={minnesotaMapCities}
+						wisconsinMapCities={wisconsinMapCities}
 						currentState={activeState}
 						hoveredCity={hoveredCity}
 						onHoverCity={handleCityHover}

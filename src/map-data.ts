@@ -51,8 +51,8 @@ export const mapTiles: MapTile[] = [
 
 export const states: State[] = [
 	{ label: "World", value: "all" },
-	{ label: "Minnesota", value: "minnesota" },
-	{ label: "Wisconsin", value: "wisconsin" },
+	{ label: "Minnesota", value: "MN" },
+	{ label: "Wisconsin", value: "WI" },
 ];
 
 export const minnesotaMapCities: MapCity[] = [
