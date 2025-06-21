@@ -1,15 +1,10 @@
 "use client";
 
 import React, { Suspense } from "react";
-// import BusinessHours from "@/components/contact-us/BusinessHours";
-// import ContactDetails from "@/components/contact-us/ContactDetails";
-// import FloatingCallButton from "@/components/contact-us/FloatingCallButton";
-// import PrimaryQuoteForm from "@/components/contact-us/PrimaryQuoteForm";
-// import QuickQuoteForm from "@/components/contact-us/QuickQuoteForm";
-// import { useIsMobile } from "@/hooks/use-mobile";
 import { motion } from "motion/react";
 import { OurLocations } from "./OurLocations";
-import { QuoteComponent, QuoteForm } from "./FreeQuote/QuoteComponent";
+import { QuoteForm } from "./FreeQuote/QuoteComponent";
+import { FreeQuoteForm } from "./FreeQuote/quote-form";
 
 const ContactComponent = () => {
 	// const isMobile = useIsMobile();
@@ -23,7 +18,7 @@ const ContactComponent = () => {
 					transition={{ duration: 0.6 }}
 				>
 					<motion.h1
-						className="text-4xl md:text-6xl lg:text-7xl font-bold text-white text-center"
+						className="text-2xl md:text-4xl lg:text-7xl font-bold text-white text-center"
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: 0.2 }}
@@ -31,7 +26,7 @@ const ContactComponent = () => {
 						Contact Us
 					</motion.h1>
 					<motion.p
-						className="text-lg md:text-xl text-gray-200 text-center mt-4 max-w-2xl mx-auto"
+						className="text-lg md:text-xl text-white font-medium text-center mt-4 max-w-2xl mx-auto"
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: 0.4 }}
@@ -43,10 +38,9 @@ const ContactComponent = () => {
 			</div>
 
 			<main className="max-w-7xl mx-auto px-4 pb-12">
-				<div className="flex flex-col lg:flex-row gap-6 my-8 max-w-4xl mx-auto">
-					{/* For mobile: Show forms stacked */}
+				<div className="flex flex-col lg:flex-row gap-6 my-8 max-w-3xl mx-auto">
 					<Suspense>
-						<QuoteForm />
+						<FreeQuoteForm />
 					</Suspense>
 				</div>
 
@@ -54,9 +48,6 @@ const ContactComponent = () => {
 					<OurLocations />
 				</div>
 			</main>
-
-			{/* {/* Floating Call Button (Mobile Only) */}
-			{/* <FloatingCallButton /> */}
 		</div>
 	);
 };

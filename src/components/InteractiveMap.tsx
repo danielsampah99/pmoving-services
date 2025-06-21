@@ -17,7 +17,8 @@ export const InteractiveMap: FC<{ serviceAreas: ServiceArea[] }> = (props) => {
 	const [hoveredCity, setHoveredCity] = useState<string | null>(null);
 	const [selectedCity, setSelectedCity] = useState<string | null>(null);
 	const [mapStyleIndex, setMapStyleIndex] = useState(0);
-	const [mapCenter, setMapCenter] = useState<LatLngExpression>(MINNESOTA_CENTRE); // center of minnesota
+	const [mapCenter, setMapCenter] =
+		useState<LatLngExpression>(MINNESOTA_CENTRE); // center of minnesota
 	const [mapZoom, setMapZoom] = useState(4);
 
 	const minnesotaMapCities = useMemo(() => {
