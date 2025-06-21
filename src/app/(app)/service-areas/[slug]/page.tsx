@@ -130,7 +130,13 @@ export default async function SingleServiceAreaPage({ params }: Props) {
 		})
 	).docs[0];
 
-	const serviceAreas = (await payload.find({ collection: 'service-areas', pagination: false, sort: 'title'})).docs as ServiceArea[]
+	const serviceAreas = (
+		await payload.find({
+			collection: "service-areas",
+			pagination: false,
+			sort: "title",
+		})
+	).docs as ServiceArea[];
 
 	return (
 		<section className="max-w-7xl mx-auto p-6 lg:px-8 pt-0 xl:pt-6">

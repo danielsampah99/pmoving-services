@@ -1,10 +1,5 @@
 import type { FC } from "react";
 import type { ActiveState } from "./InteractiveMap";
-// import {
-// 	type MapCity,
-// 	minnesotaMapCities,
-// 	wisconsinMapCities,
-// } from "@/map-data";
 import { cn } from "@/utils";
 import { TruckIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
@@ -17,7 +12,7 @@ export type MapCitiesProps = {
 	hoveredCity: string | null;
 	onHoverCity: (city: string | null) => void;
 	minnesotaMapCities: ServiceArea[];
-	wisconsinMapCities: ServiceArea[]
+	wisconsinMapCities: ServiceArea[];
 };
 
 export const MapCities: FC<MapCitiesProps> = ({
@@ -99,7 +94,6 @@ export const MapCitiesList: FC<MapCitiesListProps> = ({
 	onHoverCity,
 	onSelectCity,
 }) => {
-
 	return (
 		<div>
 			<h4 className="text-md font-semibold text-yellow-400 capitalize mb-2 sticky top-0 bg-white py-1">

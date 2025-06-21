@@ -11,8 +11,7 @@ import { TheMovingProcess } from "@/components/TheMovingProcess";
 import { getServiceAreas } from "@/data/service-areas";
 
 export default async function Home() {
-
-	const serviceAreas = await getServiceAreas()
+	const serviceAreas = await getServiceAreas();
 
 	return (
 		<div className="min-h-screen ">

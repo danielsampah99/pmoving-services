@@ -135,7 +135,8 @@ export const LeafletMap: FC<LeafletMapProps> = ({
 										</Button>
 									</div>
 									<p className="text-xs text-slate-600 mb-2">
-										We offer full-service moving, packing, and storage solutions in <span className="capitalize">{city?.title ?? ''}</span>
+										We offer full-service moving, packing, and storage solutions
+										in <span className="capitalize">{city?.title ?? ""}</span>
 									</p>
 									<Button className="mt-1 text-xs bg-blue-600 text-white px-2 py-1 rounded-md w-full hover:bg-blue-700 transition-colors">
 										Get Quote for {city.title}

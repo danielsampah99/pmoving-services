@@ -2,30 +2,37 @@
 
 import { type FC, useState, useRef, useMemo } from "react";
 import { LocationControl } from "./LocationControl";
-import {
-	states,
-} from "@/map-data";
+import { states } from "@/map-data";
 import { MapCities } from "./MapCitites";
 import { LeafletMap } from "./LeafletMap";
 import type { LatLngExpression } from "leaflet";
 import { useRouter } from "next/navigation";
 import { ServiceArea } from "@/payload-types";
+import { MINNESOTA_CENTRE } from "@/data/map";
 
 export type ActiveState = "all" | "MN" | "WI";
 
-export const InteractiveMap: FC<{ serviceAreas: ServiceArea[]}> = (props) => {
+export const InteractiveMap: FC<{ serviceAreas: ServiceArea[] }> = (props) => {
 	const [activeState, setActiveState] = useState<ActiveState>("all");
 	const [hoveredCity, setHoveredCity] = useState<string | null>(null);
 	const [selectedCity, setSelectedCity] = useState<string | null>(null);
 	const [mapStyleIndex, setMapStyleIndex] = useState(0);
-	const [mapCenter, setMapCenter] = useState<LatLngExpression>([44.9778, -93.2650]); // center of minnesota
+	const [mapCenter, setMapCenter] = useState<LatLngExpression>(MINNESOTA_CENTRE); // center of minnesota
 	const [mapZoom, setMapZoom] = useState(4);
 
 	const minnesotaMapCities = useMemo(() => {
-		return props.serviceAreas.filter(city => city["state-initials"].toUpperCase() === 'MN')
-	}, [props.serviceAreas])
+		return props.serviceAreas.filter(
+			(city) => city["state-initials"].toUpperCase() === "MN",
+		);
+	}, [props.serviceAreas]);
 
-	const wisconsinMapCities = useMemo(() => props.serviceAreas.filter(city => (city["state-initials"].toUpperCase() === 'WI')), [props.serviceAreas])
+	const wisconsinMapCities = useMemo(
+		() =>
+			props.serviceAreas.filter(
+				(city) => city["state-initials"].toUpperCase() === "WI",
+			),
+		[props.serviceAreas],
+	);
 
 	const [cities, setCities] = useState<ServiceArea[]>([
 		...minnesotaMapCities,

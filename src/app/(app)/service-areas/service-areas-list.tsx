@@ -101,9 +101,14 @@ export const MapCitiesList: FC<MapCitiesListProps> = ({
 	onSelectCity,
 }) => {
 	return (
-		<div className='max-h-[300px] overflow-y-scroll'>
+		<div className="max-h-[300px] overflow-y-scroll">
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-1.5">
-				{cities.length === 0 ? <span className='center text-yellow-500 col-span-2'>Coming soon to this location</span> : cities.map((city) => (
+				{cities.length === 0 ? (
+					<span className="center text-yellow-500 col-span-2">
+						Coming soon to this location
+					</span>
+				) : (
+					cities.map((city) => (
 						<CityListItem
 							key={city.id}
 							city={city}
@@ -112,7 +117,7 @@ export const MapCitiesList: FC<MapCitiesListProps> = ({
 							onSelectCity={onSelectCity}
 							onHoverCity={onHoverCity}
 						/>
-					)
+					))
 				)}
 			</div>
 		</div>
@@ -130,7 +135,7 @@ type CityListItemProps = {
 
 const CityListItem: FC<CityListItemProps> = memo(
 	({ city, isHovered, isSelected, onHoverCity, onSelectCity }) => {
-		const standardCity = city.id
+		const standardCity = city.id;
 
 		const cityClasses = isSelected
 			? "bg-yellow-100 text-yellow-800 border-yellow-300 shadow-sm"

@@ -8,12 +8,13 @@ const InteractiveMap = dynamic(
 	{ ssr: false },
 );
 
-export const MapSection: FC<{ serviceAreas: ServiceArea[]}> = ({ serviceAreas }) => {
-
+export const MapSection: FC<{ serviceAreas: ServiceArea[] }> = ({
+	serviceAreas,
+}) => {
 	return (
 		<section id="service-areas">
 			<Suspense fallback={<span>Loading map...</span>}>
-			 	<InteractiveMap serviceAreas={serviceAreas} />
+				<InteractiveMap serviceAreas={serviceAreas} />
 			</Suspense>
 		</section>
 	);
