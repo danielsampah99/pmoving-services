@@ -8,8 +8,11 @@ import { Reviews } from "@/components/Reviews";
 import { ServicesSection } from "@/components/ServicesSection";
 import { Testimonial } from "@/components/TestimonialSection";
 import { TheMovingProcess } from "@/components/TheMovingProcess";
+import { getServiceAreas } from "@/data/service-areas";
 
-export default function Home() {
+export default async function Home() {
+	const serviceAreas = await getServiceAreas();
+
 	return (
 		<div className="min-h-screen ">
 			<HeroSection />
@@ -17,7 +20,7 @@ export default function Home() {
 			<Testimonial />
 			<TheMovingProcess />
 			<AboutUs />
-			<MapSection />
+			<MapSection serviceAreas={serviceAreas.docs ?? []} />
 			<Reviews />
 			<OurLocations />
 			<FAQs />
