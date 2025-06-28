@@ -29,7 +29,7 @@ const OfficeMovers = () => {
 							<div className="relative">
 								<img
 									className="w-full h-auto rounded-lg object-cover"
-									src="/moving-process.webp"
+									src="/api/media/file/pirnter-office-desk-joined.webp"
 									alt="Office Moving Process"
 								/>
 							</div>

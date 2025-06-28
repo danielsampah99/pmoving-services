@@ -12,7 +12,7 @@ const WarehouseIndustrialPage = () => {
 	return (
 		<div>
 			<ServiceLayout
-				image="/api/media/file/industrial-moving.webp"
+				image="/api/media/file/two-trucks-parked.webp"
 				title="Warehouse & Industrial Moving"
 				desc="Professional warehouse relocation and industrial equipment moving services"
 			>
@@ -39,7 +39,7 @@ const WarehouseIndustrialPage = () => {
 								</p>
 							</div>
 							<img
-								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/warehouse-moving-1920w.jpg"
+							src="/api/media/file/industrial-moving.webp"
 								alt="Industrial relocation"
 								className="rounded-lg shadow-xl"
 							/>
@@ -58,12 +58,11 @@ const WarehouseIndustrialPage = () => {
 									your budget.
 								</p>
 								<div className="gap-4 mt-6">
-									{/* <img
-                                        src="/moving-guide-cover.webp"
+									<img
+                                        src="/moving-process.webp"
                                         alt="Moving guide"
                                         className="rounded-lg"
-                                    /> */}
-									<RequestQuote />
+                                    />
 								</div>
 							</div>
 
@@ -90,6 +89,7 @@ const WarehouseIndustrialPage = () => {
 			{/* Rest of existing components preserved */}
 			<RelatedServices services={commercialMovingServices} />
 			<FAQs faqs={frequentQuestions} />
+			<RequestQuote />
 			<ServicesSection />
 			<OurLocations />
 		</div>

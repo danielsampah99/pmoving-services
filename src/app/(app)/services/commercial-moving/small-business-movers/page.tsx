@@ -11,7 +11,7 @@ import { ServicesSection } from "@/components/ServicesSection";
 const SmallBusinessMovers = () => {
 	return (
 		<ServiceLayout
-			image="/api/media/file/small-business-relocation.webp"
+			image="/api/media/file/glass-showcases.webp"
 			title="Small Business Moving Services"
 			desc="Reliable and efficient moving solutions tailored for small businesses"
 		>
@@ -29,7 +29,7 @@ const SmallBusinessMovers = () => {
 							</p>
 							<div className="relative">
 								<img
-									src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/office-moving-1920w.jpg"
+									src="/api/media/file/retail-display-shelf.webp"
 									alt="Small Business Moving Services"
 									className="w-full rounded-lg max-h-[700px] object-cover"
 								/>
