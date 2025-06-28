@@ -21,7 +21,7 @@ type Process = {
 	stage: number;
 	title: string;
 	description: string[];
-	href: string;
+	id: string;
 	icon: HeroIconType | LucideIcon;
 	color: string;
 };
@@ -36,7 +36,7 @@ const processes: Process[] = [
 			"Formulate a plan to personally transport your personal belongings to your new home like jewelry and other valuable pieces if possible.",
 		],
 		icon: PhoneIcon,
-		href: "#",
+		id: "stage-1",
 		color: "from-moving-gray to-gray-200",
 	},
 	{
@@ -48,7 +48,7 @@ const processes: Process[] = [
 		],
 		icon: ClipboardDocumentListIcon,
 		color: "from-moving-yellow to-gray-yellow",
-		href: "#",
+		id: "stage-2",
 	},
 	{
 		stage: 3,
@@ -62,7 +62,7 @@ const processes: Process[] = [
 		],
 		icon: PackageCheckIcon,
 		color: "from-moving-gray to-gray-400",
-		href: "#",
+		id: "stage-3",
 	},
 	{
 		stage: 4,
@@ -73,20 +73,20 @@ const processes: Process[] = [
 		],
 		icon: TruckIcon,
 		color: "from-moving-yellow to-gray-yellow",
-		href: "#",
+		id: "stage-4",
 	},
 	{
 		stage: 5,
 		title: "Unloading",
 		description: [
 			"Always be present or have someone available to direct the movers into your new place.",
-			"Do a walk through with the movers",
+			"Do a walk through with the movers. ",
 			"Plan a designated landing spot for big furniture beforehand.",
 			"After the truck is completely empty, do a final walk through.",
 		],
 		icon: TruckIcon,
 		color: "from-moving-gray to-gray-400",
-		href: "#",
+		id: "stage-5",
 	},
 ];
 
@@ -151,20 +151,20 @@ export const TheMovingProcess: FC = () => {
 							</div>
 
 							{/* Content card */}
-							<Link
-								href={step.href}
-								className="bg-white rounded-2xl shadow-xl p-4 sm:p-8 flex-1 relative overflow-hidden group hover:shadow-2xl transition-shadow duration-300"
+							<div
+								id={step.id}
+								className="group/icon bg-white rounded-2xl shadow-xl p-4 sm:p-8 flex-1 relative overflow-hidden group transition-shadow duration-300"
 							>
-								<div className="absolute inset-0 bg-gradient-to-r from-moving-gray/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+								<div className="absolute inset-0 bg-gradient-to-r from-moving-gray/5 to-transparent opacity-0" />
 
 								<div className="flex items-start gap-6">
 									<div
 										className={cn(
-											"p-2 sm:p-3 rounded-xl bg-gradient-to-br text-white shadow-md",
+											"p-2 sm:p-3 rounded-xl z-20 bg-gradient-to-br text-white shadow-md",
 											step.color,
 										)}
 									>
-										<step.icon className="size-5" aria-hidden="true" />
+										<step.icon className="size-5 group-hover/icon:animate-bounce" aria-hidden="true" />
 									</div>
 
 									<div className="flex-1">
@@ -182,9 +182,9 @@ export const TheMovingProcess: FC = () => {
 								</div>
 
 								{/* Decorative elements */}
-								<div className="absolute -bottom-10 -right-10 sm:-bottom-6 sm:-right-6 sm:size-24 size-20 rounded-full bg-moving-yellow/20 z-0" />
-								<div className="absolute -top-10 -left-10 size-20 sm:size-32 rounded-full bg-moving-gray/10 z-0" />
-							</Link>
+								<div className={cn("absolute -bottom-10 -right-10 sm:-bottom-6 sm:-right-6 sm:size-24 size-20 rounded-full z-0", index % 2 === 1 ? 'bg-moving-gray/10' : 'bg-moving-yellow/20')} />
+								<div className={cn("absolute -top-10 -left-10 size-20 sm:size-32 rounded-full -z-0", index % 2 === 1 ? 'bg-yellow-50' : 'bg-moving-gray/10')} />
+							</div>
 						</motion.div>
 					))}
 				</div>
