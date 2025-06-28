@@ -27,7 +27,7 @@ const RetailRelocation = () => {
 							</p>
 							<div className="relative">
 								<img
-									src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/retail-moving-1920w.jpg"
+									src="/api/media/file/retail-display-shelf.webp"
 									alt="Retail Relocation Services"
 									className="w-full rounded-lg max-h-[700px] object-cover"
 								/>
@@ -98,7 +98,7 @@ const RetailRelocation = () => {
 						<div className="rounded-lg overflow-hidden h-full">
 							<img
 								className="w-full h-auto rounded-lg object-cover"
-								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/retail-store-moving-1920w.jpg"
+								src="/moving-process.webp"
 								alt="Retail Moving Process"
 							/>
 						</div>
