@@ -6,10 +6,12 @@ import {
 	lexicalEditor,
 } from "@payloadcms/richtext-lexical";
 import { vercelBlobStorage } from "@payloadcms/storage-vercel-blob";
+import { nodemailerAdapter } from "@payloadcms/email-nodemailer"
 import path from "path";
 import { buildConfig } from "payload";
 import { fileURLToPath } from "url";
 import sharp from "sharp";
+import nodemailer from 'nodemailer'
 
 import { Users } from "./collections/Users";
 import { Media } from "./collections/Media";
@@ -42,6 +44,18 @@ export default buildConfig({
 		pool: {
 			connectionString: process.env.DATABASE_URI || "",
 		},
+	}),
+	email: nodemailerAdapter({
+		defaultFromAddress: "website@premium-moving-services",
+		defaultFromName: "Website: Premium Moving Services",
+		transport: nodemailer.createTransport({
+			host: process.env.SMTP_HOST,
+			port: 587,
+			auth: {
+				user: process.env.SMTP_USER,
+				pass: process.env.SMTP_PASS
+			}
+		})
 	}),
 	sharp,
 	plugins: [
