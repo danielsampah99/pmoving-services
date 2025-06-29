@@ -1,5 +1,7 @@
+import { render, pretty } from "@react-email/components";
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import JobApplicationEmail from "../emails/job-application";
 
 export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs));
@@ -8,6 +10,22 @@ export function cn(...inputs: ClassValue[]) {
 export function trimReview(text: string, max = 150) {
 	if (text.length <= max) return text;
 	return text.substring(0, max);
+}
+export type JobApplicationEmailProps = {
+	fullName: string,
+	jobPositions?: string
+	emailAddress: string
+	phone: string,
+	hasTransport: boolean,
+	hasLicense: boolean ,
+	canCommunicate: boolean
+	isAgeOk: boolean,
+	isUsCitizen: boolean
+	employmentPositions?: string
+}
+
+export const jobApplicationEmail = async (props: JobApplicationEmailProps) => {
+	return await pretty(await render(JobApplicationEmail({...props})))
 }
 
 export const BASE_URL = "https://pmoving-services.vercel.app";

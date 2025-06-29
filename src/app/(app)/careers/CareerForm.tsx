@@ -8,14 +8,66 @@ import {
 	Input,
 	Button,
 	Textarea,
+    Description,
 } from "@headlessui/react";
+import { Controller, FieldErrors, FieldPath, SubmitHandler, useForm } from "react-hook-form";
+import { careerFormSchema, CareerFormSchema } from "./schema";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { ErrorMessage } from "@hookform/error-message";
+import { useRouter } from "next/navigation";
+import useSWRMutation from "swr/mutation";
+import { LoaderIcon } from "lucide-react";
 
 export const CareerForm = () => {
-	const [isUsCitizen, setIsUsCitizen] = useState(false);
-	const [isAgeOk, setIsAgeOk] = useState(false);
-	const [hasLicense, setHasLicense] = useState(false);
-	const [hasTransport, setHasTransport] = useState(false);
-	const [canCommunicate, setCanCommunicate] = useState(false);
+
+	const router = useRouter()
+
+	const {control, handleSubmit, formState, register } = useForm<CareerFormSchema>({ mode: 'all', resolver: zodResolver(careerFormSchema), defaultValues: {
+		fullName: '', emailAddress: '', employmentPositions: '', phone: '', hasTransport: false,
+		isUsCitizen: false, isAgeOk: false, hasLicense: false, canCommunicate: false
+	}})
+
+	const sendApplication = async (
+		url: string,
+		{ arg }: { arg: FormData },
+	) => {
+		const response = await fetch(url, {
+			method: "POST",
+			body: arg,
+			// headers: { "Content-Type": "multipart/form-data" },
+		});
+
+		if (response.ok) {
+			router.push("thank-you");
+		}
+	};
+
+	const { trigger, isMutating } = useSWRMutation(
+		"/api/careers",
+		sendApplication,
+	);
+
+	const onSubmit: SubmitHandler<CareerFormSchema>	 = async (formValues) => {
+		const formData = new FormData()
+
+		formData.append('fullName', formValues.fullName)
+			formData.append('emailAddress', formValues.emailAddress)
+			formData.append('employmentPositions', formValues.employmentPositions ?? '')
+			formData.append('phone', formValues.phone)
+			formData.append('hasTransport', String(formValues.hasTransport))
+			formData.append('isUsCitizen', String(formValues.isUsCitizen))
+			formData.append('isAgeOk', String(formValues.isAgeOk))
+			formData.append('hasLicense', String(formValues.hasLicense))
+			formData.append('canCommunicate', String(formValues.canCommunicate))
+
+		console.dir(formData)
+
+		try {
+			await trigger(formData);
+		} catch (e: any) {
+			console.error(e)
+		}
+	}
 
 	return (
 		<div
@@ -44,9 +96,9 @@ export const CareerForm = () => {
 				</p>
 			</div>
 			<form
-				action="#"
-				method="POST"
-				className="mx-auto mt-16 max-w-xl sm:mt-20"
+				onSubmit={handleSubmit(onSubmit)}
+				aria-busy={isMutating}
+				className="mx-auto mt-16 max-w-xl sm:mt-20 aria-busy:opacity-50"
 			>
 				<div className="grid grid-cols-1 gap-x-8 sm:grid-cols-2 gap-y-6">
 					<Field className="col-span-2">
@@ -59,13 +111,15 @@ export const CareerForm = () => {
 						<div className="mt-2.5">
 							<Input
 								id="full-name"
-								name="full-name"
+								{...register('fullName')}
 								type="text"
-								autoComplete="given-name"
+								autoComplete="name"
 								placeholder="John Doe"
 								className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-inset focus-visible:ring-moving-yellow ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-moving-yellow sm:text-sm sm:leading-6"
 							/>
 						</div>
+						<FieldError errors={formState.errors} name="fullName" />
+
 					</Field>
 
 					<Field className="col-span-2">
@@ -78,13 +132,15 @@ export const CareerForm = () => {
 						<div className="mt-2.5">
 							<Input
 								id="email"
-								name="email"
+								{...register('emailAddress')}
 								type="email"
 								autoComplete="email"
 								placeholder="johndoe@email.com"
 								className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-inset focus-visible:ring-moving-yellow focus:ring-inset focus:ring-moving-yellow sm:text-sm sm:leading-6"
 							/>
 						</div>
+						<FieldError errors={formState.errors} name="emailAddress" />
+
 					</Field>
 
 					<Field className="col-span-2">
@@ -97,19 +153,23 @@ export const CareerForm = () => {
 						<div className="mt-2.5">
 							<Input
 								id="tel-number"
-								name="tel-number"
+								{...register('phone')}
 								type="tel"
-								autoComplete="home tel-local"
+								autoComplete="tel"
 								className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-inset focus-visible:ring-moving-yellow focus:ring-inset focus:ring-moving-yellow sm:text-sm sm:leading-6"
 							/>
 						</div>
+						<FieldError errors={formState.errors} name="phone" />
+
 					</Field>
 
+					<Controller control={control} name="isUsCitizen" render={({field}) => (
 					<Field className="flex gap-x-4 col-span-2">
 						<div className="flex h-6 items-center">
 							<Switch
-								checked={isUsCitizen}
-								onChange={setIsUsCitizen}
+								checked={field.value}
+								onChange={field.onChange}
+								ref={field.ref}
 								className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-moving-yellow data-[checked]:bg-moving-yellow"
 							>
 								<span
@@ -121,13 +181,18 @@ export const CareerForm = () => {
 						<Label className="text-sm leading-6 text-gray-600">
 							Are you a U.S. citizen?
 						</Label>
-					</Field>
+						<FieldError errors={formState.errors} name="isUsCitizen" />
 
+					</Field>
+					)} />
+
+					<Controller control={control} name='isAgeOk' render={({field}) => (
 					<Field className="flex gap-x-4 col-span-2">
 						<div className="flex h-6 items-center">
 							<Switch
-								checked={isAgeOk}
-								onChange={setIsAgeOk}
+								checked={field.value}
+								onChange={field.onChange}
+								ref={field.ref}
 								className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-moving-yellow data-[checked]:bg-moving-yellow"
 							>
 								<span
@@ -139,13 +204,17 @@ export const CareerForm = () => {
 						<Label className="text-sm leading-6 text-gray-600">
 							Are you 18 years of age or older?
 						</Label>
-					</Field>
+						<FieldError errors={formState.errors} name="isAgeOk" />
 
+					</Field>
+					)} />
+
+					<Controller control={control} name='hasLicense' render={({field}) => (
 					<Field className="flex gap-x-4 col-span-2">
 						<div className="flex h-6 items-center">
 							<Switch
-								checked={hasLicense}
-								onChange={setHasLicense}
+								checked={field.value}
+								onChange={field.onChange}
 								className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-moving-yellow data-[checked]:bg-moving-yellow"
 							>
 								<span
@@ -157,13 +226,18 @@ export const CareerForm = () => {
 						<Label className="text-sm leading-6 text-gray-600">
 							Do You Have A Current Valid Driver's License?
 						</Label>
-					</Field>
+						<FieldError errors={formState.errors} name="hasLicense" />
 
+					</Field>
+					)} />
+
+					<Controller control={control} name='hasTransport' render={({ field }) => (
 					<Field className="flex gap-x-4 col-span-2">
 						<div className="flex h-6 items-center">
 							<Switch
-								checked={hasTransport}
-								onChange={setHasTransport}
+								checked={field.value}
+								onChange={field.onChange}
+								ref={field.ref}
 								className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-moving-yellow data-[checked]:bg-moving-yellow"
 							>
 								<span
@@ -175,13 +249,18 @@ export const CareerForm = () => {
 						<Label className="text-sm leading-6 text-gray-600">
 							Do You Have Dependable Transportation?
 						</Label>
-					</Field>
+						<FieldError errors={formState.errors} name="hasTransport" />
 
+					</Field>
+					)} />
+
+					<Controller control={control} name='canCommunicate' render={({ field }) => (
 					<Field className="flex gap-x-4 col-span-2">
 						<div className="flex h-6 items-center">
 							<Switch
-								checked={canCommunicate}
-								onChange={setCanCommunicate}
+								checked={field.value}
+								onChange={field.onChange}
+								ref={field.ref}
 								className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-moving-yellow data-[checked]:bg-moving-yellow"
 							>
 								<span
@@ -193,7 +272,10 @@ export const CareerForm = () => {
 						<Label className="text-sm leading-6 text-gray-600">
 							Do you have the ability to communicate effectively in English?
 						</Label>
+						<FieldError errors={formState.errors} name="canCommunicate" />
+
 					</Field>
+					)} />
 
 					<Field className="col-span-2">
 						<Label
@@ -206,19 +288,23 @@ export const CareerForm = () => {
 						<div className="mt-2.5">
 							<Textarea
 								id="message"
-								name="message"
+								{...register('employmentPositions')}
 								rows={2}
+								aria-describedby='errors-employmentPositions'
 								className="block field-sizing w-full rounded-md border-0 px-3.5 py-2 focus-visible:outline-none text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-moving-yellow focus:ring-inset focus:ring-moving-yellow sm:text-sm sm:leading-6"
 								defaultValue={""}
 							/>
+							<FieldError errors={formState.errors} name="employmentPositions" />
 						</div>
 					</Field>
 				</div>
 				<div className="mt-10">
 					<Button
 						type="submit"
-						className="block w-full rounded-md bg-moving-yellow/80 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-moving-yellow/100 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-moving-yellow/80"
+						disabled={isMutating}
+						className="inline-flex items-center justify-center w-full rounded-md bg-moving-yellow/80 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-moving-yellow/100 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-moving-yellow/80"
 					>
+						{isMutating && <LoaderIcon className="animate-spin size-5" aria-hidden="true" />}
 						Talk to us
 					</Button>
 				</div>
@@ -226,3 +312,25 @@ export const CareerForm = () => {
 		</div>
 	);
 };
+
+type FieldErrorProps = {
+	errors: FieldErrors<CareerFormSchema>
+	name: FieldPath<CareerFormSchema>
+}
+
+const FieldError = ({errors, name}: FieldErrorProps) => {
+	return (
+		<ErrorMessage
+			errors={errors}
+			name={name}
+			render={({ message }) => (
+				<Description
+					id={`errors-${name}`}
+					className="mt-2 block text-sm text-red-600"
+				>
+					{message}
+				</Description>
+			)}
+		/>
+	)
+}
