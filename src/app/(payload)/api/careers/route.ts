@@ -25,7 +25,7 @@ export const POST = async (req: NextRequest) => {
 		try {
 			const email = await payload.sendEmail({ to: process.env.SMTP_USER, subject: 'Premium Moving Services: Job Application', html: await jobApplicationEmail({...data})})
 		} catch(e) {
-			throw new Error(e?.message)
+			throw new Error("Could not send email")
 		}
 
 
