@@ -10,7 +10,7 @@ import { specialtyMovingFAQs } from "@/data/moving-tips";
 const SpecialtyMovingPage = () => {
 	return (
 		<ServiceLayout
-			image="/api/media/file/gun-safe.webp"
+			image="/api/media/file/specialty-moving-statues.webp"
 			title="Specialty Moving Services"
 			desc="Expert moving solutions for unique and valuable items. Our specialized services ensure safe handling of antiques, pianos, safes, and more."
 		>

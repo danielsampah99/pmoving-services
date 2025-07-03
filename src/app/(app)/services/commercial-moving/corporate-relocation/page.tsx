@@ -27,7 +27,7 @@ const CorporateRelocation = () => {
 							</p>
 							<div className="relative">
 								<img
-									src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/office-moving-1920w.jpg"
+									src="/api/media/file/pirnter-office-desk-joined.webp"
 									alt="Corporate Relocation Services"
 									className="w-full rounded-lg max-h-[700px] object-cover"
 								/>

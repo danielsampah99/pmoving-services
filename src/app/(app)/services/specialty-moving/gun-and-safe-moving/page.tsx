@@ -44,7 +44,7 @@ const GunAndSafeMovingPage = () => {
 						</ul>
 					</div>
 					<img
-						src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Gun+safe-1920w.JPG"
+						src="/moving-process.webp"
 						alt="Professional gun safe moving"
 						className="rounded-lg shadow-xl"
 					/>

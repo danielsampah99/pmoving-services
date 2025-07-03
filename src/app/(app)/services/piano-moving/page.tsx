@@ -43,7 +43,7 @@ const PianoMovingPage = () => {
 							</p>
 						</div>
 						<img
-							src="/piano-moving.webp"
+							src="/moving-process.webp"
 							alt="Professional piano moving"
 							className="rounded-lg shadow-lg object-cover h-full"
 						/>

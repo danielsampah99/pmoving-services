@@ -17,6 +17,7 @@ import { ErrorMessage } from "@hookform/error-message";
 import { useRouter } from "next/navigation";
 import useSWRMutation from "swr/mutation";
 import { LoaderIcon } from "lucide-react";
+import { EnvelopeIcon, PhoneIcon, UserIcon } from "@heroicons/react/20/solid";
 
 export const CareerForm = () => {
 
@@ -101,6 +102,39 @@ export const CareerForm = () => {
 				className="mx-auto mt-16 max-w-xl sm:mt-20 aria-busy:opacity-50"
 			>
 				<div className="grid grid-cols-1 gap-x-8 sm:grid-cols-2 gap-y-6">
+					{/* <Field className="w-full">
+						<Label className="block text-sm font-medium text-gray-700">
+							Move Date
+						</Label>
+
+						<div className="relative mt-2 rounded-md shadow-sm">
+							<div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+								<CalendarIcon
+									aria-hidden="true"
+									className="size-5 fill-gray-400"
+								/>
+							</div>
+							<Input
+								{...field}
+								type="date"
+								id="move-date"
+								aria-describedby="move-date-error"
+								className="block w-full rounded-md border-0 py-1.5 pl-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-moving-yellow focus-visible:ring-moving-yellow focus-visible:ring-inset focus-visible:ring-2 focus-visible:outline-none sm:text-sm sm:leading-6"
+							/>
+						</div>
+						<ErrorMessage
+							errors={form.formState.errors}
+							name="proposedMoveDate"
+							render={({ message }) => (
+								<Description
+									id="move-date-error"
+									className="mt-2 text-sm text-red-600"
+								>
+									{message}
+								</Description>
+							)}
+						/>
+					</Field> */}
 					<Field className="col-span-2">
 						<Label
 							htmlFor="full-name"
@@ -108,14 +142,20 @@ export const CareerForm = () => {
 						>
 							Full Name
 						</Label>
-						<div className="mt-2.5">
+						<div className="mt-2.5 relative rounded-md shadow-sm">
+							<div className='pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3'>
+								<UserIcon
+									aria-hidden="true"
+									className="size-5 fill-gray-400"
+								/>
+							</div>
 							<Input
 								id="full-name"
 								{...register('fullName')}
 								type="text"
 								autoComplete="name"
-								placeholder="John Doe"
-								className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-inset focus-visible:ring-moving-yellow ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-moving-yellow sm:text-sm sm:leading-6"
+								placeholder="Full Name"
+								className="block w-full rounded-md shadow-sm sm:text-sm sm:leading-6 border-0 py-1.5 pl-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-moving-yellow focus-visible:ring-moving-yellow focus-visible:ring-inset focus-visible:ring-2 focus-visible:outline-none"
 							/>
 						</div>
 						<FieldError errors={formState.errors} name="fullName" />
@@ -129,14 +169,20 @@ export const CareerForm = () => {
 						>
 							Email
 						</Label>
-						<div className="mt-2.5">
+						<div className="mt-2.5 relative rounded-md shadow-sm">
+							<div className='pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3'>
+								<EnvelopeIcon
+								aria-hidden="true"
+								className="size-5 fill-gray-400"
+								/>
+							</div>
 							<Input
 								id="email"
 								{...register('emailAddress')}
 								type="email"
 								autoComplete="email"
-								placeholder="johndoe@email.com"
-								className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-inset focus-visible:ring-moving-yellow focus:ring-inset focus:ring-moving-yellow sm:text-sm sm:leading-6"
+								placeholder="Email"
+								className="block w-full rounded-md shadow-sm sm:text-sm sm:leading-6 border-0 py-1.5 pl-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-moving-yellow focus-visible:ring-moving-yellow focus-visible:ring-inset focus-visible:ring-2 focus-visible:outline-none"
 							/>
 						</div>
 						<FieldError errors={formState.errors} name="emailAddress" />
@@ -150,13 +196,20 @@ export const CareerForm = () => {
 						>
 							Phone Number
 						</Label>
-						<div className="mt-2.5">
+						<div className="mt-2.5 relative rounded-md shadow-sm">
+							<div className='pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3'>
+								<PhoneIcon
+									aria-hidden="true"
+									className="size-5 fill-gray-400"
+								/>
+							</div>
 							<Input
 								id="tel-number"
 								{...register('phone')}
 								type="tel"
 								autoComplete="tel"
-								className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-inset focus-visible:ring-moving-yellow focus:ring-inset focus:ring-moving-yellow sm:text-sm sm:leading-6"
+								placeholder="Phone Number"
+								className="block w-full rounded-md shadow-sm sm:text-sm sm:leading-6 border-0 py-1.5 pl-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-moving-yellow focus-visible:ring-moving-yellow focus-visible:ring-inset focus-visible:ring-2 focus-visible:outline-none"
 							/>
 						</div>
 						<FieldError errors={formState.errors} name="phone" />

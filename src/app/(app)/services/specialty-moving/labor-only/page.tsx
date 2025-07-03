@@ -9,11 +9,18 @@ import { laborOnlyFAQs } from "@/data/moving-tips";
 import { specialtyMovingServices } from "@/data/services";
 import { ServicesSection } from "@/components/ServicesSection";
 
+const checklist: {id: number, text: string}[] = [
+	{ id: 1, text: "Experienced and trained moving professionals" },
+	{ id: 2, text: "Flexible scheduling to meet your needs" },
+	{ id: 3, text: "Proper equipment and tools for safe moving" },
+	{ id: 4, text: "Fully insured and background-checked movers" }
+]
+
 const LaborOnlyMovingPage = () => {
 	return (
 		<div>
 			<ServiceLayout
-				image="/residential-moving.webp"
+				image="/api/media/file/Unloading%2BABF%2BPods-1920w.webp"
 				title="Labor Only Moving Services"
 				desc="Professional moving labor assistance for loading, unloading, and in-house moving needs"
 			>
@@ -42,7 +49,7 @@ const LaborOnlyMovingPage = () => {
 							</p>
 						</div>
 						<img
-							src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Unloading+ABF+Pods-1920w.jpg"
+							src="/residential-moving.webp"
 							alt="Moving labor team assisting"
 							className="rounded-lg shadow-xl"
 						/>
@@ -91,22 +98,13 @@ const LaborOnlyMovingPage = () => {
 							Why Choose Our Labor Service
 						</h3>
 						<ul className="space-y-3">
-							<li className="flex items-start">
-								<span className="text-blue-600 mr-2">✓</span>
-								<span>Experienced and trained moving professionals</span>
-							</li>
-							<li className="flex items-start">
-								<span className="text-blue-600 mr-2">✓</span>
-								<span>Flexible scheduling to meet your needs</span>
-							</li>
-							<li className="flex items-start">
-								<span className="text-blue-600 mr-2">✓</span>
-								<span>Proper equipment and tools for safe moving</span>
-							</li>
-							<li className="flex items-start">
-								<span className="text-blue-600 mr-2">✓</span>
-								<span>Fully insured and background-checked movers</span>
-							</li>
+							{checklist.map(item => (
+								<li key={item.id} className='flex items-start gap-x-0.5'>
+									<span className='mr-2 text-moving-yellow'>✓</span>
+									<span>{item.text}</span>
+								</li>
+							))}
+
 						</ul>
 					</div>
 				</div>

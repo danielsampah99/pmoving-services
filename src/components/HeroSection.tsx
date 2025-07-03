@@ -6,16 +6,16 @@ import { Button } from "@headlessui/react";
 
 const images = [
 	{
-		url: "https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Deshun+unloadingc-1200w.JPG",
+		url: "/api/media/file/Deshun%20Unloading.jpg",
 		alt: "Professional movers loading a moving truck",
 	},
 	{
-		url: "https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Deshun+and+Drake+c-1200w.jpg",
-		alt: "Movers wrapping furniture with protective material",
+		url: "/api/media/file/Deshun%20and%20Drake.webp",
+		alt: "Deshun and Drake moving boxes",
 	},
 	{
-		url: "https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/new+truck+c-4-2-1200w.jpg",
-		alt: "Happy family in their new home after moving",
+		url: "/api/media/file/new%20truck.jpg",
+		alt: "Truck 1",
 	},
 ];
 
@@ -29,11 +29,6 @@ export const HeroSection = () => {
 	const prevImage = () => {
 		setCurrentImage((prev) => (prev === 0 ? images.length - 1 : prev - 1));
 	};
-
-	// useEffect(() => {
-	// 	const interval = setInterval(nextImage, 5000);
-	// 	return () => clearInterval(interval);
-	// }, [nextImage]);
 
 	return (
 		<div className="relative bg-background overflow-hidden">
