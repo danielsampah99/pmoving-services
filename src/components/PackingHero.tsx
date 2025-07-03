@@ -10,7 +10,7 @@ export const PackingHero = () => {
 			{/* Background Image with Overlay */}
 			<div className="absolute inset-0">
 				<img
-					src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/new+truck+c-4-2-2880w.jpg"
+					src="/api/media/file/new%20truck.jpg"
 					alt="Professional packing service"
 					className="w-full h-full object-cover opacity-75 object-center"
 				/>

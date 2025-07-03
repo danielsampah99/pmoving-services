@@ -12,21 +12,21 @@ export function trimReview(text: string, max = 150) {
 	return text.substring(0, max);
 }
 export type JobApplicationEmailProps = {
-	fullName: string,
-	jobPositions?: string
-	emailAddress: string
-	phone: string,
-	hasTransport: boolean,
-	hasLicense: boolean ,
-	canCommunicate: boolean
-	isAgeOk: boolean,
-	isUsCitizen: boolean
-	employmentPositions?: string
-}
+	fullName: string;
+	jobPositions?: string;
+	emailAddress: string;
+	phone: string;
+	hasTransport: boolean;
+	hasLicense: boolean;
+	canCommunicate: boolean;
+	isAgeOk: boolean;
+	isUsCitizen: boolean;
+	employmentPositions?: string;
+};
 
 export const jobApplicationEmail = async (props: JobApplicationEmailProps) => {
-	return await pretty(await render(JobApplicationEmail({...props})))
-}
+	return await pretty(await render(JobApplicationEmail({ ...props })));
+};
 
 export const BASE_URL = "https://pmoving-services.vercel.app";
 export const COMPANY = "Premium Moving Services";

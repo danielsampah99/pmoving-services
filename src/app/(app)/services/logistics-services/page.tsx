@@ -13,7 +13,7 @@ import { ServicesSection } from "@/components/ServicesSection";
 const LogisticsServicePage = () => {
 	return (
 		<ServiceLayout
-			image="/logistics-services-hero.webp"
+			image="/api/media/file/logistics-services.webp"
 			title="Logistics Services"
 			desc="Professional logistics solutions for efficient supply chain management and distribution"
 		>

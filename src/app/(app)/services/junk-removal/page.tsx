@@ -10,7 +10,7 @@ import { ServicesSection } from "@/components/ServicesSection";
 const JunkRemovalPage = () => {
 	return (
 		<ServiceLayout
-			image="/apartment-moving.webp"
+			image="/api/media/file/disassemble-treadmill.webp"
 			title="Professional Junk Removal Services"
 			desc="Expert junk removal and disposal services for residential and commercial properties. We handle the heavy lifting and ensure proper disposal of your unwanted items."
 		>
@@ -41,7 +41,7 @@ const JunkRemovalPage = () => {
 							</p>
 						</div>
 						<img
-							src="/office-moving.webp"
+							src="/moving-process.webp"
 							alt="Junk Removal Services"
 							className="rounded-lg shadow-lg object-cover h-full"
 						/>

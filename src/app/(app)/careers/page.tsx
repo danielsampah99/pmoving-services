@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 				alt: "Premium Moving Services Career Opportunities",
 			},
 			{
-				url: "https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Deshun+and+Drake+c-1920w.jpg",
+				url: "/api/media/file/Deshun%20and%20Drake.webp",
 				width: 1200,
 				height: 630,
 				alt: "Premium Moving Services Career Opportunities",

@@ -164,7 +164,10 @@ export const TheMovingProcess: FC = () => {
 											step.color,
 										)}
 									>
-										<step.icon className="size-5 group-hover/icon:animate-bounce" aria-hidden="true" />
+										<step.icon
+											className="size-5 group-hover/icon:animate-bounce"
+											aria-hidden="true"
+										/>
 									</div>
 
 									<div className="flex-1">
@@ -182,8 +185,20 @@ export const TheMovingProcess: FC = () => {
 								</div>
 
 								{/* Decorative elements */}
-								<div className={cn("absolute -bottom-10 -right-10 sm:-bottom-6 sm:-right-6 sm:size-24 size-20 rounded-full z-0", index % 2 === 1 ? 'bg-moving-gray/10' : 'bg-moving-yellow/20')} />
-								<div className={cn("absolute -top-10 -left-10 size-20 sm:size-32 rounded-full -z-0", index % 2 === 1 ? 'bg-yellow-50' : 'bg-moving-gray/10')} />
+								<div
+									className={cn(
+										"absolute -bottom-10 -right-10 sm:-bottom-6 sm:-right-6 sm:size-24 size-20 rounded-full z-0",
+										index % 2 === 1
+											? "bg-moving-gray/10"
+											: "bg-moving-yellow/20",
+									)}
+								/>
+								<div
+									className={cn(
+										"absolute -top-10 -left-10 size-20 sm:size-32 rounded-full -z-0",
+										index % 2 === 1 ? "bg-yellow-50" : "bg-moving-gray/10",
+									)}
+								/>
 							</div>
 						</motion.div>
 					))}

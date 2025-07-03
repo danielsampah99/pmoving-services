@@ -37,7 +37,7 @@ export function JobApplicationEmail (props: JobApplicationEmailProps) {
 					{[
 						{ number: 1, title: 'Full Name', description: props.fullName},
 						{ number: 2, title: 'Email Address', description: props.emailAddress.toLowerCase() },
-						{ number: 3, title: 'Phone Number', descriptin: props.phone },
+						{ number: 3, title: 'Phone Number', description: props.phone },
 						{ number: 4, title: 'Transportation', description: props.hasTransport ? 'Applicant has a valid mode of transportation' : 'Applicant does not have a reliable mode of transpoprt' },
 						{ number: 5, title: 'Citizenship', description: props.isUsCitizen ? 'Applicant holds a valid US citizenship' : 'Applicant may not be a citizen or not hold a valid US citizenshipp' },
 						{ number: 6, title: 'Age', description: props.isAgeOk ? 'Applicant meets the age requirement of the job' : 'Applicant does not meet the necessary age requirements of the job'},

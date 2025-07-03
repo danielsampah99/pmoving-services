@@ -36,7 +36,7 @@ export const Info = () => {
 					</div>
 					<img
 						alt="Moving Jobs Minnesota - Dashun & Drake"
-						src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Deshun+and+Drake+c-1920w.jpg"
+						src="/api/media/file/Deshun%20and%20Drake.webp"
 						width={2432}
 						height={1442}
 						className="relative -z-20 min-w-full max-w-xl rounded-xl shadow-xl ring-1 ring-white/10 lg:row-span-4 lg:w-[64rem] lg:max-w-none"

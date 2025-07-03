@@ -7,7 +7,7 @@ import { RequestQuote } from "../local-moving/residential-movers/request-quote";
 const CorporateMoving = () => {
 	return (
 		<ServiceLayout
-			image="/corporate.jpg"
+			image="/api/media/file/corporate-moving.webp"
 			title="Corporate Moving Services"
 			desc="Professional relocation solutions for businesses and employees"
 		>
