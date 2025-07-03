@@ -299,3 +299,321 @@ effect-underline:hover:after {
 		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 	}
 }
+
+/* Animated Slide In Underline */
+.underline-slide {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-slide::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  transition: width 0.3s ease-in-out;
+}
+
+.underline-slide:hover::after {
+  width: 100%;
+}
+
+/* Center Expand Underline */
+.underline-center {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-center::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background: #ef4444;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.underline-center:hover::after {
+  width: 100%;
+}
+
+/* Gradient Underline */
+.underline-gradient {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-gradient::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
+  background-size: 200% 100%;
+  transition: width 0.4s ease-in-out;
+  animation: gradient-shift 2s ease-in-out infinite;
+}
+
+.underline-gradient:hover::after {
+  width: 100%;
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Double Line Underline */
+.underline-double {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-double::before,
+.underline-double::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  left: 0;
+  background: #8b5cf6;
+  transition: width 0.3s ease-in-out;
+}
+
+.underline-double::before {
+  bottom: -2px;
+  transition-delay: 0.1s;
+}
+
+.underline-double::after {
+  bottom: -6px;
+}
+
+.underline-double:hover::before,
+.underline-double:hover::after {
+  width: 100%;
+}
+
+/* Wavy Underline */
+.underline-wavy {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-wavy::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 6px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10'%3E%3Cpath d='M0,5 Q25,0 50,5 T100,5' stroke='%23f59e0b' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-size: 20px 6px;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.4s ease-in-out;
+}
+
+.underline-wavy:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* Dotted Trail Underline */
+.underline-dots {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-dots::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-image: radial-gradient(circle, #10b981 1px, transparent 1px);
+  background-size: 6px 2px;
+  background-repeat: repeat-x;
+  transition: width 0.5s ease-in-out;
+}
+
+.underline-dots:hover::after {
+  width: 100%;
+}
+
+/* Thick to Thin Underline */
+.underline-thick {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-thick::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 8px;
+  background: #ec4899;
+  transition: all 0.4s ease-in-out;
+  transform-origin: left;
+}
+
+.underline-thick:hover::after {
+  width: 100%;
+  height: 2px;
+}
+
+/* Neon Glow Underline */
+.underline-neon {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-neon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #00ffff;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+  transition: width 0.4s ease-in-out;
+}
+
+.underline-neon:hover::after {
+  width: 100%;
+}
+
+/* Handwritten Underline */
+.underline-handwritten {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-handwritten::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8'%3E%3Cpath d='M2,6 Q20,2 40,4 T80,3 Q90,4 98,2' stroke='%23dc2626' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 4px;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.5s ease-in-out;
+}
+
+.underline-handwritten:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* Split Reveal Underline */
+.underline-split {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-split::before,
+.underline-split::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #7c3aed;
+  transition: width 0.3s ease-in-out;
+}
+
+.underline-split::before {
+  left: 50%;
+}
+
+.underline-split::after {
+  right: 50%;
+}
+
+.underline-split:hover::before,
+.underline-split:hover::after {
+  width: 50%;
+}
+
+/* Bounce Effect Underline */
+.underline-bounce {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-bounce::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 3px;
+  background: #f59e0b;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.underline-bounce:hover::after {
+  width: 100%;
+}
+
+/* Typewriter Underline */
+.underline-typewriter {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-typewriter::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #059669;
+  transition: width 0.6s steps(20, end);
+}
+
+.underline-typewriter:hover::after {
+  width: 100%;
+}
+
+/* Utility styles */
+.underline-slide,
+.underline-center,
+.underline-gradient,
+.underline-double,
+.underline-wavy,
+.underline-dots,
+.underline-thick,
+.underline-neon,
+.underline-handwritten,
+.underline-split,
+.underline-bounce,
+.underline-typewriter {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}

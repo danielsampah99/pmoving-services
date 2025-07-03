@@ -25,9 +25,11 @@ const dirname = path.dirname(filename);
 export default buildConfig({
 	admin: {
 		user: Users.slug,
+		avatar: "gravatar",
 		importMap: {
 			baseDir: path.resolve(dirname),
 		},
+
 	},
 	collections: [Users, Media, ServiceArea, Blogs, Gallery],
 	editor: lexicalEditor({

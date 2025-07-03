@@ -21,7 +21,7 @@ export const ServiceArea: FC<{ links: ServiceAreaType[] }> = ({ links }) => {
 				<div className="inline-flex items-center gap-2 bg-transparent text-sm/6 font-semibold text-gray-100 hover:text-white focus:text-white">
 					<Link
 						href="/service-areas"
-						className="hover:underline underline-offset-1"
+						className="underline-bounce"
 					>
 						Moving Service Areas
 					</Link>

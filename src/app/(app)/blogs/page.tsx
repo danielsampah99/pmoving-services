@@ -1,7 +1,7 @@
 import { getBlogs } from "@/data/blogs";
 import { Hero } from "./hero";
 import { AllPosts } from "./all-posts";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { BASE_URL } from "@/utils";
 
 export const metadata: Metadata = {
