@@ -20,7 +20,7 @@ export const Services: FC = () => {
 		<div className="relative isolate flex items-start gap-x-0.5">
 			<Link
 				href={"/services"}
-				className="text-white font-semibold hover:underline underline-offset-1"
+				className="text-white font-semibold underline-bounce"
 			>
 				Moving Services
 			</Link>
