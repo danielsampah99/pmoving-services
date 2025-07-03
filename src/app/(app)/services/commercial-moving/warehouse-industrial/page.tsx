@@ -39,7 +39,7 @@ const WarehouseIndustrialPage = () => {
 								</p>
 							</div>
 							<img
-							src="/api/media/file/industrial-moving.webp"
+								src="/api/media/file/industrial-moving.webp"
 								alt="Industrial relocation"
 								className="rounded-lg shadow-xl"
 							/>
@@ -59,10 +59,10 @@ const WarehouseIndustrialPage = () => {
 								</p>
 								<div className="gap-4 mt-6">
 									<img
-                                        src="/moving-process.webp"
-                                        alt="Moving guide"
-                                        className="rounded-lg"
-                                    />
+										src="/moving-process.webp"
+										alt="Moving guide"
+										className="rounded-lg"
+									/>
 								</div>
 							</div>
 

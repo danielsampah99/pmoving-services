@@ -9,12 +9,12 @@ import { laborOnlyFAQs } from "@/data/moving-tips";
 import { specialtyMovingServices } from "@/data/services";
 import { ServicesSection } from "@/components/ServicesSection";
 
-const checklist: {id: number, text: string}[] = [
+const checklist: { id: number; text: string }[] = [
 	{ id: 1, text: "Experienced and trained moving professionals" },
 	{ id: 2, text: "Flexible scheduling to meet your needs" },
 	{ id: 3, text: "Proper equipment and tools for safe moving" },
-	{ id: 4, text: "Fully insured and background-checked movers" }
-]
+	{ id: 4, text: "Fully insured and background-checked movers" },
+];
 
 const LaborOnlyMovingPage = () => {
 	return (
@@ -98,13 +98,12 @@ const LaborOnlyMovingPage = () => {
 							Why Choose Our Labor Service
 						</h3>
 						<ul className="space-y-3">
-							{checklist.map(item => (
-								<li key={item.id} className='flex items-start gap-x-0.5'>
-									<span className='mr-2 text-moving-yellow'>✓</span>
+							{checklist.map((item) => (
+								<li key={item.id} className="flex items-start gap-x-0.5">
+									<span className="mr-2 text-moving-yellow">✓</span>
 									<span>{item.text}</span>
 								</li>
 							))}
-
 						</ul>
 					</div>
 				</div>

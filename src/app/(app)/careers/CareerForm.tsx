@@ -8,9 +8,15 @@ import {
 	Input,
 	Button,
 	Textarea,
-    Description,
+	Description,
 } from "@headlessui/react";
-import { Controller, FieldErrors, FieldPath, SubmitHandler, useForm } from "react-hook-form";
+import {
+	Controller,
+	FieldErrors,
+	FieldPath,
+	SubmitHandler,
+	useForm,
+} from "react-hook-form";
 import { careerFormSchema, CareerFormSchema } from "./schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ErrorMessage } from "@hookform/error-message";
@@ -20,18 +26,26 @@ import { LoaderIcon } from "lucide-react";
 import { EnvelopeIcon, PhoneIcon, UserIcon } from "@heroicons/react/20/solid";
 
 export const CareerForm = () => {
+	const router = useRouter();
 
-	const router = useRouter()
+	const { control, handleSubmit, formState, register } =
+		useForm<CareerFormSchema>({
+			mode: "all",
+			resolver: zodResolver(careerFormSchema),
+			defaultValues: {
+				fullName: "",
+				emailAddress: "",
+				employmentPositions: "",
+				phone: "",
+				hasTransport: false,
+				isUsCitizen: false,
+				isAgeOk: false,
+				hasLicense: false,
+				canCommunicate: false,
+			},
+		});
 
-	const {control, handleSubmit, formState, register } = useForm<CareerFormSchema>({ mode: 'all', resolver: zodResolver(careerFormSchema), defaultValues: {
-		fullName: '', emailAddress: '', employmentPositions: '', phone: '', hasTransport: false,
-		isUsCitizen: false, isAgeOk: false, hasLicense: false, canCommunicate: false
-	}})
-
-	const sendApplication = async (
-		url: string,
-		{ arg }: { arg: FormData },
-	) => {
+	const sendApplication = async (url: string, { arg }: { arg: FormData }) => {
 		const response = await fetch(url, {
 			method: "POST",
 			body: arg,
@@ -48,27 +62,30 @@ export const CareerForm = () => {
 		sendApplication,
 	);
 
-	const onSubmit: SubmitHandler<CareerFormSchema>	 = async (formValues) => {
-		const formData = new FormData()
+	const onSubmit: SubmitHandler<CareerFormSchema> = async (formValues) => {
+		const formData = new FormData();
 
-		formData.append('fullName', formValues.fullName)
-			formData.append('emailAddress', formValues.emailAddress)
-			formData.append('employmentPositions', formValues.employmentPositions ?? '')
-			formData.append('phone', formValues.phone)
-			formData.append('hasTransport', String(formValues.hasTransport))
-			formData.append('isUsCitizen', String(formValues.isUsCitizen))
-			formData.append('isAgeOk', String(formValues.isAgeOk))
-			formData.append('hasLicense', String(formValues.hasLicense))
-			formData.append('canCommunicate', String(formValues.canCommunicate))
+		formData.append("fullName", formValues.fullName);
+		formData.append("emailAddress", formValues.emailAddress);
+		formData.append(
+			"employmentPositions",
+			formValues.employmentPositions ?? "",
+		);
+		formData.append("phone", formValues.phone);
+		formData.append("hasTransport", String(formValues.hasTransport));
+		formData.append("isUsCitizen", String(formValues.isUsCitizen));
+		formData.append("isAgeOk", String(formValues.isAgeOk));
+		formData.append("hasLicense", String(formValues.hasLicense));
+		formData.append("canCommunicate", String(formValues.canCommunicate));
 
-		console.dir(formData)
+		console.dir(formData);
 
 		try {
 			await trigger(formData);
 		} catch (e: any) {
-			console.error(e)
+			console.error(e);
 		}
-	}
+	};
 
 	return (
 		<div
@@ -143,15 +160,12 @@ export const CareerForm = () => {
 							Full Name
 						</Label>
 						<div className="mt-2.5 relative rounded-md shadow-sm">
-							<div className='pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3'>
-								<UserIcon
-									aria-hidden="true"
-									className="size-5 fill-gray-400"
-								/>
+							<div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+								<UserIcon aria-hidden="true" className="size-5 fill-gray-400" />
 							</div>
 							<Input
 								id="full-name"
-								{...register('fullName')}
+								{...register("fullName")}
 								type="text"
 								autoComplete="name"
 								placeholder="Full Name"
@@ -159,7 +173,6 @@ export const CareerForm = () => {
 							/>
 						</div>
 						<FieldError errors={formState.errors} name="fullName" />
-
 					</Field>
 
 					<Field className="col-span-2">
@@ -170,15 +183,15 @@ export const CareerForm = () => {
 							Email
 						</Label>
 						<div className="mt-2.5 relative rounded-md shadow-sm">
-							<div className='pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3'>
+							<div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
 								<EnvelopeIcon
-								aria-hidden="true"
-								className="size-5 fill-gray-400"
+									aria-hidden="true"
+									className="size-5 fill-gray-400"
 								/>
 							</div>
 							<Input
 								id="email"
-								{...register('emailAddress')}
+								{...register("emailAddress")}
 								type="email"
 								autoComplete="email"
 								placeholder="Email"
@@ -186,7 +199,6 @@ export const CareerForm = () => {
 							/>
 						</div>
 						<FieldError errors={formState.errors} name="emailAddress" />
-
 					</Field>
 
 					<Field className="col-span-2">
@@ -197,7 +209,7 @@ export const CareerForm = () => {
 							Phone Number
 						</Label>
 						<div className="mt-2.5 relative rounded-md shadow-sm">
-							<div className='pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3'>
+							<div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
 								<PhoneIcon
 									aria-hidden="true"
 									className="size-5 fill-gray-400"
@@ -205,7 +217,7 @@ export const CareerForm = () => {
 							</div>
 							<Input
 								id="tel-number"
-								{...register('phone')}
+								{...register("phone")}
 								type="tel"
 								autoComplete="tel"
 								placeholder="Phone Number"
@@ -213,122 +225,136 @@ export const CareerForm = () => {
 							/>
 						</div>
 						<FieldError errors={formState.errors} name="phone" />
-
 					</Field>
 
-					<Controller control={control} name="isUsCitizen" render={({field}) => (
-					<Field className="flex gap-x-4 col-span-2">
-						<div className="flex h-6 items-center">
-							<Switch
-								checked={field.value}
-								onChange={field.onChange}
-								ref={field.ref}
-								className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-moving-yellow data-[checked]:bg-moving-yellow"
-							>
-								<span
-									aria-hidden="true"
-									className="size-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out group-data-[checked]:translate-x-3.5"
-								/>
-							</Switch>
-						</div>
-						<Label className="text-sm leading-6 text-gray-600">
-							Are you a U.S. citizen?
-						</Label>
-						<FieldError errors={formState.errors} name="isUsCitizen" />
+					<Controller
+						control={control}
+						name="isUsCitizen"
+						render={({ field }) => (
+							<Field className="flex gap-x-4 col-span-2">
+								<div className="flex h-6 items-center">
+									<Switch
+										checked={field.value}
+										onChange={field.onChange}
+										ref={field.ref}
+										className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-moving-yellow data-[checked]:bg-moving-yellow"
+									>
+										<span
+											aria-hidden="true"
+											className="size-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out group-data-[checked]:translate-x-3.5"
+										/>
+									</Switch>
+								</div>
+								<Label className="text-sm leading-6 text-gray-600">
+									Are you a U.S. citizen?
+								</Label>
+								<FieldError errors={formState.errors} name="isUsCitizen" />
+							</Field>
+						)}
+					/>
 
-					</Field>
-					)} />
+					<Controller
+						control={control}
+						name="isAgeOk"
+						render={({ field }) => (
+							<Field className="flex gap-x-4 col-span-2">
+								<div className="flex h-6 items-center">
+									<Switch
+										checked={field.value}
+										onChange={field.onChange}
+										ref={field.ref}
+										className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-moving-yellow data-[checked]:bg-moving-yellow"
+									>
+										<span
+											aria-hidden="true"
+											className="size-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out group-data-[checked]:translate-x-3.5"
+										/>
+									</Switch>
+								</div>
+								<Label className="text-sm leading-6 text-gray-600">
+									Are you 18 years of age or older?
+								</Label>
+								<FieldError errors={formState.errors} name="isAgeOk" />
+							</Field>
+						)}
+					/>
 
-					<Controller control={control} name='isAgeOk' render={({field}) => (
-					<Field className="flex gap-x-4 col-span-2">
-						<div className="flex h-6 items-center">
-							<Switch
-								checked={field.value}
-								onChange={field.onChange}
-								ref={field.ref}
-								className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-moving-yellow data-[checked]:bg-moving-yellow"
-							>
-								<span
-									aria-hidden="true"
-									className="size-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out group-data-[checked]:translate-x-3.5"
-								/>
-							</Switch>
-						</div>
-						<Label className="text-sm leading-6 text-gray-600">
-							Are you 18 years of age or older?
-						</Label>
-						<FieldError errors={formState.errors} name="isAgeOk" />
+					<Controller
+						control={control}
+						name="hasLicense"
+						render={({ field }) => (
+							<Field className="flex gap-x-4 col-span-2">
+								<div className="flex h-6 items-center">
+									<Switch
+										checked={field.value}
+										onChange={field.onChange}
+										className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-moving-yellow data-[checked]:bg-moving-yellow"
+									>
+										<span
+											aria-hidden="true"
+											className="size-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out group-data-[checked]:translate-x-3.5"
+										/>
+									</Switch>
+								</div>
+								<Label className="text-sm leading-6 text-gray-600">
+									Do You Have A Current Valid Driver's License?
+								</Label>
+								<FieldError errors={formState.errors} name="hasLicense" />
+							</Field>
+						)}
+					/>
 
-					</Field>
-					)} />
+					<Controller
+						control={control}
+						name="hasTransport"
+						render={({ field }) => (
+							<Field className="flex gap-x-4 col-span-2">
+								<div className="flex h-6 items-center">
+									<Switch
+										checked={field.value}
+										onChange={field.onChange}
+										ref={field.ref}
+										className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-moving-yellow data-[checked]:bg-moving-yellow"
+									>
+										<span
+											aria-hidden="true"
+											className="size-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out group-data-[checked]:translate-x-3.5"
+										/>
+									</Switch>
+								</div>
+								<Label className="text-sm leading-6 text-gray-600">
+									Do You Have Dependable Transportation?
+								</Label>
+								<FieldError errors={formState.errors} name="hasTransport" />
+							</Field>
+						)}
+					/>
 
-					<Controller control={control} name='hasLicense' render={({field}) => (
-					<Field className="flex gap-x-4 col-span-2">
-						<div className="flex h-6 items-center">
-							<Switch
-								checked={field.value}
-								onChange={field.onChange}
-								className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-moving-yellow data-[checked]:bg-moving-yellow"
-							>
-								<span
-									aria-hidden="true"
-									className="size-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out group-data-[checked]:translate-x-3.5"
-								/>
-							</Switch>
-						</div>
-						<Label className="text-sm leading-6 text-gray-600">
-							Do You Have A Current Valid Driver's License?
-						</Label>
-						<FieldError errors={formState.errors} name="hasLicense" />
-
-					</Field>
-					)} />
-
-					<Controller control={control} name='hasTransport' render={({ field }) => (
-					<Field className="flex gap-x-4 col-span-2">
-						<div className="flex h-6 items-center">
-							<Switch
-								checked={field.value}
-								onChange={field.onChange}
-								ref={field.ref}
-								className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-moving-yellow data-[checked]:bg-moving-yellow"
-							>
-								<span
-									aria-hidden="true"
-									className="size-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out group-data-[checked]:translate-x-3.5"
-								/>
-							</Switch>
-						</div>
-						<Label className="text-sm leading-6 text-gray-600">
-							Do You Have Dependable Transportation?
-						</Label>
-						<FieldError errors={formState.errors} name="hasTransport" />
-
-					</Field>
-					)} />
-
-					<Controller control={control} name='canCommunicate' render={({ field }) => (
-					<Field className="flex gap-x-4 col-span-2">
-						<div className="flex h-6 items-center">
-							<Switch
-								checked={field.value}
-								onChange={field.onChange}
-								ref={field.ref}
-								className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-moving-yellow data-[checked]:bg-moving-yellow"
-							>
-								<span
-									aria-hidden="true"
-									className="size-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out group-data-[checked]:translate-x-3.5"
-								/>
-							</Switch>
-						</div>
-						<Label className="text-sm leading-6 text-gray-600">
-							Do you have the ability to communicate effectively in English?
-						</Label>
-						<FieldError errors={formState.errors} name="canCommunicate" />
-
-					</Field>
-					)} />
+					<Controller
+						control={control}
+						name="canCommunicate"
+						render={({ field }) => (
+							<Field className="flex gap-x-4 col-span-2">
+								<div className="flex h-6 items-center">
+									<Switch
+										checked={field.value}
+										onChange={field.onChange}
+										ref={field.ref}
+										className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-moving-yellow data-[checked]:bg-moving-yellow"
+									>
+										<span
+											aria-hidden="true"
+											className="size-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out group-data-[checked]:translate-x-3.5"
+										/>
+									</Switch>
+								</div>
+								<Label className="text-sm leading-6 text-gray-600">
+									Do you have the ability to communicate effectively in English?
+								</Label>
+								<FieldError errors={formState.errors} name="canCommunicate" />
+							</Field>
+						)}
+					/>
 
 					<Field className="col-span-2">
 						<Label
@@ -341,13 +367,16 @@ export const CareerForm = () => {
 						<div className="mt-2.5">
 							<Textarea
 								id="message"
-								{...register('employmentPositions')}
+								{...register("employmentPositions")}
 								rows={2}
-								aria-describedby='errors-employmentPositions'
+								aria-describedby="errors-employmentPositions"
 								className="block field-sizing w-full rounded-md border-0 px-3.5 py-2 focus-visible:outline-none text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-moving-yellow focus:ring-inset focus:ring-moving-yellow sm:text-sm sm:leading-6"
 								defaultValue={""}
 							/>
-							<FieldError errors={formState.errors} name="employmentPositions" />
+							<FieldError
+								errors={formState.errors}
+								name="employmentPositions"
+							/>
 						</div>
 					</Field>
 				</div>
@@ -357,7 +386,9 @@ export const CareerForm = () => {
 						disabled={isMutating}
 						className="inline-flex items-center justify-center w-full rounded-md bg-moving-yellow/80 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-moving-yellow/100 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-moving-yellow/80"
 					>
-						{isMutating && <LoaderIcon className="animate-spin size-5" aria-hidden="true" />}
+						{isMutating && (
+							<LoaderIcon className="animate-spin size-5" aria-hidden="true" />
+						)}
 						Submit Application
 					</Button>
 				</div>
@@ -367,11 +398,11 @@ export const CareerForm = () => {
 };
 
 type FieldErrorProps = {
-	errors: FieldErrors<CareerFormSchema>
-	name: FieldPath<CareerFormSchema>
-}
+	errors: FieldErrors<CareerFormSchema>;
+	name: FieldPath<CareerFormSchema>;
+};
 
-const FieldError = ({errors, name}: FieldErrorProps) => {
+const FieldError = ({ errors, name }: FieldErrorProps) => {
 	return (
 		<ErrorMessage
 			errors={errors}
@@ -385,5 +416,5 @@ const FieldError = ({errors, name}: FieldErrorProps) => {
 				</Description>
 			)}
 		/>
-	)
-}
+	);
+};
