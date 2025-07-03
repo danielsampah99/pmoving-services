@@ -305,7 +305,7 @@ export const CareerForm = () => {
 						className="inline-flex items-center justify-center w-full rounded-md bg-moving-yellow/80 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-moving-yellow/100 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-moving-yellow/80"
 					>
 						{isMutating && <LoaderIcon className="animate-spin size-5" aria-hidden="true" />}
-						Talk to us
+						Submit Application
 					</Button>
 				</div>
 			</form>

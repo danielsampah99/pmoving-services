@@ -19,11 +19,12 @@ export const POST = async (req: NextRequest) => {
 			canCommunicate: formData.get('canCommunicate') === 'true',
 		}
 
-		console.dir({ 'data': JSON.stringify(data, null, 4) })
-
 		const payload = await getPayload({ config: payloadConfig})
 		try {
-			const email = await payload.sendEmail({ to: process.env.SMTP_USER, subject: 'Premium Moving Services: Job Application', html: await jobApplicationEmail({...data})})
+			const email = await payload.sendEmail({
+				to: process.env.SMTP_USER,
+				subject: 'Premium Moving Services: Job Application',
+				html: await jobApplicationEmail({...data})})
 		} catch(e) {
 			throw new Error("Could not send email")
 		}

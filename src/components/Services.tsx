@@ -17,10 +17,10 @@ import {
 
 export const Services: FC = () => {
 	return (
-		<div className="relative">
+		<div className="relative isolate flex items-start gap-x-0.5">
+				<Link href={'/services'} className='text-white font-semibold hover:underline underline-offset-1'>Moving Services</Link>
 			<DropdownMenu>
 				<DropdownMenuTrigger className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:bg-moving-gray/10 focus-visible:bg-moving-gray/10 focus-visible:outline-none">
-					Moving Services
 					<ChevronDownIcon
 						aria-hidden="true"
 						className="size-5 flex-none text-white"
