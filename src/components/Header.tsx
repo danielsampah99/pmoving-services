@@ -31,10 +31,16 @@ export const Header: FC = async () => {
 				<PopoverGroup className="hidden z-[100] lg:flex lg:gap-x-12">
 					<Services />
 					<ServiceArea links={areas.docs} />
-					<Link href="/blogs" className="text-sm/6 underline-bounce font-semibold text-white">
+					<Link
+						href="/blogs"
+						className="text-sm/6 underline-bounce font-semibold text-white"
+					>
 						Blog
 					</Link>
-					<Link href="/careers" className="text-sm/6 underline-bounce font-semibold text-white">
+					<Link
+						href="/careers"
+						className="text-sm/6 underline-bounce font-semibold text-white"
+					>
 						Careers
 					</Link>
 					<Link
