@@ -7,6 +7,8 @@ export const POST = async (req: NextRequest) => {
 	try {
 		const formData = await req.formData();
 
+		const resumeFile = formData.get("resume") as File | null;
+
 		const data: JobApplicationEmailProps = {
 			fullName: formData.get("fullName") as string,
 			emailAddress: formData.get("emailAddress") as string,
@@ -28,6 +30,15 @@ export const POST = async (req: NextRequest) => {
 				to: process.env.SMTP_USER,
 				subject: "Premium Moving Services: Job Application",
 				html: await jobApplicationEmail({ ...data }),
+				attachments: resumeFile
+					? [
+							{
+								filename: resumeFile.name,
+								content: Buffer.from(await resumeFile.arrayBuffer()),
+								contentType: resumeFile.type,
+							},
+						]
+					: undefined,
 			});
 		} catch (e) {
 			throw new Error("Could not send email");

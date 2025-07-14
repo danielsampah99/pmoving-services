@@ -24,6 +24,7 @@ import { useRouter } from "next/navigation";
 import useSWRMutation from "swr/mutation";
 import { LoaderIcon } from "lucide-react";
 import { EnvelopeIcon, PhoneIcon, UserIcon } from "@heroicons/react/20/solid";
+import { cn } from "@/utils";
 
 export const CareerForm = () => {
 	const router = useRouter();
@@ -53,7 +54,7 @@ export const CareerForm = () => {
 		});
 
 		if (response.ok) {
-			router.push("thank-you");
+			router.push("/thank-you");
 		}
 	};
 
@@ -77,6 +78,9 @@ export const CareerForm = () => {
 		formData.append("isAgeOk", String(formValues.isAgeOk));
 		formData.append("hasLicense", String(formValues.hasLicense));
 		formData.append("canCommunicate", String(formValues.canCommunicate));
+		if (formValues.resume && formValues.resume.length > 0) {
+			formData.append("resume", formValues.resume[0]);
+		}
 
 		console.dir(formData);
 
@@ -378,6 +382,27 @@ export const CareerForm = () => {
 								name="employmentPositions"
 							/>
 						</div>
+					</Field>
+
+					<Field className="col-span-2">
+						<Label
+							htmlFor="resume"
+							className="block text-sm font-semibold leading-6 text-gray-900"
+						>
+							Attach Resume (Optional)
+						</Label>
+						<div className="mt-2.5">
+							<Input
+								id="resume"
+								{...register("resume")}
+								type="file"
+								className={cn(
+									"block w-full rounded-md shadow-sm sm:text-sm sm:leading-6 border-0 py-1.5 pl-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-moving-yellow focus-visible:ring-moving-yellow focus-visible:ring-inset focus-visible:ring-2 focus-visible:outline-none",
+									"file:mr-4 file:rounded-full file:border-0 file:bg-moving-yellow/80 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-moving-yellow/50",
+								)}
+							/>
+						</div>
+						<FieldError errors={formState.errors} name="resume" />
 					</Field>
 				</div>
 				<div className="mt-10">
