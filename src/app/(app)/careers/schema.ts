@@ -35,4 +35,5 @@ export const careerFormSchema = z.object({
 		.string()
 		.min(1, { message: "This field is must be valid phone number" })
 		.describe("Phone number of the applicant"),
+	resume: z.any().optional(),
 });
