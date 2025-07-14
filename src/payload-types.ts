@@ -72,6 +72,7 @@ export interface Config {
     'service-areas': ServiceArea;
     blogs: Blog;
     gallery: Gallery;
+    referrals: Referral;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -83,6 +84,7 @@ export interface Config {
     'service-areas': ServiceAreasSelect<false> | ServiceAreasSelect<true>;
     blogs: BlogsSelect<false> | BlogsSelect<true>;
     gallery: GallerySelect<false> | GallerySelect<true>;
+    referrals: ReferralsSelect<false> | ReferralsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -361,6 +363,61 @@ export interface Gallery {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "referrals".
+ */
+export interface Referral {
+  id: number;
+  /**
+   * The full name of the  referrer, i.e. the person filling out the form or recommeding us to a prospective client
+   */
+  referrerName?: string | null;
+  /**
+   * The email address of the referrer
+   */
+  referrerEmail: string;
+  /**
+   * phone number of the referrer
+   */
+  referrerPhoneNumber: string;
+  newBusinessPartner?: string | null;
+  /**
+   * Name of the company or party being referred / potential client
+   */
+  prospectName: string;
+  /**
+   * The name of a person of the referred party who can be contacted
+   */
+  prospectContact: string;
+  /**
+   * Phone Number of the company or party being referred / potential client
+   */
+  prospectPhoneNumber: string;
+  /**
+   * Name of the company or party being referred / potential client
+   */
+  prospectEmail: string;
+  /**
+   * Can the referred / potential client be contacted via a phone call?
+   */
+  contactPhone: boolean;
+  /**
+   * Can the referred / potential client be contacted via email?
+   */
+  contactEmail: boolean;
+  /**
+   * Send the referrer / recommender feedback, letting them know their referred party has been contacted
+   */
+  contactReferrer: boolean;
+  comment?: string | null;
+  serviceHome: boolean;
+  serviceAssemblyDelivery: boolean;
+  serviceBusiness: boolean;
+  serviceOther: boolean;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -385,6 +442,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'gallery';
         value: number | Gallery;
+      } | null)
+    | ({
+        relationTo: 'referrals';
+        value: number | Referral;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -561,6 +622,30 @@ export interface GallerySelect<T extends boolean = true> {
   title?: T;
   imageDescription?: T;
   ourPick?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "referrals_select".
+ */
+export interface ReferralsSelect<T extends boolean = true> {
+  referrerName?: T;
+  referrerEmail?: T;
+  referrerPhoneNumber?: T;
+  newBusinessPartner?: T;
+  prospectName?: T;
+  prospectContact?: T;
+  prospectPhoneNumber?: T;
+  prospectEmail?: T;
+  contactPhone?: T;
+  contactEmail?: T;
+  contactReferrer?: T;
+  comment?: T;
+  serviceHome?: T;
+  serviceAssemblyDelivery?: T;
+  serviceBusiness?: T;
+  serviceOther?: T;
   updatedAt?: T;
   createdAt?: T;
 }

@@ -43,7 +43,7 @@ export const navigation = {
 		{ name: "Blog", href: "/blogs" },
 		{ name: "FAQs", href: "/#faqs" },
 		{ name: "HTML Sitemap", href: "#" },
-		{ name: "Referral Program", href: "#" },
+		{ name: "Referral Program", href: "/referral-program" },
 		{ name: "Privacy Policy", href: "/privacy-policy" },
 		{ name: "Terms & Conditions", href: "/terms-and-conditions" },
 	],
