@@ -67,37 +67,46 @@ export const MobileSidebar: FC<MobileSidebarProps> = ({ areas }) => {
 					<div className="mt-6 flow-root">
 						<div className="-my-6 divide-y divide-gray-500/10">
 							<div className="space-y-2 py-6">
-								<Disclosure as="div" className="-mx-3">
-									<DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-white hover:bg-white hover:text-gray-900">
-										Moving Services
-										<ChevronDownIcon
-											aria-hidden="true"
-											className="size-5 flex-none group-data-open:rotate-180"
-										/>
-									</DisclosureButton>
-									<DisclosurePanel className="mt-2 space-y-2">
-										{[...services, ...callsToAction].map((item, index) => (
-											<DisclosureButton
-												key={item.name}
-												as="a"
-												href={item.href}
-												title={`Go to ${item.name} page`}
-												className="group inline-flex items-center justify-center gap-x-1.5 rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-200 hover:bg-white/10 focus-visible:outline-none focus-visible:bg-moving-gray/80 focus:bg-moving-gray/10"
+								<div className="relative w-full py-3">
+									<Disclosure as="div" className="w-full">
+										<div className="flex items-center justify-between w-full">
+											<a
+												href="/services"
+												className="flex-1 text-left font-semibold text-white hover:text-gray-200 transition-colors"
 											>
-												<item.icon
+												Moving Services
+											</a>
+											<DisclosureButton className="group flex w-fit items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-white hover:bg-white hover:text-gray-900">
+												<ChevronDownIcon
 													aria-hidden="true"
-													className={cn(
-														"size-5 stroke-moving-yellow",
-														index > 3 &&
-															"stroke-inherit group-hover:animate-fill-both fill-moving-yellow",
-														index === 2 && "hover:animate-shake",
-													)}
+													className="size-5 flex-none group-data-open:rotate-180"
 												/>
-												{index === 5 ? "Find us on the map" : item.name}
 											</DisclosureButton>
-										))}
-									</DisclosurePanel>
-								</Disclosure>
+										</div>
+										<DisclosurePanel className="mt-2 space-y-2 border-t border-solid border-gray-400">
+											{[...services, ...callsToAction].map((item, index) => (
+												<DisclosureButton
+													key={item.name}
+													as="a"
+													href={item.href}
+													title={`Go to ${item.name} page`}
+													className="group inline-flex items-center justify-center gap-x-1.5 rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-200 hover:bg-white/10 focus-visible:outline-none focus-visible:bg-moving-gray/80 focus:bg-moving-gray/10"
+												>
+													<item.icon
+														aria-hidden="true"
+														className={cn(
+															"size-5 stroke-moving-yellow",
+															index > 3 &&
+																"stroke-inherit group-hover:animate-fill-both fill-moving-yellow",
+															index === 2 && "hover:animate-shake",
+														)}
+													/>
+													{index === 5 ? "Find us on the map" : item.name}
+												</DisclosureButton>
+											))}
+										</DisclosurePanel>
+									</Disclosure>
+								</div>
 								<a
 									href="/services/storage-services"
 									className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-gray-700 hover:bg-gray-50"
@@ -128,33 +137,41 @@ export const MobileSidebar: FC<MobileSidebarProps> = ({ areas }) => {
 								>
 									Contact Us
 								</Link>
-
-								<Disclosure as="div" className="-mx-3">
-									<DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-white hover:bg-white hover:text-gray-900">
-										Serivce Areas
-										<ChevronDownIcon
-											aria-hidden="true"
-											className="size-5 flex-none group-data-[open]:rotate-180"
-										/>
-									</DisclosureButton>
-									<DisclosurePanel className="mt-2 space-y-2">
-										{areas.map((area) => (
-											<DisclosureButton
-												key={area.id}
-												as="a"
-												href={`/service-areas/${area.slug}`}
-												className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-300 hover:text-gray-100 hover:bg-white/10"
+								<div className="relative w-full py-3">
+									<Disclosure as="div" className="w-full">
+										<div className="flex items-center justify-between w-full">
+											<a
+												href="/service-areas"
+												className="flex-1 whitespace-nowrap text-left font-semibold text-white hover:text-gray-200 transition-colors"
 											>
-												<div className="group capitalize w-full inline-flex items-center justify-between">
-													<span>{area.title}</span>
-													<span className="hidden rounded-lg text-sm p-1 font-normal shadow-sm ring-gray-white/50 group-focus:inline group-hover:inline text-gray-200">
-														{area["state-initials"].toUpperCase()}
-													</span>
-												</div>
+												Serivce Areas
+											</a>
+											<DisclosureButton className="group flex w-fit items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-white hover:bg-white hover:text-gray-900">
+												<ChevronDownIcon
+													aria-hidden="true"
+													className="size-5 flex-none group-data-[open]:rotate-180"
+												/>
 											</DisclosureButton>
-										))}
-									</DisclosurePanel>
-								</Disclosure>
+										</div>
+										<DisclosurePanel className="mt-2 space-y-2 border-t border-solid border-gray-400">
+											{areas.map((area) => (
+												<DisclosureButton
+													key={area.id}
+													as="a"
+													href={`/service-areas/${area.slug}`}
+													className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-300 hover:text-gray-100 hover:bg-white/10"
+												>
+													<div className="group capitalize w-full inline-flex items-center justify-between">
+														<span>{area.title}</span>
+														<span className="hidden rounded-lg text-sm p-1 font-normal shadow-sm ring-gray-white/50 group-focus:inline group-hover:inline text-gray-200">
+															{area["state-initials"].toUpperCase()}
+														</span>
+													</div>
+												</DisclosureButton>
+											))}
+										</DisclosurePanel>
+									</Disclosure>
+								</div>
 							</div>
 							<div className="flex justify-start w-full border-t border-solid border-gray-300 gap-4 py-6">
 								{socialMediaLinks.map((link, index) => (

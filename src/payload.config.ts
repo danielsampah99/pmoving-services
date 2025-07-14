@@ -18,6 +18,7 @@ import { Media } from "./collections/Media";
 import { ServiceArea } from "./collections/ServiceAreas";
 import { Blogs } from "./collections/Blogs";
 import { Gallery } from "./collections/Gallery";
+import { Referrals } from "./collections/Referrals";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -31,7 +32,7 @@ export default buildConfig({
 		},
 
 	},
-	collections: [Users, Media, ServiceArea, Blogs, Gallery],
+	collections: [Users, Media, ServiceArea, Blogs, Gallery, Referrals],
 	editor: lexicalEditor({
 		features: ({ defaultFeatures }) => [
 			...defaultFeatures,
@@ -45,6 +46,8 @@ export default buildConfig({
 	db: postgresAdapter({
 		pool: {
 			connectionString: process.env.DATABASE_URI || "",
+			connectionTimeoutMillis: 60_000, // TODO: Remove this in prod
+			idleTimeoutMillis: 10 // TODO: Remove this in prod
 		},
 	}),
 	email: nodemailerAdapter({

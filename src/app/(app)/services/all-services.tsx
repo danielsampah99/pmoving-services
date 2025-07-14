@@ -214,7 +214,7 @@ export const AllServices = () => {
 								}}
 								whileTap={{ scale: 0.95 }}
 							>
-								<Link href={`/services/${service.id}`}>
+								<Link href={service.href}>
 									<div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 cursor-pointer h-full">
 										{/* Service Image */}
 										<div className="relative h-48 overflow-hidden">
