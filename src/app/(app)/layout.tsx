@@ -32,7 +32,7 @@ export default function RootLayout({
 				</footer>
 				<Script
 					strategy="lazyOnload"
-					src="https://embed.tawk.to/6874f63abba9b8190d43bf0f/1j04e3lkb"
+					src="https://embed.tawk.to/6876d75d4ec95b190ffa0a72/1j083iht7"
 				/>
 			</body>
 		</html>
