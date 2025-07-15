@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button, Field, Input, Label } from "@headlessui/react";
 import type { FC } from "react";
 import { type FooterSocial, navigation } from "@/data/navigation";
+import { subscribe } from "@/data/mailing-list";
 
 export const Footer: FC = () => {
 	return (
@@ -101,14 +102,14 @@ export const Footer: FC = () => {
 							weekly.
 						</p>
 					</div>
-					<form className="mt-6 sm:flex sm:max-w-md lg:mt-0">
+					<form className="mt-6 sm:flex sm:max-w-md lg:mt-0" action={subscribe}>
 						<Field>
 							<Label htmlFor="email-address" className="sr-only">
 								Email address
 							</Label>
 							<Input
 								id="email-address"
-								name="email-address"
+								name="email"
 								type="email"
 								required
 								placeholder="Enter your email"

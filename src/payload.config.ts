@@ -19,6 +19,7 @@ import { ServiceArea } from "./collections/ServiceAreas";
 import { Blogs } from "./collections/Blogs";
 import { Gallery } from "./collections/Gallery";
 import { Referrals } from "./collections/Referrals";
+import { MailingList } from "./collections/MailingList";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -32,7 +33,7 @@ export default buildConfig({
 		},
 
 	},
-	collections: [Users, Media, ServiceArea, Blogs, Gallery, Referrals],
+	collections: [Users, Media, ServiceArea, Blogs, Gallery, Referrals, MailingList],
 	editor: lexicalEditor({
 		features: ({ defaultFeatures }) => [
 			...defaultFeatures,

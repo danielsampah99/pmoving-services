@@ -73,6 +73,7 @@ export interface Config {
     blogs: Blog;
     gallery: Gallery;
     referrals: Referral;
+    'mailing-list': MailingList;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -85,6 +86,7 @@ export interface Config {
     blogs: BlogsSelect<false> | BlogsSelect<true>;
     gallery: GallerySelect<false> | GallerySelect<true>;
     referrals: ReferralsSelect<false> | ReferralsSelect<true>;
+    'mailing-list': MailingListSelect<false> | MailingListSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -418,6 +420,19 @@ export interface Referral {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "mailing-list".
+ */
+export interface MailingList {
+  id: number;
+  /**
+   * Email address of the subscriber
+   */
+  emailAddress: string;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -446,6 +461,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'referrals';
         value: number | Referral;
+      } | null)
+    | ({
+        relationTo: 'mailing-list';
+        value: number | MailingList;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -646,6 +665,15 @@ export interface ReferralsSelect<T extends boolean = true> {
   serviceAssemblyDelivery?: T;
   serviceBusiness?: T;
   serviceOther?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "mailing-list_select".
+ */
+export interface MailingListSelect<T extends boolean = true> {
+  emailAddress?: T;
   updatedAt?: T;
   createdAt?: T;
 }
