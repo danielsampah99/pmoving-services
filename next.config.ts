@@ -9,6 +9,35 @@ const nextConfig: NextConfig = {
 	},
 	turbopack: {
 		//enabled: true,
+	},
+	async redirects() {
+		return [
+			{
+				source: "/pack-and-unpack",
+				destination: "/services/local-moving/pack-and-unpack",
+				permanent: true
+			},
+			{
+				source: "/local-moving-mn",
+				destination: "/services/local-moving",
+				permanent: true
+			},
+			{
+				source: "/commercial-moving-mn",
+				destination: "/services/commercial-moving",
+				permanent: true
+			},
+			{
+				source: "/specialty-moving-mn",
+				destination: "/services/specialty-moving",
+				permanent: true
+			},
+			{
+				source: "/moving-reviews",
+				destination: "/#reviews",
+				permanent: true
+			}
+		]
 	}
 };
 
