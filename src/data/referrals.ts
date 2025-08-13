@@ -13,7 +13,7 @@ export type ReferralData = Omit<
 export async function submitReferral(values: ReferralFormSchema) {
 	const payload = await getPayload({ config });
 
-	const sendEmailPromsie = payload.sendEmail({
+	const sendEmailPromise = payload.sendEmail({
 		to: process.env.SMTP_USER,
 		subject: "Premium Moving Services: New Referral",
 		text: `New Referral from ${values.contactEmail}. Check out the full details in the admin console. (${process.env.APP_URL}/admin/collections/referrals)`,
@@ -41,5 +41,5 @@ export async function submitReferral(values: ReferralFormSchema) {
 		},
 	});
 
-	await Promise.all([sendEmailPromsie, createReferralPromise]);
+	await Promise.all([sendEmailPromise, createReferralPromise]);
 }

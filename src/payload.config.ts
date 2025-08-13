@@ -52,7 +52,7 @@ export default buildConfig({
 		},
 	}),
 	email: nodemailerAdapter({
-		defaultFromAddress: "g1sackie@icloud.com",
+		defaultFromAddress: process.env.SMTP_USER ?? 'g1sackie@icloud.com',
 		defaultFromName: "Website: Premium Moving Services",
 		transport: nodemailer.createTransport({
 			host: process.env.SMTP_HOST,

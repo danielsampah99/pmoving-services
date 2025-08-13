@@ -37,11 +37,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ### TODO
 _April 1, 2025_
-- [ ] Implement google reviews via the api
-- [ ] Do a privacy policy page
-- [ ] Do a terms and conditions page as well
-- [ ] Add to the form on the hero section
-- [ ] make the header pop/ add vibrant colors and increase the size of texts.
+- [X] Implement google reviews via the api
+- [X] Do a privacy policy page
+- [X] Do a terms and conditions page as well
+- [X] Add to the form on the hero section
+- [X] make the header pop/ add vibrant colors and increase the size of texts.
 - [X] Change the BBB section
 
 safe, logistics, storage... icons need to be changed.
