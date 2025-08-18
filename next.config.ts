@@ -36,6 +36,11 @@ const nextConfig: NextConfig = {
 				source: "/moving-reviews",
 				destination: "/#reviews",
 				permanent: true
+			},
+			{
+				source: "/online-request-form",
+				destination: "/free-quote",
+				permanent: true
 			}
 		]
 	}
