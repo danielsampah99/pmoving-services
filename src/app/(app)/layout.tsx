@@ -5,6 +5,7 @@ import { Banner } from "@/components/Banner";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({
 	variable: "--font-inter",
@@ -30,6 +31,7 @@ export default function RootLayout({
 				<footer>
 					<Footer />
 				</footer>
+				<Analytics />
 				<Script
 					strategy="lazyOnload"
 					src="https://embed.tawk.to/6876d75d4ec95b190ffa0a72/1j083iht7"
