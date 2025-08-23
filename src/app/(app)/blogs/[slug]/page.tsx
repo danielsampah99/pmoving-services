@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const blog = (
 		await payload.find({
 			collection: "blogs",
-			where: { slug: { equals: slug } },
+			where: { slug: { equals: decodeURIComponent(slug) } },
 			limit: 1,
 		})
 	).docs[0] as Blog;
