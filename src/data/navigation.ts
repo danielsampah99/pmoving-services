@@ -33,8 +33,8 @@ export const navigation = {
 		{ name: "Insights", href: "#" },
 	],
 	locations: [
-		{ name: "Minnesota", href: "#" },
-		{ name: "Wisconsin", href: "#" },
+		{ name: "Minnesota", href: "/#our-offices-minnesota" },
+		// { name: "Wisconsin", href: "#" },
 	],
 	company: [
 		{ name: "About", href: "/#about-us" },
