@@ -3,6 +3,7 @@ import {
 	lexicalEditor,
 } from "@payloadcms/richtext-lexical";
 import type { CollectionConfig } from "payload";
+import { revalidateServiceAreasCache } from "./hooks/revalidate-service-areas";
 
 export const ServiceArea: CollectionConfig = {
 	slug: "service-areas",
@@ -211,4 +212,7 @@ export const ServiceArea: CollectionConfig = {
 			],
 		},
 	],
+	hooks: {
+		afterChange: [revalidateServiceAreasCache],
+	}
 };
