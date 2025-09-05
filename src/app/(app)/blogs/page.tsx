@@ -1,8 +1,11 @@
 import { getBlogs } from "@/data/blogs";
 import { Hero } from "./hero";
 import { AllPosts } from "./all-posts";
-import type { Metadata } from "next";
+import type { Metadata, MetadataRoute } from "next";
 import { BASE_URL } from "@/utils";
+import { getPayload } from "payload";
+import { Blog } from "@/payload-types";
+import config from "@payload-config"
 
 export const metadata: Metadata = {
 	title: "Premium Moving Services Blogs - Tips, Tricks, and Advice",
@@ -39,6 +42,7 @@ export const metadata: Metadata = {
 		images: [`${BASE_URL}/logo.svg`],
 	},
 };
+
 
 const BlogsPage = async () => {
 	const blogs = await getBlogs();

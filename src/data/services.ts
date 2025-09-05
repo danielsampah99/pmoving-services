@@ -23,6 +23,8 @@ import { GunSafetyIcon } from "@/components/icons/gun-safety-icon";
 import { LaborOnlyIcon } from "@/components/icons/labor-only-icon";
 import { SeniorIcon } from "@/components/icons/senior-icon";
 import { UnloadingIcon } from "@/components/icons/unloading-icon";
+import config from "@payload-config";
+import { getPayload } from "payload";
 
 export type Service = {
 	id: number;

@@ -47,7 +47,7 @@ export const officeLocations: OfficeLocation[] = [
 
 export const OurLocations = () => {
 	return (
-		<div id="our-locations" className="isolate overflow-hidden bg-moving-gray">
+		<div id="our-offices-minnesota" className="isolate overflow-hidden bg-moving-gray">
 			<div className="mx-auto max-w-7xl px-6 pb-96 pt-12 text-center sm:pt-32 lg:px-8">
 				<div className="mx-auto max-w-4xl">
 					<h2 className="text-base font-semibold leading-7 text-yellow-400">

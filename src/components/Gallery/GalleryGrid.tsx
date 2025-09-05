@@ -24,7 +24,7 @@ const GalleryGrid: React.FC<GalleryGridProps> = ({ images }) => {
 
 	const getImageUrl = (photo: number | Media): string => {
 		if (isMedia(photo) && photo.filename) {
-			return `https://pmoving-services.vercel.app/api/media/file/${encodeURIComponent(photo.filename)}`;
+			return `https://pmovingservices.com/api/media/file/${encodeURIComponent(photo.filename)}`;
 		}
 		return "";
 	};

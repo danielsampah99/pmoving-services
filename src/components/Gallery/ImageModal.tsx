@@ -38,7 +38,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
 
 	const imageUrl =
 		isMedia(image.Photo) && image.Photo.filename
-			? `https://pmoving-services.vercel.app/api/media/file/${encodeURIComponent(image.Photo.filename)}`
+			? `https://pmovingservices.com/api/media/file/${encodeURIComponent(image.Photo.filename)}`
 			: "";
 
 	const altText = isMedia(image.Photo) ? image.Photo.alt : "Gallery image";

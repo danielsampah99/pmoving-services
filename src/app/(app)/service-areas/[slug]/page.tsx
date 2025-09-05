@@ -95,8 +95,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 			card: "summary_large_image",
 			title,
 			description,
-			creatorId: "@g1sackie",
-			site: "@g1sackie",
+			creatorId: "info@pmovingservices.com", // TODO: info@pmovingservices.com
+			site: "info@pmovingservices.com",
 			images: [
 				{ url: imageUrl, width: 1200, height: 630, alt: `Map of ${title}` },
 			],
