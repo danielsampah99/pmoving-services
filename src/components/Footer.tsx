@@ -6,6 +6,7 @@ import { Button, Field, Input, Label } from "@headlessui/react";
 import type { FC } from "react";
 import { type FooterSocial, navigation } from "@/data/navigation";
 import { subscribe } from "@/data/mailing-list";
+import { MoreInfo } from "./OurLocations";
 
 export const Footer: FC = () => {
 	return (
@@ -92,7 +93,10 @@ export const Footer: FC = () => {
 						</div>
 					</div>
 				</div>
-				<div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24 lg:flex lg:items-center lg:justify-between">
+				<div className='pt-8 text-white sm:pt-10'>
+					<MoreInfo />
+				</div>
+				<div className="mt-8 border-t border-white/10 pt-8 sm:mt-10 lg:mt-12 lg:flex lg:items-center lg:justify-between">
 					<div>
 						<h3 className="text-sm font-semibold leading-6 text-white">
 							Subscribe to our newsletter

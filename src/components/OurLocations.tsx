@@ -168,7 +168,7 @@ export const MoreInfo: FC = () => {
 				<h3 className="text-lg font-semibold leading-8 tracking-tight text-yellow-500">
 					Business Hours
 				</h3>
-				<p className="mt-1 text-base leading-7 text-gray-600">
+				<p className="mt-1 text-base leading-7">
 					Monday to Sunday | 8AM to 6PM
 				</p>
 			</div>
