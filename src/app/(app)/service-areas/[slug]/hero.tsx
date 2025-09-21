@@ -61,7 +61,7 @@ export const OldHero: FC<HeroProps> = (props) => {
 				<div className="row-span-1">
 					{typeof props.mapImage === "object" && props.mapImage?.url ? (
 						<Image
-							src={props.mapImage.url}
+							src={decodeURIComponent(props.mapImage.url)}
 							alt={props.mapImage.alt}
 							title={`${props.title} on the map`}
 							fill={true}
