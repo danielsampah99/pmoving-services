@@ -20,6 +20,7 @@ import { Blogs } from "./collections/Blogs";
 import { Gallery } from "./collections/Gallery";
 import { Referrals } from "./collections/Referrals";
 import { MailingList } from "./collections/MailingList";
+import { migrations } from "./migrations"
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -50,6 +51,7 @@ export default buildConfig({
 			connectionTimeoutMillis: 60_000, // TODO: Remove this in prod
 			idleTimeoutMillis: 10 // TODO: Remove this in prod
 		},
+		prodMigrations: migrations,
 	}),
 	email: nodemailerAdapter({
 		defaultFromAddress: process.env.SMTP_USER ?? 'g1sackie@icloud.com',
