@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, type Variants } from "motion/react";
 
 export default function StorageContent() {
 	const containerVariants = {
@@ -14,7 +14,7 @@ export default function StorageContent() {
 		},
 	};
 
-	const itemVariants = {
+	const itemVariants: Variants = {
 		hidden: {
 			opacity: 0,
 			x: -20,
@@ -24,7 +24,7 @@ export default function StorageContent() {
 			opacity: 1,
 			x: 0,
 			transition: {
-				type: "spring",
+				type: "spring" as const,
 				stiffness: 300,
 				damping: 24,
 			},

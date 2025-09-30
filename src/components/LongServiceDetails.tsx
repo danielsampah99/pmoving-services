@@ -136,11 +136,10 @@ export const LongServiceDetails = () => {
 									key={feature.title}
 									initial={{ opacity: 0, scale: 0.9 }}
 									whileInView={{ opacity: 1, scale: 1 }}
-									whileHover={{ scale: 1.02 }}
+									whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
 									transition={{
 										duration: 0.3,
-										delay: index * 0.1,
-										hover: { duration: 0.2 },
+										delay: index * 0.1
 									}}
 									className="flex items-center p-4 bg-moving-gray/10 rounded-lg hover-scale"
 								>
