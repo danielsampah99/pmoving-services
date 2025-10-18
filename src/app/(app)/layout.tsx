@@ -14,8 +14,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-	title: "Premium Moving Services",
-	description: "The Number 1 moving company near you",
+	title: "Trusted Movers Near me | Premium Moving Services",
+	description: "Get premium moving services available at the snap of a finger. From local, commercial, long-distance to specialty moving, we help you move as smoothly as it gets.",
 };
 
 export default function RootLayout({

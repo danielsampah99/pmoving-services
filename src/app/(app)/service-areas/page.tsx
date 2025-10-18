@@ -7,9 +7,12 @@ import config from "@payload-config";
 import { MINNESOTA_CENTRE } from "@/data/map";
 
 export const metadata: Metadata = {
-	title: "Join Our Team | Career Opportunities at Premium Moving Services",
+	title: {
+		default: "Areas We Serve - Premium Moving Services",
+		template: "Premium Moving Services near you"
+	},
 	description:
-		"Find rewarding career opportunities at P Moving Services. Apply now for professional moving positions with competitive pay and benefits.",
+		"Explore our professional moving services across multiple locations. Get reliable, efficient and affordable moving solutions for residential and commerical clients",
 	keywords:
 		"moving jobs, moving careers, professional movers hiring, Premium Moving Services careers, moving company jobs",
 	openGraph: {
@@ -18,7 +21,7 @@ export const metadata: Metadata = {
 			"Moving Service Areas | Premium Moving Services operates near and far from you",
 		description:
 			"Premium Moving Services operates near and far from you. Look us up now",
-		url: "https:/pmovingservices.com",
+		url: "https://pmovingservices.com",
 		images: [
 			{
 				url: "",

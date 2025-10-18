@@ -6,6 +6,12 @@ import { RelatedLocalMoving } from "../local-moving/residential-movers/related-s
 import { ServicesSection } from "@/components/ServicesSection";
 import { specialtyMovingServices } from "@/data/services";
 import { specialtyMovingFAQs } from "@/data/moving-tips";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Specialty Moving Solutions for Stress-Free Moving",
+	description: "Promising specialty furniture movers offering relocation assistance, labor-only moving services, furniture delivery and assembly, customized solutions and more."
+}
 
 const SpecialtyMovingPage = () => {
 	return (
