@@ -39,7 +39,7 @@ const services = [
 		title: "Condo Movers",
 		description: "Specialized moving services for condominiums",
 		icon: Building2,
-		link: "/services/local-moving/condo-movers",
+		link: "/services/local-moving/hoa-movers",
 	},
 	{
 		id: "hoa",

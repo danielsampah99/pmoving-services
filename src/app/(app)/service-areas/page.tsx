@@ -5,6 +5,7 @@ import { ServiceAreaMap } from "./service-areas-map";
 import { getPayload } from "payload";
 import config from "@payload-config";
 import { MINNESOTA_CENTRE } from "@/data/map";
+import { BASE_URL } from "@/utils";
 
 export const metadata: Metadata = {
 	title: {
@@ -18,13 +19,13 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: "website",
 		title:
-			"Moving Service Areas | Premium Moving Services operates near and far from you",
+			"Areas We Serve - Premium Moving Services",
 		description:
-			"Premium Moving Services operates near and far from you. Look us up now",
-		url: "https://pmovingservices.com",
+			"Explore our professional moving services across multiple locations. Get reliable, efficient and affordable moving solutions for residential and commerical clients",
+		url: "https://pmovingservices.com/service-areas",
 		images: [
 			{
-				url: "",
+				url: `${BASE_URL}/logo.svg`,
 				width: 1200,
 				height: 630,
 				alt: "Premium Moving Services Career Opportunities",

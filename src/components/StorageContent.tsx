@@ -37,7 +37,7 @@ export default function StorageContent() {
 			whileInView="visible"
 			viewport={{ once: true, amount: 0.2 }}
 			variants={containerVariants}
-			className="bg-white py-8 sm:py-16"
+			className="bg-white py-8 sm:py-16 lg:pt-6 lg:-mt-10"
 		>
 			<div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-900">
 				<motion.h2
