@@ -1,16 +1,14 @@
 import { getBlogs } from "@/data/blogs";
 import { Hero } from "./hero";
 import { AllPosts } from "./all-posts";
-import type { Metadata, MetadataRoute } from "next";
+import type { Metadata } from "next";
 import { BASE_URL } from "@/utils";
-import { getPayload } from "payload";
-import { Blog } from "@/payload-types";
-import config from "@payload-config"
+
 
 export const metadata: Metadata = {
-	title: "Premium Moving Services Blogs - Tips, Tricks, and Advice",
+	title: "Moving Tips, Guides and Costs | Premium Moving Services Blog",
 	description:
-		"Stay updated with the latest trends, tips, and advice in the moving industry. Our blog covers everything from packing hacks to choosing the right mover.",
+		"Read everything essential about expert tips, cost breakdowns, checklists and advice for the local and long distance moves",
 	keywords: [
 		"moving services",
 		"moving tips",
@@ -18,6 +16,7 @@ export const metadata: Metadata = {
 		"relocation advice",
 		"professional movers",
 		"moving checklist",
+		"moving blog"
 	],
 	openGraph: {
 		title: "Moving Services Blogs - Tips, Tricks, and Advice",

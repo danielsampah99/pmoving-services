@@ -7,6 +7,12 @@ import { RelatedServices } from "./related-services";
 import { commercialMovingServices } from "@/data/services";
 import { OurLocations } from "@/components/OurLocations";
 import { ServicesSection } from "@/components/ServicesSection";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Trusted Commercial Moving Services in Minnesota, MN",
+	description: "Premium Moving Services offers leading services including office relocations, warehouse and industrial moving, corporate relocations and machinery moving."
+}
 
 const CommercialMoving = () => {
 	return (

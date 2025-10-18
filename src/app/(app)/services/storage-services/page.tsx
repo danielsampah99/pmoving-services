@@ -4,6 +4,12 @@ import { OurLocations } from "@/components/OurLocations";
 import { ServicesSection } from "@/components/ServicesSection";
 import { FAQs } from "../local-moving/residential-movers/faq";
 import { storageFaqs } from "@/data/moving-tips";
+import { Metadata } from "next";
+
+export const metadata: Metadata  = {
+	title: "Secure Settings for Your Essential Belongings | Premium Moving Services",
+	description: "Running out of space in your home and office or just want to store your belongings somewhere safe? Get packing and storage services in a secure warehouse."
+}
 
 export default function StorageServices() {
 	return (
@@ -13,12 +19,12 @@ export default function StorageServices() {
 				{/* Background Image */}
 				<div className="absolute inset-0 z-0">
 					<picture>
-						<source srcSet="/images/hero-bg.jpg" media="(min-width: 2048px)" />
+						<source srcSet="/images/hero-bg.jpg" media="(min-width: 1024px)" />
 						<img
-							src="/storage-services.webp"
+							src="/moving-warehouse.png"
 							className="w-full h-full object-cover object-center"
 							loading="lazy"
-							alt=""
+							alt="Storage space at Premium Moving Services"
 							aria-hidden="true"
 						/>
 					</picture>

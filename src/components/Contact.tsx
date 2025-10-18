@@ -3,7 +3,6 @@
 import React, { Suspense } from "react";
 import { motion } from "motion/react";
 import { OurLocations } from "./OurLocations";
-import { QuoteForm } from "./FreeQuote/QuoteComponent";
 import { FreeQuoteForm } from "./FreeQuote/quote-form";
 
 const ContactComponent = () => {
