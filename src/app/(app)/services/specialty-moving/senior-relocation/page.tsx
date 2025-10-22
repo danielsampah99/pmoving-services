@@ -6,6 +6,33 @@ import { RelatedLocalMoving } from "../../local-moving/residential-movers/relate
 import { seniorRelocationFAQs } from "@/data/moving-tips";
 import { specialtyMovingServices } from "@/data/services";
 import { ServicesSection } from "@/components/ServicesSection";
+import { Metadata } from 'next'
+import { BASE_URL } from "@/utils";
+
+export const metadata: Metadata = {
+	title: "The most Professional Moving Company in Minnesota",
+	description: "Premium Moving Services, counted as one of the most professional moving companies in Minnesota, Maplewood, Lakeville, and Rochester for senior relocation",
+	openGraph: {
+		title: "The most Professional Moving Company in Minnesota",
+		description: "Premium Moving Services, counted as one of the most professional moving companies in Minnesota, Maplewood, Lakeville, and Rochester for senior relocation.",
+		type: 'website',
+		url: `${BASE_URL}/services/specialty-moving/senior-relocation`,
+		images: [
+			{
+				url: `${BASE_URL}/api/media/file/Moving%20labour.webp`,
+				width: 1200,
+				height: 630,
+				alt: "A team of professional movers doing manual labor"
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "The most Professional Moving Company in Minnesota",
+		description:"Premium Moving Services, counted as one of the most professional moving companies in Minnesota, Maplewood, Lakeville, and Rochester for senior relocation",
+		images: [`${BASE_URL}/api/media/file/Moving%20labour.webp`],
+	},
+}
 
 const SeniorRelocationPage = () => {
 	return (

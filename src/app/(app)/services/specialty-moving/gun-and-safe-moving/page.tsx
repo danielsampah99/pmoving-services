@@ -1,5 +1,3 @@
-"use client";
-
 import { ServiceLayout } from "@/components/ServiceLayout";
 import { OurLocations } from "@/components/OurLocations";
 import { RequestQuote } from "../../local-moving/residential-movers/request-quote";
@@ -8,6 +6,34 @@ import { RelatedLocalMoving } from "../../local-moving/residential-movers/relate
 import { gunSafetyMovingFAQs } from "@/data/moving-tips";
 import { specialtyMovingServices } from "@/data/services";
 import { ServicesSection } from "@/components/ServicesSection";
+
+import { Metadata } from 'next'
+import { BASE_URL } from "@/utils";
+
+export const metadata: Metadata = {
+	title: "In-Budget Gun Safe Movers Near Me In Prices",
+	description: "Let us assist you move your gun and safe with right equipment and expertise. We are a team of trained movers in Minnesota with years of specialized experience",
+	openGraph: {
+		title: "In-Budget Gun Safe Movers Near Me In Prices",
+		description: "Let us assist you move your gun and safe with right equipment and expertise. We are a team of trained movers in Minnesota with years of specialized experience",
+		type: 'website',
+		url: `${BASE_URL}/services/specialty-moving/senior-relocation`,
+		images: [
+			{
+				url: `${BASE_URL}/api/media/file/Moving%20labour.webp`,
+				width: 1200,
+				height: 630,
+				alt: "A team of professional movers doing manual labor"
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "In-Budget Gun Safe Movers Near Me In Prices",
+		description:"Let us assist you move your gun and safe with right equipment and expertise. We are a team of trained movers in Minnesota with years of specialized experience",
+		images: [`${BASE_URL}/api/media/file/Moving%20labour.webp`],
+	},
+}
 
 const GunAndSafeMovingPage = () => {
 	return (

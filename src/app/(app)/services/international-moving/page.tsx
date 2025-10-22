@@ -10,6 +10,33 @@ import { OurLocations } from "@/components/OurLocations";
 import { RequestQuote } from "../local-moving/residential-movers/request-quote";
 import { FAQs } from "../local-moving/residential-movers/faq";
 import { ServicesSection } from "@/components/ServicesSection";
+import { Metadata } from 'next'
+import { BASE_URL } from "@/utils";
+
+export const metadata: Metadata = {
+	title: "Moving Company Near Me for International Moving Services",
+	description: "Move your essential internationally with one of the best cross country moving companies. Get global storage solutions and door-to-door international shipping.",
+	openGraph: {
+		title: "Moving Company Near Me for International Moving Services",
+		description: "Move your essential internationally with one of the best cross country moving companies. Get global storage solutions and door-to-door international shipping.",
+		type: 'website',
+		url: `${BASE_URL}/services/international-moving`,
+		images: [
+			{
+				url: `${BASE_URL}/api/media/file/Moving%20labour.webp`,
+				width: 1200,
+				height: 630,
+				alt: "A team of professional movers doing manual labor"
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Moving Company Near Me for International Moving Services",
+		description:"Move your essential internationally with one of the best cross country moving companies. Get global storage solutions and door-to-door international shipping.",
+		images: [`${BASE_URL}/api/media/file/Moving%20labour.webp`],
+	},
+}
 
 const InternationalMoving = () => {
 	return (
