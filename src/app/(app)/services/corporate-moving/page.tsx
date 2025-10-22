@@ -3,6 +3,48 @@ import { Info } from "lucide-react";
 import { ServicesSection } from "@/components/ServicesSection";
 import { OurLocations } from "@/components/OurLocations";
 import { RequestQuote } from "../local-moving/residential-movers/request-quote";
+import { Metadata } from "next";
+import { BASE_URL } from "@/utils";
+
+
+export const metadata: Metadata = {
+	title: "Corporate Relocation Services in Minnesota | Premium Moving",
+	description: "Trusted by leading organizations, Premium Moving offers expert corporate relocation services in Minnesota. We provide complete packing, shipping, and unpacking for seamless business and employee moves.",
+	keywords: [
+		"corporate relocation Minnesota",
+		"business moving services",
+		"office movers",
+		"employee relocation",
+		"commercial movers Woodbury",
+		"packing and unpacking services",
+		"office equipment transportation",
+		"Minnesota corporate movers",
+		"corporate moving company",
+	],
+	openGraph: {
+		title: "Professional Corporate Relocation in Minnesota | Premium Moving",
+		description: "Seamless and efficient corporate relocation services. We handle everything from packing to unpacking, ensuring a smooth transition for your business and employees in Minnesota.",
+		type: "website",
+		url: `${BASE_URL}/services/corporate-moving`,
+		images: [
+			{
+				url: `${BASE_URL}/api/media/file/corporate-moving.webp`,
+				width: 1200,
+				height: 630,
+				alt: "A team of professional movers handling corporate relocation"
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Top-Rated Corporate Moving Services in Minnesota",
+		description: "Planning a corporate move in Minnesota? Premium Moving offers tailored relocation solutions to keep your business moving forward without disruption.",
+		images: [`${BASE_URL}/api/media/file/corporate-moving.webp`],
+	}
+}
+
+
+
 
 const CorporateMoving = () => {
 	return (

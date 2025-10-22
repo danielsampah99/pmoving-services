@@ -7,7 +7,34 @@ import { OurLocations } from "@/components/OurLocations";
 import { frequentQuestions } from "@/data/moving-tips";
 import { localMovingServices } from "@/data/services";
 import { ServicesSection } from "@/components/ServicesSection";
-import React from "react";
+
+import { Metadata } from 'next'
+import { BASE_URL } from "@/utils";
+
+export const metadata: Metadata = {
+	title: "Reliable Apartment Moving Services | Premium Moving Services",
+	description: "Looking for the most premium apartment moving services? Then look no further than Premium Moving Services, a team of preofessional movers",
+	openGraph: {
+		title: "In-Budget Gun Safe Movers Near Me In Prices",
+		description: "Looking for the most premium apartment moving services? Then look no further than Premium Moving Services, a team of preofessional movers",
+		type: 'website',
+		url: `${BASE_URL}/services/local-moving/apartment-overs`,
+		images: [
+			{
+				url: `${BASE_URL}/api/media/file/Moving%20labour.webp`,
+				width: 1200,
+				height: 630,
+				alt: "A team of professional movers doing manual labor"
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "In-Budget Gun Safe Movers Near Me In Prices",
+		description:"Looking for the most premium apartment moving services? Then look no further than Premium Moving Services, a team of preofessional movers",
+		images: [`${BASE_URL}/api/media/file/Moving%20labour.webp`],
+	},
+}
 
 const ApartmentMovers = () => {
 	return (
