@@ -12,10 +12,10 @@ import { BASE_URL } from "@/utils";
 
 export const metadata: Metadata = {
 	title: "Prime Local Movers Near Me for Junk Removal",
-	description: "Get rid of all junk with Premium Moving Services. Expect eco-friendly disposal and removal solutions from the best moving company near me in Minnesota",
+	description: "Get rid of all junk with Premium Moving Services. Expect eco-friendly disposal and removal solutions from the best moving company near me in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 	openGraph: {
 		title: "Prime Local Movers Near Me for Junk Removal",
-		description: "Get rid of all junk with Premium Moving Services. Expect eco-friendly disposal and removal solutions from the best moving company near me in Minnesota",
+		description: "Get rid of all junk with Premium Moving Services. Expect eco-friendly disposal and removal solutions from the best moving company near me in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 		type: 'website',
 		url: `${BASE_URL}/services/specialty-moving/senior-relocation`,
 		images: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title: "Prime Local Movers Near Me for Junk Removal",
-		description:"Get rid of all junk with Premium Moving Services. Expect eco-friendly disposal and removal solutions from the best moving company near me in Minnesota",
+		description:"Get rid of all junk with Premium Moving Services. Expect eco-friendly disposal and removal solutions from the best moving company near me in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 		images: [`${BASE_URL}/api/media/file/Moving%20labour.webp`],
 	},
 }

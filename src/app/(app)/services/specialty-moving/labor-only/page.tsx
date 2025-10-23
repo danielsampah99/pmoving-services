@@ -12,10 +12,10 @@ import { BASE_URL } from "@/utils";
 
 export const metadata: Metadata = {
 	title: "Premium Moving Services for Moving Labor Help",
-	description: "Get the most professional moving labor assisance for loading, unloading and in-house moving needs. Premium Moving Services handles essentials with care",
+	description: "Get the most professional moving labor assisance for loading, unloading and in-house moving needs. Premium Moving Services handles essentials with care. Find us in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 	openGraph: {
 		title: "Premium Moving Services for Moving Labor Help",
-		description: "Get the most professional moving labor assisance for loading, unloading and in-house moving needs. Premium Moving Services handles essentials with care",
+		description: "Get the most professional moving labor assisance for loading, unloading and in-house moving needs. Premium Moving Services handles essentials with care. Find us in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 		type: 'website',
 		url: `${BASE_URL}/services/corporate-moving`,
 		images: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title: "Premium Moving Services for Moving Labor Help",
-		description:"Get the most professional moving labor assistance for loading, unloading,and in-house moving needs. Premium Moving Services handles essentials with care",
+		description:"Get the most professional moving labor assistance for loading, unloading,and in-house moving needs. Premium Moving Services handles essentials with care. Find us in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 		images: [`${BASE_URL}/api/media/file/Moving%20labour.webp`],
 	},
 }

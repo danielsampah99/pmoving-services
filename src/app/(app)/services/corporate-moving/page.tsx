@@ -8,8 +8,8 @@ import { BASE_URL } from "@/utils";
 
 
 export const metadata: Metadata = {
-	title: "Corporate Relocation Services in Minnesota | Premium Moving",
-	description: "Trusted by leading organizations, Premium Moving offers expert corporate relocation services in Minnesota. We provide complete packing, shipping, and unpacking for seamless business and employee moves.",
+	title: "Premium Moving Services | Corporate Relocation in Minnesota",
+	description: "Trusted by eminent organizations, Premium Moving offers expert corporate relocation services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities. We provide complete packing, shipping, and unpacking for seamless business and employee moves.",
 	keywords: [
 		"corporate relocation Minnesota",
 		"business moving services",
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
 		"corporate moving company",
 	],
 	openGraph: {
-		title: "Professional Corporate Relocation in Minnesota | Premium Moving",
-		description: "Seamless and efficient corporate relocation services. We handle everything from packing to unpacking, ensuring a smooth transition for your business and employees in Minnesota.",
+		title: "Premium Moving Services | Corporate Relocation in Minnesota",
+		description: "Trusted by eminent organizations, Premium Moving offers expert corporate relocation services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities. We provide complete packing, shipping, and unpacking for seamless business and employee moves.",
 		type: "website",
 		url: `${BASE_URL}/services/corporate-moving`,
 		images: [
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Top-Rated Corporate Moving Services in Minnesota",
-		description: "Planning a corporate move in Minnesota? Premium Moving offers tailored relocation solutions to keep your business moving forward without disruption.",
+		title: "Premium Moving Services | Corporate Relocation in Minnesota",
+		description: "Trusted by eminent organizations, Premium Moving offers expert corporate relocation services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities. We provide complete packing, shipping, and unpacking for seamless business and employee moves.",
 		images: [`${BASE_URL}/api/media/file/corporate-moving.webp`],
 	}
 }

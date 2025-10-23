@@ -12,10 +12,10 @@ import { BASE_URL } from "@/utils";
 
 export const metadata: Metadata = {
 	title: "In-Budget Gun Safe Movers Near Me In Prices",
-	description: "Let us assist you move your gun and safe with right equipment and expertise. We are a team of trained movers in Minnesota with years of specialized experience",
+	description: "Let us assist you move your gun and safe with right equipment and expertise. We are a team of trained movers in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities with years of specialized experience",
 	openGraph: {
 		title: "In-Budget Gun Safe Movers Near Me In Prices",
-		description: "Let us assist you move your gun and safe with right equipment and expertise. We are a team of trained movers in Minnesota with years of specialized experience",
+		description: "Let us assist you move your gun and safe with right equipment and expertise. We are a team of trained movers in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities with years of specialized experience",
 		type: 'website',
 		url: `${BASE_URL}/services/specialty-moving/senior-relocation`,
 		images: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title: "In-Budget Gun Safe Movers Near Me In Prices",
-		description:"Let us assist you move your gun and safe with right equipment and expertise. We are a team of trained movers in Minnesota with years of specialized experience",
+		description:"Let us assist you move your gun and safe with right equipment and expertise. We are a team of trained movers in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities with years of specialized experience",
 		images: [`${BASE_URL}/api/media/file/Moving%20labour.webp`],
 	},
 }

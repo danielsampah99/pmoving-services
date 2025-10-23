@@ -15,10 +15,10 @@ import { BASE_URL } from "@/utils";
 
 export const metadata: Metadata = {
 	title: "Complete Logistics Solutions By Specialized Movers Near Me",
-	description: "Get all-in-one logistics services, ranging from warehouse management to distribution coordination. Connect with the best in moving class near me.",
+	description: "Get all-in-one logistics services, ranging from warehouse management to distribution coordination. Connect with the best in moving class near me. Find Premium Moving Services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities.",
 	openGraph: {
 		title: "Complete Logistics Solutions By Specialized Movers Near Me",
-		description: "Get all-in-one logistics services, ranging from warehouse management to distribution coordination. Connect with the best in moving class near me.",
+		description: "Get all-in-one logistics services, ranging from warehouse management to distribution coordination. Connect with the best in moving class near me. Find Premium Moving Services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities.",
 		type: 'website',
 		url: `${BASE_URL}/services/logistics-services`,
 		images: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title: "Complete Logistics Solutions By Specialized Movers Near Me",
-		description:"Get all-in-one logistics services, ranging from warehouse management to distribution coordination. Connect with the best in moving class near me.",
+		description:"Get all-in-one logistics services, ranging from warehouse management to distribution coordination. Connect with the best in moving class near me. Find Premium Moving Services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities.",
 		images: [`${BASE_URL}/api/media/file/Moving%20labour.webp`],
 	},
 }
