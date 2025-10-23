@@ -13,10 +13,10 @@ import { BASE_URL } from "@/utils";
 
 export const metadata: Metadata = {
 	title: "Professional Packing and Unpacking Services",
-	description: "Premium Moving Services is here to deliver the reliable packing and unpacking services in Burnsville with systematic packiing, protection and efficient setup.",
+	description: "Premium Moving Services is here to deliver the reliable packing and unpacking services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities with systematic packiing, protection and efficient setup.",
 	openGraph: {
 		title: "Professional Packing and Unpacking Services",
-		description: "Premium Moving Services is here to deliver the reliable packing and unpacking services in Burnsville with systematic packiing, protection and efficient setup.",
+		description: "Premium Moving Services is here to deliver the reliable packing and unpacking services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring with systematic packing, protection and efficient setup.",
 		type: 'website',
 		url: `${BASE_URL}/services/corporate-moving`,
 		images: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title: "Professional Packing and Unpacking Services",
-		description:"Premium Moving Services is here to deliver the reliable packing and unpacking services in Burnsville with systematic packiing, protection and efficient setup",
+		description:"Premium Moving Services is here to deliver the reliable packing and unpacking services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities with systematic packiing, protection and efficient setup",
 		images: [`${BASE_URL}/api/media/file/Moving%20labour.webp`],
 	},
 }

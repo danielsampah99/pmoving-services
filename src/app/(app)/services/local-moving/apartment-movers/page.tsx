@@ -13,10 +13,10 @@ import { BASE_URL } from "@/utils";
 
 export const metadata: Metadata = {
 	title: "Reliable Apartment Moving Services | Premium Moving Services",
-	description: "Looking for the most premium apartment moving services? Then look no further than Premium Moving Services, a team of preofessional movers",
+	description: "Looking for the most premium apartment moving services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities? Then look no further than Premium Moving Services, a team of preofessional movers",
 	openGraph: {
 		title: "In-Budget Gun Safe Movers Near Me In Prices",
-		description: "Looking for the most premium apartment moving services? Then look no further than Premium Moving Services, a team of preofessional movers",
+		description: "Looking for the most premium apartment moving services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities? Then look no further than Premium Moving Services, a team of preofessional movers",
 		type: 'website',
 		url: `${BASE_URL}/services/local-moving/apartment-overs`,
 		images: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title: "In-Budget Gun Safe Movers Near Me In Prices",
-		description:"Looking for the most premium apartment moving services? Then look no further than Premium Moving Services, a team of preofessional movers",
+		description:"Looking for the most premium apartment moving services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities? Then look no further than Premium Moving Services, a team of preofessional movers",
 		images: [`${BASE_URL}/api/media/file/Moving%20labour.webp`],
 	},
 }
