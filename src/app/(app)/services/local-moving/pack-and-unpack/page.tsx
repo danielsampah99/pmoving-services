@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 	description: "Premium Moving Services is here to deliver the reliable packing and unpacking services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities with systematic packiing, protection and efficient setup.",
 	openGraph: {
 		title: "Professional Packing and Unpacking Services",
-		description: "Premium Moving Services is here to deliver the reliable packing and unpacking services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring with systematic packing, protection and efficient setup.",
+		description: "Premium Moving Services is here to deliver the reliable packing and unpacking services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities with systematic packing, protection and efficient setup.",
 		type: 'website',
 		url: `${BASE_URL}/services/corporate-moving`,
 		images: [
