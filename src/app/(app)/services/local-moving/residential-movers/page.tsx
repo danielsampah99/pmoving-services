@@ -12,10 +12,10 @@ import { BASE_URL } from "@/utils";
 
 export const metadata: Metadata = {
 	title: "Premium Moving Services | Residential movers in Minnesota, MN",
-	description: "Ensured with quality service, integrated with safety and efficiency on priority, Premium Moving Services is a trusteed and friendly residential mover in MN",
+	description: "Ensured with quality service, integrated with safety and efficiency on priority, Premium Moving Services is a trusted and friendly residential mover in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 	openGraph: {
 		title: "Premium Moving Services | Residential movers in Minnesota, MN",
-		description: "Ensured with quality service, integrated with safety and efficiency on priority, Premium Moving Services is a trusteed and friendly residential mover in MN",
+		description: "Ensured with quality service, integrated with safety and efficiency on priority, Premium Moving Services is a trusteed and friendly residential mover in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 		type: 'website',
 		url: `${BASE_URL}/services/corporate-moving`,
 		images: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		title: "Premium Moving Services | Residential movers in Minnesota, MN",
 		description:
-			"Ensured with quality service, integrated with safety and efficiency on priority, Premium Moving Services is a trusteed and friendly residential mover in MN",
+			"Ensured with quality service, integrated with safety and efficiency on priority, Premium Moving Services is a trusteed and friendly residential mover in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 		images: [`${BASE_URL}/api/media/file/residential-moving.webp`],
 	},
 }

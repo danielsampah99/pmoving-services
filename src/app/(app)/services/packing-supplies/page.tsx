@@ -9,10 +9,10 @@ import { BASE_URL } from "@/utils";
 
 export const metadata: Metadata = {
 	title: "Stress-Free Packing Services | Moving Companies",
-	description: "Complete packing solutions from Minnesota Movers, delivered with utmost care and security, along with climate-controlled storage available during transtions",
+	description: "Complete packing solutions from Minnesota Movers, delivered with utmost care and security, along with climate-controlled storage available during transtions. You can also find Premium Moving Services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 	openGraph: {
 		title: "In-Budget Gun Safe Movers Near Me In Prices",
-		description: "Complete packing solutions from Minnesota Movers, delivered with utmost care and security, along with climate-controlled storage available during transtions",
+		description: "Complete packing solutions from Minnesota Movers, delivered with utmost care and security, along with climate-controlled storage available during transtions. You can also find Premium Moving Services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 		type: 'website',
 		url: `${BASE_URL}/services/specialty-moving/senior-relocation`,
 		images: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title: "In-Budget Gun Safe Movers Near Me In Prices",
-		description:"Complete packing solutions from Minnesota Movers, delivered with utmost care and security, along with climate-controlled storage available during transtions",
+		description:"Complete packing solutions from Minnesota Movers, delivered with utmost care and security, along with climate-controlled storage available during transtions. You can also find Premium Moving Services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 		images: [`${BASE_URL}/api/media/file/Moving%20labour.webp`],
 	},
 }

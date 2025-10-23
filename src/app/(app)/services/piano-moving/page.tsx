@@ -13,10 +13,10 @@ import { BASE_URL } from "@/utils";
 
 export const metadata: Metadata = {
 	title: "Piano Moving Services | Woodbury Movers",
-	description: "Choose the expert moving solutions with speccialized expertise, comprehensive protection, and seamless transportation solutions from the movers in Minnesota",
+	description: "Choose the expert moving solutions with speccialized expertise, comprehensive protection, and seamless transportation solutions from the movers in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 	openGraph: {
 		title: "Piano Moving Services | Woodbury Movers",
-		description: "Choose the expert moving solutions with speccialized expertise, comprehensive protection, and seamless transportation solutions from the movers in Minnesota",
+		description: "Choose the expert moving solutions with speccialized expertise, comprehensive protection, and seamless transportation solutions from the movers in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 		type: 'website',
 		url: `${BASE_URL}/services/piano-moving`,
 		images: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title: "Piano Moving Services | Woodbury Movers",
-		description:"Choose the expert moving solutions with speccialized expertise, comprehensive protection, and seamless transportation solutions from the movers in Minnesota",
+		description:"Choose the expert moving solutions with speccialized expertise, comprehensive protection, and seamless transportation solutions from the movers in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 		images: [`${BASE_URL}/api/media/file/Moving%20labour.webp`],
 	},
 }
