@@ -36,6 +36,16 @@ export default function RootLayout({
 		              f.parentNode.insertBefore(j,f);
 		            })(window,document,'script','dataLayer','GTM-MBJHMPNM');`}
 				</Script>
+
+				{/* clickease.com tracking*/}
+				<Script id='click-ease-script' strategy="afterInteractive" src="https://www.clickcease.com/monitor/stat.js" />
+
+				<noscript>
+					<a href="https://www.clickcease.com" rel="nofollow">
+						<img src="https://monitor.clickcease.com" alt="ClickCease" />
+					</a>
+				</noscript>
+
 			</head>
 			<body className={`${inter.variable} antialiased`}>
 				<header>
