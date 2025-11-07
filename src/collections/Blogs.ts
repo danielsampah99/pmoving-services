@@ -88,6 +88,13 @@ export const Blogs: CollectionConfig = {
 				position: "sidebar",
 			},
 		},
+		{
+			name: 'chart',
+			relationTo: 'charts',
+			required: false,
+			type: 'relationship',
+
+		}
 	],
 	hooks: {
 		beforeValidate: [

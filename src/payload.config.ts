@@ -20,6 +20,7 @@ import { Blogs } from "./collections/Blogs";
 import { Gallery } from "./collections/Gallery";
 import { Referrals } from "./collections/Referrals";
 import { MailingList } from "./collections/MailingList";
+import { Charts } from "./collections/Charts";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -33,7 +34,7 @@ export default buildConfig({
 		},
 
 	},
-	collections: [Users, Media, ServiceArea, Blogs, Gallery, Referrals, MailingList],
+	collections: [Users, Media, ServiceArea, Blogs, Gallery, Referrals, MailingList, Charts],
 	editor: lexicalEditor({
 		features: ({ defaultFeatures }) => [
 			...defaultFeatures,
@@ -57,7 +58,7 @@ export default buildConfig({
 		defaultFromName: "Website: Premium Moving Services",
 		transport: nodemailer.createTransport({
 			host: process.env.SMTP_HOST,
-			port: 587,
+			port: 465,
 			secure: false,
 			auth: {
 				user: process.env.SMTP_USER,

@@ -74,6 +74,7 @@ export interface Config {
     gallery: Gallery;
     referrals: Referral;
     'mailing-list': MailingList;
+    charts: Chart;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -87,6 +88,7 @@ export interface Config {
     gallery: GallerySelect<false> | GallerySelect<true>;
     referrals: ReferralsSelect<false> | ReferralsSelect<true>;
     'mailing-list': MailingListSelect<false> | MailingListSelect<true>;
+    charts: ChartsSelect<false> | ChartsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -332,6 +334,49 @@ export interface Blog {
    * A short description for previews. Will default to blog's description if no value is provided for this field.
    */
   thumbnailDescription?: string | null;
+  chart?: (number | null) | Chart;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "charts".
+ */
+export interface Chart {
+  id: number;
+  title: string;
+  /**
+   * Select a type of chart from the options
+   */
+  chartType: 'area' | 'bar' | 'line' | 'pie' | 'radar' | 'radial';
+  /**
+   * List data for recharts
+   */
+  data:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  /**
+   * Configuration for the data, colors and data keys
+   */
+  config:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  dimensions?: {
+    width?: number | null;
+    height?: number | null;
+  };
   updatedAt: string;
   createdAt: string;
 }
@@ -472,6 +517,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'mailing-list';
         value: number | MailingList;
+      } | null)
+    | ({
+        relationTo: 'charts';
+        value: number | Chart;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -642,6 +691,7 @@ export interface BlogsSelect<T extends boolean = true> {
   thumbnail?: T;
   readingTime?: T;
   thumbnailDescription?: T;
+  chart?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -688,6 +738,24 @@ export interface ReferralsSelect<T extends boolean = true> {
  */
 export interface MailingListSelect<T extends boolean = true> {
   emailAddress?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "charts_select".
+ */
+export interface ChartsSelect<T extends boolean = true> {
+  title?: T;
+  chartType?: T;
+  data?: T;
+  config?: T;
+  dimensions?:
+    | T
+    | {
+        width?: T;
+        height?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
 }
