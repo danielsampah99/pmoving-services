@@ -1,6 +1,6 @@
 import { CollectionConfig } from "payload";
 
-export type TBarChart = "bar" | "line" | "pie" | "radar" | "radial" | "area";
+export type TChartType = "bar" | "line" | "pie" | "radar" | "radial" | "area";
 
 export const Charts: CollectionConfig = {
 	slug: "charts",

@@ -7,6 +7,7 @@ import type { Blog } from "@/payload-types";
 import { BASE_URL, COMPANY } from "@/utils";
 import { Post } from "./post";
 import { notFound } from "next/navigation";
+import { ChartRenderer } from "@/components/ChartRenderer";
 
 type Props = {
 	params: Promise<{ slug: string }>;
@@ -118,9 +119,12 @@ export default async function SingleBlogPage({ params }: Props) {
 		return notFound();
 	}
 
+	const chartData = blog.chart
+
 	return (
 		<section className="max-w-7xl w-full mx-auto p-6 mt-3 lg:px-8 pt-0 xl:pt-6">
 			<Post content={blog?.content} id={blog.id} />
+			<ChartRenderer chart={chartData} />
 			<OurLocations />
 		</section>
 	);
