@@ -10,6 +10,7 @@ import {
 	TruckIcon,
 } from "@heroicons/react/20/solid";
 import { LocalServiceDetails } from "./LocalServiceDetails";
+import { LocalSetApart } from './LocalSetApart'
 import Link from "next/link";
 import { IconType } from "./HeroIcon";
 import { HammerIcon, PackageIcon, ShieldIcon } from "lucide-react";
@@ -37,18 +38,18 @@ export const LocalMovingContentSection = () => {
 
 			<Introduction />
 
-			<WhatSetsUsApart />
+			<LocalSetApart />
 
 			<LocalIncluded />
-			
+
 			<NeighbourhoodExpertise />
-			
-				<FullServiceOptions />
-				<SpecializedServices />
-				<CostSection />
-				<Preparation />
-				<LocalFAQ />
-				<Trust />
+
+			<FullServiceOptions />
+			<SpecializedServices />
+			<CostSection />
+			<Preparation />
+			<LocalFAQ />
+			<Trust />
 		</div>
 	);
 };
@@ -96,50 +97,6 @@ const Introduction = () => {
 				detailed planning, and a customer-first approach by our guys.
 			</p>
 		</section>
-	);
-};
-
-const uniquePoints = [
-	"Highly trained local movers with years of local experience",
-	"Licensed, insured, and trusted by thousands of Minnesota residents",
-	"Transparent pricing with no surprises",
-	"Careful handling of your home, floors, and furniture",
-	"Fast communication and reliable scheduling",
-	"Helpful staff who go above and beyond to ensure a smooth, hassle-free move for every customer",
-];
-
-const WhatSetsUsApart = () => {
-	return (
-		<section className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div className="grid md:grid-cols-2 gap-12 items-center">
-				<div>
-					<h3 className="text-2xl font-bold text-gray-900 mb-6">
-						What Sets Us Apart
-					</h3>
-					<ul className="space-y-4">
-						{uniquePoints.map((point, pointIndex) => (
-							<UniquePoint key={pointIndex} point={point} />
-						))}
-					</ul>
-				</div>
-				<div className="bg-gray-100 rounded-2xl p-8 min-h-[400px] flex items-center justify-center relative overflow-hidden">
-					<div className="absolute inset-0 bg-gradient-to-br from-indigo-900/5 to-indigo-900/10" />
-					<TruckIcon className="size-32 text-gray-300" strokeWidth={1} />
-					{/* This would be a great place for an actual image if available */}
-				</div>
-			</div>
-		</section>
-	);
-};
-
-const UniquePoint = ({ point }: { point: string }) => {
-	return (
-		<li className="flex items-start gap-3">
-			<div className="mt-1 bg-gray-100 p-1 rounded-full shrink-0">
-				<CheckIcon className="size-4 sm:size-5 fill-gray-700" />
-			</div>
-			<span className="text-gray-700">{point}</span>
-		</li>
 	);
 };
 
@@ -596,7 +553,7 @@ type ServiceOptionCardProps = {
 	description: string;
 	ctaText?: string;
 	highlight?: boolean;
-}
+};
 
 const ServiceOptionCard = ({
 	title,
