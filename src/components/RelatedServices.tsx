@@ -4,13 +4,14 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Home, Package, Boxes, Building, Building2, Users } from "lucide-react";
 import { motion } from "motion/react";
+import { BuildingOffice2Icon, BuildingOfficeIcon, HomeIcon, HomeModernIcon } from "@heroicons/react/24/solid";
 
 const services = [
 	{
 		id: "residential",
 		title: "Residential Movers",
 		description: "Professional relocation services for homes and apartments",
-		icon: Home,
+		icon: HomeIcon,
 		link: "/services/local-moving/residential-movers",
 	},
 	{
@@ -31,21 +32,21 @@ const services = [
 		id: "apartment",
 		title: "Apartment Movers",
 		description: "Expert moves for apartment complexes and high-rises",
-		icon: Building,
+		icon: BuildingOfficeIcon,
 		link: "/services/local-moving/apartment-movers",
 	},
 	{
 		id: "condo",
 		title: "Condo Movers",
 		description: "Specialized moving services for condominiums",
-		icon: Building2,
+		icon: BuildingOffice2Icon,
 		link: "/services/local-moving/hoa-movers",
 	},
 	{
 		id: "hoa",
 		title: "HOA Movers",
 		description: "Coordinated moves for HOA-managed properties",
-		icon: Users,
+		icon: HomeModernIcon,
 		link: "/services/local-moving/condo-movers",
 	},
 ];
@@ -71,7 +72,7 @@ export const RelatedServices = () => {
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ delay: index * 0.1, duration: 0.5 }}
 							viewport={{ once: true }}
-							className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow group"
+							className="group/icon bg-white rounded-lg overflow-hidden ring ring-gray-300 shadow-sm hover:shadow-md transition-shadow group-hover/icon:transition-colors ease-in-out duration-400"
 						>
 							<div className="p-6 flex items-start gap-4">
 								<motion.div
@@ -81,7 +82,7 @@ export const RelatedServices = () => {
 									className="p-3 bg-moving-light-gray rounded-lg"
 								>
 									<service.icon
-										className="text-yellow-400 w-8 h-8"
+										className="stroke-yellow-400 fill-white size-8 group-hover/icon:fill-yellow-400 group-hover/icon:stroke-transparent"
 										strokeWidth={1.5}
 									/>
 								</motion.div>

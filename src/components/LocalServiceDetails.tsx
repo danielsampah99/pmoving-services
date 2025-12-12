@@ -43,81 +43,11 @@ export const LocalServiceDetails = () => {
 							Service Overview
 						</motion.h2>
 						<p className="text-gray-700 mb-6 text-lg">
-							Premium Moving Services sets ourselves apart with our dedication
-							to ensuring quality service coupled with safety and efficiency at
-							the fore-front. We offer flexibility for each project and can meet
-							your needs whatever they may be.
+							Moving across town shouldn’t feel overwhelming—and with Premium Moving Services, it doesn’t have to. As one of the most trusted local moving companies in Minnesota, we proudly serve Minneapolis, St. Paul, and every surrounding neighborhood with reliable, efficient, and professional Local moving support. 
 						</p>
 						<p className="text-gray-700 mb-6 text-lg">
-							We pride ourselves on efficiency, careful handling of your
-							belongings, and transparent pricing with no hidden fees. Whether
-							you're moving a studio apartment or a family home, our team is
-							trained to make your move as smooth as possible.
+							Whether you’re relocating from Uptown to North Loop, Highland Park to Mac-Groveland, or from a Frogtown duplex to a Maplewood townhome, our team of professional movers makes your transition smoother, safer, and stress-free. We offer comprehensive home moving services, handling every aspect of residential moves from packing to unpacking, backed by years of experience.
 						</p>
-
-						<div className="space-y-4 mb-8">
-							<motion.ul
-								initial="hidden"
-								whileInView="visible"
-								variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
-								className="list-disc pl-6 space-y-3 mb-6"
-							>
-								{[
-									"Load/unload",
-									"Junk Removal",
-									"Full service move",
-									"Climate-controlled storage",
-								].map((item, index) => (
-									<motion.li
-										key={item}
-										variants={{
-											hidden: { opacity: 0, x: -20 },
-											visible: { opacity: 1, x: 0 },
-										}}
-										transition={{ delay: index * 0.1 }}
-										className="text-gray-700"
-									>
-										{item}
-									</motion.li>
-								))}
-							</motion.ul>
-
-							<p className="text-gray-700 mb-6 text-lg">
-								If you are a business, we can help with commercial moving as we
-								specialize in several different types of commercial moving.
-							</p>
-
-							<h3 className="text-xl font-semibold text-moving-navy mb-4">
-								What areas we service?
-							</h3>
-
-							<p className="text-gray-700 mb-6 text-lg">
-								Our Moving Company services the entire Twin Cities area,
-								suburban communities and long distance moves.
-							</p>
-
-							<ul className="list-disc pl-6 space-y-3">
-								<li className="text-gray-700">Local movers in Minnesota</li>
-								<li className="text-gray-700">
-									Local moving companies in Minnesota
-								</li>
-								<li className="text-gray-700">
-									Local moving labor in Minnesota
-								</li>
-								<li className="text-gray-700">
-									Local house movers in Minnesota
-								</li>
-								<li className="text-gray-700">
-									Local apartment movers in Minnesota
-								</li>
-								<li className="text-gray-700">
-									Local climate-controlled in Minnesota
-								</li>
-								<li className="text-gray-700">
-									Local movers near me Minnesota
-								</li>
-							</ul>
-						</div>
 					</div>
 
 					{/* Features & Specs */}
@@ -138,10 +68,7 @@ export const LocalServiceDetails = () => {
 									initial={{ opacity: 0, scale: 0.9 }}
 									whileInView={{ opacity: 1, scale: 1 }}
 									whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-									transition={{
-										duration: 0.3,
-										delay: index * 0.1
-									}}
+									transition={{ duration: 0.3, delay: index * 0.1 }}
 									className="flex items-center p-4 bg-moving-light-gray rounded-lg hover-scale"
 								>
 									<feature.icon className="text-moving-orange mr-4" size={24} />
