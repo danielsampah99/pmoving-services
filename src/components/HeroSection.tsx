@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight, Clock, Star } from "lucide-react";
 import { Button } from "@headlessui/react";
+import { cn } from "@/utils";
+import Image from 'next/image'
 
 const images = [
 	{
@@ -33,17 +35,17 @@ export const HeroSection = () => {
 	return (
 		<div className="relative bg-background overflow-hidden">
 			{/* Carousel */}
-			<div className="relative w-full h-[70vh] md:h-[80vh] ">
+			<div className="group relative w-full h-[70vh] md:h-[80vh] ">
 				{images.map((image, index) => (
 					<div
 						key={index}
-						className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-							index === currentImage ? "opacity-100 z-10" : "opacity-0 z-0"
-						}`}
-					>
-						<img
+						className={cn('absolute inset-0 transisiton-opacity duration-300 ease-in-out', index === currentImage ? 'opacity-100 z-10' : 'opacity-0 z-0')}
+									>
+						<Image
 							src={image.url}
 							alt={image.alt}
+							width={1024}
+							height={1024}
 							className="w-full h-full object-cover"
 							loading="eager"
 						/>
@@ -55,35 +57,24 @@ export const HeroSection = () => {
 				<div className="absolute top-[35%] md:top-1/2 -translate-y-1/2 left-2 right-2 md:left-4 md:right-4 z-30 flex justify-between pointer-events-none">
 					<Button
 						onClick={prevImage}
-						className="pointer-events-auto bg-white bg-opacity-70 hover:bg-opacity-90 p-1.5 md:p-2 rounded-full transition"
+						className="pointer-events-auto bg-white/70 hover:bg-white backdrop-blur-xs p-1.5 md:p-2 rounded-full transition"
 						aria-label="Previous"
 					>
-						<ChevronLeft className="text-moving-navy h-5 w-5 md:h-6 md:w-6" />
+						<ChevronLeft className="text-moving-navy size-5 md:size-6" />
 					</Button>
 					<Button
 						onClick={nextImage}
-						className="pointer-events-auto bg-white bg-opacity-70 hover:bg-opacity-90 p-1.5 md:p-2 rounded-full transition"
+						className="pointer-events-auto bg-white/70 hover:bg-white backdrop-blur-xs p-1.5 md:p-2 rounded-full transition"
 						aria-label="Next"
 					>
-						<ChevronRight className="text-moving-navy h-5 w-5 md:h-6 md:w-6" />
+						<ChevronRight className="text-moving-navy size-5 md:size-6" />
 					</Button>
 				</div>
 
 				{/* Dots */}
-				<div className="absolute bottom-5 left-0 right-0 flex justify-center gap-2 z-20">
+				<div className="absolute bottom-5 left-0 right-0 flex justify-center gap-2 z-30">
 					{images.map((_, index) => (
-						<button
-							key={index}
-							type="button"
-							onKeyDown={(event) =>
-								event.key === "Enter" && setCurrentImage(index)
-							}
-							onClick={() => setCurrentImage(index)}
-							className={`size-3 rounded-full transition ${
-								index === currentImage ? "bg-white" : "bg-white/50"
-							}`}
-							aria-label={`Slide ${index + 1}`}
-						/>
+						<ImageDot index={index} currentImageIndex={currentImage} key={index} onDotClick={setCurrentImage} />
 					))}
 				</div>
 			</div>
@@ -120,3 +111,26 @@ export const HeroSection = () => {
 		</div>
 	);
 };
+
+type ImageDotProps = {
+	index: number;
+	currentImageIndex: number
+	onDotClick(imageIndex: number): void
+}
+
+const ImageDot = ({index, onDotClick, currentImageIndex}: ImageDotProps) => {
+	return (
+		<Button
+			key={index}
+			type="button"
+			onKeyDown={(event) => event.key === "Enter" && onDotClick(index)}
+			onClick={(event) => {
+				console.dir(event)
+				onDotClick(index)
+			}}
+			aria-label={`Slide ${index + 1}`}
+		>
+			<div className={cn('rounded-full size-3 transition-colors', index === currentImageIndex ? 'bg-white' : 'bg-white/50')} />
+		</Button>
+	)
+}
