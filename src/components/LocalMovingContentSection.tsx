@@ -39,9 +39,7 @@ export const LocalMovingContentSection = () => {
 			<Introduction />
 
 			<LocalSetApart />
-
-			<LocalIncluded />
-
+			
 			<NeighbourhoodExpertise />
 
 			<FullServiceOptions />
@@ -100,72 +98,6 @@ const Introduction = () => {
 	);
 };
 
-const LocalIncluded = () => {
-	return (
-		<section className="bg-gray-50 py-20">
-			<div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="text-center max-w-3xl mx-auto mb-16">
-					<h2 className="text-3xl font-bold text-gray-900 mb-4">
-						What Local Moving Includes
-					</h2>
-					<p className="text-lg text-indigo-600 font-medium mb-4">
-						Local moving company in St. Paul & Minneapolis
-					</p>
-					<p className="text-gray-600">
-						Many customers ask, “What does Local moving include?” At Premium
-						Moving Services, our Local moving packages cover everything needed
-						to make your relocation easy. Our movers handle every job, big or
-						small, with professionalism and care:
-					</p>
-				</div>
-
-				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-					<FeatureCard
-						icon={TruckIcon}
-						title="Professional Loading & Unloading"
-						description="We handle all heavy lifting—from couches and appliances to moving boxes and fragile items—using professional tools to ensure safe and efficient loading and unloading."
-					/>
-					<FeatureCard
-						icon={PackageIcon}
-						title="Full-Service Packing Options"
-						description="Choose from full-home packing supplies, single-room packing, or fragile-only packing. For added flexibility, you can also opt for a moving container. We bring the packing supplies and handle the details."
-					/>
-					<FeatureCard
-						icon={HammerIcon}
-						title="Furniture Disassembly"
-						description="Beds, dressers, sectionals, tables—we take them apart and reassemble at your new house/apartment."
-					/>
-					<FeatureCard
-						icon={ShieldIcon}
-						title="Floor & Home Protection"
-						description="Our moving services include floor protections especially important in older homes around Summit Hill, Como Park, or Northeast Minneapolis."
-					/>
-					<FeatureCard
-						icon={ClockIcon}
-						title="Stress-Free Transportation"
-						description="Clean trucks with insurance, organized loading, and safe transport of your belongings through the Twin Cities to your new space, all timed perfectly to fit your schedule."
-					/>
-				</div>
-			</div>
-		</section>
-	);
-};
-
-type FeatureCardProps = {
-	icon: IconType;
-	title: string;
-	description: string;
-};
-
-const FeatureCard = ({ icon: Icon, title, description }: FeatureCardProps) => (
-	<div className="group bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-		<div className="w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center mb-4">
-			<Icon className="size-6 fill-gray-600 stroke-white group-hover:fill-moving-yellow" />
-		</div>
-		<h3 className="text-lg font-bold text-gray-900 mb-2">{title}</h3>
-		<p className="text-gray-600 leading-relaxed text-sm">{description}</p>
-	</div>
-);
 
 const NeighbourhoodExpertise = () => {
 	return (
