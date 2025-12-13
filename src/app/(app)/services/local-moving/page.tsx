@@ -1,4 +1,5 @@
 import { HeroSection } from "@/components/HeroSection";
+import { LocalFaq } from "@/components/LocalFaq";
 import { LocalIncluded } from "@/components/LocalIncluded";
 import { LocalMovingContentSection } from "@/components/LocalMovingContentSection";
 import { LocalMovingOptions } from "@/components/LocalMovingOptions";
@@ -19,6 +20,7 @@ const LocalMovingPage = () => {
 			<LocalMovingContentSection />
 			<LocalIncluded />
 			<LocalMovingOptions />
+			<LocalFaq />
 			<RelatedServices />
 			<ServicesSection />
 			<OurLocations />
