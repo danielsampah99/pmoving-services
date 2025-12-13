@@ -4,10 +4,10 @@ import {
 	CheckIcon,
 	MapPinIcon,
 	PhoneIcon,
-	QuestionMarkCircleIcon
+	QuestionMarkCircleIcon,
 } from "@heroicons/react/20/solid";
 import { LocalServiceDetails } from "./LocalServiceDetails";
-import { LocalSetApart } from './LocalSetApart'
+import { LocalSetApart } from "./LocalSetApart";
 import Link from "next/link";
 import { cn } from "@/utils";
 
@@ -34,17 +34,13 @@ export const LocalMovingContentSection = () => {
 			<Introduction />
 
 			<LocalSetApart />
-			
+
 			<NeighbourhoodExpertise />
-			
-			<SpecializedServices />
-			
+
 			<CostSection />
-			
+
 			<Preparation />
-			
-			<LocalFAQ />
-			
+
 			<Trust />
 		</div>
 	);
@@ -95,7 +91,6 @@ const Introduction = () => {
 		</section>
 	);
 };
-
 
 const NeighbourhoodExpertise = () => {
 	return (
@@ -208,62 +203,6 @@ const FullServiceOptions = () => {
 					title="Packing & Unpacking Services"
 					description="Whether you need kitchen packing/unpacking, fragile-only protection, or full-home assistance, our team handles every detail. We serve customers throughout Highland Park, Maplewood, Uptown, and beyond."
 				/>
-			</div>
-		</section>
-	);
-};
-
-const SpecializedServices = () => {
-	return (
-		<section className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div className="bg-gray-900 text-white rounded-3xl p-8 md:p-16 overflow-hidden relative shadow-2xl">
-				<div className="relative z-10">
-					<h2 className="text-3xl font-bold mb-12 text-center">
-						Specialized Local Moving Services
-					</h2>
-					<div className="grid md:grid-cols-3 gap-12">
-						<div className="space-y-4">
-							<div className="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-2">
-								<span className="text-gray-900 font-bold text-xl">65+</span>
-							</div>
-							<h3 className="text-xl font-bold text-yellow-400">
-								Senior Local Moving
-							</h3>
-							<p className="text-gray-300 leading-relaxed">
-								Transitioning to assisted living or downsizing requires
-								patience, respect, and thoughtful planning. We support seniors
-								in Roseville, St. Paul, and surrounding cities with
-								compassionate moving help.
-							</p>
-						</div>
-						<div className="space-y-4">
-							<div className="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-2">
-								<BuildingOffice2Icon className="text-gray-900 w-6 h-6" />
-							</div>
-							<h3 className="text-xl font-bold text-yellow-400">
-								Apartment & Condo Moving
-							</h3>
-							<p className="text-gray-300 leading-relaxed">
-								We manage moves in second-floor walkups in Frogtown, elevator
-								buildings downtown, and large complexes. We offer extra time
-								options for loading docks and building access requirements.
-							</p>
-						</div>
-						<div className="space-y-4">
-							<div className="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-2">
-								<BuildingOfficeIcon className="text-gray-900 w-6 h-6" />
-							</div>
-							<h3 className="text-xl font-bold text-yellow-400">
-								Commercial & Office Moves
-							</h3>
-							<p className="text-gray-300 leading-relaxed">
-								Moving offices in the North Loop, Midway, or Downtown St. Paul?
-								We relocate workstations and IT equipment to new spaces or
-								storage units safely and efficiently.
-							</p>
-						</div>
-					</div>
-				</div>
 			</div>
 		</section>
 	);
@@ -388,38 +327,6 @@ const Preparation = () => {
 						/>
 					</div>
 				</div>
-			</div>
-		</section>
-	);
-};
-
-const LocalFAQ = () => {
-	return (
-		<section className="container max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">
-				Local Moving FAQs
-			</h2>
-			<div className="space-y-6">
-				<FAQItem
-					q="How far is considered a local move?"
-					a="Generally under 50 miles or within the same metro area of Twin Cities (St. Paul & Minneapolis)."
-				/>
-				<FAQItem
-					q="Do movers empty dressers?"
-					a="We recommend removing fragile or heavy items before your move date. Soft clothing is fine."
-				/>
-				<FAQItem
-					q="Do movers take beds apart?"
-					a="Yes—our crew handles disassembly and reassembly of basic beds."
-				/>
-				<FAQItem
-					q="How long does a local move take?"
-					a="Most 1–2 bedroom moves take 3–5 hours depending on stairs and packing needs."
-				/>
-				<FAQItem
-					q="What’s the cheapest way to do Local moving?"
-					a="Be fully packed, clear pathways, and reserve parking in advance."
-				/>
 			</div>
 		</section>
 	);
