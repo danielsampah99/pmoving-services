@@ -1,19 +1,14 @@
 import {
-	ArrowRightIcon,
 	BuildingOffice2Icon,
 	BuildingOfficeIcon,
 	CheckIcon,
-	ClockIcon,
 	MapPinIcon,
 	PhoneIcon,
-	QuestionMarkCircleIcon,
-	TruckIcon,
+	QuestionMarkCircleIcon
 } from "@heroicons/react/20/solid";
 import { LocalServiceDetails } from "./LocalServiceDetails";
 import { LocalSetApart } from './LocalSetApart'
 import Link from "next/link";
-import { IconType } from "./HeroIcon";
-import { HammerIcon, PackageIcon, ShieldIcon } from "lucide-react";
 import { cn } from "@/utils";
 
 export const LocalMovingContentSection = () => {
@@ -41,12 +36,15 @@ export const LocalMovingContentSection = () => {
 			<LocalSetApart />
 			
 			<NeighbourhoodExpertise />
-
-			<FullServiceOptions />
+			
 			<SpecializedServices />
+			
 			<CostSection />
+			
 			<Preparation />
+			
 			<LocalFAQ />
+			
 			<Trust />
 		</div>
 	);
