@@ -214,5 +214,5 @@ export const ServiceArea: CollectionConfig = {
 	],
 	hooks: {
 		afterChange: [revalidateServiceAreasCache],
-	}
+	},
 };

@@ -56,9 +56,9 @@ export const Reviews: FC = () => {
 						<div className="text-base leading-7 text-gray-700 lg:max-w-lg">
 							<div className="max-w-xl">
 								<p className="mt-2">
-									With a perfect 5.0 rating across over 100 verified reviews, Premium
-									Moving Services has built a reputation for excellence in the
-									moving industry. Our customers consistently praise our
+									With a perfect 5.0 rating across over 100 verified reviews,
+									Premium Moving Services has built a reputation for excellence
+									in the moving industry. Our customers consistently praise our
 									professional, efficient, and caring approach to every move, be
 									it a small apartment or an entire business relocation.
 								</p>

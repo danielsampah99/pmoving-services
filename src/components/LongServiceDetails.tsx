@@ -139,7 +139,7 @@ export const LongServiceDetails = () => {
 									whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
 									transition={{
 										duration: 0.3,
-										delay: index * 0.1
+										delay: index * 0.1,
 									}}
 									className="flex items-center p-4 bg-moving-gray/10 rounded-lg hover-scale"
 								>

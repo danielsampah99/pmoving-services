@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
 	Disclosure,
@@ -29,10 +29,8 @@ export const FaqItem = ({ faq }: { faq: FaqItemType }) => {
 				</DisclosureButton>
 			</dt>
 			<DisclosurePanel as="dd" className="mt-2 pr-12">
-				<p className="text-base leading-7 text-gray-500">
-					{faq.answer}
-				</p>
+				<p className="text-base leading-7 text-gray-500">{faq.answer}</p>
 			</DisclosurePanel>
 		</Disclosure>
-	)
-}
+	);
+};

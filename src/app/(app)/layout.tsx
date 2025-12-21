@@ -5,8 +5,8 @@ import { Banner } from "@/components/Banner";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import Script from "next/script";
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
 	variable: "--font-inter",
@@ -15,7 +15,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
 	title: "Trusted Movers Near me | Premium Moving Services",
-	description: "Get premium moving services available at the snap of a finger. From local, commercial, long-distance to specialty moving, we help you move as smoothly as it gets.",
+	description:
+		"Get premium moving services available at the snap of a finger. From local, commercial, long-distance to specialty moving, we help you move as smoothly as it gets.",
 };
 
 export default function RootLayout({
@@ -38,14 +39,17 @@ export default function RootLayout({
 				</Script>
 
 				{/* clickease.com tracking*/}
-				<Script id='click-ease-script' strategy="afterInteractive" src="https://www.clickcease.com/monitor/stat.js" />
+				<Script
+					id="click-ease-script"
+					strategy="afterInteractive"
+					src="https://www.clickcease.com/monitor/stat.js"
+				/>
 
 				<noscript>
 					<a href="https://www.clickcease.com" rel="nofollow">
 						<img src="https://monitor.clickcease.com" alt="ClickCease" />
 					</a>
 				</noscript>
-
 			</head>
 			<body className={`${inter.variable} antialiased`}>
 				<header>
@@ -66,11 +70,11 @@ export default function RootLayout({
 				{/*  GTM no script */}
 				<noscript>
 					<iframe
-			            src="https://www.googletagmanager.com/ns.html?id=GTM-MBJHMPNM"
-			            height="0"
-			            width="0"
-			            style={{ display: "none", visibility: "hidden" }}
-			        />
+						src="https://www.googletagmanager.com/ns.html?id=GTM-MBJHMPNM"
+						height="0"
+						width="0"
+						style={{ display: "none", visibility: "hidden" }}
+					/>
 				</noscript>
 			</body>
 		</html>

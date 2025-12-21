@@ -7,34 +7,36 @@ import { RequestQuote } from "../local-moving/residential-movers/request-quote";
 import { junkRemovalFAQs } from "@/data/moving-tips";
 import { ServicesSection } from "@/components/ServicesSection";
 
-import { Metadata } from 'next'
+import { Metadata } from "next";
 import { BASE_URL } from "@/utils";
 
 export const metadata: Metadata = {
 	title: "Prime Local Movers Near Me for Junk Removal",
-	description: "Get rid of all junk with Premium Moving Services. Expect eco-friendly disposal and removal solutions from the best moving company near me in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
+	description:
+		"Get rid of all junk with Premium Moving Services. Expect eco-friendly disposal and removal solutions from the best moving company near me in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 	openGraph: {
 		title: "Prime Local Movers Near Me for Junk Removal",
-		description: "Get rid of all junk with Premium Moving Services. Expect eco-friendly disposal and removal solutions from the best moving company near me in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
-		type: 'website',
+		description:
+			"Get rid of all junk with Premium Moving Services. Expect eco-friendly disposal and removal solutions from the best moving company near me in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
+		type: "website",
 		url: `${BASE_URL}/services/specialty-moving/senior-relocation`,
 		images: [
 			{
 				url: `${BASE_URL}/api/media/file/Moving%20labour.webp`,
 				width: 1200,
 				height: 630,
-				alt: "A team of professional movers doing manual labor"
+				alt: "A team of professional movers doing manual labor",
 			},
 		],
 	},
 	twitter: {
 		card: "summary_large_image",
 		title: "Prime Local Movers Near Me for Junk Removal",
-		description:"Get rid of all junk with Premium Moving Services. Expect eco-friendly disposal and removal solutions from the best moving company near me in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
+		description:
+			"Get rid of all junk with Premium Moving Services. Expect eco-friendly disposal and removal solutions from the best moving company near me in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 		images: [`${BASE_URL}/api/media/file/Moving%20labour.webp`],
 	},
-}
-
+};
 
 const JunkRemovalPage = () => {
 	return (

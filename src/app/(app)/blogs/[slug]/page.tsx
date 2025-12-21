@@ -119,7 +119,7 @@ export default async function SingleBlogPage({ params }: Props) {
 		return notFound();
 	}
 
-	const chartData = blog.chart
+	const chartData = blog.chart;
 
 	return (
 		<section className="max-w-7xl w-full mx-auto p-6 mt-3 lg:px-8 pt-0 xl:pt-6">

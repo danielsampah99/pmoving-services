@@ -94,7 +94,10 @@ export const HeroSection = () => {
 					<div className="hidden sm:mb-8 sm:flex sm:justify-center">
 						<div className="relative rounded-full px-3 py-1 backdrop-blur-md font-medium text-sm/6 text-gray-50 ring-1 ring-gray-300 ring-inset shadow-inner hover:ring-gray-white/50">
 							Fast, reliable movers for homes, apartments & seniors. &nbsp;
-							<Link href="/blogs/what-to-do-while-movers-are-moving" className="font-semibold text-moving-yellow">
+							<Link
+								href="/blogs/what-to-do-while-movers-are-moving"
+								className="font-semibold text-moving-yellow"
+							>
 								<span aria-hidden="true" className="absolute inset-0" />
 								Read more <span aria-hidden="true">&rarr;</span>
 							</Link>
@@ -104,8 +107,6 @@ export const HeroSection = () => {
 						Local Moving Service
 						<span className="sr-only">Premim Movers</span>
 					</h1>
-
-
 				</div>
 			</div>
 		</div>

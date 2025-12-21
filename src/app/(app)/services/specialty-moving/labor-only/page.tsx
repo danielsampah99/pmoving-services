@@ -1,4 +1,3 @@
-
 import { ServiceLayout } from "@/components/ServiceLayout";
 import { OurLocations } from "@/components/OurLocations";
 import { RequestQuote } from "../../local-moving/residential-movers/request-quote";
@@ -7,34 +6,36 @@ import { RelatedLocalMoving } from "../../local-moving/residential-movers/relate
 import { laborOnlyFAQs } from "@/data/moving-tips";
 import { specialtyMovingServices } from "@/data/services";
 import { ServicesSection } from "@/components/ServicesSection";
-import { Metadata } from 'next'
+import { Metadata } from "next";
 import { BASE_URL } from "@/utils";
 
 export const metadata: Metadata = {
 	title: "Premium Moving Services for Moving Labor Help",
-	description: "Get the most professional moving labor assisance for loading, unloading and in-house moving needs. Premium Moving Services handles essentials with care. Find us in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
+	description:
+		"Get the most professional moving labor assisance for loading, unloading and in-house moving needs. Premium Moving Services handles essentials with care. Find us in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 	openGraph: {
 		title: "Premium Moving Services for Moving Labor Help",
-		description: "Get the most professional moving labor assisance for loading, unloading and in-house moving needs. Premium Moving Services handles essentials with care. Find us in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
-		type: 'website',
+		description:
+			"Get the most professional moving labor assisance for loading, unloading and in-house moving needs. Premium Moving Services handles essentials with care. Find us in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
+		type: "website",
 		url: `${BASE_URL}/services/corporate-moving`,
 		images: [
 			{
 				url: `${BASE_URL}/api/media/file/Moving%20labour.webp`,
 				width: 1200,
 				height: 630,
-				alt: "A team of professional movers doing manual labor"
+				alt: "A team of professional movers doing manual labor",
 			},
 		],
 	},
 	twitter: {
 		card: "summary_large_image",
 		title: "Premium Moving Services for Moving Labor Help",
-		description:"Get the most professional moving labor assistance for loading, unloading,and in-house moving needs. Premium Moving Services handles essentials with care. Find us in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
+		description:
+			"Get the most professional moving labor assistance for loading, unloading,and in-house moving needs. Premium Moving Services handles essentials with care. Find us in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 		images: [`${BASE_URL}/api/media/file/Moving%20labour.webp`],
 	},
-}
-
+};
 
 const checklist: { id: number; text: string }[] = [
 	{ id: 1, text: "Experienced and trained moving professionals" },

@@ -12,32 +12,33 @@ import { ServicesSection } from "@/components/ServicesSection";
 import { Metadata } from "next";
 import { BASE_URL } from "@/utils";
 
-
 export const metadata: Metadata = {
 	title: "Complete Logistics Solutions By Specialized Movers Near Me",
-	description: "Get all-in-one logistics services, ranging from warehouse management to distribution coordination. Connect with the best in moving class near me. Find Premium Moving Services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities.",
+	description:
+		"Get all-in-one logistics services, ranging from warehouse management to distribution coordination. Connect with the best in moving class near me. Find Premium Moving Services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities.",
 	openGraph: {
 		title: "Complete Logistics Solutions By Specialized Movers Near Me",
-		description: "Get all-in-one logistics services, ranging from warehouse management to distribution coordination. Connect with the best in moving class near me. Find Premium Moving Services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities.",
-		type: 'website',
+		description:
+			"Get all-in-one logistics services, ranging from warehouse management to distribution coordination. Connect with the best in moving class near me. Find Premium Moving Services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities.",
+		type: "website",
 		url: `${BASE_URL}/services/logistics-services`,
 		images: [
 			{
 				url: `${BASE_URL}/api/media/file/Moving%20labour.webp`,
 				width: 1200,
 				height: 630,
-				alt: "A team of professional movers doing manual labor"
+				alt: "A team of professional movers doing manual labor",
 			},
 		],
 	},
 	twitter: {
 		card: "summary_large_image",
 		title: "Complete Logistics Solutions By Specialized Movers Near Me",
-		description:"Get all-in-one logistics services, ranging from warehouse management to distribution coordination. Connect with the best in moving class near me. Find Premium Moving Services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities.",
+		description:
+			"Get all-in-one logistics services, ranging from warehouse management to distribution coordination. Connect with the best in moving class near me. Find Premium Moving Services in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities.",
 		images: [`${BASE_URL}/api/media/file/Moving%20labour.webp`],
 	},
-}
-
+};
 
 const LogisticsServicePage = () => {
 	return (

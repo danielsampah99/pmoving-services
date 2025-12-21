@@ -11,8 +11,9 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
 	title: "Premium Long Distance Movers from Minnesota",
-	description: "Best-in-clas moving services for long distance in Minnesota is here to serve you with high quality services and complete on the move protection"
-}
+	description:
+		"Best-in-clas moving services for long distance in Minnesota is here to serve you with high quality services and complete on the move protection",
+};
 
 const LongDistanceMovingPage = () => {
 	return (

@@ -89,12 +89,11 @@ export const Blogs: CollectionConfig = {
 			},
 		},
 		{
-			name: 'chart',
-			relationTo: 'charts',
+			name: "chart",
+			relationTo: "charts",
 			required: false,
-			type: 'relationship',
-
-		}
+			type: "relationship",
+		},
 	],
 	hooks: {
 		beforeValidate: [
