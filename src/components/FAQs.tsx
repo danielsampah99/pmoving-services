@@ -4,14 +4,14 @@ import {
 	DisclosurePanel,
 } from "@headlessui/react";
 import { MinusIcon, PlusIcon } from "@heroicons/react/24/outline";
-import { FaqItem } from './FaqItem'
+import { FaqItem } from "./FaqItem";
 import { Metadata } from "next";
 import { BASE_URL } from "@/utils";
 
 export type FaqItemType = {
 	question: string;
-	answer: string
-}
+	answer: string;
+};
 
 const faqs: FaqItemType[] = [
 	{
@@ -48,14 +48,16 @@ const faqs: FaqItemType[] = [
 
 export const metadata: Metadata = {
 	title: "Frequently Asked Questions - Moving Assistance",
-	description: "Get clear answers to your most common questions on pricing, scheduling, packing and more, for clear and precise information",
+	description:
+		"Get clear answers to your most common questions on pricing, scheduling, packing and more, for clear and precise information",
 	openGraph: {
 		type: "website",
 		title: "Frequently Asked Questions - Moving Assistance",
-		description: "Get clear answers to your most common questions on pricing, scheduling, packing and more, for clear and precise information",
-		url: `${BASE_URL}/#faqs`
-	}
-}
+		description:
+			"Get clear answers to your most common questions on pricing, scheduling, packing and more, for clear and precise information",
+		url: `${BASE_URL}/#faqs`,
+	},
+};
 
 export const FAQs = () => {
 	return (

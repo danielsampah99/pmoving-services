@@ -11,28 +11,31 @@ import { BASE_URL } from "@/utils";
 
 export const metadata: Metadata = {
 	title: "Specialty Moving Solutions for Stress-Free Moving",
-	description: "Promising specialty furniture movers offering relocation assistance, labor-only moving services, furniture delivery and assembly, customized solutions and more. Find us in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
+	description:
+		"Promising specialty furniture movers offering relocation assistance, labor-only moving services, furniture delivery and assembly, customized solutions and more. Find us in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 	openGraph: {
 		title: "Specialty Moving Solutions for Stress-Free Moving",
-		description: "Promising specialty furniture movers offering relocation assistance, labor-only moving services, furniture delivery and assembly, customized solutions and more. Find us in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
-		type: 'website',
+		description:
+			"Promising specialty furniture movers offering relocation assistance, labor-only moving services, furniture delivery and assembly, customized solutions and more. Find us in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
+		type: "website",
 		url: `${BASE_URL}/services/specialty-moving`,
 		images: [
 			{
 				url: `${BASE_URL}/api/media/file/specialty-moving-statues.webp`,
 				width: 1200,
 				height: 630,
-				alt: " Specialty moving by Premim Moving Services"
+				alt: " Specialty moving by Premim Moving Services",
 			},
 		],
 	},
 	twitter: {
 		card: "summary_large_image",
 		title: "Specialty Moving Solutions for Stress-Free Moving",
-		description:"Promising specialty furniture movers offering relocation assistance, labor-only moving services, furniture delivery and assembly, customized solutions and more. Find us in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
+		description:
+			"Promising specialty furniture movers offering relocation assistance, labor-only moving services, furniture delivery and assembly, customized solutions and more. Find us in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 		images: [`${BASE_URL}/api/media/file/specialty-moving-statues.webp`],
 	},
-}
+};
 
 const SpecialtyMovingPage = () => {
 	return (

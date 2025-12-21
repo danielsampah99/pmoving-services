@@ -93,7 +93,7 @@ export const Footer: FC = () => {
 						</div>
 					</div>
 				</div>
-				<div className='pt-8 text-white sm:pt-10'>
+				<div className="pt-8 text-white sm:pt-10">
 					<MoreInfo />
 				</div>
 				<div className="mt-8 border-t border-white/10 pt-8 sm:mt-10 lg:mt-12 lg:flex lg:items-center lg:justify-between">

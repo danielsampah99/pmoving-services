@@ -5,7 +5,7 @@ export type TChartType = "bar" | "line" | "pie" | "radar" | "radial" | "area";
 export const Charts: CollectionConfig = {
 	slug: "charts",
 	admin: {
-		useAsTitle: 'title'
+		useAsTitle: "title",
 	},
 	fields: [
 		{
@@ -32,32 +32,34 @@ export const Charts: CollectionConfig = {
 			},
 		},
 		{
-			name: 'data',
-			type: 'json',
+			name: "data",
+			type: "json",
 			required: true,
-			admin: { description: "List data for recharts" }
+			admin: { description: "List data for recharts" },
 		},
 		{
 			name: "config",
-			type: 'json',
+			type: "json",
 			required: true,
-			admin: { description: "Configuration for the data, colors and data keys" }
+			admin: {
+				description: "Configuration for the data, colors and data keys",
+			},
 		},
 		{
-			name: 'dimensions',
-			type: 'group',
+			name: "dimensions",
+			type: "group",
 			fields: [
 				{
-					name: 'width',
-					type: 'number',
-					defaultValue: 400
+					name: "width",
+					type: "number",
+					defaultValue: 400,
 				},
 				{
-					name: 'height',
-					type: 'number',
-					defaultValue: 400
-				}
-			]
-		}
+					name: "height",
+					type: "number",
+					defaultValue: 400,
+				},
+			],
+		},
 	],
 };

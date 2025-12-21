@@ -43,10 +43,19 @@ export const LocalServiceDetails = () => {
 							Service Overview
 						</motion.h2>
 						<p className="text-gray-700 mb-6 text-lg">
-							Moving across town shouldn’t feel overwhelming—and with Premium Moving Services, it doesn’t have to. As one of the most trusted local moving companies in Minnesota, we proudly serve Minneapolis, St. Paul, and every surrounding neighborhood with reliable, efficient, and professional Local moving support. 
+							Moving across town shouldn’t feel overwhelming—and with Premium
+							Moving Services, it doesn’t have to. As one of the most trusted
+							local moving companies in Minnesota, we proudly serve Minneapolis,
+							St. Paul, and every surrounding neighborhood with reliable,
+							efficient, and professional Local moving support.
 						</p>
 						<p className="text-gray-700 mb-6 text-lg">
-							Whether you’re relocating from Uptown to North Loop, Highland Park to Mac-Groveland, or from a Frogtown duplex to a Maplewood townhome, our team of professional movers makes your transition smoother, safer, and stress-free. We offer comprehensive home moving services, handling every aspect of residential moves from packing to unpacking, backed by years of experience.
+							Whether you’re relocating from Uptown to North Loop, Highland Park
+							to Mac-Groveland, or from a Frogtown duplex to a Maplewood
+							townhome, our team of professional movers makes your transition
+							smoother, safer, and stress-free. We offer comprehensive home
+							moving services, handling every aspect of residential moves from
+							packing to unpacking, backed by years of experience.
 						</p>
 					</div>
 

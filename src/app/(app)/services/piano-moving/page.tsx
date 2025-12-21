@@ -8,34 +8,36 @@ import { RequestQuote } from "../local-moving/residential-movers/request-quote";
 import { pianoMovingFAQs } from "@/data/moving-tips";
 import { FAQs } from "../local-moving/residential-movers/faq";
 
-import { Metadata } from 'next'
+import { Metadata } from "next";
 import { BASE_URL } from "@/utils";
 
 export const metadata: Metadata = {
 	title: "Piano Moving Services | Woodbury Movers",
-	description: "Choose the expert moving solutions with speccialized expertise, comprehensive protection, and seamless transportation solutions from the movers in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
+	description:
+		"Choose the expert moving solutions with speccialized expertise, comprehensive protection, and seamless transportation solutions from the movers in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 	openGraph: {
 		title: "Piano Moving Services | Woodbury Movers",
-		description: "Choose the expert moving solutions with speccialized expertise, comprehensive protection, and seamless transportation solutions from the movers in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
-		type: 'website',
+		description:
+			"Choose the expert moving solutions with speccialized expertise, comprehensive protection, and seamless transportation solutions from the movers in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
+		type: "website",
 		url: `${BASE_URL}/services/piano-moving`,
 		images: [
 			{
 				url: `${BASE_URL}/api/media/file/Moving%20labour.webp`,
 				width: 1200,
 				height: 630,
-				alt: "A team of professional movers doing manual labor"
+				alt: "A team of professional movers doing manual labor",
 			},
 		],
 	},
 	twitter: {
 		card: "summary_large_image",
 		title: "Piano Moving Services | Woodbury Movers",
-		description:"Choose the expert moving solutions with speccialized expertise, comprehensive protection, and seamless transportation solutions from the movers in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
+		description:
+			"Choose the expert moving solutions with speccialized expertise, comprehensive protection, and seamless transportation solutions from the movers in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 		images: [`${BASE_URL}/api/media/file/Moving%20labour.webp`],
 	},
-}
-
+};
 
 const PianoMovingPage = () => {
 	return (

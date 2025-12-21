@@ -10,7 +10,7 @@ import type { SerializedEditorState } from "@payloadcms/richtext-lexical/lexical
 import type {
 	DefaultNodeTypes,
 	SerializedLinkNode,
-    SerializedUploadNode,
+	SerializedUploadNode,
 } from "@payloadcms/richtext-lexical";
 
 import Link from "next/link";
@@ -33,12 +33,13 @@ export const RichText: FC<RichTextProps> = ({
 	converters,
 	...rest
 }) => {
-
-	const combinedConverters = ({ defaultConverters }: {defaultConverters: JSXConverters<DefaultNodeTypes>}) => ({
+	const combinedConverters = ({
+		defaultConverters,
+	}: { defaultConverters: JSXConverters<DefaultNodeTypes> }) => ({
 		...defaultConverters,
-		...jsxLinkConverter({defaultConverters}),
-		...jsxUploadConverter({ defaultConverters })
-	})
+		...jsxLinkConverter({ defaultConverters }),
+		...jsxUploadConverter({ defaultConverters }),
+	});
 
 	return (
 		<PayloadRichText
@@ -57,10 +58,12 @@ export const jsxLinkConverter: JSXConvertersFunction<DefaultNodeTypes> = ({
 	link: ({ node }) => <CustomRichTextLink node={node} />,
 });
 
-export const jsxUploadConverter: JSXConvertersFunction<DefaultNodeTypes> = ({ defaultConverters }) => ({
+export const jsxUploadConverter: JSXConvertersFunction<DefaultNodeTypes> = ({
+	defaultConverters,
+}) => ({
 	...defaultConverters,
-	upload: ({ node }) => <CustomRichTextUpload node={node} />
-})
+	upload: ({ node }) => <CustomRichTextUpload node={node} />,
+});
 
 export const CustomRichTextLink: FC<{ node: SerializedLinkNode }> = ({
 	node,
@@ -92,48 +95,57 @@ export const CustomRichTextLink: FC<{ node: SerializedLinkNode }> = ({
 	);
 };
 
+export const CustomRichTextUpload: FC<{ node: SerializedUploadNode }> = ({
+	node,
+}) => {
+	const { value } = node;
 
-export const CustomRichTextUpload: FC<{ node: SerializedUploadNode }> = ({ node }) => {
-
-	const { value } = node
-
-	if (!value || typeof value !== 'object') {
-		return null
+	if (!value || typeof value !== "object") {
+		return null;
 	}
 
-	const media = value as Media
+	const media = value as Media;
 
-	const mimeType = media.mimeType
-	const url = media.url
+	const mimeType = media.mimeType;
+	const url = media.url;
 
 	if (!url) {
-		return null
+		return null;
 	}
 
-	if (mimeType?.startsWith('video/')) {
+	if (mimeType?.startsWith("video/")) {
 		return (
-			<video controls={true} className='rounded-xl w-full max-w-3xl my-4' preload='metadata'>
-				<source src={url} type={mimeType || 'video/mp4'}  />
+			<video
+				controls={true}
+				className="rounded-xl w-full max-w-3xl my-4"
+				preload="metadata"
+			>
+				<source src={url} type={mimeType || "video/mp4"} />
 				Sorry this video could not be displayed on your browser
 			</video>
-		)
+		);
 	}
 
-	if (mimeType?.startsWith('image/')) {
+	if (mimeType?.startsWith("image/")) {
 		return (
 			<Image
 				src={url}
-				alt={media.alt || ''}
+				alt={media.alt || ""}
 				width={media.sizes?.card?.width || media.width || 800}
 				height={media.sizes?.card?.height || media.height || 600}
 				className="rounded-lg w-full h-auto my-4 object-cover object-center"
-			 />
-		)
+			/>
+		);
 	}
 
 	return (
-		<Link href={url} className="text-amber-500" target="_blank" rel="noopener noreferrer">
+		<Link
+			href={url}
+			className="text-amber-500"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
 			{media.filename || "Download file"}
 		</Link>
-	)
-}
+	);
+};

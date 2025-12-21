@@ -4,7 +4,12 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Home, Package, Boxes, Building, Building2, Users } from "lucide-react";
 import { motion } from "motion/react";
-import { BuildingOffice2Icon, BuildingOfficeIcon, HomeIcon, HomeModernIcon } from "@heroicons/react/24/solid";
+import {
+	BuildingOffice2Icon,
+	BuildingOfficeIcon,
+	HomeIcon,
+	HomeModernIcon,
+} from "@heroicons/react/24/solid";
 
 const services = [
 	{

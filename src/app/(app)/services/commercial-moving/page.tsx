@@ -11,8 +11,9 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
 	title: "Trusted Commercial Moving Services in Minnesota, MN",
-	description: "Premium Moving Services offers leading services including office relocations, warehouse and industrial moving, corporate relocations and machinery moving."
-}
+	description:
+		"Premium Moving Services offers leading services including office relocations, warehouse and industrial moving, corporate relocations and machinery moving.",
+};
 
 const CommercialMoving = () => {
 	return (

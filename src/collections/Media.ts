@@ -19,7 +19,7 @@ export const Media: CollectionConfig = {
 			{ name: "card", width: 768, height: 1024, position: "centre" },
 			{ name: "tablet", width: 1024, height: undefined, position: "centre" },
 		],
-		mimeTypes: ['image/*', 'video/*'],
+		mimeTypes: ["image/*", "video/*"],
 		withMetadata: true,
 	},
 };

@@ -4,7 +4,6 @@ import { AllPosts } from "./all-posts";
 import type { Metadata } from "next";
 import { BASE_URL } from "@/utils";
 
-
 export const metadata: Metadata = {
 	title: "Moving Tips, Guides and Costs | Premium Moving Services Blog",
 	description:
@@ -16,7 +15,7 @@ export const metadata: Metadata = {
 		"relocation advice",
 		"professional movers",
 		"moving checklist",
-		"moving blog"
+		"moving blog",
 	],
 	openGraph: {
 		title: "Moving Tips, Guides and Costs | Premium Moving Services Blog",
@@ -29,7 +28,7 @@ export const metadata: Metadata = {
 				url: `${BASE_URL}/logo.svg`,
 				width: 1200,
 				height: 630,
-				alt: "Moving Services Blog"
+				alt: "Moving Services Blog",
 			},
 		],
 	},
@@ -41,7 +40,6 @@ export const metadata: Metadata = {
 		images: [`${BASE_URL}/logo.svg`],
 	},
 };
-
 
 const BlogsPage = async () => {
 	const blogs = await getBlogs();

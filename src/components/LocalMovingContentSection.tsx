@@ -35,8 +35,6 @@ export const LocalMovingContentSection = () => {
 
 			<LocalSetApart />
 
-			<NeighbourhoodExpertise />
-
 			<CostSection />
 
 			<Preparation />
@@ -92,95 +90,6 @@ const Introduction = () => {
 	);
 };
 
-const NeighbourhoodExpertise = () => {
-	return (
-		<section className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div className="text-center mb-12">
-				<h2 className="text-3xl font-bold text-gray-900 mb-4">
-					Neighborhood Expertise Across the Twin Cities
-				</h2>
-				<p className="text-gray-600 max-w-3xl mx-auto text-lg">
-					Your neighborhood affects your move more than you think. Parking,
-					loading zones, staircases, and city permits all matter—and Premium
-					Moving Services is experienced in all of them.
-				</p>
-			</div>
-
-			<div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-				<div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-					<h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-						<MapPinIcon className="text-indigo-600" /> Minneapolis Local Moving
-						Expertise
-					</h3>
-					<p className="text-gray-600 mb-6">
-						Every Minneapolis neighborhood has its own moving personality:
-					</p>
-					<ul className="space-y-4">
-						<ExpertiseItem
-							area="Uptown & Whittier"
-							desc="Tight parking, high-density apartments"
-						/>
-						<ExpertiseItem
-							area="North Loop"
-							desc="Freight elevator coordination"
-						/>
-						<ExpertiseItem
-							area="Linden Hills & Fulton"
-							desc="Larger homes with multi-room packing needs"
-						/>
-						<ExpertiseItem
-							area="Longfellow, Nokomis & Powderhorn"
-							desc="Alley-access logistics"
-						/>
-						<ExpertiseItem
-							area="Downtown Minneapolis"
-							desc="High-rise loading docks and reservation windows"
-						/>
-					</ul>
-					<p className="mt-8 text-sm text-gray-500 italic border-t pt-4">
-						From condos to classic bungalows, we tailor our plan to your
-						address.
-					</p>
-				</div>
-
-				<div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-					<h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-						<MapPinIcon className="text-indigo-600" /> St. Paul Local Moving
-						Expertise
-					</h3>
-					<p className="text-gray-600 mb-6">
-						St. Paul’s historic homes and steep streets require extra skill:
-					</p>
-					<ul className="space-y-4">
-						<ExpertiseItem
-							area="Highland Park & Mac-Groveland"
-							desc="Multi-level homes with delicate stair navigation"
-						/>
-						<ExpertiseItem
-							area="Frogtown & Payne-Phalen"
-							desc="Walkups and tight interior layouts"
-						/>
-						<ExpertiseItem
-							area="Cathedral Hill & Summit Hill"
-							desc="Protecting antique woodwork and custom flooring"
-						/>
-						<ExpertiseItem
-							area="Como Park"
-							desc="Family home transitions, including downsizing or moving to a smaller home"
-						/>
-						<ExpertiseItem
-							area="Midway"
-							desc="Mixed residential and commercial moving"
-						/>
-					</ul>
-					<p className="mt-8 text-sm text-gray-500 italic border-t pt-4">
-						Our team handles tricky moves with the care your home deserves.
-					</p>
-				</div>
-			</div>
-		</section>
-	);
-};
 
 const FullServiceOptions = () => {
 	return (

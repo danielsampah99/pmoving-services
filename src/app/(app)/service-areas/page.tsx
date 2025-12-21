@@ -10,7 +10,7 @@ import { BASE_URL } from "@/utils";
 export const metadata: Metadata = {
 	title: {
 		default: "Areas We Serve - Premium Moving Services",
-		template: "Premium Moving Services near you"
+		template: "Premium Moving Services near you",
 	},
 	description:
 		"Explore our professional moving services across multiple locations. Get reliable, efficient and affordable moving solutions for residential and commerical clients",
@@ -18,8 +18,7 @@ export const metadata: Metadata = {
 		"moving jobs, moving careers, professional movers hiring, Premium Moving Services careers, moving company jobs",
 	openGraph: {
 		type: "website",
-		title:
-			"Areas We Serve - Premium Moving Services",
+		title: "Areas We Serve - Premium Moving Services",
 		description:
 			"Explore our professional moving services across multiple locations. Get reliable, efficient and affordable moving solutions for residential and commerical clients",
 		url: "https://pmovingservices.com/service-areas",
