@@ -28,6 +28,12 @@ export const jobApplicationEmail = async (props: JobApplicationEmailProps) => {
 	return await pretty(await render(JobApplicationEmail({ ...props })));
 };
 
+export const fadeIn = {
+	initial: { opacity: 0, y: 20 },
+	animate: { opacity: 1, y: 0 },
+	transition: { duration: 0.6 },
+};
+
 export const BASE_URL = "https://pmovingservices.com";
 export const COMPANY = "Premium Moving Services";
 export const COMPANYID = "c0a09f4b-3861-4dbb-b8aa-ad0100fc1eb2";
