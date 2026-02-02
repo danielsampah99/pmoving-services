@@ -4,6 +4,7 @@ import { fadeIn } from "@/utils";
 import { motion } from "motion/react";
 import { MapPinIcon } from "./icons/map-pin-icon";
 import Image from "next/image";
+import type { FC } from "react";
 
 const minneapolisNeighborhoods = [
 	"North Loop – Loft apartments, condos, and modern high-rise packing",
@@ -51,63 +52,63 @@ export const PackingNeighbourhoods = () => {
 
 			<div className="grid lg:grid-cols-2 gap-12">
 				{/* Minneapolis */}
-				<motion.div {...fadeIn}>
-					<div className='my-4 rounded-lg overflow-hidden'>
-						<Image
-							src="/api/media/file/downtown-minneapolis-on-highway-94-westbound.webp"
-							alt="Downtown Minneapolis on Highway 94 Westbound"
-							width={1280}
-							height={400}
-							loading="lazy"
-							className="hover:scale-110 transition-[scale] ease-in-out duration-200"
-						/>
-					</div>
-
-					<h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-						<MapPinIcon className="size-6 text-gray-600 mr-2 hover:text-moving-yellow" />
-						Minneapolis Neighborhoods
-					</h3>
-					<ul className="space-y-3">
-						{minneapolisNeighborhoods.map((neighborhood, idx) => (
-							<li
-								key={idx}
-								className="text-moving-gray pl-6 border-l-2 border-gray-300 hover:border-moving-yellow transition-colors duration-300"
-							>
-								{neighborhood}
-							</li>
-						))}
-					</ul>
-				</motion.div>
+				<PackingCityCard
+					key={"minneapolis-neighbouroods"}
+					imageSrc="/api/media/file/downtown-minneapolis-on-highway-94-westbound.webp"
+					imageAlt="Downtown Minneapolis on Highway 94 Westbound"
+					neighbourhoodName="Minneapolis Neighborhoods"
+					neighbourhoodData={minneapolisNeighborhoods}
+				/>
 
 				{/* St. Paul */}
-				<motion.div {...fadeIn}>
-					<div className='my-4 overflow-hidden rounded-lg'>
-						<Image
-							src="/api/media/file/downtown-st-paul-overlooking-the-mississippi-river.webp"
-							alt="Downtown St Paul Overlooking the Mississippi River"
-							width={1280}
-							height={400}
-							loading="lazy"
-							className="hover:scale-110 transition-[scale] ease-in-out duration-200"
-						/>
-					</div>
 
-					<h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-						<MapPinIcon className="size-6 text-gray-600 mr-2 hover:text-moving-yellow" />
-						St. Paul Neighborhoods
-					</h3>
-					<ul className="space-y-3">
-						{stPaulNeighborhoods.map((neighborhood, idx) => (
-							<li
-								key={idx}
-								className="text-moving-gray pl-6 border-l-2 border-gray-300 hover:border-moving-yellow transition-colors duration-300"
-							>
-								{neighborhood}
-							</li>
-						))}
-					</ul>
-				</motion.div>
+				<PackingCityCard
+					key={"st-paul-neighbouroods"}
+					imageSrc="/api/media/file/downtown-st-paul-overlooking-the-mississippi-river.webp"
+					imageAlt="Downtown St Paul Overlooking the Mississippi River"
+					neighbourhoodName="St. Paul Neighborhoods"
+					neighbourhoodData={stPaulNeighborhoods}
+				/>
 			</div>
 		</section>
+	);
+};
+
+type PackingCityCardProps = {
+	imageSrc: string;
+	imageAlt: string;
+	neighbourhoodName: string;
+	neighbourhoodData: string[];
+};
+
+const PackingCityCard: FC<PackingCityCardProps> = ({ ...props }) => {
+	return (
+		<motion.div {...fadeIn}>
+			<div className="my-4 overflow-hidden rounded-lg">
+				<Image
+					src={props.imageSrc}
+					alt={props.imageAlt}
+					width={1280}
+					height={400}
+					loading="lazy"
+					className="hover:scale-110 transition-[scale] ease-in-out duration-200"
+				/>
+			</div>
+
+			<h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+				<MapPinIcon className="size-6 text-gray-600 mr-2 hover:text-moving-yellow" />
+				{props.neighbourhoodName}
+			</h3>
+			<ul className="space-y-3">
+				{props.neighbourhoodData.map((neighborhood, idx) => (
+					<li
+						key={idx}
+						className="text-moving-gray pl-6 border-l-2 border-gray-300 hover:border-moving-yellow transition-colors duration-300"
+					>
+						{neighborhood}
+					</li>
+				))}
+			</ul>
+		</motion.div>
 	);
 };
