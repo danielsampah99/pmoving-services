@@ -45,9 +45,27 @@ export default function RootLayout({
 					src="https://www.clickcease.com/monitor/stat.js"
 				/>
 
+				<Script
+					id="gtag-script"
+					strategy="afterInteractive"
+					src="https://www.googletagmanager.com/gtag/js?id=G-3RE74NXLBS"
+				>
+					{`window.dataLayer = window.dataLayer || [];
+						function gtag() {
+							dataLayer.push(arguments);
+							gtag('js' new Date());
+
+							gtag('config', 'G-3RE74NXLBS')
+						}
+					`}
+				</Script>
+
 				<noscript>
 					<a href="https://www.clickcease.com" rel="nofollow">
-						<img src="https://monitor.clickcease.com" alt="ClickCease" />
+						<img
+							src="https://monitor.clickcease.com"
+							alt="ClickCease"
+						/>
 					</a>
 				</noscript>
 			</head>
@@ -74,6 +92,7 @@ export default function RootLayout({
 						height="0"
 						width="0"
 						style={{ display: "none", visibility: "hidden" }}
+						title="gtm-script"
 					/>
 				</noscript>
 			</body>
