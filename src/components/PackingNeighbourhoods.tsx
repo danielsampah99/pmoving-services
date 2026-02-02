@@ -3,6 +3,7 @@
 import { fadeIn } from "@/utils";
 import { motion } from "motion/react";
 import { MapPinIcon } from "./icons/map-pin-icon";
+import Image from "next/image";
 
 const minneapolisNeighborhoods = [
 	"North Loop – Loft apartments, condos, and modern high-rise packing",
@@ -51,6 +52,17 @@ export const PackingNeighbourhoods = () => {
 			<div className="grid lg:grid-cols-2 gap-12">
 				{/* Minneapolis */}
 				<motion.div {...fadeIn}>
+					<div className='my-4 rounded-lg overflow-hidden'>
+						<Image
+							src="/api/media/file/downtown-minneapolis-on-highway-94-westbound.webp"
+							alt="Downtown Minneapolis on Highway 94 Westbound"
+							width={1280}
+							height={400}
+							loading="lazy"
+							className="hover:scale-110 transition-[scale] ease-in-out duration-200"
+						/>
+					</div>
+
 					<h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
 						<MapPinIcon className="size-6 text-gray-600 mr-2 hover:text-moving-yellow" />
 						Minneapolis Neighborhoods
@@ -69,6 +81,17 @@ export const PackingNeighbourhoods = () => {
 
 				{/* St. Paul */}
 				<motion.div {...fadeIn}>
+					<div className='my-4 overflow-hidden rounded-lg'>
+						<Image
+							src="/api/media/file/downtown-st-paul-overlooking-the-mississippi-river.webp"
+							alt="Downtown St Paul Overlooking the Mississippi River"
+							width={1280}
+							height={400}
+							loading="lazy"
+							className="hover:scale-110 transition-[scale] ease-in-out duration-200"
+						/>
+					</div>
+
 					<h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
 						<MapPinIcon className="size-6 text-gray-600 mr-2 hover:text-moving-yellow" />
 						St. Paul Neighborhoods
