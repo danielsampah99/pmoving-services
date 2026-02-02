@@ -17,6 +17,9 @@ import { PackingServices } from "@/components/PackingServices";
 import { PackingBenefits } from "@/components/PackingBenefits";
 import { PackingSupplies } from "@/components/PackingSupplies";
 import { PackingNeighbourhoods } from "@/components/PackingNeighbourhoods";
+import { PackingTrust } from "@/components/PackingTrust";
+import { PackingPersonalized } from "@/components/PackingPersonalized";
+import { PackingTips } from "@/components/PackingTips";
 
 export const metadata: Metadata = {
 	title: "Professional Packing and Unpacking Services",
@@ -59,9 +62,12 @@ const PackAndUnpack = () => {
 				<PackingHeader />
 				<PackingIntro />
 				<PackingServices />
+				<PackingTrust />
+				<PackingPersonalized />
 				<PackingBenefits />
 				<PackingSupplies />
 				<PackingNeighbourhoods />
+				<PackingTips />
 			</div>
 
 			<FAQs faqs={packingFAQs} />

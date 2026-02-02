@@ -33,7 +33,9 @@ export const PackingServices = () => {
 					Our packing services are flexible and built to fit your
 					specific situation, not a generic checklist. We understand
 					that every move is different, and your packing plan should
-					reflect your home, timeline, and budget.
+					reflect your home, timeline, and budget. Many moving
+					companies offer customizable packing options to fit
+					different moving needs. However, we offer: <br /> <br />
 				</motion.p>
 
 				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -71,7 +73,7 @@ const ServiceCard: FC<{ service: string; serviceIdx: number }> = ({
 		>
 			<CheckCircleIcon
 				ref={iconRef}
-				className="size-7 fill-moving-gray stroke-moving-yellow mb-4"
+				className="size-7 fill-gray-600 stroke-moving-yellow mb-4"
 			/>
 			<p className="text-moving-gray font-medium">{service}</p>
 		</motion.div>
