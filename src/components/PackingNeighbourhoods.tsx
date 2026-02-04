@@ -4,32 +4,145 @@ import { fadeIn } from "@/utils";
 import { motion } from "motion/react";
 import { MapPinIcon } from "./icons/map-pin-icon";
 import Image from "next/image";
-import type { FC } from "react";
+import Link from "next/link";
+import type { FC, ReactNode } from "react";
 
 const minneapolisNeighborhoods = [
-	"North Loop – Loft apartments, condos, and modern high-rise packing",
-	"Northeast Minneapolis – Single-family homes, duplexes, and artist studios",
-	"Uptown – Apartments, condos, and tight-access buildings",
-	"Linden Hills – Historic homes requiring careful, detailed packing",
-	"Lowry Hill – Large residences and specialty item packing",
-	"Powderhorn – Family homes and multi-room packing services",
-	"Tangletown – Residential packing with stair and layout considerations",
-	"Downtown East – Condo packing with elevator coordination",
-	"Whittier – Apartment and partial packing solutions",
-	"Longfellow – Full and partial home packing services",
+	<>
+		<Link key="north-loop" href="https://northloop.org/">
+			North Loop
+		</Link>{" "}
+		– Loft apartments, condos, and modern high-rise packing
+	</>,
+	<>
+		<Link
+			key="northeast"
+			href="https://www.ci.minneapolis.mn.us/neighborhoods/northeast"
+		>
+			Northeast Minneapolis
+		</Link>{" "}
+		– Single-family homes, duplexes, and artist studios
+	</>,
+	<>
+		<Link key="uptown" href="https://www.uptownminneapolis.com/">
+			Uptown
+		</Link>{" "}
+		– Apartments, condos, and tight-access buildings
+	</>,
+	<>
+		<Link key="linden-hills" href="https://www.lindenhills.org/">
+			Linden Hills
+		</Link>{" "}
+		– Historic homes requiring careful, detailed packing
+	</>,
+	<>
+		<Link
+			key="lowry-hill"
+			href="https://www.ci.minneapolis.mn.us/neighborhoods/lowry-hill"
+		>
+			Lowry Hill
+		</Link>{" "}
+		– Large residences and specialty item packing
+	</>,
+	<>
+		<Link key="powderhorn" href="https://www.ppna-mpls.org/">
+			Powderhorn
+		</Link>{" "}
+		– Family homes and multi-room packing services
+	</>,
+	<>
+		<Link
+			key="tangletown"
+			href="https://www.ci.minneapolis.mn.us/neighborhoods/tangletown"
+		>
+			Tangletown
+		</Link>{" "}
+		– Residential packing with stair and layout considerations
+	</>,
+	<>
+		<Link
+			key="downtown-east"
+			href="https://www.ci.minneapolis.mn.us/neighborhoods/downtown-east"
+		>
+			Downtown East
+		</Link>{" "}
+		– Condo packing with elevator coordination
+	</>,
+	<>
+		<Link key="whittier" href="https://www.whittieralliance.org/">
+			Whittier
+		</Link>{" "}
+		– Apartment and partial packing solutions
+	</>,
+	<>
+		<Link key="longfellow" href="https://www.longfellow.org/">
+			Longfellow
+		</Link>{" "}
+		– Full and partial home packing services
+	</>,
 ];
 
 const stPaulNeighborhoods = [
-	"Highland Park – Family homes and long-distance packing prep",
-	"Macalester-Groveland – Older homes requiring careful packing techniques",
-	"Summit Hill – Historic properties and high-value item packing",
-	"Cathedral Hill – Multi-level residences and specialty box packing",
-	"West Seventh – Residential and apartment packing services",
-	"Como Park – Homes and duplexes with flexible packing needs",
-	"Lowertown – Condo and office packing coordination",
-	"Dayton's Bluff – Partial and full-service packing solutions",
-	"Payne-Phalen – Budget-conscious and efficient packing services",
-	"Merriam Park – Student, family, and downsizing packing support",
+	<>
+		<Link key="highland-park" href="https://www.highlandpark.org/">
+			Highland Park
+		</Link>{" "}
+		– Family homes and long-distance packing prep
+	</>,
+	<>
+		<Link key="macalester-groveland" href="https://www.macgrove.org/">
+			Macalester-Groveland
+		</Link>{" "}
+		– Older homes requiring careful packing techniques
+	</>,
+	<>
+		<Link key="summit-hill" href="https://www.summithillassociation.org/">
+			Summit Hill
+		</Link>{" "}
+		– Historic properties and high-value item packing
+	</>,
+	<>
+		<Link key="cathedral-hill" href="https://www.cathedralhill.org/">
+			Cathedral Hill
+		</Link>{" "}
+		– Multi-level residences and specialty box packing
+	</>,
+	<>
+		<Link key="west-seventh" href="https://www.wsna-stpaul.org/">
+			West Seventh
+		</Link>{" "}
+		– Residential and apartment packing services
+	</>,
+	<>
+		<Link key="como-park" href="https://www.comopark.org/">
+			Como Park
+		</Link>{" "}
+		– Homes and duplexes with flexible packing needs
+	</>,
+	<>
+		<Link key="lowertown" href="https://www.lowertown.org/">
+			Lowertown
+		</Link>{" "}
+		– Condo and office packing coordination
+	</>,
+	<>
+		<Link key="daytons-bluff" href="https://www.daytonsbluff.org/">
+			Dayton's Bluff
+		</Link>{" "}
+		– Partial and full-service packing solutions
+	</>,
+	<>
+		<Link key="payne-phalen" href="https://www.paynephalen.org/">
+			Payne-Phalen
+		</Link>{" "}
+		– Budget-conscious and efficient packing services
+	</>,
+	<>
+		<Link key="merriam-park" href="https://www.merriampark.org/">
+			Merriam Park
+		</Link>{" "}
+		– Student, family, and downsizing packing support
+	</>,
 ];
 
 export const PackingNeighbourhoods = () => {
@@ -78,7 +191,7 @@ type PackingCityCardProps = {
 	imageSrc: string;
 	imageAlt: string;
 	neighbourhoodName: string;
-	neighbourhoodData: string[];
+	neighbourhoodData: ReactNode[];
 };
 
 const PackingCityCard: FC<PackingCityCardProps> = ({ ...props }) => {
@@ -103,7 +216,7 @@ const PackingCityCard: FC<PackingCityCardProps> = ({ ...props }) => {
 				{props.neighbourhoodData.map((neighborhood, idx) => (
 					<li
 						key={idx}
-						className="text-moving-gray pl-6 border-l-2 border-gray-300 hover:border-moving-yellow transition-colors duration-300"
+						className="text-moving-gray [&>a]:text-yellow-500 [&>a]:underline [&>a]:font-medium pl-6 border-l-2 border-gray-300 hover:border-moving-yellow transition-colors duration-300"
 					>
 						{neighborhood}
 					</li>

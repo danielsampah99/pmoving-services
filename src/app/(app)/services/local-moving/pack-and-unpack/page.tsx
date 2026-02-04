@@ -1,6 +1,3 @@
-import { ServiceLayout } from "@/components/ServiceLayout";
-import { Info } from "lucide-react";
-import { motion } from "motion/react";
 import { FAQs } from "../residential-movers/faq";
 import { packingFAQs } from "@/data/moving-tips";
 import { RequestQuote } from "../residential-movers/request-quote";
@@ -10,7 +7,6 @@ import { ServicesSection } from "@/components/ServicesSection";
 import { OurLocations } from "@/components/OurLocations";
 import type { Metadata } from "next";
 import { BASE_URL } from "@/utils";
-import Image from "next/image";
 import { PackingHeader } from "@/components/PackingHeader";
 import { PackingIntro } from "@/components/PackingIntro";
 import { PackingServices } from "@/components/PackingServices";
@@ -49,11 +45,7 @@ export const metadata: Metadata = {
 	},
 };
 
-const fadeIn = {
-	initial: { opacity: 0, y: 20 },
-	animate: { opacity: 1, y: 0 },
-	transition: { duration: 0.6 },
-};
+
 
 const PackAndUnpack = () => {
 	return (

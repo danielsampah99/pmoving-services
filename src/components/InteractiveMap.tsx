@@ -7,7 +7,7 @@ import { MapCities } from "./MapCitites";
 import { LeafletMap } from "./LeafletMap";
 import type { LatLngExpression } from "leaflet";
 import { useRouter } from "next/navigation";
-import { ServiceArea } from "@/payload-types";
+import type { ServiceArea } from "@/payload-types";
 import { MINNESOTA_CENTRE } from "@/data/map";
 
 export type ActiveState = "all" | "MN" | "WI";

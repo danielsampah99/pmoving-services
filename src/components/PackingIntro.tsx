@@ -24,7 +24,7 @@ export const PackingIntro = () => {
 				</p>
 				<p className="text-[--color-moving-gray] text-lg leading-relaxed mt-4">
 					We provide <strong>professional packing services</strong> for homes,
-					apartments, offices, and specialty moves throughout
+					apartments, offices, and specialty moves throughout &nbsp;
 					<strong>Minneapolis</strong> and <strong>St. Paul</strong>, delivering peace of mind before
 					moving day even begins. Whether you're preparing for a local
 					move, long-distance relocation, or packing items for

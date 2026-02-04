@@ -7,7 +7,7 @@ import { gunSafetyMovingFAQs } from "@/data/moving-tips";
 import { specialtyMovingServices } from "@/data/services";
 import { ServicesSection } from "@/components/ServicesSection";
 
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { BASE_URL } from "@/utils";
 
 export const metadata: Metadata = {
