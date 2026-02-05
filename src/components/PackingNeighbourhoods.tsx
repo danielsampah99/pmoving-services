@@ -45,7 +45,7 @@ const minneapolisNeighborhoods = [
 		– Large residences and specialty item packing
 	</>,
 	<>
-		<Link key="powderhorn" href="https://www.ppna-mpls.org/">
+		<Link key="powderhorn" href="https://www.minneapolis.org/neighborhoods/powderhorn/">
 			Powderhorn
 		</Link>{" "}
 		– Family homes and multi-room packing services
@@ -102,19 +102,19 @@ const stPaulNeighborhoods = [
 		– Historic properties and high-value item packing
 	</>,
 	<>
-		<Link key="cathedral-hill" href="https://www.cathedralhill.org/">
+		<Link key="cathedral-hill" href="https://www.visitsaintpaul.com/things-to-do/neighborhoods/cathedral-hill/">
 			Cathedral Hill
 		</Link>{" "}
 		– Multi-level residences and specialty box packing
 	</>,
 	<>
-		<Link key="west-seventh" href="https://www.wsna-stpaul.org/">
+		<Link key="west-seventh" href="https://www.visitsaintpaul.com/things-to-do/neighborhoods/west-7th-street/">
 			West Seventh
 		</Link>{" "}
 		– Residential and apartment packing services
 	</>,
 	<>
-		<Link key="como-park" href="https://www.comopark.org/">
+		<Link key="como-park" href="https://www.visitsaintpaul.com/things-to-do/neighborhoods/como-park/">
 			Como Park
 		</Link>{" "}
 		– Homes and duplexes with flexible packing needs
@@ -138,7 +138,7 @@ const stPaulNeighborhoods = [
 		– Budget-conscious and efficient packing services
 	</>,
 	<>
-		<Link key="merriam-park" href="https://www.merriampark.org/">
+		<Link key="merriam-park" href="https://www.trulia.com/n/mn/saint-paul/merriam-park/132978/">
 			Merriam Park
 		</Link>{" "}
 		– Student, family, and downsizing packing support

@@ -8,13 +8,39 @@ import {
 } from "./icons/check-circle-icon";
 import { type FC, useRef } from "react";
 
+type PackingType = {
+	id: string;
+	url: string | null;
+	label: string;
+};
+
 const packingTypes = [
-	"Apartments and condos",
-	"Single-family homes",
-	"Townhomes and duplexes",
-	"Senior downsizing transitions",
-	"Office and commercial relocations",
-];
+	{
+		id: "apartments-condos",
+		url: null,
+		label: "Apartments and condos",
+	},
+	{
+		id: "single-family-homes",
+		url: null,
+		label: "Single-family homes",
+	},
+	{
+		id: "townhomes-duplexes",
+		url: null,
+		label: "Townhomes and duplexes",
+	},
+	{
+		id: "senior-downsizing",
+		url: "https://www.caringtransitionsofrochestermn/",
+		label: "Senior downsizing transitions",
+	},
+	{
+		id: "office-commercial",
+		url: null,
+		label: "Office and commercial relocations",
+	},
+] satisfies readonly PackingType[];
 
 export const PackingPersonalized = () => {
 	return (
@@ -74,7 +100,7 @@ export const PackingPersonalized = () => {
 	);
 };
 
-const PackingTypeCard: FC<{ type: string; typeIdx: number }> = ({
+const PackingTypeCard: FC<{ type: PackingType; typeIdx: number }> = ({
 	type,
 	typeIdx,
 }) => {
@@ -84,8 +110,9 @@ const PackingTypeCard: FC<{ type: string; typeIdx: number }> = ({
 	const handleMouseLeave = () => iconRef.current?.stopAnimation();
 
 	return (
-		<motion.div
-			key={typeIdx}
+		<motion.a
+			key={type.id}
+			href={type.url ?? '#'}
 			initial={{ opacity: 0, y: 20 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ delay: typeIdx * 0.1 }}
@@ -97,7 +124,7 @@ const PackingTypeCard: FC<{ type: string; typeIdx: number }> = ({
 				ref={iconRef}
 				className="size-7 fill-gray-600 stroke-moving-yellow mb-4"
 			/>
-			<p className="text-moving-gray font-medium">{type}</p>
-		</motion.div>
+			<p className="text-moving-gray [&>a]:underline font-medium">{type.label}</p>
+		</motion.a>
 	);
 };
