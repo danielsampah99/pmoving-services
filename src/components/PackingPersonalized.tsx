@@ -32,7 +32,7 @@ const packingTypes = [
 	},
 	{
 		id: "senior-downsizing",
-		url: "https://www.caringtransitionsofrochestermn/",
+		url: "https://www.caringtransitions.com/",
 		label: "Senior downsizing transitions",
 	},
 	{
