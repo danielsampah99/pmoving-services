@@ -32,7 +32,7 @@ const tips = [
 	{
 		name: "Premium Moving Services",
 		id: "tip-strategy",
-		href: "#",
+		href: "/free-quote",
 		heading: "Our Strategy",
 		description: "Dedicated support and infrastructure for your company.",
 		features: [
@@ -100,18 +100,21 @@ export const LaborUnloading = () => {
 						key={tip.id}
 						className={cn(
 							tip.isUs
-								? "relative bg-[#232323]"
-								: "bg-moving-gray sm:mx-8 lg:mx-0",
-							 tipIdx === 0
-									? "lg:rounded-tr-none lg:rounded-bl-3xl"
-									: "lg:rounded-tr-3xl lg:rounded-bl-none",
-							"rounded-3xl p-8 ring-1 ring-white/80 sm:p-10",
+								? "relative bg-moving-yellow ring-moving-dark"
+								: "bg-moving-gray sm:mx-8 lg:mx-0 !ring-moving-yellow",
+							tipIdx === 0
+								? "lg:rounded-tr-none lg:rounded-bl-3xl"
+								: "lg:rounded-tr-3xl lg:rounded-bl-none",
+							"rounded-3xl p-8 ring-1 sm:p-10",
 						)}
 					>
 						<motion.h3
 							id={tip.id}
 							className={cn(
-								"text-base/7 text-moving-yellow font-semibold",
+								tip.isUs
+									? "text-moving-dark"
+									: "text-moving-yellow",
+								"text-base/7 font-semibold",
 							)}
 						>
 							{tip.name}
@@ -120,7 +123,7 @@ export const LaborUnloading = () => {
 						<motion.p className="mt-4 flex items-baseline gap-x-2">
 							<span
 								className={cn(
-									tip.isUs ? "text-white" : "text-white",
+									tip.isUs ? "text-gray-900" : "text-white",
 									"text-5xl font-semibold tracking-tight",
 								)}
 							>
@@ -129,7 +132,7 @@ export const LaborUnloading = () => {
 						</motion.p>
 						<motion.p
 							className={cn(
-								tip.isUs ? "text-gray-200" : "text-gray-200",
+								tip.isUs ? "text-gray-700" : "text-gray-200",
 								"mt-6 text-base/7",
 							)}
 						>
@@ -144,7 +147,10 @@ export const LaborUnloading = () => {
 							)}
 						>
 							{tip.features.map((feature) => (
-								<li key={feature} className="flex gap-x-3 items-center">
+								<li
+									key={feature}
+									className="flex gap-x-3 items-center"
+								>
 									{tip.id === "tip-mistake" ? (
 										<XMarkIcon
 											aria-hidden="true"
@@ -153,11 +159,19 @@ export const LaborUnloading = () => {
 									) : (
 										<CheckIcon
 											aria-hidden="true"
-											className="size-4 flex-none text-moving-yellow"
+											className="size-4 flex-none text-moving-gray"
 										/>
 									)}
 
-									{feature}
+									<span
+										className={cn(
+											tip.isUs
+												? "text-gray-700"
+												: "text-gray-300",
+										)}
+									>
+										{feature}
+									</span>
 								</li>
 							))}
 						</motion.ul>
@@ -167,7 +181,7 @@ export const LaborUnloading = () => {
 							aria-describedby={tip.id}
 							className={cn(
 								tip.isUs
-									? "bg-indigo-500 text-white hover:bg-indigo-400 focus-visible:outline-indigo-500"
+									? "bg-white/20 backdrop-blur-md text-white hover:opacity-80 focus-visible:outline-opacity-80"
 									: "bg-white/10 text-white inset-ring inset-ring-white/5 hover:bg-white/20 focus-visible:outline-white/75",
 								"mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10",
 							)}
