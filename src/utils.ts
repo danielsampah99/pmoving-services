@@ -2,6 +2,7 @@ import { render, pretty } from "@react-email/components";
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import JobApplicationEmail from "../emails/job-application";
+import { Variants } from "motion/react";
 
 export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs));
@@ -32,6 +33,20 @@ export const fadeIn = {
 	initial: { opacity: 0, y: 20 },
 	animate: { opacity: 1, y: 0 },
 	transition: { duration: 0.6 },
+};
+
+export const staggerContainer: Variants = {
+	animate: {
+		transition: {
+			staggerChildren: 0.1,
+		},
+	},
+};
+
+export const fadeInUp: Variants = {
+	initial: { opacity: 0, y: 20 },
+	animate: { opacity: 1, y: 0 },
+	// transition: { duration: 0.6 },
 };
 
 export const BASE_URL = "https://pmovingservices.com";

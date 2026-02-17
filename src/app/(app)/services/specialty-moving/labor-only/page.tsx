@@ -8,6 +8,11 @@ import { specialtyMovingServices } from "@/data/services";
 import { ServicesSection } from "@/components/ServicesSection";
 import { Metadata } from "next";
 import { BASE_URL } from "@/utils";
+import { LaborHeader } from "@/components/LaborHeader";
+import { LaborIntro } from "@/components/LaborIntro";
+import { LaborHeavy } from "@/components/LaborHeavy";
+import { LaborServices } from "@/components/LaborServices";
+import { LaborUnloading } from "@/components/LaborUnloading";
 
 export const metadata: Metadata = {
 	title: "Premium Moving Services for Moving Labor Help",
@@ -47,6 +52,34 @@ const checklist: { id: number; text: string }[] = [
 const LaborOnlyMovingPage = () => {
 	return (
 		<div>
+			<div className="min-h-screen bg-gradient-to-b from-white to-moving-lightGray">
+				<section className="relative overflow-hidden bg-gradient-to-r from-moving-dark to-moving-gray py-20 lg:py-32">
+					<div className="absolute inset-0 opacity-10">
+						<div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+					</div>
+
+					<LaborHeader />
+
+					<div className="absolute bottom-0 left-0 right-0">
+						<svg
+							className="w-full h-16 text-white"
+							preserveAspectRatio="none"
+							viewBox="0 0 1200 120"
+							fill="currentColor"
+						>
+							<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+						</svg>
+					</div>
+				</section>
+
+				<LaborIntro />
+
+				<LaborHeavy />
+
+				<LaborServices />
+				
+				<LaborUnloading />
+			</div>
 			<ServiceLayout
 				image="/api/media/file/Unloading%2BABF%2BPods-1920w.webp"
 				title="Labor Only Moving Services"
@@ -63,14 +96,16 @@ const LaborOnlyMovingPage = () => {
 								Labor Only Movers Near You
 							</h3>
 							<p className="text-gray-600">
-								Need partial help with your move? Our moving labor services
-								include in-home assistance, loading/unloading, and heavy lifting
-								support. Sometimes a little professional help makes all the
-								difference.
+								Need partial help with your move? Our moving
+								labor services include in-home assistance,
+								loading/unloading, and heavy lifting support.
+								Sometimes a little professional help makes all
+								the difference.
 							</p>
 							<p className="text-gray-600">
-								Our trained movers are ready to assist with any size project -
-								let us take the load off your mind.
+								Our trained movers are ready to assist with any
+								size project - let us take the load off your
+								mind.
 							</p>
 							<p className="font-semibold text-gray-800">
 								Contact us today for labor-only service pricing.
@@ -89,10 +124,11 @@ const LaborOnlyMovingPage = () => {
 							Expert Moving Labor Assistance
 						</h2>
 						<p className="text-gray-600">
-							Our labor-only moving service provides professional moving help
-							without the truck. Perfect for customers who have their own rental
-							truck or container and need experienced movers to do the heavy
-							lifting, loading, and unloading.
+							Our labor-only moving service provides professional
+							moving help without the truck. Perfect for customers
+							who have their own rental truck or container and
+							need experienced movers to do the heavy lifting,
+							loading, and unloading.
 						</p>
 					</div>
 
@@ -103,9 +139,10 @@ const LaborOnlyMovingPage = () => {
 								Loading & Unloading
 							</h3>
 							<p className="text-gray-600">
-								Our trained professionals will carefully load or unload your
-								rental truck, POD, or storage container with maximum efficiency
-								and care for your belongings.
+								Our trained professionals will carefully load or
+								unload your rental truck, POD, or storage
+								container with maximum efficiency and care for
+								your belongings.
 							</p>
 						</div>
 						<div className="space-y-2">
@@ -113,9 +150,10 @@ const LaborOnlyMovingPage = () => {
 								In-House Moving
 							</h3>
 							<p className="text-gray-600">
-								Need help moving furniture within your home? Our team can assist
-								with rearranging furniture, moving heavy items between floors,
-								or setting up new rooms.
+								Need help moving furniture within your home? Our
+								team can assist with rearranging furniture,
+								moving heavy items between floors, or setting up
+								new rooms.
 							</p>
 						</div>
 					</div>
@@ -127,8 +165,13 @@ const LaborOnlyMovingPage = () => {
 						</h3>
 						<ul className="space-y-3">
 							{checklist.map((item) => (
-								<li key={item.id} className="flex items-start gap-x-0.5">
-									<span className="mr-2 text-moving-yellow">✓</span>
+								<li
+									key={item.id}
+									className="flex items-start gap-x-0.5"
+								>
+									<span className="mr-2 text-moving-yellow">
+										✓
+									</span>
 									<span>{item.text}</span>
 								</li>
 							))}
