@@ -13,13 +13,17 @@ export type FAQType = {
 
 export type FAQProps = {
 	faqs: FAQType[];
+	title?: string;
 };
 
-export const FAQs: FC<FAQProps> = (props) => {
+export const FAQs: FC<FAQProps> = ({
+	title = "Frequently asked questions",
+	...props
+}) => {
 	return (
 		<div className="mx-auto max-lg:px-6 max-w-4xl py-6 sm:py-8 lg:px-8 lg:py-10 divide-y divide-gray-900/10">
 			<h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">
-				Frequently asked questions
+				{title}
 			</h2>
 			<dl className="mt-5 space-y-6 divide-y divide-gray-900/10">
 				{props.faqs.map((faq) => (
@@ -42,7 +46,9 @@ export const FAQs: FC<FAQProps> = (props) => {
 							</DisclosureButton>
 						</dt>
 						<DisclosurePanel as="dd" className="mt-2 pr-12">
-							<p className="text-base leading-7 text-gray-600">{faq.answer}</p>
+							<p className="text-base leading-7 text-gray-600">
+								{faq.answer}
+							</p>
 						</DisclosurePanel>
 					</Disclosure>
 				))}
