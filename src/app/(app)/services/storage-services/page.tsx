@@ -7,6 +7,7 @@ import { storageFaqs } from "@/data/moving-tips";
 import { Metadata } from "next";
 import { ServiceLayout } from "@/components/ServiceLayout";
 import { StorageServicesHero } from "./hero";
+import { StorageServicesPlans } from "./plans";
 
 export const metadata: Metadata = {
 	title: "Secure Settings for Your Essential Belongings | Premium Moving Services",
@@ -18,6 +19,9 @@ export default function StorageServices() {
 	return (
 		<>
 			<StorageServicesHero />
+			
+			<StorageServicesPlans />
+			
 			<ServiceLayout
 				image="/moving-warehouse.png"
 				title="Professional Storage"
