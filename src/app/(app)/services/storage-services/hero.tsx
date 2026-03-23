@@ -1,3 +1,6 @@
+import { InformationCircleIcon } from "@heroicons/react/20/solid";
+import Image from "next/image";
+
 export const storageStats: Array<{ id: string; label: string; value: string }> =
 	[
 		{
@@ -15,53 +18,79 @@ export const storageStats: Array<{ id: string; label: string; value: string }> =
 
 export const StorageServicesHero = () => {
 	return (
-		<section className="mx-auto mt-12 max-w-7xl px-6 sm:mt-6 lg:px-8 xl:mt-8">
-			<div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-				<h2 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
-					Storage Solutions
-				</h2>
-				<div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
-					<div className="lg:w-full lg:max-w-2xl lg:flex-auto">
-						<p className="text-xl/8 text-gray-600">
-							At Premium Moving & Storage, we believe storage
-							should be simple, secure, and professionally
-							managed, never stressful or uncertain. Our service
-							is built for people in transition: homeowners
-							renovating, families downsizing, professionals
-							relocating, and residents who need space without
-							sacrificing convenience.
-						</p>
-						<p className="mt-10 max-w-xl text-base/7 text-gray-700">
-							Organized storage solutions can significantly
-							improve your daily life and overall well-being by
-							reducing clutter and making your environment more
-							functional and enjoyable. Unlike traditional
-							self-storage, our approach removes the burden from
-							you. We manage pickup, protection, inventory,
-							storage, and retrieval with trained crews and
-							climate-controlled facilities with organization
-							solutions. Your belongings are treated with the same
-							care and accountability as a full-service move,
-							because that’s exactly what this is.
-						</p>
+		<section>
+			<div className="mx-auto mt-12 max-w-7xl px-6 sm:mt-6 lg:px-8 xl:mt-8">
+				<div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
+					<h2 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+						Storage Solutions
+					</h2>
+					<div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
+						<div className="lg:w-full lg:max-w-2xl lg:flex-auto">
+							<p className="text-xl/8 text-gray-600">
+								At Premium Moving & Storage, we believe storage
+								should be simple, secure, and professionally
+								managed, never stressful or uncertain. Our
+								service is built for people in transition:
+								homeowners renovating, families downsizing,
+								professionals relocating, and residents who need
+								space without sacrificing convenience.
+							</p>
+							<p className="mt-10 max-w-xl text-base/7 text-gray-700">
+								Organized storage solutions can significantly
+								improve your daily life and overall well-being
+								by reducing clutter and making your environment
+								more functional and enjoyable. Unlike
+								traditional self-storage, our approach removes
+								the burden from you. We manage pickup,
+								protection, inventory, storage, and retrieval
+								with trained crews and climate-controlled
+								facilities with organization solutions. Your
+								belongings are treated with the same care and
+								accountability as a full-service move, because
+								that’s exactly what this is.
+							</p>
+						</div>
+						<div className="lg:flex lg:flex-auto lg:justify-center">
+							<dl className="w-64 space-y-8 xl:w-80">
+								{storageStats.map((stat) => (
+									<div
+										key={stat.id}
+										className="flex flex-col-reverse gap-y-4"
+									>
+										<dt className="text-base/7 text-gray-600">
+											{stat.label}
+										</dt>
+										<dd className="text-5xl font-semibold tracking-tight text-gray-900">
+											{stat.value}
+										</dd>
+									</div>
+								))}
+							</dl>
+						</div>
 					</div>
-					<div className="lg:flex lg:flex-auto lg:justify-center">
-						<dl className="w-64 space-y-8 xl:w-80">
-							{storageStats.map((stat) => (
-								<div
-									key={stat.id}
-									className="flex flex-col-reverse gap-y-4"
-								>
-									<dt className="text-base/7 text-gray-600">
-										{stat.label}
-									</dt>
-									<dd className="text-5xl font-semibold tracking-tight text-gray-900">
-										{stat.value}
-									</dd>
-								</div>
-							))}
-						</dl>
-					</div>
+				</div>
+			</div>
+
+			<div className="relative mt-16 sm:mt-15 h-[50dvh] md:h-[60dvh] xl:h-[70dvh] sm:px-6 xl:mx-auto xl:max-w-7xl xl:px-8">
+				<Image
+					src="/api/media/file/pmovingservices-storage-boxes.webp"
+					alt="Premium Moving Services' Storage Boxes"
+					className="spect-5/2 w-full object-cover xl:rounded-3xl"
+					fill={true}
+					priority={true}
+					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+				/>
+
+				<div className="absolute bottom-4 left-4 z-10">
+					<button
+						className="rounded-full bg-transparent text-transparent/30 hover:text-white  shadow-none hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
+						title="Flexible, climate-controlled storage space with scalable capacity, professional handling, and secure facilities throughout Minnesota, especially Minneapolis St. Paul."
+					>
+						<InformationCircleIcon
+							className="size-6"
+							aria-hidden="true"
+						/>
+					</button>
 				</div>
 			</div>
 		</section>
