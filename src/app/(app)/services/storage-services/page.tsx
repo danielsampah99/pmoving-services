@@ -19,18 +19,7 @@ export default function StorageServices() {
 	return (
 		<>
 			<StorageServicesHero />
-			
 			<StorageServicesPlans />
-			
-			<ServiceLayout
-				image="/moving-warehouse.png"
-				title="Professional Storage"
-				desc="Secure, climate-controlled storage facilities with 24/7 monitoring and flexible rental options. Perfect for personal or business storage needs."
-			>
-				<span className="hidden" />
-			</ServiceLayout>
-
-			<StorageContent />
 			<RequestQuote />
 			<FAQs
 				title="STORAGE SOLUTIONS FAQS – EXPERT ANSWERS FOR SMART DECISIONS"
