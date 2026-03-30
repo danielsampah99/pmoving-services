@@ -80,7 +80,7 @@ const features: Array<Feature> = [
 				spacious wardrobe for your bedroom, a sleek bookcase for your living
 				spaces, or wall-mounted shelves to create vertical storage, the right
 				furniture can transform any room. Brands like{" "}
-				<a href="https://www.ikea.com/">IKEA</a> offer a wide range of storage
+				<a href="https://www.ikea.com/" className="text-moving-yellow">IKEA</a> offer a wide range of storage
 				options, including cabinets and display units, that not only help you
 				organize your belongings but also showcase your favorite decorative
 				items. By selecting functional storage furniture, you can refresh your
@@ -129,7 +129,7 @@ const features: Array<Feature> = [
 				</p>
 
 				<p>
-					Our <a href="/services/local-moving">local moving</a> crews plan each
+					Our <a href="/services/local-moving" className="text-moving-yellow">local moving</a> crews plan each
 					service around real-world conditions, reducing delays and preventing
 					damage. With local facilities and experienced teams, you always know
 					where your belongings are and how they’re being cared for.
