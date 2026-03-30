@@ -37,7 +37,7 @@ export const LaborHeavy = () => {
 									fill={true}
 									className="object-cover transition-transform duration-700 group-hover:scale-110"
 								/>
-								<div className="absolute inset-0 bg-gradient-to-t from-moving-dark/50 to-transparent"></div>
+								<div className="absolute inset-0 bg-gradient-to-t from-moving-dark/50 to-transparent" />
 							</div>
 						</motion.div>
 
