@@ -140,7 +140,6 @@ export const LaborUnloading = () => {
 						</motion.p>
 
 						<motion.ul
-							role="list"
 							className={cn(
 								tip.isUs ? "text-gray-300" : "text-gray-300",
 								"mt-8 space-y-3 text-sm/6 sm:mt-10",
