@@ -48,7 +48,7 @@ const tips = [
 
 export const LaborUnloading = () => {
 	return (
-		<section className="relative isolate bg-moving-gray px-6 py-24 sm:py-32 lg:px-8">
+		<section className="relative isolate bg-moving-gray px-6 py-24 sm:py-32 lg:px-8 [&_a]:text-moving-yellow [&_a]:underline">
 			<div
 				aria-hidden="true"
 				className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"

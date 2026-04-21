@@ -11,7 +11,7 @@ import { type FC, type ReactNode, useState } from "react";
 
 export const StorageServicesFeatures = () => {
 	return (
-		<section className="mx-auto max-w-7xl px-4">
+		<section className="mx-auto max-w-7xl px-4 [&_a]:text-moving-yellow [&_a]:underline">
 			<div className="border-x border-gray-400">
 
 				<Heading />
@@ -155,7 +155,7 @@ const FeatureItem: FC<FeatureItemProps> = ({ feature, isOpen }) => {
 		>
 			<AccordionTrigger className="flex w-full cursor-pointer flex-col items-start rounded-none p-6 text-left hover:no-underline xl:p-12 [&>svg]:hidden">
 				{isOpen ? (
-					// ── Expanded ──
+					
 					<span className="flex w-full flex-col items-start gap-10 xl:gap-4">
 						<img
 							className=""
@@ -170,7 +170,7 @@ const FeatureItem: FC<FeatureItemProps> = ({ feature, isOpen }) => {
 						</span>
 					</span>
 				) : (
-					// ── Collapsed ──
+					
 					<span className="flex w-full items-center gap-3">
 						<img
 							className="size-6"
@@ -203,7 +203,7 @@ const Features = () => {
 			collapsible={true}
 			value={openFeature}
 			onValueChange={(val: string) => setOpenFeature(val)}
-			className="w-full"
+			className="w-full [&_a]:text-moving-yellow [&_a]:underline"
 		>
 			{features.map((feat) => (
 				<FeatureItem

@@ -3,7 +3,7 @@ import { OurLocations } from "@/components/OurLocations";
 import { ServicesSection } from "@/components/ServicesSection";
 import { FAQs } from "../local-moving/residential-movers/faq";
 import { storageFaqs } from "@/data/moving-tips";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { StorageServicesHero } from "./hero";
 import { StorageServicesPlans } from "./plans";
 import { StorageServicesFeatures } from "./features";
