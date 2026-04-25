@@ -1,6 +1,22 @@
 import { CheckCircleIcon, CheckIcon } from "@heroicons/react/16/solid"
 import Link from "next/link"
+import {
+	ArchiveBoxIcon,
+	ArrowPathIcon,
+	BuildingOfficeIcon,
+	CalendarDaysIcon,
+	CloudArrowUpIcon,
+	Cog6ToothIcon,
+	FingerPrintIcon,
+	GlobeAltIcon,
+	HomeModernIcon,
+	InboxStackIcon,
+	LockClosedIcon,
+	ServerIcon,
+} from '@heroicons/react/20/solid'
 import type { ReactNode } from "react"
+
+type RichData = { id: number, name: string, description: ReactNode }
 
 const qualificationChecklist = [
 	'Route and fuel planning',
@@ -10,8 +26,6 @@ const qualificationChecklist = [
 	'Compliance with interstate transport regulations',
 	'Higher level packing services for extended travel',
 ]
-
-type RichData = { id: number, name: string, description: ReactNode }
 
 const serviceApproachData: RichData[] = [
 	{
@@ -43,8 +57,6 @@ const serviceApproachData: RichData[] = [
 		)
 	}
 ]
-
-
 
 const trustCheckListData: { id: number, name: ReactNode }[] = [
 	{
@@ -80,14 +92,13 @@ const trustCheckListData: { id: number, name: ReactNode }[] = [
 		name: (
 			<span>
 				<Link href="/services/local-moving/pack-and-unpack" className="text-yellow-600 underline">
-					Professional packing 
+					Professional packing
 				</Link>{" "}
-				 designed for multi-day transport
+				designed for multi-day transport
 			</span>
 		)
 	}
 ]
-
 
 
 export const Qualifications = () => (
@@ -153,6 +164,7 @@ export const FullServiceApproach = () => (
 	</div>
 )
 
+
 export const TrustUs = () => (
 	<div className="mx-auto max-w-7xl">
 		<div className="mx-auto flex lg:flex-row-reverse flex-col gap-16 py-16 sm:p-8 lg:mx-0 lg:max-w-none lg:items-center lg:py-5 xl:gap-x-20 xl:px-10">
@@ -181,6 +193,82 @@ export const TrustUs = () => (
 				<div className="mt-10 flex text-gray-700">
 					We don’t hand your move off to a third party. We execute it.				</div>
 			</div>
+		</div>
+	</div>
+)
+
+const pricingData = [
+	{
+		name: 'Distance traveled',
+		description: 'The total mileage between your pickup and delivery locations directly impacts fuel, labor, and time costs.',
+		icon: GlobeAltIcon,
+	},
+	{
+		name: 'Weight and volume of items',
+		description: 'The total mass and space your belongings occupy determine the size of the truck and the crew needed.',
+		icon: ArchiveBoxIcon,
+	},
+	{
+		name: 'Packing level requested',
+		description: 'Whether you opt for self-packing, partial, or full-service packing by our team influences labor and material costs.',
+		icon: InboxStackIcon,
+	},
+	{
+		name: 'Access challenges',
+		description: 'Factors like multiple flights of stairs, long walks to the truck, or elevator availability at both locations can affect labor time.',
+		icon: BuildingOfficeIcon,
+	},
+	{
+		name: 'Storage services',
+		description: 'Temporary or long-term storage solutions needed during your move will add to the overall cost.',
+		icon: HomeModernIcon,
+	},
+	{
+		name: 'Timing and delivery window',
+		description: 'The flexibility of your moving dates and the desired timeframe for delivery can impact pricing, especially during peak seasons.',
+		icon: CalendarDaysIcon,
+	},
+]
+
+export const Pricing = () => (
+	<div className="bg-white py-24 sm:py-32">
+		<div className="mx-auto max-w-7xl px-6 lg:px-8">
+			<div className="mx-auto max-w-2xl sm:text-center">
+				<h2 className="text-base/7 font-semibold text-moving-yellow">Budget and Pricing</h2>
+				<p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl sm:text-balance">
+					How Pricing Works for Long Distance Moving
+				</p>
+				<p className="mt-6 text-lg/8 text-gray-600">
+					These are several factors that will influence your moving costs:
+				</p>
+			</div>
+		</div>
+		<div className="relative overflow-hidden pt-16">
+			<div className="mx-auto max-w-7xl px-6 lg:px-8">
+				<img
+					alt="Using iPhone calculator for long distance moving costs"
+					src="/api/media/file/calculating-moving-costs.webp"
+					width={2432}
+					height={800}
+					className="mb-[-12%] lg:h-[90svh] rounded-xl ring-1 shadow-2xl ring-gray-900/10"
+				/>
+				<div aria-hidden="true" className="relative">
+					<div className="absolute -inset-x-20 bottom-0 bg-linear-to-t from-moving-dark pt-[7%]" />
+				</div>
+			</div>
+		</div>
+		<div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
+			<dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base/7 text-gray-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
+				{pricingData.map((pd) => (
+					<div key={pd.name} className="relative pl-9">
+						<dt className="inline font-semibold text-gray-900">
+							<pd.icon aria-hidden="true" className="absolute top-1 left-1 size-5 text-moving-yellow" />
+							{pd.name}
+						</dt>{' '}
+						<dd className="inline">{pd.description}</dd>
+					</div>
+				))}
+			</dl>
 		</div>
 	</div>
 )

@@ -1,4 +1,3 @@
-import { LongServiceDetails } from "@/components/LongServiceDetails";
 import { OurLocations } from "@/components/OurLocations";
 import { PackingHerolong } from "@/components/PackingHeroLong";
 import { FAQs } from "@/app/(app)/services/local-moving/residential-movers/faq";
@@ -9,7 +8,7 @@ import { longDistanceMovingServices } from "@/data/services";
 import { ServicesSection } from "@/components/ServicesSection";
 import type { Metadata } from "next";
 import { CTA } from "./cta";
-import { FullServiceApproach, Qualifications, TrustUs } from "./qualifications";
+import { FullServiceApproach, Pricing, Qualifications, TrustUs } from "./qualifications";
 
 export const metadata: Metadata = {
 	title: "Premium Long Distance Movers from Minnesota",
@@ -29,7 +28,7 @@ const LongDistanceMovingPage = () => {
 			<Qualifications />
 			<FullServiceApproach />
 			<TrustUs />
-			<LongServiceDetails />
+			<Pricing />
 			<RelatedMovingServices services={longDistanceMovingServices} />
 			<RequestQuote />
 			<FAQs title="FAQs About Long Distance Moving" faqs={longDistanceQuestions} />
