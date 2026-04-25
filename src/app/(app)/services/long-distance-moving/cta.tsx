@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export const CTA = () => (
-	<div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
-		<div className="relative isolate overflow-hidden bg-moving-dark px-6 py-24 text-center shadow-2xl sm:rounded-3xl sm:px-16">
+	<div className="flex items-center flex-row justify-center py-24 w-full">
+		<div className="relative isolate flex-1 overflow-hidden bg-moving-dark w-full px-6 py-24 text-center shadow-2xl">
 			<h2 className="text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
 				A move across state lines is more than logistics
 			</h2>

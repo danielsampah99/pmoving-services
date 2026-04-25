@@ -9,6 +9,7 @@ import { longDistanceMovingServices } from "@/data/services";
 import { ServicesSection } from "@/components/ServicesSection";
 import type { Metadata } from "next";
 import { CTA } from "./cta";
+import { FullServiceApproach, Qualifications, TrustUs } from "./qualifications";
 
 export const metadata: Metadata = {
 	title: "Premium Long Distance Movers from Minnesota",
@@ -25,6 +26,9 @@ const LongDistanceMovingPage = () => {
 				title="Professional Long Distance Moving Services from Minnesota"
 			/>
 			<CTA />
+			<Qualifications />
+			<FullServiceApproach />
+			<TrustUs />
 			<LongServiceDetails />
 			<RelatedMovingServices services={longDistanceMovingServices} />
 			<RequestQuote />
