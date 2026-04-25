@@ -7,7 +7,7 @@ import { RequestQuote } from "@/app/(app)/services/local-moving/residential-move
 import { RelatedMovingServices } from "./related-services";
 import { longDistanceMovingServices } from "@/data/services";
 import { ServicesSection } from "@/components/ServicesSection";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
 	title: "Premium Long Distance Movers from Minnesota",
@@ -26,7 +26,7 @@ const LongDistanceMovingPage = () => {
 			<LongServiceDetails />
 			<RelatedMovingServices services={longDistanceMovingServices} />
 			<RequestQuote />
-			<FAQs faqs={longDistanceQuestions} />
+			<FAQs title="FAQs About Long Distance Moving" faqs={longDistanceQuestions} />
 			<ServicesSection />
 			<OurLocations />
 		</div>
