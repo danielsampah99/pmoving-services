@@ -8,6 +8,7 @@ import { RelatedMovingServices } from "./related-services";
 import { longDistanceMovingServices } from "@/data/services";
 import { ServicesSection } from "@/components/ServicesSection";
 import type { Metadata } from "next";
+import { CTA } from "./cta";
 
 export const metadata: Metadata = {
 	title: "Premium Long Distance Movers from Minnesota",
@@ -19,10 +20,11 @@ const LongDistanceMovingPage = () => {
 	return (
 		<div>
 			<PackingHerolong
-				description="Top-rated long distance movers servicing nationwide relocations. We handle all aspects of your cross-country or state-to-state move with expert packing, secure transportation, and stress-free delivery. Our professional team ensures your belongings arrive safely whether you're moving 100 or 3,000 miles away."
+				description="Professional long distance movers based in Minnesota. Fully licensed, expert interstate movers offering transparent pricing, expert packing, secure transport, and real communication. Get your free quote today."
 				image="/long-distance-moving.webp"
-				title="Long Distance Moving"
+				title="Professional Long Distance Moving Services from Minnesota"
 			/>
+			<CTA />
 			<LongServiceDetails />
 			<RelatedMovingServices services={longDistanceMovingServices} />
 			<RequestQuote />

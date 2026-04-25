@@ -33,7 +33,7 @@ export const PackingHerolong: FC<PackingHerolongProps> = (props) => {
 						transition={{ duration: 0.8 }}
 					>
 						<motion.h1
-							className="text-2xl xs:text-3xl text-white sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 xs:mb-3 md:mb-6 drop-shadow-lg leading-tight"
+							className="text-2xl xs:text-3xl text-white sm:text-4xl md:text-5xl lg:text-5xl lg:text-shadow-sm font-bold mb-2 xs:mb-3 md:mb-6 drop-shadow-lg leading-tight"
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
 							transition={{ delay: 0.2 }}
@@ -42,7 +42,7 @@ export const PackingHerolong: FC<PackingHerolongProps> = (props) => {
 						</motion.h1>
 
 						<motion.p
-							className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-4 md:mb-8 max-w-xl mx-auto md:mx-0"
+							className="text-base sm:text-lg md:text-xl lg:text-lg text-gray-200 mb-4 md:mb-8 max-w-xl mx-auto md:mx-0"
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
 							transition={{ delay: 0.4 }}
