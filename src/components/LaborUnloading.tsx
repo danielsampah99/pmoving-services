@@ -101,7 +101,7 @@ export const LaborUnloading = () => {
 						className={cn(
 							tip.isUs
 								? "relative bg-moving-yellow ring-moving-dark"
-								: "bg-moving-gray sm:mx-8 lg:mx-0 !ring-moving-yellow",
+								: "bg-moving-gray sm:mx-8 lg:mx-0 ring-moving-yellow!",
 							tipIdx === 0
 								? "lg:rounded-tr-none lg:rounded-bl-3xl"
 								: "lg:rounded-tr-3xl lg:rounded-bl-none",
