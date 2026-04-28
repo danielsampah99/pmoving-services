@@ -1,10 +1,10 @@
 "use client";
 
-import { Chart } from "@/payload-types";
-import { ChartConfig, ChartContainer, ChartTooltip } from "./chart";
-import { TChartType } from "@/collections/Charts";
+import type { Chart } from "@/payload-types";
+import { type ChartConfig, ChartContainer, ChartTooltip } from "./chart";
+import type { TChartType } from "@/collections/Charts";
 import { CartesianGrid, Legend, Line, LineChart, XAxis, YAxis } from "recharts";
-import { DataKey } from "recharts/types/util/types";
+import type { DataKey } from "recharts/types/util/types";
 
 export const ChartRenderer = ({
 	chart,
@@ -19,6 +19,7 @@ export const ChartRenderer = ({
 
 	const config = chart.config ? (chart.config as unknown as ChartConfig) : {};
 
+	// biome-ignore lint: <uhh...>
 	const hasKey = (key: any): boolean => {
 		if (
 			typeof chart.config === "object" &&
@@ -35,39 +36,40 @@ export const ChartRenderer = ({
 		const commonProps = {
 			width: chart.dimensions?.width || 400,
 			height: chart.dimensions?.height || 400,
-			data: chart.data as unknown as any[], // TODO: replace any with extensive type narrowing
+			// biome-ignore lint: <TODO: replace any with extensive type narrowing>
+			data: chart.data as unknown as any[],
 			margin: { top: 20, right: 30, bottom: 20, left: 10 },
 		};
 
 		switch (chart.chartType as TChartType) {
-			case "line":
+			case "line": {
 				const xAxisKey =
 					typeof chart.config === "object" &&
-					chart.config !== null &&
-					"xAxisKey" in chart.config &&
-					typeof chart.config.xAxisKey === "string"
+						chart.config !== null &&
+						"xAxisKey" in chart.config &&
+						typeof chart.config.xAxisKey === "string"
 						? (chart.config.xAxisKey satisfies DataKey<string>)
 						: "x-axis-key";
 				const xAxisLabel =
 					typeof chart.config === "object" &&
-					chart.config !== null &&
-					"xAxisLabel" in chart.config &&
-					typeof chart.config.xAxisLabel === "string"
+						chart.config !== null &&
+						"xAxisLabel" in chart.config &&
+						typeof chart.config.xAxisLabel === "string"
 						? chart.config.xAxisLabel
 						: "X-Axis Label";
 
 				const yAxisKey =
 					typeof chart.config === "object" &&
-					chart.config !== null &&
-					"yAxisKey" in chart.config &&
-					typeof chart.config.yAxisKey === "string"
+						chart.config !== null &&
+						"yAxisKey" in chart.config &&
+						typeof chart.config.yAxisKey === "string"
 						? (chart.config.yAxisKey satisfies DataKey<string>)
 						: "y-axis-key";
 				const yAxisLabel =
 					typeof chart.config === "object" &&
-					chart.config !== null &&
-					"yAxisLabel" in chart.config &&
-					typeof chart.config.yAxisLabel === "string"
+						chart.config !== null &&
+						"yAxisLabel" in chart.config &&
+						typeof chart.config.yAxisLabel === "string"
 						? chart.config.yAxisLabel
 						: "Y-Axis Label";
 
@@ -94,10 +96,10 @@ export const ChartRenderer = ({
 						/>
 
 						{typeof chart.config === "object" &&
-						chart.config !== null &&
-						"showTooltip" in chart.config &&
-						typeof chart.config.showTooltip === "boolean" &&
-						chart.config.showToolTip !== false ? (
+							chart.config !== null &&
+							"showTooltip" in chart.config &&
+							typeof chart.config.showTooltip === "boolean" &&
+							chart.config.showToolTip !== false ? (
 							<ChartTooltip />
 						) : null}
 
@@ -125,7 +127,7 @@ export const ChartRenderer = ({
 										? dataKey.name
 										: "X-Axis Name";
 
-								const lineKey: DataKey<string> =
+								const lineKey =
 									dataKey.key && typeof dataKey.key === "string"
 										? (dataKey.key as DataKey<string>)
 										: "";
@@ -148,7 +150,8 @@ export const ChartRenderer = ({
 								);
 							})}
 					</LineChart>
-				);
+				)
+			}
 
 			default:
 				return (
