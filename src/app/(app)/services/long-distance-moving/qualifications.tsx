@@ -19,7 +19,7 @@ import type { ReactNode } from "react"
 type RichData = { id: number, name: string, description: ReactNode }
 
 const qualificationChecklist = [
-	'Route and fuel planning',
+	'Route & fuel planning',
 	'Inventory tracking and protection',
 	'Delivery window coordination',
 	'A great work environment',
