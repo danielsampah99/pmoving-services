@@ -13,6 +13,7 @@ import {
 	executionData,
 	handlingData,
 } from "./packages";
+import { BusinessRelocation, HowToChoose, MinnesotaSpecific } from "./content";
 
 export const metadata: Metadata = {
 	title: "Premium Moving Services | Corporate Relocation in Minnesota",
@@ -87,6 +88,13 @@ const CorporateMoving = () => {
 					</p>
 				}
 			/>
+
+			<MinnesotaSpecific />
+
+			<BusinessRelocation />
+
+			<HowToChoose />
+
 			{/* Trusted Brands Section */}
 			<div className="py-16 bg-gray-50">
 				<div className="max-w-7xl mx-auto px-4">
