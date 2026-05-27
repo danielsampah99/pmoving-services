@@ -28,7 +28,7 @@ export const Header: FC = async () => {
 				<div className="flex lg:hidden">
 					<MobileSidebar areas={areas.docs} />
 				</div>
-				<PopoverGroup className="hidden z-[100] lg:flex lg:gap-x-12">
+				<PopoverGroup className="hidden z-100 lg:flex lg:gap-x-12">
 					<Services />
 					<ServiceArea links={areas.docs} />
 					<Link

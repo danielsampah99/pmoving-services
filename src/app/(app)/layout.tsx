@@ -62,10 +62,7 @@ export default function RootLayout({
 
 				<noscript>
 					<a href="https://www.clickcease.com" rel="nofollow">
-						<img
-							src="https://monitor.clickcease.com"
-							alt="ClickCease"
-						/>
+						<img src="https://monitor.clickcease.com" alt="ClickCease" />
 					</a>
 				</noscript>
 			</head>
@@ -75,9 +72,9 @@ export default function RootLayout({
 					<Header />
 				</header>
 				{children}
-				<footer>
-					<Footer />
-				</footer>
+
+				<Footer />
+
 				<Analytics />
 				<SpeedInsights />
 				<Script

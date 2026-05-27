@@ -12,7 +12,7 @@ import { type FC, type ReactNode, useState } from "react";
 export const StorageServicesFeatures = () => {
 	return (
 		<section className="mx-auto max-w-7xl px-4 [&_a]:text-moving-yellow [&_a]:underline">
-			<div className="border-x border-gray-400">
+			<div className="">
 				<Heading />
 			</div>
 			<ContentGrid />
@@ -26,7 +26,7 @@ const Heading = () => {
 			<div className="flex max-w-2xl flex-col gap-4 py-8 sm:gap-6 sm:py-10 lg:py-20">
 				<h2 className="text-3xl font-medium sm:text-4xl md:text-5xl">
 					Start with{" "}
-					<span className="bg-linear-to-r from-moving-yellow to-moving-gray bg-clip-text text-transparent">
+					<span className="bg-moving-yellow bg-clip-text text-transparent">
 						confidence
 					</span>
 				</h2>
@@ -157,13 +157,7 @@ type FeatureItemProps = {
 
 const FeatureItem: FC<FeatureItemProps> = ({ feature, isOpen }) => {
 	return (
-		<AccordionItem
-			value={feature.value}
-			className={cn(
-				"border-b transition-colors",
-				isOpen && "border-t-2 border-t-moving-yellow",
-			)}
-		>
+		<AccordionItem value={feature.value} className="border-b transition-colors">
 			<AccordionTrigger className="flex w-full cursor-pointer flex-col items-start rounded-none p-6 text-left hover:no-underline xl:p-12 [&>svg]:hidden">
 				{isOpen ? (
 					<span className="flex w-full flex-col items-start gap-10 xl:gap-4">

@@ -102,7 +102,7 @@ export const TheMovingProcess: FC = () => {
 	}, [isInView, controls]);
 
 	return (
-		<section className="py-20 bg-gradient-to-b from-white to-gray-50">
+		<section className="py-20 bg-linear-to-b from-white to-gray-50">
 			<div className="container mx-auto px-4">
 				<div className="text-center mb-16">
 					<h2 className="text-4xl font-bold mb-4 bg-clip-text text-black">
@@ -116,14 +116,15 @@ export const TheMovingProcess: FC = () => {
 
 				<div ref={movingRef} className="relative max-w-5xl mx-auto">
 					{/* Connecting line */}
-					<div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-moving-gray/20 via-moving-gray to-moving-gray/20 transform -translate-x-1/2 hidden md:block" />
+					<div className="absolute left-1/2 top-0 bottom-0 w-1 bg-linear-to-b from-moving-gray/20 via-moving-gray to-moving-gray/20 transform -translate-x-1/2 hidden md:block" />
 
 					{processes.map((step, index) => (
 						<motion.div
 							key={step.stage}
-							className={`flex flex-col md:flex-row items-center gap-8 mb-16 last:mb-0 ${
-								index % 2 === 1 ? "md:flex-row-reverse" : ""
-							}`}
+							className={cn(
+								"flex flex-col md:flex-row items-center gap-8 mb-16 last:mb-0",
+								index % 2 === 1 ? "md:flex-row-reverse" : "",
+							)}
 							initial="hidden"
 							animate={controls}
 							variants={{
@@ -155,12 +156,12 @@ export const TheMovingProcess: FC = () => {
 								id={step.id}
 								className="group/icon bg-white rounded-2xl shadow-xl p-4 sm:p-8 flex-1 relative overflow-hidden group transition-shadow duration-300"
 							>
-								<div className="absolute inset-0 bg-gradient-to-r from-moving-gray/5 to-transparent opacity-0" />
+								<div className="absolute inset-0 bg-linear-to-r from-moving-gray/5 to-transparent opacity-0" />
 
 								<div className="flex items-start gap-6">
 									<div
 										className={cn(
-											"p-2 sm:p-3 rounded-xl z-20 bg-gradient-to-br text-white shadow-md",
+											"p-2 sm:p-3 rounded-xl z-20 bg-linear-to-br text-white shadow-md",
 											step.color,
 										)}
 									>
@@ -195,7 +196,7 @@ export const TheMovingProcess: FC = () => {
 								/>
 								<div
 									className={cn(
-										"absolute -top-10 -left-10 size-20 sm:size-32 rounded-full -z-0",
+										"absolute -top-10 -left-10 size-20 sm:size-32 rounded-full z-0",
 										index % 2 === 1 ? "bg-yellow-50" : "bg-moving-gray/10",
 									)}
 								/>

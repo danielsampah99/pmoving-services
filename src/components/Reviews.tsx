@@ -1,13 +1,54 @@
 "use client";
 
 import { type Reviewer, reviews, type ReviewType } from "@/data/reviews";
-import { useRef, type FC } from "react";
+import { useEffect, useRef, type FC } from "react";
 import { Carousel, CarouselContent, CarouselItem } from "./carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { trimReview } from "@/utils";
 import Link from "next/link";
 
 export const Reviews: FC = () => {
+	const videoRef = useRef<HTMLVideoElement>(null);
+
+	useEffect(() => {
+		const video = videoRef.current;
+
+		if (!video) {
+			return;
+		}
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach(async (entry) => {
+					if (!entry.isIntersecting) {
+						try {
+							if (document.pictureInPictureElement !== video) {
+								await video.requestPictureInPicture();
+							}
+						} catch (e) {
+							console.error(`unable to enter pip: ${e}`);
+						}
+					} else {
+						if (document.pictureInPictureElement === video) {
+							await document.exitPictureInPicture();
+						}
+					}
+				});
+			},
+			{ threshold: 0.1 },
+		);
+
+		observer.observe(video);
+
+		return () => {
+			observer.disconnect();
+
+			if (document.pictureInPictureElement === video) {
+				document.exitPictureInPicture().catch(() => {});
+			}
+		};
+	}, []);
+
 	return (
 		<div className="relative overflow-hidden ">
 			<div className="absolute inset-0 bg-moving-gray/5">
@@ -27,13 +68,21 @@ export const Reviews: FC = () => {
 
 				<div className="mx-auto grid max-w-6xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
 					<div className="lg:pr-4">
-						<div className="relative overflow-hidden rounded-3xl bg-moving-gray px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
-							<img
-								alt=""
-								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Chester-New-About-Us-1200w.jpeg"
-								className="absolute inset-0 h-full w-full object-cover brightness-125 saturate-0"
-							/>
-							<div className="absolute inset-0 bg-moving-gray mix-blend-multiply" />
+						<div className="relative overflow-hidden rounded-3xl px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
+							<video
+								controls={true}
+								loop={true}
+								muted={false}
+								ref={videoRef}
+								poster="/api/media/file/crew.webp"
+								className="absolute inset-0 z-9000 h-full w-full object-cover brightness-125 saturate-0"
+							>
+								<source
+									src="/api/media/file/testimonial-video.mov"
+									type="video/quicktime"
+								/>
+							</video>
+							<div className="absolute inset-0 mix-blend-multiply" />
 							<div
 								aria-hidden="true"
 								className="absolute left-1/2 top-1/2 -ml-16 -translate-x-1/2 -translate-y-1/2 transform-gpu blur-3xl"
@@ -43,7 +92,7 @@ export const Reviews: FC = () => {
 										clipPath:
 											"polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
 									}}
-									className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[var(--color-moving-yellow)/70] to-[var(--color-moving-yellow)] opacity-40"
+									className="aspect-1097/845 w-274.25 bg-linear-to-tr from-moving-yellow/70 to-moving-yellow opacity-40"
 								/>
 							</div>
 							<figure className="relative isolate">
@@ -83,13 +132,12 @@ export const Reviews: FC = () => {
 						</div>
 
 						<div className="mt-5 flex">
-							<a
+							<Link
 								href="/free-quote"
 								className="text-base font-semibold leading-7 hover:underline text-moving-yellow/80"
 							>
-								See all our reviews review{" "}
-								<span aria-hidden="true">&rarr;</span>
-							</a>
+								See all our reviews <span aria-hidden="true">&rarr;</span>
+							</Link>
 						</div>
 					</div>
 				</div>

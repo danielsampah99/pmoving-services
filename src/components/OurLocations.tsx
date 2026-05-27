@@ -2,6 +2,7 @@ import { MapPinIcon, PhoneIcon } from "@heroicons/react/20/solid";
 import type { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { cn } from "@/utils";
 
 //
 // https://www.google.com/maps/dir/5.5511752,-0.2526174/2514+Plymouth+Ave+N,+Minneapolis,+MN+55411,+USA/@1.8467867,-132.8663059,3z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x52b333a87d602d8f:0xa6dc41e3800dfcf6!2m2!1d-93.3127048!2d44.9917309?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D
@@ -63,7 +64,7 @@ export const OurLocations = () => {
 				<div className="relative mt-6">
 					<svg
 						viewBox="0 0 1208 1024"
-						className="absolute -top-10 left-1/2 -z-10 h-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:-top-12 md:-top-20 lg:-top-12 xl:top-0"
+						className="absolute -top-10 left-1/2 -z-10 h-256 -translate-x-1/2 mask-[radial-gradient(closest-side,white,transparent)] sm:-top-12 md:-top-20 lg:-top-12 xl:top-0"
 					>
 						<ellipse
 							cx={604}
@@ -88,7 +89,7 @@ export const OurLocations = () => {
 							{officeLocations.map((location) => (
 								<OfficeLocationCard key={location.id} location={location} />
 							))}
-							<MoreInfo />
+							<MoreInfo className="bg-white ring-1 ring-moving-yellow ring-inset" />
 						</div>
 					</div>
 				</div>
@@ -164,9 +165,14 @@ export const OfficeLocationCard: FC<{ location: OfficeLocation }> = ({
 	);
 };
 
-export const MoreInfo: FC = () => {
+export const MoreInfo = ({ className }: { className?: string }) => {
 	return (
-		<div className="flex flex-col items-start gap-x-8 gap-y-6 rounded-3xl p-8 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10 md:col-span-2 lg:col-span-4 lg:flex-row lg:items-center">
+		<div
+			className={cn(
+				"flex flex-col items-start gap-x-8 gap-y-6 rounded-3xl p-8 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10 md:col-span-2 lg:col-span-4 lg:flex-row lg:items-center",
+				className,
+			)}
+		>
 			<div className="lg:min-w-0 lg:flex-1">
 				<h3 className="text-lg font-semibold leading-8 tracking-tight text-yellow-500">
 					Business Hours

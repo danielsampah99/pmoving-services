@@ -94,7 +94,7 @@ export const Footer: FC = () => {
 					</div>
 				</div>
 				<div className="pt-8 text-white sm:pt-10">
-					<MoreInfo />
+					<MoreInfo className="ring-1 ring-moving-yellow/50" />
 				</div>
 				<div className="mt-8 border-t border-white/10 pt-8 sm:mt-10 lg:mt-12 lg:flex lg:items-center lg:justify-between">
 					<div>
@@ -122,7 +122,7 @@ export const Footer: FC = () => {
 							/>
 						</Field>
 
-						<div className="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
+						<div className="mt-4 sm:ml-4 sm:mt-0 sm:shrink-0">
 							<Button
 								type="submit"
 								className="flex w-full items-center justify-center rounded-md bg-moving-yellow px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-moving-yellow/70 focus-visible:outline focus-visible:outline-none focus-visible:outline-moving-yellow"

@@ -235,9 +235,9 @@ const Tiers = () => {
 						{tiers.map((tier) => (
 							<div
 								key={tier.name}
-								className="-m-2 grid grid-cols-1 rounded-[2rem] ring-1 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md"
+								className="-m-2 grid grid-cols-1 rounded-4xl ring-1 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md"
 							>
-								<div className="grid grid-cols-1 rounded-[2rem] p-2 shadow-md shadow-black/5">
+								<div className="grid grid-cols-1 rounded-4xl p-2 shadow-md shadow-black/5">
 									<div className="rounded-3xl bg-white p-10 pb-9 ring-1 shadow-2xl ring-black/5">
 										<h2 className="text-sm font-semibold text-yellow-400">
 											{tier.name}{" "}

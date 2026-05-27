@@ -63,25 +63,20 @@ export const StorageServicesHero = () => {
 				</div>
 			</div>
 
-			<div className="relative mt-16 sm:mt-15 h-[50dvh] md:h-[60dvh] xl:h-[70dvh] sm:px-6 xl:mx-auto xl:max-w-7xl xl:px-8">
-				<Image
-					src="/api/media/file/pmovingservices-storage-boxes.webp"
-					alt="Premium Moving Services' Storage Boxes"
-					className="spect-5/2 w-full object-cover xl:rounded-3xl"
-					fill={true}
-					priority={true}
-					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-				/>
-
-				<div className="absolute bottom-4 left-4 z-10">
-					<button
-						type="button"
-						className="rounded-full bg-transparent text-transparent/30 hover:text-white  shadow-none hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
-						title="Flexible, climate-controlled storage space with scalable capacity, professional handling, and secure facilities throughout Minnesota, especially Minneapolis St. Paul."
-					>
-						<InformationCircleIcon className="size-6" aria-hidden="true" />
-					</button>
-				</div>
+			<div className="relative mt-16 sm:mt-15 h-[50dvh] rounded-3xl md:h-[60dvh] lg:overflow-hidden xl:h-[70dvh] sm:px-6 xl:mx-auto xl:max-w-7xl xl:px-8">
+				<video
+					loop={true}
+					muted={true}
+					controls={true}
+					className="aspect-5/2 w-full object-cover xl:rounded-3xl md:w-screen lg:w-screen"
+					// sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+					poster="/api/media/file/pmovingservices-storage-boxes.webp"
+				>
+					<source
+						src="/api/media/file/storage-tour.mov"
+						type="video/quicktime"
+					/>
+				</video>
 			</div>
 		</section>
 	);

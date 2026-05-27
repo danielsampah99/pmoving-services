@@ -35,7 +35,7 @@ export const Banner: FC = () => {
 	return (
 		<div
 			style={{ backgroundColor }}
-			className="bg-gray-100 hidden sm:fixed sm:flex items-center justify-center top-0 inset-x-0 z-[1000] backdrop-blur-xs px-4 py-2 transition-opacity duration-300"
+			className="bg-gray-100 hidden sm:fixed sm:flex items-center justify-center top-0 inset-x-0 z-1000 backdrop-blur-xs px-4 py-2 transition-opacity duration-300"
 		>
 			<div className="max-w-7xl w-full flex justify-between gap-3 items-center">
 				<div className="">
@@ -183,7 +183,7 @@ const SocialMediaContactsMenu: FC<{ socialMediaLinks: SocialMediaLink[] }> = ({
 			<MenuItems
 				transition
 				anchor="left"
-				className="absolute right-0 [--anchor-gap:4px] md:[--anchor-gap:8px] z-[99999] mx-1 w-fit max-w-56 origin-top-right ring-1 ring-transparent transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+				className="absolute right-0 [--anchor-gap:4px] md:[--anchor-gap:8px] z-99999 mx-1 w-fit max-w-56 origin-top-right ring-1 ring-transparent transition focus:outline-none data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-leave:duration-75 data-enter:ease-out data-leave:ease-in"
 			>
 				<div className="rounded-md flex flex-row items-center gap-x-1 flex-nowrap">
 					{socialMediaLinks.map((link) => (

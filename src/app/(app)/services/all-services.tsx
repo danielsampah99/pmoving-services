@@ -25,6 +25,8 @@ import {
 import { SafeIcon } from "@/components/icons/safe-icon";
 import { cn } from "@/utils";
 import { LogisticsIcon } from "@/components/icons/logistics-icon";
+import { MovingTruckIcon } from "@/components/icons/moving-truck";
+import { PackingIcon } from "@/components/icons/packing-icon";
 
 export type AllServicesType = ServiceCardData & {
 	image?: string;
@@ -61,7 +63,7 @@ export const services: AllServicesType[] = [
 		description:
 			"Professional and reliable local moving services tailored to your needs. We handle your belongings with utmost care.",
 		href: "/services/local-moving",
-		icon: TruckIcon,
+		icon: MovingTruckIcon,
 		image: "/api/media/file/Deshun%20Unloading.jpg",
 	},
 	{
@@ -70,7 +72,7 @@ export const services: AllServicesType[] = [
 		description:
 			"Expert solutions to ensure your items are safely prepared for transport",
 		href: "/services/local-moving/pack-and-unpack",
-		icon: PackageIcon,
+		icon: PackingIcon,
 		image: "/api/media/file/new%20truck.jpg",
 	},
 	{
@@ -215,21 +217,17 @@ export const AllServices = () => {
 								whileTap={{ scale: 0.95 }}
 							>
 								<Link href={service.href}>
-									<div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 cursor-pointer h-full">
+									<div className="bg-white rounded-xl border border-solid border-gray-200 shadow-xs overflow-hidden hover:shadow-md transition-shadow duration-300 cursor-pointer h-full">
 										{/* Service Image */}
 										<div className="relative h-48 overflow-hidden">
 											<motion.img
 												src={service.image}
 												alt={service.title}
 												className="w-full h-full object-cover"
+												loading="eager"
 												whileHover={{ scale: 1.05 }}
 												transition={{ duration: 0.3 }}
 											/>
-											<div
-												className="absolute top-4 left-4 bg-moving-gray p-1.5 rounded-full"
-											>
-												<IconComponent className="size-4 text-white group-hover:animate-fill-backwards" />
-											</div>
 										</div>
 
 										{/* Service Content */}
@@ -240,13 +238,6 @@ export const AllServices = () => {
 											<p className="text-gray-500 text-sm leading-relaxed mb-4">
 												{service.description}
 											</p>
-											<motion.div
-												className="flex items-center text-moving-yellow font-semibold"
-												whileHover={{ x: 5 }}
-												transition={{ duration: 0.2 }}
-											>
-												Learn More &rarr;
-											</motion.div>
 										</div>
 									</div>
 								</Link>
