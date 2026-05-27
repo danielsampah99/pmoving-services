@@ -37,7 +37,7 @@ const processes: Process[] = [
 		],
 		icon: PhoneIcon,
 		id: "stage-1",
-		color: "from-moving-gray to-gray-200",
+		color: "bg-moving-gray",
 	},
 	{
 		stage: 2,
@@ -47,7 +47,7 @@ const processes: Process[] = [
 			"Get plenty of tape.  Also shrink and bubble wrap and mattress bags if necessary.",
 		],
 		icon: ClipboardDocumentListIcon,
-		color: "from-moving-yellow to-gray-yellow",
+		color: "bg-moving-yellow",
 		id: "stage-2",
 	},
 	{
@@ -61,7 +61,7 @@ const processes: Process[] = [
 			"Pack bulky, light items into large boxes: lampshades, blankets, pillows, stereo speaker, towels and linens.",
 		],
 		icon: PackageCheckIcon,
-		color: "from-moving-gray to-gray-400",
+		color: "bg-moving-gray",
 		id: "stage-3",
 	},
 	{
@@ -72,7 +72,7 @@ const processes: Process[] = [
 			with strategies like distributing weight evenly, using protective padding and stacking boxes efficiently to prevent damage`,
 		],
 		icon: TruckIcon,
-		color: "from-moving-yellow to-gray-yellow",
+		color: "bg-moving-yellow",
 		id: "stage-4",
 	},
 	{
@@ -85,7 +85,7 @@ const processes: Process[] = [
 			"After the truck is completely empty, do a final walk through.",
 		],
 		icon: TruckIcon,
-		color: "from-moving-gray to-gray-400",
+		color: "bg-moving-gray/80",
 		id: "stage-5",
 	},
 ];
@@ -105,7 +105,7 @@ export const TheMovingProcess: FC = () => {
 		<section className="py-20 bg-gradient-to-b from-white to-gray-50">
 			<div className="container mx-auto px-4">
 				<div className="text-center mb-16">
-					<h2 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-moving-gray to-gray-300">
+					<h2 className="text-4xl font-bold mb-4 bg-clip-text text-black">
 						Our Seamless Moving Process
 					</h2>
 					<p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -142,7 +142,7 @@ export const TheMovingProcess: FC = () => {
 							<div className="relative">
 								<div
 									className={cn(
-										"size-8 sm:size-16 rounded-full bg-gradient-to-br flex items-center justify-center text-white text-base sm:text-3xl font-bold shadow-lg",
+										"size-8 sm:size-16 rounded-full flex items-center justify-center text-white text-base sm:text-3xl font-bold shadow-lg",
 										step.color,
 									)}
 								>

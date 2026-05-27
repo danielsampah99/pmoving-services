@@ -66,14 +66,9 @@ export type NameAndIconProps = {
 
 export const NameAndIcon: FC<NameAndIconProps> = (props) => {
 	return (
-		<div className="group flex flex-col text-sm lg:text-base gap-1 hover:text-moving-yellow transition-colors delay-150 duration-300 items-center justify-start gap-x-1 selection:bg-moving-yellow">
+		<div className="group flex flex-col text-sm lg:text-base gap-1 items-center justify-start gap-x-1 selection:bg-moving-yellow">
 			<div>
-				<props.icon
-					className={cn(
-						"size-10 group-hover:fill-moving-yellow fill-white",
-						props.iconClassName,
-					)}
-				/>
+				<props.icon className={cn("size-10 fill-white", props.iconClassName)} />
 			</div>
 
 			<div>{props.text}</div>
