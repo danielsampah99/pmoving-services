@@ -16,9 +16,9 @@
 	--color-moving-primary: #1e88e5;
 	--color-moving-dark: #333f48;
 	--color-moving-lightGray: #e6e9ef;
-	--color-moving-gray: oklch(46.4% 0 0);
+	--color-moving-gray: oklch(46.4% 0 0); /* #595959 */
 	--color-moving-gray-100: oklch(45%, 0, 0);
-	--color-moving-yellow: oklch(87.32% 0.1771 92.05);
+	--color-moving-yellow: oklch(87.32% 0.1771 92.05); /* #ffd00d */
 }
 
 .btn {
@@ -274,7 +274,7 @@ effect-underline:hover:after {
 }
 
 .privacy-h2 {
-	@apply mt-4 text-2xl font-bold tracking-tight text-gray-900
+	@apply mt-4 text-2xl font-bold tracking-tight text-gray-900;
 }
 
 /* Masonry Grid Styles */
@@ -297,7 +297,7 @@ effect-underline:hover:after {
 	}
 
 	.gallery-container {
-		@apply px-3 py-6
+		@apply px-3 py-6;
 	}
 }
 

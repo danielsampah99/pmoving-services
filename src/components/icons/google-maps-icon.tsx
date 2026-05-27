@@ -1,11 +1,11 @@
 import type { SVGProps } from "react";
 
-interface SVGRProps {
+export type SVGRProps = {
 	title?: string;
 	titleId?: string;
 	desc?: string;
 	descId?: string;
-}
+};
 export const GoogleMapsIcon = ({
 	title,
 	titleId,

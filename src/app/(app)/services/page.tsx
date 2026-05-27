@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { AllServices } from "./all-services";
 import { HeroSection } from "./hero";
 

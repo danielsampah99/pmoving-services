@@ -226,7 +226,7 @@ export const AllServices = () => {
 												transition={{ duration: 0.3 }}
 											/>
 											<div
-												className={`absolute top-4 left-4 bg-moving-gray p-1.5 rounded-full`}
+												className="absolute top-4 left-4 bg-moving-gray p-1.5 rounded-full"
 											>
 												<IconComponent className="size-4 text-white group-hover:animate-fill-backwards" />
 											</div>
