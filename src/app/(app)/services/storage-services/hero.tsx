@@ -5,7 +5,8 @@ export const storageStats: Array<{ id: string; label: string; value: string }> =
 	[
 		{
 			id: "1",
-			label: "Storage solutions for moves, renovations, down-sizing, space-recovery & more",
+			label:
+				"Storage solutions for moves, renovations, down-sizing, space-recovery & more",
 			value: "All use cases",
 		},
 		{ id: "2", label: "Managed start to finish", value: "100%" },
@@ -27,39 +28,30 @@ export const StorageServicesHero = () => {
 					<div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
 						<div className="lg:w-full lg:max-w-2xl lg:flex-auto">
 							<p className="text-xl/8 text-gray-600">
-								At Premium Moving & Storage, we believe storage
-								should be simple, secure, and professionally
-								managed, never stressful or uncertain. Our
-								service is built for people in transition:
-								homeowners renovating, families downsizing,
-								professionals relocating, and residents who need
-								space without sacrificing convenience.
+								At Premium Moving & Storage, we believe storage should be
+								simple, secure, and professionally managed, never stressful or
+								uncertain. Our service is built for people in transition:
+								homeowners renovating, families downsizing, professionals
+								relocating, and residents who need space without sacrificing
+								convenience.
 							</p>
 							<p className="mt-10 max-w-xl text-base/7 text-gray-700">
-								Organized storage solutions can significantly
-								improve your daily life and overall well-being
-								by reducing clutter and making your environment
-								more functional and enjoyable. Unlike
-								traditional self-storage, our approach removes
-								the burden from you. We manage pickup,
-								protection, inventory, storage, and retrieval
-								with trained crews and climate-controlled
-								facilities with organization solutions. Your
-								belongings are treated with the same care and
-								accountability as a full-service move, because
+								Organized storage solutions can significantly improve your daily
+								life and overall well-being by reducing clutter and making your
+								environment more functional and enjoyable. Unlike traditional
+								self-storage, our approach removes the burden from you. We
+								manage pickup, protection, inventory, storage, and retrieval
+								with trained crews and climate-controlled facilities with
+								organization solutions. Your belongings are treated with the
+								same care and accountability as a full-service move, because
 								that’s exactly what this is.
 							</p>
 						</div>
 						<div className="lg:flex lg:flex-auto lg:justify-center">
 							<dl className="w-64 space-y-8 xl:w-80">
 								{storageStats.map((stat) => (
-									<div
-										key={stat.id}
-										className="flex flex-col-reverse gap-y-4"
-									>
-										<dt className="text-base/7 text-gray-600">
-											{stat.label}
-										</dt>
+									<div key={stat.id} className="flex flex-col-reverse gap-y-4">
+										<dt className="text-base/7 text-gray-600">{stat.label}</dt>
 										<dd className="text-5xl font-semibold tracking-tight text-gray-900">
 											{stat.value}
 										</dd>
@@ -83,13 +75,11 @@ export const StorageServicesHero = () => {
 
 				<div className="absolute bottom-4 left-4 z-10">
 					<button
+						type="button"
 						className="rounded-full bg-transparent text-transparent/30 hover:text-white  shadow-none hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
 						title="Flexible, climate-controlled storage space with scalable capacity, professional handling, and secure facilities throughout Minnesota, especially Minneapolis St. Paul."
 					>
-						<InformationCircleIcon
-							className="size-6"
-							aria-hidden="true"
-						/>
+						<InformationCircleIcon className="size-6" aria-hidden="true" />
 					</button>
 				</div>
 			</div>

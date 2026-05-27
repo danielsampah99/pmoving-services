@@ -1,10 +1,10 @@
 "use client";
 
-import { RefObject, useEffect, useRef, useState } from "react";
+import { type RefObject, useEffect, useRef, useState } from "react";
 
 export type UseInViewReturn = [RefObject<HTMLDivElement | null>, boolean];
 
-export const useInView = (threshold: number = 0.12): UseInViewReturn => {
+export const useInView = (threshold = 0.12): UseInViewReturn => {
 	const viewRef = useRef<HTMLDivElement | null>(null);
 
 	const [inView, setInView] = useState(false);

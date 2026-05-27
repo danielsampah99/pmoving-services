@@ -329,7 +329,7 @@ const ServiceOptionCard = ({
 				{subtitle}
 			</span>
 		)}
-		<p className="text-gray-600 mb-8 flex-grow leading-relaxed mt-2">
+		<p className="text-gray-600 mb-8 grow leading-relaxed mt-2">
 			{description}
 		</p>
 		<Link

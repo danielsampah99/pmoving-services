@@ -13,7 +13,6 @@ export const StorageServicesFeatures = () => {
 	return (
 		<section className="mx-auto max-w-7xl px-4 [&_a]:text-moving-yellow [&_a]:underline">
 			<div className="border-x border-gray-400">
-
 				<Heading />
 			</div>
 			<ContentGrid />
@@ -39,7 +38,7 @@ const Heading = () => {
 				</p>
 			</div>
 		</div>
-	)
+	);
 };
 
 const ContentGrid = () => {
@@ -72,7 +71,7 @@ const features: Array<Feature> = [
 	{
 		value: "storage-furniture",
 		title: "Storage Furniture",
-		image: "/storage-furniture.png",
+		image: "/storage-furniture.webp",
 		description: (
 			<p>
 				Maximizing space in small rooms starts with choosing the right storage
@@ -80,14 +79,19 @@ const features: Array<Feature> = [
 				spacious wardrobe for your bedroom, a sleek bookcase for your living
 				spaces, or wall-mounted shelves to create vertical storage, the right
 				furniture can transform any room. Brands like{" "}
-				<a href="https://www.ikea.com/" className="text-moving-yellow">IKEA</a> offer a wide range of storage
-				options, including cabinets and display units, that not only help you
-				organize your belongings but also showcase your favorite decorative
-				items. By selecting functional storage furniture, you can refresh your
-				home’s look, keep your space tidy, and ensure every item has its place.
-				Thoughtfully chosen storage furniture makes it easy to create a more
-				organized, beautiful, and functional living environment, no matter the
-				size of your space.
+				<a
+					href="https://www.ikea.com/"
+					className="text-moving-yellow font-semibold underline"
+				>
+					IKEA
+				</a>{" "}
+				offer a wide range of storage options, including cabinets and display
+				units, that not only help you organize your belongings but also showcase
+				your favorite decorative items. By selecting functional storage
+				furniture, you can refresh your home’s look, keep your space tidy, and
+				ensure every item has its place. Thoughtfully chosen storage furniture
+				makes it easy to create a more organized, beautiful, and functional
+				living environment, no matter the size of your space.
 			</p>
 		),
 	},
@@ -129,10 +133,17 @@ const features: Array<Feature> = [
 				</p>
 
 				<p>
-					Our <a href="/services/local-moving" className="text-moving-yellow">local moving</a> crews plan each
-					service around real-world conditions, reducing delays and preventing
-					damage. With local facilities and experienced teams, you always know
-					where your belongings are and how they’re being cared for.
+					Our{" "}
+					<a
+						href="/services/local-moving"
+						className="text-moving-yellow font-semibold underline"
+					>
+						local moving
+					</a>{" "}
+					crews plan each service around real-world conditions, reducing delays
+					and preventing damage. With local facilities and experienced teams,
+					you always know where your belongings are and how they’re being cared
+					for.
 				</p>
 			</div>
 		),
@@ -155,7 +166,6 @@ const FeatureItem: FC<FeatureItemProps> = ({ feature, isOpen }) => {
 		>
 			<AccordionTrigger className="flex w-full cursor-pointer flex-col items-start rounded-none p-6 text-left hover:no-underline xl:p-12 [&>svg]:hidden">
 				{isOpen ? (
-					
 					<span className="flex w-full flex-col items-start gap-10 xl:gap-4">
 						<img
 							className=""
@@ -170,7 +180,6 @@ const FeatureItem: FC<FeatureItemProps> = ({ feature, isOpen }) => {
 						</span>
 					</span>
 				) : (
-					
 					<span className="flex w-full items-center gap-3">
 						<img
 							className="size-6"
@@ -187,7 +196,7 @@ const FeatureItem: FC<FeatureItemProps> = ({ feature, isOpen }) => {
 				)}
 			</AccordionTrigger>
 
-			<AccordionContent className="px-6 pb-6 pt-0 text-base text-justify w-full font-normal text-gray-500 [**>a]:text-moving-yellow xl:px-12 xl:pb-12">
+			<AccordionContent className="px-6 pb-6 pt-0 text-base text-justify w-full font-normal text-gray-500 [**>a]:text-moving-yellow [&>a]:underline [&>a]:font-semibold xl:px-12 xl:pb-12">
 				{feature.description}
 			</AccordionContent>
 		</AccordionItem>
