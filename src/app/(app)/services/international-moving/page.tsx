@@ -10,7 +10,7 @@ import { OurLocations } from "@/components/OurLocations";
 import { RequestQuote } from "../local-moving/residential-movers/request-quote";
 import { FAQs } from "../local-moving/residential-movers/faq";
 import { ServicesSection } from "@/components/ServicesSection";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { BASE_URL } from "@/utils";
 
 export const metadata: Metadata = {
@@ -129,7 +129,7 @@ const InternationalMoving = () => {
 
 						<div className="rounded-lg overflow-hidden h-full">
 							<img
-								className="w-full h-auto max-h-[800px] rounded-lg object-cover"
+								className="w-full h-auto max-h-200 rounded-lg object-cover"
 								src="/residential-moving.webp"
 								alt="International Moving Process"
 							/>

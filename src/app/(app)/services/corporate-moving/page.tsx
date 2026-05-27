@@ -3,8 +3,16 @@ import { Info } from "lucide-react";
 import { ServicesSection } from "@/components/ServicesSection";
 import { OurLocations } from "@/components/OurLocations";
 import { RequestQuote } from "../local-moving/residential-movers/request-quote";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { BASE_URL } from "@/utils";
+import { FAQs } from "../local-moving/residential-movers/faq";
+import { CorporateMovingIntro } from "./intro";
+import {
+	CorporateMovingContent,
+	CorporateMovingPackages,
+	executionData,
+	handlingData,
+} from "./packages";
 
 export const metadata: Metadata = {
 	title: "Premium Moving Services | Corporate Relocation in Minnesota",
@@ -50,8 +58,35 @@ const CorporateMoving = () => {
 		<ServiceLayout
 			image="/api/media/file/corporate-moving.webp"
 			title="Corporate Moving Services"
-			desc="Professional relocation solutions for businesses and employees"
+			desc="Professional corporate moving services designed to minimize downtime, protect assets, and ensure seamless business transitions across Minnesota."
 		>
+			<CorporateMovingIntro />
+			<CorporateMovingPackages />
+			<CorporateMovingContent
+				data={handlingData}
+				title="What we handle"
+				description={
+					<p className="mt-6 text-lg/8 text-gray-600">
+						Our office movers use specialized instruments and techniques to
+						safely haul high-value electronics and delicate assets. It's crucial
+						to verify that your team can safely handle IT and network equipment
+						during transfer.
+						<br />
+						We also provide storage solutions for office furniture and archived
+						files.
+					</p>
+				}
+			/>
+
+			<CorporateMovingContent
+				data={executionData}
+				title="Strategic Execution"
+				description={
+					<p className="mt-6 text-lg/8 text-gray-600">
+						Most team of movers just “show up.” We plan:
+					</p>
+				}
+			/>
 			{/* Trusted Brands Section */}
 			<div className="py-16 bg-gray-50">
 				<div className="max-w-7xl mx-auto px-4">
@@ -63,7 +98,7 @@ const CorporateMoving = () => {
 							<img
 								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/business-1920w.png"
 								alt="Business Logo"
-								className="h-20 w-auto object-contain max-w-[280px]"
+								className="h-20 w-auto object-contain max-w-70"
 								loading="eager"
 							/>
 						</div>
@@ -71,7 +106,7 @@ const CorporateMoving = () => {
 							<img
 								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/AngiesList_SSA_2019-1920w.png"
 								alt="Angie's List Logo"
-								className="h-20 w-auto object-contain max-w-[280px]"
+								className="h-20 w-auto object-contain max-w-70"
 								loading="eager"
 							/>
 						</div>
@@ -79,7 +114,7 @@ const CorporateMoving = () => {
 							<img
 								src="https://irp-cdn.multiscreensite.com/b0f4adc5/dms3rep/multi/inline.svg"
 								alt="Inline Logo"
-								className="h-20 w-auto object-contain max-w-[280px]"
+								className="h-20 w-auto object-contain max-w-70"
 								loading="eager"
 							/>
 						</div>
@@ -159,13 +194,14 @@ const CorporateMoving = () => {
 					{/* Right Image */}
 					<div className="rounded-lg overflow-hidden h-full">
 						<img
-							className="w-full h-auto max-h-[800px] rounded-lg object-contain"
+							className="w-full h-auto rounded-lg object-contain"
 							src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/L+shape+tower+desk-1920w.JPG"
 							alt="Movers"
 						/>
 					</div>
 				</div>
 			</div>
+			<FAQs title="FAQs about Corporate Moving Services" faqs={[]} />
 			<RequestQuote />
 			<ServicesSection />
 			<OurLocations />

@@ -32,7 +32,7 @@ export const RequestQuote = () => {
 			<svg
 				viewBox="0 0 1024 1024"
 				aria-hidden="true"
-				className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]"
+				className="absolute left-1/2 top-1/2 -z-10 size-5xl -translate-x-1/2 mask-[radial-gradient(closest-side,white,transparent)]"
 			>
 				<circle
 					r={512}

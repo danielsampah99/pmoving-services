@@ -36,7 +36,7 @@ export const FAQs: FC<FAQProps> = ({
 								<span className="ml-6 flex h-7 items-center">
 									<PlusIcon
 										aria-hidden="true"
-										className="size-6 group-data-[open]:hidden"
+										className="size-6 group-data-open:hidden"
 									/>
 									<MinusIcon
 										aria-hidden="true"
