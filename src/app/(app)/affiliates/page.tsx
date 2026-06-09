@@ -45,7 +45,7 @@ export default function AffiliatesPage() {
 	return (
 		<section className="isolate overflow-hidden max-sm:bg-moving-gray bg-white px-6 lg:px-8">
 			<div className="relative mx-auto max-w-2xl py-12 sm:py-16 lg:max-w-4xl">
-				<div className="absolute left-1/2 top-0 -z-10 h-[50rem] w-[90rem] -translate-x-1/2 bg-[radial-gradient(50%_100%_at_top,theme(colors.moving.gray),white)] opacity-20 lg:left-36" />
+				<div className="absolute left-1/2 top-0 -z-10 h-200 w-360 -translate-x-1/2 bg-[radial-gradient(50%_100%_at_top,var(--color-moving-gray),white)] opacity-20 lg:left-36" />
 				<div className="absolute inset-y-0 right-1/2 -z-10 mr-12 w-[150vw] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl max-sm:shadow-moving-gray/60 shadow-moving-yellow/10 ring-1 ring-moving-yellow/50 sm:mr-20 md:mr-0 lg:right-full lg:-mr-36 lg:origin-center" />
 				<h2 className="text-2xl font-black my-4 text-center uppercase leading-10 text-gray-900">
 					Affiliates

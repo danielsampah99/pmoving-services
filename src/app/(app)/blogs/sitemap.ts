@@ -1,24 +1,20 @@
 import { getBlogs } from "@/data/blogs";
 import { BASE_URL } from "@/utils";
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
 
-export async function generateSitemaps() {
-	const blogs = await getBlogs();
 
-	return blogs.docs.map((blog) => ({ id: blog.slug }));
-}
 
-export default async function sitemap({
-	slug,
-}: { slug: string }): Promise<MetadataRoute.Sitemap> {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 	const blogs = await getBlogs();
 
 	return blogs.docs.map((blog) => ({
-		url: `${BASE_URL}/blogs/${slug}`,
-		lastModified: blog.updatedAt,
+		url: `${BASE_URL}/blogs/${encodeURIComponent(blog.slug)}`,
+		lastModified: blog.updatedAt ? new Date(blog.updatedAt) : new Date(),
+		changeFrequency: 'weekly',
+		priority: 1,
 		images:
-			typeof blog.thumbnail === "object"
-				? [`${BASE_URL}/${blog.thumbnail.thumbnailURL}`]
+			typeof blog.thumbnail === "object" && blog.thumbnail?.thumbnailURL
+				? [`${BASE_URL}${blog.thumbnail.thumbnailURL}`]
 				: undefined,
 	}));
 }

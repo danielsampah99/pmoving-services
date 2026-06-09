@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState, type FC } from "react";
 import { ArrowRight, Clock, Award, Star } from "lucide-react";
 
 import CategoryFilter from "./CategoryFilter";
 import GalleryGrid from "./GalleryGrid";
-import { Gallery } from "@/payload-types";
+import type { Gallery } from "@/payload-types";
 
 interface GalleryComponentProps {
 	images: Gallery[];
@@ -54,7 +54,7 @@ const GalleryComponent: React.FC<GalleryComponentProps> = ({ images }) => {
 
 	return (
 		<div>
-			<section className="relative bg-gradient-to-r to-[#d0dfec] from-[#f5d65e] overflow-hidden">
+			<section className="relative bg-linear-to-r to-[#d0dfec] from-[#f5d65e] overflow-hidden">
 				<div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1556912172-45b7abe8b7e1')] bg-cover bg-center mix-blend-overlay opacity-50" />
 				<div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32 relative z-10">
 					<div className="flex flex-col lg:flex-row items-center">

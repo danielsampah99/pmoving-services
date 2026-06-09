@@ -1,6 +1,6 @@
 "use client";
 
-import { type FC, FormEvent, useState } from "react";
+import { type FC, type FormEvent, useState } from "react";
 import { Input, Button } from "@headlessui/react";
 import { MagnifyingGlassIcon } from "@heroicons/react/16/solid";
 

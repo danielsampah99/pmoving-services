@@ -51,7 +51,7 @@ export default buildConfig({
 			connectionTimeoutMillis: 60_000, // TODO: Remove this in prod
 			idleTimeoutMillis: 10 // TODO: Remove this in prod
 		},
-		logger: true
+		logger: process.env.NODE_ENV === 'production'
 	}),
 	email: nodemailerAdapter({
 		defaultFromAddress: process.env.SMTP_USER ?? 'g1sackie@icloud.com',
