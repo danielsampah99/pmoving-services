@@ -18,7 +18,7 @@ const ResidentialMoving = () => {
 							<img
 								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/business-1920w.png"
 								alt="Business Logo"
-								className="h-20 w-auto object-contain max-w-[280px]"
+								className="h-20 w-auto object-contain max-w-70"
 								loading="eager"
 							/>
 						</div>
@@ -26,7 +26,7 @@ const ResidentialMoving = () => {
 							<img
 								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/AngiesList_SSA_2019-1920w.png"
 								alt="Angie's List Logo"
-								className="h-20 w-auto object-contain max-w-[280px]"
+								className="h-20 w-auto object-contain max-w-70"
 								loading="eager"
 							/>
 						</div>
@@ -34,7 +34,7 @@ const ResidentialMoving = () => {
 							<img
 								src="https://irp-cdn.multiscreensite.com/b0f4adc5/dms3rep/multi/inline.svg"
 								alt="Inline Logo"
-								className="h-20 w-auto object-contain max-w-[280px]"
+								className="h-20 w-auto object-contain max-w-70"
 								loading="eager"
 							/>
 						</div>
@@ -142,7 +142,7 @@ const ResidentialMoving = () => {
 						{/* Right Image */}
 						<div className="rounded-lg overflow-hidden h-full">
 							<img
-								className="w-full h-auto max-h-[800px] rounded-lg object-contain"
+								className="w-full h-auto max-h-200 rounded-lg object-contain"
 								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Deshun+unloadingc-1920w.JPG"
 								alt="Movers"
 							/>
