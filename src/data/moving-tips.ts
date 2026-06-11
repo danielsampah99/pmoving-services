@@ -110,6 +110,54 @@ export const frequentQuestions: FAQType[] = [
 	},
 ];
 
+export const residentialMovingQuestions: FAQType[] = [
+	{
+		question: "What are red flags when hiring movers?",
+		answer:
+			"No license, unclear pricing, large deposits, and no physical presence. If they avoid specifics, don’t hire that moving company.",
+	},
+	{
+		question: "What are the hidden costs of 2 hour movers?",
+		answer:
+			"Travel fees, stair charges, long carry fees, and extra time due to inefficiency.",
+	},
+	{
+		question: "What is the cheapest day to hire movers?",
+		answer:
+			"Mid-week (Tuesday–Thursday). Avoid weekends and end-of-month rush.",
+	},
+	{
+		question: "What is the least expensive way to move?",
+		answer:
+			"DIY is cheapest upfront, but often costs more in time, damage, and stress.",
+	},
+	{
+		question: "Is $3,000 enough to move to a new state?",
+		answer:
+			"Yes for smaller moves. Larger homes will cost more depending on distance and services.",
+	},
+	{
+		question: "How to have a stress free house move?",
+		answer:
+			"Plan early, hire professionals, and avoid last-minute packing.",
+	},
+	{
+		question: "How to relocate with little to no money?",
+		answer:
+			"Declutter, sell items, pack yourself, and move during off-peak times.",
+	},
+	{
+		question: "What is included in full service moving?",
+		answer:
+			"Packing, loading, transportation, unloading, and setup.",
+	},
+	{
+		question: "How much to tip on a $500 move?",
+		answer:
+			"$20–$40 per mover depending on service quality and most importantly your budget.",
+	},
+]
+
 export const longDistanceQuestions: FAQType[] = [
 	{
 		question: "What is the cheapest long-distance moving option?",

@@ -5,9 +5,9 @@ import { FAQs } from "./faq";
 import { RelatedLocalMoving } from "./related-services";
 import { localMovingServices } from "@/data/services";
 import { RequestQuote } from "./request-quote";
-import { frequentQuestions, residentialExpectations } from "@/data/moving-tips";
+import { frequentQuestions, residentialExpectations, residentialMovingQuestions } from "@/data/moving-tips";
 import { ServicesSection } from "@/components/ServicesSection";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { BASE_URL } from "@/utils";
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 		description:
 			"Ensured with quality service, integrated with safety and efficiency on priority, Premium Moving Services is a trusteed and friendly residential mover in Minnesota, Minneapolis, St. Paul, Lakeville, Rochester, Lakeland and neighboring cities",
 		type: "website",
-		url: `${BASE_URL}/services/corporate-moving`,
+		url: `${BASE_URL}/services/local-moving/residential-movers`,
 		images: [
 			{
 				url: `${BASE_URL}/api/media/file/residential-moving.webp`,
@@ -98,13 +98,13 @@ const ResidentialMoving = () => {
 				{/* Right Image */}
 				<div className="rounded-lg overflow-hidden h-full">
 					<img
-						className="w-full h-auto max-h-[800px] rounded-lg object-contain"
+						className="w-full h-auto max-h-200 rounded-lg object-contain"
 						src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Deshun+unloadingc-1920w.JPG"
 						alt="Movers"
 					/>
 				</div>
 			</div>
-			<FAQs faqs={frequentQuestions} />
+			<FAQs title="FAQs about Residential Moving" faqs={residentialMovingQuestions} />
 			<RequestQuote />
 			<RelatedLocalMoving services={localMovingServices} />
 			<ServicesSection />
