@@ -20,9 +20,9 @@ export const PackingIntro = () => {
 					parts of any move. From fragile kitchenware to bulky
 					furniture and personal items, doing it right takes
 					experience, planning, and the right packing supplies. That's
-					where Premium Moving Services comes in to service the entire process for a successful move with our <Link href="/services/local-moving" className="text-(--color-moving-yellow)/90 hover:text-(--color-moving-yellow)">local moving</Link> team of movers.
+					where Premium Moving Services comes in to service the entire process for a successful move with our <Link href="/services/local-moving" className="text-moving-yellow/90 hover:text-moving-yellow">local moving</Link> team of movers.
 				</p>
-				<p className="text-[--color-moving-gray] text-lg leading-relaxed mt-4">
+				<p className="text-moving-gray text-lg leading-relaxed mt-4">
 					We provide <strong>professional packing services</strong> for homes,
 					apartments, offices, and specialty moves throughout &nbsp;
 					<strong>Minneapolis</strong> and <strong>St. Paul</strong>, delivering peace of mind before

@@ -9,6 +9,9 @@ import { frequentQuestions, residentialExpectations, residentialMovingQuestions 
 import { ServicesSection } from "@/components/ServicesSection";
 import type { Metadata } from "next";
 import { BASE_URL } from "@/utils";
+import { PackingIntro } from "@/components/PackingIntro";
+import { ResidentialCTA, ResidentialIntro } from "@/components/ResidentialIntro";
+import { ResidentialProfessionalMovers } from "@/components/ResidentialProfessionalMovers";
 
 export const metadata: Metadata = {
 	title: "Premium Moving Services | Residential movers in Minnesota, MN",
@@ -42,11 +45,17 @@ const ResidentialMoving = () => {
 	return (
 		<section className="px-6 lg:px-8">
 			<Hero
-				description="Premium Moving Services sets ourselves apart with our dedication to ensuring quality service coupled with safety and efficiency at the fore-front."
+				description="Professional residential moving services designed for homeowners and renters in Minneapolis and St. Paul seeking a smooth, stress-free relocation."
 				image="/residential-moving.webp"
 				alt="Residential moving images"
 				title="Residential Moving Services"
 			/>
+
+			<ResidentialIntro />
+
+			<ResidentialCTA />
+
+			<ResidentialProfessionalMovers />
 
 			<MovingProcess
 				description="Premium Moving Services sets ourselves apart with our
