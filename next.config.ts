@@ -41,6 +41,21 @@ const nextConfig: NextConfig = {
 				source: "/online-request-form",
 				destination: "/free-quote",
 				permanent: true
+			},
+			{
+				source: "/long-distance-moving",
+				destination: "/services/long-distance-moving",
+				permanent: true
+			},
+			{
+				source: "/st-paul-movers",
+				destination: "/service-areas/",
+				permanent: true
+			},
+			{
+				source: "/reviews", 
+				destination: "/#reviews",
+				permanent: true
 			}
 		]
 	}
