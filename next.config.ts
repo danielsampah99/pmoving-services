@@ -113,23 +113,28 @@ const nextConfig: NextConfig = {
 				permanent: true
 			},
 			{
-				source: "/minneapolis-movers", 
-				destination: "/blogs/movers-minneapolis", 
-				permanent: true
-			}, 
-			{
-				source: "/movers-st-paul", 
-				destination: "/blogs/movers-st-paul", 
+				source: "/minneapolis-movers",
+				destination: "/blogs/movers-minneapolis",
 				permanent: true
 			},
 			{
-				source: "/st-paul-movers", 
+				source: "/movers-st-paul",
+				destination: "/blogs/movers-st-paul",
+				permanent: true
+			},
+			{
+				source: "/st-paul-movers",
 				destination: "/service-areas/movers-saint-paul-mn",
-				permanent: true 
+				permanent: true
 			},
 			{
-				source: "/how-much-are-movers", 
-				destination: "/blogs/how-much-are-movers", 
+				source: "/how-much-are-movers",
+				destination: "/blogs/how-much-are-movers",
+				permanent: true
+			},
+			{
+				source: "/movers-woodbury-mn",
+				destination: "/blogs/movers-woodbury-mn-reliable-local-hourly-moving-a-complete-guide",
 				permanent: true
 			}
 		]
