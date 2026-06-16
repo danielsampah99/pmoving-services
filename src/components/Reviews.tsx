@@ -50,7 +50,7 @@ export const Reviews: FC = () => {
 	}, []);
 
 	return (
-		<div className="relative overflow-hidden ">
+		<div id="reviews" className="relative overflow-hidden ">
 			<div className="absolute inset-0 bg-moving-gray/5">
 				<CurvedBackground />
 			</div>

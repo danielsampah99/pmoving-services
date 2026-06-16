@@ -53,8 +53,83 @@ const nextConfig: NextConfig = {
 				permanent: true
 			},
 			{
-				source: "/reviews", 
+				source: "/reviews",
 				destination: "/#reviews",
+				permanent: true
+			},
+			{
+				source: "/moving-cost-calculator",
+				destination: "/blogs/moving-cost-calculator",
+				permanent: true
+			},
+			{
+				source: "/moving-cost-estimator",
+				destination: "/blogs/moving-cost-estimator-understanding-moving-costs",
+				permanent: true
+			},
+			{
+				source: "/how-much-does-it-cost-to-ship-a-car",
+				destination: "/blogs/how-much-does-it-cost-to-ship-a-car",
+				permanent: true
+			},
+			{
+				source: "/moving-company-prices",
+				destination: "/blogs/moving-company-prices-understanding-the-cost-to-hire-movers",
+				permanent: true
+			},
+			{
+				source: "/moving-estimate",
+				destination: "/blogs/moving-estimate",
+				permanent: true
+			},
+			{
+				source: "/how-much-do-movers-cost",
+				destination: "/blogs/how-much-do-movers-cost",
+				permanent: true
+			},
+			{
+				source: "/moving-insurance",
+				destination: "/blogs/moving-insurance",
+				permanent: true
+			},
+			{
+				source: "/checklist-for-hiring-moving-companies-mn",
+				destination: "/blogs/checklist-for-hiring-moving-companies-mn",
+				permanent: true
+			},
+			{
+				source: "/how-much-do-movers-minneapolis-cost",
+				destination: "/blogs/how-much-does-full-service-move-cost-in-minneapolis",
+				permanent: true
+			},
+			{
+				source: "/moving-guide",
+				destination: "/blogs/moving-guide-and-checklists-for-senior-citizens",
+				permanent: true
+			},
+			{
+				source: "/moving-cost",
+				destination: "/blogs/moving-cost",
+				permanent: true
+			},
+			{
+				source: "/minneapolis-movers", 
+				destination: "/blogs/movers-minneapolis", 
+				permanent: true
+			}, 
+			{
+				source: "/movers-st-paul", 
+				destination: "/blogs/movers-st-paul", 
+				permanent: true
+			},
+			{
+				source: "/st-paul-movers", 
+				destination: "/service-areas/movers-saint-paul-mn",
+				permanent: true 
+			},
+			{
+				source: "/how-much-are-movers", 
+				destination: "/blogs/how-much-are-movers", 
 				permanent: true
 			}
 		]
