@@ -48,11 +48,6 @@ const nextConfig: NextConfig = {
 				permanent: true
 			},
 			{
-				source: "/st-paul-movers",
-				destination: "/service-areas/",
-				permanent: true
-			},
-			{
 				source: "/reviews",
 				destination: "/#reviews",
 				permanent: true
