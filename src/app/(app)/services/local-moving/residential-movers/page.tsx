@@ -9,7 +9,7 @@ import { frequentQuestions, residentialExpectations, residentialMovingQuestions 
 import { ServicesSection } from "@/components/ServicesSection";
 import type { Metadata } from "next";
 import { BASE_URL } from "@/utils";
-import { ResidentialFullService, ResidentialMovingCost, ResidentialMovingTimeline } from "@/components/ResidentialFullService";
+import { ResidentialFullService, ResidentialMovingCost, ResidentialMovingTimeline, ResidentialMovingTips } from "@/components/ResidentialFullService";
 import { ResidentialCTA, ResidentialIntro } from "@/components/ResidentialIntro";
 import { ResidentialProfessionalMovers } from "@/components/ResidentialProfessionalMovers";
 
@@ -72,6 +72,8 @@ const ResidentialMoving = () => {
 			<ResidentialMovingCost />
 
 			<ResidentialMovingTimeline />
+
+			<ResidentialMovingTips />
 
 			
 			

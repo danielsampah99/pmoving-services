@@ -2,9 +2,15 @@ import {
 	EyeIcon,
 	ShieldCheckIcon,
 	CheckIcon,
-	CheckCircleIcon, ExclamationTriangleIcon,
+	CheckCircleIcon, 
+	ExclamationTriangleIcon,
 	CalendarDateRangeIcon,
-	ClipboardDocumentCheckIcon
+	ClipboardDocumentCheckIcon, 
+	Square3Stack3DIcon,
+	CameraIcon, 
+	FolderOpenIcon, 
+	CalendarIcon, 
+	TagIcon
 } from "@heroicons/react/24/outline";
 
 import Link from "next/link";
@@ -94,6 +100,39 @@ const phases = [
 		color: "bg-moving-yellow text-black",
 		activeBar: "bg-white",
 		highlight: true,
+	},
+];
+
+const tips = [
+	{
+		icon: ClipboardDocumentCheckIcon,
+		headline: "Build a moving checklist",
+		body: "Your checklist is your roadmap. It keeps every step visible and prevents last-minute scrambles.",
+	},
+	{
+		icon: Square3Stack3DIcon,
+		headline: "Keep boxes under 50 lbs",
+		body: "Heavy boxes are a liability for your back and your belongings. Pack smart, not heavy.",
+	},
+	{
+		icon: TagIcon,
+		headline: "Label by room and priority",
+		body: "Mark every box with its destination room and whether it's essential or can wait. Saves hours of searching on move-in day.",
+	},
+	{
+		icon: FolderOpenIcon,
+		headline: "Separate your essentials",
+		body: "Documents, chargers, medications, and valuables ride with you and not in the truck. Pack a day-one bag.",
+	},
+	{
+		icon: CameraIcon,
+		headline: "Photograph before disassembly",
+		body: "A quick photo of furniture connections, cable setups, and wall arrangements saves you from reassembly guesswork.",
+	},
+	{
+		icon: CalendarIcon,
+		headline: "Book early",
+		body: "Peak moving season fills up fast. Securing your crew early gives you choice of date, time, and crew size.",
 	},
 ];
 
@@ -269,10 +308,6 @@ export function ResidentialMovingCost() {
 	);
 }
 
-
-
-
-
 export function ResidentialMovingTimeline() {
 	return (
 		<section className="py-20 bg-white">
@@ -331,7 +366,7 @@ export function ResidentialMovingTimeline() {
 
 							<div
 								className={cn('flex items-center gap-1.5 mb-5', phase.highlight ? "text-black font-semibold" : "text-gray-500"
-									)}
+								)}
 							>
 								<CalendarDateRangeIcon className="size-4 shrink-0" />
 								<p className="text-xs font-medium">{phase.timeframe}</p>
@@ -362,6 +397,64 @@ export function ResidentialMovingTimeline() {
 						Book early, especially during peak season.
 					</Link>
 				</p>
+			</div>
+		</section>
+	);
+}
+
+export function ResidentialMovingTips() {
+	return (
+		<section className="py-20 bg-white">
+			<div className="max-w-6xl mx-auto px-6 lg:px-8">
+
+				<div className="mb-14">
+					<span className="inline-block text-xs font-semibold tracking-widest uppercase text-moving-yellow mb-4">
+						Preparation
+					</span>
+					<h2 className="text-4xl font-bold text-gray-900 tracking-tight mb-4">
+						Moving Tips That Actually Matter
+					</h2>
+					<p className="text-lg text-gray-500 max-w-2xl leading-relaxed">
+						Simple moves aren&apos;t about luck rather
+						preparation. These habits separate a smooth move from a stressful
+						one.
+					</p>
+				</div>
+
+				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+					{tips.map(({ icon: Icon, headline, body }, tipIdx) => (
+						<div
+							key={tipIdx}
+							className="bg-white rounded-xl border border-gray-300 p-6 hover:border-moving-gray hover:shadow-sm transition-all group"
+						>
+							<div className="size-10 rounded-lg border-gray-300 bg-gray-100 flex items-center justify-center mb-4 group-hover:bg-moving-gray transition-colors">
+								<Icon className="size-5 text-moving-yellow/80" />
+							</div>
+							<h3 className="font-semibold text-gray-900 mb-2">{headline}</h3>
+							<p className="text-slate-500 text-sm leading-relaxed">{body}</p>
+						</div>
+					))}
+				</div>
+
+
+				<div className="mt-12 rounded-2xl bg-moving-dark border border-gray-200 p-8 flex flex-col md:flex-row items-start md:items-center gap-6">
+					<div className="flex-1">
+						<h3 className="font-bold text-white text-lg mb-1">
+							Need a Ready-Made Checklist?
+						</h3>
+						<p className="text-gray-200 text-sm leading-relaxed max-w-xl">
+							A full-service moving company can provide you with a comprehensive
+							checklist to guide you through packing, utilities setup, address
+							changes, and more so nothing gets overlooked.
+						</p>
+					</div>
+					<Link
+						href="/free-quote"
+						className="shrink-0 inline-flex items-center gap-2 bg-moving-yellow/80 hover:bg-white text-white hover:text-moving-dark text-sm font-semibold px-5 py-3 rounded-lg transition-colors"
+					>
+						Get a Free Quote
+					</Link>
+				</div>
 			</div>
 		</section>
 	);
