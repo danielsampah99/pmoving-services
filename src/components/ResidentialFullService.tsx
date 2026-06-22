@@ -2,15 +2,19 @@ import {
 	EyeIcon,
 	ShieldCheckIcon,
 	CheckIcon,
-	CheckCircleIcon, 
+	CheckCircleIcon,
 	ExclamationTriangleIcon,
 	CalendarDateRangeIcon,
-	ClipboardDocumentCheckIcon, 
+	ClipboardDocumentCheckIcon,
 	Square3Stack3DIcon,
-	CameraIcon, 
-	FolderOpenIcon, 
-	CalendarIcon, 
-	TagIcon
+	CameraIcon,
+	FolderOpenIcon,
+	CalendarIcon,
+	TagIcon,
+	MapPinIcon,
+	GlobeAmericasIcon,
+	GlobeAltIcon,
+	WalletIcon
 } from "@heroicons/react/24/outline";
 
 import Link from "next/link";
@@ -431,7 +435,7 @@ export function ResidentialMovingTips() {
 								<Icon className="size-5 text-moving-yellow/80" />
 							</div>
 							<h3 className="font-semibold text-gray-900 mb-2">{headline}</h3>
-							<p className="text-slate-500 text-sm leading-relaxed">{body}</p>
+							<p className="text-gray-500 text-sm leading-relaxed">{body}</p>
 						</div>
 					))}
 				</div>
@@ -454,6 +458,137 @@ export function ResidentialMovingTips() {
 					>
 						Get a Free Quote
 					</Link>
+				</div>
+			</div>
+		</section>
+	);
+}
+
+const services = [
+	{
+		icon: MapPinIcon,
+		category: "Long Distance",
+		headline: "Residential moves over 100 miles",
+		description:
+			"Long-distance moves expose weak companies fast. Coordination matters more than muscle. Our process includes detailed planning, secure loading for long-haul transport, inventory tracking, and clear communication from pickup to delivery.",
+		callouts: [
+			"Detailed planning & scheduling",
+			"Secure long-haul loading",
+			"Inventory tracking",
+			"Licensed, insured & bonded",
+		],
+		note: "Interstate movers must be federally licensed, insured, and bonded.",
+	},
+	{
+		icon: GlobeAltIcon,
+		category: "Cross Country",
+		headline: "Coast-to-coast relocation",
+		description:
+			"Premium Moving Services is federally licensed for long-distance and cross-country moves. Expert packing, secure loading, and safe transportation across state lines with climate-controlled storage and custom crating available for fragile or high-value possessions.",
+		callouts: [
+			"Expert packing & loading",
+			"Climate-controlled storage",
+			"Custom crating available",
+			"Federally licensed like major van lines",
+		],
+		note: "Focus on settling into your new home. We handle the rest.",
+	},
+	{
+		icon: GlobeAmericasIcon,
+		category: "International",
+		headline: "Overseas household moves",
+		description:
+			"International moves are complex. We manage the full process: customs paperwork, freight coordination, secure packing for overseas transit, and delivery through trusted global partners. This isn't something you want to figure out as you go.",
+		callouts: [
+			"Customs documentation",
+			"Freight coordination",
+			"Secure overseas packing",
+			"Trusted global delivery partners",
+		],
+		note: "Get this right the first time, international logistics require expertise.",
+	},
+	{
+		icon: WalletIcon,
+		category: "Specialty Items",
+		headline: "Pianos, pool tables & high-value pieces",
+		description:
+			"Some belongings require expertise beyond standard moving. Whether it's a piano, outdoor equipment, or a prized collection, we offer custom crating, heavy lifting, and specialized disassembly and reassembly for your most challenging items.",
+		callouts: [
+			"Piano & pool table moving",
+			"Custom crating",
+			"Heavy lifting equipment",
+			"White-glove handling",
+		],
+		note: "Every specialty item arrives in the same condition it left.",
+	},
+];
+
+export function ResidentialSpecialtyServices() {
+	return (
+		<section className="py-20 bg-white">
+			<div className="max-w-6xl mx-auto">
+
+				<div className="mb-14">
+					<span className="inline-block text-xs font-semibold tracking-widest uppercase text-moving-yellow/70 mb-4">
+						Beyond Local
+					</span>
+					<h2 className="text-4xl font-bold text-gray-900 tracking-tight mb-4">
+						Specialty Moving Services
+					</h2>
+					<p className="text-lg text-gray-500 max-w-2xl leading-relaxed">
+						Not every move is a standard local haul. We&apos;re equipped for
+						long-distance, cross-country, international, and specialty
+						situations.
+					</p>
+				</div>
+
+				{/* Services Grid */}
+				<div className="grid sm:grid-cols-2 gap-6">
+					{services.map(
+						({ icon: Icon, category, headline, description, callouts, note }, serviceIdx) => (
+							<div
+								key={serviceIdx}
+								className="rounded-2xl border border-gray-300 p-7 flex flex-col gap-5 hover:border-gray-400 hover:shadow-sm transition-all"
+							>
+							
+								<div className="flex items-center gap-3">
+									<div className="size-9 rounded-lg bg-gray-100 flex items-center justify-center">
+										<Icon className="size-4.5 text-gray-600" />
+									</div>
+									<span className="text-xs font-semibold uppercase tracking-widest text-gray-400">
+										{category}
+									</span>
+								</div>
+
+								<div>
+									<h3 className="font-bold text-gray-900 text-lg mb-2">
+										{headline}
+									</h3>
+									<p className="text-gray-500 text-sm leading-relaxed">
+										{description}
+									</p>
+								</div>
+
+								{/* Feature Callouts */}
+								<ul className="grid grid-cols-2 gap-2">
+									{callouts.map((item, itemIdx) => (
+										<li
+											key={itemIdx}
+											className="flex items-center gap-2 text-xs text-gray-600"
+										>
+											<ShieldCheckIcon className="size-5 stroke-white fill-moving-yellow shrink-0" />
+											{item}
+										</li>
+									))}
+								</ul>
+
+							
+								<p className="text-xs text-gray-400 italic border-t border-gray-100 pt-4">
+									{note}
+								</p>
+							</div>
+						)
+					)}
 				</div>
 			</div>
 		</section>
