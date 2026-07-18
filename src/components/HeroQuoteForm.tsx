@@ -14,26 +14,26 @@ export const QuoteForm = () => {
 
 			<div className="flex flex-col md:flex-row items-center gap-4">
 				{/* Moving From */}
-				<Field className="w-full relative">
+				<Field className="w-full relative text-left">
 					<Label className="block font-semibold mb-1">Starting Location:</Label>
 					<Input
 						type="text"
 						placeholder="Enter Zip Code"
 						value={movingFrom}
 						onChange={(event) => setMovingFrom(event.target.value)}
-						className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-background"
+						className="w-full p-3 border-0 rounded-lg focus:outline-none ring-1 ring-gray-300 focus:ring-2 focus:ring-background"
 					/>
 				</Field>
 
 				{/* Moving To */}
-				<Field className="w-full relative">
+				<Field className="w-full text-left relative">
 					<Label className="block font-semibold mb-1">Destination:</Label>
 					<Input
 						type="text"
 						placeholder="Enter ZIP Code"
 						value={movingTo}
 						onChange={(event) => setMovingTo(event.target.value)}
-						className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-background"
+						className="w-full p-3 border-0 rounded-lg focus:outline-none ring-1 ring-gray-300 focus:ring-2 focus:ring-background"
 					/>
 				</Field>
 			</div>

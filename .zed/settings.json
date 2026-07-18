@@ -6,10 +6,11 @@
 	"disable_ai": true,
 	"language_servers": [
 		"biome",
-		"!vtsls",
+		"vtsls",
 		"!oxlint",
 		"!oxfmt",
 		"!eslint",
+		"!prettier",
 		"..."
 	],
 	"formatter": "language_server"
