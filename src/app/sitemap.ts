@@ -36,45 +36,45 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 			url: `${BASE_URL}/affiliates`,
 			lastModified: new Date(),
 			priority: 0.9,
-			images: [`${BASE_URL}/next-home-logo.webp`]
+			images: [`${BASE_URL}/next-home-logo.webp`],
 		},
 		{
 			url: `${BASE_URL}/careers`,
 			lastModified: new Date(),
 			priority: 0.9,
-			images: [`${BASE_URL}/api/media/file/Deshun%20and%20Drake.webpp`]
+			images: [`${BASE_URL}/api/media/file/Deshun%20and%20Drake.webpp`],
 		},
 		{
 			url: `${BASE_URL}/contact-us`,
 			lastModified: new Date(),
 			priority: 0.9,
-			images: [`${BASE_URL}/next-home-logo.webp`]
+			images: [`${BASE_URL}/next-home-logo.webp`],
 		},
 		{
 			url: `${BASE_URL}/gallery`,
 			lastModified: new Date(),
-			priority: 0.9
+			priority: 0.9,
 		},
 		{
 			url: `${BASE_URL}/blogs`,
 			lastModified: new Date(),
 			priority: 0.9,
 		},
-		...(blogs.docs.map(blog => ({
+		...(blogs.docs.map((blog) => ({
 			url: `${BASE_URL}/blogs/${encodeURIComponent(blog.slug)}`,
 			lastModified: blog.updatedAt ? new Date(blog.updatedAt) : new Date(),
-			changeFrequency: 'weekly',
+			changeFrequency: "weekly",
 			priority: 1,
 			images:
 				typeof blog.thumbnail === "object" && blog.thumbnail?.thumbnailURL
 					? [`${BASE_URL}${blog.thumbnail.thumbnailURL}`]
-					: undefined
+					: undefined,
 		})) as MetadataRoute.Sitemap),
 		{
 			url: `${BASE_URL}/services`,
 			lastModified: new Date(),
 			priority: 0.9,
-			images: [`${BASE_URL}/next-home-logo.webp`]
+			images: [`${BASE_URL}/next-home-logo.webp`],
 		},
 		{
 			url: `${BASE_URL}/services`,
@@ -285,13 +285,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 		{
 			url: `${BASE_URL}/service-areas`,
 			lastModified: new Date(),
-			priority: 0.9
+			priority: 0.9,
 		},
 		...(serviceAreas.docs.map((area) => ({
 			url: `${BASE_URL}/service-areas/${area.slug}`,
 			lastModified: area.updatedAt,
 			priority: 1,
-			changeFrequency: 'monthly',
+			changeFrequency: "monthly",
 			images:
 				typeof area.mapImage === "object"
 					? [`${BASE_URL}${area.mapImage?.url}`]
@@ -300,22 +300,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 		{
 			url: `${BASE_URL}/privacy-policy`,
 			lastModified: new Date(),
-			priority: 0.9
+			priority: 0.9,
 		},
 		{
 			url: `${BASE_URL}/referral-program`,
 			lastModified: new Date(),
-			priority: 0.9
+			priority: 0.9,
 		},
 		{
 			url: `${BASE_URL}/terms-and-conditions`,
 			lastModified: new Date(),
-			priority: 0.9
+			priority: 0.9,
 		},
 		{
 			url: `${BASE_URL}/thank-you`,
 			lastModified: new Date(),
-			priority: 0.9
+			priority: 0.9,
 		},
 	];
 }

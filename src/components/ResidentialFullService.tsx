@@ -14,7 +14,7 @@ import {
 	MapPinIcon,
 	GlobeAmericasIcon,
 	GlobeAltIcon,
-	WalletIcon
+	WalletIcon,
 } from "@heroicons/react/24/outline";
 
 import Link from "next/link";
@@ -31,7 +31,10 @@ const includedServices = [
 
 const additionalOptions = [
 	"Packing supplies delivered ahead of time",
-	<><Link href="/services/storage-services">Storage solutions</Link> (long-term or short-term)</>,
+	<>
+		<Link href="/services/storage-services">Storage solutions</Link> (long-term
+		or short-term)
+	</>,
 	"Specialty handling for fragile or oversized items",
 	"Heavy lifting",
 	"High value items moving services",
@@ -89,7 +92,10 @@ const phases = [
 	{
 		timeframe: "1 Week Before",
 		label: "Finalize",
-		tasks: ["Finalize inventory", "Label all boxes clearly by room and priority"],
+		tasks: [
+			"Finalize inventory",
+			"Label all boxes clearly by room and priority",
+		],
 		color: "bg-moving-yellow/80 text-black",
 		activeBar: "bg-moving-yellow/80",
 	},
@@ -144,7 +150,6 @@ export function ResidentialFullService() {
 	return (
 		<section className="py-20 bg-white">
 			<div className="max-w-6xl mx-auto">
-
 				<div className="mb-14">
 					<span className="inline-block text-xs font-semibold tracking-widest uppercase text-moving-yellow mb-4">
 						Comprehensive Coverage
@@ -270,18 +275,22 @@ export function ResidentialMovingCost() {
 							{priceRanges.map((item, itemIdx) => (
 								<div
 									key={itemIdx}
-									className={cn("rounded-xl border p-5 flex items-center justify-between transition-all", itemIdx === 0
-										? "bg-moving-dark/90 border-moving-dark/80"
-										: itemIdx === 1
-											? "bg-moving-dark/90 border-moving-dark/70"
-											: "bg-moving-dark/50 border-moving-dark/50"
+									className={cn(
+										"rounded-xl border p-5 flex items-center justify-between transition-all",
+										itemIdx === 0
+											? "bg-moving-dark/90 border-moving-dark/80"
+											: itemIdx === 1
+												? "bg-moving-dark/90 border-moving-dark/70"
+												: "bg-moving-dark/50 border-moving-dark/50",
 									)}
 								>
 									<div>
 										<p className="font-semibold text-white text-sm">
 											{item.tier}
 										</p>
-										<p className="text-gray-500 text-xs mt-0.5">{item.detail}</p>
+										<p className="text-gray-500 text-xs mt-0.5">
+											{item.detail}
+										</p>
 									</div>
 									<span className="text-xl font-bold text-moving-yellow font-sans tabular-nums">
 										{item.range}
@@ -294,13 +303,11 @@ export function ResidentialMovingCost() {
 							<div className="flex items-start gap-3">
 								<ExclamationTriangleIcon className="size-4 text-white mt-0.5 shrink-0" />
 								<div>
-									<p className="text-white font-semibold text-sm">
-										Pro Tip
-									</p>
+									<p className="text-white font-semibold text-sm">Pro Tip</p>
 									<p className="text-gray-100 text-sm mt-1.5 leading-relaxed">
 										Cheap rates usually mean slow crews or hidden fees. A job
-										that takes twice as long costs more in the end. Efficiency is
-										what actually lowers your total bill.
+										that takes twice as long costs more in the end. Efficiency
+										is what actually lowers your total bill.
 									</p>
 								</div>
 							</div>
@@ -316,7 +323,6 @@ export function ResidentialMovingTimeline() {
 	return (
 		<section className="py-20 bg-white">
 			<div className="max-w-6xl mx-auto">
-
 				<div className="mb-14">
 					<span className="inline-block text-xs font-semibold tracking-widest uppercase text-moving-yellow mb-4">
 						Your Roadmap
@@ -335,41 +341,52 @@ export function ResidentialMovingTimeline() {
 					{phases.map((phase, phaseIdx) => (
 						<div
 							key={phaseIdx}
-							className={cn('relative rounded-2xl p-6 border', phase.highlight
-								? "bg-moving-yellow/50 border-moving-yellow" : "bg-gray-50 border-gray-200"
+							className={cn(
+								"relative rounded-2xl p-6 border",
+								phase.highlight
+									? "bg-moving-yellow/50 border-moving-yellow"
+									: "bg-gray-50 border-gray-200",
 							)}
 						>
-
 							<div className="flex items-center gap-3 mb-5">
-								<span className={cn('text-xs font-bold font-sans tabular-nums', phase.highlight ? "text-black" : "text-gray-400"
-								)}
+								<span
+									className={cn(
+										"text-xs font-bold font-sans tabular-nums",
+										phase.highlight ? "text-black" : "text-gray-400",
+									)}
 								>
 									{phaseIdx + 1}.
 								</span>
 								<div
-									className={cn('flex-1 h-0.5 rounded-full', phase.highlight ? "bg-black" : "bg-gray-200"
+									className={cn(
+										"flex-1 h-0.5 rounded-full",
+										phase.highlight ? "bg-black" : "bg-gray-200",
 									)}
 								>
 									<div
-										className={cn('h-full rounded-full', phase.activeBar)}
-										style={{ width: `${((phaseIdx + 1) / phases.length) * 100}%` }}
+										className={cn("h-full rounded-full", phase.activeBar)}
+										style={{
+											width: `${((phaseIdx + 1) / phases.length) * 100}%`,
+										}}
 									/>
 								</div>
 							</div>
 
-
 							<span
-								className={cn('inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-3', phase.highlight
-									? "bg-black text-moving-yellow"
-									: phase.color
+								className={cn(
+									"inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-3",
+									phase.highlight ? "bg-black text-moving-yellow" : phase.color,
 								)}
 							>
 								{phase.label}
 							</span>
 
-
 							<div
-								className={cn('flex items-center gap-1.5 mb-5', phase.highlight ? "text-black font-semibold" : "text-gray-500"
+								className={cn(
+									"flex items-center gap-1.5 mb-5",
+									phase.highlight
+										? "text-black font-semibold"
+										: "text-gray-500",
 								)}
 							>
 								<CalendarDateRangeIcon className="size-4 shrink-0" />
@@ -380,10 +397,17 @@ export function ResidentialMovingTimeline() {
 								{phase.tasks.map((task, taskIdx) => (
 									<li key={taskIdx} className="flex items-start gap-2.5">
 										<ClipboardDocumentCheckIcon
-											className={cn('size-4 mt-0.5 shrink-0', phase.highlight ? "text-moving-black/90" : "text-gray-400")}
+											className={cn(
+												"size-4 mt-0.5 shrink-0",
+												phase.highlight
+													? "text-moving-black/90"
+													: "text-gray-400",
+											)}
 										/>
 										<span
-											className={cn('text-sm leading-snug', phase.highlight ? "text-black/90" : "text-gray-700"
+											className={cn(
+												"text-sm leading-snug",
+												phase.highlight ? "text-black/90" : "text-gray-700",
 											)}
 										>
 											{task}
@@ -397,7 +421,10 @@ export function ResidentialMovingTimeline() {
 
 				<p className="text-center text-sm text-gray-400 mt-8">
 					Waiting too long to plan is where things fall apart.{" "}
-					<Link href={"/free-quote"} className="font-medium text-gray-600 hover:underline">
+					<Link
+						href={"/free-quote"}
+						className="font-medium text-gray-600 hover:underline"
+					>
 						Book early, especially during peak season.
 					</Link>
 				</p>
@@ -410,7 +437,6 @@ export function ResidentialMovingTips() {
 	return (
 		<section className="py-20 bg-white">
 			<div className="max-w-6xl mx-auto px-6 lg:px-8">
-
 				<div className="mb-14">
 					<span className="inline-block text-xs font-semibold tracking-widest uppercase text-moving-yellow mb-4">
 						Preparation
@@ -419,9 +445,8 @@ export function ResidentialMovingTips() {
 						Moving Tips That Actually Matter
 					</h2>
 					<p className="text-lg text-gray-500 max-w-2xl leading-relaxed">
-						Simple moves aren&apos;t about luck rather
-						preparation. These habits separate a smooth move from a stressful
-						one.
+						Simple moves aren&apos;t about luck rather preparation. These habits
+						separate a smooth move from a stressful one.
 					</p>
 				</div>
 
@@ -439,7 +464,6 @@ export function ResidentialMovingTips() {
 						</div>
 					))}
 				</div>
-
 
 				<div className="mt-12 rounded-2xl bg-moving-dark border border-gray-200 p-8 flex flex-col md:flex-row items-start md:items-center gap-6">
 					<div className="flex-1">
@@ -527,7 +551,6 @@ export function ResidentialSpecialtyServices() {
 	return (
 		<section className="py-20 bg-white">
 			<div className="max-w-6xl mx-auto">
-
 				<div className="mb-14">
 					<span className="inline-block text-xs font-semibold tracking-widest uppercase text-moving-yellow/70 mb-4">
 						Beyond Local
@@ -545,12 +568,14 @@ export function ResidentialSpecialtyServices() {
 				{/* Services Grid */}
 				<div className="grid sm:grid-cols-2 gap-6">
 					{services.map(
-						({ icon: Icon, category, headline, description, callouts, note }, serviceIdx) => (
+						(
+							{ icon: Icon, category, headline, description, callouts, note },
+							serviceIdx,
+						) => (
 							<div
 								key={serviceIdx}
 								className="rounded-2xl border border-gray-300 p-7 flex flex-col gap-5 hover:border-gray-400 hover:shadow-sm transition-all"
 							>
-							
 								<div className="flex items-center gap-3">
 									<div className="size-9 rounded-lg bg-gray-100 flex items-center justify-center">
 										<Icon className="size-4.5 text-gray-600" />
@@ -582,12 +607,11 @@ export function ResidentialSpecialtyServices() {
 									))}
 								</ul>
 
-							
 								<p className="text-xs text-gray-400 italic border-t border-gray-100 pt-4">
 									{note}
 								</p>
 							</div>
-						)
+						),
 					)}
 				</div>
 			</div>

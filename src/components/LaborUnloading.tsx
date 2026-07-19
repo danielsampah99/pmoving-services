@@ -87,10 +87,9 @@ export const LaborUnloading = () => {
 				>
 					Professional movers can expertly load and unload your truck,
 					maximizing space and preventing damage. Unloading is just as
-					important. We place items exactly where you want them,
-					saving you hours of rearranging later. Most moving labor
-					services charge by the hour, and rates can vary based on
-					location and job complexity.
+					important. We place items exactly where you want them, saving you
+					hours of rearranging later. Most moving labor services charge by the
+					hour, and rates can vary based on location and job complexity.
 				</motion.p>
 			</motion.div>
 
@@ -111,9 +110,7 @@ export const LaborUnloading = () => {
 						<motion.h3
 							id={tip.id}
 							className={cn(
-								tip.isUs
-									? "text-moving-dark"
-									: "text-moving-yellow",
+								tip.isUs ? "text-moving-dark" : "text-moving-yellow",
 								"text-base/7 font-semibold",
 							)}
 						>
@@ -146,10 +143,7 @@ export const LaborUnloading = () => {
 							)}
 						>
 							{tip.features.map((feature) => (
-								<li
-									key={feature}
-									className="flex gap-x-3 items-center"
-								>
+								<li key={feature} className="flex gap-x-3 items-center">
 									{tip.id === "tip-mistake" ? (
 										<XMarkIcon
 											aria-hidden="true"
@@ -163,11 +157,7 @@ export const LaborUnloading = () => {
 									)}
 
 									<span
-										className={cn(
-											tip.isUs
-												? "text-gray-700"
-												: "text-gray-300",
-										)}
+										className={cn(tip.isUs ? "text-gray-700" : "text-gray-300")}
 									>
 										{feature}
 									</span>

@@ -45,31 +45,31 @@ export const ChartRenderer = ({
 			case "line": {
 				const xAxisKey =
 					typeof chart.config === "object" &&
-						chart.config !== null &&
-						"xAxisKey" in chart.config &&
-						typeof chart.config.xAxisKey === "string"
+					chart.config !== null &&
+					"xAxisKey" in chart.config &&
+					typeof chart.config.xAxisKey === "string"
 						? (chart.config.xAxisKey satisfies DataKey<string>)
 						: "x-axis-key";
 				const xAxisLabel =
 					typeof chart.config === "object" &&
-						chart.config !== null &&
-						"xAxisLabel" in chart.config &&
-						typeof chart.config.xAxisLabel === "string"
+					chart.config !== null &&
+					"xAxisLabel" in chart.config &&
+					typeof chart.config.xAxisLabel === "string"
 						? chart.config.xAxisLabel
 						: "X-Axis Label";
 
 				const yAxisKey =
 					typeof chart.config === "object" &&
-						chart.config !== null &&
-						"yAxisKey" in chart.config &&
-						typeof chart.config.yAxisKey === "string"
+					chart.config !== null &&
+					"yAxisKey" in chart.config &&
+					typeof chart.config.yAxisKey === "string"
 						? (chart.config.yAxisKey satisfies DataKey<string>)
 						: "y-axis-key";
 				const yAxisLabel =
 					typeof chart.config === "object" &&
-						chart.config !== null &&
-						"yAxisLabel" in chart.config &&
-						typeof chart.config.yAxisLabel === "string"
+					chart.config !== null &&
+					"yAxisLabel" in chart.config &&
+					typeof chart.config.yAxisLabel === "string"
 						? chart.config.yAxisLabel
 						: "Y-Axis Label";
 
@@ -96,10 +96,10 @@ export const ChartRenderer = ({
 						/>
 
 						{typeof chart.config === "object" &&
-							chart.config !== null &&
-							"showTooltip" in chart.config &&
-							typeof chart.config.showTooltip === "boolean" &&
-							chart.config.showToolTip !== false ? (
+						chart.config !== null &&
+						"showTooltip" in chart.config &&
+						typeof chart.config.showTooltip === "boolean" &&
+						chart.config.showToolTip !== false ? (
 							<ChartTooltip />
 						) : null}
 
@@ -150,7 +150,7 @@ export const ChartRenderer = ({
 								);
 							})}
 					</LineChart>
-				)
+				);
 			}
 
 			default:

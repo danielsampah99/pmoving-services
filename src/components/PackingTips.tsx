@@ -82,8 +82,8 @@ export const PackingTips = () => {
 				{...fadeIn}
 				className="text-lg text-moving-gray mb-12 text-center max-w-4xl mx-auto"
 			>
-				A smooth move starts with smart packing. Here are some expert
-				tips to help you prepare and protect your belongings:
+				A smooth move starts with smart packing. Here are some expert tips to
+				help you prepare and protect your belongings:
 			</motion.p>
 
 			<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -96,10 +96,9 @@ export const PackingTips = () => {
 				{...fadeIn}
 				className="text-lg text-moving-gray text-center max-w-4xl mx-auto"
 			>
-				Remember, the right materials and a little planning go a long
-				way toward a successful, stress-free move. And if you need extra
-				help, our professional packing services are always here to
-				assist!
+				Remember, the right materials and a little planning go a long way toward
+				a successful, stress-free move. And if you need extra help, our
+				professional packing services are always here to assist!
 			</motion.p>
 		</section>
 	);
@@ -117,9 +116,7 @@ const TipCard: FC<{ tip: Tip; tipIdx: number }> = ({ tip, tipIdx }) => {
 			<div className="inline-flex items-center justify-center size bg-white rounded-full mb-4">
 				<tip.icon className="size-7 text-moving-gray group-hover:fill-moving-dark group-hover:stroke-white transition-all duration-150 ease-in-out" />
 			</div>
-			<h3 className="text-xl font-bold text-moving-gray mb-2">
-				{tip.title}
-			</h3>
+			<h3 className="text-xl font-bold text-moving-gray mb-2">{tip.title}</h3>
 			<p className="text-[--color-moving-gray]">{tip.desc}</p>
 		</motion.div>
 	);

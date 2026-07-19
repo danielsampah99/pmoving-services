@@ -8,7 +8,12 @@ import { longDistanceMovingServices } from "@/data/services";
 import { ServicesSection } from "@/components/ServicesSection";
 import type { Metadata } from "next";
 import { CTA } from "./cta";
-import { FullServiceApproach, Pricing, Qualifications, TrustUs } from "./qualifications";
+import {
+	FullServiceApproach,
+	Pricing,
+	Qualifications,
+	TrustUs,
+} from "./qualifications";
 
 export const metadata: Metadata = {
 	title: "Premium Long Distance Movers from Minnesota",
@@ -31,7 +36,10 @@ const LongDistanceMovingPage = () => {
 			<Pricing />
 			<RelatedMovingServices services={longDistanceMovingServices} />
 			<RequestQuote />
-			<FAQs title="FAQs About Long Distance Moving" faqs={longDistanceQuestions} />
+			<FAQs
+				title="FAQs About Long Distance Moving"
+				faqs={longDistanceQuestions}
+			/>
 			<ServicesSection />
 			<OurLocations />
 		</div>

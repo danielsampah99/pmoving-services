@@ -27,8 +27,8 @@ export const LaborHeader = () => {
 					animate={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.6, delay: 0.2 }}
 				>
-					Professional help for loading, unloading, and heavy lifting
-					in Minnesota. Trusted local crews.
+					Professional help for loading, unloading, and heavy lifting in
+					Minnesota. Trusted local crews.
 				</motion.p>
 
 				<motion.div

@@ -9,7 +9,8 @@ import { StorageServicesPlans } from "./plans";
 import { StorageServicesFeatures } from "./features";
 
 export const metadata: Metadata = {
-	title: "Secure Settings for Your Essential Belongings | Premium Moving Services",
+	title:
+		"Secure Settings for Your Essential Belongings | Premium Moving Services",
 	description:
 		"Running out of space in your home and office or just want to store your belongings somewhere safe? Get packing and storage services in a secure warehouse.",
 };

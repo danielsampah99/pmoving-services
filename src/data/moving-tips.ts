@@ -138,8 +138,7 @@ export const residentialMovingQuestions: FAQType[] = [
 	},
 	{
 		question: "How to have a stress free house move?",
-		answer:
-			"Plan early, hire professionals, and avoid last-minute packing.",
+		answer: "Plan early, hire professionals, and avoid last-minute packing.",
 	},
 	{
 		question: "How to relocate with little to no money?",
@@ -148,15 +147,14 @@ export const residentialMovingQuestions: FAQType[] = [
 	},
 	{
 		question: "What is included in full service moving?",
-		answer:
-			"Packing, loading, transportation, unloading, and setup.",
+		answer: "Packing, loading, transportation, unloading, and setup.",
 	},
 	{
 		question: "How much to tip on a $500 move?",
 		answer:
 			"$20–$40 per mover depending on service quality and most importantly your budget.",
 	},
-]
+];
 
 export const longDistanceQuestions: FAQType[] = [
 	{
@@ -755,5 +753,50 @@ export const corporateMovingFaqs: FAQType[] = [
 		question: "What’s included in corporate moving?",
 		answer:
 			"Furniture assembly & disassembly, Packing, transport, setup and IT equipment handling",
+	},
+];
+
+export const packingSuppliesQuestions: FAQType[] = [
+	{
+		question: "What packing supplies do I need for moving?",
+		answer:
+			"Boxes, tape, protective wrap, padding, mattress bags, labeling tools like permanent markers, plastic stretch wrap, plastic wrap, plastic bins, garment boxes, TV packing boxes, cargo straps, tape guns, and box cutters. The exact mix depends on your inventory and layout.",
+	},
+	{
+		question: "Where to buy packing supplies for moving?",
+		answer:
+			"Retail stores, online marketplaces, or directly through professional movers, who typically offer better quality and accurate quantities. Additionally, many grocery stores are a great source for free sturdy boxes that can help with total cost-effective packing.",
+	},
+	{
+		question: "How long before a move should you start packing?",
+		answer:
+			"Start 2–3 weeks out for apartments. High-density living spaces often require more planning than expected. Begin by creating an inventory of your belongings to determine what professional-grade moving supplies you'll need and to help declutter unnecessary stuff. Start packing non-essential items and other items you won't need in the weeks before your move, such as books, home decor, electronics, and seasonal clothing, to make the process more organized and efficient.",
+	},
+	{
+		question: "Best packing materials for moving fragile items",
+		answer:
+			"Dish packs, bubble wrap, packing paper, and reinforced boxes. Never rely on standard boxes alone. For best results, pack fragile items like plates vertically rather than stacking them flat, as this provides better protection. Use proper padding inside boxes to prevent items from shifting and to absorb shock during transit. You can also repurpose household possessions such as towels, blankets, and clothes as cost-effective and sustainable padding for fragile items.",
+	},
+	{
+		question:
+			"What are the essential packing supplies for a 2-bedroom apartment move?",
+		answer:
+			"40–60 boxes, tape rolls, padding, mattress covers, labeling materials, and specialty boxes for fragile or oversized items.",
+	},
+	{
+		question: "What will packers not pack?",
+		answer:
+			"Hazardous materials, perishables, flammable items, cleaning supplies, and certain valuables depending on policy by the moving company.",
+	},
+	{
+		question: "What room takes the longest to pack when moving?",
+		answer:
+			"The kitchen, because of fragile and breakable items, irregular shapes, and sheer volume. Many kitchen belongings, such as dishes and glassware, are delicate items that require careful packing with proper materials and techniques to prevent damage.",
+	},
+	{
+		question:
+			"What is the difference between Walmart moving boxes and Home Depot moving boxes?",
+		answer:
+			"Both are retail-grade. Differences are minor, neither compares to commercial-grade boxes used by professional movers. For added protection and reusability, consider using sturdy cardboard boxes or totes, which are stackable and help keep your belongings organized and safe during the move.",
 	},
 ];

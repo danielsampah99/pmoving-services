@@ -7,7 +7,6 @@ export type SVGRProps = {
 	descId?: string;
 };
 
-
 export const MovingTruckIcon = (props: SVGProps<SVGSVGElement> & SVGRProps) => (
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
@@ -231,4 +230,3 @@ export const MovingTruckIcon = (props: SVGProps<SVGSVGElement> & SVGRProps) => (
 		</g>
 	</svg>
 );
-

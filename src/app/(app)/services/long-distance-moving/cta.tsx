@@ -8,7 +8,15 @@ export const CTA = () => (
 			</h2>
 			<p className="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-300">
 				It’s planning, protection, timing, and trust. <br />
-				<Link href="/" className="text-moving-yellow font-semibold whitespace-nowrap hover:underline"> At Premium Moving Services</Link>, we specialize in helping Minnesota families and businesses relocate anywhere in the country with clarity, care, and precise coordination.
+				<Link
+					href="/"
+					className="text-moving-yellow font-semibold whitespace-nowrap hover:underline"
+				>
+					{" "}
+					At Premium Moving Services
+				</Link>
+				, we specialize in helping Minnesota families and businesses relocate
+				anywhere in the country with clarity, care, and precise coordination.
 			</p>
 			<div className="mt-10 flex items-center justify-center gap-x-6">
 				<Link
@@ -26,7 +34,13 @@ export const CTA = () => (
 				aria-hidden="true"
 				className="absolute top-1/2 left-1/2 -z-10 size-256 -translate-x-1/2 mask-[radial-gradient(closest-side,white,transparent)]"
 			>
-				<circle r={512} cx={512} cy={512} fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)" fillOpacity="0.7" />
+				<circle
+					r={512}
+					cx={512}
+					cy={512}
+					fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)"
+					fillOpacity="0.7"
+				/>
 				<defs>
 					<radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217">
 						<stop stopColor="#ffd00d" />
@@ -36,4 +50,4 @@ export const CTA = () => (
 			</svg>
 		</div>
 	</div>
-)
+);

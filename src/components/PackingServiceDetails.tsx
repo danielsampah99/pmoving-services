@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "motion/react";
+import Link from "next/link";
 import React from "react";
 
 export const PackingServiceDetails = () => {
@@ -15,7 +16,7 @@ export const PackingServiceDetails = () => {
 							transition={{ duration: 0.5 }}
 							className="text-3xl font-bold text-moving-navy mb-4 md:mt-3"
 						>
-							Pack & Unpack Services
+							Apartment Moving Done Right in Minnesota
 						</motion.h2>
 
 						<motion.div
@@ -23,75 +24,31 @@ export const PackingServiceDetails = () => {
 							whileInView={{ opacity: 1 }}
 							transition={{ duration: 0.8 }}
 						>
-							<h3 className="text-2xl font-semibold text-moving-navy mb-4">
-								What is pack and unpack services?
-							</h3>
-							<p className="text-gray-700 mb-6 text-lg">
-								We will come to your location and help pack everything in secure
-								boxes. We'll make sure all loose items are secured properly and
-								labeled in easy-to-identify boxes. Your items will be
-								transported room-to-room, ensuring forks don't end up in
-								bathrooms or clothes in the garage.
-							</p>
-							<p className="text-gray-700 mb-6 text-lg">
-								We guarantee your bedroom items will be packed and labeled to
-								arrive safely in your new bedroom. Our team can also unpack
-								boxes, arranging your belongings exactly where you need them.
-							</p>
-
-							<h3 className="text-2xl font-semibold text-moving-navy mb-4 mt-8">
-								Why use us to pack and unpack?
-							</h3>
-							<p className="text-gray-700 mb-6 text-lg">
-								We rigorously train all employees to meet our high standards
-								before handling client items. Our comprehensive training program
-								ensures exceptional service every time.
-							</p>
-						</motion.div>
-
-						<motion.ul
-							initial="hidden"
-							whileInView="visible"
-							variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
-							className="list-disc pl-6 space-y-3 mb-6"
-						>
-							{[
-								"Internal checklist system for perfect item placement",
-								"Essential items unpacked first in their proper rooms",
-								"Climate-controlled storage available during transitions",
-								"24/7 tracking of your packed belongings",
-							].map((item, index) => (
-								<motion.li
-									key={item}
-									variants={{
-										hidden: { opacity: 0, x: -20 },
-										visible: { opacity: 1, x: 0 },
-									}}
-									transition={{ delay: index * 0.1 }}
-									className="text-gray-700"
-								>
-									{item}
-								</motion.li>
-							))}
-						</motion.ul>
-
-						<div className="mt-8">
-							<h3 className="text-xl font-semibold text-moving-navy mb-4">
-								Minnesota Packing Services
-							</h3>
-							<ul className="list-disc pl-6 space-y-2">
-								{[
-									"Movers & packers Minnesota",
-									"Packing services in Minnesota",
-									"Climate-controlled storage for packing service",
-									"Movers & packers near me Minnesota",
-								].map((service, index) => (
-									<li key={index} className="text-gray-700">
-										{service}
+							<div className="text-gray-700 mb-6 text-lg">
+								Discover how our{" "}
+								<Link href="/services/local-moving/apartment-movers">
+									apartment moving service
+								</Link>{" "}
+								combines efficiency, protection, and local expertise for
+								seamless relocations across Minnesota.
+								<ul className="mt-3">
+									<li className="list-disc ml-4">
+										North Loop, Minneapolis – High-rise apartments near Target
+										Field require elevator coordination, tight scheduling, and
+										damage-free handling.
 									</li>
-								))}
-							</ul>
-						</div>
+									<li className="list-disc ml-4 mt-1">
+										Cathedral Hill, St. Paul – Historic buildings near Cathedral
+										of Saint Paul demand careful navigation, narrow staircases,
+										and protective materials.
+									</li>
+								</ul>
+								<p className="text-sm text-gray-500 mt-5">
+									We tailor every move to the building, the layout, and the
+									constraints, because one-size-fits-all is how damage happens.
+								</p>
+							</div>
+						</motion.div>
 					</div>
 
 					{/* Features & Specs */}

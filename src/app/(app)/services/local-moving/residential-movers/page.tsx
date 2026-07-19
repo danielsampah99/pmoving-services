@@ -5,17 +5,25 @@ import { FAQs } from "./faq";
 import { RelatedLocalMoving } from "./related-services";
 import { localMovingServices } from "@/data/services";
 import { RequestQuote } from "./request-quote";
-import { frequentQuestions, residentialExpectations, residentialMovingQuestions } from "@/data/moving-tips";
+import {
+	frequentQuestions,
+	residentialExpectations,
+	residentialMovingQuestions,
+} from "@/data/moving-tips";
 import { ServicesSection } from "@/components/ServicesSection";
 import type { Metadata } from "next";
 import { BASE_URL } from "@/utils";
-import { ResidentialFullService, 
-	ResidentialMovingCost, 
-	ResidentialMovingTimeline, 
+import {
+	ResidentialFullService,
+	ResidentialMovingCost,
+	ResidentialMovingTimeline,
 	ResidentialMovingTips,
-	ResidentialSpecialtyServices
+	ResidentialSpecialtyServices,
 } from "@/components/ResidentialFullService";
-import { ResidentialCTA, ResidentialIntro } from "@/components/ResidentialIntro";
+import {
+	ResidentialCTA,
+	ResidentialIntro,
+} from "@/components/ResidentialIntro";
 import { ResidentialProfessionalMovers } from "@/components/ResidentialProfessionalMovers";
 
 export const metadata: Metadata = {
@@ -81,8 +89,11 @@ const ResidentialMoving = () => {
 			<ResidentialMovingTips />
 
 			<ResidentialSpecialtyServices />
-			
-			<FAQs title="FAQs about Residential Moving" faqs={residentialMovingQuestions} />
+
+			<FAQs
+				title="FAQs about Residential Moving"
+				faqs={residentialMovingQuestions}
+			/>
 			<RequestQuote />
 			<RelatedLocalMoving services={localMovingServices} />
 			<ServicesSection />

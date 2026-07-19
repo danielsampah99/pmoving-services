@@ -56,8 +56,8 @@ export const PackingPersonalized = () => {
 					{...fadeIn}
 					className="text-lg text-moving-gray mb-12 text-center max-w-4xl mx-auto"
 				>
-					No two households or businesses are alike. That's why we
-					offer personalized packing services tailored to your needs.
+					No two households or businesses are alike. That's why we offer
+					personalized packing services tailored to your needs.
 					<br />
 					<br />
 					We regularly customize packing plans for:
@@ -73,13 +73,12 @@ export const PackingPersonalized = () => {
 					{...fadeIn}
 					className="text-lg text-moving-gray mb-8 text-center max-w-4xl mx-auto"
 				>
-					Whether you want everything packed from top to bottom or
-					just help with specific rooms, we create a packing plan that
-					works for you, not the other way around. Our professional
-					packers can expertly pack delicate items like glassware,
-					electronics, and specialty goods, taking special care to
-					protect your valuables with the right techniques and
-					materials.
+					Whether you want everything packed from top to bottom or just help
+					with specific rooms, we create a packing plan that works for you, not
+					the other way around. Our professional packers can expertly pack
+					delicate items like glassware, electronics, and specialty goods,
+					taking special care to protect your valuables with the right
+					techniques and materials.
 				</motion.p>
 
 				<motion.div
@@ -112,7 +111,7 @@ const PackingTypeCard: FC<{ type: PackingType; typeIdx: number }> = ({
 	return (
 		<motion.a
 			key={type.id}
-			href={type.url ?? '#'}
+			href={type.url ?? "#"}
 			initial={{ opacity: 0, y: 20 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ delay: typeIdx * 0.1 }}
@@ -124,7 +123,9 @@ const PackingTypeCard: FC<{ type: PackingType; typeIdx: number }> = ({
 				ref={iconRef}
 				className="size-7 fill-gray-600 stroke-moving-yellow mb-4"
 			/>
-			<p className="text-moving-gray [&>a]:underline font-medium">{type.label}</p>
+			<p className="text-moving-gray [&>a]:underline font-medium">
+				{type.label}
+			</p>
 		</motion.a>
 	);
 };

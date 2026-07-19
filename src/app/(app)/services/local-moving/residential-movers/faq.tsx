@@ -46,9 +46,7 @@ export const FAQs: FC<FAQProps> = ({
 							</DisclosureButton>
 						</dt>
 						<DisclosurePanel as="dd" className="mt-2 pr-12">
-							<p className="text-base leading-7 text-gray-600">
-								{faq.answer}
-							</p>
+							<p className="text-base leading-7 text-gray-600">{faq.answer}</p>
 						</DisclosurePanel>
 					</Disclosure>
 				))}

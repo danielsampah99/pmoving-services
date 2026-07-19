@@ -77,7 +77,7 @@ const LaborOnlyMovingPage = () => {
 				<LaborHeavy />
 
 				<LaborServices />
-				
+
 				<LaborUnloading />
 			</div>
 			<ServiceLayout
@@ -96,16 +96,14 @@ const LaborOnlyMovingPage = () => {
 								Labor Only Movers Near You
 							</h3>
 							<p className="text-gray-600">
-								Need partial help with your move? Our moving
-								labor services include in-home assistance,
-								loading/unloading, and heavy lifting support.
-								Sometimes a little professional help makes all
-								the difference.
+								Need partial help with your move? Our moving labor services
+								include in-home assistance, loading/unloading, and heavy lifting
+								support. Sometimes a little professional help makes all the
+								difference.
 							</p>
 							<p className="text-gray-600">
-								Our trained movers are ready to assist with any
-								size project - let us take the load off your
-								mind.
+								Our trained movers are ready to assist with any size project -
+								let us take the load off your mind.
 							</p>
 							<p className="font-semibold text-gray-800">
 								Contact us today for labor-only service pricing.
@@ -124,11 +122,10 @@ const LaborOnlyMovingPage = () => {
 							Expert Moving Labor Assistance
 						</h2>
 						<p className="text-gray-600">
-							Our labor-only moving service provides professional
-							moving help without the truck. Perfect for customers
-							who have their own rental truck or container and
-							need experienced movers to do the heavy lifting,
-							loading, and unloading.
+							Our labor-only moving service provides professional moving help
+							without the truck. Perfect for customers who have their own rental
+							truck or container and need experienced movers to do the heavy
+							lifting, loading, and unloading.
 						</p>
 					</div>
 
@@ -139,10 +136,9 @@ const LaborOnlyMovingPage = () => {
 								Loading & Unloading
 							</h3>
 							<p className="text-gray-600">
-								Our trained professionals will carefully load or
-								unload your rental truck, POD, or storage
-								container with maximum efficiency and care for
-								your belongings.
+								Our trained professionals will carefully load or unload your
+								rental truck, POD, or storage container with maximum efficiency
+								and care for your belongings.
 							</p>
 						</div>
 						<div className="space-y-2">
@@ -150,10 +146,9 @@ const LaborOnlyMovingPage = () => {
 								In-House Moving
 							</h3>
 							<p className="text-gray-600">
-								Need help moving furniture within your home? Our
-								team can assist with rearranging furniture,
-								moving heavy items between floors, or setting up
-								new rooms.
+								Need help moving furniture within your home? Our team can assist
+								with rearranging furniture, moving heavy items between floors,
+								or setting up new rooms.
 							</p>
 						</div>
 					</div>
@@ -165,13 +160,8 @@ const LaborOnlyMovingPage = () => {
 						</h3>
 						<ul className="space-y-3">
 							{checklist.map((item) => (
-								<li
-									key={item.id}
-									className="flex items-start gap-x-0.5"
-								>
-									<span className="mr-2 text-moving-yellow">
-										✓
-									</span>
+								<li key={item.id} className="flex items-start gap-x-0.5">
+									<span className="mr-2 text-moving-yellow">✓</span>
 									<span>{item.text}</span>
 								</li>
 							))}

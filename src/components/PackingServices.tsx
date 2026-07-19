@@ -30,21 +30,16 @@ export const PackingServices = () => {
 					{...fadeIn}
 					className="text-lg text-moving-gray mb-12 text-center max-w-4xl mx-auto"
 				>
-					Our packing services are flexible and built to fit your
-					specific situation, not a generic checklist. We understand
-					that every move is different, and your packing plan should
-					reflect your home, timeline, and budget. Many moving
-					companies offer customizable packing options to fit
-					different moving needs. However, we offer: <br /> <br />
+					Our packing services are flexible and built to fit your specific
+					situation, not a generic checklist. We understand that every move is
+					different, and your packing plan should reflect your home, timeline,
+					and budget. Many moving companies offer customizable packing options
+					to fit different moving needs. However, we offer: <br /> <br />
 				</motion.p>
 
 				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 					{services.map((service, idx) => (
-						<ServiceCard
-							service={service}
-							serviceIdx={idx}
-							key={idx}
-						/>
+						<ServiceCard service={service} serviceIdx={idx} key={idx} />
 					))}
 				</div>
 			</div>

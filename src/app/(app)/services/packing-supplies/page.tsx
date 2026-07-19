@@ -6,6 +6,8 @@ import { RequestQuote } from "../local-moving/residential-movers/request-quote";
 
 import { Metadata } from "next";
 import { BASE_URL } from "@/utils";
+import { FAQs } from "../local-moving/residential-movers/faq";
+import { packingSuppliesQuestions } from "@/data/moving-tips";
 
 export const metadata: Metadata = {
 	title: "Stress-Free Packing Services | Moving Companies",
@@ -41,6 +43,11 @@ const PackingServicesPage = () => {
 			<PackingHero />
 			<PackingServiceDetails />
 			<RequestQuote />
+			<FAQs
+				title="FAQs About Long Distance Moving"
+				faqs={packingSuppliesQuestions}
+			/>
+
 			<ServicesSection />
 			<OurLocations />
 		</div>

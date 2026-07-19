@@ -16,15 +16,13 @@ export const LaborIntro = () => {
 				>
 					<div className="prose prose-lg max-w-none">
 						<p className="text-lg text-moving-gray leading-relaxed mb-6 text-justify">
-							When you already have the rental truck, the moving
-							container, the pack, or the storage unit, but you
-							don't want to risk your back, your walls, or your
-							furniture, you need skilled hands, not favors from
-							friends. Moving labor focuses strictly on physical
-							exertion, while full-service moving handles the
-							entire logistical chain. Premium Moving Services is
-							one of the local moving service providers that
-							offers professional <strong>moving labor</strong>{" "}
+							When you already have the rental truck, the moving container, the
+							pack, or the storage unit, but you don't want to risk your back,
+							your walls, or your furniture, you need skilled hands, not favors
+							from friends. Moving labor focuses strictly on physical exertion,
+							while full-service moving handles the entire logistical chain.
+							Premium Moving Services is one of the local moving service
+							providers that offers professional <strong>moving labor</strong>{" "}
 							across Minnesota and cities like{" "}
 							<Link
 								href="https://www.minneapolis.org"
@@ -44,18 +42,16 @@ export const LaborIntro = () => {
 								{" "}
 								Bloomington
 							</Link>{" "}
-							including surrounding neighborhoods for customers
-							who want expert hourly labor help with the heavy
-							work while staying in control of their move. Many
-							moving labor companies offer upfront pricing with no
-							hidden fees, so you know exactly what to expect.
+							including surrounding neighborhoods for customers who want expert
+							hourly labor help with the heavy work while staying in control of
+							their move. Many moving labor companies offer upfront pricing with
+							no hidden fees, so you know exactly what to expect.
 						</p>
 
 						<p className="text-lg text-moving-gray leading-relaxed mb-6">
-							Our crews show up on time, in uniform, with
-							commercial moving equipment like dollies, moving
-							pads, straps, and the experience to move quickly
-							without cutting corners. Whether you're relocating
+							Our crews show up on time, in uniform, with commercial moving
+							equipment like dollies, moving pads, straps, and the experience to
+							move quickly without cutting corners. Whether you're relocating
 							from a high-rise apartment, a townhome, a{" "}
 							<Link
 								href="https://www.caringtransitions.com"
@@ -65,14 +61,12 @@ export const LaborIntro = () => {
 							>
 								senior living
 							</Link>{" "}
-							community, or a busy retail space, we bring the
-							strength, strategy, and care that prevents damage
-							and speeds up your day.
+							community, or a busy retail space, we bring the strength,
+							strategy, and care that prevents damage and speeds up your day.
 						</p>
 
 						<p className="text-lg text-moving-gray leading-relaxed">
-							If you're renting a moving truck from U-Haul, using
-							a{" "}
+							If you're renting a moving truck from U-Haul, using a{" "}
 							<Link
 								href="https://www.pods.com"
 								className="text-moving-primary hover:underline"
@@ -81,13 +75,11 @@ export const LaborIntro = () => {
 							>
 								pod
 							</Link>
-							, a moving container, a pack, or reorganizing a
-							storage unit, this is the smart way to move. Moving
-							labor services provide loading, unloading, and heavy
-							lifting assistance for these options without the
-							need for a truck. The process is streamlined and
-							efficient, allowing you to save roughly 40–60%
-							compared to{" "}
+							, a moving container, a pack, or reorganizing a storage unit, this
+							is the smart way to move. Moving labor services provide loading,
+							unloading, and heavy lifting assistance for these options without
+							the need for a truck. The process is streamlined and efficient,
+							allowing you to save roughly 40–60% compared to{" "}
 							<Link
 								href="/blogs/moving-help---a-full-guide-to-addressing-your-moving-needs"
 								className="text-moving-primary hover:underline"
@@ -96,17 +88,17 @@ export const LaborIntro = () => {
 							>
 								full-service moves
 							</Link>{" "}
-							by paying only for the hours workers spend loading
-							or unloading.{" "}
+							by paying only for the hours workers spend loading or unloading.{" "}
 							<Link
 								href="/free-quote"
 								className="text-moving-primary hover:underline"
 								target="_blank"
-								rel="noopener noreferrer">
+								rel="noopener noreferrer"
+							>
 								Contact us for a free quote for moving labor
 							</Link>{" "}
-							and let trained background checked movers handle the
-							heavy lifting, stress free.
+							and let trained background checked movers handle the heavy
+							lifting, stress free.
 						</p>
 					</div>
 				</motion.div>

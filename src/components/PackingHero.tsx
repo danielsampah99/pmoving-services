@@ -14,7 +14,6 @@ export const PackingHero = () => {
 					alt="Professional packing service"
 					className="w-full h-full object-cover opacity-75 object-center"
 				/>
-				{/* <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-gray-900/90 to-gray-900/50" /> */}
 			</div>
 
 			{/* Content Container */}
@@ -42,8 +41,10 @@ export const PackingHero = () => {
 							animate={{ opacity: 1 }}
 							transition={{ delay: 0.4 }}
 						>
-							Secure packing solutions using premium materials and expert
-							techniques
+							Premium Moving Services delivers expert apartment moving backed by
+							professional-grade materials, efficient packing systems, and local
+							Minnesota expertise. Get all the supplies you need for a
+							stress-free move.
 						</motion.p>
 					</motion.div>
 

@@ -85,10 +85,7 @@ const BenefitCard: FC<{ benefit: Benefit; benefitIdx: number }> = ({
 			className="text-center rounded-lg ring ring-inset ring-gray-300 shadow-sm hover:ring-1 p-4 hover:bg-gray-50"
 		>
 			<div className="inline-flex items-center justify-center size bg-white rounded-full mb-4">
-				<benefit.icon
-					ref={iconRef}
-					className="size-7 text-moving-gray"
-				/>
+				<benefit.icon ref={iconRef} className="size-7 text-moving-gray" />
 			</div>
 			<h3 className="text-xl font-bold text-moving-gray mb-2">
 				{benefit.title}

@@ -4,7 +4,6 @@ import { services } from "@/app/(app)/services/all-services";
 import { BASE_URL } from "@/utils";
 import type { MetadataRoute } from "next";
 
-
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 	return [
 		{

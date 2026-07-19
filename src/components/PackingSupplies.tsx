@@ -18,19 +18,16 @@ export const PackingSupplies = () => {
 	return (
 		<section className="bg-moving-gray text-white py-16">
 			<div className="max-w-7xl mx-auto px-4">
-				<motion.h2
-					{...fadeIn}
-					className="text-4xl font-bold mb-8 text-center"
-				>
+				<motion.h2 {...fadeIn} className="text-4xl font-bold mb-8 text-center">
 					High-Quality Packing Supplies Included
 				</motion.h2>
 				<motion.p
 					{...fadeIn}
 					className="text-lg mb-12 text-center max-w-4xl mx-auto opacity-90"
 				>
-					We don't rely on reused or weak boxes. Our packing services
-					include high-quality, mover-grade packing supplies designed
-					to protect your belongings during transport.
+					We don't rely on reused or weak boxes. Our packing services include
+					high-quality, mover-grade packing supplies designed to protect your
+					belongings during transport.
 				</motion.p>
 
 				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

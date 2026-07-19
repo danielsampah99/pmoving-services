@@ -45,7 +45,10 @@ const minneapolisNeighborhoods = [
 		– Large residences and specialty item packing
 	</>,
 	<>
-		<Link key="powderhorn" href="https://www.minneapolis.org/neighborhoods/powderhorn/">
+		<Link
+			key="powderhorn"
+			href="https://www.minneapolis.org/neighborhoods/powderhorn/"
+		>
 			Powderhorn
 		</Link>{" "}
 		– Family homes and multi-room packing services
@@ -102,19 +105,28 @@ const stPaulNeighborhoods = [
 		– Historic properties and high-value item packing
 	</>,
 	<>
-		<Link key="cathedral-hill" href="https://www.visitsaintpaul.com/things-to-do/neighborhoods/cathedral-hill/">
+		<Link
+			key="cathedral-hill"
+			href="https://www.visitsaintpaul.com/things-to-do/neighborhoods/cathedral-hill/"
+		>
 			Cathedral Hill
 		</Link>{" "}
 		– Multi-level residences and specialty box packing
 	</>,
 	<>
-		<Link key="west-seventh" href="https://www.visitsaintpaul.com/things-to-do/neighborhoods/west-7th-street/">
+		<Link
+			key="west-seventh"
+			href="https://www.visitsaintpaul.com/things-to-do/neighborhoods/west-7th-street/"
+		>
 			West Seventh
 		</Link>{" "}
 		– Residential and apartment packing services
 	</>,
 	<>
-		<Link key="como-park" href="https://www.visitsaintpaul.com/things-to-do/neighborhoods/como-park/">
+		<Link
+			key="como-park"
+			href="https://www.visitsaintpaul.com/things-to-do/neighborhoods/como-park/"
+		>
 			Como Park
 		</Link>{" "}
 		– Homes and duplexes with flexible packing needs
@@ -138,7 +150,10 @@ const stPaulNeighborhoods = [
 		– Budget-conscious and efficient packing services
 	</>,
 	<>
-		<Link key="merriam-park" href="https://www.trulia.com/n/mn/saint-paul/merriam-park/132978/">
+		<Link
+			key="merriam-park"
+			href="https://www.trulia.com/n/mn/saint-paul/merriam-park/132978/"
+		>
 			Merriam Park
 		</Link>{" "}
 		– Student, family, and downsizing packing support
@@ -158,9 +173,8 @@ export const PackingNeighbourhoods = () => {
 				{...fadeIn}
 				className="text-lg text-moving-gray mb-12 text-center max-w-4xl mx-auto"
 			>
-				Our local knowledge allows us to pack efficiently while
-				respecting building rules, parking limitations, and move-in
-				schedules.
+				Our local knowledge allows us to pack efficiently while respecting
+				building rules, parking limitations, and move-in schedules.
 			</motion.p>
 
 			<div className="grid lg:grid-cols-2 gap-12">

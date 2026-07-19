@@ -47,8 +47,8 @@ export const PackingHeader = () => {
 						}}
 						className="text-lg md:text-2xl text-white/95 max-w-4xl"
 					>
-						Professional packing services for homes, apartments, and
-						offices. Full, partial & specialty packing solutions.
+						Professional packing services for homes, apartments, and offices.
+						Full, partial & specialty packing solutions.
 					</motion.p>
 
 					<motion.a

@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { type FC, useRef } from "react";
 import {
@@ -30,10 +30,9 @@ export const PackingTrust = () => {
 					className="text-lg text-moving-gray mb-12 text-center max-w-4xl mx-auto"
 				>
 					Our professional packing services are performed by trained,
-					background-checked packing crew members or movers who know
-					how to protect your belongings properly. We don't rush. We
-					don't cut corners. And we don't rely on flimsy retail
-					materials.
+					background-checked packing crew members or movers who know how to
+					protect your belongings properly. We don't rush. We don't cut corners.
+					And we don't rely on flimsy retail materials.
 					<br />
 					<br />
 					Every professional packer/mover on our team is trained in:
@@ -49,9 +48,8 @@ export const PackingTrust = () => {
 					{...fadeIn}
 					className="text-lg text-moving-gray text-center max-w-4xl mx-auto"
 				>
-					Unlike national chains and shipping stores, our focus is
-					moving-grade packing that works seamlessly with your
-					relocation.
+					Unlike national chains and shipping stores, our focus is moving-grade
+					packing that works seamlessly with your relocation.
 				</motion.p>
 			</div>
 		</section>

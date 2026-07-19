@@ -31,7 +31,7 @@ const services: Array<Service> = [
 	{
 		id: 2,
 		icon: HomeIcon,
-		text: "Preparing houses for staging or sale"
+		text: "Preparing houses for staging or sale",
 	},
 	{
 		id: 3,
@@ -89,9 +89,8 @@ export const LaborServices = () => {
 						variants={fadeInUp}
 						className="text-xl text-moving-gray text-center mb-12 max-w-3xl mx-auto"
 					>
-						This service isn't only for people changing addresses.
-						Our hourly labor services is used every day for
-						situations like:
+						This service isn't only for people changing addresses. Our hourly
+						labor services is used every day for situations like:
 					</motion.p>
 
 					<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -114,9 +113,7 @@ export const LaborServices = () => {
 										{service.text}
 									</Link>
 								) : (
-									<p className="text-moving-gray">
-										{service.text}
-									</p>
+									<p className="text-moving-gray">{service.text}</p>
 								)}
 							</motion.div>
 						))}
@@ -127,18 +124,16 @@ export const LaborServices = () => {
 						className="mt-12 p-8 bg-moving-yellow/20 rounded-2xl border-2 border-moving-yellow"
 					>
 						<p className="text-lg text-moving-gray leading-relaxed">
-							Professional movers can also assist with furniture
-							rearranging within your home for renovations or
-							staging. Many moving labor companies provide
-							services for home staging, which involves moving
+							Professional movers can also assist with furniture rearranging
+							within your home for renovations or staging. Many moving labor
+							companies provide services for home staging, which involves moving
 							furniture to prepare a home for sale.
 						</p>
 						<p className="text-lg text-moving-gray leading-relaxed mt-4">
-							Realtors, property managers, families, and business
-							owners rely on us when the task requires muscle and
-							know-how without a full-service move. You stay in
-							control of the truck, timeline, and destination—we
-							handle the physical work safely and efficiently.
+							Realtors, property managers, families, and business owners rely on
+							us when the task requires muscle and know-how without a
+							full-service move. You stay in control of the truck, timeline, and
+							destination—we handle the physical work safely and efficiently.
 						</p>
 					</motion.div>
 				</motion.div>
