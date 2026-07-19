@@ -7,7 +7,7 @@ export const PackingServiceDetails = () => {
 	return (
 		<section className="py-12 px-4 bg-white">
 			<div className="container mx-auto max-w-6xl">
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-12 [&_a]:underline [&_a]:text-gray-900">
 					{/* Overview Section */}
 					<div>
 						<motion.h2
@@ -43,33 +43,70 @@ export const PackingServiceDetails = () => {
 										and protective materials.
 									</li>
 								</ul>
-								<p className="text-sm text-gray-500 mt-5">
-									We tailor every move to the building, the layout, and the
-									constraints, because one-size-fits-all is how damage happens.
-								</p>
 							</div>
 						</motion.div>
 					</div>
 
-					{/* Features & Specs */}
+					{/* home packing and moving in Minnesota */}
 					<div>
-						<motion.h3
+						<motion.h2
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5, delay: 0.2 }}
-							className="text-xl font-semibold text-moving-navy mb-4"
+							transition={{ duration: 0.5 }}
+							className="text-3xl font-bold text-moving-navy mb-4 md:mt-3"
 						>
-							Service Features
-						</motion.h3>
+							Home Packing & Moving Done Right in Minnesota{" "}
+						</motion.h2>
 
-						{/* Specs Table */}
-						<div>
-							<img
-								src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Moving+boxes+calculator+table+-1920w.jpg"
-								alt="Ways to expedite your moving process"
-								className="w-full h-auto rounded-lg shadow-lg mx-auto mb-8"
-							/>
-						</div>
+						<motion.div
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1 }}
+							transition={{ duration: 0.8 }}
+						>
+							<div className="text-gray-700 mb-6 text-lg">
+								Experience seamless home packing and moving with expert systems,
+								durable materials, and local Minnesota knowledge built for every
+								type of home.
+								<ul className="mt-3">
+									<li className="list-disc ml-4">
+										<Link
+											className=""
+											href="https://www.trulia.com/n/mn/edina/morningside/140757/"
+										>
+											Edina – Morningside Neighborhood
+										</Link>{" "}
+										–{" "}
+										<Link
+											className="italic no-underline"
+											href="/services/local-moving/residential-movers"
+										>
+											Homes
+										</Link>{" "}
+										near 50th & France require strategic packing for tight
+										residential streets, premium finishes, and careful furniture
+										protection.
+									</li>
+									<li className="list-disc ml-4 mt-1">
+										<Link href="https://www.exploreminnesota.com/profile/stillwater-boutique-district-river/5669">
+											Stillwater – Historic District
+										</Link>{" "}
+										&nbsp; Properties near Stillwater Lift Bridge demand
+										precision packing for antiques, multi-level layouts, and
+										older home structures.
+									</li>
+								</ul>
+							</div>
+						</motion.div>
+					</div>
+
+					{/* Specs Table */}
+					<div className="md:col-span-2 max-w-4xl self-center">
+						<h3>Essential Materials That Make or Break Your Move</h3>
+						<img
+							src="https://lirp.cdn-website.com/b0f4adc5/dms3rep/multi/opt/Moving+boxes+calculator+table+-1920w.jpg"
+							alt="Ways to expedite your moving process"
+							className="size-auto rounded-lg shadow-lg mx-auto mb-8"
+						/>
 					</div>
 				</div>
 			</div>
