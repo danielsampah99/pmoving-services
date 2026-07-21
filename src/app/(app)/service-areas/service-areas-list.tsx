@@ -2,9 +2,8 @@ import { type FC, memo, useMemo, useState } from "react";
 import { cn } from "@/utils";
 import { TruckIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import type { MapCity } from "@/map-data";
 import { Field, Input, Label } from "@headlessui/react";
-import { ServiceArea } from "@/payload-types";
+import type { ServiceArea } from "@/payload-types";
 
 export type ListOfServiceAreasProps = {
 	cities: ServiceArea[];
@@ -35,7 +34,7 @@ export const ListOfServiceAreas: FC<ListOfServiceAreasProps> = ({
 
 	return (
 		<div className="lg:col-span-1">
-			<div className="bg-white rounded-xl shadow-md p-5 h-full max-h-[625px]">
+			<div className="bg-white rounded-xl shadow-md p-5 h-full max-h-156.25">
 				<div className="space-y-4 overflow-y-auto pr-2">
 					<SearchCity searchCity={searchTerm} onSearchCity={setSearchTerm} />
 					<MapCitiesList
@@ -101,7 +100,7 @@ export const MapCitiesList: FC<MapCitiesListProps> = ({
 	onSelectCity,
 }) => {
 	return (
-		<div className="max-h-[300px] overflow-y-scroll">
+		<div className="max-h-75 overflow-y-scroll">
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-1.5">
 				{cities.length === 0 ? (
 					<span className="center text-yellow-500 col-span-2">
@@ -159,7 +158,6 @@ const CityListItem: FC<CityListItemProps> = memo(
 				onMouseLeave={() => onHoverCity(null)}
 				onFocus={() => onHoverCity(city.slug)}
 				onBlur={() => onHoverCity(null)}
-				role="button"
 				tabIndex={0}
 			>
 				<div className="flex capitalize items-center">

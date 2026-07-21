@@ -23,7 +23,7 @@ export const AllPosts: FC<AllPostsProps> = ({ posts }) => {
 					.includes(lowerCaseSearchTerm);
 
 				const tagsMatch =
-					post.tags &&
+					post?.tags &&
 					post.tags.some((tag) =>
 						tag
 							.toLowerCase()
@@ -96,7 +96,7 @@ export const Post: FC<{ post: Blog }> = ({ post }) => {
 				<div className="group absolute inset-x-0 top-0 flex h-72 items-end justify-end overflow-hidden rounded-lg p-4">
 					<div
 						aria-hidden="true"
-						className="absolute inset-x-0 bottom-0 h-36 group-hover:bg-gradient-to-t transition-all group-hover:animate-ease-in-out duration-150 delay-200 hover:bg-gradient-to-t from-black opacity-50"
+						className="absolute inset-x-0 bottom-0 h-36 group-hover:bg-linear-to-t transition-all group-hover:animate-ease-in-out duration-150 delay-200 hover:bg-linear-to-t from-black opacity-50"
 					/>
 					<p className="relative rounded-full px-1.5 py-0.5 bg-moving-yellow shadow-sm text-sm font-semibold text-white">
 						{post.readingTime ?? 5} min

@@ -7,7 +7,7 @@ import { RelatedServices } from "./related-services";
 import { commercialMovingServices } from "@/data/services";
 import { OurLocations } from "@/components/OurLocations";
 import { ServicesSection } from "@/components/ServicesSection";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
 	title: "Trusted Commercial Moving Services in Minnesota, MN",

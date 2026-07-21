@@ -14,7 +14,7 @@ const LeafletMap = dynamic(
 	{
 		ssr: false,
 		loading: () => (
-			<div className="h-[625px] bg-gray-100 animate-pulse rounded-xl flex items-center justify-center">
+			<div className="h-156.25 bg-gray-100 animate-pulse rounded-xl flex items-center justify-center">
 				Loading map...
 			</div>
 		),
@@ -56,7 +56,7 @@ export const ServiceAreaMap: FC<ServiceAreaMapProps> = ({
 		if (cityInfo?.slug) {
 			router.push(`/service-areas/${cityInfo.slug}`);
 		}
-	}, []);
+	}, [router]);
 
 	const handleHoverCity = useCallback((city: string | null) => {
 		const cityCenter = cities.find((item) => item.slug === city);

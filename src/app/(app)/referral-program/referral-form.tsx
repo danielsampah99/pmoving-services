@@ -21,10 +21,9 @@ import {
 	Legend,
 	Switch,
 } from "@headlessui/react";
-import { HeroIconType } from "@/components/HeroIcon";
+import type { HeroIconType } from "@/components/HeroIcon";
 import { ErrorMessage } from "@hookform/error-message";
-import { LucideIcon } from "lucide-react";
-import { FC, HTMLInputTypeAttribute, useState } from "react";
+import { type FC, type HTMLInputTypeAttribute, useState } from "react";
 import {
 	EnvelopeIcon,
 	PhoneIcon,
@@ -357,7 +356,7 @@ type ControllerField = ControllerRenderProps<
 
 type TextInputFieldProps = {
 	label: string;
-	icon: HeroIconType | LucideIcon;
+	icon: HeroIconType;
 	field: ControllerField;
 	name: FieldPath<ReferralFormSchema>;
 	errors: FieldErrors<ReferralFormSchema>;
@@ -447,11 +446,11 @@ const SwitchField: FC<SwitchFieldProps> = ({ field, label, errors, name }) => {
 					onChange={field.onChange}
 					ref={field.ref}
 					name={name}
-					className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-moving-yellow data-[checked]:bg-moving-yellow"
+					className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-moving-yellow data-checked:bg-moving-yellow"
 				>
 					<span
 						aria-hidden="true"
-						className="size-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out group-data-[checked]:translate-x-3.5"
+						className="size-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out group-data-checked:translate-x-3.5"
 					/>
 				</Switch>
 			</div>
