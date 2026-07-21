@@ -51,25 +51,18 @@ const checklist: { id: number; text: string }[] = [
 
 const LaborOnlyMovingPage = () => {
 	return (
-		<div>
-			<div className="min-h-screen bg-gradient-to-b from-white to-moving-lightGray">
-				<section className="relative overflow-hidden bg-gradient-to-r from-moving-dark to-moving-gray py-20 lg:py-32">
-					<div className="absolute inset-0 opacity-10">
-						<div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+		<div className="flex flex-col min-h-screen">
+			<div className="min-h-screen relative pt-0 pb-4">
+				<section className="relative py-20 lg:py-32">
+					<div className="absolute inset-0">
+						<img
+							alt="Moving Labour hero media"
+							src="/api/media/file/Unloading%2BABF%2BPods-1920w.webp"
+							className="size-full object-cover object-center"
+						/>
 					</div>
 
 					<LaborHeader />
-
-					<div className="absolute bottom-0 left-0 right-0">
-						<svg
-							className="w-full h-16 text-white"
-							preserveAspectRatio="none"
-							viewBox="0 0 1200 120"
-							fill="currentColor"
-						>
-							<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
-						</svg>
-					</div>
 				</section>
 
 				<LaborIntro />
@@ -86,36 +79,6 @@ const LaborOnlyMovingPage = () => {
 				desc="Professional moving labor assistance for loading, unloading, and in-house moving needs"
 			>
 				<div className="px-4 py-8 space-y-8">
-					{/* New Labor Section */}
-					<div className="grid md:grid-cols-2 gap-8 items-center">
-						<div className="space-y-4">
-							<h2 className="text-3xl font-bold text-gray-800">
-								We Handle Your Move With Care
-							</h2>
-							<h3 className="text-xl font-semibold text-gray-700">
-								Labor Only Movers Near You
-							</h3>
-							<p className="text-gray-600">
-								Need partial help with your move? Our moving labor services
-								include in-home assistance, loading/unloading, and heavy lifting
-								support. Sometimes a little professional help makes all the
-								difference.
-							</p>
-							<p className="text-gray-600">
-								Our trained movers are ready to assist with any size project -
-								let us take the load off your mind.
-							</p>
-							<p className="font-semibold text-gray-800">
-								Contact us today for labor-only service pricing.
-							</p>
-						</div>
-						<img
-							src="/residential-moving.webp"
-							alt="Moving labor team assisting"
-							className="rounded-lg shadow-xl"
-						/>
-					</div>
-
 					{/* Existing Service Description */}
 					<div className="space-y-4">
 						<h2 className="text-3xl font-bold text-gray-800">

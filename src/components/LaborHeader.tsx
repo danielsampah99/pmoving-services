@@ -10,10 +10,10 @@ export const LaborHeader = () => {
 				initial={{ opacity: 0, y: 30 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.8 }}
-				className="max-w-4xl mx-auto text-center"
+				className="max-w-4xl mx-auto text-center "
 			>
 				<motion.h1
-					className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 fade-in"
+					className="text-4xl md:text-5xl lg:text-6xl font-bold text-moving-yellow mix-blend-difference mb-6 fade-in"
 					initial={{ opacity: 0, scale: 0.9 }}
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{ duration: 0.6 }}
@@ -22,7 +22,7 @@ export const LaborHeader = () => {
 				</motion.h1>
 
 				<motion.p
-					className="text-xl md:text-2xl text-moving-lightGray mb-8 slide-in"
+					className="text-xl md:text-2xl text-moving-dark mix-blend-difference text-shadow-black mb-8 slide-in"
 					initial={{ opacity: 0, x: -20 }}
 					animate={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.6, delay: 0.2 }}

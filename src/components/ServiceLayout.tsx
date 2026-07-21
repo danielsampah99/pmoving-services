@@ -38,7 +38,7 @@ export const ServiceLayout: FC<ServiceLayoutProps> = ({
 					/>
 
 					{/* Gradient Overlay */}
-					<div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/10" />
+					<div className="absolute inset-0 bg-linear-to-b from-black/50 via-black/30 to-black/10" />
 
 					{/* Animated Title & Description */}
 					<div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">

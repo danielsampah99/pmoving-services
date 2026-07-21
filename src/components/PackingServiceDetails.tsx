@@ -1,14 +1,12 @@
 "use client";
 import { motion } from "motion/react";
 import Link from "next/link";
-import React from "react";
 
 export const PackingServiceDetails = () => {
 	return (
 		<section className="py-12 px-4 bg-white">
 			<div className="container mx-auto max-w-6xl">
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-12 [&_a]:underline [&_a]:text-gray-900">
-					{/* Overview Section */}
 					<div>
 						<motion.h2
 							initial={{ opacity: 0, y: 20 }}
@@ -47,7 +45,6 @@ export const PackingServiceDetails = () => {
 						</motion.div>
 					</div>
 
-					{/* home packing and moving in Minnesota */}
 					<div>
 						<motion.h2
 							initial={{ opacity: 0, y: 20 }}
@@ -99,7 +96,6 @@ export const PackingServiceDetails = () => {
 						</motion.div>
 					</div>
 
-					{/* Specs Table */}
 					<div className="md:col-span-2 max-w-4xl self-center">
 						<h3>Essential Materials That Make or Break Your Move</h3>
 						<img
