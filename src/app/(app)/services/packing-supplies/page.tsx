@@ -1,6 +1,6 @@
 import { OurLocations } from "@/components/OurLocations";
 import { PackingHero } from "@/components/PackingHero";
-import { PackingServiceDetails } from "@/components/PackingServiceDetails";
+import { PackingServiceDetails, PackingSuppliesContent } from "@/components/PackingServiceDetails";
 import { ServicesSection } from "@/components/ServicesSection";
 import { RequestQuote } from "../local-moving/residential-movers/request-quote";
 
@@ -42,6 +42,7 @@ const PackingServicesPage = () => {
 		<div>
 			<PackingHero />
 			<PackingServiceDetails />
+			<PackingSuppliesContent />
 			<RequestQuote />
 			<FAQs
 				title="FAQs About Long Distance Moving"

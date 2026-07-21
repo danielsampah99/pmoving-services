@@ -48,15 +48,18 @@ export const ServiceAreaMap: FC<ServiceAreaMapProps> = ({
 		setShowStyleSelector(false);
 	};
 
-	const handleCityClick = useCallback((city: string | null) => {
-		setSelectedCity(city);
+	const handleCityClick = useCallback(
+		(city: string | null) => {
+			setSelectedCity(city);
 
-		const cityInfo = cities.find((item) => item.slug === city);
+			const cityInfo = cities.find((item) => item.slug === city);
 
-		if (cityInfo?.slug) {
-			router.push(`/service-areas/${cityInfo.slug}`);
-		}
-	}, [router]);
+			if (cityInfo?.slug) {
+				router.push(`/service-areas/${cityInfo.slug}`);
+			}
+		},
+		[router],
+	);
 
 	const handleHoverCity = useCallback((city: string | null) => {
 		const cityCenter = cities.find((item) => item.slug === city);
