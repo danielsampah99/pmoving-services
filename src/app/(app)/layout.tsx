@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { headers } from "next/headers";
 
 const inter = Inter({
 	variable: "--font-inter",
@@ -19,14 +20,19 @@ export const metadata: Metadata = {
 		"Get premium moving services available at the snap of a finger. From local, commercial, long-distance to specialty moving, we help you move as smoothly as it gets.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
+
+	const headersList = await headers()
+
+	const nonce = headersList.get("x-nonce") || ''
+	
 	return (
 		<html lang="en">
 			<head>
 				{/* Google tag manager */}
-				<Script id="gtm" strategy="afterInteractive">
+				<Script id="gtm" strategy="afterInteractive" nonce={nonce}>
 					{`(function(w,d,s,l,i){w[l]=w[l]||[];
 		              w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
 		              var f=d.getElementsByTagName(s)[0],
@@ -43,12 +49,14 @@ export default function RootLayout({
 					id="click-ease-script"
 					strategy="afterInteractive"
 					src="https://www.clickcease.com/monitor/stat.js"
+					nonce={nonce}
 				/>
 
 				<Script
 					id="gtag-script"
 					strategy="afterInteractive"
 					src="https://www.googletagmanager.com/gtag/js?id=G-3RE74NXLBS"
+					nonce={nonce}
 				>
 					{`window.dataLayer = window.dataLayer || [];
 						function gtag() {
