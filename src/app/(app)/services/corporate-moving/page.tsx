@@ -67,7 +67,7 @@ const CorporateMoving = () => {
 				data={handlingData}
 				title="What we handle"
 				description={
-					<p className="mt-6 text-lg/8 text-gray-600">
+					<p className="mt-6 text-lg/8 text-gray-600 lg:text-justify">
 						Our office movers use specialized instruments and techniques to
 						safely haul high-value electronics and delicate assets. It's crucial
 						to verify that your team can safely handle IT and network equipment

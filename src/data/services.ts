@@ -95,7 +95,7 @@ export const services: Service[] = [
 			},
 			{
 				name: "Corporate Relocation",
-				href: "/services/commercial-moving/corporate-relocation",
+				href: "/services/corporate-moving",
 			},
 			{
 				name: "Retail Relocation",

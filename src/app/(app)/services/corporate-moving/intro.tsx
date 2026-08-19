@@ -10,7 +10,7 @@ export const CorporateMovingIntro = () => (
 				<h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
 					What is Corporate Relocation
 				</h1>
-				<div className="mt-10 grid max-w-xl grid-cols-1 gap-8 text-base/7 text-gray-700 lg:max-w-none lg:grid-cols-2">
+				<div className="mt-10 grid max-w-xl grid-cols-1 gap-8 text-base/7 lg:text-justify text-gray-700 lg:max-w-none lg:grid-cols-2">
 					<div>
 						<p>
 							As a leading commercial moving company, we brings professional

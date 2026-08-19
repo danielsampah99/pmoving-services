@@ -28,7 +28,7 @@ export const MinnesotaSpecific = () => (
 						<p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
 							Minnesota
 						</p>
-						<p className="mt-6 text-lg/8 text-gray-600">
+						<p className="mt-6 text-lg/8 text-gray-600  lg:text-justify">
 							Assessing the new location's layout is a key part of our method,
 							ensuring your organization is set up smoothly and efficiently.
 							This isn’t generic moving. This is operational continuity.
@@ -87,7 +87,7 @@ export const BusinessRelocation = () => (
 						<p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
 							Business Relocation
 						</p>
-						<p className="mt-6 text-base/6 text-gray-600">
+						<p className="mt-6 text-base/6 text-gray-600 lg:text-justify">
 							Our expertise in business moving ensures that every component of
 							your corporate move is handled efficiently and with minimal
 							disruption. Our proven track record makes a significant

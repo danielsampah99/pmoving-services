@@ -12,7 +12,7 @@ export const CorporateMovingPackages = () => (
 						<p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
 							Corporate Moving Packages
 						</p>
-						<p className="mt-6 text-lg/8 text-gray-600">
+						<p className="mt-6 text-lg/8 text-gray-600  lg:text-justify">
 							Commercial moving services are designed to cater to businesses of
 							all sizes, from small offices to large corporations, and are
 							tailored to the specific needs of each client and industry.
@@ -153,7 +153,7 @@ export const CorporateMovingContent = ({
 				{data.map((item) => (
 					<div key={item.name}>
 						<dt className="font-semibold text-gray-900">{item.name}</dt>
-						<dd className="mt-1 text-gray-600">{item.description}</dd>
+						<dd className="mt-1 text-gray-600 lg:text-justify">{item.description}</dd>
 					</div>
 				))}
 			</dl>
