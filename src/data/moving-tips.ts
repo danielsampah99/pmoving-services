@@ -800,3 +800,41 @@ export const packingSuppliesQuestions: FAQType[] = [
 			"Both are retail-grade. Differences are minor, neither compares to commercial-grade boxes used by professional movers. For added protection and reusability, consider using sturdy cardboard boxes or totes, which are stackable and help keep your belongings organized and safe during the move.",
 	},
 ];
+
+export const officeMoversFaqs: FAQType[] = [
+	{
+		question: "How do I find reliable office movers near me?",
+		answer:
+			"Look for experienced commercial movers that are properly licensed and insured, provide clear written estimates, understand commercial building requirements, and can explain exactly how they plan to minimize disruption to your business.",
+	},
+	{
+		question: "Do commercial movers move office furniture?",
+		answer:
+			"Yes. Professional commercial movers can move desks, chairs, conference tables, filing cabinets, shelving, cubicles, modular workstations, reception furniture, and other office furnishings.",
+	},
+	{
+		question: "Can office movers pack our entire office?",
+		answer:
+			"Yes. Full and partial office packing services can be used for workstations, files, supplies, conference rooms, breakrooms, and other business contents.",
+	},
+	{
+		question: "Can office movers provide temporary storage?",
+		answer:
+			"Yes. Commercial moving and storage can be especially useful when your new location isn't ready, you're remodeling, or your business is completing a relocation in phases.",
+	},
+	{
+		question: "Can you move an office over the weekend?",
+		answer:
+			"Depending on scheduling and availability, office relocations can be planned during weekends or after normal business hours to help reduce disruption.",
+	},
+	{
+		question: "Do you provide long-distance business moving?",
+		answer:
+			"Yes. Long-distance commercial moving can include office furniture, equipment, workstations, boxed contents, and other approved business property moving from Minnesota to another city or state.",
+	},
+	{
+		question: "Can you move a business within the same building?",
+		answer:
+			"Yes. Internal office moves can include relocating departments, rearranging workstations, moving employees between floors, and reconfiguring office furniture without changing your business address.",
+	},
+];
