@@ -1,6 +1,4 @@
 import { ServiceLayout } from "@/components/ServiceLayout";
-import { Info } from "lucide-react";
-import React from "react";
 import { FAQs } from "../../local-moving/residential-movers/faq";
 import { officeMoversFaqs } from "@/data/moving-tips";
 import { RequestQuote } from "../../local-moving/residential-movers/request-quote";
@@ -8,6 +6,48 @@ import { RelatedServices } from "../related-services";
 import { commercialMovingServices } from "@/data/services";
 import { OurLocations } from "@/components/OurLocations";
 import { ServicesSection } from "@/components/ServicesSection";
+import { InformationCircleIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
+
+
+const commercialServices = [
+	{ name: "Office relocations" },
+	{
+		name: "Business relocations",
+		href: "/services/commercial-moving/small-business-movers",
+	},
+	{ name: "Corporate moves" },
+	{ name: "Office furniture moving" },
+	{ name: "Cubicle and workstation moving" },
+	{ name: "Packing and unpacking" },
+	{ name: "Commercial storage", href: "/services/storage-services" },
+	{ name: "Internal office moves" },
+	{ name: "Warehouse moves" },
+	{
+		name: "Retail relocations",
+		href: "/services/commercial-moving/retail-relocation",
+	},
+	{ name: "Furniture disassembly and reassembly" },
+	{ name: "Receiving and delivery" },
+	{ name: "Long-distance commercial moves" },
+	{ name: "Multi-phase business relocations" },
+];
+
+const corporateRelocationServices = [
+	{ id: 1, name: "Department-by-department relocations" },
+	{ id: 2, name: "Furniture inventories" },
+	{ id: 3, name: "Office labeling systems" },
+	{ id: 4, name: "Floor-plan coordination" },
+	{ id: 5, name: "Employee workstation moves" },
+	{ id: 6, name: "Cubicle relocation" },
+	{ id: 7, name: "Equipment transportation" },
+	{ id: 8, name: "Phased office moves" },
+	{ id: 9, name: "Temporary commercial storage" },
+	{ id: 10, name: "Scheduled furniture deliveries" },
+	{ id: 11, name: "Packing and unpacking" },
+	{ id: 12, name: "Internal office moves" },
+];
+
 
 const OfficeMovers = () => {
 	return (
@@ -16,7 +56,7 @@ const OfficeMovers = () => {
 			title="Professional Office Movers in Minnesota"
 			desc="Commercial and business relocation services for Minneapolis, St. Paul, and the Twin Cities."
 		>
-			<div className="py-12 px-4">
+			<div className="py-12 px-4 [&_a]:underline [&_a]:text-background [&_a]:italic">
 				<div className="max-w-7xl mx-auto space-y-12">
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						<div className="rounded-lg overflow-hidden p-4 sm:p-6">
@@ -35,148 +75,134 @@ const OfficeMovers = () => {
 							</div>
 						</div>
 
-						<div className="flex flex-col justify-center space-y-3">
-							<div className="flex items-center space-x-2 text-background">
-								<Info className="w-6 h-6" />
-								<h2 className="text-xl md:text-2xl font-bold">
+						<div className="flex flex-col justify-center text-justify space-y-3">
+							<div className="flex items-center space-x-2 text-gray-700">
+								<h2 className="text-xl md:text-2xl font-bold underline">
 									What are Office Movers?
 								</h2>
 							</div>
-							<p className="text-background">
+							<p className="prose-p lg:text-justify">
 								Moving an office is different from moving a household.
 								Businesses have employees, workstations, corporate furniture,
 								electronics, files, inventory, building requirements, loading
 								docks, elevators, and deadlines that all need to be
 								coordinated.
 							</p>
-							<p className="text-gray-700">
-								Premium Moving & Storage provides professional office moving
-								and commercial relocation services in Minnesota designed to
+							<p className="prose-p text-justify">
+								Premium Moving & Storage provides <strong>professional office moving
+									and commercial relocation services in Minnesota </strong> designed to
 								minimize business disruption and keep your relocation
 								organized.
 							</p>
-							<p className="text-gray-700">
-								Whether you&apos;re searching for office movers in Minneapolis,
-								office movers in St. Paul, business movers near you, or a
-								commercial moving company serving the greater Twin Cities, our
-								experienced team can customize the move around your business,
-								building, schedule, and budget.
+							<p className="prose-p">
+								Whether you&apos;re searching for
+								<Link className="prose-a" href="/service-areas/movers-minneapolis-mn">
+									office movers in Minneapolis</Link>,
+								<Link href="/service-areas/movers-saint-paul-mn">office movers in St. Paul</Link>,
+								business movers near you, or a commercial moving company serving the greater Twin Cities, our
+								experienced team can customize the move around your business, building, schedule, and budget.
 							</p>
 						</div>
 					</div>
 
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-						<div className="space-y-4">
-							<h2 className="text-xl md:text-2xl font-bold">
+					<div className="">
+						<div className="space-y-4 text-justify">
+							<h2 className="text-xl md:text-2xl prose-h2 font-bold">
 								Commercial Movers in Minnesota
 							</h2>
-							<p className="text-gray-700">
-								A commercial move requires planning, organization, and
+							<p className="prose-p">
+								A <Link href="/services/commercial-moving">commercial move</Link> requires planning, organization, and
 								experienced movers who understand the importance of keeping
 								your business operating.
 							</p>
-							<p className="text-gray-700">
-								Our commercial movers in Minnesota work with business owners
+							<p className="prose-p">
+								Our <strong>commercial movers in Minnesota</strong> work with business owners
 								and staffs of different sizes to relocate business furnishings,
 								equipment, files, supplies, inventory, fixtures, and other
 								commercial assets.
 							</p>
-							<p className="text-gray-700">
+							<p className="prose-p">
 								Commercial moving services can include:
 							</p>
-							<ul className="list-disc pl-6 space-y-2 text-gray-700">
-								<li>Office relocations</li>
-								<li>Business relocations</li>
-								<li>Corporate moves</li>
-								<li>Office furniture moving</li>
-								<li>Cubicle and workstation moving</li>
-								<li>Packing and unpacking</li>
-								<li>Commercial storage</li>
-								<li>Internal office moves</li>
-								<li>Warehouse moves</li>
-								<li>Retail relocations</li>
-								<li>Furniture disassembly and reassembly</li>
-								<li>Receiving and delivery</li>
-								<li>Long-distance commercial moves</li>
-								<li>Multi-phase business relocations</li>
-							</ul>
 						</div>
 
-						<div className="rounded-lg overflow-hidden h-full">
-							<img
-								className="w-full h-auto rounded-lg object-cover"
-								src="/moving-process.webp"
-								alt="Office Moving Process"
-							/>
-						</div>
+						<ul className="grid mt-3 grid-cols-1 md:grid-cols-3 gap-8 list-disc pl-6 space-y-2 text-gray-700">
+							{commercialServices.map(cs => (
+								<li key={cs.name}>
+									{cs.href ? <Link href={cs.href}>{cs.name}</Link> : cs.name}
+								</li>
+							))}
+						</ul>
 					</div>
 
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-						<div className="space-y-4">
-							<h2 className="text-xl md:text-2xl font-bold">
+					<div className="">
+						<div className="space-y-4 md:space-y-6">
+							<h2 className="text-xl md:text-2xl font-bold prose-h2">
 								Office Movers Minneapolis
 							</h2>
-							<p className="text-gray-700">
-								Businesses searching for office movers in Minneapolis need more
+							<p className="prose-p">
+								Businesses searching for <strong> office movers in Minneapolis</strong> need more
 								than a truck and a few movers. Downtown buildings, loading
 								docks, elevators, parking restrictions, building management
 								requirements, and tight schedules can all affect how a company
 								relocation is completed.
 							</p>
-							<p className="text-gray-700">
+							<p className="prose-p">
 								Premium Moving & Storage provides organized commercial moving
 								solutions for Minneapolis businesses, from small workspaces and
 								professional practices to corporate workplaces and larger
 								commercial facilities.
 							</p>
-							<p className="text-gray-700">
-								We serve businesses throughout Downtown Minneapolis, North
-								Loop, Northeast Minneapolis, Uptown, University/Prospect Park,
-								and surrounding commercial districts, including ZIP codes
-								55401, 55402, 55403, 55404, 55405, 55408, 55413, 55414, and
-								55415.
+							<p className="prose-p">
+								We serve businesses throughout <strong> Downtown Minneapolis, North
+									Loop, Northeast Minneapolis, Uptown, University/Prospect Park,
+									and surrounding commercial districts, including ZIP codes
+									55401, 55402, 55403, 55404, 55405, 55408, 55413, 55414, and
+									55415.</strong>
 							</p>
 
-							<h2 className="text-xl md:text-2xl font-bold pt-6">
+						</div>
+
+						<div className="space-y-4 md:space-y-6">
+
+							<h2 className="text-xl md:text-2xl prose-h2 font-bold pt-6">
 								Office Movers St. Paul
 							</h2>
-							<p className="text-gray-700">
-								Premium Moving & Storage delivers professional office moving
-								services in St. Paul for companies relocating departments,
+							<p className="prose-p">
+								Premium Moving & Storage delivers professional <strong>office moving
+									services in St. Paul</strong>  for companies relocating departments,
 								furniture, equipment, and commercial contents.
 							</p>
-							<p className="text-gray-700">
+							<p className="prose-p">
 								Whether you&apos;re moving within Downtown St. Paul or
 								relocating your business elsewhere in the Twin Cities, our
 								commercial moving team can coordinate transportation, furniture
 								moving, packing, storage, and final placement.
 							</p>
-							<p className="text-gray-700">
-								We serve Downtown St. Paul, Lowertown, Midway, Highland Park,
-								West Seventh, and surrounding business districts, including ZIP
-								codes 55101, 55102, 55104, 55105, 55114, and 55116.
+							<p className="prose-p">
+								We serve <strong>Downtown St. Paul, Lowertown, Midway, Highland Park,
+									West Seventh, and surrounding business districts, including ZIP
+									codes 55101, 55102, 55104, 55105, 55114, and 55116.</strong>
 							</p>
 						</div>
 
-						<div className="flex flex-col justify-center space-y-3">
-							<div className="flex items-center space-x-2 text-background">
-								<Info className="w-6 h-6" />
-								<h2 className="text-xl md:text-2xl font-bold">
-									Business Movers Near Me
-								</h2>
-							</div>
-							<p className="text-background">
-								When searching for business movers near me, look for a moving
+						<div className="flex space-y-4 md:space-y-8 mt-6 md:mt-8 flex-col justify-center">
+							<h2 className="text-xl prose-h2 md:text-2xl font-bold">
+								Business Movers Near Me
+							</h2>
+
+							<p className="prose-p">
+								When searching for <strong>business movers near me</strong>, look for a moving
 								company that understands commercial moving, not simply a
 								residential mover willing to move a few desks.
 							</p>
-							<p className="text-gray-700">
+							<p className="prose-p">
 								Business relocations may involve building access, elevators,
 								loading docks, furniture disassembly, employee workstations,
 								equipment, files, inventory, temporary storage, and strict
 								deadlines.
 							</p>
-							<p className="text-gray-700">
+							<p className="prose-p">
 								Our business movers develop a customized relocation plan based
 								on your office size, moving date, destination, equipment,
 								furniture, access requirements, and business schedule.
@@ -184,7 +210,7 @@ const OfficeMovers = () => {
 						</div>
 					</div>
 
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6 md:mt-10">
 						<div className="rounded-lg overflow-hidden h-full">
 							<img
 								className="w-full h-auto rounded-lg object-cover"
@@ -193,33 +219,25 @@ const OfficeMovers = () => {
 							/>
 						</div>
 
-						<div className="space-y-4">
+						<div className="space-y-4 mt-5 md:space-y-6">
 							<h2 className="text-xl md:text-2xl font-bold">
 								Corporate Relocation Services
 							</h2>
-							<p className="text-gray-700">
-								Larger corporate relocations require careful coordination
+							<p className="prose-p text-justify">
+								Larger <strong>corporate relocations</strong>  require careful coordination
 								between management, employees, building representatives,
 								vendors, and moving crews.
 							</p>
-							<p className="text-gray-700">
+							<p className="prose-p text-justify">
 								Premium Moving & Storage can assist with:
 							</p>
-							<ul className="list-disc pl-6 space-y-2 text-gray-700">
-								<li>Department-by-department relocations</li>
-								<li>Furniture inventories</li>
-								<li>Office labeling systems</li>
-								<li>Floor-plan coordination</li>
-								<li>Employee workstation moves</li>
-								<li>Cubicle relocation</li>
-								<li>Equipment transportation</li>
-								<li>Phased office moves</li>
-								<li>Temporary commercial storage</li>
-								<li>Scheduled furniture deliveries</li>
-								<li>Packing and unpacking</li>
-								<li>Internal office moves</li>
+							<ul className="list-disc pl-6 md:grid md:grid-cols-2 md:gap-x-6 space-y-2 md:gap-y-2 prose-ul">
+								{corporateRelocationServices.map(crs => (
+									<li key={crs.id} className="prose-li">{crs.name}</li>
+								))}
+
 							</ul>
-							<p className="text-gray-700">
+							<p className="prose-p text-justify">
 								Planning early allows your business to address building access,
 								furniture placement, elevator reservations, loading dock
 								scheduling, employee communication, and other logistical issues
@@ -228,36 +246,39 @@ const OfficeMovers = () => {
 						</div>
 					</div>
 
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-						<div className="space-y-4">
+					<div className="gap-8 prose-h2">
+						<div className="space-y-4 prose-h2">
 							<h2 className="text-xl md:text-2xl font-bold">
 								Small Business Office Movers
 							</h2>
-							<p className="text-gray-700">
+							<p className="prose-p">
 								Small businesses cannot always afford several days of
 								unnecessary downtime.
 							</p>
-							<p className="text-gray-700">
-								Our small business office movers help professional practices,
+							<p className="prose-p">
+								Our <strong>small business office movers</strong> help professional practices,
 								startups, agencies, retailers, real estate companies, nonprofits,
 								and other local businesses create practical relocation plans
 								around their operating schedules.
 							</p>
-							<p className="text-gray-700">
+							<p className="prose-p">
 								Whether you&apos;re moving five desks or an entire office
 								suite, our team can coordinate the furniture, equipment, boxes,
 								transportation, and placement necessary to get you into your new
 								workspace efficiently.
 							</p>
+						</div>
+
+						<div>
 
 							<h2 className="text-xl md:text-2xl font-bold pt-6">
 								Office Furniture Movers
 							</h2>
-							<p className="text-gray-700">
+							<p className="prose-p">
 								Office furniture can be bulky, modular, heavy, and difficult to
 								maneuver through commercial buildings.
 							</p>
-							<p className="text-gray-700">
+							<p className="prose-p">
 								Our office furniture movers can handle:
 							</p>
 							<ul className="list-disc pl-6 space-y-2 text-gray-700">
@@ -283,7 +304,7 @@ const OfficeMovers = () => {
 
 						<div className="flex flex-col justify-center space-y-3">
 							<div className="flex items-center space-x-2 text-background">
-								<Info className="w-6 h-6" />
+								<InformationCircleIcon className="w-6 h-6" />
 								<h2 className="text-xl md:text-2xl font-bold">
 									Cubicle Movers &amp; Workstation Relocation
 								</h2>
@@ -381,7 +402,7 @@ const OfficeMovers = () => {
 
 						<div className="flex flex-col justify-center space-y-3">
 							<div className="flex items-center space-x-2 text-background">
-								<Info className="w-6 h-6" />
+								<InformationCircleIcon className="w-6 h-6" />
 								<h2 className="text-xl md:text-2xl font-bold">
 									Commercial Moving &amp; Storage
 								</h2>
@@ -539,13 +560,13 @@ const OfficeMovers = () => {
 						</div>
 
 						<div className="flex flex-col justify-center space-y-3">
-							<div className="flex items-center space-x-2 text-background">
-								<Info className="w-6 h-6" />
+							<div className="flex items-center space-x-2 ">
+								<InformationCircleIcon className="w-6 h-6" />
 								<h2 className="text-xl md:text-2xl font-bold">
 									Long-Distance Commercial Movers
 								</h2>
 							</div>
-							<p className="text-background">
+							<p className="">
 								Moving your company outside the Twin Cities requires additional
 								transportation and scheduling coordination.
 							</p>
@@ -620,7 +641,7 @@ const OfficeMovers = () => {
 
 						<div className="flex flex-col justify-center space-y-3">
 							<div className="flex items-center space-x-2 text-background">
-								<Info className="w-6 h-6" />
+								<InformationCircleIcon className="w-6 h-6" />
 								<h2 className="text-xl md:text-2xl font-bold">
 									How Much Do Office Movers Cost in Minnesota?
 								</h2>
@@ -708,7 +729,7 @@ const OfficeMovers = () => {
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						<div className="flex flex-col justify-center space-y-3">
 							<div className="flex items-center space-x-2 text-background">
-								<Info className="w-6 h-6" />
+								<InformationCircleIcon className="w-6 h-6" />
 								<h2 className="text-xl md:text-2xl font-bold">
 									Get a Commercial Moving Quote
 								</h2>
