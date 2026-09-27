@@ -16,6 +16,7 @@ import nodemailer from 'nodemailer'
 import { Users } from "./collections/Users";
 import { Media } from "./collections/Media";
 import { ServiceArea } from "./collections/ServiceAreas";
+import { ServicePricing } from "./collections/ServicePricing";
 import { Blogs } from "./collections/Blogs";
 import { Gallery } from "./collections/Gallery";
 import { Referrals } from "./collections/Referrals";
@@ -34,7 +35,7 @@ export default buildConfig({
 		},
 
 	},
-	collections: [Users, Media, ServiceArea, Blogs, Gallery, Referrals, MailingList, Charts],
+	collections: [Users, Media, ServiceArea, ServicePricing, Blogs, Gallery, Referrals, MailingList, Charts],
 	editor: lexicalEditor({
 		features: ({ defaultFeatures }) => [
 			...defaultFeatures,

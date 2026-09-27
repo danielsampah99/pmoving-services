@@ -1,6 +1,7 @@
 import { getPayload } from "payload";
 import config from "@payload-config";
 import { OurLocations } from "@/components/OurLocations";
+import { MovingCostTable } from "@/components/MovingCostTable";
 import { Hero } from "./hero";
 import { MovingResources } from "./moving-resources";
 import { Faqs } from "./faqs";
@@ -13,6 +14,7 @@ import { ServicesSection } from "@/components/ServicesSection";
 import { RequestQuote } from "../../services/local-moving/residential-movers/request-quote";
 import { MINNESOTA_CENTRE } from "@/data/map";
 import { getServiceAreas } from "@/data/service-areas";
+import { getPricingForServiceArea } from "@/data/pricing";
 import { ServiceAreaMap } from "../service-areas-map";
 
 type Props = {
@@ -138,6 +140,8 @@ export default async function SingleServiceAreaPage({ params }: Props) {
 		})
 	).docs as ServiceArea[];
 
+	const pricing = await getPricingForServiceArea(serviceArea.id);
+
 	return (
 		<section className="max-w-7xl mx-auto p-6 lg:px-8 pt-0 xl:pt-6">
 			<Hero
@@ -146,6 +150,7 @@ export default async function SingleServiceAreaPage({ params }: Props) {
 				mapUrl={serviceArea.mapUrl ?? ""}
 				mapImage={serviceArea.mapImage}
 			/>
+			<MovingCostTable city={serviceArea.title} rows={pricing.docs} />
 			<MovingTips />
 			{serviceArea.movingServices &&
 				Array.isArray(serviceArea.movingServices) &&

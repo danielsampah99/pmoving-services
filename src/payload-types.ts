@@ -70,6 +70,7 @@ export interface Config {
     users: User;
     media: Media;
     'service-areas': ServiceArea;
+    'service-pricing': ServicePricing;
     blogs: Blog;
     gallery: Gallery;
     referrals: Referral;
@@ -85,6 +86,7 @@ export interface Config {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     'service-areas': ServiceAreasSelect<false> | ServiceAreasSelect<true>;
+    'service-pricing': ServicePricingSelect<false> | ServicePricingSelect<true>;
     blogs: BlogsSelect<false> | BlogsSelect<true>;
     gallery: GallerySelect<false> | GallerySelect<true>;
     referrals: ReferralsSelect<false> | ReferralsSelect<true>;
@@ -290,6 +292,97 @@ export interface ServiceArea {
         id?: string | null;
       }[]
     | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "service-pricing".
+ */
+export interface ServicePricing {
+  id: number;
+  /**
+   * Internal label used to identify this row in the admin list. Example: "2-3 Bedroom Apartment - Minnetonka"
+   */
+  title: string;
+  /**
+   * Groups the row under a heading on the service area page. On the service area page, it will always show in this order
+   */
+  category: 'residential' | 'commercial' | 'specialty';
+  /**
+   * Which service page this price belongs to, relative to /services. Example: "piano-moving"
+   */
+  service:
+    | 'residential-moving'
+    | 'local-moving'
+    | 'local-moving/apartment-movers'
+    | 'local-moving/condo-movers'
+    | 'local-moving/hoa-movers'
+    | 'local-moving/household'
+    | 'local-moving/pack-and-unpack'
+    | 'local-moving/residential-movers'
+    | 'commercial-moving'
+    | 'commercial-moving/corporate-relocation'
+    | 'commercial-moving/office-movers'
+    | 'commercial-moving/retail-relocation'
+    | 'commercial-moving/small-business-movers'
+    | 'commercial-moving/warehouse-industrial'
+    | 'corporate-moving'
+    | 'long-distance-moving'
+    | 'long-distance-moving/employee-relocation'
+    | 'long-distance-moving/interstate-moving-specialists'
+    | 'long-distance-moving/long-distance-commercial'
+    | 'long-distance-moving/long-distance-residential'
+    | 'specialty-moving'
+    | 'specialty-moving/antique-furniture'
+    | 'specialty-moving/furniture-moving'
+    | 'specialty-moving/gun-and-safe-moving'
+    | 'specialty-moving/labor-only'
+    | 'specialty-moving/load-and-unloading'
+    | 'specialty-moving/senior-relocation'
+    | 'international-moving'
+    | 'junk-removal'
+    | 'logistics-services'
+    | 'packing-supplies'
+    | 'piano-moving'
+    | 'storage-services';
+  /**
+   * The service area (city) this price applies to. This is also shown on this city's page
+   */
+  destination: number | ServiceArea;
+  /**
+   * The heading customers read. Example: 2-3 Bedroom Apartment
+   */
+  label: string;
+  /**
+   * Floor price in USD. Shown as "from $X" when no max price is set. Example: 800
+   */
+  minPrice: number;
+  /**
+   * Leave empty when there is no upper bound. Shown as a range only when set.
+   */
+  maxPrice?: number | null;
+  /**
+   * How the price is billed. The suffix next to the number.
+   */
+  unit: 'per-move' | 'per-hour' | 'per-month' | 'per-item' | 'per-pound';
+  includes?:
+    | {
+        /**
+         * Short qualifier shown under the price. Example: "2 movers, 2-3 hours"
+         */
+        text?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * Lower numbers render first within a group.
+   */
+  sortOrder?: number | null;
+  /**
+   * Uncheck to hide this price from the page without deleting it.
+   */
+  active?: boolean | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -525,6 +618,10 @@ export interface PayloadLockedDocument {
         value: number | ServiceArea;
       } | null)
     | ({
+        relationTo: 'service-pricing';
+        value: number | ServicePricing;
+      } | null)
+    | ({
         relationTo: 'blogs';
         value: number | Blog;
       } | null)
@@ -697,6 +794,30 @@ export interface ServiceAreasSelect<T extends boolean = true> {
         image?: T;
         id?: T;
       };
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "service-pricing_select".
+ */
+export interface ServicePricingSelect<T extends boolean = true> {
+  title?: T;
+  category?: T;
+  service?: T;
+  destination?: T;
+  label?: T;
+  minPrice?: T;
+  maxPrice?: T;
+  unit?: T;
+  includes?:
+    | T
+    | {
+        text?: T;
+        id?: T;
+      };
+  sortOrder?: T;
+  active?: T;
   updatedAt?: T;
   createdAt?: T;
 }
