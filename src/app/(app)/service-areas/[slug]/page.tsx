@@ -13,7 +13,6 @@ import { MovingServices } from "./moving-services";
 import { ServicesSection } from "@/components/ServicesSection";
 import { RequestQuote } from "../../services/local-moving/residential-movers/request-quote";
 import { MINNESOTA_CENTRE } from "@/data/map";
-import { getServiceAreas } from "@/data/service-areas";
 import { getPricingForServiceArea } from "@/data/pricing";
 import { ServiceAreaMap } from "../service-areas-map";
 
@@ -69,7 +68,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		"professional movers",
 		"local movers",
 		"residential moving",
-		"commercial moving",
+		"commercial moving", "moving companies near me"
 	];
 
 	return {
