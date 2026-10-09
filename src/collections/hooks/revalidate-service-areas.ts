@@ -1,30 +1,46 @@
-import { SERVICE_AREA_BY_SLUG_TAG, SERVICE_AREAS_TAG } from "@/data/cache-keys";
-import { revalidateTag } from "next/cache";
-import { CollectionAfterChangeHook } from "payload";
+import { SERVICE_AREAS_TAG } from "@/data/cache-keys";
+import { revalidatePath, revalidateTag } from "next/cache";
+import type { CollectionAfterChangeHook } from "payload";
 
+/**
+ * Service areas are rendered in the global header (every page), the
+ * /service-areas list and each /service-areas/[slug] page, so invalidate all
+ * three plus the previous slug when it changes.
+ */
 export const revalidateServiceAreasCache: CollectionAfterChangeHook = async ({
 	doc,
 	previousDoc,
 	operation,
+	req,
 }) => {
 	try {
-		// revalidate the list all service areas cache
 		revalidateTag(SERVICE_AREAS_TAG());
 
-		// revalidate a single service area page's cache
-		if (doc.slug) {
-			revalidateTag(SERVICE_AREA_BY_SLUG_TAG(doc.slug));
+		revalidatePath("/service-areas/[slug]", "page");
+		revalidatePath("/service-areas", "page");
+
+		// The header lives in the root layout, so refresh it across the site.
+		revalidatePath("/", "layout");
+
+		if (doc?.slug) {
+			revalidatePath(`/service-areas/${doc.slug}`, "page");
 		}
 
-		// revalidate the old slug if slug changed too
 		if (
 			operation === "update" &&
 			previousDoc?.slug &&
-			previousDoc.slug !== doc.slug
+			previousDoc.slug !== doc?.slug
 		) {
-			revalidateTag(previousDoc.slug);
+			revalidatePath(`/service-areas/${previousDoc.slug}`, "page");
 		}
+
+		req.payload.logger.info(
+			`Revalidated service-areas cache after ${operation}`,
+		);
 	} catch (error) {
-		console.error("Error invalidaing service areas cache: ", error);
+		req.payload.logger.error(
+			{ err: error },
+			"Error invalidating service areas cache",
+		);
 	}
 };

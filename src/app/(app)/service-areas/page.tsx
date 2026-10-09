@@ -40,6 +40,8 @@ export const metadata: Metadata = {
 	},
 };
 
+export const revalidate = 60;
+
 export default async function ServiceAreasPage() {
 	const payload = await getPayload({ config });
 

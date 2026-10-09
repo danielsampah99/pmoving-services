@@ -6,6 +6,9 @@ import { PRICING_TAG } from "./cache-keys";
 /**
  * All active prices for a single service area, in render order.
  * Keyed on the service area id, tagged so any pricing edit busts every area.
+ *
+ * `v2` key part intentionally bypasses pre-fix entries that were cached with
+ * `revalidate: false` (a one-year TTL in Vercel's durable Data Cache).
  */
 export const getPricingForServiceArea = unstable_cache(
 	async (areaId: number) => {
@@ -23,8 +26,8 @@ export const getPricingForServiceArea = unstable_cache(
 			pagination: false,
 		});
 	},
-	[PRICING_TAG()],
-	{ tags: [PRICING_TAG()], revalidate: false },
+	[PRICING_TAG(), "v2"],
+	{ tags: [PRICING_TAG()], revalidate: 60 },
 );
 
 export type PricingForArea = Awaited<
